@@ -1,0 +1,21 @@
+song = {
+	name = "maintheme"
+	chance = {
+		modifier = {
+			factor = 1.0
+		}
+		modifier = {
+			factor = 1.5
+			num_of_explorers = 1
+		}
+	}
+}
+
+song = {
+	name = "Flavor Universalis Theme - The World"
+	chance = {
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

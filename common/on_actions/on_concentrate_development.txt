@@ -1,0 +1,32 @@
+on_concentrate_development = {
+    if = { 
+		limit = { 
+			owner = { has_country_modifier = fra_french_isles_modifier }
+		}
+		add_nationalism = -5
+	}
+	
+	# ME Stuff
+	if = {
+        limit = {
+            owner = {
+                mission_completed = EE_syn_construction_efforts
+            }
+        }
+        owner = {
+            add_years_of_income = 0.5
+            ME_distribute_development = {
+                type = production
+                amount = 1
+            }
+            ME_distribute_development = {
+                type = tax
+                amount = 1
+            }
+            ME_distribute_development = {
+                type = manpower
+                amount = 1
+            }
+        }
+    }
+}

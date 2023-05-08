@@ -1,0 +1,5 @@
+estate_nobles = {
+	country_modifier_happy = {
+		#yearly_tribal_allegiance = 1
+	}
+}

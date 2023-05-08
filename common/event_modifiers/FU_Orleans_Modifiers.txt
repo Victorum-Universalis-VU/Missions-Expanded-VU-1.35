@@ -1,0 +1,49 @@
+orl_defensive_bridge_modifier = { 
+	local_defensiveness = 0.15
+	province_trade_power_value = 10
+}
+orl_loire_travels_modifier = { 
+	monthly_splendor = 1 
+}
+orl_renaissance_in_the_west_modifier = { 
+	global_institution_spread = 0.25
+	embracement_cost = -0.1
+}
+orl_blossoming_orleanaise_arts_modifier = { 
+	all_power_cost = -0.05
+	advisor_pool = 1 
+	reform_progress_growth = 0.25
+}
+orl_new_power_rising_modifier = { 
+	core_creation = -0.2
+}
+orl_serene_independence_modifier = { 
+	global_prosperity_growth = 1 
+}
+orl_great_struggle_modifier = { 
+	war_exhaustion = -0.05
+}
+orl_orleans_resurgent_modifier = { 
+	ae_impact = -0.15
+	all_estate_loyalty_equilibrium = 0.1 
+}
+orl_joans_absolution_modifier = { 
+	prestige = 1 
+	papal_influence = 2 
+}
+orl_united_france_modifier = { 
+	development_cost = -0.1
+	global_unrest = -2 
+}
+orl_itenerary_capital_modifier = { 
+	move_capital_cost_modifier = -0.75
+	administrative_efficiency = 0.05
+}
+orl_faithful_mercenaries_modifier = { 
+	mercenary_discipline = 0.05
+	mercenary_manpower = 0.25
+}
+orl_sisters_takeover_modifier = { 
+	female_advisor_chance = 1 
+	may_recruit_female_generals = yes
+}

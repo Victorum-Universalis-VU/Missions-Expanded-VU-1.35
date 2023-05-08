@@ -1,0 +1,29 @@
+﻿l_english:
+ MISSION_COMPLETED:1 "Completed Mission §Y$MISSION_TITLE$§!\n"
+ MISSION_NOT_COMPLETED:1 "Not completed Mission §Y$MISSION_TITLE$§!\n"
+ ENACT_REFORM_EFFECT_LOCK_WARNING:0 "(§RThis is a locked reform. You will not be able to switch to other reforms on the same Tier.§!)\n"
+ 
+ maintheme: "Europa Expanded Theme - A World to Explore"
+ 
+ IS_RIVAL_WITH:0 "Has rivaled"
+ IS_NOT_RIVAL_WITH:0 "Has NOT rivaled"
+ 
+ HAVE_LESS_DEVELOPMENT_THAN_COMP:1 "Have less Development (currently $CURRENT|Y0$) than $COUNTRYNAME|Y$ ($VAL|Y$)"
+ HAVE_MORE_DEVELOPMENT_THAN_COMP:1 "Have more Development (currently $CURRENT|Y0$) than $COUNTRYNAME|Y$ ($VAL|Y$)"
+  
+ IS_PROSPEROUS: "Is prosperous"
+ 
+ 
+ ACHIEVEMENTS_DISABLED_BECAUSE:0 "This game is played with §YMissions Expanded§!. \n\nAchievements are disabled because:\n"
+ 
+ IS_ACCEPTED_CULTURE:0 "Has accepted the culture "
+ 
+ START_SCREEN_UP_LEFT_DESC:0 "[StartScreenUpLeftDesc] [GetMissionsExpandedStartScreenText]"
+ 
+ shadow_kingdom_decision_title: "£hre_text_icon£ Rein in Italy"
+ great_peasants_war_emperor_decision_title: "£hre_text_icon£ End the Great Peasants' War"
+ HAVE_LESS_PORTS_THAN:0 "Have less ports connected to capital than "
+ HAVE_MORE_PORTS_THAN:0 "Number of ports connected to capital at least "
+ 
+ ADE: "Tahirids"
+ ADE_ADJ: "Tahirid"

@@ -1,0 +1,13 @@
+# Note:
+# Both of those songs were created by Utopia for Flavor Universalis (Integrated by Europa Expanded) and Europa Expanded respectively.
+# Check out his music here: youtube.com/@utopiamusic
+
+music = {
+	name = "maintheme"
+	file = "WorldToExplore.ogg"
+}
+
+music = {
+	name = "Flavor Universalis Theme - The World"
+	file = "One-World.ogg"
+}

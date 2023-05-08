@@ -1,0 +1,20 @@
+bookmark = {
+	name = "ME_BOOKMARK_MAGHREB"
+	desc = "ME_BOOKMARK_MAGHREB_DESC"
+	date = 1444.11.11
+	
+	center = 339
+	default = yes
+	
+	country = MOR
+	country = TUN
+	country = GRA
+	country = MZB
+	country = TLC
+	country = SOS
+	
+	# easy_country = TUN
+	# easy_country = MOR
+	# easy_country = MOR 
+	# easy_country = TLC
+}

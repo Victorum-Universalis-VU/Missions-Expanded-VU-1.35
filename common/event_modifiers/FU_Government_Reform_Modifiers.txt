@@ -1,0 +1,3 @@
+swi_canton_administration_modifier = {
+	country_admin_power = 1 
+}

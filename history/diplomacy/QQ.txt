@@ -1,0 +1,7 @@
+dependency = {
+	subject_type = QAR_baghdad_vassal 
+	first = QAR
+	second = BAG
+	start_date = 1444.1.1
+	end_date = 1776.12.31
+}

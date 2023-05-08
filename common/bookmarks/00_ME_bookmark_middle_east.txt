@@ -1,0 +1,27 @@
+bookmark = {
+	name = "ME_BOOKMARK_MIDDLE_EAST"
+	desc = "ME_BOOKMARK_MIDDLE_EAST_DESC"
+	date = 1444.11.11
+	
+	center = 361
+	default = yes
+	
+	#country = TUR
+	country = MAM
+	# country = HSN
+	country = NAJ
+	country = RAS
+	country = ORM
+	country = OMA
+	country = HED
+	country = MSY
+	
+	#country = QAR
+	#country = AKK
+	#country = TRE
+	#country = KAR
+	
+	#easy_country = TUR
+	easy_country = MAM
+	# easy_country = HSN
+}

@@ -1,0 +1,235 @@
+﻿l_spanish:
+
+ ara_portuguese_succession_title: "Portuguese Succession" 
+ ara_portuguese_succession_desc: "Only one crown is left. We must unite the Iberians under one ruler as it was in our Asturian beginnings!" 
+ ara_slave_trade_safi_title: "Slave Trade in Safi" 
+ ara_slave_trade_safi_desc: "One of the goods being traded in Safi are slaves from far away lands, we must take advantage of the conquered lands and monopolize the trade!" 
+ ara_reunite_ducal_lands_title: "Reunite the Ducal Lands" 
+ ara_reunite_ducal_lands_desc: "Our Basque brothers may be small in size, but they are Iberians, thus we must remind them who are their larger superior."
+ ara_good_upper_valley_title: "The Good Upper Valley" 
+ ara_good_upper_valley_desc: "The heartlands of our great nation seems empty. Thus, we must develop our motherland and boast our economic and infrastructural greatness!" 
+ ara_pioneer_aragonese_artillery_title: "Aragonese Artillery" 
+ ara_pioneer_aragonese_artillery_desc: "Gunpowders from Asia had aided our conquests. We must further innovate our ideas in these explosive and harness them in their full capacity!" 
+ ara_iberian_union_title: "The Iberian Union" 
+ ara_iberian_union_desc: "The Castilians are in the brink of a great disaster! We must safeguard our Iberian brothers of the faith and offer them good rulership!" 
+ ara_conclude_reconquista_title: "Conclude the Reconquista" 
+ ara_conclude_reconquista_desc: "The Moors are slowly being pushed away. It is imperative for these heathens to be driven away from our Christian lands!" 
+ ara_western_kingdom_title: "The Western Kingdom" 
+ ara_western_kingdom_desc: "The Andalucians are now pushed back, but we must continue spreading the True Faith in the Western Saracens!" 
+ #ara_tradicions_catalanes_title: "Les Tradicions Catalanes"
+ #ara_tradicions_catalanes_desc: "The Council of Hundreds aided much of the Catalan provinces. We must aid the development of the council to administrate Catalonia effectively." 
+ #ara_maritime_law_title: "Maritime Law" 
+ #ara_maritime_law_desc: "Trade may be important of a country's sustainability. However, a set of rules must be implemented in order to keep the practices of trading more civilized."
+ ara_armada_del_rey_de_aragon_title: "Armada del Rey de Aragon"
+ ara_armada_del_rey_de_aragon_desc: "Establishing a large navy is rather vital for our expansion. This should be a good first step for our conquests in the Mediterranean." 
+ ara_curb_berber_piracy_title: "Curb Berber Piracy" 
+ ara_curb_berber_piracy_desc: "The pirates of Africa are threatening the safety our citizens and trading partners. We must consolidate their coast and end their miserable lives!" 
+ ara_depose_hafsids_title: "Depose the Hafsids" 
+ ara_depose_hafsids_desc: "Carthage is being abused by the Hafsid pirates and traders. It is imperative to bring God's wrath to these piratic heathens and end their dynasty!" 
+ ara_markets_alexandria_title: "Markets of Alexandria" 
+ ara_markets_alexandria_desc: "Alexandria is one of the most active places of trading. As our naval empire grows, we must bring Alexandriato our fold and set foot in Egypt!"
+ ara_valencian_industry_title: "Valencian Industry" 
+ ara_valencian_industry_desc: "Valencia is the capital of our Kingdom and the beating heart of the production of valuable goods and central authority. We must develop the city in order to reap more benefits than we usually gained before!" 
+ ara_estudio_general_title: "Estudio General" 
+ ara_estudio_general_desc: "Developing Valencia has produced unexpected results! With the Renaissance influencing our domain, we must do what we can to invite scholars and intellectual clerics!" 
+ ara_taula_de_canvi_title: "Taula de Canvi" 
+ ara_taula_de_canvi_desc: "As Valencia continually develops, burghers and investors from within the domain wished to create an institution, the known world's first central bank. It shall be done!" 
+ ara_assist_skanderbeg_title: "Assist Skanderbeg" 
+ ara_assist_skanderbeg_desc: "Skanderbeg has far too long resisted the might of the Turks. Indeed, a great feat, but we must take advantage of his situation and establish foothold in the Balkans!" 
+ ara_dominus_athenarum_title: "Dominus Athenarum" 
+ ara_dominus_athenarum_desc: "The Aragonese had once been lords of the distant Athens. Perhaps, we must reconquer the intellectual resources of Athens!" 
+ ara_vasilevusa_title: "Vasilevusa"
+ ara_vasilevusa_desc: "The Royal City, one of the names of Constantinople, is close within our grasp. We must reestablish once again the Latinocracy and make ourselves the Bastion of Christianity!" 
+ ara_mare_nostrumm_title: "Mare Nostrum"
+ ara_mare_nostrumm_desc: "We have consolidated many lands in the Mediterranean. Let us push forward and claim ourselves as the sole lords of our sea!" 
+ ara_neapolitan_academy_title: "Neapolitan Academy" 
+ ara_neapolitan_academy_desc: "As Renaissance is blossoming Italy, we must establish our very own academy in Napoli and develop our people's capacities to become the brightest minds in Europe!" 
+ ara_holy_orders_aragon_title: "Holy Orders of Aragon" 
+ ara_holy_orders_aragon_desc: "The Catholic Orders have long aided our spirituality since our holy mission reconquering Iberia. Give them what rewards they deserve and please the Pope of our great piety." 
+ ara_general_chancellorship_title: "The General Chancellorship"
+ ara_general_chancellorship_desc: "The Neapolitan Crown is slowly slipping away from our hands despite their recent subjugation. Remind the chancellery who their lord is!" 
+ ara_compagna_communis_ianuensis_title: "Communis Ianuensis" 
+ ara_compagna_communis_ianuensis_desc: "The Genoese have far too long hegemonizing the Western Mediterranean with their trade and naval prowess. Weaken their forces and dominate them!" 
+ ara_rei_ditalia_title: "Rei d' Italia" 
+ ara_rei_ditalia_desc: "We have conquered a huge portion of Italy, perhaps, along with our papal influence and friendship, crown ourselves as the sole Kings in Italy!" 
+ ara_blossom_arts_title: "Blossom the Arts" 
+ ara_blossom_arts_desc: "The Italian Renaissance has been recently breached our domain. We must aid our artists in creating and pruducing arts, literatures and such for the betterment of our nation!" 
+ ara_fortificacio_costanera_title: "Fortificacio Costanera"
+ ara_fortificacio_costanera_desc: "It has been long since we boasted our trading abilities to our neighbors. In continuing to do so, we should establish defenses to avoid devastation from foreign hostilities!" 
+ ara_marine_school_of_aragon_title: "Marine School of Aragon" 
+ ara_marine_school_of_aragon_desc: "It is true that we have gained much naval prowess over the years. However, we must continue developing our naval prowess in order to aid our commerce and conquests" 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ #Modifiers
+ ara_portuguese_crown_jewels_modifier: "Portuguese Crown Jewels" 
+ ara_profits_in_the_atlantic_modifier: "Profits in the Atlantic" 
+ ara_slave_trade_hub_modifier: "Slave Trade Hub" 
+ ara_slave_trade_hub_modifier_desc: "until we abolish slavery"
+ ara_overseas_colonial_oportunities: "Overseas Colonial Opportunities" 
+ ara_affluence_of_aragonese_crown_modifier: "Affluence of the Aragonese Crown" 
+ ara_prosperous_people_modifier: "Prosperous People" 
+ ara_gunpowder_innovations_modifier: "Gunpowder Innovations" 
+ ara_gunpowder_innovations2_modifier: "Gunpowder Innovations" 
+ ara_crown_of_castile_modifier: "Crown of Castile" 
+ ara_victory_in_morocco_modifier: "Victory in Morocco" 
+ ara_victory_in_morocco2_modifier: "Victory in Morocco" 
+ ara_restored_the_consell_de_cent_modifier: "Restored the Consell de Cent" 
+ ara_regional_parliament_modifier: "Regional Council of Catalonia"
+ ara_book_of_the_consulate_of_the_sea_modifier: "Book of the Consulate of the Sea" 
+ ara_might_of_the_aragonese_navy_modifier: "Resurgence of the Aragonese Navy"
+ ara_berber_privateers_modifier: "Berber Privateers" 
+ ara_caravan_trade_of_tunisia_modifier: "Caravan Trade of Tunisia" 
+ ara_first_valencian_university_modifier: "First Valencian University" 
+ ara_banner_of_christianity_modifier: "Banner of Christianity" 
+ ara_metropolitan_seat_of_athens_modifier: "Metropolitan Seat of Athens" 
+ ara_masters_of_the_mediterranean_modifier: "Masters of the Mediterranean" 
+ ara_aragonese_piety_modifier: "Aragonese Piety" 
+ ara_expanded_trade_centers_modifier: "Expanded Trade Centers" 
+ ara_crown_of_italy_modifier: "Crown of Italy" 
+ ara_renaissance_burgeon_modifier: "Renaissance Burgeon" 
+ ara_flow_of_ideas_and_humanist_arts_modifier: "Flow of Ideas & Humanist Arts" 
+ ara_protected_coast_modifier: "Protected Coast"
+ 
+ 
+ 
+ #Custom Tooltips
+ ara_if_por_likes_us_tt: "If §YPortugal§! has at least §G100§! opinion of us, we will become historical friends"
+ ara_all_subjects_with_explo_tt: "All our subjects with the §YQuest for the New World§! Exploration Idea will receive complimentary rewards"
+ ara_spy_turks_tt: "If we complete the mission while having at least §Y50§! Spy Network against the @TUR Ottomans, we will be successful at stealing the secrets of Ottoman Artillery, thus complimenting the reward with an extra §G+10% Siege Ability§!"
+ ara_cas_in_civil_war_tt: "Castile is in the §YCastilian Civil War§! disaster and has a smaller army than us"
+ ara_reverse_gender_or_regency_tt: "The rulers of @ARA and @CAS have opposite genders OR @CAS is in a regency while we are not"
+ ara_if_papal_controller_or_opinion_tt: "If we complete this mission while @PAP §YThe Papal States§! have at least §G150§! opinion of us or we are the \n§GPapal Controller§!, we will also gain §G25§! Papal Influence"
+ ara_if_crusaded_morocco_tt: "If @MOR §YMorocco§! is the target of a §YCrusade§! the following modifier will be complimented with §G-33%§! Curia Powers Cost as well as a new §YCardinal§!"
+ ara_no_nation_with_capital_in_maghreb_has_larger_navy_tt: "No nation with its capital in the §YMaghreb Region§! has a larger §YNavy§! than us" 
+ ara_capture_doctrine_tt: "\n\nIf we successfully capture at least §G20§! enemy vessels using the '§YShip Boarding§!' Doctrine, we will be able to employ Berber Privateers in our naval forces, enabling new §Gabilities§! and permanent §Grewards§!"
+ ara_had_skanderbeg_event_flag: "Has had the '§YEnvoy from Skanderbeg§!' event" 
+ ara_employ_skanderbeg_expertise: "We will use the expertise of §YSkanderbeg§! to educate an aspiring general of our own"
+ ara_strongest_trade_mediterranean_tt: "Is the strongest trade power in the following trade nodes: \n§YSevilla§! \n§YValencia§! \n§YGenoa§! \n§YTunis§! \n§YConstantinople§! \n§YAlexandria§!" 
+ ara_have_two_hundred_ships_tt: "Have at least §Y200§! ships"
+ ara_nap_opinion_and_lib_desire_tt: "§YNaples§! has at least §Y125§! opinion and less than §Y5%§! Liberty Desire"
+ ara_prevent_succession_shenanigans_tt: "This will prevent '§YThe Neapolitan Succession§!' event" 
+ ara_no_nation_in_italy_larger_army_tt: "No nation with its capital in §YItaly§! has a larger §Yarmy size§! than us"
+ ara_get_conqueror_trait_tt: "If possible, [Root.Monarch.GetName] will gain the §YConqueror§! personality trait"
+ ara_extra_reward_tt: "If we complete the mission while [Root.Capital.GetCapitalName] has at least  §Y30§! Development, we will receive an extra reward"
+ ara_have_eighty_ships_tt: "Have at least §Y80§! ships" 
+ ara_aragon_area_prosperous_tt: "§YAragon Area is prosperous"
+ 
+ 
+ #Special Advisor
+ poet: "Poet" 
+ poet_desc: "A poet is a person who creates poetry. Poets may describe themselves as such or be described as such by others. A poet may simply be a writer of poetry, or may perform their art to an audience. The work of a poet is essentially one of communication, either expressing ideas in a literal sense, such as writing about a specific event or place, or metaphorically. Poets have existed since antiquity, in nearly all languages, and have produced works that vary greatly in different cultures and periods. Throughout each civilization and language, poets have used various styles that have changed through the course of literary history, resulting in a history of poets as diverse as the literature they have produced."
+ 
+ 
+ #Events 
+ 
+ FU_Aragon_Events.1.t: "Commercial Expansion in Alexandria"
+ FU_Aragon_Events.1.d: "The trade that flows through the river Nile contains exorbitant amounts of value. To harness the amount of goods that flow through it will not only amount to unimaginable profits but also the introduction of new goods from faraway shores. The recent conquest of the Delta has led to the monopolization of many ventures that span all the way to India and beyond." 
+ FU_Aragon_Events.1.a: "This will positively influence our treasuries!"
+ ara_nile_production_monopoly_modifier: "Nile Production Monopoly"
+ 
+ FU_Aragon_Events.2.t: "The Chambers of Lonja de la Seda"
+ FU_Aragon_Events.2.d: "Built between 1482 and 1548, la Lonja is composed of three parts (plus the Orange Garden - a walled court-yard). The main hall, Sala de Contratacion (The Contract Hall) is a large lavishly decorated space supported by gorgeous twisted columns. This was the financial centre of La Lonja, where the merchants work out contracts. The side-wing is named the Pavilion of the Consulate, and this was the seat of the Tribunal del Mar - the first marine merchant tribunal to ever be formed in Spain. The first two floors were the main function rooms, with the upper one hosting a richly decorated ceiling. These rooms are still maintained original furnishings. On occasion, the Tribunal would imprison merchants for debts in the central tower of La Lonja - the third part of the structure. \n\nBehind the current building, there was an earlier one from the 14th century, which was called the Oil Exchange (Llotja de l’Oli, in Valencian, or Lonja del Aceite, in Spanish). It was used not only for trading with agricultural oils, but for all kind of business. Where in 1348 was traded perxal (percale) as some kind of silk." 
+ FU_Aragon_Events.2.a: "Let us expand the Contract Hall!"
+ FU_Aragon_Events.2.b: "The Pavilion of the Consulate, to serve in matters of administration."
+ FU_Aragon_Events.2.c: "Restore the old Oil Exchange instead."
+ has_trade_goods_expanded_active: "Trade Goods Expanded is active" 
+ ara_sala_de_contraction_modifier: "Sala de Contraction" 
+ ara_consulat_de_mar_modifier: "Consulat de Mar" 
+ ara_oil_exchange_modifier: "Llotja de l’Oli"
+ 
+ FU_Aragon_Events.3.t: "Table of Exchange" 
+ FU_Aragon_Events.3.d: "The Taula's charter, dated in the 14th century depending on authors, is the oldest preserved public bank regulation. Its design remained essentially unchanged for 300 years until the early 18th century. The Taula was a fully-owned operation of the city with a city guarantee of its deposits, and there is no evidence that it had capital of its own. The city appointed the Taula's taulers who worked on the table and its cashier for two-years fixed terms and paid their salaries. Other Taula officers, including its regent, chief of deposits, credencer in charge of first bookings, and notary, were apponted for life. The Taula's coffers had six keys, of which two were held by each tauler and two by the city councillors. The Taula was also subject to frequent inspection by municipal auditors. \n\nIn 1609, the city council created the Bank of the City of Barcelona (Banc de la Ciutat) as an independent department of the municipal administration, to accept lower-quality coins than were allowed under the Taula's regulation. In practice, that bank appears to have operated as an extension of the Taula rather than a separate let alone competing institution." 
+ FU_Aragon_Events.3.a: "The region's first central bank!"
+ ara_branch_of_the_taula_de_canvi_modifier: "Branch of the Taula de Canvi" 
+ 
+ FU_Aragon_Events.4.t: "Imperium Constantinopolitanum" 
+ FU_Aragon_Events.4.d: "Originally conceived as a feudal Crusader state founded by the leaders of the Fourth Crusade on lands captured from the Byzantine Empire. The Latin Empire was intended to replace the Byzantine Empire as the Western-recognized Roman Empire in the east, with a Catholic emperor enthroned in place of the Eastern Orthodox Roman emperors. \n\nOur recent conquests in the region have risen questions around the potential re-establishment of the old Latin Borders and the expansion in Western Anatolia as well as the Balkans." 
+ FU_Aragon_Events.4.a: "Let us restore the feudal Crusader state!"
+ FU_Aragon_Events.4.b: "A fine addition to our collection..."
+ 
+ FU_Aragon_Events.5.t: "Marine Academy of Aragon"
+ FU_Aragon_Events.5.d: "A nation with an expansive maritime history such as ours, cannot facilitate the growth of future generations in regards to our naval capabilities. To that end the Aragonese Academy for Naval Cadets was founded in [GetYear] after considerable urbanization and numerous advancements in the fields of tactics and sea maneuvers. In order for our admirals to keep up with the likes of formidable Empires and armadas, it was determined vital to train professional sailors and marines, fearless seamen that will man our most powerful vessels!" 
+ FU_Aragon_Events.5.a: "An academy to pass on our maritime knowledge!"
+ marine_admiralty_academy_of_the_crown_of_aragon_modifier: "Marine Admiralty Academy of the Crown of Aragon" 
+ 
+ FU_Aragon_Events.6.t: "Protecting our Independence" 
+ FU_Aragon_Events.6.d: "The relationship between the Princedom of Albania, under Skanderbeg, and the Kingdom of Aragon, under King Alfonso V is an interesting one. Despite the distance between our borders, our genius monarch greatly assisted the Iberian ruler in dealing with various unruly elements during the rebellion of Naples. Perhaps the advancement of the Turks, coupled with the imminent fall of Byzantium and the air of animosity in the Balkans, is a stark indication that we need to seek a powerful protector." 
+ FU_Aragon_Events.6.a: "The Aragonese are our friends, they shall protect us!" 
+ FU_Aragon_Events.6.b: "Albania will stand the test of time!"
+ 
+ FU_Aragon_Events.7.t: "Envoy from Skanderbeg" 
+ FU_Aragon_Events.7.d: "The relationship between the Princedom of Albania, under Skanderbeg, and the Kingdom of Aragon, under King Alfonso V, is an interesting one. Despite the distance between our borders, their genius monarch greatly assisted ours in dealing with various unruly elements during the rebellion of Naples. That was the beginning of a friendship that would later blossom into diplomatic vassalage, with the Albanian Princedom falling under Aragonese protection. This new development will certainly be an interesting one as the forts of Albania serve as valuable defensive positions against our enemies in the Balkan region." 
+ FU_Aragon_Events.7.a: "Who said the sword is mightier than the pen?" 
+ 
+ FU_Aragon_Events.8.t: "Tirant lo Blanch"
+ FU_Aragon_Events.8.d: "Tirant lo Blanch is a chivalric romance written by the Valencian knight Joanot Martorell, finished posthumously by his friend Martí Joan de Galba and published in the city of Valencia in 1490 as an incunabulum edition. The title means "Tirant the White" and is the name of the romance's main character who saves the Byzantine Empire. It is one of the best known medieval works of literature in Valencian. It is considered a masterpiece in the Valencian literature and in the literature in Catalan language as a whole, and it played an important role in the evolution of the Western novel through its influence on the author Miguel de Cervantes. \n\nTirant lo Blanch tells the story of the knight Tirant who has a series of adventures across Europe in his quest. He joins in knightly competitions in England and France until the Emperor of the Byzantine Empire asks him to help in the war against the Ottoman Turks, Islamic invaders threatening Constantinople, the capital and seat of the Empire. Tirant accepts and is made Megaduke of the Byzantine Empire and the captain of an army. He defeats the invaders and saves the Empire from destruction. Afterwards, he fights the Turks in many regions of the eastern Mediterranean and North Africa, but he dies just before he can marry the pretty heiress of the Byzantine Empire." 
+ FU_Aragon_Events.8.a: "Such suspence! A novel for the ages!"
+ FU_Aragon_Events.8.b: "I am the knight Tirant!" 
+ ara_living_legend_modifier: "Living Legend of Tirant the White" 
+
+ FU_Aragon_Events.9.t: "Revolt of the Brotherhoods" 
+ FU_Aragon_Events.9.d: "The Revolt of the Brotherhoods  was a revolt by artisan guilds (Germanies) against the government of [Root.Monarch.GetName] in the Kingdom of Valencia, part of the Crown of Aragon. It took place from 1519–1523, with most of the fighting occurring during 1521. The Valencian revolt inspired a related revolt in the island of Majorca, also part of Aragon, which lasted from 1521–1523. \n\nThe revolt was an anti-monarchist, anti-feudal autonomist movement inspired by the Italian republics. It also bore a strong anti-Islamic aspect, as rebels rioted against Valencia's peasant Muslim population (also called mudéjars, to contrast with crypto-Muslims or Moriscos in the Crown of Castile, where Islam was outlawed) and imposed forced conversions to Christianity. The agermanats are comparable to the comuneros of neighboring Castile, who fought a similar revolt against Charles from 1520–1522. Both rebellions were partially inspired by the departure for Germany of Charles, the new King of both Castile and Aragon (in a personal union that would form the basis for the Kingdom of Spain), to take the throne as Holy Roman Emperor and leaving behind a somewhat disreputable Royal Council and regent." 
+ FU_Aragon_Events.9.a: "They need to be reined in." 
+ FU_Aragon_Events.9.b: "Let us negotiate instead." 
+ ara_every_center_of_trade_gets_autonomy_tt: "Every owned province with a §YCenter of Trade§! will have its autonomy §Rincreased§!"
+ 
+ FU_Aragon_Events.10.t: "Furs of Valencia" 
+ FU_Aragon_Events.10.d: "The Furs of Valencia were the laws of the Kingdom of Valencia during most of the Middle Ages and early modern Europe. The laws were a series of charters which, altogether, worked similarly as a modern Constitution did later. Thus, they defined the position of and checks and balances between the Royal House, the nobility, the Catholic ecclesiastic and the judicial procedures. The first codifications are based in the Usages of Barcelona, Costums of Lleida, and the Furs of Aragon. \n\nThey were promulgated by the first King of Valencia, James "the Conqueror", in 1261 at the newly created Valencian Parliament; he then subjected the title of King of Valencia to an oath of office before the Parliament, sworn on the Furs. \n\nThe Furs were valid for more than four centuries, until they were abolished by means of the Nueva Planta decrees signed by Philip V of Castile in 1707. Sealing the validity of our own code of administrative conduct, centuries after its conception, will only strengthen the legitimacy of our institutions!" 
+ FU_Aragon_Events.10.a: "Healthy laws for a healthy state." 
+ ara_checks_balances_of_furs_of_valencia_modifier: "Checks and Balances"
+
+ 
+ #Latin Empire
+ #National Ideas 
+ FU1_ideas: "Latin Ideas" 
+ FU1_ideas_start: "Latin Traditions"
+ FU1_ideas_bonus: "Latin Ambition"
+ 
+ FU1_roman_claims: "Roman Claims" 
+ FU1_roman_claims_desc: "The much-contested claim of the true heir of Rome falls upon our shoulders since the destruction of the last remnant of the Byzantine Empire." 
+ FU1_shield_of_christendom: "Shield of Christendom" 
+ FU1_shield_of_christendom_desc: "We shall be the defenders of Christianity in Anatolia and beyond! Let all infidels fear the sound of our arms and sight of our coat of arms!" 
+ FU1_reclaim_jerusalem: "Reclaim Jerusalem" 
+ FU1_reclaim_jerusalem_desc: "The city of God rightfully belongs under the protective embrace of the Catholic Church as part of our patrimony and de facto right."
+ FU1_modernize_administration: "Modernized Imperial Administration"
+ FU1_modernize_administration_desc: "Admninistrating our lands in the edges of Europe and Asia is no easy task for most, however we have managed to modernize our bureaucracy to an impressive degree." 
+ FU1_reunite_the_pieces: "Reunite the Pieces" 
+ FU1_reunite_the_pieces_desc: "To regain the lost territory that our Roman ancestors greedily lost, is the mission God put onto our shoulders." 
+ FU1_regulate_marmara: "Regulate the Straits" 
+ FU1_regulate_marmara_desc: "The Hellespont is very vital to the continued existence of our nation. We will guard it and regulate it as we see fit in order to maximize profits and affluence for our cities."
+ FU1_seek_western_help: "Seek Western Allies" 
+ FU1_seek_western_help_desc: "In order to solidify our Empire as legitimate and face our foes to the East, we must send envoys to our western brothers of the same faith,  seek help and cooperation between the chosen men of God." 
+ 
+ #Late April Partial Rework by Big Boss
+ 
+ #Tooltips 
+ ara_remove_bad_event_tt: "If we complete this mission while securing @NAV Navarra as our subject the event '§YThe Death of King Alfonso§!' will yield benefits"
+ ara_avoid_bad_options_tt: "Completed the '§YReunite the Ducal Lands§!' mission while @NAV Navarra was a subject"
+ ara_avoid_bad_options_explanation_tt: "\nDue to the close relations between our two nations the passing of our late King will be mourned and respected by both peoples"
+ ara_every_province_that_fulfills_req_tt: "Every owned province that fulfills the requirements will gain:"
+ ara_gain_estate_land_5_tt: "Gain §Y5%§! Estate Land for the §YCrown§!"
+ ara_gain_administrator_trait_tt: "If possible our ruler will gain the unique §YReformist§! trait"
+ 
+ #Event Additions 
+ flavor_nav.4.efg: "Let us both remember and celebrate the passing of King Alfonso!"
+ 
+ #Reforms
+ ara_consulate_of_the_sea: "Consulate of the Sea" 
+ ara_consulate_of_the_sea_desc: "The coasts of the western Mediterranean make up large portions of our domain and as such their healthy operation shall greatly benefit us and our treasury. To serve these ends, a set of commercial laws will underline the safe conduct and minimize red tape for our merchants." 
+ ara_consell_de_cent: "Consell de Cent" 
+ ara_consell_de_cent_desc: "The Council of Hundreds is a valuable tool if we are to keep the many different people of our domain. Its jurisdiction over the people of Catalonia has been respected and safeguarded for generations." 
+ 
+ #Personality
+ fu_reformist_personality: "Reformist" 
+ 

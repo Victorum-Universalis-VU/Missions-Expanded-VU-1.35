@@ -1,0 +1,366 @@
+on_monarch_death = {
+	if = {
+		limit = {
+			tag = ANS
+			BRA = {
+				has_country_flag = albrecht_achilles_flag
+			}
+		}
+		BRA = {
+			clr_country_flag = albrecht_achilles_flag #Just to be sure
+			kill_heir = {} #If Albrecht Achilles dies in Ansbach he will also be dead in Brandenburg, will appear as normal death of heir to BRA.
+		}
+	}
+	
+	if = {
+		limit = { has_country_modifier = sought_after_bachelor }
+		remove_country_modifier = sought_after_bachelor
+	}
+	if = {
+		limit = {
+			tag = SAX
+			has_country_flag = sax_thuringen_split_to_happen
+			OR = {
+				NOT = { dynasty = "von Wettin" }
+				NOT = { senior_union_with = THU }
+				has_regency = yes
+			}
+		}
+		clr_country_flag = sax_thuringen_split_to_happen
+	}
+	if = {
+		limit = { tag = SAM }
+		country_event = { id = polynesian.35 }
+	}
+	if = {
+		limit = { tag = TOG }
+		country_event = { id = polynesian.36 }
+	}
+	if = {	# Ascension of Trailokanat
+		limit = { tag = AYU }
+		country_event = { id = flavor_suk.1 }
+	}
+	if = {
+		limit = { tag = GOT }
+		country_event = { id = flavor_got.37 }
+	}
+	if = {
+		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
+		add_stability = 1
+	}
+	
+	burgundian_inheritance_start_effect = yes
+	ladislaus_postumus_king_died_effect = yes
+	joan_de_trastamara_king_died_effect = yes
+	events = {
+		flavor_wal.1 # Vlad the Impaler. So that he doesn't try to usurp his father.
+		flavor_nav.4 # Navarra succession event
+		flavor_sax.8 # Treaty of Leipzig
+		flavor_pap.16 # Borgia Pope
+		flavor_pap.19 # death of borgia pope
+		flavor_tus.22 # Medici Pope
+		flavor_tus.24 # death of the Medici Pope
+		majapahit.8 # Majapahit pretenders
+		flavor_mal.11 # Mali pretenders
+		flavor_mal.47 # Pilgrimage ends prematurely
+		government_events.3	# Election of a new Ruler
+		ME_Spain_Events.8
+		ME_Reform_Events.1
+		ME_Mzab_Events.2
+		ME_Korea_Events.6
+		ME_Korea_Events.8
+	}
+	
+	random_events = {
+		#100 = 0
+		100 = 0
+		900 = ME_Mamluks_Events.21
+	}
+	
+	if = {
+		limit = {
+			has_ruler_flag = Ulugh_beg_is_ruler
+		}
+		ROOT = {
+			country_event = { id = ME_Timurid_Princes_Event.11 }
+		}
+	}
+	complete_mission = me_tim_regency
+	
+	if = {
+		limit = {
+			tag = TIM
+			has_global_flag = tim_successor
+		}
+		event_target:me_tim_successor = {
+			country_event = { id = ME_Timurid_Princes_Event.20 }
+		}
+		clr_global_flag = tim_successor
+	}
+	else_if = {
+		limit = {
+			tag = TIM
+			has_global_flag = prince_successor
+		}
+		event_target:me_tim_successor = {
+			country_event = { id = ME_Timurid_Princes_Event.19 }
+		}
+		clr_global_flag = prince_successor
+	}
+	else_if = {
+		limit = {
+			tag = TIM
+			has_country_flag = ME_TIM_no_successor
+		}
+		country_event = { id = ME_Timurid_Princes_Event.12 }
+	}
+	else = { } #don't complain error log.
+	
+	if = {
+		limit = {
+			has_country_flag = me_subah_mechanic
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = me_mug_subah_focus
+			}
+			remove_province_modifier = me_mug_subah_focus
+		}
+		remove_country_modifier = me_mug_hindu_subah
+		remove_country_modifier = me_mug_hindu_subah_negative
+		remove_country_modifier = me_mug_bengal_subah
+		remove_country_modifier = me_mug_bengal_subah_negative
+		remove_country_modifier = me_mug_rajput_subah
+		remove_country_modifier = me_mug_rajput_subah_negative
+		remove_country_modifier = me_mug_gujarat_subah
+		remove_country_modifier = me_mug_gujarat_subah_negative
+		remove_country_modifier = me_mug_malwa_subah_bonus
+		remove_country_modifier = me_mug_malwa_subah_negative
+		remove_country_modifier = me_mug_deccan_subah_bonus
+		remove_country_modifier = me_mug_deccan_subah_malus
+		
+		country_event = { id = ME_Mughal_Events.23 }
+	}
+	
+	if = {
+		limit = {
+			has_heir_flag = QAR_fulad
+		}
+		clr_heir_flag = QAR_fulad
+		country_event = { id = ME_Qara_Qoyunlu_Events.7 }
+	}
+	
+	if = {
+		limit = {
+			tag = HAB
+		}
+		country_event = { id = me_austria_nobles.1 }
+	}
+	
+	if = {
+		limit = {
+			has_reform = west_slavic_monarchy
+			NOT = { has_country_flag = ME_FFS_STAP }
+		}
+		set_country_flag = ME_FFS_STAP
+		country_event = { id = ME_Zapadoslavia_Events.9 }
+	}
+	if = {
+		limit = {
+			tag = ERE
+			#mission_completed = ERE_tombs
+		}
+		random_owned_province = {
+			province_event = {
+				id = ME_Beylik_Events.14
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = me_hab_iron_fist_flag
+		}
+		ROOT = {
+			change_variable = { #To count how many ruler deaths have happened
+				which = MEIronFistVar
+				value = 1
+			}
+			if = {
+				limit = {
+					check_variable = { #To count how many ruler deaths have happened
+						which = MEIronFistVar
+						value = 1
+					}
+				}
+				clr_country_flag = me_hab_iron_fist_flag
+				every_owned_province = {
+					remove_province_modifier = me_hab_iron_fist
+				}
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			is_emperor = yes
+		}
+		ROOT = {
+			me_decrease_emperor_of_romans_level = yes
+		}
+	}
+	
+	if = {
+		limit = {
+			has_country_flag = me_hab_conquer_iberia
+		}
+		clr_country_flag = me_hab_conquer_iberia
+		break_union = CAS
+		break_union = SPA
+		break_union = POR
+		break_union = ARA
+	}
+	if = {
+		limit = {
+			dip = 0
+			NOT = { dip = 1 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 0 }
+	}
+	else_if = {
+		limit = {
+			dip = 1
+			NOT = { dip = 2 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 1 }
+	}
+	else_if = {
+		limit = {
+			dip = 2
+			NOT = { dip = 3 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 2 }
+	}
+	else_if = {
+		limit = {
+			dip = 3
+			NOT = { dip = 4 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 3 }
+	}
+	else_if = {
+		limit = {
+			dip = 4
+			NOT = { dip = 5 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 4 }
+	}
+	else_if = {
+		limit = {
+			dip = 5
+			NOT = { dip = 6 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 5 }
+	}
+	else_if = {
+		limit = {
+			dip = 6
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 6 }
+	}
+	
+	if = {
+		limit = {
+			has_country_flag = me_tim_picked_regency
+		}
+		restore_country_name = yes
+	}
+}
+
+on_new_monarch = {
+	on_new_monarch_effect = yes
+	crimean_succession_effect = yes #Scripted effect
+	slesvig_question_effect = yes #Scripted effect
+	# ambrosian_republic_effect = yes
+	succession_culture_religion_effect = yes
+	sheik_ul_islam_effect = yes
+	hab_remove_mission_mods_if_not_emperor_effect = yes
+	thu_remain_von_wettin_effect = yes
+	ladislaus_postumus_union_effect = yes
+	events = {
+		tribal_succession.1		# Harsh anti-tribals.
+		9492 					# Remove some event modifiers
+		flavor_boh.8			# Winter King in Prague
+		flavor_kol.1			# Bavarian Archbishop
+		war_of_the_roses.101	# WotR - House of Lancaster wins
+		war_of_the_roses.102	# WotR - House of York wins
+		war_of_the_roses.106	# WotR - Another dynasty has seized the throne
+		flavor_tur.102			# Janissary Reward
+		flavor_ori.7			# Hamvira Victorious
+		flavor_kbo.1			# The two branches of the Sayfawa dynasty
+		flavor_kbo.8			# Sayfawa pretenders
+		flavor_zan.5			# Coup of Coup of Suleiman and Muhammad al-Mazlum.
+		purple_phoenix.1		# BYZ pretenders
+		flavor_pol.3480			# The Pacta Conventa
+		protestantism_events.15	# Catholic Leaning Monarch
+		tengri_events.17		# Keep the Khojas in Power?
+		flavor_tus.15			# Savonarola Dies
+		flavor_brapru.22		# Succession of Albrecht Achilles
+		flavor_brapru.25		# Dispositio Achillea (can also trigger from flavor_brapru.22)
+		flavor_nor.27			# Proclamation in Hamar
+		china_events.43			# Picking new Capital for China
+		celestial_empire_events.3 #Resistance to Sinicization
+		flavor_boh.2			#Heretic Kings
+		flavor_hun.17			#Maintaining the Black Army
+		flavor_tim.1			#Death of Shah Rukh
+		muslim_school_events.20 #No Religious School
+		flavor_daimyo.4			#Shiba Yoshikado
+		flavor_fra.9000			# François Villon
+		flavor_sca.2			# Education Focus of the new Ruler
+		flavor_rus.128			# Peter the Great
+		flavor_rus.131			# Streltsy Payment
+		flavor_gbr.102			# Religious Stance of the King
+	}
+	random_events = {
+		1000 = 0
+		100 = flavor_kol.1		# Bavarian Archbishop
+		100 = flavor_hsa.3		# Hansa: Tagfahrt
+		100 = inti_events.1		# Birth of a Panaca
+		50 = dynastic_events.4
+		50 = dynastic_events.5
+		25 = harem_events.7		#Failed Policy of Fratricide
+	}
+	
+	#ME Stuff
+	if = {
+		limit = {
+			has_country_flag = me_tim_ruler_timer
+			NOT = {
+				had_country_flag = {
+					flag = me_tim_ruler_timer
+					days = 5475
+				}
+			}
+		}
+		add_country_modifier = {
+			name = me_mug_failed_coinage_reforms
+			duration = 5475
+		}
+		clr_country_flag = me_tim_ruler_timer
+	}
+
+	if = {
+		limit = {
+			mission_completed = EE_syn_synthetic_dawn
+		}
+		add_adm_power = 200
+		add_dip_power = 200
+		add_mil_power = 200
+	}
+}

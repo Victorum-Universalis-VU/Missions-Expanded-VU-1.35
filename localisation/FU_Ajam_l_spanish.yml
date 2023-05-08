@@ -1,0 +1,70 @@
+﻿l_spanish:
+
+#Made By Big Boss#
+
+#Missions
+ qom_twelve_immams_title: "Twelve Imams"
+ qom_twelve_immams_desc: "Our nation is dominated by the Shiite faith. Whether we choose to embrace this branch of Islam, or smite it in its crib, the time to stabilize our religious affairs is nigh." 
+ qom_stabilize_ajam_title: "Stabilize Ajam"
+ qom_stabilize_ajam_desc: " "
+ qom_renegotiate_suzerains_title: "Renegotiate Suzerains"
+ qom_renegotiate_suzerains_desc: "For far too long have the Malikates of our southern border enjoyed tremendous autonomy from the central palace. To curb their sovereignty and integrate them into our administration would only benefit us in the long term." 
+ qom_stifle_farsi_resistance_title: "Stifle Farsi Resistance" 
+ qom_stifle_farsi_resistance_desc: "The land south of our border, the mountainous regions of south Iran, are not only a commercial vein of the Maritime trade from India, but also a strategically defensible mountain line against all our foes. Whether we choose to subjugate the local warlords or assume direct control, the need to secure the Farsistan areas is of vital importance." 
+ qom_cross_quran_gate_title: "Cross the Qur'an Gate" 
+ qom_cross_quran_gate_desc: "The most beautiful of architectures in display, the Qur'an Gate in Shiraz, shall fall under the jurisdiction of our mighty armies. To safeguard the traditions and cultural heritage of our great nation, we mustn't endager its safekeeping to our weaker neighbours!"
+ qom_true_heir_timur_title: "True Heir of Timur"
+ qom_true_heir_timur_desc: "After the passing of Timur, and more recently Shah Rukh, many have laid claim on the title of Timur's true successor. Despite their empty words, facades of weakness masquaraded as displays of power, we have prevailed moreso than our neighboring princes. It's time to reunite the territories under [Root.Monarch.GetName]!" 
+ qom_calm_before_storm_title: "Calm Before the Storm"
+ qom_calm_before_storm_desc: "News of Shah Rukh's ill health are hard to conceal. As the great monarch nears the end of his human life, many hypothesize what will become of his great empire. Prospecting heirs and ambitious princes scheme and make grandiose plans about their time on his throne. We must raise our arms in defence of our people, lest we become a puppet to outside invaders!" 
+ qom_defy_timurids_title: "Defy the Timurids"
+ qom_defy_timurids_desc: "Once a great nation, the Timurids are now nothing but a shadow of their former selves. Power has been replaced by weakness, action with complacency. Perhaps it would be wise to intervene in their affairs and show them what a true and capable ruler is able to do."
+ qom_cradle_empires_title: "Cradle of Empires"
+ qom_cradle_empires_desc: "The fertile slopes of Sari have given rise to millenia of powerful Empires. Let us secure the strip and reap the benefits that come with it in recognition and more importantly, coin. Securing the markets of some of Persia's busiest markets will surely fill our treasuries!"
+ qom_herd_black_sheep_title: "Herd the Black Sheep" 
+ qom_herd_black_sheep_desc: "Time and time again the raiders of the Black Sheep harass caravans and our people in the western border. The recent passing of Shah Rukh has emboldened them to the point where they lay claim on our western domain. It is abundantly clear that these madmen have chosen death over servitude or cooperation." 
+ fu_expand_country_mission_title: "Expand Ajam" 
+ fu_expand_country_mission_desc: "To make ourselves known amongst our blood-thirsty neighbors, we must establish our armies as victorious and powerful. Successful conquests in the land directly bordering our nation shall bring immesurable prosperity across the vastness of our embellished capital."
+ fu_build_temples_title: "Erect Places of Worship"
+ fu_build_temples_desc: "In order to secure our national foundations and guide our people with a firm hand, we must make sure that our largest urban centers enjoy prosperity, expansion and the necessary infrastructure to support their growth." 
+ 
+ 
+
+#Modifiers
+ qom_followers_of_ali_modifier: "Followers of Ali"
+ qom_crushed_the_imamiyyah_modifier: "Crushed the Imamiyyah"
+ qom_renewed_prosperity_modifier: "Renewed Prosperity"
+ qom_steady_rule_modifier: "Steady Rule" 
+ qom_secured_the_jadda_ye_atabak_modifier: "Secured the Jadda-ye Atabak"
+ qom_successful_subjugation_modifier: "Successful Conquest of Fars" 
+ qom_hand_written_quran_modifier: "Hand Written Qur'an of Ibrahim Sultan" 
+ qom_succession_by_sword_modifier: "Succession by the Sword" 
+ qom_march_herat_modifier: "March to Herat"
+ qom_harnessing_timurs_domain_modifier: "Harnessing Timur's Domain"
+ qom_mountain_warfare_modifier: "Mountain Warfare" 
+ qom_silk_road_toll_modifier: "Silk Road Toll" 
+
+
+
+
+
+
+
+
+#Events 
+
+
+
+
+
+#Custom Tooltips
+ qom_muslim_enforced_religion_tt: "Has enacted the '§YEnforce Religious Unity§!' national decision"
+ qom_if_shiite_tt: "If we complete the mission under the §MShia§!:"
+ qom_if_sunni_tt: "If we complete the mission under the §MSunni§!:"
+ qom_trade_goods_road_tt: "If we complete the mission while §YTrade Goods Expanded§! is active we will receive an additional reward"
+ qom_if_via_ownership_tt: "If we complete the mission while directly owning the §MFarsistan§! area:" 
+ qom_integrate_fars_persia_tt: "\n\nIf we complete the mission while @FRSFars is our loyal subject, with high opinion, low liberty desire and owning the §YFarsistan§! and §YGulf Coast§! areas we will be able to instantly integrate them once we form @PERPersia"
+ qom_if_we_have_CoC_and_not_this_event_in_every_eligible_province_tt: "If we have the '§YCradle of Civilization§!' DLC and own a province with a §YMosque§! (that is NOT the capital) without the '§YNew Madrasah§!' modifier, we will also get:"
+ qom_host_of_turkmen_banners: "If we complete the mission while the §YNobles§! have at least §Y60§! Loyalty and the '§YLivestock Monopoly§!' a host of §MElite Turkmen Cavalry§! will appear in our capital"
+ 
+ 

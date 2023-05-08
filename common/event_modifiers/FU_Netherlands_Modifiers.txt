@@ -1,0 +1,300 @@
+ned_border_somme_modifier = {
+	local_defensiveness = 0.15
+}
+ned_peninsular_port_republic_modifier = {
+	trade_value_modifier = 0.1 
+	local_ship_repair = 0.15
+}
+ned_dutch_channel_profiteering_modifier = {
+	trade_efficiency = 0.1
+}
+ned_dutch_supremacy_in_london_modifier = {
+	prestige = 1 
+}
+ned_zuiderzee_works_modifier = {
+	local_production_efficiency = 0.2 
+}
+ned_antwerp_diamond_district_modifier = {
+	trade_goods_size = 1 
+	trade_value_modifier = 0.15
+}
+ned_golden_era_dutch_republic_modifier = {
+	all_power_cost = -0.05 
+	great_project_upgrade_cost = -0.2
+	global_colonial_growth = 25
+}
+ned_host_house_luxembourg_modifier = {
+	diplomatic_reputation = 1 
+	ae_impact = -0.1 
+}
+ned_united_netherlands_modifier = {
+	monthly_splendor = 1 
+	same_culture_advisor_cost = -0.1 
+}
+ned_no_changes_modifier = {
+	state_maintenance_modifier = -0.25
+}
+ned_exploitation_of_generality_lands_modifier = {
+	global_tax_modifier = 0.2
+}
+ned_fair_rule_modifier = {
+	stability_cost_modifier = -0.15
+	yearly_corruption = -0.1
+}
+ned_french_influence_modifier = {
+	movement_speed = 0.1
+}
+ned_english_influence_modifier = {
+	infantry_power = 0.05
+}
+ned_germanic_influence_modifier = {
+	land_forcelimit_modifier = 0.1
+}
+ned_italian_influence_modifier = {
+	discipline = 0.025 
+}
+ned_je_maintiendrai_modifier = {
+	governing_capacity_modifier = 0.1
+	administrative_efficiency = 0.05 
+}
+ned_constitutionalism_modifier = {
+	free_policy = 1 
+	all_power_cost = -0.05 
+}
+ned_evolved_the_nobility_modifier = {
+	nobles_loyalty_modifier = 0.15
+	global_manpower_modifier = 0.20 
+}
+ned_founded_5_admiralties_modifier = {
+	navy_tradition_decay = -0.01
+}
+ned_white_horse_modifier = {
+	local_ship_cost = -0.1 
+	ship_recruit_speed = -0.1
+	local_ship_repair = 0.15
+}
+ned_naval_equipment_production_centre_modifier = {
+	trade_goods_size_modifier = 0.25
+}
+ned_security_on_off_sea_modifier = {
+	flagship_durability = 0.25 
+	number_of_cannons_flagship_modifier = 0.25 
+}
+ned_security_on_off_sea2_modifier = {
+	naval_maintenance_modifier = -0.15
+}
+ned_acceptance_of_norman_traditions_modifier = {
+	num_accepted_cultures = 1 
+}
+ned_dutch_settlements_in_normandy_modifier = {
+	local_development_cost = -0.15
+}
+ned_english_crown_bill_rights_modifier = {
+	global_unrest = -0.5
+}
+ned_ik_ben_de_staat_modifier = {
+	max_absolutism = 5 
+	global_autonomy = -0.05 
+}
+ned_illustrious_schools_low_countries_modifier = {
+	technology_cost = -0.05 
+}
+ned_port_of_the_world_desire_modifier = {
+	global_trade_power = 0.15
+}
+ned_libertatis_praesidium_modifier = {
+	advisor_pool = 1 
+	female_advisor_chance = 0.1
+}
+ned_ample_grain_trade_modifier2 = {
+	manpower_recovery_speed = 0.2
+	trade_steering = 0.1
+}
+ned_ample_grain_trade_modifier = {
+	manpower_recovery_speed = 0.1
+	trade_steering = 0.1
+}
+ned_grain_apothecaries_of_the_republic_modifier = {
+	trade_value = 5 
+}
+ned_leader_of_baltic_trade_modifier = {
+	naval_tradition_from_trade = 0.5 
+	ship_power_propagation = 0.25
+}
+ned_admiralty_modifier = {
+	free_leader_pool = 1 
+}
+ned_dutch_kontor_offices_modifier = {
+	province_trade_power_value = 5
+	allowed_num_of_buildings = 1 
+}
+ned_state_regulations_trade_modifier = {
+	center_of_trade_upgrade_cost = -0.25 
+	mercantilism_cost = -0.15
+}
+ned_dutch_mercantile_fleet_modifier = {
+	global_ship_trade_power = 0.2
+	naval_forcelimit_modifier = 0.15
+	light_ship_cost = -0.05 
+}
+ned_dutch_squadrons_and_line_formations_modifier = {
+	heavy_ship_power = 0.1
+}
+ned_modernized_the_flemish_navy_modifier = {	
+	heavy_ship_power = 0.1
+	global_ship_trade_power = 0.2
+	naval_forcelimit_modifier = 0.1
+}
+ned_marine_corps_modifier = {
+	infantry_power = 0.1
+	is_marine_modifier = yes 
+}
+ned_dutch_shipbuilding_company_modifier = {
+	global_ship_cost = -0.01
+	global_ship_recruit_speed = -0.01
+	global_ship_repair = 0.01
+}
+ned_urban_planning_modifier = {
+	local_build_time = -0.25
+}
+ned_shooters_guild_city_guard_modifier = {
+	local_hostile_attrition = 1 
+	local_defensiveness = 0.2 
+}
+ned_colonial_outpost_modifier = { 
+	trade_value = 3 
+}
+ned_major_demand_for_labor_modifier = {
+	trade_goods_size_modifier = 0.1
+}
+ned_slave_labor_booming_modifier = {
+	great_project_upgrade_cost = -0.1
+	build_cost = -0.1 
+	build_time = -0.15
+	development_cost = -0.05
+}
+ned_american_expansion_modifier = {
+	colonists = 1 
+	global_colonial_growth = 20
+}
+ned_republicanism_true_freedom_modifier = {
+	monarch_diplomatic_power = 1 
+	num_accepted_cultures = 2 
+}
+ned_absolutist_regents_modifier = {
+	administrative_efficiency = 0.05 
+	max_absolutism = 5 
+}
+ned_stardust_adventures_modifier = {
+	colonist_placement_chance = 0.05 
+	range = 0.3
+}
+ned_dutch_west_indies_company_modifier = {
+	embargo_efficiency = 1 
+	capture_ship_chance = 0.1
+}
+ned_orinoco_flow_delta_modifier = {
+	province_trade_power_value = 15
+}
+ned_governance_free_seas_modifier = {
+	state_governing_cost = -0.2
+	dip_advisor_cost = -0.15
+}
+ned_reaffirmed_popular_ideals_modifier = {
+	native_uprising_chance = -1 
+	native_assimilation = 1 
+}
+ned_east_indies_company_administration_modifier = {
+	trade_goods_size_modifier = 0.2
+}
+ned_voyage_to_brazil_modifier = {
+	colonist_placement_chance = 0.1
+}
+ned_hegemon_of_the_americas_modifier = {
+	vassal_forcelimit_bonus = 1 
+	reduced_liberty_desire = 10
+}
+ned_free_people_low_countries_modifier = {
+	development_cost = -0.05
+	global_unrest = -1 
+}
+ned_reinforced_patricians_modifier = {
+	nobles_loyalty_modifier = 0.1
+	production_efficiency = 0.15
+}
+ned_soaring_production_of_textiles_modifier = {
+	trade_value_modifier = 0.2 
+	trade_goods_size_modifier = 0.15
+}
+ned_first_state_funded_corporation_modifier = {
+	naval_forcelimit_modifier = 0.15
+	global_ship_cost = -0.05 
+}
+ned_trading_malay_kingdoms_modifier = {
+	trade_steering = 0.15
+}
+ned_fort_zeelandia_modifier = {
+	province_trade_power_value = 5 
+	local_defensiveness = 0.33
+}
+ned_trade_japan_modifier = {
+	global_trade_power = 0.1
+}
+ned_sun_never_sets_modifier = {
+	all_power_cost = -0.05
+	naval_forcelimit_modifier = 0.2
+	trade_efficiency = 0.05
+}
+ned_dutch_national_spirit_modifier = {
+	tolerance_heretic = 1 
+	stability_cost_modifier = -0.15
+}
+ned_dutch_national_unity_modifier = {
+	tolerance_own = 1 
+}
+ned_centre_european_book_market_modifier = {
+	trade_goods_size_modifier = 0.5
+}
+ned_leeuwengracht_groenegracht_steenhouwersgracht_modifier = {
+	province_trade_power_modifier = 0.2
+	trade_goods_size = 0.5
+}
+ned_spice_must_flow_modifier = {
+	trade_efficiency = 0.1
+}
+ned_secured_flow_malacca_modifier = {
+	placed_merchant_power = 5 
+}
+ned_beeldenstorm_modifier = {
+	global_unrest = 5 
+	stability_cost_modifier = 0.25
+}
+ned_VOC_company_with_an_army_modifier = {
+	land_forcelimit_modifier = 0.1
+}
+voc_stable_administration_modifier = {
+	stability_cost_modifier = -0.2
+	global_trade_power = 0.05
+}
+voc_newfound_voc_modifier = {
+	global_tax_income = 24 
+	global_tax_modifier = 0.15
+	colonist_placement_chance = 0.1
+}
+ned_french_influence_modifier2 = {
+	movement_speed = 0.15
+	reinforce_speed = 0.2
+}
+ned_english_influence_modifier2 = {
+	infantry_power = 0.05
+	fire_damage_received = -0.05
+}
+ned_germanic_influence_modifier2 = {
+	land_forcelimit_modifier = 0.15
+	global_manpower_modifier = 0.1
+}
+ned_italian_influence_modifier2 = {
+	discipline = 0.05
+}
+
+

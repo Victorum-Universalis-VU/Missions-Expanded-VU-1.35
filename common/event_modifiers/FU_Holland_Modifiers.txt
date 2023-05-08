@@ -1,0 +1,79 @@
+hol_revival_flemish_textile_modifier = {
+	trade_goods_size_modifier = 0.2
+}
+hol_first_constitution_modifier = {
+	global_tax_modifier = 0.05
+	global_unrest = -1 
+	mercantilism_cost = -0.05
+}
+hol_parliament_of_mechelen_modifier = {
+	nobles_loyalty_modifier = 0.05
+	church_loyalty_modifier = 0.05
+	burghers_loyalty_modifier = 0.05
+	global_autonomy = -0.025
+}
+hol_apiration_for_liberty_modifier = {
+	land_morale = 0.1
+}
+hol_merchants_prevail_modifier = {
+	nobles_influence_modifier = -0.1
+	trade_efficiency = 0.1
+	legitimacy = 1 
+}
+hol_nobles_prevail_modifier = {
+	burghers_influence_modifier = -0.1
+	global_regiment_cost = -0.1
+	global_manpower_modifier = 0.15
+}
+hol_ended_wars_gelre_modifier = {
+	diplomatic_reputation = 1 
+	improve_relation_modifier = 0.15
+}
+hol_unification_of_netherlands_modifier = {
+	ae_impact = -0.2
+	years_of_nationalism = -5
+}
+hol_broke_peasant_state_modifier = {
+	global_unrest = -2
+	nobles_loyalty_modifier = 0.1
+}
+rhine_estuary2_modifier = {
+	province_trade_power_value = 20
+	picture = "estuary_icon"
+}
+hol_influx_prosperity_modifier = {
+	development_cost = -0.15
+}
+hol_ample_grain_trade_modifier = {
+	manpower_recovery_speed = 0.15
+}
+hol_port_of_amsterdam_modifier = {
+	province_trade_power_modifier = 0.2
+	local_ship_cost = -0.1
+	ship_recruit_speed = -0.2
+}
+hol_legitimate_conquest_modifier = {
+	core_creation = -0.15
+}
+hol_new_central_trade_network_modifier = {
+	global_prov_trade_power_modifier = 0.25
+	global_ship_trade_power = 0.2
+}
+hol_letters_of_marque_modifier = {
+	capture_ship_chance = 0.25
+	privateer_efficiency = 0.25
+}
+hol_admiralty_holland_modifier = {
+	navy_tradition = 1 
+	global_naval_barrage_cost = -0.5
+}
+hol_centre_international_economy_modifier = {
+	province_trade_power_value = 5 
+	local_production_efficiency = 0.25
+	inflation_reduction = 0.05
+}
+hol_journey_to_new_world_modifier = {
+	colonist_placement_chance = 0.1
+	range = 0.33
+	global_colonial_growth = 20
+}

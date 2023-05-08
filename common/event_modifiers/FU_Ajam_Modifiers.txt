@@ -1,0 +1,50 @@
+qom_followers_of_ali_modifier = {
+	manpower_in_true_faith_provinces = 0.2
+	recover_army_morale_speed = 0.10
+}
+qom_crushed_the_imamiyyah_modifier = {
+	tolerance_own = 2 
+	church_loyalty_modifier = 0.1
+}
+qom_renewed_prosperity_modifier = {
+	global_tax_income = 12 
+	development_cost = -0.1 
+}
+qom_steady_rule_modifier = {
+	global_unrest = -2 
+	all_power_cost = -0.025
+}
+qom_secured_the_jadda_ye_atabak_modifier = {
+	province_trade_power_value = 10
+	local_defensiveness = 0.33
+}
+
+qom_successful_subjugation_modifier = {
+	diplomatic_reputation = 2 
+}
+
+qom_hand_written_quran_modifier = {	
+	country_admin_power = 1 
+}
+qom_succession_by_sword_modifier = {
+	province_warscore_cost = -0.1
+}
+qom_march_herat_modifier = {
+	core_creation = -0.15
+	land_morale = 0.1 
+}
+qom_harnessing_timurs_domain_modifier = {
+	years_of_nationalism = -5
+	global_autonomy = -0.05
+	ae_impact = -0.1 
+}
+qom_mountain_warfare_modifier = {
+	land_attrition = -0.15
+	global_supply_limit_modifier = 0.25 
+	reinforce_speed = 0.2
+}
+qom_silk_road_toll_modifier = {
+	trade_value = 3
+}
+
+

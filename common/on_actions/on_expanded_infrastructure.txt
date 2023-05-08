@@ -1,0 +1,13 @@
+#ROOT = province that was expanded in, FROM = country that did it
+on_expanded_infrastructure = {
+    if = {
+        limit = {
+            owner = {
+                mission_completed = EE_syn_human_governments
+            }
+        }
+        owner = {
+            change_government_reform_progress = 2
+        }
+    }
+}

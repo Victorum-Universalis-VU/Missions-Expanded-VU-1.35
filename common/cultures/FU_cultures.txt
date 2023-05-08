@@ -1,0 +1,133 @@
+germanic = {
+	graphical_culture = westerngfx
+
+	czechBOH = {
+		primary = BOH
+		dynasty_names = {
+			"Jankovský z Vlašimi" Chotek Lichnowsky Lobkowicz Nostitz Kutscha 
+			"Kounic" "Vítkovec" "Zerotín" "Czernín" "von Harrach" Kinsky Rosenberg
+			Waldstein Jeszenszky
+		}
+		male_names = {
+			Václav Jirí Karel Premysl Premysl Zikmund Frantisek Jindrich Josef Frantisek Josef Bocek Jirí 
+			Vladislav Vladimír Petr Petr Viktorín Jan Václav Josef Václav Karel Josef Matyáš Ferdinand 
+			Vratislav Boleslav Vilém Viktor Jaromír Jaroslav Ludvík Otakar
+		}
+		female_names = {
+			Anezka Eliska Katerina Marie Ludmila Alzbeta Agnieszka Agnes Alzbeta Andela Anna Anna Berta Bohuslava Bozena 
+			Branislava Dagmar Danuta Dobravy
+		}
+	}
+	polishBOH = {
+		graphical_culture = easterngfx
+		primary = POL
+		male_names = {
+			August Wladyslaw Stanislaw Kazimierz Aleksander Henryk Albert Kazimierz Michal Stefan 
+			August Aleksander Karol Kazimierz Krzysztof Fryderyk Olbracht Jan Karol Patryk
+			Ferdynand Olbracht Albert Aleksy Andrzej Bartlomiej Bogumil Bronislaw Dawid Dominik Emil Eugeniusz 
+			Ferdynand Gustaw Igor Iwan Krystian Lech Lucjusz Ludwik Lukasz Maksym Mariusz Mieszko Miroslaw 
+			Rafal Sylwester Szymon Zygfryd Oskar
+			Aleksander Alexander Andrzej Andrew Bartosz Bartolomeus Bezprym Boguchwal Bogumil Boleslaw 
+			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
+			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
+			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
+			Izbor Józef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
+			Christian Krzeslaw Lambert Lambert Leszek Ctibor
+			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
+			Nicholas Milobrat Milosz Milosz Miroslaw Miroslav Msciwoj Mszczuj Nadbor Niezamysl Odon 
+			Pawel Paul Pelka Piotr Peter Piskla Prendota Przemyslaw Premysl Przybor Sambor Sedziej 
+			Sieciech Siemomysl Siemowit Skarbimir Snowid Spytko Stanislaw Stanislav
+			Stefan Stephen Stoigniew Strasz Sulislaw Sulistryj Swietopelk Svatopluk Swietoslaw 
+			Szczesny Felix Tomasz Thomas Trojden Twardomir Usciech Waclaw Vaclav Wanko Vaclav 
+			Laurence Wielislaw Wieslaw Wincenty Vincent Wit Guy Witosz Wladyslaw Vladislav Wojciech 
+			Wojuta Wszebor Vsebor Zbigniew Zbynek Zbyszko Zbynek Zegota Ignatius Zelibrat
+			Zygmunt Sigmund Albert Wawrzyniec Sviatoslav Sedzimir Otto Krystyn Janko Imram
+		}
+		female_names = {
+			Adelajda Adleta Agnieszka Agnes Aldona Anastazja Anastasia Anna Anna Beata Bozena Danuta 
+			Dobrawa Dobronega Elzbieta Elisabeth Eufemia Euphemia Eufrozyna Gertruda Gertrude 
+			Helena Helen Jadwiga Jolanta Yolanda Judyta Judith Katarzyna Catherine Kazimiera Kenna 
+			Konstancja Constance Krystyna Christina Kunegunda Lucja Lucia Ludmila Magdalena Magdalena 
+			Malgorzata Maria Maria Kinga Grzymislawa Richeza Agafia
+			Matylda Matilda Milena Nadzieja Nawoja Pechna Rycheza Ryksa Salomea Samboja Scholastyka 
+			Smiechna Stanislawa Swietoslawa Wislawa Wojslawa
+			Wolislawa Wszebora Wszemila Zofia Sophia Zwinislawa
+		}
+		dynasty_names = {
+			Gryf Piast Jagiellon Wisniowiecki Sobieski Leszczynski 
+			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
+			Premyslovci Podebrad 
+			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
+			Ostrogski Ostroróg Pac Sapieha Sanguszko Tarnowski Teczynski
+			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski
+		}
+	}
+	
+	schlesianBOH = {
+		primary = SIL
+		male_names = {
+			Fryderyk Jan Henryk Ludwik Jan Krystian Jerzy Jerzy Rudolf Jerzy Wilhelm Joachim Fryderyk Krystian 
+			Jan Jerzy Jerzy Ernest August Ernest Krystian Ludwik Rudolf Wladislaw Albert Aleksander Andel 
+			Cezar Dietrich Eugeniusz Filip Hermann Joachim Krzysztof Lech Libor Markus Maurycy Radomir 
+			Václav Wilhelm Ruprecht Branko Bruno Siegfried Tomás 
+		}
+		female_names = {
+			Heinrike Ilona Andrea Helgi Heli Helina Helju Helle Helmi Helve Hiie Hilda Hilja Hille Iiris Ille Ilme Ilona Imbi 
+			Ines Inga Inge 
+		}
+	}
+	
+	sorbianBOH = {
+		primary = SOR
+		male_names = {
+			Awgust Alojs Abraham Albin Bogumil Bjedrich Bjarnat Cyril Derwan Fryco Frido Filip
+			Handrij Jan Jurij Jakub Jozef Joachim Korla Kito Kristalub Krescan Michal Mikolaj Mato Mercin
+			Matej Marko Miliduch Miklaws Nathanael Petr Pawol Pomgajbog Stanislaw Salomon
+			Wjaclaw Wylem
+		}
+		female_names = {
+			Bogna Benedikta Hanka Inga Irmgard Jewa Lubina Ludmila Marja Marta Marjana Pawlina Róza Sofija
+		}
+		dynasty_names = {
+			Brosk "z Barenstamma" Buk Bronisz Czornak Cyzh Dejka "z Friedenfelsa"
+			Glowan Jakobica Klosopolski Kucank Leska Langa Mosak Muslik Mercink Miczka
+			Parczewski Prätorius Pjekar Rhenisz Rizo Rychtar Swora Stempel Smoler
+			Woski Wirt Zejler
+		}
+	}
+	
+	dynasty_names = {
+		Gryf Piast Jagiellon Wisniowiecki Sobieski Leszczynski 
+		Poniatowski Radziwill Zamoyski Potocki Lubomirski 
+		Premyslovci Podebrad 
+		# CKII
+		"Jankovský z Vlašimi" Chotek Lichnowsky
+		"Kounic" "Vítkovec" "Zerotín" "Czernín" "von Harrach"
+	}
+	male_names = {
+		# BOHEMIAN 
+		Albert Albert Albrecht Albert Ales Alexander Arnost Ernest Bavor Bedrich Frederick Benes 
+		Bocek Bohuslav Boguslaw Boleslav Boleslav Bores Borijov Borijov Bretislav Bretislaus Budivoj 
+		Castolov Cenek Vincent Chval Ctirad Diepold
+		Detrich Thierry Drslav Gerhard Hanus John Havel Gallus Heralt Herman Herman Hrabis Hynek Henry 
+		John Jaromír Jaromir Jaroslav Jaroslav Jesek Jindrich Henry Jirík George Karel Charles Kojata 
+		Konrád Konrad Kuník Litold
+		Markvart Matous Matthew Mikulás Nicholas Milic Mojmír Ojír Oldrich Ulrich Ondrej Andrew Ota 
+		Otakar Pelhrim Petr Peter Premysl Premysl Prokop Procopius Rajmund Raymond Rostislav Sezima 
+		Slavomír Smil Sobieslav Sobeslaus Spytihnev Strachkvas Svatobor Svatopluk Svatopluk Tobiás 
+		Václav Slavibor Otto Jan Benedict
+		Vaclav Viktorín Vítek Guy Vanek Vilém William Vladimír Vladimir Vladislav Vladislav Vojtech 
+		Vratislav Vratislav Vsebor Vsebor Závis Zbynek Zbynek Zdík Zdirad Zikmund Sigmund Albert
+	}
+	female_names = {
+		# BOHEMIAN 
+		Adléta Anezka Anna Anna Barbora Bedriska Blazena Bohuslava Boleslava Bozena Bozislava 
+		Dobromila Dobroslava Domaslava Dorota Dorothy Bretislava
+		Doubravka Drahomíra Drahoslava Eliska Eufemie Euphemia Gertruda Gertrude Guta Hedvika Helena 
+		Jana Jaroslava Jitka Johanka Judita Judith Justina Katerina Catherine
+		Klára Clara Konstancie Constance Kristyna Christina Kunhuta Libuse Ludmila Marie Maria Markéta 
+		Mlada Olga Perchta Pribyslava Richeza Skonka Stanislava Svatava Helen
+ 		Vilemína Viola Yolanda Vladislava Vojslava Zdislava Zdenka Zofie Sophia
+	}
+}

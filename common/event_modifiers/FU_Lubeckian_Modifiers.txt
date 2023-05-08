@@ -1,0 +1,228 @@
+hsa_lubeck_herring_market_modifier = {
+	trade_goods_size = 1.5
+}
+hsa_lubeck_herring_market_modifier2 = {
+	trade_goods_size = 2
+}
+hsa_fresh_administration_modifier = {
+	global_unrest = -2 
+}
+hsa_longterm_admin_modifier = {
+	stability_cost_modifier = -0.2 
+}
+hsa_diplomatic_powerhouse = {
+	improve_relation_modifier = 0.25
+	ae_impact = -0.15 
+}
+hsa_hanseatic_diets_modifier = {
+	republican_tradition = 0.2
+	reelection_cost = -0.1
+	legitimacy = 0.5 
+	devotion = 0.5 
+}
+hsa_altermanner_modifier = {
+	global_prov_trade_power_modifier = 0.15
+	trade_value_modifier = 0.1
+}
+hsa_visby_warehouse_modifier = {
+	province_trade_power_value = 5 
+	local_build_cost = -0.15
+}
+hsa_danzig_merchants_in_league_modifier = {
+	global_trade_power = 0.15
+}
+hsa_influx_of_trade_and_foreigners_modifier = {
+	global_institution_spread = 0.2 
+	trade_efficiency = 0.1 
+}
+hsa_mercantile_burgermeister_modifier = {
+	trade_value_modifier = 0.5
+	local_production_efficiency = 0.2
+}
+hsa_guild_burgermeister_modifier = {
+	local_build_cost = -0.15
+	trade_goods_size_modifier = 0.20 
+}
+hsa_aristocrat_burgermeister_modifier = {
+	army_tradition = 1 
+}
+hsa_strong_mercantile_union_modifier = {
+	transfer_trade_power_reasons = 100
+	development_cost = -0.05
+	allowed_num_of_buildings = 1 
+}
+hsa_valuable_mineral_deposits_modifier = {
+	trade_goods_size = 0.5
+	inflation_reduction = 0.1 
+}
+hsa_valuable_mineral_abundance_modifier = {
+	global_tax_modifier = 0.2 
+	interest = -1 
+}
+hsa_wealth_of_the_hansa_modifier = {
+	global_tax_income = 6
+}
+hsa_recruiting_from_league_modifier = {
+	global_manpower_modifier = 0.15 
+}
+hsa_recruiting_from_league_modifier2 = {
+	global_manpower_modifier = 0.15
+	global_regiment_cost = -0.05 
+}
+hsa_recruiting_from_league_modifier3 = {
+	global_manpower_modifier = 0.20
+	global_regiment_cost = -0.1
+}
+hsa_lubeck_law_modifier = {
+	local_autonomy = -0.05
+}
+hsa_secured_pomeranian_coast_modifier = {
+	embargo_efficiency =  0.5
+	light_ship_cost = -0.05
+}
+hsa_republican_modus_operandi_modifier = {
+	advisor_cost = -0.2 
+	reform_progress_growth = 0.1 
+}
+hsa_holstentor_burgtor_modifier = {
+	hostile_attrition = 2 
+	defensiveness = 0.25 
+}
+hsa_theory_of_mercantilism_modifier = {
+	mercantilism_cost = -0.1 
+	placed_merchant_power = 5 
+}
+hsa_development_works_of_the_hansa_modifier1 = {
+	development_cost = -0.025
+}
+hsa_development_works_of_the_hansa_modifier2 = {
+	development_cost = -0.05
+}
+hsa_development_works_of_the_hansa_modifier3 = {
+	development_cost = -0.075
+}
+hsa_development_works_of_the_hansa_modifier4 = {
+	development_cost = -0.1
+}
+hsa_development_works_of_the_hansa_modifier5 = {
+	development_cost = -0.125
+}
+hsa_development_works_of_the_hansa_modifier6 = {
+	development_cost = -0.15
+}
+hsa_lower_saxon_drittel_modifier = {
+	country_admin_power = 1 
+}
+hsa_mercantile_stronghold_of_the_hansa_modifier = {
+	province_trade_power_value = 10
+}
+hsa_general_army_reform_modifier = {
+	land_morale = 0.15
+}
+hsa_general_army_organization_modifier = {
+	land_forcelimit_modifier = 0.25
+}
+hsa_military_excellence_modifier = {
+	discipline = 0.05 
+}
+hsa_modernized_supply_lines_modifier = {
+	reinforce_cost_modifier = -0.25
+	reinforce_speed = 0.33 
+}
+hsa_zealous_recruitment_modifier = {
+	global_manpower_modifier = 0.25
+}
+hsa_improved_military_administration_modifier = {
+	global_regiment_cost = -0.05 
+	land_maintenance_modifier = -0.1
+}
+hsa_hanseatic_military_conduct_modifier = {
+	army_tradition_decay = -0.01 
+}
+hsa_modern_drilling_techniques_modifier = {
+	drill_gain_modifier = 0.33
+	fire_damage_received = -0.05 
+}
+hsa_fortification_efforts_modifier = {
+	defensiveness = 0.25
+}
+hsa_hanseatic_artillery_modifier = {
+	leader_siege = 1 
+	siege_ability = 0.1
+}
+hsa_guerilla_warfare_modifier = {
+	hostile_attrition = 1 
+}
+hsa_regular_mercenary_corps_modifier = {
+	mercenary_cost = -0.1
+	mercenary_discipline = 0.025
+}
+hsa_defensive_tactics_modifier = {
+	shock_damage_received = -0.1 
+}
+hsa_war_minister_modifier = {
+	leader_land_fire = 1 
+}
+hsa_shipwrights_naval_expansion_modifier = {
+	global_ship_cost = -0.1 
+	global_ship_recruit_speed = -0.25
+}
+hsa_hanseatic_trade_fleet_modifier = {
+	global_ship_trade_power = 0.2
+	naval_tradition_from_trade = 1
+}
+hsa_new_world_ambitions_modifier = {
+	colonists = 1 
+	range = 0.25
+	global_colonial_growth = 20
+}
+hsa_victory_in_holstein_modifier = {
+	prestige = 1
+}
+hsa_high_seas_navy_modifier = {
+	global_naval_engagement_modifier = 0.2 
+	heavy_ship_cost = -0.1
+}
+hsa_hanseatic_merchant_cogs_modifier = {
+	light_ship_cost = -0.25 
+	leader_naval_manuever = 1
+}
+hsa_safe_seaways_modifier = {
+	navy_tradition = 1 
+}
+hsa_pride_eagle_of_the_fleet_modifier = {
+	flagship_durability = 0.5
+	cannons_for_hunting_pirates_in_fleet = 1
+	number_of_cannons_flagship_modifier = 0.5
+}
+hsa_cooperation_with_the_hansa_modifier = {
+	trade_efficiency = 0.05
+	global_own_trade_power = 0.1 
+}
+hsa_profits_from_the_london_steelyard_modifier = {
+	global_foreign_trade_power = 0.1 
+}
+hsa_hanseatic_shipwright_guild_modifier = {
+	trade_value_modifier = 0.20
+}
+hsa_expand_the_hansehalle_modifier = {
+	local_great_project_upgrade_cost = -0.15
+}
+hsa_northern_alliance_of_trade_cities6_modifier = {
+	diplomatic_upkeep = 6 
+}
+hsa_northern_alliance_of_trade_cities5_modifier = {
+	diplomatic_upkeep = 5 
+}
+hsa_northern_alliance_of_trade_cities4_modifier = {
+	diplomatic_upkeep = 4 
+}
+hsa_northern_alliance_of_trade_cities3_modifier = {
+	diplomatic_upkeep = 3 
+}
+hsa_northern_alliance_of_trade_cities2_modifier = {
+	diplomatic_upkeep = 2 
+}
+hsa_northern_alliance_of_trade_cities1_modifier = {
+	diplomatic_upkeep = 1 
+}

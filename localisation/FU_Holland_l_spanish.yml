@@ -1,0 +1,107 @@
+﻿l_spanish:
+#Made by Big Boss for Flavor Universalis#
+
+ #Missions
+ hol_flemish_decline_title: "The Flemish Decline"
+ hol_flemish_decline_desc: "For decades the provinces in the West have hosted rich trade and textiles. However, recent developments under the Burgundian crown as well as the rise of the Hansa have hindered the development of the once-affluent port of Brugges. Their lack of skil in matters of administration is the only reason we need to relieve them of command." 
+ hol_great_privilege_title: "The Great Privilege"
+ hol_great_privilege_desc: "Ridding ourselves of our overlord is but the first step towards true freedom. In order to tend to our administration properly, we must revamp and expand reconfirm a number of privileges to the States General of the Low Countries." 
+ hol_council_malines_title: "Council of Malines"
+ hol_council_malines_desc: "We cannot pretend to be a nation of law and order without a proper council and courts to service our people. To satisfy that need, we shall erect a proper council made up of just and highly-respected individuals of great jurisprudent knowledge." 
+ hol_hook_cod_wars_title: "Hook & Cod Wars"
+ hol_hook_cod_wars_desc: "Despite our subjugation under Philip the Good, the Duke of Burgundy, our lands have long suffered internal infighting between the various factions of our nation. On the one hand, a faction backed by Nobles wants nothing more than to usurp the Burghers' assets and enforced total feudalism. On the other hand, the Burghers absurdly demand tolerance and the abolition of local nobility. Whether we decide to use both factions to achieve our independence, or delegate their fate after our struggle is over, we must act quickly and decisively." 
+ hol_overkwartier_van_gelre_title: "Overkwartier van Gelre"
+ hol_overkwartier_van_gelre_desc: "The territories across the Meuse River are currently partially held by the meager Duchy of Gelre. Their frail nature and weak-willed head of state is unable to handle their bloodthirsty neighbors residing in the East. We must conquer them and safeguard the Low Countries from outside agitators." 
+ hol_proclaim_dutch_republic_title: "Proclaim the Dutch Republic"
+ hol_proclaim_dutch_republic_desc: "Let us unite the region under a common firm hand lest we endanger our independence one more time. The Dutch people will never bow their heads to outsiders!"
+ hol_frisian_freedoms_title: "Frisian Freedom"
+ hol_frisian_freedoms_desc: "The concept of freedom and equal rights is distinctly differently interpreted in the lands of Frisia. Unruly peasants who parade around pretending to be Dukes have no place in our region, they must be brought to their knees!"
+ hol_all_across_rhine_title: "All Across the Rhine"
+ hol_all_across_rhine_desc: "Trade flows where there is coin. We must make sure the estuary that flows through our great capital is wide enough to facilitate the increased traffic and passing goods."
+ hol_outshine_hansa_title: "Outshine the Hansa"
+ hol_outshine_hansa_desc: "The Hanseatic League dominated trade in the North European seas for centuries. Despite their wealth, their mismanagement and poor choices have led to them being but a shadow of their former self. The time to strike and surpass them is now!" 
+ hol_growth_amsterdam_title: "Growth of Amsterdam"
+ hol_growth_amsterdam_desc: "No self-respecting great nation disregards their internal infrastructure. To that end, we must work to our utmost ability and develop the port of Amsterdam to unprecedented heights of urban expansion and modernization." 
+ hol_tame_brabantian_lion_title: "Lion of Brabant"
+ hol_tame_brabantian_lion_desc: "Successful expansion entails a mixture of proper use of both the sword and the pen. In order to legitimize ourselves as prospecting masters of the Low Countries we must secure the lands of Brabant to the East." 
+ hol_bulk_fleet_title: "The Bulk Fleets" 
+ hol_bulk_fleet_desc: "Despite our geographical position, we aren't the only coastal nation in our region with a knack for hosting a number of merchants in our ports. If we are to fill our purses with coin we must not only outshine our neighbors and increase our infrastructure but also enlarge our merchant fleet to service the increase in trading goods." 
+ hol_sea_beggars_title: "Sea Beggars" 
+ hol_sea_beggars_desc: "In times of war, we call upon our great head of state to sign the so-called letters of Marque, guaranteeing the legal nature of vessel theft and plundering for the profit of the central government. Signing letters of Marque will certainly attract ambitious captains and privateers to enlist in our fleet." 
+ hol_statute_admiralty_title: "Statute of Admiralty" 
+ hol_statute_admiralty_desc: "Despite the letters of Marque at the disposal of our monarch, we cannot properly contest our seas without the proper development of a defensive fleet." 
+ hol_center_economy_title: "Centre of Economy"
+ hol_center_economy_desc: "Antwerp was once the crown jewel of the region, hosting traders and fleets from all over Europe. Despite its wealth, it fell into decay during the first half of the 15th century along with the rest of @BRBBrabant. We must rescue the city and elevate her back to the position she deserves."
+ hol_new_world_daze_title: "New World Daze"
+ hol_new_world_daze_desc: "Many advisors in our court support the notion that travelling to the so-called 'Far Lands' is not only a useless waste of royal coin but also quite literally impossible. \n\n§OImpossible? We did a lot of impossible things on this journey. Our explorers are tired of hearing that things are impossible or useless. Those words mean nothing to us, brave men of @HOLHolland!§!" 
+ 
+ 
+ 
+ 
+ 
+ #Modifiers
+ hol_revival_flemish_textile_modifier: "Revival of the Flemish Textile Production"
+ hol_first_constitution_modifier: "First Constitution of the Low Countries" 
+ hol_parliament_of_mechelen_modifier: "Great Council of 24"
+ hol_apiration_for_liberty_modifier: "Aspirations for Liberty" 
+ hol_merchants_prevail_modifier: "Mercantile Rule"
+ hol_nobles_prevail_modifier: "Noble Feudal Rule"
+ hol_unification_of_netherlands_modifier: "Unification of the Netherlands"
+ hol_broke_peasant_state_modifier: "Broke the Peasant State" 
+ rhine_estuary2_modifier: "Rhine Estuary"
+ hol_influx_prosperity_modifier: "Influx of Prosperity"
+ hol_ample_grain_trade_modifier: "Ample Grain Trade"
+ hol_port_of_amsterdam_modifier: "Port of Amsterdam"
+ hol_legitimate_conquest_modifier: "Legitimate Conquest"
+ hol_new_central_trade_network_modifier: "New Central Trade Network"
+ hol_letters_of_marque_modifier: "Letters of Marque"
+ hol_admiralty_holland_modifier: "Admiralty of Holland"
+ hol_centre_international_economy_modifier: "Centre of International Economy"
+ hol_journey_to_new_world_modifier: "Journey to the New World!"
+ hol_ended_wars_gelre_modifier: "Ended the Wars of Gelre"
+ 
+ 
+ 
+ 
+ 
+ #Tooltips
+ hol_industrious_trait_tt: "\nIf possible our ruler will gain the §YIndustrious§! personality trait"
+ until_we_reform_the_constitution_desc: "until we choose to reform our Constitution as @NED Netherlands"
+ until_we_reform_judicial_code_as_ndl_desc: "until we choose to reform our Judicial Code as @NED Netherlands"
+ hol_if_lib_desire_tt: "If we complete the mission with §Y100%§! Liberty Desire:"
+ hol_if_indep_not_at_war_tt: "\nAlternative, if we are independent and not at war:"
+ hol_if_we_havent_burgher_point_tt: "If we do not have the '§YLand of Commerce§!' Privilege, we will gain it without sacrificing §YCrown Land§!"
+ hol_if_we_havent_nobles_privilege_tt: "If we do not have the '§YPrimacy of the Nobility§!' Privilege, we will gain it without sacrificing §YCrown Land§!"
+ hol_rhine_on_steroids_tt: "We will expand on the '§YRhine Estuary§!' by increasing its impact on our trade power"
+ hol_stronger_in_the_region: "Has the largest army or highest prestige than any nation with its capital in the §YLow Countries§! region"
+
+ #Events
+ 
+ FU_Holland_Netherlands_Events.2.t: "The Great Council of the Low Countries"
+ FU_Holland_Netherlands_Events.2.d: "All people, from the most humble every day peasants to the highest noble of the land is subject to our dutch laws. Given legitimacy and prestige by the powerful authority by our monarch, the Great Council is in charge of everyday grievances and the settlement of legal or jurisprudent matters."
+ FU_Holland_Netherlands_Events.2.a: "The Council of State governs all, large and small!"
+ 
+ FU_Holland_Netherlands_Events.3.t: "Settling the Hook & Cod Wars"
+ FU_Holland_Netherlands_Events.3.d: "The Duchy of Holland has been pestered for centuries by a battle between the Hook and Cod factions. Deliberation and debate between them on daily matters such as governance and laws of the land often end up in dead ends and even bloody strife. It's time we settle things between them once and for all!" 
+ FU_Holland_Netherlands_Events.3.a: "The merchant class is victorious!"
+ FU_Holland_Netherlands_Events.3.b: "We cannot risk our relations with the nobles!"
+ 
+ FU_Holland_Netherlands_Events.4.t: "The Shifting Winds of Trade"
+ FU_Holland_Netherlands_Events.4.d: "Merchants from the Hanseatic League used to wield tremendous amounts of power and prestige. With the League's monopoly on the grain trade of the North, none dared oppose their formidable and well-fed armies. However, all things change and time is mastered by none. As a result, the grip of the Hansa on the grain trade has withered, giving birth to the beginning of the Dutch Golden Era and a marvellous influx of foreign trade."
+ FU_Holland_Netherlands_Events.4.a: "We have finally prevailed!"
+ 
+ FU_Holland_Netherlands_Events.5.t: "Joyous Entry of [GetYear]"
+ FU_Holland_Netherlands_Events.5.d: "It's true that a good conqueror is also a good administrator. Signing a pact that allows the local people of Brabant to be allowed their own customs and the preservation of their traditions is a masterful diplomatic and administrative stroke that will further expand our influence and secure our offensive against our uncivilized and lesser neighbors." 
+ FU_Holland_Netherlands_Events.5.a: "The region will be united under our glorious flag!"
+ 
+ FU_Holland_Netherlands_Events.6.t: "The Centre of International Economy"
+ FU_Holland_Netherlands_Events.6.d: "Come one, come all! Antwerp used to be the heart of the Western trade. A city embellished with the beauty of a thousand arches, blessed with the coin from the four courners of the Earth, had previously fallen into disrepair! Thankfully, our recent conquests in the region and the redevelopment of the city have led to it experiencing a substantial amount of its former glory and importance, all thanks to splendid Dutch administration!" 
+ FU_Holland_Netherlands_Events.6.a: "Money makes the world go 'round!"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

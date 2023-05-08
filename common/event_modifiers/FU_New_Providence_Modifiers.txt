@@ -1,0 +1,77 @@
+nss_influx_of_settlers_modifier = {
+	local_development_cost = -0.2
+}
+nss_taxing_foreign_merchants_modifier = {
+	global_tax_income = 18
+}
+nss_naval_hegemon_modifier = {
+	privateer_efficiency = 0.5
+	global_ship_trade_power = 0.2
+	navy_tradition = 1 
+}
+nss_pirate_expeditions_modifier = {
+	global_colonial_growth = 25
+	colonist_placement_chance = 0.05
+}
+nss_new_beginnings_modifier = {
+	prestige = 1 
+}
+nss_center_of_piracy_modifier = { 
+	local_ship_repair = 0.2
+	ship_recruit_speed = -0.2
+}
+nss_influx_timber_modifier = {
+	global_ship_cost = -0.15
+}
+nss_rise_libertatia_modifier = {
+	capture_ship_chance = 0.1
+}
+nss_first_piratical_judicial_court_modifier = {
+	monthly_reform_progress = 0.25
+	state_governing_cost = -0.1 
+}
+nss_no_shackles_modifier = {
+	naval_morale = 0.05
+	republican_tradition = 0.3
+}
+nss_slave_crews_modifier = {
+	recover_navy_morale_speed = 0.1 
+	sailors_recovery_speed = 0.2
+}
+nss_second_golden_age_piracy = {
+	discipline = 0.05
+	is_marine_modifier = yes 
+}
+nss_pirate_king_modifier = {
+	allowed_marine_fraction = 0.1
+	naval_maintenance_flagship_modifier = -0.5
+}
+nss_preparations_for_the_great_voyage_modifier = {
+	build_cost = -0.15
+	global_sailors_modifier = 0.3
+}
+nss_descent_to_europe_modifier = {
+	siege_ability = 0.33
+	artillery_levels_available_vs_fort = 1 
+}
+nss_crossing_the_atlantic_modifier = {
+	movement_speed_in_fleet_modifier  = 2
+}
+nss_place_call_home_modifier = {
+	development_cost = -0.1
+	build_cost = -0.15
+}
+nss_cuban_cigars_modifier = {
+	trade_goods_size = 2
+}
+nss_employing_black_sam_bellamy_modifier = {
+	sunk_ship_morale_hit_recieved = -0.1
+	disengagement_chance = 0.1
+}
+nss_panama_port_modifier = {
+	trade_value = 5
+	province_trade_power_modifier = 0.25
+}
+nss_idylic_bahamas_modifier = { 
+	monarch_lifespan = 0.2
+}

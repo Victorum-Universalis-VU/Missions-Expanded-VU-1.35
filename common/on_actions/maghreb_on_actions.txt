@@ -1,0 +1,51 @@
+on_raid_coast = {
+	if = {
+		limit = {
+			has_faction = pr_buccaneers
+		}
+		add_faction_influence = {
+			faction = pr_buccaneers
+			influence = 1
+		}
+	}
+	if = {
+		limit = {
+			has_government_attribute = raiding_increases_pp
+		}
+		add_power_projection = {
+			type = high_sea_power_projection
+			amount = 1
+		}
+	}
+	if = {
+		limit = {
+			has_mission = dan_raid_the_north_sea
+			NOT = { mission_completed = dan_raid_the_north_sea } 
+		}
+		change_variable = {
+			which = num_of_raided_coasts
+			value = 1
+		}
+	}
+	
+	# ME Stuff
+	if = { 
+		limit = { has_country_flag = nss_raid_for_pp_flag } 
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 1
+		}
+	}
+	save_event_target_as = Temp_THIS
+	ME_on_raid_coast_sea_effect = yes
+	FROM = {
+		every_neighbor_province = {
+			limit = {
+				NOT = { is_sea = yes }
+			}
+			event_target:Temp_THIS = { 
+				ME_on_raid_coast_province_effect = yes
+			}
+		}
+	}
+}

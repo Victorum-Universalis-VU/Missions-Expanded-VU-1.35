@@ -1,0 +1,24 @@
+EE_winged_dinosaurs = {
+    can_recruit_hussars = yes
+    amount_of_hussars = 5
+}
+
+EE_syn_outer_space_governing_technology = {
+    governing_cost = -0.3
+    reform_progress_growth = 0.5
+}
+
+EE_syn_successful_landing = {
+    global_unrest = -2
+    land_morale = 0.15
+}
+
+ee_syn_alien_development = {
+    development_cost = -0.1
+    development_cost_modifier = -0.05
+}
+
+ee_syn_synthetic_dawn_modifier = {
+    technology_cost = -0.2
+    all_power_cost = -0.1
+}

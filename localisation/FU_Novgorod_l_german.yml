@@ -1,0 +1,242 @@
+﻿l_german:
+ 
+ 
+ nov_found_arkhangelsk_title: "Found Arkhangelsk"
+ nov_found_arkhangelsk_desc: "The Baltic Sea is rife with competition from the Hanseatic League and tolls from the damned Danes. Local development near the delta of the Dvina river could give us a serious edge on trading in the less competitive White Sea." 
+ nov_establish_sotnyas_title: "Establish Sotnyas" 
+ nov_establish_sotnyas_desc: "Sotnyas, meaning hundreds, is a proposed association of powerful merchants in our Grand Republic that would allow for a more centralized control of trade and capital in regions which we invest in for some time." 
+ nov_staraya_russa_salt_title: "Straya Russa Salt" 
+ nov_staraya_russa_salt_desc: "The people of Russa have long since known of the medicinal properties of the beige colored salt that inhabits its many springs and spas. Investing into this area and extracting this salt for sale could give us a monopoly on salt in the Baltics." 
+ nov_beyond_portages_title: "Beyond the Portages" 
+ nov_beyond_portages_desc: "Trappers across the Republic have always made long journeys to our markets and trade centers. Portage between the many rivers and streams of the Republic, with the hard work it demands, is a small price to pay compared to wealth these trappers and in trade our merchants have amassed from our shrewd stewardship." 
+ nov_elevate_archbishopic_title: "Elevate the Archbishopic" 
+ nov_elevate_archbishopic_desc: "There is an inherent link between the administration of The Church, our Cities, and our Marketplaces. The Church of Novgorod will be the greatest in the land." 
+ nov_celebrate_orthodoxy_title: "Celebrate Orthodoxy" 
+ nov_celebrate_orthodoxy_desc: "Church bells ring and children are saved due to our staunch defense of The Church. This calls for a celebration of the wisdom and authority of our Patriarch." 
+ nov_novgorodian_land_title: "Novgorodian Land" 
+ nov_novgorodian_land_desc: "Despite the treacherous Duchy of Muscovy raiding our country side and threatening the complete destruction of our Grand Republic, we have overcome and developed the lands into something even more covetable than before."
+ nov_vyborg_dispute_title: "The Vyborg Dispute" 
+ nov_vyborg_dispute_desc: "Tensions have grown amongst our politicians about the nature of our relationship with the rest of Scandinavia. At the crux of this debate is the city of Vyborg which is certainly the gateway to west. Despite our good relations its time to give them an ultimanum." 
+ nov_posadniks_veche_title: "Posadniks & Veche" 
+ nov_posadniks_veche_desc: "Since the days of Kiev, Novgorod has been overseen by Posadnik. As our autonomy grew we began to elect these mayors via the Veche, the public assembly. However in recent years there has been a call into question of the sincere democratic inetrest of the assembly and even more so the boyars who are eligble for election. Either we should look to our growing trade league and re-establish the system by which we elect these powerful mayors or simply establish them ourselves as the Prince of Kiev did years before." 
+ nov_holy_house_wisdom_title: "The House of Wisdom" 
+ nov_holy_house_wisdom_desc: "Despite our aversion towards depending on nobles and powerful men of the court, we must attribute the growth we have experienced to one of the most powerful factions in our city, the Dom Svyatoy Sofiy, also known as the House of Holy Wisdom. Without their contributions and assistance, our people might not have survived." 
+ nov_restore_volgoda_border_title: "Retake the Volgoda"
+ nov_restore_volgoda_border_desc: "March our troops forth and retake what was rightfully stolen. The lands across the Volgoda will once again return under our control!" 
+ nov_descendands_rurik_title: "Descendands of Rurik" 
+ nov_descendands_rurik_desc: "Not long ago, the name of Russia's most powerful family would bring tremors and fear across the halls of our Republic. No more! We will crush these god-fearing traitors and the crows will have a feast off their flesh." 
+ nov_defeat_kazan_title: "Defeat Kazan" 
+ nov_defeat_kazan_desc: "The eastern Khanate of Kazan is a mighty opponent. Despite ousting the Rurikovich family, we must not let our guard down against this new and fearsome foe." 
+ nov_golden_legacy_title: "Golden Legacy" 
+ nov_golden_legacy_desc: "The lands across the banks of the Volga were once populated by fearsome warriors who spread their banners from East to West. Let us conquer those who once so powerful and study their ways of warfare conduct, integrating them into our armed forces." 
+ nov_sophia_cathedral_title: "Cathedral of St. Sophia" 
+ nov_sophia_cathedral_desc: "Such victories and good fortunes as the ones we have recently experienced cannot be attributed to anything but the favor of God. Thus, we must erect a most exquisite temple in the name of the Father, the Son and the Holy Spirit." 
+ nov_pomestnoye_voysko_title: "Pomestnoye Voysko" 
+ nov_pomestnoye_voysko_desc: "Our Republic cannot survive the coming times of trouble without the establishment of a landed army. Taking up arms to defend our lands will surely draw immense numbers of eager and zealous volunteers into our ranks." 
+ nov_republican_guard_title: "Republican Guard" 
+ nov_republican_guard_desc: "Gone are the days of having a feudal army, untrained and undisciplined. If we are to stand up to the times and rub shoulders with our future enemies, we must erect a new army with unfathomed discipline and battlefield prowess." 
+ nov_arsenal_ryazan_title: "Arsenal of Ryazan" 
+ nov_arsenal_ryazan_desc: "Known as the Arsenal of Ryazan, the fort that was once used to push back hordes of invaders is now but a shadow of its former self. Let us restore it to its former glory, and with it the prestigious name of our nation!" 
+ nov_unite_the_rus_title: "Unite the Rus" 
+ nov_unite_the_rus_desc: "With the downfall of the Rurikovich Dynasty we shall take over their mantle and unite our region under the rule of our enlightened rulers."
+ nov_volkhov_boom_title: "The Volkhov Boom" 
+ nov_volkhov_boom_desc: "The river running across the heart of our capital has been ever kind to us, providing our people with ample water and prosperity. Let us take care of the city and develop it as a way to increase our trade profit."
+ nov_council_lords_title: "Council of Lords"
+ nov_council_lords_desc: "The glorious council of Lords, has long been the administrative and legislative cog in our national machine. By expanding our court, our armed forces and our trade, we will yield better terms and benefits in all future social contracts we sign with them." 
+ #nov_deal_with_hansa_title: "Deal with the Hansa" 
+ #nov_deal_with_hansa_desc: "The Hanseatic League has long been a thorn in our mercantile ventures. It is time we oust them from our markets by establishing a clear monopoly in our home markets!" 
+ nov_fund_baltic_fleet_title: "Fund the Baltic Fleet" 
+ nov_fund_baltic_fleet_desc: "No Republic or mercantile Kingdom would be complete without a powerful fleet to provide support to our trade vessels from the Oresund to the Finnish Gulf." 
+ nov_oreshek_shipyard_title: "Oreshek Shipyard" 
+ nov_oreshek_shipyard_desc: "The shiprwights of Oreshek are famed for their mastery in terms of ship construction. It would be wise for our authority and continuous prosperity to fund them and support their expansive endeavours." 
+ nov_secure_naval_supplies_title: "Secure Naval Supplies" 
+ nov_secure_naval_supplies_desc: "Our expanded navy demands more resources to sustain its long and tenuous daily voyages. To quench their demands for naval supplies let us take steps to develop and ramp up our production." 
+ nov_morskoye_prevoskhodstvo_title: "Morskoye Prevoskhodstvo"
+ nov_morskoye_prevoskhodstvo_desc: "The concept of Naval Supremacy is quite alien to most people of the Baltic. However, our maritime development in recent years have given birth to its many vocal supporters in our court. According to them, we must increase our naval efforts and dominate seas outside the Baltic region." 
+ nov_fund_art_movement_title: "Fund the Art Movement" 
+ nov_fund_art_movement_desc: "Novgorod is the heart of culture and art of the entire Russian region. Let us preserve and elevate our centre of innovation to new heights, carving a bright course on the books of history!" 
+ nov_school_novgorod_title: "Academy of Novgorod" 
+ nov_school_novgorod_desc: "No nation has a solid future without our cornerstone educational institutes. For that purpose let us put the foundation for a magnificent institute and build a great reputation as the leaders of innovative thought." 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ #Modifiers
+ nov_local_sotnya_modifier: "Local Sotnya" 
+ nov_archbishopic_statum_modifier: "Archbishopic Statum"
+ nov_bastion_of_orthodoxy_modifier: "Bastion of Orthodoxy"
+ nov_bastion_of_orthodoxy_2_modifier: "Bastion of Orthodoxy"
+ nov_bastion_of_orthodoxy_3_modifier: "Bastion of Orthodoxy" 
+ nov_yellow_salt_modifier: "Yellow Salt"
+ nov_peoples_prosperity_modifier: "Prosperity for the People"
+ nov_gateway_to_scandinavia_modifier: "Gateway to Scandinavia" 
+ nov_appointed_posadnik_boyars_modifier: "Appointed Powerful Posadnik Boyars" 
+ nov_michael_modifier: "Believers of St. Michael"
+ nov_eleusa_modifier: "Followers of Mercy" 
+ nov_pancreator_modifier: "Honest Administration"
+ nov_nicholas_modifier: "Embassies of St. Nicholas" 
+ nov_climacus_modifier: "Pious Sciences"
+ nov_defeat_rurikovich_modifier: "Defeated the Rurikovichs"
+ nov_tatar_sergeants_modifier: "Tatar Sergeants" 
+ nov_cathedral_st_wisdom_modifier: "Cathedral of St. Wisdom" 
+ nov_landed_army_modifier: "Landed Army" 
+ nov_republican_streltsy_modifier: "Republican Streltsy" 
+ nov_krajina: "Krajina" 
+ nov_grand_prince_rus_modifier: "Grand Prince of the Rus" 
+ nov_river_city_trade_modifier: "River City Trade" 
+ nov_rad_contract_modifier: "Signed the R'Ad Contracts" 
+ nov_seize_hansa_assets_modifier: "Seized Hansa Wealth" 
+ nov_novgorodian_maritime_tradition_modifier: "Novgorodian Maritime Tradition" 
+ nov_oak_master_crafstmen_of_novgorod_modifier: "Oak Master Craftsmen of Novgorod" 
+ nov_concept_naval_supremacy: "Concept of Naval Supremacy" 
+ nov_cultural_capital_russia_modifier: "Cultural Capital of Russia" 
+ nov_aristocratic_school_modifier: "School of Aristocracy"
+ nov_school_of_commerce_modifier: " School of Commerce" 
+ nov_school_craftsmanship_modifier: "School of Crafstmanship" 
+ nov_school_novgorod_modifier: "School of Novgorod" 
+ nov_resurgence_novgorod_modifier: "Resurgence of Novgorod" 
+ nov_tribal_communities_modifier: "Tribal Communities" 
+ nov_eastern_horses_modifier: "Eastern Horses" 
+ 
+ #Flagship 
+ nov_novgorodian_oak: "Novgorodian Hazel Oak" 
+ nov_novgorodian_oak_desc: "Crafted by the most masterful shipwrights in Neva, this oak is several times sturdier and harder than any of its kind all while retaining a very light weight."
+ 
+ 
+ #Custom Tooltips 
+ nov_every_marketplace_tt: "Every province with a §YMarketplace§! gains '§YLocal Sotnya§!' for §Y20 years§!, giving the following effects: \nLocal Development Cost: §G-15%§! \nLocal Goods Produced Modifier: §G+15%§!"
+ nov_trigger_staraya_tt: "§YKholm§! has at least §Y12 Base Production Development§! and is §GProsperous§!"
+ nov_patriarch_tolerance_tt: "For every §Y25 Patriarch Authority§! above §Y25§! \nwe will gain §G+1 Tolerance of the True Faith§! \nShould we complete the mission with at least \n§Y75 Patriarch Authority§!, the bonus will be permanent"
+ nov_prosperity_tt: "Every province in the §YNovgorod Area§! gains '§YProsperity for the People§!' for §Y20 years§!, giving the following effects: \nProvince Trade Value: §G+1§! \nLocal Build Cost: §G-10%§! \nLocal Monthly Devastation: §G-0.1§!"
+ nov_demand_vyborg_tt: "We will demand §RVyborg§! be given to us!"
+ has_any_icon_active_tt: "Has a Religious Icon active" 
+ nov_new_flagship_ability: "Gains access to §YNovgorodian Oak§! unique Flagship modification, granting powerful bonuses to our §GFlagship§! for free"
+ nov_school_faction: "Depending on the §GFaction§! in power upon completing this mission, we will gain a different bonus"
+ nov_enable_tribes_tt: "Grants access to the §YNomadic Tribes Estate§!"
+ nov_depending_on_icon_reward_tt: "Depending on the §YIcon§! we will receive a §Mdynamic§! reward"
+ #Events 
+ FU_Novgorod_Events.1.t: "The Lands Beyond the Portages"
+ FU_Novgorod_Events.1.d: "Some territories of relatively late Novgorod colonization were not included in the five–fold division and formed a number of volosts that were in a special position: Zavolochye or Dvinskaya land – along the Northern Dvina from Onega to Mezen. This volost was called so because it was located behind the portage – the watershed separating the Onega and Northern Dvina basins from the Volga basin and was located behind the Obonezhskaya and Bezhetskaya pyatins, where the portages to the Onega river (Poonezhie) began. Perm – in the basin of the Vychegda River and the upper Kama. Pechora – beyond the Dvina land and Perm to the north–east on both banks of the Pechora River to the Ural Range. Ugra – on the eastern side of the Ural Range. Tre or Tersky Coast – on the White Sea coast. The Siberian fur trade is an exchange concerned with the gathering, buying and selling of valuable animal furs that originate from Siberia. \n\nThe Siberian fur trade expanded from localized trade in Novgorod, and Siberian fur is now traded around the region and beyond. Its riches will have a  a significant impact on the development of urban centres through the erection of new buildings and the process of urbanization."  
+ FU_Novgorod_Events.1.a: "Let there be fur!"
+ fur_cash_tt: "based on our Fur production."
+ 
+ FU_Novgorod_Events.2.t: "A Friendly Request" 
+ FU_Novgorod_Events.2.d: "The head of the Novgorodian diplomatic corps has presented us with a soft request. In exchange for our continuous cooperation, the city of Novgorod demands we hand the province of Vyborg to them, along with the populace and estates of the area." 
+ FU_Novgorod_Events.2.a: "Some land means nothing when it comes to friendship and alliance!"
+ FU_Novgorod_Events.2.b: "They will pry it from our cold dead hands!"
+ 
+ FU_Novgorod_Events.3.t: "Lord Novgorod the Great" 
+ FU_Novgorod_Events.3.d: "Our Novgorod Republic,also known as 'Novgorodian Land'; as a medieval East Slavic state from the 12th to 15th centuries, stretching from the Gulf of Finland in the west to the northern Ural Mountains in the east, including the city of Novgorod and the Lake Ladoga regions of modern Russia. Citizens referred to their city-state as "His Majesty (or Sovereign) Lord Novgorod the Great" (Gosudar Gospodin Veliky Novgorod), or more often as "Lord Novgorod the Great" (Gospodin Veliky Novgorod). The Republic prospered as the easternmost port of the Hanseatic League and its Slavic, Baltic and Finnic people were much influenced by the culture of the Viking-Varangians and Byzantine people.\n\nHowever, despite our apparent decay during the early 15th century, our newfound glory and victories over the Grand Kniaz of Muscovy have given our people hope for a brighter future of prosperity and sovereignty." 
+ FU_Novgorod_Events.3.a: "This is surely a sign of God's favor!"
+ 
+ FU_Novgorod_Events.4.t: "Administrating the Tribes" 
+ FU_Novgorod_Events.4.d: "Raids between tribes were prevalent throughout the region's history. This is connected to the ease with which a defeated enemy's flocks can be driven away, making raiding profitable. In terms of warfare and raiding, in relation to sedentary societies, the horse gave the nomads an advantage of mobility. Horsemen could raid a village and retreat with their loot before an infantry-based army could be mustered and deployed. When confronted with superior infantry, horsemen could simply ride away and retreat and regroup. Outside of Europe and parts of the Middle East, agrarian societies had difficulty raising a sufficient number of war horses, and often had to enlist them from their nomadic enemies (as mercenaries). \n\nHowever, the steppes of Russia are plentiful of both horses and manpower. To that end, we could very well offer these unruly tribes an offer to join civilization as part of our court and army ranks." 
+ FU_Novgorod_Events.4.a: "Grant them citizenship and integrate them into our court!" 
+ FU_Novgorod_Events.4.b: "They belong under our boot and they deserve nought but the whip!"
+ 
+ 
+ FU_Novgorod_Events.5.t: "Novgorod and the Hansa" 
+ FU_Novgorod_Events.5.d: "It is indeed true that we have a turbulent history with the cities and territories attributed to the Hanseatic League. Despite their old power, nowadays the League is nothing but a shadow of its former help. Most foreign cities confined the Hanseatic traders to certain trading areas and to their own trading posts. They seldom interacted with the local inhabitants, except when doing business. Many locals, merchant and noble alike, envied the power of the League and tried to diminish it. For example, in London, the local merchants exerted continuing pressure for the revocation of privileges. The refusal of the Hansa to offer reciprocal arrangements to their English counterparts exacerbated the tension. King Edward IV of England reconfirmed the league's privileges in the Treaty of Utrecht despite the latent hostility, in part thanks to the significant financial contribution the League made to the Yorkist side during the Wars of the Roses of 1455–1487. In 1597 Queen Elizabeth of England expelled the League from London, and the Steelyard closed the following year. \n\nGiven the apparent decline the League is facing, perhaps it would be wise for us to retake the territory they once took from us." 
+ FU_Novgorod_Events.5.a: "Their lands will make a great addition to our collection."
+ 
+ FU_Novgorod_Events.6.t: "The Era of the Horse Coming to an End" 
+ FU_Novgorod_Events.6.d: "For years the people of the steppe enjoyed tremendous autonomy under the regional administration of the Novgorodian officials. As the era of Absolutism and control is upon us, these men have come to realize that their time is long over. To that extent, local attempts to integrate these unruly elements have been remarkably successful, resulting in their traditions and way of administration molding with our society."
+ FU_Novgorod_Events.6.a: "So ends the era of the raiders and autonomy..."
+ 
+ 
+ #Recent Additions
+ #Tooltip
+ nov_every_province_with_a_center_of_trade_tt: "Every owned province with a §YCenter of Trade§! will gain:"
+ nov_grand_shipyard_or_3_base_production_tt: "The §YShipyard§! in [33.GetName] will be upgraded"
+ 
+ #Modifiers 
+ nov_oreshek_port_modifier: "Oreshek Port" 
+ 
+ 
+ #Reforms
+ nov_commercial_law: "Novgorodian Commercial Law" 
+ nov_commercial_law_desc: "Our merchants must abide by strict sets of maritime and commercial law in order to maximize our profit and influence both at home as well as abroad." 
+ nov_republican_guard_reform: "Office of the Republican Guard" 
+ nov_republican_guard_reform_desc: "No nation is safe from its enemies without the protection of capable men. To that end, the Office of the Republican Guard shall serve our heads of state diligently and safeguard our values from our many enemies." 
+ fu_republican_tsardom_reform: "Russian Republic" 
+ fu_republican_tsardom_reform_desc: "No matter the size of our Republic, the roots that support our great country lie with our Novgorodian past. The sons of merchants and sailors, the world will witness the rise of the Russian Republic!"
+ 
+ #Events
+ FU_Novgorod_Events.7.t: "The Question of the Russian Republic"
+ FU_Novgorod_Events.7.d: "Recent conquests towards our eastern border and the fall of Moscow have given rise to many across our nation, declaring the intent to hold the crown of Russia. However, many believe that a switch to a centralized and authoritarian regime would be unpopular and would not fit the republican ideals that our people live by."
+ FU_Novgorod_Events.7.a: "We cannot forget our republican roots."
+ FU_Novgorod_Events.7.b: "The future is now, ye old republicans!"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,552 @@
+#those monuments were in great projects file for some reason?
+fu_sari_markets = {
+	start = 4341
+	date = 1914.08.14
+	time = {
+		months = 60
+	}
+	build_cost = 1000
+	can_be_moved = no
+	starting_tier = 1
+	type = canal
+	build_trigger = {
+		FROM = {
+			has_country_flag = tur_markets_of_sari_flag
+		}
+	}
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = {
+	}
+	
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+			province_trade_power_value = 10
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			global_trade_power = 0.01
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			province_trade_power_value = 5
+			trade_value = 1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			global_trade_power = 0.025
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			province_trade_power_value = 10
+			trade_value = 2
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			global_trade_power = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			province_trade_power_value = 20
+			trade_value = 5
+		}
+		area_modifier = { }
+		
+		country_modifiers = {
+			global_trade_power = 0.1
+		}
+		on_upgraded = {
+			custom_tooltip = tur_every_cot_upgrade_1_base_production_tt
+			FROM = { set_country_flag = tur_built_sari_markets }
+		}
+	}
+}
+
+fu_hormuz_toll = {
+	start = 2999
+	date = 1915.08.14
+	time = {
+		months = 60
+	}
+	build_cost = 1500
+	can_be_moved = no
+	starting_tier = 1
+	type = canal
+	build_trigger = {
+		FROM = {
+			has_country_flag = fu_hormuz_toll_flag
+		}
+	}
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = {
+	}
+	
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+			province_trade_power_value = 10
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			province_trade_power_value = 10
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+			owner = { 
+				if = { 
+					limit = { has_estate = estate_burghers } 
+					add_estate_loyalty = { 
+						estate = estate_burghers 
+						loyalty = 10 
+					}
+				}
+				else = { add_mercantilism = 1 } 
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			province_trade_power_value = 20
+			trade_value = 3
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			owner = { 
+				if = { 
+					limit = { has_estate = estate_burghers } 
+					add_estate_loyalty = { 
+						estate = estate_burghers 
+						loyalty = 10 
+					}
+				}
+				else = { add_mercantilism = 1 } 
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			province_trade_power_value = 25
+			trade_value = 5
+		}
+		area_modifier = { }
+		
+		country_modifiers = {
+			merchants = 1  
+		}
+		on_upgraded = {
+			owner = { 
+				if = { 
+					limit = { has_estate = estate_burghers } 
+					add_estate_loyalty = { 
+						estate = estate_burghers 
+						loyalty = 10 
+					}
+				}
+				else = { add_mercantilism = 1 } 
+			}
+		}
+	}
+}
+
+fu_mehmed_pasha_mosque = {
+	start = 151
+	date = 1915.08.14
+	time = {
+		months = 60
+	}
+	build_cost = 0
+	can_be_moved = no
+	starting_tier = 1
+	type = canal
+	build_trigger = {
+		FROM = {
+			has_country_flag = tur_taken_decision_to_build_mehmed_pasha_mosque_flag
+		}
+	}
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = {
+	}
+	
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {	
+		}
+		area_modifier = {
+			local_tax_modifier = 0.25
+		}
+		country_modifiers = {
+			monthly_piety = 0.001
+		}
+		on_upgraded = {
+			
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			local_tax_modifier = 0.33
+		}
+		country_modifiers = {
+			monthly_piety = 0.0025
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			local_tax_modifier = 0.5
+		}
+		country_modifiers = {
+			monthly_piety = 0.0025
+			culture_conversion_cost = -0.15
+		}
+		on_upgraded = {
+			
+		}
+	}
+}
+
+fu_acemi_oglan = {
+	start = 151
+	date = 1915.08.14
+	time = {
+		months = 60
+	}
+	build_cost = 0
+	can_be_moved = no
+	starting_tier = 1
+	type = canal
+	build_trigger = {
+		FROM = {
+			has_country_flag = tur_gain_access_to_acemi_oglan_academy_flag
+		}
+	}
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = {
+	}
+	
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 750
+		}
+		province_modifiers = {
+			local_regiment_cost = -0.1
+			regiment_recruit_speed = -0.10
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			owner = { add_army_professionalism = 0.025 }
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			local_regiment_cost = -0.1
+			regiment_recruit_speed = -0.2
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			owner = { add_army_professionalism = 0.05 }
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_regiment_cost = -0.1
+			regiment_recruit_speed = -0.2
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			free_leader_pool = 1 
+		}
+		on_upgraded = {
+			custom_tooltip = tur_generals_grant_50_more_percent_professionalism_tt
+			hidden_effect = { set_country_flag = tur_acemi_oglan_academy_3_flag } 
+		}
+	}
+}
+
+fu_holy_cross_cathedral = {
+	start = 184
+	date = 1915.08.14
+	time = {
+		months = 24
+	}
+	build_cost = 0
+	can_be_moved = no
+	starting_tier = 1
+	type = canal
+	build_trigger = {
+		FROM = {
+			has_country_flag = orl_enable_holy_cross_cathedral_flag
+		}
+	}
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = {
+	}
+	
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 24
+		}
+		cost_to_upgrade = {
+			factor = 250
+		}
+		province_modifiers = {
+			local_tax_modifier = 0.25
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 36
+		}
+		cost_to_upgrade = {
+			factor = 500
+		}
+		province_modifiers = {
+			local_tax_modifier = 0.3
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			papal_influence = 1
+			church_power_modifier = 0.2
+		}
+		on_upgraded = {
+			owner = { add_papal_influence = 25 }
+			184 = { 
+				add_or_upgrade_tax_building = yes
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 48
+		}
+		cost_to_upgrade = {
+			factor = 750
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_tax_modifier = 0.3
+		}
+		country_modifiers = {
+			papal_influence = 1
+			church_power_modifier = 0.25
+		}
+		on_upgraded = {
+			owner = { add_papal_influence = 25 }
+			owner = { change_adm = 1 }
+			184 = { add_base_tax = 3 }
+		}
+	}
+}

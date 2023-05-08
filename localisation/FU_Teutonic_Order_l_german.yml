@@ -1,0 +1,151 @@
+﻿l_german:
+ 
+ #Missions
+ teu_delegate_emperor_title: "Delegate with the Emperor"
+ teu_delegate_emperor_desc: "While he might not be willing to help economically or militarily, the emperor's word still carries weight! We shall send a delegation to the empire to gather general support for our just and holy cause among the nobles of Europe. We are not fighting for land possessions like any petty noble, our goal is greater than anything, our goal is for God and Him only and the rest of Europe will see that, God wills it! "
+ teu_hither_pomerania_title: "Hither Pomerania"
+ teu_hither_pomerania_desc: "Before the christianisation of Pomerania, it was a Slavic area, full of pagan filth until the good missionaries of Christ converted them trough assimilation, annihilation and migration, nowadays there's good Christian people living in those lands, however, the area itself is under threat of the Kalmar union in the north and the teaching of Jan Hus to the south, while not a military threat, some may argue it is more dangerous than the Danes, as it would surely make our good people's passage to heaven impossible, we must defend Pomerania and the emperor himself might be quite pleased with us, as well as God."
+ teu_walls_berlin_title: "Walls of Berlin"
+ teu_walls_berlin_desc: "The emperor recongises our loyalty to both God and him, as such, he has once again implored us to do his bidding, the lands of Brandenburg were historically a part of the Bohemian crown under the von Luxembourg dynasty when they were still the emperors, nowadays they're an electorate in their own right, however, with the recent problem of Jan Hus, his teachings and the crusade on the Hussite heretics, the emperor suspects yet another uprising, this time he suspects Berlin. He has asked us to take it for ourselves as it is a highly important city within the empire, that the emperor cannot afford to lose to heretics of any kind if the crown of the empire is to be secured. If we do this, we will gain the electoral title of Brandenburg, solidifying our standing within the empire, being less influential than only the emperor himself." 
+ teu_emissaries_to_rome_title: "Emissaries to Rome"
+ teu_emissaries_to_rome_desc: "For two and a half centuries our order has been a loyal servant of God and by extension of God's representative on earth, the Pope, however, in this world there are politics and intrigue at play. The legality of our order and its right to hold land is a matter our neighbours are all too eager to exploit, we must send a delegation to the Pope in Rome, so he can put an end to these questions and ratify the legality of our worldly claims. "
+ teu_brotherhood_st_sebastian_title: "Brotherhood of St. Sebastian"
+ teu_brotherhood_st_sebastian_desc: "As a holy order, we have external missions that require us to act in the name of God beyond the borders of our own domain, we must not forget however, the ways of Christ and our internal missions, our Christian duties towards the less fortunate within our borders. The plague is all too common, and people look for God to cling to Him in their last days, we must ensure they can do so with our full support, as well as look for ways to prevent major outbreaks, God wills it, as we are his faithful servants! " 
+ teu_terra_marriana_title: "Terra Mariana" 
+ teu_terra_marriana_desc: "The lands of old Livonia, or "Terra Mariana", were ruled by the good Christian orders ever since the Livonian crusade, however, thinking their duty was fulfilled, the Livonians have grown lazy, seemingly forgetting our holy mission as soon as they got a taste of little power, under our renewed administration, this time direct, we will correct this." 
+ teu_port_city_riga_title: "Port-City of Riga"
+ teu_port_city_riga_desc: "Since its foundation, Riga was primarily a trading and transshipment point, so its development was directly related to maritime trade. The first harbor for settlement was the so-called Riga lake, the extension of the river Ridzene. In the 13th century, the city entered the Hanseatic League, and a large port grew on the Riga lake. The main export products at that time were furs, wood, wax, flax and hemp. Now, with the port under our control, we can make Riga into the primary naval base of the order, with it safe and strategic position in the gulf of Riga, it will make an excellent asset to our cause and provide a stepping stone for going further east.  "
+ teu_secure_waterway_title: "Secure the Waterway"
+ teu_secure_waterway_desc: "With the entirety of Livonia firmly under our control, we're on the cusp of claiming to be the masters of the Baltic sea, the only beast left to tame: The Russian bear. Once we take Neva from them they will be left neutered and isolated from the rest of Europe's sea trade, and with that we shall become truly, the masters of the Baltics, the trade hegemon of the north and as such the sea will finally come unto its true name, the Germanic sea. " 
+ teu_enter_international_stage_title: "International Splendor"
+ teu_enter_international_stage_desc: "O, great $MONARCHTITLE$! The Teuton juggernaut is unstoppable and our diplomats enjoy great prestige in courts from Britain to Russia, they all heed our warnings, all hear our words, all respect our swords! We are a great power on the map of the world and forever more shall we be one! Our court is filled with competent individuals giving their lives to our cause, servants of God and the Catholic world. Everyone knows our great name, everyone knows our motto! Beware world, do not cross us, lest ye be judged by the sword of God! " 
+ teu_request_mother_church_title: "Church of Saint Elisabeth"
+ teu_request_mother_church_desc: "While the order has been operating in Prussia since 1226 with the grant of Kulm, our church and main headquarters remained in Wien, as we have progressed from the small scope of the mission at the start, the necessity to move our headquarters as well as our church from our de jure headquarters to our de facto headquarters, has grown, it's time for $CAPITAL_CITY$ to be the city to fulfill all our needs, administrative and spiritual. " 
+ teu_protect_catholicism_title: "Protect Catholicism"
+ teu_protect_catholicism_desc: "While we do not doubt that the Catholic population in Lithuania is truly faithful, we doubt the sympathisers of the eastern schismatics that rule over them! Not so long ago they were pagans, only converting to escape the wrath of our holy mission and now, with their unwillingness to lead the Orthodox people they rule over to the true light, our suspicions are confirmed! We will not stand idly by, we will protect the faithful ourselves as it is our sacred duty! " 
+ teu_grand_duchy_lithuania_title: "Grand Duchy of Lithuania"
+ teu_grand_duchy_lithuania_desc: "With a firm foothold into the duchy, we shall strike at the heart of it! By finally seizing Vilnius we will come into direct contact with the schismatics where we can start leading them into the light ourselves, the only choice they will get will be, by bread or by sword? " 
+ teu_land_of_fields_title: "Land of Fields"
+ teu_land_of_fields_desc: "Poland, or Polska in their language, meaning "land of the fields", oh if they only knew, the fields they're so proud of, are their ultimate demise, with no defensible terrain, the Teutonic advance never halted, we ran over their country with such speed and ferocity over and over again, every one of them deserves the name "Blitzkrieg" and now, with Poland under our complete control, we are the land of the fields! We shall not repeat their mistakes, they were lazy and proud, we shall not stop conquering in every direction until every heretic, heathen and potential threat is neutralised! And in that, we will have a special help, the Cossacks of the southern steppes that were disloyal to the Polish are offering us their servitude, servitude to the full extent of the word, they will live for our cause, live according to our cause, as pious Catholics and die for our cause in all our battles. " 
+ teu_organize_the_grosgebietiger_title: "Organize the Grossgebietiger"
+ teu_organize_the_grosgebietiger_desc: "The Großgebietiger are high officers with competence on the whole order, appointed by the Hochmeister. There are five offices. \nThe Großkomtur, the deputy of the Grandmaster \nThe Treßler, the treasurer \nThe Spitler, responsible for all hospital affairs \nThe Trapier, responsible for dressing and armament \nThe Marschall, the chief of military affairs \nThese offices are established for the order to run smoothly, as the necessity arose, our borders are expanding and one man cannot do it alone anymore. " 
+ teu_modernize_the_generalkapitel_title: "Modernize the Generalkapitel" 
+ teu_modernize_the_generalkapitel_desc: "We have organized the Großgebietiger, yes, but nothing in this world is perfect, the five-branch administration can use improvement in all matters. As our own mission expands, the state does too and as such the administration must be expanded upon so it can fulfill the needs of our order. The need to modernise has led us to reform the state from the ground up, as for a better administration we would need to work from the lowly peasant all the way to the $MONARCHTITLE$, all the cogs must turn smoothly for the same goal. " 
+ teu_dawn_of_the_reformation_title: "Dawn of the Reformation" 
+ teu_dawn_of_the_reformation_desc: "The heretics are here. We have feared this day of reckoning when the true faithful world shall descend into madness and despair, where the faith in God and church will dwindle because the antichrist has done his deed. We are the one true bastion of faith, and we shall defeat this antichrist and bring the people back into the light! Not only that, we shall bring new people into the light! The darkness of the antichrist should tremble, the Teutonic advance is unstoppable. DEUS VULT!" 
+ teu_greater_poland_title: "Greater Poland"
+ teu_greater_poland_desc: "The time has come. We shall push the advantage we have on the Polish and consolidate our lands, we shall annex greater Poland and finally unite our lands. The lands are rich and fertile, with the Warta flowing trough them, they will provide a most useful asset to us, with the cloth manufactories and the salt mines of Poznan, our already expanding trading zone of influence shall grow even more. The most useful part of the land however, is the strategic importance it has if we want to strike at one of the Polish most important areas and cities, Warszawa in Mazovia. "
+ teu_city_warsz_title: "City of Warsz" 
+ teu_city_warsz_desc: "The first fortified settlements on the site of today's Warszawa were located in Bródno and Jazdów. After Jazdów was raided by nearby clans and dukes, a new fortified settlement was established on the site of a small fishing village called "Warszowa". The Prince of Płock, Bolesław II of Mazovia, established the city in about 1300 and the first document attesting to the existence of a castellany dates to 1313. With the completion of St John's Cathedral in 1390, Warszawa became one of the seats of the Dukes of Mazovia and was officially made capital of the Mazovian Duchy in 1413. The economy predominantly rests on craftsmanship and trade and will be an incredible asset to us, with its incredible potential and great location in the middle of Poland. We will use it as the location from which the Germanization of all of Poland will finally mark the end of the eastern Slavic influence in the region. It started with the Wendish in Pomerania, they are now German. It will end with the Polish. " 
+ teu_prussian_confederation_title: "The Prussian Confederation"
+ teu_prussian_confederation_desc: "The Prussian Confederation was an organization formed on the 21st February of 1440 at Marienwerder by a group of 53 nobles and clergy and 19 cities in Prussia, to "oppose our arbitrariness" as the hypocrites like to say. After Grand Master Paul von Rusdorf died in 1441, his successor, Konrad von Erlichshausen, continued to negotiate a compromise, however the matter looks dire, the Confederation is lobbying against our great order with emperor $EMPERORNAME$ and is continuing to undermine our efforts in the region, we must rein them in before this turns into an all out war. " 
+ teu_patronize_renaissance_art_title: "Patronize Renaissance Art" 
+ teu_patronize_renaissance_art_desc: "The Pope in Rome has showed his support for the Renaissance, so there is no reason we shouldn't do the same! We might be a military focused holy order, but that doesn't mean we cannot enjoy art and the prestige it brings with it. We turned the backwaters of old Prussia into the magnificent Teutonic Order step by step, supporting the Renaissance is just another one, we shall be a bastion of Renaissance in the area, like the Italians are for Europe and the Flemish for western Europe specifically, we shall be for the Baltic. " 
+ teu_brethren_of_the_order_title: "Brethren of the Order" 
+ teu_brethren_of_the_order_desc: "" Helfen, Wehren, Heilen " or " Help, Defend, Heal " is the motto of our order, and our members are expected to uphold these values trough-out their lives, as they're dedicated to the cause of God and God himself! Brethren in faith from all around the true Christian world have come to see the holy mission of our order fulfilled. We must unite against the enemies of our purpose, the heretics, heathens and Catholics that seek to destroy everything we stand for! From Ireland to Cathay, the world shall know, the Teutonic advance is unstoppable! God wills it!  " 
+ teu_cross_the_vistula_title: "Cross the Vistula" 
+ teu_cross_the_vistula_desc: "Ever since the establishment of the order in the Baltics, we have looked over the Vistula and at the Poles that always found some devious way to undermine our goals. It is time to say enough! We shall cross the Vistula, infiltrate their ranks and devastate their war efforts before they even know what's coming, this will teach them not to cross the order! "
+ teu_amsterdam_of_the_east_title: "Amsterdam of the East" 
+ teu_amsterdam_of_the_east_desc: "Danzig's location as a deep-water port where the Vistula river met the Baltic Sea had made it into one of the wealthiest cities in Europe as grain from Poland and Ukraine was shipped down the Vistula on barges to be loaded onto ships in Danzig, where it was shipped on to western Europe. As many of the merchants shipping the grain from Danzig were Dutch, who built Dutch-style houses for themselves, leading to other Danzigers imitating them, the city was thus given a distinctively Dutch appearance. Danzig become known as "the Amsterdam of the east", a wealthy seaport and trading crossroads that linked together the economics of western and eastern Europe, and whose location at where the Vistula flowed into the Baltic led to various powers competing to rule the city, unfortunately for them, Danzig will remain an important trade hub for our holy mission. Neither the Poles, nor the Prussian Confederation will deny us of it! " 
+ teu_marshals_residence_title: "Marshal's Residence" 
+ teu_marshals_residence_desc: "We used Königsberg to fortify our conquests in Samland and as a base for campaigns against pagan Lithuania. Under siege during the Prussian uprisings in 1262–63, Königsberg Castle was relieved by the master of the Livonian order. Because the initial northwestern settlement was destroyed by the Prussians during the rebellion, rebuilding occurred in the southern valley between the castle hill and the Pregel River. Within our state, Königsberg is the residence of the marshal, one of the chief administrators of the military order and represents the military legacy of our holy order and the holy mission." 
+ teu_curonia_spit_title: "Curonia Spit" 
+ teu_curonia_spit_desc: "We occupied the area in the 13th century, building our castles at Memel, Neuhausen, and at Rossitten. The Spit was the last bastion of the pagan old Prussians that gave us trouble for decades. Yet, the Spit is incredibly useful to our own cause nowadays, it is an important trade route as its the shortest land route for a passage to east Europe from the west and vice versa, we might be wise to exploit this, with a toll set in place mimicking the Danish sound toll our economy will undoubtedly flourish! " 
+ teu_amber_coast_title: "The Amber Coast" 
+ teu_amber_coast_desc: "We acquired the rich amber beaches and declared our monopoly over the collection of amber on the beaches of Samland. Our monopoly was clear; Anyone caught collecting on the beaches or in possession of amber was hanged immediately. We kept control of the amber trade in the southeast Baltic until the Protestant reformation. Since the amber trade was based upon the demand for beads for rosaries, the Prostestant reformation devastated the amber trade of the southeastern Baltic. The Lutherans did not use rosaries and the Catholics of southern and eastern Europe would not buy rosaries from the heretic Lutherans. We have transferred control of the amber trade to a family of merchants in Danzig, the Koehn von Jaski's. This family found the amber trade could be resurrected by selling amber beads to Muslims in the Near East. So we shall increase the production of amber in the area and help the family however we can, to save our trade income! " 
+ 
+ 
+ 
+ 
+ 
+ #Modifiers
+ teu_spreading_word_of_christ_modifier: "Spreading the Word of Christ"
+ teu_imperial_seal_of_diplomacy_modifier1: "Imperial Seal of Diplomacy"
+ teu_imperial_seal_of_diplomacy_modifier2: "Imperial Seal of Diplomacy" 
+ teu_lion_of_northern_germany_modifier: "Lion of North Germany"
+ teu_papal_edict_on_the_legality_of_the_order_modifier: "Papal Edict on the Legality of the Order of Teuton Knights"
+ teu_founding_new_orders_modifier: "Founding New Holy Orders" 
+ teu_secured_status_of_livonia_modifier: "Secured the Livonian Branch"
+ teu_order_of_saint_mary_modifier: "Order of Saint Mary" 
+ teu_naval_base_of_the_order_modifier: "Naval Base of the Order"
+ teu_great_power_diplomacy_modifier: "Great Power Diplomacy" 
+ teu_seat_of_the_grandmaster_of_the_teutonic_order_modifier: "Seat of the Grandmaster of the Germanic Order"
+ teu_safe_passage_to_livonia_modifier: "Safe Passage to Livonia" 
+ teu_divine_victory_in_lithuania_modifier: "Divine Victory in Lithuania"
+ teu_teutonic_cossacks_modifier: "Teutonic Cossacks" 
+ teu_teutonic_cossacks_modifier2: "Teutonic Cossacks"
+ teu_regional_leadership_modifier: "Regional Leadership"
+ teu_five_branch_efficiency_modifier: "Efficient Five-Branch Administration" 
+ teu_defenders_of_christendom_modifier: "Defenders of Christendom"
+ teu_push_the_polish_front_modifier: "Push the Polish Front"
+ teu_germanization_of_poland_modifier: "Germanization of Poland" 
+ teu_reined_in_confederation_modifier: "Reined in the Confederation"
+ teu_hub_of_northern_renaissance_modifier: "Hub of Northern Renaissance" 
+ teu_turning_point_of_the_war_modifier: "Turning Point of the War" 
+ teu_infiltrated_polish_administration_modifier: "Infiltrated Polish Administration"
+ teu_important_amber_port_modifier: "Important Amber Port" 
+ teu_important_grain_port_modifier: "Important Grain Port" 
+ teu_residence_of_the_summus_marescalcus_modifier: "Residence of the Summus Marescalcus" 
+ teu_curonia_spit_toll_modifier: "Curonia Spit Toll" 
+ teu_sambian_amber_production_modifier: "Sambian Amber Production" 
+ 
+ 
+ 
+ 
+ 
+ #custom_tooltips
+ teu_alliance_with_emperor: "If we complete the mission while allied with the §MHoly Roman Emperor§! the reward will be amplified"
+ teu_eat_brandenburgs_electorship_tt: "If we complete the mission while we are a member of the §YHoly Roman Empire§! and §YBrandenburg§! is an elector, we will claim their §YElectorship§!"
+ teu_strongest_in_north_germany_tt: "Having the largest army than any nation with its capital in the §YNorthern Germany§! region will grant further rewards"
+ teu_enable_holy_orders_tt: "Enables new §YHoly Orders§!"
+ teu_5_totf_tt: "Has at least §Y5§! Tolerance of the True Faith" 
+ teu_claim_in_every_lithuanian_non_catholic_province_tt: " §YPermanent Claims§! in every §YLithuanian§! province without our §YReligion§!"
+ until_we_form_another_nation_tt: "until we form another nation"
+ teu_prussian_no_devastation_experience_growth: "Every owned province with the §YPrussian§! culture and no devastation, will gain §Y1§! Random Development and experience prosperity"
+ teu_enable_special_cb_tt: "Enables the '§YSpread the Faith§!' Casus Belli"
+ teu_summon_the_cossack_tt: "Summon a host of §YCossack Cavalry§! at our capital"
+ fu_enable_cossack_estate_tt: "Enables the §YCossacks§! Estate"
+ teu_curtailed_confederation_tt: "Has curtailed the §YPrussian Confederation§!"
+ teu_if_has_faceting_tt: "\nIf we complete the mission while we own the §YDiamond District§! and §MTrade Goods Expanded§! the province will receive a special manufactory and a new trade good"
+ teu_inflitrate_polish_alliance_tt: "Our spies in the Polish war council will reveal vital secrets of the enemies forces beyond our borders for §Y18§! months!"
+ change_estate_land_share_5_tt: "Gain §Y5% Estate Land§! for the §YCrown§!" 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+#Events
+ FU_Teutonic_Events.1.t: "The Catholicization of Lithuania" 
+ FU_Teutonic_Events.1.d: "For centuries the lands of Lithuania were ravaged and infested with Heathen scum. The last few centuries have seen the stabilization of the Rus to the East and thus a steady spread of the ideas of Orthodoxy, beyond the Lithuanian border in Smolensk. \n\nHis Holiness Pope Eugenius IV has tasked us with culling the heresy that's taking place at the fringes of the Lithuanian domain and save thousands of heretic souls from eternal damnation in the darkest pits of Hell."
+ FU_Teutonic_Events.1.a: "We will be their judge, jury or executioners..."
+ 
+ FU_Teutonic_Events.2.t: "Protecting the Less Fortunate"
+ FU_Teutonic_Events.2.d: "The Brotherhood of Saint Sebastian was founded in the time of repeated outbreaks of the plague, and the Christmas and New Year custom of singing at the fountains began shortly afterwards. Saint Sebastian has been known since the Middle Ages as the last resort for plague victims, which is why the brotherhood chose to use his name. The songs are said to bestow a blessing that will protect the people from further outbreaks of the plague. $MONARCHTITLE$ $MONARCH$ has invited the order, whose mission he sees as equally important as our own, to our lands so they can help our people in the name of God! " 
+ FU_Teutonic_Events.2.a: "For the good of the people!" 
+ 
+ FU_Teutonic_Events.3.t: "Church of the Teutonic Order of Vienna"
+ FU_Teutonic_Events.3.d: "For decades, nay! Centuries! Our headquarters have been in now, foreign lands, foreign because we are no longer an order dependent on the charity of squabbling unpious men, foreign because we are a Germanic order, yes, but a nation in our own right, with an administration so advanced, it will take the rest of Europe centuries to get to where we are. Is it fitting, then, that we have our headquarters and our church in another nation? No, no it is not. From now on the church of the Teutonic order will no longer be in Wien, but in our own capital of $CAPITAL_CITY$, this is a glorious moment for the faithful as we will be able to do our holy duty more efficiently, as now, and forever more, the administrative and religious center of our holy order, the seat of the grandmaster, is in our own nation, the nation that God willed into being and trough His grace we are here, may this day be remembered as the day He solidified the sovereignty of the order and strengthened the true faith! " 
+ FU_Teutonic_Events.3.a: "A day of celebration for our brothers in faith!" 
+ 
+ FU_Teutonic_Events.4.t: "Organization of the Order's Military Wings" 
+ FU_Teutonic_Events.4.d: "In 1147 Bernard de Clairvaux persuaded Pope Eugenius III that the Germans' and Danes' conflict with the pagan Wends was a holy war analogous to the Reconquista, he urged a crusade until all heathens were baptised or killed. While our motivation was primarily economic: the acquisition of new arable lands and serfs; the control of Baltic trade routes; and the abolishment of the Novgorodian merchants' monopoly of the fur trade. From the early 13th century we provided garrisons in the Baltic and defended the German commercial centre, Riga. The Livonian Brothers of the Sword and the Order of Dobrzy were established by local bishops. The Sword Brothers were notorious for cruelty to pagans and converts alike. We were founded during the 1190s in Palestine, but our strong links to Germany diverted efforts from the Holy Land to the Baltic. Between 1229 and 1290, we absorbed both the Brothers of the Sword and the Order of Dobrzy, subjugated most of the Baltic tribes and established a monastic state ruthless to our enemies! We invite foreign nobility to join our regular Reisen, or raids, against the last unconquered Baltic people, the Lithuanians. These were fashionable events of chivalric entertainment among young aristocrats. Until Jogaila, Grand Prince of Lithuania, converted to Catholicism and married Queen Jadwiga of Poland resulting in a united Polish–Lithuanian army routing the us at Tannenberg in 1410, this offense will not be forgotten, our military is getting stronger by the day, as brothers join us from all around Europe!" 
+ FU_Teutonic_Events.4.a: "Helfen, Wehren, Heilen!"
+ 
+ FU_Teutonic_Events.5.t: "Dual Catholic Orders of the Baltic Sea"
+ FU_Teutonic_Events.5.d: "The Livonian Brothers of the Sword were absorbed by us in 1237 after they suffered a devastating defeat in the Battle of Saule against the Samogitian Lithuanians, henceforth they were known as the Livonian Order. Over the next few decades we helped the Order focus on the subjugation of the Curonians and Semigallians without having to worry about outside threats that the Danish and the heathen Lithuanians posed. In 1346 the Order, being economically strong and safe, purchased the duchy of Estonia from Denmark and since had grown more and more autonomous and unruly, however, the Danes and the Lithuanians are now growing more and more powerful, with the Kalmar union established, the Danes think they are free to do whatever is to their liking in the Baltic and now want the duchy back. We will not let our sickly, led astray, brothers fall, we will protect them once again and fully integrate them under our administration. " 
+ FU_Teutonic_Events.5.a: "We must save the brethren that have gone astray!"
+ 
+ 
+#Special Sauce made by Big Boss
+ marian_cross_order: "Marian Cross Order" 
+ marian_cross_order_desc: "The Marian Cross Order was founded shortly after the Teutons centralized their authority in the Prussian region. As they braced for long wars against the Poles, Lithuanians and skirmishes in the domain of the Holy Roman Emperor, the need for a better organized administrative body gave birth to the Order of the Marian Cross."
+ order_of_the_ordained_brothers: "Sergeants-Brothers Order" 
+ order_of_the_ordained_brothers_desc: "The Sergeants-Brothers orders is the backbone of the Teutonic might. Characterized by its strict and high-standard approach, the Order funded its armed forces with unique competency throughout its history across the Baltic coasts. The ferocity with with the Sergeant-Brothers defended their homes was unmatched and each member of the armed forces felt it a divine obligation to serve the Order, resulting in many taking up arms for no compensation whatsoever."
+ order_of_the_ordained_sisters: "Ordained Sisters Order" 
+ order_of_the_ordained_sisters_desc: "Life is surely full of peril for the men of the Teutonic Army. As a way to combat the lack of manpower in township occupations across our realm, the Order of the Ordained Sisters will take it upon themselves to operate our manufactories and workshops and effectively double our production manpower despite our size."
+ 
+ #CB 
+ cb_crusade_teutons: "Divine Supremacy" 
+ cb_crusade_teutons_desc: "Force all those who do not follow the §YTrue Faith§! to bend the knee!"

@@ -1,0 +1,14 @@
+bookmark = {
+	name = "ME_BOOKMARK_ANATOLIA"
+	desc = "ME_BOOKMARK_ANATOLIA_DESC"
+	date = 1444.11.11
+	
+	center = 323
+	default = yes
+	
+	country = KAR
+	country = HSN
+	country = AKK
+	country = QAR
+	#country = BAG
+}

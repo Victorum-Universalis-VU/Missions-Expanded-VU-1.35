@@ -1,0 +1,170 @@
+swe_norwegian_shipwrights_modifier = {
+	navy_tradition = 1 
+	ship_durability = 0.05 
+}
+swe_stable_government_modifier = {
+	reform_progress_growth = 0.2
+	global_autonomy = -0.05 
+}
+swe_exploration_focus_modifier = {
+	colonists = 1 
+	global_colonial_growth = 25
+	range = 0.5 
+}
+swe_native_scandinavian_colonies_modifier = {
+	native_uprising_chance = -1
+	colonist_placement_chance = 0.1 
+}
+swe_sweden_rise_modifier = {
+	legitimacy = 1 
+	stability_cost_modifier = -0.2 
+}
+swe_acclimating_to_russian_winter_modifier = {
+	land_attrition = -0.2 
+}
+swe_thrones_of_the_north_modifier = {
+	diplomatic_reputation = 2 
+	improve_relation_modifier = 0.25
+}
+swe_continental_ambitions_modifier = {
+	administrative_efficiency = 0.05 
+}
+swe_dominium_maris_baltici_modifier = {
+	global_trade_goods_size_modifier = 0.1 
+    governing_capacity_modifier = 0.2
+}
+swe_rotar_system_modifier = {
+	local_manpower_modifier = 0.15 
+}
+swe_defensive_fleet_modifier = {
+	global_ship_cost = -0.1 
+	global_sailors_modifier = 0.2 
+}
+swe_victory_in_danzig_modifier = {
+	ae_impact = -0.15 
+	land_morale = 0.1 
+}
+swe_baltic_trade_hegemony_modifier = {
+	trade_efficiency = 0.15 
+	mercantilism_cost = -0.2 
+}
+swe_urban_expansion_modifier = {
+	local_development_cost = -0.15 
+	local_production_efficiency = 0.2 
+}
+swe_kungliga_flottan_modifier = {
+	global_naval_engagement_modifier = 0.25
+	naval_forcelimit_modifier = 0.2
+}
+swe_war_preparations_modifier = {
+	army_tradition = 1 
+	reinforce_speed = 0.33 
+}
+swe_simplified_tax_system_modifier = {
+	global_tax_modifier = 0.15 
+	global_unrest = -1 
+}
+swe_bar_iron_exports_modifier = {
+	trade_goods_size_modifier = 0.20
+}
+swe_swedish_customs_laws_modifier = {
+	local_autonomy = -0.1
+}
+swe_industrial_port_of_swedish_empire_modifier = {
+	trade_goods_size = 2
+}
+swe_pious_believers_sweden_modifier = {
+	war_exhaustion = -0.05 
+}
+swe_adherence_papal_law_modifier = {
+	papal_influence = 2 
+}
+swe_sveriges_riksbank_modifier = {
+	inflation_action_cost = -0.25
+	interest = -1 
+}
+swe_pomeranian_front_modifier = {
+	country_military_power = 1 
+	harsh_treatment_cost = -0.33 
+}
+swe_gratie_veritas_naturae_modifier = {
+	institution_growth = 5 
+}
+swe_prestigious_publications_modifier = {
+	prestige_decay = -0.01
+	innovativeness_gain = 0.5 
+}
+swe_strong_clergy_modifier = {
+	church_influence_modifier = 0.1 
+	church_loyalty_modifier = 0.05 
+	adm_advisor_cost = -0.1 
+	tolerance_own = 1 
+}
+swe_strong_merchant_class_modifier = {
+	burghers_influence_modifier = 0.1 
+	burghers_loyalty_modifier = 0.05 
+	dip_advisor_cost = -0.1 
+}
+swe_powerful_nobility_modifier = {
+	nobles_influence_modifier = 0.1 
+	nobles_loyalty_modifier = 0.05 
+	global_regiment_cost = -0.05
+	mil_advisor_cost = -0.1 
+}
+swe_ga_pa_tactics_modifier = {
+	shock_damage = 0.1 
+}
+swe_free_peasant_class_modifier = {
+	global_unrest = -2 
+	build_cost = -0.05 
+	development_cost = -0.05
+}
+swe_increased_free_trade_modifier = {
+	trade_efficiency = 0.1 
+	global_institution_spread = 0.25
+	advisor_cost = -0.2 
+}
+swe_restored_the_landtag_of_pomerania_modifier = {
+	nobles_loyalty_modifier = 0.1
+	church_loyalty_modifier = 0.1 
+	vassal_forcelimit_bonus = 1
+}
+swe_swedish_crown_authority_modifier = {
+	discipline = 0.05 
+	global_manpower_modifier = 0.33 
+}
+swe_defender_of_the_reformation_modifier = {
+	global_heretic_missionary_strength = 0.02
+	tolerance_own = 1 
+}
+swe_sverige_kontor_modifier = {
+	province_trade_power_modifier = 0.15
+}
+swe_swedish_east_india_hq_modifier = {
+	global_trade_power = 0.05 
+	trade_efficiency = 0.05 
+}
+swe_civil_code_of_sweden_modifier = {
+	global_autonomy = -0.025
+	global_tax_modifier = 0.05 
+	yearly_corruption = -0.05 
+}
+swe_bollhuset_theater_modifier = {
+	monthly_splendor = 1 
+	promote_culture_cost = -0.20 
+}
+swe_royal_academy_sciences_modifier = {
+	technology_cost = -0.05 
+}
+swe_discoveries_of_celcius_modifier = {
+	innovativeness_gain = 0.25 
+	prestige = 0.5
+}
+swe_ruling_nobility_modifier = {
+	global_autonomy = 0.15 
+	min_autonomy = 25 
+}
+swe_first_female_school_modifier = {
+	female_advisor_chance = 0.20 
+	advisor_pool = 1 
+}

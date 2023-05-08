@@ -1,0 +1,207 @@
+me_schonbrunn_palace = {
+	start = 134
+	date = 1444.01.01
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+
+	#can we build it?
+	build_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = me_owned_by_austria_or_is_von_habsburg
+			owner = {
+				OR = {
+					dynasty = "von Habsburg"
+					tag = HAB
+				}
+			}
+		}
+	}
+
+	#what to do when it's built
+	on_built = {
+	}
+	
+	#what to do when it's destroyed
+	on_destroyed = {
+	}
+
+	#can our country use it?
+	can_use_modifiers_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = me_owned_by_austria_or_is_von_habsburg
+			owner = {
+				OR = {
+					dynasty = "von Habsburg"
+					tag = HAB
+				}
+			}
+		}
+	}
+
+	#can our country upgrade it?
+	can_upgrade_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = me_owned_by_austria_or_is_von_habsburg
+			owner = {
+				OR = {
+					dynasty = "von Habsburg"
+					tag = HAB
+				}
+			}
+		}
+	}
+
+	#can our country keep it or is it destroyed when we get hold of it?
+	keep_trigger = {
+	
+	}
+
+	#tier data
+	tier_0 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 0
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		
+		}
+	}
+
+	tier_1 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 24
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 500
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			all_estate_loyalty_equilibrium = 0.05
+			diplomatic_reputation = 1
+			monthly_habsburg_glory_power = 0.1
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+
+		}
+	}
+
+	tier_2 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 36
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 750
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+		
+		region_modifier = {
+			local_autonomy = -0.02
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			all_estate_loyalty_equilibrium = 0.1
+			diplomatic_reputation = 1
+			monthly_habsburg_glory_power = 0.25
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+
+	tier_3 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 72
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+		
+		region_modifier = {
+			local_autonomy = -0.05
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			all_estate_loyalty_equilibrium = 0.1
+			diplomatic_reputation = 2
+			reasons_to_elect = 20
+			monthly_habsburg_glory_power = 0.5
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			custom_tooltip = me_gain_righteous_trait
+			hidden_effect = {
+				owner = {
+					country_event = { id = me_monuments.1 }
+				}
+			}
+		}
+	}
+}

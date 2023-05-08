@@ -1,0 +1,351 @@
+﻿l_english:
+ 
+ #Made by Big Boss for Flavor Universalis#
+ 
+ hsa_gateway_to_east_title: "Gateway to the East" 
+ hsa_gateway_to_east_desc: "The city of Riga has been a partner of ours for as long as we can remember. Let us bolster our bond however we see fit and expand our reach in the Baltic seas." 
+ hsa_st_peterhof_depot_title: "St. Peterhof Depot" 
+ hsa_st_peterhof_depot_desc: "Preserving the trade hegemony in the seas of Northern Europe is no easy task. The custodians of the City of Novgorod once bowed down before our tremendous influence. Perhaps we should remind them why they need to respect us." 
+ hsa_peace_vordingborg_title: "Peace of Vordingborg" 
+ hsa_peace_vordingborg_desc: "In 1435 the King of Denmark was forced to give away the monopoly of his markets to German merchants from Lubeck. It would be wise to reaffirm the terms of that treaty however we see fit." 
+ hsa_herring_migration_title: "Herring Migration"
+ hsa_herring_migration_desc: "The fish markets of Lund have proven a lucrative business for our Dane neighbors. To establish a similar market across the banks of the Oresund would definitely prove profitable!"
+ hsa_markets_bryggen_title: "Markets of Bryggen"
+ hsa_markets_bryggen_desc: "The shores of Norway are always busy with merchants and travellers faring their goods to and from the North Sea. Setting up offices in Bryggen would only serve to further establish our presence in the node."
+ hsa_organize_hanseatic_diets_title: "Organize Hanseatic Diets"
+ hsa_organize_hanseatic_diets_desc: "The Hanseatic League, at the height of its power, had hundreds of merchants, guilds and members across Germany and the Baltic, reaching as far as Novgorod and London. Whilst we've lost our glamour we must retain and improve the efficiency of our administration and keep the members of our League in order."
+ hsa_wards_city_title: "Guild Wards" 
+ hsa_wards_city_desc: "Setting up offices (Kontors) in foreign countries and markets across Europe is merely the first step toward reclaiming our prestige. To ensure the proper function of our Kontors abroad, let us appoint Eldermen and Wards to oversee them." 
+ hsa_restore_visby_title: "Restore Visby" 
+ hsa_restore_visby_desc: "The isle of Gotland, formely known as Visby, housed an important complex of offices dedicated to the Hanseatic League. To reclaim the land would positively impact our trade power in the Baltic." 
+ hsa_induct_danzig_ports_title: "Induct Danzig Ports" 
+ hsa_induct_danzig_ports_desc: "Danzig is probably the most important city in the Eastern Baltic Sea. Our traders once held tremendous wealth among its banks. Regaining our foothold there would definitely improve our wealth and treasuries." 
+ hsa_royal_prussia_title: "Royal Prussia" 
+ hsa_royal_prussia_desc: "The Duchy of Prussia has fallen from the grace of God. What was once a proud order of the Catholic faith is now a mere pawn of its incompetent leadership and bordering monarchs. It would be wise to intervene and save their people from tyrannical rule." 
+ hsa_expand_market_square_title: "Expand the Altstadt" 
+ hsa_expand_market_square_desc: "The city of Lubeck is no small farm town. Part of it was especially developed to facilitate a large number of merchants from all across Europe. To build a proper marketplace and expand the Old City would definitely improve our hold on the Lubeck home node." 
+ hsa_impose_lubeck_law_title: "Impose Lubeck Law" 
+ hsa_impose_lubeck_law_desc: "Lübeck Law provided for municipal self-government and self-administration yet did not negate dependance upon a lord, be it a bishop, duke, king or, in Lübeck's case, an emperor. Instead, it allowed the cities a certain degree of autonomy and self-reliance in legislative, judicial and executive matters. To ensure smooth and proper cooperation between the members of our Trade League we ust be careful in regards to their liberties and autonomies." 
+ hsa_tend_towns_title: "Tend to the Towns"
+ hsa_tend_towns_desc: "Hogging all the wealth to ourselves is not the only way to increase our hold over the various nodes we trade in. Whether we decide to disperse our coin and fund the development of our League's members or decide to enrich ourselves, the road to glory and power demands a toll of gold." 
+ hsa_develop_mineral_trade_title: "Develop the Mineral Trade" 
+ hsa_develop_mineral_trade_desc: "Europe has been struck by the Bullion Famine. A lack of precious minerals such as gold and silver has contributed to the fall of many affluent merchants across the continent, including ours. To mitigate the situation, we must align ourselves with Europeans who have access to valuable minerals, seize them for ourselves or assist Goslar in pioneering new methods to rejuvenate their old mines." 
+ hsa_young_men_lubeck_title: "Young Men of Lubeck" 
+ hsa_young_men_lubeck_desc: "The Levy system organized by the Hansa calls all able-bodied peasants across our Trade League's forces. To protect the Republics and our fellow members, to defend the people of our realms, march forth Men of Lubeck!"
+ hsa_grinning_steers_head_title: "Grinning Steer's Head" 
+ hsa_grinning_steers_head_desc: "For far too long has the Duchy of Mecklenburg retained its independence. Conquering the coasts East of our city will help  to facilitate further conquest in the Holy Roman Empire."
+ hsa_along_sea_title: "Along the Sea" 
+ hsa_along_sea_desc: "Across the coasts of Pomerania, many infamous privateers have found safe haven for their illicit activities. We cannot allow these pests to continue marauding our hard-earned coin across the Baltic!" 
+ hsa_double_entry_bookkeeping_title: "Double Entry Bookkeeping" 
+ hsa_double_entry_bookkeeping_desc: "Various advances in the field of business and trade have proven valuable in the profound surge of wealth in the Italian peninsula. If we are to keep up with competition, we would be wise to embrace the same notions." 
+ hsa_queens_hall_title: "The Queen's Hall" 
+ hsa_queens_hall_desc: "Passing judgement and administrating the League is no easy task. To that degree, we must push funds towards erecting a central court to handle the day-to-day matters of the Hansa and its members."
+ hsa_construct_holstentor_title: "Construct Holstentor" 
+ hsa_construct_holstentor_desc: "Developing a large trade network will surely grant us immense wealth and power. Despite that, it will surely mean that we will rub elbows with competitors and rivals both in the markets and in the fields. To protect our people and our profits, we must defend the heart of the Hansa!" 
+ hsa_new_system_trade_title: "A New System of Trade" 
+ hsa_new_system_trade_desc: "Let us impose rules and regulations against all competing merchants that do not bare the seal of the Republican League of Hansa and indirectly increase the strength of our traders." 
+ hsa_queen_of_the_hansa_title: "Queen of the Hansa" 
+ hsa_queen_of_the_hansa_desc: "No nation across every single market of Northern Europe holds more power, influence and coin than us. The time has come to centralize the Hanseatic League and embrace a new era of trade and diplomacy, as he head into the great unknown." 
+ hsa_secure_salt_road_title: "Safeguard the Salt Road" 
+ hsa_secure_salt_road_desc: "The fish trade across the Oresund and the Danish peninsula is certainly important. However, securing the salt production on our Southern border and potentially cooperating with the city of Hamburg, will yield tremendous rewards." 
+ hsa_flow_trade_title: "The Flow of Trade" 
+ hsa_flow_trade_desc: "Territories around the Weser valleys to our West lay under weak leadership. Let us intervene in the local politics and save the people from their incapable and inefficient ruleship." 
+ hsa_appoint_war_minister_title: "Appoint War Minister"
+ hsa_appoint_war_minister_desc: "War has changed. What facade used to be populated by ill-equipped levied armies made up mostly by peasants and poorly-trained has now given way to properly trained armed forces and standing armies. To address concerns of the court in regards to military matters, we must appoint a war minister and take control of a modernized military."
+ hsa_finance_guilds_title: "Finance the Guilds" 
+ hsa_finance_guilds_desc: "The guilds of Lubeck are the life-blood of our economy. We must make the necessary amends to ascertain they are properly funded across our Trade League."
+ hsa_develop_handsflotte_title: "Develop the Handsflotte" 
+ hsa_develop_handsflotte_desc: "A proper navy is certainly a good first step for a Republic that aspires to harness the maritime waves of Europe. We shall now fund an expansion of our maritime fleet and protect our trade."
+ hsa_charter_north_america_title: "Charter North America" 
+ hsa_charter_north_america_desc: "The land beyond the Atlantic Ocrean holds many commercial and profitable opportunities! We must explore, map and take advantage of it as best we can, to further multiply our profits from exotic goods and new civilizations."
+ hsa_imperial_allegience_title: "Imperial Allegience"
+ hsa_imperial_allegience_desc: "We are on the cusp of a very unique legislative league when it comes to dealing with the Emperor. Members of the 'Imperial Immediacy' have direct contact with the Emperor in matters of diplomacy and war. We must use this influence to lay claim in the Holstein areas and the Northern part of the Empire." 
+ hsa_pen_sword_title: "Pen & Sword" 
+ hsa_pen_sword_desc: "Conquering the Duchies of Schleswig and Holstein is no easy task. Let us impose our Imperial influence in the Holy Roman Empire and claim these lands for ourselves, lest we risk the Emperor demand them for himself."
+ hsa_bypass_sound_toll_title: "Bypass the Sound Toll" 
+ hsa_bypass_sound_toll_desc: "The Sound Dues in Sjaelland have been a thorn at our side, taxing passing vessels and non-Danish merchants as they ferry their goods through the pass. We must take the necessary steps to mitigate that."
+ hsa_tame_north_sea_title: "Tame the North Sea" 
+ hsa_tame_north_sea_desc: "Beyond the straits of Kattegat lies the North Sea. A central hub of ferrying vessels from all around Europe and beyond, holding a monopoly on it would allow us to steer and influence trade towards our home markets." 
+ hsa_expand_admiralty_title: "Expand the Admiralty"
+ hsa_expand_admiralty_desc: "The command of the seas must remain firmly under the grasp of the Hanseatic Admiralty. Developing a mighty Navy and expanding Lubeckian docks would attract better and more capable men to sprearhead our fleet." 
+ hsa_schiffbauer_gilde_title: "Schiffebauer Gilde"
+ hsa_schiffbauer_gilde_desc: "And what makes our home-city the most famous shipwrights in all of Northern Europe? But, our shipyards of course. What better way to celebrate our expert ship-making capabilities and our unique vessels, than funding our shipwright industry?" 
+ hsa_marine_pilots_title: "Marine Pilots"
+ hsa_marine_pilots_desc: "The navigation of the seas is no easy task. To assure that our cargo and ships remain as safe as possible, we must train better admirals and captains, the famous "Marine Pilots" of Lubeck, to guide our ships and deliver them in one piece." 
+ hsa_eagle_of_lubeck_title: "Eagle of Lubeck"
+ hsa_eagle_of_lubeck_desc: "A large flagship to spearhead our naval forces would make our foes and rivals tremble in fear! The time to claim our naval superiority is nigh!" 
+ 
+ 
+ 
+ #Modifiers
+ hsa_peterhof_depot_modifier: "St. Peterhof Depot Trade Station" 
+ hsa_permitted_kontor_modifier: "Allowed Kontor" 
+ hsa_lubeck_herring_market_modifier: "Lubeck Herring Market" 
+ hsa_lubeck_herring_market_modifier2: "Expaned Lubeck Herring Market" 
+ hsa_bryggen_kontor_modifier: "Bryggen Kontor"  
+ hsa_fresh_administration_modifier: "Fresh Administration"
+ hsa_longterm_admin_modifier: "Longterm Administration"
+ hsa_allowed_regional_admin_opinion_modifier: "Allowed Regional Administration"
+ hsa_diplomatic_powerhouse: "Diplomatic Powerhouse" 
+ hsa_hanseatic_diets_modifier: "Hanseatic Diets" 
+ hsa_altermanner_modifier: "Appointed Aldermen"
+ hsa_visby_warehouse_modifier: "Visby Warehouse" 
+ hsa_danzig_merchants_in_league_modifier: "Danzig Merchants of the League"
+ hsa_influx_of_trade_and_foreigners_modifier: "Influx of Merchants & Foreigners"
+ hsa_mercantile_burgermeister_modifier: "Mercantile Burgermeister" 
+ hsa_guild_burgermeister_modifier: "Guild Burgermeister"
+ hsa_aristocrat_burgermeister_modifier: "Aristocrat Burgermeister" 
+ hsa_strong_mercantile_union_modifier: "Strong Mercantile Union"
+ hsa_valuable_mineral_deposits_modifier: "Valuable Mineral Deposits" 
+ hsa_valuable_mineral_abundance_modifier: "Valuable Mineral Abundance" 
+ hsa_wealth_of_the_hansa_modifier: "Wealth of the Hansa"
+ hsa_recruiting_from_league_modifier: "Recruiting from the League" 
+ hsa_recruiting_from_league_modifier2: "Increased Recruiting from the League" 
+ hsa_recruiting_from_league_modifier3: "Hanseatic Feudal Army" 
+ hsa_lubeck_law_modifier: "Lubeck Law" 
+ hsa_secured_pomeranian_coast_modifier: "Secured the Pomeranian Coast" 
+ hsa_republican_modus_operandi_modifier: "Republican Modus Operandi"
+ hsa_theory_of_mercantilism_modifier: "Theory of Mercantilism" 
+ hsa_development_works_of_the_hansa_modifier1: "Development Works of the Hansa" 
+ hsa_development_works_of_the_hansa_modifier2: "Development Works of the Hansa" 
+ hsa_development_works_of_the_hansa_modifier3: "Development Works of the Hansa" 
+ hsa_development_works_of_the_hansa_modifier4: "Development Works of the Hansa" 
+ hsa_development_works_of_the_hansa_modifier5: "Development Works of the Hansa" 
+ hsa_development_works_of_the_hansa_modifier6: "Development Works of the Hansa" 
+ hsa_lower_saxon_drittel_modifier: "Lower Saxon Drittel"
+ hsa_secured_inland_trade: "Secure Coastal Trade"
+ hsa_mercantile_stronghold_of_the_hansa_modifier: "Important Mercantile Stronghold of the Hansa"
+ hsa_general_army_reform_modifier: "General Army Reform"
+ hsa_general_army_organization_modifier: "General Army Organization"
+ hsa_military_excellence_modifier: "Military Excellence"
+ hsa_modernized_supply_lines_modifier: "Modernized Supply Lines"
+ hsa_zealous_recruitment_modifier: "Zealous Recruitment Programs"
+ hsa_improved_military_administration_modifier: "Improved Central Military Administration"
+ hsa_hanseatic_military_conduct_modifier: "Hanseatic Military Conduct"
+ hsa_modern_drilling_techniques_modifier: "Modern Drilling Techniques"
+ hsa_fortification_efforts_modifier: "Nation-Wide Fortification Efforts"
+ hsa_hanseatic_artillery_modifier: "Hanseatic Artillery"
+ hsa_guerilla_warfare_modifier: "Guerilla Warfare"
+ hsa_regular_mercenary_corps_modifier: "Regular Mercenary Corps"
+ hsa_defensive_tactics_modifier: "Defensive Tactics"
+ hsa_war_minister_modifier: "War Minister"
+ hsa_shipwrights_naval_expansion_modifier: "Financed the Hanseatic Shipwrights"
+ hsa_hanseatic_trade_fleet_modifier: "Hanseatic Trade Fleet" 
+ hsa_new_world_ambitions_modifier: "New World Ambitions"
+ hsa_victory_in_holstein_modifier: "Victory in Holstein" 
+ hsa_submission_to_the_hansa: "Sumbission to the Hansa" 
+ hsa_high_seas_navy_modifier: "High Seas Navy"
+ hsa_hanseatic_merchant_cogs_modifier: "Hanseatic Merchant Cogs"
+ hsa_safe_seaways_modifier: "Safe Seaways"
+ hsa_hanseatic_merchant_cogs_modifier: "Hanseatic Merchant Cogs" 
+ hsa_pride_eagle_of_the_fleet_modifier: "Pride Eagle of the Fleet"
+ hsa_cooperation_with_the_hansa_modifier: "Cooperation with the Hansa" 
+ hsa_treaty_of_danzig_modifier: "Treaty of Danzig" 
+ hsa_refused_the_treaty_of_danzig_modifier: "Refused the Treaty of Danzig" 
+ hsa_profits_from_the_london_steelyard_modifier: "Profits from the London Steelyard" 
+ hsa_hanseatic_shipwright_guild_modifier: "Hanseatic Shipwright Guild"
+ hsa_moved_the_staple_port: "Moved the Staple Port to Amsterdam" 
+ hsa_holstentor_burgtor_modifier: "Holstentor & Burgtor"
+ hsa_expand_the_hansehalle_modifier: "Expand the Hansehalle"
+ hsa_northern_alliance_of_trade_cities6_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities5_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities4_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities3_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities2_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities1_modifier: "Northern Alliance of Trade Cities"
+ 
+ #Events 
+ FU_Lubeck_Events.1.t: "Novgorodian Kontor" 
+ FU_Lubeck_Events.1.d: "In the 13th century, Novgorod, while not a member of the Hanseatic League, was the easternmost kontor, or entrepot, of the league, being the source of enormous quantities of luxury (sable, ermine, fox, marmot) and non-luxury furs (squirrel pelts). Recent developments in the diplomatic and geographical front have resulted in our merchants regaining their long-lost offices in Veliky Novgorod!" 
+ FU_Lubeck_Events.1.a: "A historic day for the people of Lubeck!"
+ 
+ FU_Lubeck_Events.2.t: "The Lubeck Herring Market"
+ FU_Lubeck_Events.2.d: "The basis for the market's popularity was the rich herring fishing around the Falsterbo Peninsula. Legend tells that the herring fishery off the Scanian coast was so rich, that one could scoop up the fish with one's hands. After a visit to the region in 1364, the French crusader Philippe de Mezieres wrote: "Two months a year, that is in September and October, the herring travel from one sea to the other through the Sound, by order of God, in such large numbers that it is a great wonder, and so many pass through the sound in these months, that at several places one can cut them with a dagger." \n\nTo embark on the market as a competitor to Skane would probably prove to be very profitable. However, despite the abundance of marine life in the pass, many advisors in our court suggest we best stay loyal to our main export, Lubeckian naval supplies."
+ FU_Lubeck_Events.2.a: "Let us compete against our neighbors!"
+ FU_Lubeck_Events.2.b: "We could never abandon our traditions..."
+ FU_Lubeck_Events.2.c: "Let us pioneer preservation methods to outproduce our competitors!"
+ 
+ FU_Lubeck_Events.3.t: "Docks & Wharfs of Bryggen"
+ FU_Lubeck_Events.3.d: "The city of Bergen was founded around 1070 within the boundaries of Tyskebryggen. Around 1350 a Kontor of the Hanseatic League was established there, and Tyskebryggen became the centre of the Hanseatic commercial activities in Norway. Since then, the League lost its touch and the offices were granted to other local and foreign merchants. \n\nAround [GetYear], an office of the Hanseatic League was established in Bryggen. As the town developed into an important trading centre, the wharfs were improved and the buildings of Bryggen were gradually taken over by the Hanseatic merchants. The warehouses were used to store goods, particularly stockfish from northern Norway, and cereal from Europe." 
+ FU_Lubeck_Events.3.a: "Entrepreneurship and cooperation at their finest!"
+ 
+ FU_Lubeck_Events.4.t: "The Hanseatic Town of Visby"
+ FU_Lubeck_Events.4.d: "Visby lies on the Island of Gotland, about 100 km east of the mainland in the Baltic Sea. The settlement, dating from the Viking Age, was formed on a shore with a natural harbour, sheltered by steep cliff formations. Gotlandic merchants utilized it as a strategic point in trade within the Baltic Sea. They allied for the protection of their trading posts which developed into a federation or Hansa. By the 12th century Visby had come to dominate this trade, and all the commercial routes of the Baltic were channelled through the town. After the foundation of Lübeck in 1143, German merchants began to expand their sphere of interest into the Baltic Sea and settled in Visby. It became the only trading place on the island with the privilege of trading with German towns and hence the main centre of the Hanseatic League. During the 13th century, Visby changed from a seasonal trading place into an impressive metropolis, enclosed by a strong defensive wall and increasingly divorced from its rural hinterland. The wall imposed new restrictions on the Gotlandic traders creating tensions that led to civil war in 1288. German, Russian and Danish traders built stone warehouses in parallel rows from the harbour and the community expanded with guild houses, churches and residences. In the 14th century, Visby began to lose its leading position in the Hanseatic League due to plague around 1350 and invasion by the Danish army under King Valdemar Atterdag in 1361. Warfare and piracy in the 15th century and changed trading routes bypassing Visby severely affected trade on Gotland and the economy of Visby deteriorated. However, the recent reacquisition of Gotland by the Hanseatic Merchants will surely breathe an gust of fresh air throughout the island's markets and beyond." 
+ FU_Lubeck_Events.4.a: "This is the fruit of the League's labors!"
+ 
+ FU_Lubeck_Events.5.t: "The Danzig Confederation" 
+ FU_Lubeck_Events.5.d: "The Prussian Confederation (German: Preussischer Bund, Polish: Zwiazek Pruski) was an organization formed on 21 February 1440 at Marienwerder by a group of 53 nobles and clergy and 19 cities in Prussia, to oppose the arbitrariness of the Teutonic Knights. It was based on the basis of an earlier similar organization, the Lizard Union established in 1397 by Chełmno Land nobles. \n\nIn 1454, the leader of the Confederation, Johannes von Baysen (Jan Bazynski), formally asked King Casimir IV Jagiellon, to incorporate Prussia into the Kingdom of Poland as a fief. This marked the beginning of the Thirteen Years' War between the Order's State and Poland, with the Prussian cities financing the military costs of the latter. \n\nDespite the conflicts between the aforementioned parties, Danzig now lies within our sphere of influence. As a result, the merchants of the City and members of the Confederation have come to our court in Lubeck to barter and ask for access to our prosperous markets." 
+ FU_Lubeck_Events.5.a: "We can allow their influence in our cities."
+ FU_Lubeck_Events.5.b: "No foreign meddling!"
+ 
+ FU_Lubeck_Events.6.t: "Town Hall of Lubeck"
+ FU_Lubeck_Events.6.d: "We were once dubbed the “Queen of the Hanseatic League” and as the President, our Mayor of Lübeck guided the destinies of the medieval Hanseatic League which was never officially founded nor dissolved. Our League houses merchants from all over Europe and they meet annually to make decisions as 43 of the 67 Hanseatic Days (Hansetage) took place in Lübeck, which was positioned geographically favorable. This resulted in us taking the leading role in the Hanseatic League. The hub of power was the Town Hall erected in [GetYear] which serves as the central assembly and deliberation chamber for matters of the League. It is one of the most famous Gothic brickwork structures. With its impressive façade, it resembles a fairytale castle. The shape of the building was defined over three centuries: from 1226 to even today, a succession of new elements were added, and there were conversions and extensions such as the sandstone arcade, the raising of the striking façade with its distinctive circular holes for improved wind resistance as well as the bay window and impressive grand staircase." 
+ FU_Lubeck_Events.6.a: "Beide part schal ein richter horen und den ordel"
+ 
+ FU_Lubeck_Events.7.t: "The City Gates of Lubeck" 
+ FU_Lubeck_Events.7.d: "Not many know that the world-famed Holsten  Gate (Holstentor) is not a single gate. It is in fact a series of fortifications added over time to further protect the inhabitants and their riches inside. In particular, the Holstentor is split into 3 layers: the Inner, Middle and Outer Gates. Each was built as a response to the advances of gunpowder and siege equipment, the latest addition of fortifications will surely be adequate and prove to be a sound investment for the safeguard of our wealth. \n\nThe Burgtor is the oldest of the four former gates of the medieval city fortifications of Lübeck. At the end of the Große Burgstraße, located at the northern end of the historic old town of Lübeck, you will find the castle gate, which was built in the late Gothic style. In addition to the more famous Holsten Gate, the Burgtor is the second largest city gate of the Lübeck city fortifications. The Lübeck Castle Gate takes its name from the old Lübeck Castle high above the Trave, which was converted into a castle monastery in 1227." 
+ FU_Lubeck_Events.7.a: "May they stagger our enemies!"
+ 
+ FU_Lubeck_Events.8.t: "Theory of Mercantilism"
+ FU_Lubeck_Events.8.d: "Mercantilism is an economic theory that advocates government regulation of international trade to generate wealth and strengthen national power. Merchants and the government work together to reduce the trade deficit and create a surplus. Mercantilism, a form of economic nationalism, funds corporate, military, and national growth. It advocates trade policies that protect domestic industries. In mercantilism, the government strengthens the private owners of the factors of production. \n\nThese four factors of production are  entrepreneurship, capital goods, natural resources, labor. Mercantilism establishes monopolies, grants tax free status, and grants pensions to favoured industries. It imposes tariffs on imports. It also prohibits the emigration of skilled labor, capital, and tools. It doesn't allow anything that could help foreign companies. In return, businesses funnel the riches from foreign expansion back to their governments. Its taxes pay for increase national growth and political power."
+ FU_Lubeck_Events.8.a: "Money makes the world go round!"
+ 
+ FU_Lubeck_Events.9.t: "The Hanseatic Cog"
+ FU_Lubeck_Events.9.d: "The Hanse used a ship called the cog for sea transport. It was a bulky freighter with one mast and a square sail. A helm at the stern and a flat floor made it possible to ship in low water. Unlike the Nordic longboats they were more economical to use. A cog could transport a relatively large amount of cargo with just a small crew, up to 90 tons (see also Schiffahrtsmuseum Bremerhaven). It was produced relatively quickly and inexpensively at that time. \n\nLarger loads could be transported more cheaply and by a smaller crew than previously. That’s what made this type of ship so successful. There were cogs of different sizes, between 15 and 25 m in length, 5-8 m wide and with a moulded depth of 3-5 m. The measurement of the capacity of a cog was called “last”, equivalent to 2 tons. This was the capacity of a carriage drawn by four horses. A small cog of 50 last was able to carry the same load as an endless convoy of 50 waggons pulled by 200 horses. There were also cogs twice as big. With the castle (aft) the surroundings could be observed well. Due to the lack of keel, the cog could also fall to ground during low tide, but it was also restricted to navigate because of that. A cog could only ride with the wind and not cross the wind." 
+ FU_Lubeck_Events.9.a: "A marvellous vessel to ferry our goods and merchants!"
+ 
+ FU_Lubeck_Events.10.t: "Adler von Lubeck" 
+ FU_Lubeck_Events.10.d: "The Adler von Lübeck (Eagle of Lübeck), also called Der Große Adler or Lubscher Adler, is a 16th-century warship of the Hanseatic city of Lübeck, Germany. Adler von Lübeck is one of the largest ships in the world at her time, being 78.30 m long overall and displacing 2–3,000 tons. The war galleon was built by Lübeck during the Northern Seven Years' War to escort her convoy of merchant ships in the Baltic and North Sea. \n\nSuch naval prowess displayed by Adler will certainly be the object of envy in the eyes of our rivals. To safeguard its legitimacy and aura of invincibility would mean that our nation will continue to benefit from its glorious name." 
+ FU_Lubeck_Events.10.a: "Let the sound of our artillery silence the screams of our enemies!"
+ 
+ FU_Lubeck_Events.12.t: "Trade Privileges of the Hansa"
+ FU_Lubeck_Events.12.d: "The city of Danzig, now lying firmly in our grasp, used to be a hub of trade under the once-mighty Hanseatic League, situated in Lubeck. Since then, the League has fallen from grace due to a plethora of factors and has had its power in the Baltic and beyond challenged. Despite these shortcomings, recent developments around the banks of Germany and the Baltic have led to the League regaining its standing. Once again, the powerful merchants of the Hansa come to Danzig, with a lucrative offer..." 
+ FU_Lubeck_Events.12.a: "Offer them a lucrative deal!"
+ FU_Lubeck_Events.12.b: "Forget about it!"
+ 
+ FU_Lubeck_Events.13.t: "A Royal Offer for Danzig" 
+ FU_Lubeck_Events.13.d: "The Polish court has approached our merchants with a lucrative offer. Given the expansive nature of our trade and the recent developments of the Hanseatic League regaining its old glory, they wish to parlay inregards to granting the city of Danzig back to the League. Such a diplomatic move will certainly come at a cost, however it might be wise to consider it and attempt to avoid any unnecessary bloodshed towards or against the Polish crown and its mighty army, lest we risk the destruction of what we struggled to build thus far." 
+ FU_Lubeck_Events.13.a: "An agreeable proposal" 
+ FU_Lubeck_Events.13.b: "This is madness!"
+ FU_Lubeck_Events.13.c: "Let the head of the Hansa negotiate a better deal."
+ 
+ FU_Lubeck_Events.14.t: "The Stalhof Kontor" 
+ FU_Lubeck_Events.14.d: "For centuries the merchants of Lubeck have traded valuables all across the Northern seas. Recent developments on the diplomatic fronts have resulted in the English monarchy granting certain Lubeckian individuals the ability to not only freely travel to and from London but also the green light to establishing offices around the most crowded areas of the city's port. That historically culminated in the creation of the Steelyard, a series of offices dedicated to the merchants of the Hansa that had a positive effect for both nations." 
+ FU_Lubeck_Events.14.a: "Our merchants are renowned from London to Novgorod!"
+ 
+ FU_Lubeck_Events.15.t: "Coin and Diplomacy from the Hansa" 
+ FU_Lubeck_Events.15.d: "For centuries the merchants of Lubeck have traded valuables all across the Northern seas. Recent developments on the diplomatic fronts have resulted in the English monarchy granting certain Lubeckian individuals the ability to not only freely travel to and from London but also the green light to establishing offices around the most crowded areas of the city's port. That historically culminated in the creation of the Steelyard, a series of offices dedicated to the merchants of the Hansa that had a positive effect for both nations." 
+ FU_Lubeck_Events.15.a: "Their wealth will be safe in London!"
+ 
+ FU_Lubeck_Events.16.t: "The Lifeblood of Lubeck"
+ FU_Lubeck_Events.16.d: "The regulation of timber and workforce in the maritime sector was once the lifeblood of our great republic. During the early 15th century however, we lost the monopoly on shipbuilding and the goods associated to it and thus lost the firm grasp on the seas themselves. Despite numerous setbacks the Hansa has recently rediscovered its long-lost power in the trade of naval supplies by re-establishing control over the markets of our home city and abroad. What this means for our future not many can clearly say, but the positive development of our city returning to its roots is certainly a sign of prosperous times to come!" 
+ FU_Lubeck_Events.16.a: "We are the masters of timber once more!" 
+ 
+ FU_Lubeck_Events.17.t: "George Giese - A Famous Merchant"
+ FU_Lubeck_Events.17.d: "George (or Georg) Giese was a prominent Hanseatic merchant, who managed his family's office at London's Steelyard for at least 12 years. Raised in the Giese family and son to Albrecht Giese (another famous and powerful Hanseatic mayor of Danzig and merchant in London) his family had an office in London, which, at the time was the centre of European trade. Situated in the Steelyard, the London branch of the Hanse, the Giese family office was part of an enclave where Hanseatic and foreign merchants congregated. \n\nThere, George studied the mercantile craft and excelled in his studies, graduating one academy after another in flying colours. Eventually he would come to be the head of the Steelyard's operations for decades, proving himself a capable administrator and a skillful diplomat as well." 
+ FU_Lubeck_Events.17.a: "He shall lead our people to greatness."
+ FU_Lubeck_Events.17.b: "Despite his skill, we must follow republican procedures..."
+ FU_Lubeck_Events.17.c: "His abilities are invaluable!"
+ 
+ FU_Lubeck_Events.18.t: "Albrecht Moldenhauer"
+ FU_Lubeck_Events.18.d: "The Hanseatic League is a congregation, or rather a loose alliance, between many merchants from all across the territories of the mighty Holy Roman Emperor and beyond. Many merchants have come and gone, some more gifted making legendary fortunes and securing themselves a spot at the pages of history and others less so. \n\nFew however, have left such a dent in history as Albrecht Moldenhauer, a genius merchant from our city of Lubeck. Albrecht was influential in developing the trade with Sweden and Norway, and his sons Wolf Moldenhauer and Burghard Moldenhauer established themselves in Bergen and Stockholm, becoming leaders of the local Hanseatic activities." 
+ FU_Lubeck_Events.18.a: "His mercantile expertise is astonishing."
+ 
+ FU_Lubeck_Events.19.t: "Grevens Fejde"
+ FU_Lubeck_Events.19.d: "The situation in Denmark, given the recent disastrous developments, is dire. The court of their feeble monarch is torn asunder from is grasp as petty nobles fight over the royal authority, as well as the right to exercise it. Recently, we have been approached by foreign agents purporting to be messengers of the rebelling factions in the court of Denmark. They suggest that a monetary donation of a certain magnitude would assist them in their endeavours against their tyrannical overlord. Whatever the case may be, this could be our chance to mingle in Danish politics and weaken their crown authority!" 
+ FU_Lubeck_Events.19.a: "This is our chance!"
+ FU_Lubeck_Events.19.b: "We will stand firmly with the royal family of Denmark."
+ 
+ FU_Lubeck_Events.20.t: "The New Staple Port in Amsterdam"
+ FU_Lubeck_Events.20.d: "Many factors certainly have contributed to the downfall of the Hanseatic League during the first half of the 15th century. Be it disease, misfortune, divine retribution or the Bullion Famine, our court lost its old splendor and its standing as a powerful mercantile union of hundreds of merchants across the germanic cities and beyond. In its stead, the scheming merchants of the Dutch court attempt to usurp our position and surpass us in terms of influence across the markets of Europe. Such behavior is no less the grounds for just wars and these petty men of Holland must be put in their place lest we risk inevitable demise." 
+ FU_Lubeck_Events.20.a: "We will have their heads for this!"
+ 
+ FU_Lubeck_Events.21.t: "Hans Holbein the Younger"
+ FU_Lubeck_Events.21.d: "Hans Holbein (the Younger) was a German painter and printmaker who worked in a Northern Renaissance style, and is considered one of the greatest portraitists of the 16th century. He also produced religious art, satire, and Reformation propaganda, and he made a significant contribution to the history of book design. He is called "the Younger" to distinguish him from his father Hans Holbein the Elder, an accomplished painter of the Late Gothic school. \n\nHolbein was born in Augsburg, but he worked mainly in Basel as a young artist. At first, he painted murals and religious works, designed stained glass windows, and printed books. He also painted an occasional portrait, making his international mark with portraits of humanist Desiderius Erasmus of Rotterdam. When the Reformation reached Basel, Holbein worked for reformist clients while continuing to serve traditional religious patrons. His Late Gothic style was enriched by artistic trends in Italy, France, and the Netherlands, as well as by Renaissance humanism. The result was a combined aesthetic uniquely his own. \n\nHolbein travelled to England in 1526 in search of work, with a recommendation from Erasmus. He was welcomed into the humanist circle of Thomas More, where he quickly built a high reputation. He returned to Basel for four years, then resumed his career in England in 1532 under the patronage of Anne Boleyn and Thomas Cromwell. By 1535, he was King's Painter to Henry VIII of England. In this role, he produced portraits and festive decorations, as well as designs for jewellery, plate, and other precious objects. His portraits of the royal family and nobles are a record of the court in the years when Henry was asserting his supremacy over the Church of England. \nHolbein's art was prized from early in his career. French poet and reformer Nicholas Bourbon (the elder) dubbed him "the Apelles of our time," a typical accolade at the time. Holbein has also been described as a great "one-off" of art history, since he founded no school. Some of his work was lost after his death, but much was collected, and he was recognised among the great portrait masters by the 19th century. Recent exhibitions have also highlighted his versatility. He created designs ranging from intricate jewellery to monumental frescoes. \n\nHolbein's art has sometimes been called realist, since he drew and painted with a rare precision. His portraits were renowned in their time for their likeness, and it is through his eyes that many famous figures of his day are pictured today, such as Erasmus and More. He was never content with outward appearance, however; he embedded layers of symbolism, allusion, and paradox in his art, to the lasting fascination of scholars. In the view of art historian Ellis Waterhouse, his portraiture "remains unsurpassed for sureness and economy of statement, penetration into character, and a combined richness and purity of style"." 
+ FU_Lubeck_Events.21.a: "The Northern Renaissance style flourishes because of great men such as him!"
+ 
+ FU_Lubeck_Events.22.t: "The Crowning of a New Queen"
+ FU_Lubeck_Events.22.d: "Many proclaimed our Republic to be on its dying breath as the second half of the 15th century saw our merchants struggling to maintain (and often losing) their monopoly across the many trade centers of Europe. Despite several setbacks and the machinations of our enemies, we have managed to not only come out on top but to also reinforce the values of our Trade League. Dominating in the most important markets from Norway to the Baltic we have proved our neigh-sayers wrong, elevating the status of our great nation to never-before-seen heights! Truly this is the crowing of Germany's most powerful Queen! Long live the Hansa!" 
+ FU_Lubeck_Events.22.a: "We will embrace the future!"
+ FU_Lubeck_Events.22.b: "Let us stick to our roots, instead."
+  
+ 
+ #Custom Tooltips
+ hsa_every_league_member_wealth_tt: "Every member of our §YTrade League§! will enjoy monetary benefits and §G1§! Random Development in their capital"
+ general_tooltip_dynamic_reward: "This mission grants a §GDynamic Reward§! based on how we complete it"
+ hsa_every_league_member_gains_mercantilism_and_dev_tt: "Every member of our §YTrade League§! will gain §G1§! Mercantilism and §G1§! Random Development in their capital"
+ hsa_every_league_member_and_subject_adm_power_and_50_opinion_tt: "Every §YSubject§! and member of our §YTrade League§! will gain §Y100§! Administrative Power and §G50§! Opinion of us"
+ hsa_every_league_member_gets_this_reward_tt: "Every member of our §YTrade League§! will gain the same reward"
+ hsa_league_wealth_tt: "Every member of our §YTrade League§! will gain 100¤"
+ hsa_every_league_member_gets_prosperity_and_25_trust_towards_you_tt: "Every member of our §YTrade League§! will gain §YProsperity§! in their capital and §G25§! Trust towards us" 
+ hsa_reward_scales_with_number_of_members_tt: "This reward scales accordingly with the size of our §YTrade League§!"
+ hsa_if_lubeck_law_complete_tt: "If we have completed the mission §YImpose Lubeck Law§! we will gain further benefits on every province \nin the §YMecklenburg Area§!"
+ hsa_permanent_mod_if_50_trade_in_lubeck: "The modifier will become §Ypermanent§! if we complete it while owning at least §Y50%§! Trade Power in the §YLubeck§! Trade Node"
+ hsa_every_level_lowers_corruption_tt: "Every level of this advisor will lower our §YCorruption§!"
+ largest_trade_fleet_in_europe_ttt: "Has the largest §YTrade Fleet§! in Europe" 
+ hsa_hamburg_dev_per_member: "If we complete the mission while @HAM §YHamburg§! has at least §Y160§! opinion of us, the entire Trade League will receive a §GDevelopment Cost Reduction§! bonus scaling according to the number of the League's members"
+ hsa_has_at_least_75_vessels: "Has at least §Y75§! ships"
+ hsa_imperial_favor_tt: "If the §YHoly Roman Emperor§! has at least §Y100§! opinion of us,we will attempt to sway them and earn a core in §YHolstein§!"
+ hsa_reduce_denmark_trade_tt: "A Danish defeat in Holstein will have §Radverse effects§! on the their hold around the markets of §YLubeck§!"
+ hsa_till_it_gets_sunk_desc: "until our §YFlagship§! is sunk or captured"
+ hsa_largest_fleet_from_rivals_or_naval_ideas_tt: "Has a larger fleet than any §Yrival§! country"
+ hsa_enacted_adler_von_lubeck_decision_tt: "Has enacted the "§YAdler von Lubeck§!" national decision"
+ hsa_sell_danzig_to_the_hansa_for_250_ducats_and_benefits_tt: "The province will be sold for a total amount of 250¤ and a powerful trade bonus for §Y15§! years"
+ hsa_income_from_navy_supplies: "from our production of navy supplies"
+ hsa_personalities_tt: "A man who excelled at his time in the London Steelyard branch of our League, he will surely raise our profits and prove to be an able diplomat"
+ has_advisors_expanded_active: "The Advisors Expanded Mod is active"
+ hsa_moved_the_staple_port_key: "Weakened Hanseatic Presence"
+ hsa_trigger_1_tt: "Have an ally who has at least §Y150§! opinion with a province that produces §YGold§! or §YSilver§! OR have a province with §YGold§! or §YSilver§! and §Y5§! Base Production OR the owner of §YGoslar§! has at least §Y150§! opinion of us while they are allied / in our §YTrade League§!" 
+ hsa_trigger_2_tt: "Have an ally who has at least §Y150§! opinion with a province that produces §YGold§! OR have a province with §YGold§! and §Y5§! Base Production OR the owner of §YGoslar§! has at least §Y150§! opinion of us while they are allied / in our §YTrade League§!" 
+ hsa_trigger_3_tt: "One of the following must be true: \n§YMecklenburg State§! owned by us or our subjects \nOR We own at least 35 §YDevelopment§! in the §YMecklenburg State§! while §YRostock§! and §YWismar§! are owned by us or our subjects"
+ hsa_trigger_4_tt: "Any §YAlly§! has the §YLatin§! culture, §Y125§! opinion and has embraced §YRenaissaince§!"
+ hsa_has_built_hansehalle_tt: "Has upgraded the §YHanseatic City Hall§! on tier §Y2§! or §Y3§!"
+ hsa_diplomatic_upkeep_boost_tt: "§MWe will gain a boost to our Diplomatic Relations to cover part of the cost of maintaining our new vassals§!"
+ hsa_either_trade_or_subject_all_100_tt: "One of the following must be true: \nAll members of our Trade League have at least §G100§! opinion of us \nAll our subjects have at least §G100§! opinion of us"
+ 
+ 
+ 
+ #Advisor
+ fu_accountant: "Accountant"
+ fu_accountant_desc: "Fra Luca Bartolomeo de Pacioli (c. 1447 – 19 June 1517) was an Italian mathematician, Franciscan friar, collaborator with Leonardo da Vinci, and an early contributor to the field now known as accounting. He is referred to as "The Father of Accounting and Bookkeeping" in Europe and he was the second person to publish a work on the double-entry system of book-keeping on the continent."
+ 
+ 
+ 
+ #The Hansa#
+ 
+ #Name Change 
+ FU2: "The Hanseatic League"
+ FU2_ADJ: "Hanseatic"
+ #National Ideas 
+ FU2_ideas: "Hanseatic Ideas" 
+ FU2_ideas_start: "Hanseatic Traditions"
+ FU2_ideas_bonus: "Hanseatic Ambition"
+ 
+ FU2_foreign_kontors: "Foreign Kontors" 
+ FU2_foreign_kontors_desc: "The establishment of foreign offices for commercial and trade-related matters has granted us profound mercantilistic power in markets we haven't yet penetrated."
+ FU2_the_handelsmarine: "The Handelsmarine"
+ FU2_the_handelsmarine_desc: "No League of nations would be afloat without the proper development of a powerful naval force, one to rival the greatest of the greatest and sail our nation to greatness!"
+ FU2_reform_queens_army: "Reform the Queen's Army"
+ FU2_reform_queens_army_desc: "The era of gunpowder and rifles has given birth to new tactics and maneuvers in the battlefield. Harnessing European martial knowledge and innovation will allow us to raise a formidable army."
+ FU2_adler_von_lubeck_legacy: "Adler von Lubeck" 
+ FU2_adler_von_lubeck_legacy_desc: "Our shipwrights gave birth to one of the most powerful vessels in the northern seas. Applying their knowledge to our naval forces has given us the edge in open-waters combat."
+ FU2_merchants_with_state: "Merchants with a State"
+ FU2_merchants_with_state_desc: "No nation before us has ever had as many factions and merchants eager to pour their valuable coin over the markets of our urban center and enrich our cities."
+ FU2_spread_the_northern_style: "Spread the Northern Style"
+ FU2_spread_the_northern_style_desc: "Our artists have no reason to feel jealously towards their Italian counterparts. The spread of Renaissance ideas across our realm has given birth to a unique style and many famed men of the arts."
+  
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
