@@ -25,7 +25,7 @@ mnd_khmer_1 = {
 		trigger = {
 			609 = {
 				development = 15
-				OR = { 
+				OR = {
 					has_great_project = {
 						type = angkor_wat
 						tier = 1
@@ -91,7 +91,7 @@ mnd_khmer_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	mnd_khm_religion = {
 		icon = mission_mnd_dai_temples
 		required_missions = {  }
@@ -132,10 +132,7 @@ mnd_khmer_2 = {
 			if = {
 				limit = {
 					any_province = {
-						OR = {
-						    region = indo_china_region
-							region = south_china_sea_islands_region
-						}
+						region = indo_china_region
 						culture = khmer
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -143,10 +140,7 @@ mnd_khmer_2 = {
 				}
 				every_province = {
 					limit = {
-						OR = {
-						    region = indo_china_region
-							region = south_china_sea_islands_region
-						}
+						region = indo_china_region
 						culture = khmer
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -164,10 +158,7 @@ mnd_khmer_2 = {
 		icon = mission_mnd_siam_subjugate_vietnam
 		required_missions = { mnd_khm_resurgence }
 		provinces_to_highlight = {
-			OR = {
-				region = indo_china_region
-				region = south_china_sea_islands_region
-			}
+			region = indo_china_region
 			culture = khmer
 			NOT = { owned_by = ROOT }
 		}
@@ -176,10 +167,7 @@ mnd_khmer_2 = {
 			vassal = 2
 			NOT = {
 				any_province = {
-					OR = {
-					    region = indo_china_region
-						region = south_china_sea_islands_region
-					}
+					region = indo_china_region
 					culture = khmer
 					NOT = { owned_by = ROOT }
 				}
@@ -238,7 +226,7 @@ mnd_khmer_3 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	mnd_khm_rebuild = {
 		icon = mission_mnd_maj_prepare_eastern_campaigns
 		required_missions = {  }
@@ -276,10 +264,7 @@ mnd_khmer_3 = {
 		icon = mission_rice_field
 		required_missions = { mnd_khm_rebuild }
 		provinces_to_highlight = {
-			OR = {
-				region = indo_china_region
-				region = south_china_sea_islands_region
-			}
+			region = indo_china_region
 			trade_goods = grain
 			OR = {
 				NOT = { has_building = farm_estate }
@@ -288,11 +273,8 @@ mnd_khmer_3 = {
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				OR = {
-				    region = indo_china_region
-					region = south_china_sea_islands_region
-				}
 				value = 10
+				region = indo_china_region
 				has_building = farm_estate
 				trade_goods = grain
 			}
@@ -314,10 +296,7 @@ mnd_khmer_3 = {
 				add_dip_power = 100
 				every_owned_province = {
 					limit = {
-						OR = {
-						    region = indo_china_region
-							region = south_china_sea_islands_region
-						}
+						region = indo_china_region
 						has_building = farm_estate
 						trade_goods = grain
 					}
@@ -462,10 +441,12 @@ mnd_khmer_3 = {
 		icon = mission_mnd_maj_rein_in_brunei
 		required_missions = { mnd_khm_subjugate_dia_viet }
 		provinces_to_highlight = {
-			area = brunei_area
-			area = kalimantan_area
-			area = kutai_area
-			area = sabah_area
+		  OR = {
+			   area = brunei_area
+			   area = kalimantan_area
+			   area = kutai_area
+			   area = sabah_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -512,7 +493,10 @@ mnd_khmer_4 = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			owned_by = AYU
-			area = central_thai_area
+			OR = {
+			   area = central_thai_area
+				 area = sukothai_area
+			}
 		}
 		trigger = {
 			OR = {
@@ -525,6 +509,9 @@ mnd_khmer_4 = {
 					}
 				}
 				central_thai_area = {
+					owned_by = ROOT
+				}
+				sukothai_area = {
 					owned_by = ROOT
 				}
 			}
@@ -551,6 +538,13 @@ mnd_khmer_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				sukothai_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -558,11 +552,18 @@ mnd_khmer_4 = {
 		icon = mission_mnd_siam_royal_duel
 		required_missions = { mnd_khm_avenge_angkor }
 		provinces_to_highlight = {
-			area = central_thai_area
+			OR = {
+			   area = central_thai_area
+				 area = sukothai_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			central_thai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sukothai_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -659,11 +660,18 @@ mnd_khmer_5 = {
 		icon = mission_mnd_maj_subjugate_makassar
 		required_missions = {  }
 		provinces_to_highlight = {
-			area = south_laos_area
+		  OR = {
+			  area = south_laos_area
+				area = khorat_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			south_laos_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			khorat_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -703,6 +711,13 @@ mnd_khmer_5 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_laos_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -712,8 +727,8 @@ mnd_khmer_5 = {
 		provinces_to_highlight = {
 			OR = {
 				area = north_laos_area
-				area = south_laos_area
 				area = khorat_area
+				area = south_laos_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -722,9 +737,9 @@ mnd_khmer_5 = {
 				amount = 12
 				all_province = {
 					OR = {
-						area = north_laos_area
-						area = south_laos_area
+					  area = north_laos_area
 						area = khorat_area
+						area = south_laos_area
 					}
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -738,10 +753,7 @@ mnd_khmer_5 = {
 		icon = mission_mnd_khm_restored_empire
 		required_missions = { mnd_khm_subjugate_ayu mnd_khm_subjugate_laos }
 		provinces_to_highlight = {
-			OR = {
-				region = indo_china_region
-				region = south_china_sea_islands_region
-			}
+			region = indo_china_region
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				AND = {
@@ -758,10 +770,7 @@ mnd_khmer_5 = {
 			calc_true_if = {
 				amount = 50
 				all_province = {
-					OR = {
-					    region = indo_china_region
-						region = south_china_sea_islands_region
-					}
+					region = indo_china_region
 					country_or_non_sovereign_subject_holds = ROOT
 					NOT = { nationalism = 1 }
 					NOT = { unrest = 1 }
@@ -784,35 +793,35 @@ mnd_khmer_5 = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}		
+			}
 			west_guangdong_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}		
+			}
 			guangxi_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}		
+			}
 			yun_gui_borderland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}		
+			}
 			yun_gui_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}		
+			}
 		}
 	}
 	mnd_khm_invade_burma = {

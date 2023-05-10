@@ -330,7 +330,7 @@ Timurid_horde_path_3 = {
 		trigger = {
 			OR = {
 				development_in_provinces = {
-					value = 400
+					value = 200
 					religion = tengri_pagan_reformed
 				}
 				custom_trigger_tooltip = { 
@@ -364,7 +364,7 @@ Timurid_horde_path_3 = {
 				if = {
 					limit = {
 						development_in_provinces = {
-							value = 400
+							value = 200
 							religion = tengri_pagan_reformed
 						}
 					}

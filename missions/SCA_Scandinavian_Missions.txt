@@ -1,4 +1,3 @@
-#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 #Swedish Conquest missions
 sca_conquqest_slot_1 = {
 	slot = 1
@@ -17,7 +16,7 @@ sca_conquqest_slot_1 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	sca_conquer_great_britain = {
 		icon = mission_invade_england
 		required_missions = { sca_unite_the_region }
@@ -58,7 +57,7 @@ sca_conquest_slot_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	sca_conquer_german_coastline = {
 		icon = mission_heart_of_the_hansa
 		required_missions = { sca_unite_the_region }
@@ -128,7 +127,7 @@ sca_conquqest_slot_3 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	sca_unite_the_region = {
 		icon = mission_unite_scandinavia
 		required_missions = {  }
@@ -179,7 +178,7 @@ sca_conquqest_slot_3 = {
 			}
 		}
 	}
-	
+
 	sca_take_over_the_balitc_region = {
 		icon = mission_conquer_baltic_region
 		required_missions = { sca_unite_the_region }
@@ -202,10 +201,10 @@ sca_conquqest_slot_3 = {
 			}
 		}
 	}
-	
+
 	sca_scandinavian_european_empire = {
 		icon = mission_lion_of_the_north
-		required_missions = { 
+		required_missions = {
 			sca_conquer_great_britain
 			sca_conquer_german_coastline
 			sca_take_over_the_balitc_region
@@ -247,7 +246,7 @@ sca_conquqest_slot_4 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	sca_eliminate_the_russian_threat = {
 		icon = mission_viborg
 		required_missions = { sca_unite_the_region }
@@ -320,8 +319,8 @@ sca_conquqest_slot_4 = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
 						region = russia_region
-						province_has_current_tech_fort_trigger = yes 
-						NOT = { has_province_modifier = teu_pru_fortified_border } 
+						province_has_current_tech_fort_trigger = yes
+						NOT = { has_province_modifier = teu_pru_fortified_border }
 					}
 					add_province_modifier = { name = teu_pru_fortified_border duration = -1 }
 				}
@@ -329,8 +328,8 @@ sca_conquqest_slot_4 = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
 						region = russia_region
-						province_has_current_tech_fort_trigger = yes 
-						NOT = { has_province_modifier = teu_pru_fortified_border } 
+						province_has_current_tech_fort_trigger = yes
+						NOT = { has_province_modifier = teu_pru_fortified_border }
 					}
 					add_province_modifier = { name = teu_pru_fortified_border duration = -1 }
 				}
@@ -338,8 +337,8 @@ sca_conquqest_slot_4 = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
 						region = russia_region
-						province_has_current_tech_fort_trigger = yes 
-						NOT = { has_province_modifier = teu_pru_fortified_border } 
+						province_has_current_tech_fort_trigger = yes
+						NOT = { has_province_modifier = teu_pru_fortified_border }
 					}
 					add_province_modifier = { name = teu_pru_fortified_border duration = -1 }
 				}
@@ -347,8 +346,8 @@ sca_conquqest_slot_4 = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
 						region = russia_region
-						province_has_current_tech_fort_trigger = yes 
-						NOT = { has_province_modifier = teu_pru_fortified_border } 
+						province_has_current_tech_fort_trigger = yes
+						NOT = { has_province_modifier = teu_pru_fortified_border }
 					}
 					add_province_modifier = { name = teu_pru_fortified_border duration = -1 }
 				}
@@ -356,8 +355,8 @@ sca_conquqest_slot_4 = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
 						region = russia_region
-						province_has_current_tech_fort_trigger = yes 
-						NOT = { has_province_modifier = teu_pru_fortified_border } 
+						province_has_current_tech_fort_trigger = yes
+						NOT = { has_province_modifier = teu_pru_fortified_border }
 					}
 					add_province_modifier = { name = teu_pru_fortified_border duration = -1 }
 				}
@@ -384,7 +383,7 @@ sca_development_slot_1 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	sca_norwegian_infrastructure = {
 		icon = mission_develop_the_scandes
 		required_missions = { sca_good_income }
@@ -428,7 +427,7 @@ sca_development_slot_1 = {
 			}
 		}
 	}
-	
+
 	sca_industrialize_norway = {
 		icon = mission_industrial_forging
 		required_missions = { sca_norwegian_infrastructure }
@@ -497,7 +496,7 @@ sca_development_slot_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	sca_good_income = {
 		icon = balance_the_estates
 		required_missions = {  }
@@ -542,7 +541,7 @@ sca_development_slot_2 = {
 			}
 		}
 	}
-	
+
 	sca_expand_danish_agriculture = {
 		icon = mission_peasantry
 		required_missions = { sca_good_income }
@@ -592,7 +591,7 @@ sca_development_slot_2 = {
 			}
 		}
 	}
-	
+
 	sca_develop_kronborg = {
 		icon = mission_the_sound_toll
 		required_missions = { sca_expand_danish_agriculture }
@@ -663,10 +662,10 @@ sca_development_slot_2 = {
 			}
 		}
 	}
-	
+
 	sca_scandinavian_lion = {
 		icon = mission_baltic_empire
-		required_missions = { 
+		required_missions = {
 			sca_industrialize_norway
 			sca_develop_kronborg
 			sca_expand_finland
@@ -756,7 +755,7 @@ sca_development_slot_3 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	sca_falun_copper = {
 		icon = mission_dalaskogen
 		required_missions = { sca_good_income }
@@ -779,7 +778,7 @@ sca_development_slot_3 = {
 			}
 		}
 	}
-	
+
 	sca_expand_finland = {
 		icon = mission_conquer_finland
 		required_missions = { sca_falun_copper }
@@ -902,7 +901,7 @@ sca_norse_mission_slot = {
 				has_manpower_building_trigger = yes
 				value = 10
 			}
-			1 = { 
+			1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
@@ -938,7 +937,7 @@ sca_norse_mission_slot = {
 			}
 			british_isles_region = {
 				limit = {
-					NOT = { is_core = ROOT } 
+					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
@@ -1095,7 +1094,7 @@ sca_revolution_mission_slot = {
 					}
 				}
 			}
-			
+
 		}
 		effect = {
 			if = {
@@ -1104,7 +1103,7 @@ sca_revolution_mission_slot = {
 						has_reform = revolutionary_empire_reform
 						has_reform = revolutionary_republic_reform
 					}
-				}		
+				}
 				add_country_modifier = {
 					name = sca_revolutionary_zeal
 					duration = -1
@@ -1139,7 +1138,7 @@ sca_colonialism_slot_3 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	sca_establish_new_scandinavia = {
 		icon = mission_ruler_of_north_america
 		required_missions = { sca_a_grand_fleet }
@@ -1204,7 +1203,7 @@ sca_colonialism_slot_4 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	sca_a_grand_fleet = {
 		icon = mission_rb_scottish_north_sea_trade
 		required_missions = {  }
@@ -1279,7 +1278,7 @@ sca_colonialism_slot_4 = {
 			}
 		}
 	}
-	
+
 	sca_colonize_the_caribbeans = {
 		icon = mission_colonize_the_caribbean
 		required_missions = { sca_a_grand_fleet }
@@ -1349,7 +1348,7 @@ sca_colonialism_slot_5 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	sca_scramble_for_africa = {
 		icon = mission_mal_riches_of_trade
 		required_missions = { sca_a_grand_fleet }

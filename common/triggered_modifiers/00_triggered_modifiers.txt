@@ -9,77 +9,35 @@
 east_indian_trade_route = {
 	potential = {
 		num_of_ports = 1
-		vu_downstream_of_india = yes
-		has_discovered = 1460 # Cape of Good Hope			#VU moved from trigger, now required to even see it.
-		#NOT = { capital_scope = { continent = asia } }			#VU removed, replaced with home node check
-		#NOT = { capital_scope = { continent = oceania } }			#VU removed, replaced with home node check
+		NOT = {
+			capital_scope = {
+				continent = asia
+			}
+		}
+		NOT = {
+			capital_scope = {
+				continent = oceania
+			}
+		}
+		
 	}
 
 	trigger = {
-		custom_trigger_tooltip = {
-			tooltip = vu_route_to_india_tooltip_1
+		has_discovered = 1460 # Cape of Good Hope
+		num_of_ports = 4
+		has_idea = quest_for_the_new_world
+		any_active_trade_node = {
+			has_merchant = ROOT
 			OR = {
-				AND = {
-					504 = { has_merchant = ROOT }			#Gujarat
-					1448 = { has_merchant = ROOT }			#Zanzibar
-				}
-				1340 = { has_merchant = ROOT }			#Coromandel
+				province_id = 1361 # Straits of Johor
+				province_id = 1343 # Ganges Delta
+				province_id = 504 # Sind
+				province_id = 1340 # Comorin Cape
 			}
 		}
-		custom_trigger_tooltip = {
-			tooltip = vu_route_to_india_tooltip_2
-			1460 = { has_merchant = ROOT }			#Cape of Good Hope
-		}
-		custom_trigger_tooltip = {
-			tooltip = vu_route_to_india_tooltip_3
-			1466 = { has_merchant = ROOT }			#Ivory Coast
-		}
-		custom_trigger_tooltip = {
-			tooltip = vu_route_to_india_tooltip_4
-			OR = {
-				AND = {
-					345 = { has_merchant = ROOT }			#Safi
-					227 = { has_merchant = ROOT }			#Lisbon
-				}
-				AND = {
-					345 = { has_merchant = ROOT }			#Safi
-					224 = { has_merchant = ROOT }			#Seville
-				}
-				AND = {
-					1516 = { has_merchant = ROOT }			#Caribbean
-					224 = { has_merchant = ROOT }			#Seville
-				}
-				AND = {
-					1516 = { has_merchant = ROOT }			#Caribbean
-					174 = { has_merchant = ROOT }			#Bordeaux
-				}
-				AND = {
-					1516 = { has_merchant = ROOT }			#Caribbean
-					1269 = { has_merchant = ROOT }			#English Channel
-				}
-				AND = {
-					1516 = { has_merchant = ROOT }			#Caribbean
-					1500 = { has_merchant = ROOT }			#Chesapeake Bay
-					1490 = { has_merchant = ROOT }			#St Lawrence
-					1284 = { has_merchant = ROOT }			#Irish Sea
-				}
-			}
-		}
-		#num_of_ports = 4			#VU requirement removed. Why do you need 4 ports? One rich port will do.
-		#has_idea = quest_for_the_new_world			#VU requirement removed. Don't need to be colonial for Old World trade. Though good luck fufilling other reqs without exploration.
-		#any_active_trade_node = {
-		#	has_merchant = ROOT
-		#	OR = {
-		#		province_id = 1361 # Straits of Johor
-		#		province_id = 1343 # Ganges Delta
-		#		province_id = 504 # Sind
-		#		province_id = 1340 # Comorin Cape
-		#	}
-		#}			#VU rewriting this req to account for different trade setup
 	}
-	trade_efficiency = 0.1			#VU increased from 0.05 to reward meeting somewhat more difficult requirements
-	trade_steering = 0.1			#VU new bonus to reward meeting somewhat more difficult requirements
-	global_ship_trade_power = 0.05			#VU new bonus to reward meeting somewhat more difficult requirements
+
+	trade_efficiency = 0.05	
 }
 
 #########################################################
@@ -337,22 +295,21 @@ custodian_of_the_two_holy_mosques = {
 catholic_rome = {
 	potential = {
 		normal_or_historical_nations = yes
-		has_discovered = 6976	# Roma
+		has_discovered = 118	# Roma
 		religion = catholic
 		NOT = { tag = PAP }
-		any_owned_province = { region = italy_region }			#VU added. Doesn't spam everyone unless they actually have some land in Italy. Might cause very rare situation of Rome taken in the first war.... but I like it organised.
 	}
 
 	trigger = {	
 		NOT = { overlord_of = PAP }
-		owns_or_vassal_of = 6976 # Roma		
+		owns_or_vassal_of = 118 # Roma		
 		NOT = { tag = ITA }
+		NOT = { tag = HLR }
 		NOT = { tag = ROM }
-		NOT = { tag = ITL }			#VU
 	}
 
 	papal_influence = -10
-	diplomatic_reputation = -2			#VU changed from -1. Harsh penalties, but a Catholic shouldn't occupy Rome.
+	diplomatic_reputation = -1
 	#icon = 9
 }
 
@@ -362,13 +319,11 @@ papal_subjugation = {
 		has_discovered = 118	# Roma
 		religion = catholic
 		NOT = { tag = PAP }
-		any_owned_province = { region = italy_region }			#VU added. Doesn't spam everyone unless they actually have some land in Italy. Might cause very rare situation of Rome taken in the first war.... but I like it organised.
 	}
 
 	trigger = {	
 		overlord_of = PAP
 		NOT = { tag = ITA }
-		NOT = { tag = ITL }			#VU
 		NOT = { tag = HLR }
 		if = {
 			limit = {
@@ -396,7 +351,7 @@ papal_subjugation = {
 		}
 	}
 
-	diplomatic_reputation = -1			#VU changed from -2. Subjugating isn't worse than outright occupying, at least subjects have the illusion of self determination.
+	diplomatic_reputation = -2
 	#icon = 9
 }
 
@@ -442,19 +397,16 @@ submission_to_emperor = {
 
 		has_global_flag = italians_leave_hre
 		NOT = { has_country_flag = reined_in_for_shadow_kingdom }
-		is_part_of_hre = yes
+		is_emperor = no
+		NOT = { is_year = 1550 }
 		culture_group = latin
 	}
 
 	trigger = {
-		is_emperor = no
+		is_part_of_hre = yes
 		NOT = { tag = ITA }
-		NOT = { tag = ITL }
-		capital_scope = {
-			is_part_of_hre = yes
-		}
-		NOT = { is_year = 1550 }
 		NOT = { emperor = { alliance_with = ROOT } }
+		NOT = { is_year = 1550 } # Duplicating so it shows in tooltip
 	}
 
 	global_unrest = 3
@@ -770,10 +722,7 @@ hre_dominant_catholic = {
 			religion = catholic
 			religion = protestant
 			religion = reformed
-			religion = hussite
 		}
-		is_part_of_hre = yes			#VU added. This prevents the bonuses for non-HRE tags. Sure, HRE taking a side religiously was significant, but not THAT significant, especially to foreigners outside HRE sphere.
-		is_religion_enabled = protestant			#VU added. Doesn't show up until there is actually reformation religions around.
 	}
 
 	trigger = {
@@ -797,10 +746,7 @@ hre_dominant_protestant = {
 			religion = catholic
 			religion = protestant
 			religion = reformed
-			religion = hussite
 		}
-		is_part_of_hre = yes			#VU added. This prevents the bonuses for non-HRE tags. Sure, HRE taking a side religiously was significant, but not THAT significant, especially to foreigners outside HRE sphere.
-		is_religion_enabled = protestant			#VU added. Doesn't show up until there is actually reformation religions around.
 	}
 
 	trigger = {
@@ -824,11 +770,7 @@ hre_dominant_reformed = {
 			religion = catholic
 			religion = protestant
 			religion = reformed
-			religion = hussite
 		}
-		is_part_of_hre = yes			#VU added. This prevents the bonuses for non-HRE tags. Sure, HRE taking a side religiously was significant, but not THAT significant, especially to foreigners outside HRE sphere.
-		is_religion_enabled = reformed			#VU added. Doesn't show up until there is actually reformation religions around.
-	
 	}
 
 	trigger = {
@@ -949,12 +891,12 @@ italian_wars_triggered_modifier = {
 					war_with = ROOT
 					religion_group = christian
 					capital_scope = { continent = europe }
-					total_development = 300 #VU Dev Doubling
+					total_development = 150
 				}
 			}
 			AND = {
 				NOT = { capital_scope = { region = italy_region } }
-				total_development = 300 #VU Dev Doubling
+				total_development = 150
 				any_country = {
 					war_with = ROOT
 					capital_scope = { region = italy_region }

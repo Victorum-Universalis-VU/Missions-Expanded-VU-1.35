@@ -14,10 +14,9 @@ eng_row_slot_1 = {
 			tag = ENG
 			tag = AVE
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -59,7 +58,7 @@ eng_row_slot_1 = {
 	}
 
 	eng_conquer_scotland = {
-		icon = mission_hammer_of_the_scots
+		icon = mission_rb_conquer_scotland
 		required_missions = { eng_recruit_the_mercenaries }
 		position = 2
 		
@@ -159,7 +158,6 @@ eng_row_slot_1 = {
 		trigger = { 
 			OR = {
 				tag = GBR
-				tag = UNK
 				tag = AVE
 			}
 		}	
@@ -202,154 +200,11 @@ eng_row_slot_1 = {
 			factor = 250
 		}
 	}
-	
-	eng_take_shetland_and_faro_isles = {
-		icon = mission_conquer_the_isles
-		required_missions = { eng_rb_mighty_navy }
-		position = 5
 
-		provinces_to_highlight = {
-			eng_take_shetland_and_faro_isles_provinces = yes
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
-				provinces=eng_take_shetland_and_faro_isles_provinces
-				owner_type=country_or_non_sovereign_subject_holds
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "eng_rb_faro_coast"
-				duration = -1
-			}
-			iceland_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			greenland_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	
-	eng_greenland = {
-		icon = mission_settle_the_north
-		required_missions = { eng_take_shetland_and_faro_isles }
-		position = 6
-
-		provinces_to_highlight = {
-		    OR = {
-				area = iceland_area
-				area = greenland_area
-			}
-			NOT = { owned_by = ROOT }
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = miss_discover_greenland
-				iceland_area = {
-					has_discovered = ROOT
-				}
-				greenland_area = {
-					has_discovered = ROOT
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = miss_colonize_greenland
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 8
-					colonial_region = colonial_greenland
-					is_city = yes
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "eng_rb_colony_chance"
-				duration = 7300
-			}
-			1104 = {
-				add_base_production = 3
-				add_base_manpower = 3
-				custom_tooltip = eng_greenland.tooltip
-				hidden_effect = {
-					random_list = {
-						10 = {
-							change_province_name = "Novum Novum Eboracum"
-							rename_capital = "Novum Novum Eboracum"
-						}
-						10 = {
-							change_province_name = "Little London"
-							rename_capital = "Little London"
-						}
-						10 = {
-							change_province_name = "New Omagh"
-							rename_capital = "New Omagh"
-						}
-						10 = {
-							change_province_name = "New Burnley"
-							rename_capital = "New Burnley"
-						}
-						10 = {
-							change_province_name = "New Durham"
-							rename_capital = "New Durham"
-						}
-						10 = {
-							change_province_name = "New Harrogate"
-							rename_capital = "New Harrogate"
-						}
-						10 = {
-							change_province_name = "New Cornwall"
-							rename_capital = "New Cornwall"
-						}
-						10 = {
-							change_province_name = "Liverpool Secundum"
-							rename_capital = "Liverpool Secundum"
-						}
-						10 = {
-							change_province_name = "Pieter's Haven"
-							rename_capital = "Pieter's Haven"
-						}
-						8 = {
-							change_province_name = "New Dublin"
-							rename_capital = "New Dublin"
-						}
-						1 = {
-							change_province_name = "Winterfell"
-							rename_capital = "Winterfell"
-						}
-						1 = {
-							change_province_name = "Jersey Ultima"
-							rename_capital = "Jersey Ultima"
-						}
-					}
-				}
-			}
-			1105 = {
-				add_base_production = 2
-				add_base_manpower = 2
-			}
-		}
-	}
-	
 	eng_war_of_the_roses = {
 		icon = mission_rb_war_of_the_roses
 		required_missions = {  }
-		position = 7
+		position = 5
 		provinces_to_highlight = {
 		}
 		trigger = {
@@ -394,11 +249,11 @@ eng_row_slot_1 = {
 			factor = 250
 		}
 	}
-	
+
 	eng_handle_the_reformation = {
 		icon = mission_rb_control_state_religion
 		required_missions = { eng_war_of_the_roses }
-		position = 8
+		position = 6
 		provinces_to_highlight = {
 		}		
 		trigger = {
@@ -473,7 +328,7 @@ eng_row_slot_1 = {
 							duration = 9125
 						}
 						"
-						second_custom_tooltip = eng_handle_the_reformation_vu
+						second_custom_tooltip = eng_handle_the_reformation_bt
 						second_limit = "religion = protestant"
 						second_effect = "
 						if = {
@@ -516,30 +371,10 @@ eng_row_slot_1 = {
 		}
 	}
 
-	eng_rb_yeomen_of_the_guard = {
-		icon = mission_rb_yeomen_bodyguards
-		required_missions = { eng_handle_the_reformation }
-		position = 9
-		completed_by = 1485.1.1
-		
-		trigger = {
-			army_size_percentage = 1
-			manpower_percentage = 0.6
-			num_of_generals = 1
-		}
-		
-		effect = {
-			add_country_modifier = {
-				name = "eng_rb_the_kings_bodyguards"
-				duration = 5475
-			}
-		}
-	}
-
 	eng_piety_of_the_state = {
 		icon = mission_english_reformation
-		required_missions = { eng_rb_yeomen_of_the_guard }
-		position = 10
+		required_missions = { eng_handle_the_reformation }
+		position = 7
 		provinces_to_highlight = {
 		}		
 		trigger = { 
@@ -659,44 +494,11 @@ eng_row_slot_1 = {
 			factor = 250
 		}
 	}
-	
-	eng_english_parliamentarism = {
-		icon = mission_rb_scottish_conquer_london
-		required_missions = { eng_piety_of_the_state }
-		position = 11
-		provinces_to_highlight = {
-		}		
-		trigger = {
-			num_of_issues_passed = {
-				amount = 6
-				alternative_trigger = "stability = 2"
-			}
-			if = {
-				limit = { has_estate = estate_burghers }
-				num_of_estate_agendas_completed = {
-					estate = estate_burghers
-					value = 3
-				}
-			}
-			else = {
-				NOT = { has_estate = estate_burghers }
-			}
-		}	
-		effect = {
-			change_government_reform_progress = 50
-			unlock_government_reform = {
-				government_reform = administration_of_the_parliament_reform
-			}
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
 
 	eng_strengthen_the_monarchy = {
 		icon = mission_english_absolutism
-		required_missions = { eng_english_parliamentarism }
-		position = 12
+		required_missions = {  }
+		position = 8
 		provinces_to_highlight = {
 		}		
 		trigger = { 
@@ -761,7 +563,7 @@ eng_row_slot_1 = {
 			eng_strengthen_the_monarchy
 			eng_english_parliamentarism
 		}
-		position = 13
+		position = 9
 		provinces_to_highlight = {
 		}		
 		trigger = {
@@ -780,7 +582,7 @@ eng_row_slot_1 = {
 		}
 		effect = {
 			simple_dynamic_effect = {
-				first_custom_tooltip = eng_the_english_civil_war_vu
+				first_custom_tooltip = eng_the_english_civil_war_bt
 				first_limit = "has_country_flag = eng_civil_war_happened"
 				first_effect = "
 				custom_tooltip = eng_the_english_civil_war_dt
@@ -816,46 +618,6 @@ eng_row_slot_1 = {
 			factor = 250
 		}
 	}
-	
-	gbr_seize_ceylon = {
-		icon = seize_ceylon
-		required_missions = { gbr_establish_first_indian_trade_post }
-		position = 14
-		provinces_to_highlight = {
-			OR = {
-				area = lanka_area
-				area = south_lanka_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}		
-		trigger = { 
-			lanka_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-				type = all
-			}
-			south_lanka_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-				type = all
-			}
-		}	
-		effect = {
-			572 = {
-				add_building = stock_exchange
-				add_base_production = 3
-			}
-			1340 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = 7300
-					power = 20
-					key = COROMANDEL_PRESENCE
-				}
-			}
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
 }
 eng_row_slot_2 = {
 	slot = 2
@@ -870,11 +632,10 @@ eng_row_slot_2 = {
 			tag = ENG
 			tag = AVE
 			tag = GBR
-			tag = UNK
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
-	has_country_flag = use_paradox_missions
 	has_country_shield = yes
 
 	eng_irish_conquest = {
@@ -959,10 +720,9 @@ gbr_row_slot_2 = {
 				NOT = { has_country_flag = eng_took_ave_branch }
 			}
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -1025,7 +785,7 @@ gbr_row_slot_2 = {
 				}
 				add_country_modifier = {
 					name = gbr_unified_british_isles_culture
-					desc = gbr_develop_british_identity_vu
+					desc = gbr_develop_british_identity_bt
 					duration = -1
 				}"
 				second_custom_tooltip = gbr_develop_british_identity_ct
@@ -1047,44 +807,10 @@ gbr_row_slot_2 = {
 			factor = 250
 		}
 	}
-	
-	eng_rb_new_palace_of_westminster = {
-		icon = mission_rb_palace_of_westminster
-		required_missions = { gbr_develop_british_identity }
-		position = 4
 
-		provinces_to_highlight = {
-			province_id = 7437
-		}
-
-		trigger = {
-		    is_year = 1840
-			7437 = {
-				owned_by = ROOT
-				OR = {
-					has_building = courthouse
-					has_building = town_hall
-				}
-			}
-		}
-
-		effect = {
-		    add_prestige = 100
-			add_country_modifier = {
-				name = "eng_westminster_palace"
-				duration = -1
-			}
-			#change_innovativeness = 5
-			#country_event = {
-			#	id = flavor_eng.9880
-			#	days = 1
-			#}
-		}
-	}
-	
 	gbr_explore_new_world = {
 		icon = mission_establish_high_seas_navy
-		required_missions = { eng_rb_mighty_navy }
+		required_missions = { gbr_establish_royal_navy }
 		position = 5
 		provinces_to_highlight = {
 			if = {
@@ -1199,268 +925,6 @@ gbr_row_slot_2 = {
 			factor = 250
 		}
 	}
-	
-	eng_rb_northwest_territories = {
-		icon = mission_rb_colonise_northwest_territories
-		required_missions = { gbr_colonize_canada }
-		completed_by = 1613.1.1
-		position = 7
-
-		provinces_to_highlight = {
-			colonial_region = colonial_northwest_territories
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = miss_discover_northwest_territories
-				colonial_northwest_territories = {
-					has_discovered = ROOT
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = miss_colonised_northwest_territories
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 1
-					colonial_region = colonial_northwest_territories
-					is_city = yes
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "eng_rb_established_logging"
-				duration = 7300
-			}
-		}
-	}
-	
-	eng_rb_hudson_bay = {
-		icon = mission_rb_colonise_hudson_bay
-		required_missions = { eng_rb_northwest_territories }
-		completed_by = 1613.1.1
-		position = 8
-
-		provinces_to_highlight = {
-			colonial_region = colonial_hudson_bay
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = miss_discover_hudson_bay
-				colonial_hudson_bay = {
-					has_discovered = ROOT
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = miss_colonised_hudson_bay
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 1
-					colonial_region = colonial_hudson_bay
-					is_city = yes
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "eng_rb_established_fur_trade"
-				duration = 7300
-			}
-		}
-	}
-
-	eng_rb_establish_trade_in_american_cot = {
-		icon = mission_dominate_home_trade_node
-		required_missions = { eng_rb_hudson_bay }
-		position = 9
-
-		provinces_to_highlight = {
-			province_id = 1487
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			1487 = {	# Hudson Bay
-				is_strongest_trade_power = ROOT
-			}
-		}
-
-		effect = {
-		    add_treasury = 2500
-			add_country_modifier = {
-				name = "eng_hudson_dominance"
-				duration = 7300
-			}
-		}
-	}
-	
-	eng_rb_canadian_prairies = {
-		icon = mission_rb_canadian_prairies
-		required_missions = { eng_rb_establish_trade_in_american_cot }
-		completed_by = 1613.1.1
-		position = 10
-
-		provinces_to_highlight = {
-			colonial_region = colonial_louisiana
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = miss_discover_canadian_prairies
-				colonial_louisiana = {
-					has_discovered = ROOT
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = miss_colonised_canadian_prairies
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 1
-					colonial_region = colonial_louisiana
-					is_city = yes
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "eng_rb_established_farming"
-				duration = 7300
-			}
-		}
-	}
-
-	eng_rb_british_columbia = {
-		icon = mission_rb_colonise_british_columbia
-		required_missions = { eng_rb_canadian_prairies }
-		completed_by = 1613.1.1
-		position = 11
-
-		provinces_to_highlight = {
-			colonial_region = colonial_cascadia
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = miss_discover_british_columbia
-				colonial_cascadia = {
-					has_discovered = ROOT
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = miss_colonised_british_columbia
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 1
-					colonial_region = colonial_cascadia
-					is_city = yes
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "eng_rb_established_gold"
-				duration = 7300
-			}
-		}
-	}
-	
-	gbr_conquer_western_india = {
-		icon = mission_conquer_gujarat_dlh
-		required_missions = { gbr_establish_first_indian_trade_post }
-		position = 14
-		provinces_to_highlight = {
-			OR = {
-				area = tapti_area
-				area = ahmedabad_area
-				area = saurashtra_area
-				area = konkan_area
-				area = malabar_area
-				area = kanara_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}		
-		trigger = { 
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					area = tapti_area
-					area = ahmedabad_area
-					area = saurashtra_area
-					area = konkan_area
-					area = malabar_area
-					area = kanara_area
-				}
-				value = 20
-			}
-		}	
-		effect = {
-			if = {
-				limit = {
-					exists = EIC
-					EIC = {
-						is_subject_of = ROOT
-					}
-				}
-				deccan_region = {
-					limit = {
-						NOT = { is_core = EIC }
-						NOT = { is_permanent_claim = EIC }
-					}
-					add_permanent_claim = EIC
-				}
-				west_india_region = {
-					limit = {
-						NOT = { is_core = EIC }
-						NOT = { is_permanent_claim = EIC }
-					}
-					add_permanent_claim = EIC
-				}
-			}
-			else = {
-				deccan_region = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				west_india_region = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			504 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = -1
-					power = 50
-					key = GBR_INDIAN_COASTLINE_CONTROL
-				}
-			}
-			1340 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = -1
-					power = 50
-					key = GBR_INDIAN_COASTLINE_CONTROL
-				}
-			}
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
 }
 ave_row_slot_2 = {
 	slot = 2
@@ -1478,8 +942,8 @@ ave_row_slot_2 = {
 			}
 			tag = AVE
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -1643,7 +1107,119 @@ ave_row_slot_2 = {
 		}
 	}
 }
+eng_row_slot_2_continuation = {
+	slot = 2
+	generic = no
+	ai = yes	
+	potential_on_load = {
+		has_dlc = "Domination"
+	}
+	potential = {
+		has_dlc = "Domination"
+		OR = {
+			tag = ENG
+			tag = AVE
+			tag = GBR
+		}
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
+	}
+	has_country_shield = yes
 
+	eng_english_parliamentarism = {
+		icon = mission_rb_scottish_conquer_london
+		required_missions = {  }
+		position = 8
+		provinces_to_highlight = {
+		}		
+		trigger = {
+			num_of_issues_passed = {
+				amount = 6
+				alternative_trigger = "stability = 2"
+			}
+			if = {
+				limit = { has_estate = estate_burghers }
+				num_of_estate_agendas_completed = {
+					estate = estate_burghers
+					value = 3
+				}
+			}
+			else = {
+				NOT = { has_estate = estate_burghers }
+			}
+		}	
+		effect = {
+			change_government_reform_progress = 50
+			unlock_government_reform = {
+				government_reform = administration_of_the_parliament_reform
+			}
+		}
+		ai_weight = {
+			factor = 250
+		}
+	}
+}
+gbr_row_slot_2_continuation = {
+	slot = 2
+	generic = no
+	ai = yes	
+	potential_on_load = {
+		has_dlc = "Domination"
+	}
+	potential = {
+		has_dlc = "Domination"
+		OR = {
+			AND = {
+				tag = ENG
+				NOT = { has_country_flag = eng_took_ave_branch }
+			}
+			tag = GBR
+		}
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
+	}
+	has_country_shield = yes
+
+	gbr_seize_ceylon = {
+		icon = seize_ceylon
+		required_missions = { gbr_establish_first_indian_trade_post }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				area = lanka_area
+				area = south_lanka_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}		
+		trigger = { 
+			lanka_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			south_lanka_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}	
+		effect = {
+			572 = {
+				add_building = stock_exchange
+				add_base_production = 3
+			}
+			1340 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 7300
+					power = 20
+					key = COROMANDEL_PRESENCE
+				}
+			}
+		}
+		ai_weight = {
+			factor = 250
+		}
+	}
+}
 ave_row_slot_2_continuation = {
 	slot = 2
 	generic = no
@@ -1660,8 +1236,8 @@ ave_row_slot_2_continuation = {
 			}
 			tag = AVE
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -1742,7 +1318,7 @@ ave_row_slot_2_continuation = {
 			}
 		}	
 		effect = {
-			custom_tooltip = ave_promote_angevin_culture_vu
+			custom_tooltip = ave_promote_angevin_culture_bt
 			hidden_effect = {
 				change_primary_culture = anglois
 				set_ruler_culture = anglois
@@ -1794,7 +1370,6 @@ gbr_ave_hundred_years_mission = {
 			tag = ENG
 			tag = AVE
 			tag = GBR
-			tag = UNK
 		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
@@ -1872,10 +1447,9 @@ gbr_row_3 = {
 				NOT = { has_country_flag = eng_took_ave_branch }
 			}
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -1909,7 +1483,7 @@ gbr_row_3 = {
 					}
 				}
 				custom_trigger_tooltip = {
-					tooltip = gbr_end_the_french_conflict_vu
+					tooltip = gbr_end_the_french_conflict_bt
 					AND = {
 						4385 = {
 							country_or_non_sovereign_subject_holds = ROOT
@@ -1981,125 +1555,81 @@ gbr_row_3 = {
 			factor = 250
 		}
 	}
-	
-	eng_rb_mighty_navy = {
-		icon = mission_rb_royal_navy
+
+	gbr_establish_royal_navy = {
+		icon = mission_rb_a_mighty_fleet
 		required_missions = { gbr_abolish_villeinage }
 		position = 4
-		completed_by = 1700.1.1
-	
-		ai_weight = {
-			factor = 2
-			modifier = {
-				factor = 0
-				NOT = { is_year = 1680 }
+		provinces_to_highlight = {
+		}		
+		trigger = { 
+			if = {
+				limit = { ai = no }
+				navy_size = 50
+				navy_size_percentage = 1
+				num_of_admirals = 1
 			}
-		}
-	
-		trigger = {
-		    #num_of_total_ports = 40
-		    development_in_provinces = { #Replacing # of ports because this can and will change as the map updates.
-			    value = 600
-			    has_port = yes
-		    }
-		    navy_size_percentage = 0.9
-		}
-	
+			else = {
+				navy_size = 25
+			}
+		}	
 		effect = {
-		    add_country_modifier = {
-		        name = "eng_royal_navy"
-		        duration = -1
-		    }
+			add_navy_tradition = 10
+			create_explorer = {
+				tradition = 50
+			}
+			add_country_modifier = {
+				name = gbr_exploration_spirit
+				duration = 9125
+			}
 			unlock_issue = {
 				issue = act_of_exploration
 			}
-		    define_admiral = {
-			     shock = 3
-			     fire = 3
-			     manuever = 4
-			     siege = 2
-		    }
-		    226 = {
-		        add_permanent_claim = ROOT
-		    }
 		}
-	}
-	
-	lotf_gb_sea_venture = {
-		icon = mission_rb_grow_the_channel
-		required_missions = { eng_rb_mighty_navy }	
-		position = 5
-		provinces_to_highlight = {
-			province_id = 481
-		}	
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = lotf_gb_sea_venture_tt
-				481 = { country_or_non_sovereign_subject_holds = ROOT is_city = yes }
-			}
-		}	
-		effect = {
-			481 = {
-				if = {
-					limit = {
-						has_building = shipyard
-					}
-					add_building = grand_shipyard
-				}
-				else_if = {
-					limit = {
-						NOT = { has_building = grand_shipyard }
-					}
-					add_building = shipyard
-				}
-				change_province_name = "Somers Isles"
-				rename_capital = "Saint George's Town"
-			}
-			add_permanent_claim = 2561  
-			add_permanent_claim = 967
-			add_permanent_claim = 950
-			add_country_modifier = { name = colonial_buffs_1 duration = 7300 }		
+		ai_weight = {
+			factor = 250
 		}
 	}
 
-	#gbr_establish_royal_navy = {
-	#	icon = mission_rb_a_mighty_fleet
-	#	required_missions = { gbr_abolish_villeinage }
-	#	position = 4
-	#	provinces_to_highlight = {
-	#	}		
-	#	trigger = { 
-	#		if = {
-	#			limit = { ai = no }
-	#			navy_size = 50
-	#			navy_size_percentage = 1
-	#			num_of_admirals = 1
-	#		}
-	#		else = {
-	#			navy_size = 25
-	#		}
-	#	}	
-	#	effect = {
-	#		add_navy_tradition = 10
-	#		create_explorer = {
-	#			tradition = 50
-	#		}
-	#		add_country_modifier = {
-	#			name = gbr_exploration_spirit
-	#			duration = 9125
-	#		}
-	#		unlock_issue = {
-	#			issue = act_of_exploration
-	#		}
-	#	}
-	#	ai_weight = {
-	#		factor = 250
-	#	}
-	#}
+	gbr_rule_britannia = {
+		icon = mission_rule_britannia
+		required_missions = { gbr_establish_royal_navy }
+		position = 5
+		provinces_to_highlight = {
+		}		
+		trigger = {
+			num_of_special_units = { 
+				special_unit_category = man_of_war
+				type = heavy_ship 
+				value = 40
+			}
+			is_bankrupt = no
+			is_in_deficit = no
+			if = {
+				limit = { has_dlc = "Golden Century" }
+				has_flagship = yes
+			}
+			navy_size = 200
+			total_own_and_non_tributary_subject_development = 1500
+		}	
+		effect = {
+			unlock_issue = {
+				issue = acts_of_impressment
+			}
+			add_country_modifier = {
+				name = gbr_naval_dominance
+				duration = -1
+			}
+			#custom_tooltip = gbr_rule_britannia_at	#Modifier gets leveled up through the parliament actions
+		}
+		ai_weight = {
+			factor = 250
+		}
+	}
 
 	gbr_colonize_north_america = {
 		icon = mission_settlers_north_america
-		required_missions = { gbr_explore_new_world lotf_gb_sea_venture }
+		required_missions = { gbr_explore_new_world }
 		position = 6		
 		provinces_to_highlight = {
 			if = {
@@ -2140,347 +1670,121 @@ gbr_row_3 = {
 			factor = 250
 		}
 	}
-	
-	eng_rb_establish_trade_in_american_cot_virginia_company = {
-        icon = mission_rb_dominate_trade_node_virginia_co
-        required_missions = { gbr_colonize_north_america }
-        position = 7
-	
-	    provinces_to_highlight = {
-	        province_id = 1500
-	        has_discovered = ROOT
-	    }
-		
-	    trigger = { 
-	        1500 = {	# Chesapeake Bay
-	        is_strongest_trade_power = ROOT
-	        }
-	    }
-	
-        effect = {
-            add_treasury = 2500
-	        add_country_modifier = {
-		        name = "eng_chesapeake_dominance"
-		        duration = -1
-	        }
- 	        if = {
-		        limit = {
-			        has_dlc = "Rule Britannia"
-		        }
-		        226 = {
-			        add_permanent_claim = ROOT
-		        }
-	        }
-        }
-    }
-	
-	lotf_gb_jamestown = {
-		icon = prosperity_for_all
-		required_missions = { eng_rb_establish_trade_in_american_cot_virginia_company }	
-		position = 8
+
+	gbr_dominiate_new_world = {
+		icon = mission_ruler_of_north_america
+		required_missions = {
+			gbr_colonize_canada
+			gbr_colonize_north_america
+			gbr_colonize_caribbeans
+		}
+		position = 7
 		provinces_to_highlight = {
-			province_id = 950
-		}
-		
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = lotf_gb_jamestown_tt
-				950 = {country_or_non_sovereign_subject_holds = ROOT is_city = yes }
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = colonial_buffs_2
-				duration = 7300
-			}
-			950 = {
-				if = {
-					limit = {
-						has_building = workshop
-					}
-					add_building = counting_house
-				}
-				else = {
-					add_building = workshop
-				}
-			add_province_modifier = {
-				name = jamestownprod
-				duration = -1
-			}
-			add_base_production = 5
-			change_trade_goods = tobacco
-			}
-		}
-	}
-	
-	lotf_gb_rh = {
-		icon = overshadow_venice
-		required_missions = { lotf_gb_jamestown }	
-		position = 9
-		provinces_to_highlight = {
-			province_id = 967
-		}	
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = lotf_gb_rh_tt
-				967 = {country_or_non_sovereign_subject_holds = ROOT is_city = yes }
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = colonial_buffs_4
-				duration = 7300
-			}
-			967 = {
-				if = {
-					limit = {
-						has_building = marketplace
-					}
-					add_building = trade_depot
-				}
-				else = {
-					add_building = marketplace
-				}
-			change_trade_goods = fur
-			add_base_tax = 1
-			add_base_production = 3
-			add_base_manpower = 1
-			}
-		}
-	}
-	
-	#New VU addition by San Felipe
-	eng_settle_charleston = {
-		icon = mission_rb_cotton_harvesting
-		required_missions = { lotf_gb_rh }	
-		position = 10
-		provinces_to_highlight = {
-			province_id = 932
-		}
-		
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = eng_settle_charleston_tt
-				932 = {country_or_non_sovereign_subject_holds = ROOT is_city = yes }
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = colonial_buffs_2
-				duration = 7300
-			}
-			932 = {
-				if = {
-					limit = {
-						has_building = workshop
-					}
-					add_building = counting_house
-				}
-				else = {
-					add_building = workshop
-				}
-			add_province_modifier = {
-				name = southern_plantations_1
-				duration = -1
-			}
-			add_base_production = 5
-			change_trade_goods = cotton
-			}
-		}
-	}
-	
-	lotf_gb_invest_southern_colonies = {
-		icon = dalmatian_conquest
-		required_missions = { eng_settle_charleston }	
-		position = 11
-		provinces_to_highlight = {
-			colonial_region = colonial_eastern_america
-			country_or_non_sovereign_subject_holds = ROOT
 			if = {
-				limit = {
-					has_global_flag = trade_goods_expanded_mod_active
-				}
+				limit = { is_random_new_world = no }
 				OR = {
-					trade_goods = tobacco
-					trade_goods = cotton
-				}
-				NOT = {
-					AND = {
-						has_production_building_trigger = yes
-						base_production = 8
-					}
+					continent = north_america
+					continent = south_america
 				}
 			}
 			else = {
-				OR = {
-					trade_goods = tobacco
-					trade_goods = cotton
-				}
-				NOT =  {
-					AND = {
-						has_production_building_trigger = yes
-						base_production = 8
-					}
-				}
+				continent = new_world
 			}
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}		
 		trigger = {
 			if = {
-				limit = {
-					has_global_flag = trade_goods_expanded_mod_active
-				}
+				limit = { is_random_new_world = no }
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					colonial_region = colonial_eastern_america
-					value = 3
 					OR = {
-						trade_goods = tobacco
-						trade_goods = cotton
+						continent = north_america
+						continent = south_america
 					}
-					has_production_building_trigger = yes
-					base_production = 8
+					value = 200
 				}
 			}
 			else = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					colonial_region = colonial_eastern_america
-					value = 3
-					OR = {
-						trade_goods = tobacco
-						trade_goods = cotton
-					}
-					has_production_building_trigger = yes
-					base_production = 8
+					continent = new_world
+					value = 100
 				}
 			}
-		}
-		effect = {
-			custom_tooltip = lotf_gb_invest_southern_colonies_tt
-			hidden_effect = {
-				colonial_eastern_america = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						if = {
-							limit = {
-								has_global_flag = trade_goods_expanded_mod_active
-							}
-							OR = {
-								trade_goods = tobacco
-								trade_goods = cotton
-							}
-						}
-						else = {
-							OR = {
-								trade_goods = tobacco
-								trade_goods = cotton
-							}
-						}
-						has_production_building_trigger = yes
-						base_production = 8
-					}
-					add_building = plantations
-					add_province_modifier = {
-						name = southern_plantations_1
-						duration = 7300
-					}
+			NOT = {
+				any_subject_country = {
+					liberty_desire = 25
 				}
 			}
-			custom_tooltip = lotf_gb_invest_southern_colonies_bonus_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						carolinas_area = {
-							type = all
-							country_or_non_sovereign_subject_holds = ROOT
-							is_city = yes
-						}
-					}
-					950 = { center_of_trade = 1 }
-				}
-			}
-		}
-	}
-	
-	lotf_gb_reorganize_colonies = {
-		icon = mission_reorganize_colonies
-		required_missions = { 
-			lotf_gb_invest_northern_colonies
-			lotf_gb_invest_southern_colonies
-		}	
-		position = 12
-		trigger = {		
-			custom_trigger_tooltip = {
-				tooltip = lotf_gb_reorganize_colonies_tt
-				has_country_flag = navigation_acts_chain_end
-			}			
 		}	
 		effect = {
-			custom_tooltip = ready_to_switch_tt
-			hidden_effect = {
-				random_country = { 
-					limit = { 
-						capital_scope = { 
-							colonial_region = colonial_eastern_america
-						}
-						is_colonial_nation_of = ROOT
-					}
-					save_global_event_target_as = read_to_switch
-					set_country_flag = rebelliouscolony
-				}
-				if = {
-					limit = { ai = no }
-					switch_tag = event_target:read_to_switch
-				}
-				clear_global_event_target = read_to_switch		
+			add_country_modifier = {
+				name = gbr_new_world_dominance
+				duration = -1
 			}
+			custom_tooltip = gbr_dominiate_new_world_at
+		}
+		ai_weight = {
+			factor = 250
 		}
 	}
-	
-	eng_rb_own_thirteen_colonies = {
-	    icon = mission_rb_the_thirteen_colonies
-	    required_missions = { lotf_gb_reorganize_colonies }
-	    completed_by = 1701.1.1
-	    position = 13
 
-	    provinces_to_highlight = {
-		    colonial_region = colonial_eastern_america
-		    NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		    has_discovered = ROOT
-	    }
-
-	    trigger = {
-		    custom_trigger_tooltip = {
-			    tooltip = eng_rb_own_thirteen_colonies.tooltip
-			    num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				    value = 15
-				    colonial_region = colonial_eastern_america
-				    is_city = yes
-			    }
-		    }
-	    }
-
-	    effect = {
-		    add_country_modifier = {
-			    name = "eng_rb_thirteen_colonies_mod"
-			    duration = 7300
-		    }
-	    }
-    }
-	
-	gbr_conquer_inland_india = {
-		icon = mission_viceroyalty_of_the_deccan
-		required_missions = { gbr_establish_first_indian_trade_post }
-		position = 14
+	gbr_establish_first_indian_trade_post = {
+		icon = mission_rb_conquer_bengal
+		required_missions = { gbr_discover_india }
+		position = 8
 		provinces_to_highlight = {
 			superregion = india_superregion
-			has_discovered = ROOT
+			has_port = yes
+			NOT = { owned_by = ROOT }
+		}		
+		trigger = {
+			india_superregion = {
+				has_port = yes
+				owned_by = ROOT
+			}
+		}	
+		effect = {
+			define_advisor = {
+				type = trader
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			country_event_with_insight = {
+				id = flavor_gbr.10
+				insight_tooltip = gbr_establish_first_indian_trade_post_at
+			}
+		}
+		ai_weight = {
+			factor = 250
+		}
+	}
+
+	gbr_conquer_western_india = {
+		icon = mission_conquer_gujarat_dlh
+		required_missions = { gbr_establish_first_indian_trade_post }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				area = tapti_area
+				area = ahmedabad_area
+				area = saurashtra_area
+				area = konkan_area
+				area = malabar_area
+				area = kanara_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_port = no
 		}		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				superregion = india_superregion
-				has_port = no
-				value = 50
+				OR = {
+					area = tapti_area
+					area = ahmedabad_area
+					area = saurashtra_area
+					area = konkan_area
+					area = malabar_area
+					area = kanara_area
+				}
+				value = 20
 			}
 		}	
 		effect = {
@@ -2491,30 +1795,14 @@ gbr_row_3 = {
 						is_subject_of = ROOT
 					}
 				}
-				EIC = {
-					for = {
-						custom_tooltip = gbr_conquer_inland_india_at
-						amount = 10
-						effect = "
-						random_owned_province = {
-							limit = {
-								superregion = india_superregion
-							}
-							add_province_modifier = {
-								name = gbr_influence_of_the_trade_company
-								duration = 9125
-							}
-						}
-						"
+				deccan_region = {
+					limit = {
+						NOT = { is_core = EIC }
+						NOT = { is_permanent_claim = EIC }
 					}
-					tooltip = {
-						add_province_modifier = {
-							name = gbr_influence_of_the_trade_company
-							duration = 9125
-						}
-					}
+					add_permanent_claim = EIC
 				}
-				hindusthan_region = {
+				west_india_region = {
 					limit = {
 						NOT = { is_core = EIC }
 						NOT = { is_permanent_claim = EIC }
@@ -2523,28 +1811,14 @@ gbr_row_3 = {
 				}
 			}
 			else = {
-				for = {
-					custom_tooltip = gbr_conquer_inland_india_at
-					amount = 10
-					effect = "
-					random_owned_province = {
-						limit = {
-							superregion = india_superregion
-						}
-						add_province_modifier = {
-							name = gbr_influence_of_the_trade_company
-							duration = 9125
-						}
+				deccan_region = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					"
+					add_permanent_claim = ROOT
 				}
-				tooltip = {
-					add_province_modifier = {
-						name = gbr_influence_of_the_trade_company
-						duration = 9125
-					}
-				}
-				hindusthan_region = {
+				west_india_region = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -2552,40 +1826,22 @@ gbr_row_3 = {
 					add_permanent_claim = ROOT
 				}
 			}
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
-
-	gbr_masters_of_india = {
-		icon = mission_rb_inland_india
-		required_missions = {
-			gbr_conquer_western_india
-			gbr_conquer_inland_india
-			gbr_conquer_eastern_india
-		}
-		position = 15
-		provinces_to_highlight = {
-			superregion = india_superregion
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}		
-		trigger = { 
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				superregion = india_superregion
-				value = 200
+			504 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = GBR_INDIAN_COASTLINE_CONTROL
+				}
 			}
-		}	
-		effect = {
-			add_permanent_power_projection = {
-				type = 25_permanent_power_projection
-				amount = 25
+			1340 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = GBR_INDIAN_COASTLINE_CONTROL
+				}
 			}
-			add_country_modifier = {
-				name = gbr_emperor_of_india
-				duration = -1
-			}
-			custom_tooltip = gbr_masters_of_india_at
 		}
 		ai_weight = {
 			factor = 250
@@ -2608,8 +1864,8 @@ ave_row_3 = {
 			}
 			tag = AVE
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -2816,7 +2072,7 @@ ave_row_3 = {
 				}
 				add_prestige = 25
 			}
-			custom_tooltip = english_french_act_of_union_vu	#claim tooltip
+			custom_tooltip = english_french_act_of_union_bt	#claim tooltip
 			hidden_effect = {
 				catalonia_area = {
 					limit = {
@@ -3089,7 +2345,7 @@ ave_row_3 = {
 				name = ave_anglo_french_imperium
 				duration = -1
 			}
-			custom_tooltip = ave_claim_the_empire_title_vu
+			custom_tooltip = ave_claim_the_empire_title_bt
 			set_country_flag = ave_automatic_renaming_when_government_changes
 			country_event_with_insight = {
 				id = flavor_gbr.20
@@ -3116,10 +2372,9 @@ gbr_row_4 = {
 				NOT = { has_country_flag = eng_took_ave_branch }
 			}
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -3161,7 +2416,7 @@ gbr_row_4 = {
 	}
 
 	gbr_the_royal_charter = {
-		icon = gbr_the_royal_charter
+		icon = mission_rb_control_the_hansa
 		required_missions = { gbr_end_the_french_conflict }
 		position = 3
 		provinces_to_highlight = {
@@ -3187,111 +2442,84 @@ gbr_row_4 = {
 			factor = 250
 		}
 	}
-	
-	eng_rb_hanseatic_one = {
-		icon = mission_rb_control_the_hansa
-		required_missions = { gbr_the_royal_charter gbr_take_over_the_lowlands }
-		position = 4
-		
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1874
-				province_id = 45
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		
-		ai_weight = {
-			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					1874 = {
-						owner = {
-							alliance_with = ROOT
-						}
-					}
-					45 = {
-						owner = {
-							alliance_with = ROOT
-						}
-					}
-				}
-			}
-		}
-		
-		trigger = { 
-			1874 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			45 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-	
-		effect = {
-			1874 = {
-				add_base_tax = 2
-				add_base_production = 2
-			}
-			45 = {
-				add_base_tax = 2
-				add_base_production = 2
-			}
-			43 = {
-				add_permanent_claim = ROOT
-			}
-			38 = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	
-	eng_rb_hanseatic_two = {
-		icon = mission_rb_hanseatic_east
-		required_missions = { eng_rb_hanseatic_one	}
+
+	gbr_the_mediterranean_isles = {
+		icon = mission_rb_mediterranean_authority
+		required_missions = { gbr_establish_royal_navy }
 		position = 5
-		
 		provinces_to_highlight = {
 			OR = {
-				province_id = 43
-				province_id = 38
+				province_id = 126
+				province_id = 163
+				province_id = 321
+				province_id = 4559
+				area = corsica_sardinia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
-		ai_weight = {
-			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					38 = {
-						owner = {
-							alliance_with = ROOT
-						}
+		trigger = {
+			owns_or_non_sovereign_subject_of = 126
+			owns_or_non_sovereign_subject_of = 163
+			owns_or_non_sovereign_subject_of = 321
+			owns_or_non_sovereign_subject_of = 4559
+			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 100
+			custom_tooltip = gbr_the_mediterranean_isles_tt
+			hidden_effect = {
+				baleares_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					43 = {
-						owner = {
-							alliance_with = ROOT
-						}
+					add_permanent_claim = ROOT
+				}
+				aegean_archipelago_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
+					add_permanent_claim = ROOT
+				}
+				sicily_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				add_permanent_claim_province = {
+					province = 163
+				}
+				add_permanent_claim_province = {
+					province = 142
+				}
+				add_permanent_claim_province = {
+					province = 4698
 				}
 			}
+			126 = {
+				center_of_trade = 1
+			}
+			163 = {
+				center_of_trade = 1
+			}
+			321 = {
+				center_of_trade = 1
+			}
 		}
 		
-		trigger = { 
-			43 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			38 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-	
-		effect = {
-			38 = {
-				add_base_tax = 2
-				add_base_production = 2
+		ai_weight = {
+			factor = 250
+			modifier = {
+				factor = 0
+				NOT = {
+					is_year = 1700
+				}
 			}
 		}
 	}
@@ -3344,322 +2572,11 @@ gbr_row_4 = {
 			factor = 250
 		}
 	}
-	
-	english_triangular_trade = {
-		icon = mission_english_triangular_trade
-		required_missions = { gbr_colonize_caribbeans }
-		position = 7
-		completed_by = 1610.1.1
 
-		provinces_to_highlight = {
-		    OR = {
-			    province_id = 1118
-				province_id = 1249
-				province_id = 1138
-			    province_id = 1139
-				province_id = 1144
-				province_id = 1145
-				province_id = 1146
-				province_id = 1147
-				province_id = 1151
-				province_id = 1152
-				province_id = 1153
-				province_id = 2239
-				province_id = 2254
-				province_id = 2256
-				province_id = 2258
-				province_id = 2278
-				province_id = 2290
-				province_id = 2293
-				province_id = 2294
-				province_id = 7362
-				province_id = 7364
-				province_id = 7365
-				province_id = 7379
-				province_id = 7381
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			OR = {
-			    1118 = { country_or_non_sovereign_subject_holds = ROOT }
-				1249 = { country_or_non_sovereign_subject_holds = ROOT }
-				1138 = { country_or_non_sovereign_subject_holds = ROOT }
-				1139 = { country_or_non_sovereign_subject_holds = ROOT }
-				1144 = { country_or_non_sovereign_subject_holds = ROOT }
-				1145 = { country_or_non_sovereign_subject_holds = ROOT }
-				1146 = { country_or_non_sovereign_subject_holds = ROOT }
-				1147 = { country_or_non_sovereign_subject_holds = ROOT }
-				1151 = { country_or_non_sovereign_subject_holds = ROOT }
-				1152 = { country_or_non_sovereign_subject_holds = ROOT }
-				1153 = { country_or_non_sovereign_subject_holds = ROOT }
-				2239 = { country_or_non_sovereign_subject_holds = ROOT }
-				2254 = { country_or_non_sovereign_subject_holds = ROOT }
-				2256 = { country_or_non_sovereign_subject_holds = ROOT }
-				2258 = { country_or_non_sovereign_subject_holds = ROOT }
-				2278 = { country_or_non_sovereign_subject_holds = ROOT }
-				2290 = { country_or_non_sovereign_subject_holds = ROOT }
-				2293 = { country_or_non_sovereign_subject_holds = ROOT }
-				2294 = { country_or_non_sovereign_subject_holds = ROOT }
-				7362 = { country_or_non_sovereign_subject_holds = ROOT }
-				7364 = { country_or_non_sovereign_subject_holds = ROOT }
-				7365 = { country_or_non_sovereign_subject_holds = ROOT }
-				7379 = { country_or_non_sovereign_subject_holds = ROOT }
-				7381 = { country_or_non_sovereign_subject_holds = ROOT }
-			}
-		}
-
-		effect = {
-            add_permanent_claim = 1148
-			add_permanent_claim = 1150
-			add_permanent_claim = 1154
-		    add_permanent_claim = 1161
-		    add_permanent_claim = 2255
-		    add_permanent_claim = 2257
-			add_permanent_claim = 2281
-			add_permanent_claim = 2285
-		    add_permanent_claim = 7363
-		    add_permanent_claim = 7366
-			add_permanent_claim = 7380
-			add_treasury = 5000
-			add_country_modifier = {
-				name = "eng_triangular_trade"
-				duration = 7300
-			}
-		}
-	}
-	
-	english_british_nigeria = {
-		icon = mission_british_nigeria
-		required_missions = { english_triangular_trade }
-		position = 8
-		completed_by = 1610.1.1
-
-		provinces_to_highlight = {
-		    OR = {
-			    province_id = 1148
-				province_id = 1150
-				province_id = 1154
-			    province_id = 1161
-				province_id = 2281
-				province_id = 2285
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			OR = {
-			    1148 = { country_or_non_sovereign_subject_holds = ROOT }
-				1150 = { country_or_non_sovereign_subject_holds = ROOT }
-				1154 = { country_or_non_sovereign_subject_holds = ROOT }
-				1161 = { country_or_non_sovereign_subject_holds = ROOT }
-				2281 = { country_or_non_sovereign_subject_holds = ROOT }
-				2285 = { country_or_non_sovereign_subject_holds = ROOT }
-			}
-		}
-
-		effect = {
-			add_permanent_claim = 1149
-		    add_permanent_claim = 1155
-			add_permanent_claim = 1157
-			add_permanent_claim = 1160
-			add_permanent_claim = 2280
-			add_permanent_claim = 2283
-			add_treasury = 2500
-			add_country_modifier = {
-				name = "eng_lake_chad"
-				duration = 5475
-			}
-		}
-	}
-	
-	lotf_gb_plymouth = {
-		icon = mission_settlers_north_america
-		required_missions = { lotf_gb_jamestown }	
-		position = 9
-		provinces_to_highlight = {
-			province_id = 2561
-		}	
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = lotf_gb_plymouth_tt
-				2561 = { country_or_non_sovereign_subject_holds = ROOT is_city = yes }
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = colonial_buffs_3
-				duration = 7300
-			}
-			2561 = {
-				if = {
-					limit = {
-						has_building = marketplace
-					}
-					add_building = trade_depot
-				}
-				else = {
-					add_building = marketplace
-				}
-			change_trade_goods = fish
-			add_base_tax = 1
-			add_base_production = 3
-			add_base_manpower = 1
-			}
-		}
-	}
-	
-	lotf_gb_invest_northern_colonies = {
-		icon = renaissance_city
-		required_missions = { lotf_gb_plymouth }
-        position = 11
-		provinces_to_highlight = {
-			colonial_region = colonial_eastern_america
-			country_or_non_sovereign_subject_holds = ROOT
-			if = {
-				limit = {
-					has_global_flag = trade_goods_expanded_mod_active
-				}
-				OR = {
-					trade_goods = fur
-					trade_goods = fish
-					trade_goods = seafood
-					trade_goods = whaling
-				}
-				NOT = {
-					AND = {
-						has_production_building_trigger = yes
-						base_production = 8
-					}
-				}
-			}
-			else = {
-				OR = {
-					trade_goods = fur
-					trade_goods = fish
-				}
-				NOT =  {
-					AND = {
-						has_production_building_trigger = yes
-						base_production = 8
-					}
-				}
-			}
-		}		
-		trigger = {
-			if = {
-				limit = {
-					has_global_flag = trade_goods_expanded_mod_active
-				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					colonial_region = colonial_eastern_america
-					value = 3
-					OR = {
-						trade_goods = fur
-						trade_goods = fish
-						trade_goods = seafood
-						trade_goods = whaling
-					}
-					has_production_building_trigger = yes
-					base_production = 8
-				}
-			}
-			else = {
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					colonial_region = colonial_eastern_america
-					value = 3
-					OR = {
-						trade_goods = fur
-						trade_goods = fish
-					}
-				has_production_building_trigger = yes
-				base_production = 8
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = lotf_gb_invest_southern_colonies_tt
-			hidden_effect = {
-				colonial_eastern_america = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						has_production_building_trigger = yes
-						base_production = 8
-					}
-					if = {
-						limit = { has_global_flag = trade_goods_expanded_mod_active }
-						if = {
-							limit = {
-								OR = {
-									trade_goods = fur
-									trade_goods = whaling
-								}
-							}
-							add_building = tradecompany
-							add_province_modifier = {
-								name = southern_plantations_1
-								duration = 7300	
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									trade_goods = fish
-									trade_goods = seafood
-								}
-							}
-							add_building = wharf
-							add_province_modifier = {
-								name = southern_plantations_1
-								duration = 7300	
-							}
-						}	
-					}
-					else = {
-						if = {
-							limit = {
-								trade_goods = fish
-							}
-							add_building = wharf
-							add_province_modifier = {
-								name = southern_plantations_1
-								duration = 7300	
-							}
-						}
-						else_if = {
-							limit = {
-								trade_goods = fur
-							}
-							add_building = tradecompany	
-							add_province_modifier = {
-								name = southern_plantations_1
-								duration = 7300	
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						newfoundland_area = {
-							type = all
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					968 = { add_center_of_trade_level = 1 }
-					967 = { center_of_trade = 1 }
-				}
-			}
-			custom_tooltip = lotf_gb_invest_northern_colonies_bonus_tt
-		}
-	}
-	
 	gbr_discover_india = {
 		icon = mission_coromandel_expansion
 		required_missions = { gbr_seize_the_cape }
-		position = 12
+		position = 7
 		provinces_to_highlight = {
 			OR = {
 				region = west_india_region
@@ -3759,53 +2676,83 @@ gbr_row_4 = {
 			factor = 250
 		}
 	}
-	
-	gbr_establish_first_indian_trade_post = {
-		icon = mission_rb_conquer_bengal
-		required_missions = { gbr_discover_india }
-		position = 13
+
+	gbr_colonize_the_spice_isles = {
+		icon = mission_rb_colonise_spice_islands
+		required_missions = { gbr_chart_the_southern_sea }
+		position = 8
 		provinces_to_highlight = {
-			superregion = india_superregion
-			has_port = yes
+			OR = {
+				trade_company_region = trade_company_moluccas
+				trade_company_region = trade_company_indonesia
+			}
+			is_sea = no
 			NOT = { owned_by = ROOT }
-		}		
+			has_discovered = ROOT
+		}
 		trigger = {
-			india_superregion = {
-				has_port = yes
-				owned_by = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					trade_company_region = trade_company_moluccas
+					trade_company_region = trade_company_indonesia
+				}
+				is_city = yes
+				value = 4
 			}
-		}	
+		}
 		effect = {
-			define_advisor = {
-				type = trader
-				skill = 3
-				cost_multiplier = 0.25
+			unlock_issue = {
+				issue = the_spice_act
 			}
-			country_event_with_insight = {
-				id = flavor_gbr.10
-				insight_tooltip = gbr_establish_first_indian_trade_post_at
+			kutai_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			brunei_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			if = {
+				limit = {
+					tag = GBR
+				}
+				west_bengal_area = {
+					limit = {
+						NOT = { is_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 		ai_weight = {
 			factor = 250
 		}
 	}
-	
-	gbr_conquer_eastern_india = {
-		icon = mission_unite_bengal
+
+	gbr_conquer_inland_india = {
+		icon = mission_viceroyalty_of_the_deccan
 		required_missions = { gbr_establish_first_indian_trade_post }
-		position = 14
+		position = 9
 		provinces_to_highlight = {
-			region = bengal_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			superregion = india_superregion
 			has_discovered = ROOT
-		}
-		trigger = {
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_port = no
+		}		
+		trigger = { 
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = bengal_region
-				value = 8
+				superregion = india_superregion
+				has_port = no
+				value = 50
 			}
-		}
+		}	
 		effect = {
 			if = {
 				limit = {
@@ -3814,7 +2761,30 @@ gbr_row_4 = {
 						is_subject_of = ROOT
 					}
 				}
-				bengal_region = {
+				EIC = {
+					for = {
+						custom_tooltip = gbr_conquer_inland_india_at
+						amount = 10
+						effect = "
+						random_owned_province = {
+							limit = {
+								superregion = india_superregion
+							}
+							add_province_modifier = {
+								name = gbr_influence_of_the_trade_company
+								duration = 9125
+							}
+						}
+						"
+					}
+					tooltip = {
+						add_province_modifier = {
+							name = gbr_influence_of_the_trade_company
+							duration = 9125
+						}
+					}
+				}
+				hindusthan_region = {
 					limit = {
 						NOT = { is_core = EIC }
 						NOT = { is_permanent_claim = EIC }
@@ -3823,7 +2793,28 @@ gbr_row_4 = {
 				}
 			}
 			else = {
-				bengal_region = {
+				for = {
+					custom_tooltip = gbr_conquer_inland_india_at
+					amount = 10
+					effect = "
+					random_owned_province = {
+						limit = {
+							superregion = india_superregion
+						}
+						add_province_modifier = {
+							name = gbr_influence_of_the_trade_company
+							duration = 9125
+						}
+					}
+					"
+				}
+				tooltip = {
+					add_province_modifier = {
+						name = gbr_influence_of_the_trade_company
+						duration = 9125
+					}
+				}
+				hindusthan_region = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -3831,153 +2822,44 @@ gbr_row_4 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			add_country_modifier = {
-				name = "east_india_trade_rush"
-				duration = 9125
-			}
 		}
 		ai_weight = {
 			factor = 250
 		}
 	}
-	
-	eng_rb_british_burma = {
-	    icon = mission_rb_british_burma
-	    required_missions = { gbr_conquer_eastern_india }
-	    completed_by = 1824.1.1
-		position = 15
 
-	    provinces_to_highlight = {
-			eng_rb_british_burma_provinces = yes
+	gbr_masters_of_india = {
+		icon = mission_rb_inland_india
+		required_missions = {
+			gbr_conquer_western_india
+			gbr_conquer_inland_india
+			gbr_conquer_eastern_india
+		}
+		position = 10
+		provinces_to_highlight = {
+			superregion = india_superregion
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-	    trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=eng_rb_british_burma_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+		}		
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				superregion = india_superregion
+				value = 200
 			}
+		}	
+		effect = {
+			add_permanent_power_projection = {
+				type = 25_permanent_power_projection
+				amount = 25
+			}
+			add_country_modifier = {
+				name = gbr_emperor_of_india
+				duration = -1
+			}
+			custom_tooltip = gbr_masters_of_india_at
 		}
-
-	    effect = {
-	        add_treasury = 10000
-		    add_country_modifier = {
-		        name = "eng_rb_the_british_raj"
-		        duration = 7300
-		    }
-		    add_permanent_claim = 8649
-	    }
-    }
-	
-	eng_rb_british_malaya = {
-	    icon = mission_rb_british_malaya
-	    required_missions = { eng_rb_british_burma }
-	    completed_by = 1819.1.1
-	    position = 16
-
-	    provinces_to_highlight = {
-		    province_id = 8649
-		    NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		    has_discovered = ROOT
-	    }
-
-	    trigger = {
-	        8649 = { country_or_non_sovereign_subject_holds = ROOT }
-	    }
-
-	    effect = {
-	        add_treasury = 25000
-		    add_permanent_claim = 597
-		    add_permanent_claim = 636
-		    add_permanent_claim = 2686
-		    add_country_modifier = {
-			    name = "eng_rb_british_malaya"
-			    duration = 5475
-		    }
-		    kedah_area = {
-			    limit = {
-				    NOT = { is_core = ROOT }
-				    NOT = { owned_by = ROOT }
-			    }
-			    add_permanent_claim = ROOT
-		    }
-		    malacca_area = {
-			    limit = {
-				    NOT = { is_core = ROOT }
-				    NOT = { owned_by = ROOT }
-			    }
-			    add_permanent_claim = ROOT
-		    }
-		    malaya_area = {
-			    limit = {
-			        NOT = { is_core = ROOT }
-			        NOT = { owned_by = ROOT }
-			    } 
-			    add_permanent_claim = ROOT
-		    }
-	    }
-	}
-	    
-	eng_rb_british_borneo = {
-	    icon = mission_rb_british_borneo
-	    required_missions = { eng_rb_british_malaya }
-	    completed_by = 1846.1.1
-	    position = 17
-
-	    provinces_to_highlight = {
-	   	    province_id = 636
-	        NOT = { country_or_non_sovereign_subject_holds = ROOT }
-	        has_discovered = ROOT
-	    }
-
-	    trigger = {
-			636 = { country_or_non_sovereign_subject_holds = ROOT }
-	    }
-
-	    effect = {
-	        add_treasury = 2500
-		    add_permanent_claim = 637
-		    add_permanent_claim = 2703
-		    add_permanent_claim = 8700
-		    add_permanent_claim = 7164
-		    add_country_modifier = {
-		        name = "eng_rb_british_borneo"
-		        duration = 5475
-		    }
-		    brunei_area = {
-		        limit = {
-			        NOT = { is_core = ROOT }
-			        NOT = { owned_by = ROOT }
-		        }
-		        add_permanent_claim = ROOT
-		    }
-	    }
-    }
-	
-	eng_rb_british_kowloon = {
-	    icon = mission_rb_british_kowloon
-	    required_missions = { eng_rb_british_borneo }
-	    completed_by = 1846.1.1
-		position = 18
-
-	    provinces_to_highlight = {
-	        province_id = 7164
-	        NOT = { country_or_non_sovereign_subject_holds = ROOT }
-	        has_discovered = ROOT
-	    }
-
-	    trigger = {
-			7164 = { country_or_non_sovereign_subject_holds = ROOT }
-	    }
-
-	    effect = {
-	        add_treasury = 15000
-	        add_country_modifier = {
-		        name = "eng_rb_british_hong_kong"
-		        duration = 36135
-		    }
-	    }
+		ai_weight = {
+			factor = 250
+		}
 	}
 }
 ave_row_4 = {
@@ -3996,8 +2878,8 @@ ave_row_4 = {
 			}
 			tag = AVE
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -4164,7 +3046,7 @@ ave_row_4 = {
 						name = ave_imperial_favoritism
 						duration = 7300	
 					}"
-					second_custom_tooltip = ave_deal_with_the_hre_vu
+					second_custom_tooltip = ave_deal_with_the_hre_bt
 					second_limit = "
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						OR = {
@@ -4368,10 +3250,9 @@ gbr_ave_the_royal_court_slot = {
 			tag = ENG
 			tag = AVE
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -4423,10 +3304,9 @@ gbr_row_5 = {
 				NOT = { has_country_flag = eng_took_ave_branch }
 			}
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -4628,328 +3508,249 @@ gbr_row_5 = {
 			factor = 250
 		}
 	}
-	
-	eng_take_gibraltar = {
-		icon = mission_rb_take_gibraltar
-		required_missions = { eng_rb_mighty_navy }
-		completed_by = 1713.4.11
+
+	gbr_sail_around_africa = {
+		icon = mission_west_african_ports
+		required_missions = { gbr_establish_royal_navy }
 		position = 5
-
 		provinces_to_highlight = {
+			NOT = { has_discovered = ROOT }
 			OR = {
-			    province_id = 226
-			    province_id = 345
-			    province_id = 4559
+				region = east_africa_region
+				region = south_africa_region
 			}
-			NOT = { owned_by = ROOT }
+			has_port = yes
 		}
-
-		ai_weight = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					is_year = 1700
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = gbr_sail_around_africa_ct
+				east_africa_region = {
+					has_discovered = ROOT
+					has_port = yes
+				}
+				south_africa_region = {
+					has_discovered = ROOT
+					has_port = yes
 				}
 			}
-		}
-
-		trigger = {
-		    OR = {
-			    owns_or_non_sovereign_subject_of = 226
-				226 = {
-					owner = {
-						war_with = ROOT
-					}
-				}
-				226 = {
-				    OR = {
-					    AND = {
-							country_or_non_sovereign_subject_holds = SPA
-							is_core = owner
-						}
-						AND = {
-						    country_or_non_sovereign_subject_holds = BSP
-							is_core = owner
-						}
-						AND = {
-						    country_or_non_sovereign_subject_holds = SPB
-							is_core = owner
-						}
-						AND = {
-						    country_or_non_sovereign_subject_holds = BBS
-							is_core = owner
-						}
-						AND = {
-						    country_or_non_sovereign_subject_holds = CSP
-							is_core = owner
-						}
-					}
-				}
-			}
-		}
-
+		}	
 		effect = {
-			add_country_modifier = {
-				name = "eng_rb_gibraltar_mod"
-				duration = -1
+			create_colony_mission_reward = {
+				province = 1177
 			}
-			226 = { #Gibraltar
-				add_permanent_claim = ROOT
-			}
-			345 = { #Abda
-				add_permanent_claim = ROOT
-			}
-			4559 = { #Minorca
-				add_permanent_claim = ROOT
-			}
+		}
+		ai_weight = {
+			factor = 250
 		}
 	}
-	
-	gbr_the_mediterranean_isles = {
-		icon = mission_rb_mediterranean_authority
-		required_missions = { eng_take_gibraltar }
+
+	gbr_seize_the_cape = {
+		icon = mission_colonial
+		required_missions = { gbr_sail_around_africa }
 		position = 6
 		provinces_to_highlight = {
 			OR = {
-				province_id = 126
-				province_id = 163
-				province_id = 321
-				province_id = 4559
-				area = corsica_sardinia_area
+				province_id = 833
+				province_id = 1177
+				province_id = 1179
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { owned_by = ROOT }
+			has_discovered = ROOT
 		}
 		trigger = {
-			owns_or_non_sovereign_subject_of = 126
-			owns_or_non_sovereign_subject_of = 163
-			owns_or_non_sovereign_subject_of = 321
-			owns_or_non_sovereign_subject_of = 4559
-			corsica_sardinia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			custom_trigger_tooltip = {
+				tooltip = ned_south_africa_colony.tooltip
+				OR = {
+					833 = {
+						owned_by = ROOT
+						is_city = yes
+					}
+					1177 = {
+						owned_by = ROOT
+						is_city = yes
+					}
+					1179 = {
+						owned_by = ROOT
+						is_city = yes
+					}
+				}
 			}
 		}
 		effect = {
-			add_dip_power = 100
-			custom_tooltip = gbr_the_mediterranean_isles_tt
-			hidden_effect = {
-				baleares_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+			random_list = {
+				1 = {
+					trigger = {
+						owns = 833
+						NOT = { owns = 1177 }
 					}
-					add_permanent_claim = ROOT
-				}
-				aegean_archipelago_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+					833 = {
+						add_building = stock_exchange
 					}
-					add_permanent_claim = ROOT
 				}
-				sicily_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+				1 = {
+					trigger = {
+						owns = 1179
+						NOT = { owns = 1177 }
 					}
-					add_permanent_claim = ROOT
+					1179 = {
+						add_building = stock_exchange
+					}
 				}
-				add_permanent_claim_province = {
-					province = 163
+				1 = {
+					trigger = {
+						owns = 1177
+					}
+					1177 = {
+						add_building = stock_exchange
+					}
 				}
-				add_permanent_claim_province = {
-					province = 142
+				1 = {
+					trigger = {
+						NOT = { owns = 833 }
+						NOT = { owns = 1177 }
+						NOT = { owns = 1179 }
+					}
+					tooltip = {
+						random_list = {
+							1 = { 833  = { add_building = stock_exchange } }
+							1 = { 1177 = { add_building = stock_exchange } }
+							1 = { 1179 = { add_building = stock_exchange } }
+						}
+					}
 				}
-				add_permanent_claim_province = {
-					province = 4698
-				}
-			}
-			126 = {
-				center_of_trade = 1
-			}
-			163 = {
-				center_of_trade = 1
-			}
-			321 = {
-				center_of_trade = 1
 			}
 		}
-		
 		ai_weight = {
 			factor = 250
-			modifier = {
-				factor = 0
+		}
+	}
+
+	gbr_chart_the_southern_sea = {
+		icon = mission_exploration
+		required_missions = { gbr_seize_the_cape }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				colonial_region = colonial_australia
+				trade_company_region = trade_company_indonesia
+				trade_company_region = trade_company_moluccas
+			}
+			NOT = { has_discovered = ROOT }
+		}		
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = ned_spice_australia.tooltip
+				colonial_australia = {
+					has_discovered = ROOT
+				}
+				trade_company_indonesia = {
+					has_discovered = ROOT
+				}
+				trade_company_moluccas = {
+					has_discovered = ROOT
+				}
+			}
+		}	
+		effect = {
+			add_country_modifier = {
+				name = "eng_australian_colony"
+				duration = 9125
+			}
+		}
+		ai_weight = {
+			factor = 250
+		}
+	}
+
+	gbr_colonize_australia = {
+		icon = colonize_australia
+		required_missions = { gbr_chart_the_southern_sea }
+		position = 8
+		provinces_to_highlight = {
+			region = australia_region
+			ROOT = {
 				NOT = {
-					is_year = 1700
+					any_subject_country = {
+						is_colonial_nation = yes
+						capital_scope = {
+							colonial_region = colonial_australia
+						}
+						any_owned_province = {
+							region = australia_region
+						}
+					}
 				}
 			}
 		}
-	}
-	
-	eng_rb_take_palestine = {
-	    icon = mission_rb_take_palestine
-	    required_missions = { eng_take_delta }
-	    position = 8
-
-	    provinces_to_highlight = {
-		    area = palestine_area
-		    NOT = { country_or_non_sovereign_subject_holds = ROOT }
-	    }
-
-	    trigger = {
-	        palestine_area = {
-			    type = all
-			    country_or_non_sovereign_subject_holds = ROOT
-		    }
-	    }
-
-	    effect = {
-	        add_treasury = 3750
-		    add_dip_power = 100
-		    add_country_modifier = {
-			    name = "eng_rb_conquest_of_palestine"
-			    duration = 5475
-		    }
-		    trans_jordan_area = {
-			    limit = {
-				    NOT = { is_core = ROOT }
-				    NOT = { owned_by = ROOT }
-			    }
-			    add_permanent_claim = ROOT
-		    }
-	    }
-    }
-
-    eng_rb_take_mesopotamia = {
-	    icon = mission_rb_take_mesopotamia
-	    required_missions = { eng_rb_take_palestine }
-		position = 9
-
-	    provinces_to_highlight = {
-		    area = iraq_arabi_area
-		    NOT = { country_or_non_sovereign_subject_holds = ROOT }
-	    }
-
-	    trigger = {
-	        iraq_arabi_area = {
-			    type = all
-			    country_or_non_sovereign_subject_holds = ROOT
-		    }
-	    }
-
-	    effect = {
-	        add_treasury = 7500
-		    add_dip_power = 100
-		    add_permanent_claim = 411
-		    add_permanent_claim = 415
-		    add_permanent_claim = 2309
-		    add_permanent_claim = 4293
-		    add_permanent_claim = 4294
-		    add_country_modifier = {
-			    name = "eng_rb_mesopotamia"
-			    duration = 5475
-		    }
-		    basra_area = {
-			    limit = {
-				    NOT = { is_core = ROOT }
-				    NOT = { owned_by = ROOT }
-			    }
-			    add_permanent_claim = ROOT
-		    }
-	    }
-    }
-	
-	eng_take_abyssinia = {
-	    icon = mission_abyssinia
-		required_missions = { eng_rb_take_somaliland }
-		position = 18
-
-		provinces_to_highlight = {
-			OR = {
-				area = ajuuran_area
-				area = aussa_area
-			    area = central_ethiopia_area
-				area = damot_area
-				area = hadiya_area
-				area = ifat_area
-				area = majarteen_area
-				area = medri_bahri_area
-				area = mogadishu_area
-				area = northern_swahili_coast_area
-			    area = ogaden_area
-				area = shewa_area
-				area = southern_ethiopia_area
-			    area = tigray_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
 		trigger = {
-		    ajuuran_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			aussa_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			central_ethiopia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			damot_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			hadiya_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ifat_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			majarteen_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			medri_bahri_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mogadishu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			northern_swahili_coast_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ogaden_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shewa_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			southern_ethiopia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tigray_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			any_subject_country = {
+				is_colonial_nation = yes
+				capital_scope = {
+					colonial_region = colonial_australia
+				}
+				any_owned_province = {
+					region = australia_region
+				}
 			}
 		}
-
 		effect = {
-		    add_treasury = 5000
-		    add_country_modifier = {
-				name = "eng_conquer_abyssinia"
-				duration = 7300
+			add_country_modifier = {
+				name = gbr_colonial_australia
+				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 250
+		}
+	}
+
+	gbr_conquer_eastern_india = {
+		icon = mission_unite_bengal
+		required_missions = { gbr_establish_first_indian_trade_post }
+		position = 9
+		provinces_to_highlight = {
+			region = bengal_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = ROOT
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = bengal_region
+				value = 8
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = EIC
+					EIC = {
+						is_subject_of = ROOT
+					}
+				}
+				bengal_region = {
+					limit = {
+						NOT = { is_core = EIC }
+						NOT = { is_permanent_claim = EIC }
+					}
+					add_permanent_claim = EIC
+				}
+			}
+			else = {
+				bengal_region = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = "east_india_trade_rush"
+				duration = 9125
+			}
+		}
+		ai_weight = {
+			factor = 250
 		}
 	}
 }
@@ -4969,8 +3770,8 @@ ave_row_5 = {
 			}
 			tag = AVE
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -5338,41 +4139,16 @@ gbr_ave_row_1 = {
 			tag = ENG
 			tag = AVE
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
-	eng_rb_trade_value = {
-		icon = mission_rb_grow_the_channel
-		required_missions = { gbr_a_house_divided }
-		position = 20
-
-		provinces_to_highlight = {
-			province_id = 1269
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			1269 = {
-				highest_value_trade_node = yes
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "eng_rb_trade_value_mod"
-				duration = -1
-			}
-		}
-	}
 
 	gbr_ave_monopolize_the_channel = {
 		icon = mission_rb_monopolize_the_channel
-		required_missions = { eng_rb_trade_value }
-		position = 21
+		required_missions = { gbr_a_house_divided }
+		position = 11		
 		provinces_to_highlight = {
 			if = {
 				limit = { is_random_new_world = no }
@@ -5424,54 +4200,14 @@ gbr_ave_row_1 = {
 			factor = 250
 		}
 	}
-	
-	eng_rb_furnaces = {
-		icon = mission_rb_build_furnaces
-		required_missions = { gbr_ave_monopolize_the_channel }
-		position = 22
-
-		provinces_to_highlight = {
-			OR = {
-				has_latent_trade_goods = coal
-				trade_goods = coal
-			}
-			region = british_isles_region
-			owned_by = ROOT
-			NOT = { has_building = furnace }
-		}
-
-		trigger = {
-			#NB: Add every possible coal-producing province here.
-			calc_true_if = {
-				desc = eng_rb_furnaces_tt
-				amount = 5
-				all_province = {
-					OR = {
-						has_latent_trade_goods = coal
-						trade_goods = coal
-					}
-					region = british_isles_region
-					owned_by = ROOT
-					has_building = furnace
-				}
-			}
-		}
-
-		effect = {
-			capital_scope = { #I expect this to push London way up in terms of dev, so not quite giving it +18 dev (Vanilla does +9).
-				add_base_tax = 5
-				add_base_production = 5
-				add_base_manpower = 4
-			}
-		}
-	}
 
 	gbr_ave_center_of_worlds_trade = {
 		icon = mission_control_the_channel
 		required_missions = {
-			eng_rb_furnaces
+			gbr_ave_monopolize_the_channel
+			gbr_ave_early_industry
 		}
-		position = 23
+		position = 12
 		provinces_to_highlight = {
 			province_id = 1269
 		}		
@@ -5498,44 +4234,7 @@ gbr_ave_row_1 = {
 			factor = 250
 		}
 	}
-	
-	gbr_rule_britannia = {
-		icon = mission_rule_britannia
-		required_missions = { gbr_ave_center_of_worlds_trade }
-		position = 24
-		provinces_to_highlight = {
-		}		
-		trigger = {
-			num_of_special_units = { 
-				special_unit_category = man_of_war
-				type = heavy_ship 
-				value = 40
-			}
-			is_bankrupt = no
-			is_in_deficit = no
-			if = {
-				limit = { has_dlc = "Golden Century" }
-				has_flagship = yes
-			}
-			navy_size = 200
-			total_own_and_non_tributary_subject_development = 1500
-		}	
-		effect = {
-			unlock_issue = {
-				issue = acts_of_impressment
-			}
-			add_country_modifier = {
-				name = gbr_naval_dominance
-				duration = -1
-			}
-			#custom_tooltip = gbr_rule_britannia_at	#Modifier gets leveled up through the parliament actions
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
 }
-
 gbr_ave_row_2 = {
 	slot = 2
 	generic = no
@@ -5549,17 +4248,16 @@ gbr_ave_row_2 = {
 			tag = ENG
 			tag = AVE
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
 	gbr_a_house_divided = {
 		icon = mission_alliances
 		required_missions = {  }
-		position = 19
+		position = 10
 		provinces_to_highlight = {
 		}		
 		trigger = { 
@@ -5603,7 +4301,7 @@ gbr_ave_row_2 = {
 		required_missions = {
 			gbr_a_house_divided
 		}
-		position = 20
+		position = 11
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -5683,7 +4381,7 @@ gbr_ave_row_2 = {
 			gbr_ave_early_industry
 			gbr_ave_english_renaissance
 		}
-		position = 21
+		position = 12
 		provinces_to_highlight = {
 		}		
 		trigger = {
@@ -5727,17 +4425,16 @@ gbr_ave_row_3 = {
 			tag = ENG
 			tag = AVE
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
 	gbr_ave_english_renaissance = {
 		icon = mission_english_renaissance
 		required_missions = { gbr_a_house_divided }
-		position = 20
+		position = 11
 		provinces_to_highlight = {
 			is_capital_of = ROOT
 			is_prosperous = no
@@ -5777,7 +4474,7 @@ gbr_ave_row_3 = {
 	gbr_ave_renovate_universities = {
 		icon = mission_rb_renovate_oxbridge
 		required_missions = { gbr_ave_english_renaissance }
-		position = 21
+		position = 12
 		
 		provinces_to_highlight = {
 			OR = {
@@ -5881,17 +4578,16 @@ gbr_ave_row_4 = {
 			tag = ENG
 			tag = AVE
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
 	gbr_ave_the_men_of_war = {
-		icon = indonesian_trade
+		icon = mission_rb_grow_the_channel
 		required_missions = { gbr_a_house_divided }
-		position = 20
+		position = 11
 		provinces_to_highlight = {
 			owned_by = ROOT
 			has_port = yes
@@ -5928,7 +4624,7 @@ gbr_ave_row_4 = {
 			gbr_ave_the_men_of_war
 			gbr_ave_create_standing_army
 		}
-		position = 21
+		position = 12
 		provinces_to_highlight = {
 		}		
 		trigger = {
@@ -5946,7 +4642,6 @@ gbr_ave_row_4 = {
 		}
 	}
 }
-
 gbr_ave_row_5 = {
 	slot = 5
 	generic = no
@@ -5960,17 +4655,16 @@ gbr_ave_row_5 = {
 			tag = ENG
 			tag = AVE
 			tag = GBR
-			tag = UNK
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
 	gbr_ave_create_standing_army = {
 		icon = mission_assemble_an_army
 		required_missions = { gbr_a_house_divided }
-		position = 20
+		position = 11
 		provinces_to_highlight = {
 		}		
 		trigger = {
@@ -6010,7 +4704,7 @@ gbr_ave_row_5 = {
 	gbr_ave_the_redcoats = {
 		icon = mission_redcoats
 		required_missions = { gbr_ave_create_standing_army }
-		position = 21
+		position = 12
 		provinces_to_highlight = {
 		}		
 		trigger = { 
@@ -6032,1170 +4726,6 @@ gbr_ave_row_5 = {
 		}
 		ai_weight = {
 			factor = 250
-		}
-	}
-}
-
-gbr_row_6 = {
-	slot = 6
-	generic = no
-	ai = yes	
-	potential_on_load = {
-		has_dlc = "Domination"
-	}
-	potential = {
-		has_dlc = "Domination"
-		OR = {
-			AND = {
-				tag = ENG
-				NOT = { has_country_flag = eng_took_ave_branch }
-			}
-			tag = GBR
-			tag = UNK
-		}
-		has_country_flag = use_paradox_missions
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	eng_take_hanover = {
-		icon = mission_take_hanover
-		required_missions = { gbr_allies_on_the_mainland }
-		position = 3
-
-		provinces_to_highlight = {
-		    OR = {
-			    area = east_frisia_area
-				province_id = 56
-				province_id = 69
-				province_id = 86
-				province_id = 2971
-				province_id = 3202
-				province_id = 7506
-				province_id = 7507
-				province_id = 7508
-				province_id = 7509
-				province_id = 7512
-				province_id = 7513
-				province_id = 7514
-				province_id = 7515
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-		    OR = {
-			    56 = { country_or_non_sovereign_subject_holds = ROOT }
-				69 = { country_or_non_sovereign_subject_holds = ROOT }
-				86 = { country_or_non_sovereign_subject_holds = ROOT }
-				2971 = { country_or_non_sovereign_subject_holds = ROOT }
-				3202 = { country_or_non_sovereign_subject_holds = ROOT }
-				7506 = { country_or_non_sovereign_subject_holds = ROOT }
-				7507 = { country_or_non_sovereign_subject_holds = ROOT }
-				7508 = { country_or_non_sovereign_subject_holds = ROOT }
-				7509 = { country_or_non_sovereign_subject_holds = ROOT }
-				7512 = { country_or_non_sovereign_subject_holds = ROOT }
-				7513 = { country_or_non_sovereign_subject_holds = ROOT }
-				7514 = { country_or_non_sovereign_subject_holds = ROOT }
-				7515 = { country_or_non_sovereign_subject_holds = ROOT }
-			}
-		    east_frisia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		effect = {
-		    add_treasury = 2500
-			add_dip_power = 100
-			add_country_modifier = {
-				name = "eng_conquest_of_hanover"
-				duration = -1
-			}
-			north_westphalia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			oldenburg_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			weser_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	eng_hre_electors = {
-		icon = mission_control_electors
-		required_missions = { gbr_take_over_the_lowlands eng_take_hanover }
-		position = 4
-
-		trigger = {
-			if = {
-				limit = {
-					num_of_electors = 3
-				}
-				OR = {
-					calc_true_if = {
-						amount = 3
-						all_elector = {
-							preferred_emperor = ROOT
-						}
-					}
-					calc_true_if = {
-						amount = 3
-						all_elector = {
-							vassal_of = ROOT
-						}
-					}
-				}
-				else = {
-					NOT = { hre_size = 1 }
-					NOT = { exists = HLR }
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "eng_hre_relations"
-				duration = 10950
-			}
-		}
-	}
-	
-	eng_hre_emperor = {
-		icon = mission_ascendant
-		required_missions = { eng_hre_electors }
-		position = 5
-
-		trigger = {
-			OR = {
-				ROOT = {
-					is_emperor = yes
-					if = {
-						limit = {
-							has_dlc = "Emperor"
-						}
-						hre_reform_passed = emperor_erbkaisertum
-					}
-					else = {
-						hre_reform_passed = erbkaisertum
-					}
-				}
-				AND = {
-					NOT = { hre_size = 1 }
-					NOT = { exists = HLR }
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "eng_rb_imperial_ban_mod"
-				duration = 7300
-			}
-		}
-	}
-	
-	eng_rb_take_baleares = {
-		icon = mission_rb_increase_our_reach
-		required_missions = { eng_take_gibraltar }
-		position = 6
-
-		provinces_to_highlight = {
-			eng_rb_take_baleares_provinces = yes
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-			4559 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		effect = {
-		    add_country_modifier = {
-				name = "eng_rb_menorca"
-				duration = -1
-			}
-		    cyprus_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			delta_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		    eastern_mediterrenean_islands_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			northern_epirus_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			126 = { #Malta
-				add_permanent_claim = ROOT
-			}
-			320 = { #Rhodes
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	
-	eng_take_delta = {
-		icon = mission_rb_seize_alexandria
-		required_missions = {
-		     eng_rb_take_baleares
-		     gbr_the_mediterranean_isles
-		}
-		position = 7
-
-		provinces_to_highlight = {
-			area = delta_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-			delta_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		effect = {
-		    add_treasury = 10000
-		    add_country_modifier = {
-				name = "the_nile_delta"
-				duration = 5475
-			}
-		    bahari_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			al_wahat_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		    cyrenaica_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	
-	eng_take_bahari = {
-		icon = mission_rb_egyptian_authority
-		required_missions = { eng_take_delta }
-		position = 14
-
-		provinces_to_highlight = {
-			eng_rb_take_bahari_provinces = yes
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
-				provinces=eng_rb_take_bahari_provinces
-				owner_type=country_or_non_sovereign_subject_holds
-			}
-		}
-
-		effect = {
-		    add_treasury = 7500
-		    add_country_modifier = {
-				name = "land_of_the_pharaohs"
-				duration = 5475
-			}
-			358 = {
-				add_trade_modifier = {
-					who = root
-					duration = -1
-					power = 50
-					key = alexandria_ambition
-				}
-			}
-			said_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			vostani_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	
-	eng_take_nubia_and_lower_sudan = {
-		icon = mission_rb_nubia_and_sudan
-		required_missions = { eng_take_bahari }
-		position = 15
-
-		provinces_to_highlight = {
-		    OR = {
-			    area = dongola_area
-				area = lower_nubia_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-			dongola_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			lower_nubia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		effect = {
-		    add_treasury = 2500
-			kurdufan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			sennar_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_nubia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			white_nile_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	eng_take_nubia_and_upper_sudan = {
-		icon = mission_rb_source_of_the_nile
-		required_missions = { eng_take_nubia_and_lower_sudan }
-		position = 16
-
-		provinces_to_highlight = {
-		    OR = {
-			    area = kurdufan_area
-				area = sennar_area
-				area = upper_nubia_area
-				area = white_nile_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-		  butana_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kurdufan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			sennar_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			upper_nubia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			white_nile_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		effect = {
-		    add_treasury = 1250
-		    add_country_modifier = {
-				name = "nubia_and_the_sudan"
-				duration = 5475
-			}
-			bunyoro_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			kenya_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			somaliland_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-	    }
-	}
-	
-	eng_rb_take_somaliland = {
-        icon = mission_rb_take_somaliland
-	    required_missions = { eng_take_nubia_and_upper_sudan }
-	    position = 17
-
-	    provinces_to_highlight = {
-		    area = somaliland_area
-		    NOT = { country_or_non_sovereign_subject_holds = ROOT }
-	    }
-
-	    trigger = {
-	        somaliland_area = {
-			    type = all
-			    country_or_non_sovereign_subject_holds = ROOT
-		    }
-	    }
-
-	    effect = {
-	        add_treasury = 1250
-	        add_country_modifier = {
-			    name = "eng_rb_take_somaliland"
-			    duration = 5475
-		    }
-	    }
-    }
-
-    eng_rb_take_yemen = {
-        icon = mission_rb_take_yemen
-	    required_missions = { eng_rb_take_somaliland }
-	    position = 18
-
-	    provinces_to_highlight = {
-	        OR = {
-		        area = hadramut_area
-			    area = yemen_area
-		    }
-		    NOT = { country_or_non_sovereign_subject_holds = ROOT }
-	    }
-
-	    trigger = {
-	        hadramut_area = {
-			    type = all
-			    country_or_non_sovereign_subject_holds = ROOT
-		    }
-		    yemen_area = {
-			    type = all
-			    country_or_non_sovereign_subject_holds = ROOT
-		    }
-	    }
-
-	    effect = {
-	        add_treasury = 1250
-		    upper_yemen_area = {
-			    limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-	        add_country_modifier = {
-			    name = "eng_rb_take_yemen"
-			    duration = 5475
-		    }
-	    }
-    }
-
-    eng_rb_take_oman = {
-        icon = mission_rb_take_oman
-	    required_missions = { eng_rb_take_yemen }
-	    position = 19
-
-	    provinces_to_highlight = {
-	        OR = {
-		        area = dhofar_area
-			    area = mascat_area
-			    area = oman_area
-		    }
-		    NOT = { country_or_non_sovereign_subject_holds = ROOT }
-	    }
-
-	    trigger = {
-	        dhofar_area = {
-			    type = all
-			    country_or_non_sovereign_subject_holds = ROOT
-		    }
-		    mascat_area = {
-			    type = all
-			    country_or_non_sovereign_subject_holds = ROOT
-		    }
-		    oman_area = {
-			    type = all
-			    country_or_non_sovereign_subject_holds = ROOT
-		    }
-	    }
-
-	    effect = {
-	        add_treasury = 1750
-	        add_country_modifier = {
-			    name = "eng_rb_take_oman"
-			    duration = 5475
-		    }
-	    }
-    }
-
-    eng_rb_take_the_emirates = {
-        icon = mission_rb_take_emirates
-	    required_missions = { eng_rb_take_oman }
-	    position = 20
-
-	    provinces_to_highlight = {
-	        OR = {
-		        area = pirate_coast_area
-		    }
-		    NOT = { country_or_non_sovereign_subject_holds = ROOT }
-	    }
-
-	    trigger = {
-	        pirate_coast_area = {
-			    type = all
-			    country_or_non_sovereign_subject_holds = ROOT
-		    }
-	    }
-
-	    effect = {
-	        add_treasury = 1250
-		    add_permanent_claim = 395
-		    add_permanent_claim = 396
-		    add_permanent_claim = 404
-	        add_country_modifier = {
-			    name = "eng_rb_take_emirates"
-			    duration = 5475
-		    }
-		}
-    }
-}
-
-gbr_row_7 = {
-	slot = 7
-	generic = no
-	ai = yes	
-	potential_on_load = {
-		has_dlc = "Domination"
-	}
-	potential = {
-		has_dlc = "Domination"
-		OR = {
-			AND = {
-				tag = ENG
-				NOT = { has_country_flag = eng_took_ave_branch }
-			}
-			tag = GBR
-			tag = UNK
-		}
-		has_country_flag = use_paradox_missions
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	gbr_sail_around_africa = {
-		icon = mission_west_african_ports
-		required_missions = { eng_rb_mighty_navy }
-		position = 5
-		provinces_to_highlight = {
-			NOT = { has_discovered = ROOT }
-			OR = {
-				region = east_africa_region
-				region = south_africa_region
-			}
-			has_port = yes
-		}
-		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = gbr_sail_around_africa_ct
-				east_africa_region = {
-					has_discovered = ROOT
-					has_port = yes
-				}
-				south_africa_region = {
-					has_discovered = ROOT
-					has_port = yes
-				}
-			}
-		}	
-		effect = {
-			create_colony_mission_reward = {
-				province = 1177
-			}
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
-
-	gbr_seize_the_cape = {
-		icon = mission_colonise_the_cape
-		required_missions = { gbr_sail_around_africa }
-		position = 11
-		provinces_to_highlight = {
-			OR = {
-				province_id = 833
-				province_id = 1177
-				province_id = 1179
-			}
-			NOT = { owned_by = ROOT }
-			has_discovered = ROOT
-		}
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = ned_south_africa_colony.tooltip
-				OR = {
-					833 = {
-						owned_by = ROOT
-						is_city = yes
-					}
-					1177 = {
-						owned_by = ROOT
-						is_city = yes
-					}
-					1179 = {
-						owned_by = ROOT
-						is_city = yes
-					}
-				}
-			}
-		}
-		effect = {
-			random_list = {
-				1 = {
-					trigger = {
-						owns = 833
-						NOT = { owns = 1177 }
-					}
-					833 = {
-						add_building = stock_exchange
-					}
-				}
-				1 = {
-					trigger = {
-						owns = 1179
-						NOT = { owns = 1177 }
-					}
-					1179 = {
-						add_building = stock_exchange
-					}
-				}
-				1 = {
-					trigger = {
-						owns = 1177
-					}
-					1177 = {
-						add_building = stock_exchange
-					}
-				}
-				1 = {
-					trigger = {
-						NOT = { owns = 833 }
-						NOT = { owns = 1177 }
-						NOT = { owns = 1179 }
-					}
-					tooltip = {
-						random_list = {
-							1 = { 833  = { add_building = stock_exchange } }
-							1 = { 1177 = { add_building = stock_exchange } }
-							1 = { 1179 = { add_building = stock_exchange } }
-						}
-					}
-				}
-			}
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
-	
-	england_the_zulu_wars = {
-		icon = mission_zulu_wars
-		required_missions = { gbr_seize_the_cape }
-		position = 12
-
-		provinces_to_highlight = {
-			OR = {
-				owner = { tag = VEN }
-				province_id = 789
-				province_id = 5373
-				province_id = 5374
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-		    789 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5373 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5374 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-		    add_mil_power = 500
-			add_treasury = 2500
-			add_country_modifier = {
-				name = "the_zulu_wars"
-				duration = 5475
-			}
-		}
-	}
-	
-	gbr_colonize_the_spice_isles = {
-		icon = mission_rb_colonise_spice_islands
-		required_missions = { england_the_zulu_wars }
-		position = 13
-		provinces_to_highlight = {
-			OR = {
-				trade_company_region = trade_company_moluccas
-				trade_company_region = trade_company_indonesia
-			}
-			is_sea = no
-			NOT = { owned_by = ROOT }
-			has_discovered = ROOT
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					trade_company_region = trade_company_moluccas
-					trade_company_region = trade_company_indonesia
-				}
-				is_city = yes
-				value = 4
-			}
-		}
-		effect = {
-			unlock_issue = {
-				issue = the_spice_act
-			}
-			kutai_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			brunei_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			if = {
-				limit = {
-					tag = GBR
-				}
-				west_bengal_area = {
-					limit = {
-						NOT = { is_claim = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			else_if = {
-				limit = {
-					tag = UNK
-				}
-				west_bengal_area = {
-					limit = {
-						NOT = { is_claim = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
-
-	gbr_chart_the_southern_sea = {
-		icon = mission_exploration
-		required_missions = { gbr_colonize_the_spice_isles }
-		position = 14
-		provinces_to_highlight = {
-			OR = {
-				colonial_region = colonial_australia
-				trade_company_region = trade_company_indonesia
-				trade_company_region = trade_company_moluccas
-			}
-			NOT = { has_discovered = ROOT }
-		}		
-		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = ned_spice_australia.tooltip
-				colonial_australia = {
-					has_discovered = ROOT
-				}
-				trade_company_indonesia = {
-					has_discovered = ROOT
-				}
-				trade_company_moluccas = {
-					has_discovered = ROOT
-				}
-			}
-		}	
-		effect = {
-			add_country_modifier = {
-				name = "eng_australian_colony"
-				duration = 9125
-			}
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
-	
-	england_discovers_new_zealand = {
-		icon = mission_discovery_of_new_zealand
-		required_missions = { gbr_chart_the_southern_sea }
-		position = 15
-		completed_by = 1795.1.1
-
-		provinces_to_highlight = {
-			colonial_region = colonial_polynesia
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = miss_discover_new_zealand
-				colonial_polynesia = { has_discovered = ROOT }
-			}
-			custom_trigger_tooltip = {
-				tooltip = england_discovers_new_zealand.tooltip
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					colonial_region = colonial_polynesia
-					is_city = yes
-				}
-			}
-		}
-
-		effect = {
-		    add_treasury = 500
-			add_country_modifier = {
-				name = "eng_new_zealand_colony"
-				duration = 7300
-			}
-		}
-	}
-
-	gbr_colonize_australia = {
-		icon = colonize_australia
-		required_missions = { england_discovers_new_zealand }
-		position = 16
-		provinces_to_highlight = {
-			region = australia_region
-			ROOT = {
-				NOT = {
-					any_subject_country = {
-						is_colonial_nation = yes
-						capital_scope = {
-							colonial_region = colonial_australia
-						}
-						any_owned_province = {
-							region = australia_region
-						}
-					}
-				}
-			}
-		}
-		trigger = {
-			any_subject_country = {
-				is_colonial_nation = yes
-				capital_scope = {
-					colonial_region = colonial_australia
-				}
-				any_owned_province = {
-					region = australia_region
-				}
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = gbr_colonial_australia
-				duration = 9125
-			}
-		}
-		ai_weight = {
-			factor = 250
-		}
-	}
-
-	eng_take_kenya_and_uganda = {
-		icon = mission_rb_east_africa
-		required_missions = { eng_take_nubia_and_upper_sudan }
-		position = 17
-
-		provinces_to_highlight = {
-		    OR = {
-			    area = bunyoro_area
-			    area = kenya_area
-				area = uganda_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-		    bunyoro_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kenya_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			uganda_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		effect = {
-		    add_treasury = 1250
-		    add_permanent_claim = 1200
-		    add_permanent_claim = 1202
-			add_permanent_claim = 1203
-			add_country_modifier = {
-				name = "kenya_and_uganda"
-				duration = 3650
-			}
-		    buzinza_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			jubba_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			tanzania_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-    eng_take_tanzania_and_rawanda = {
-		icon = mission_rb_zanzibar
-		required_missions = { eng_take_kenya_and_uganda }
-		position = 18
-
-		provinces_to_highlight = {
-		    OR = {
-			    province_id = 1200
-			    area = buzinza_area
-			    area = tanzania_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-			1200 = { country_or_non_sovereign_subject_holds = ROOT }
-		    buzinza_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tanzania_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		effect = {
-		    add_treasury = 3500
-		    add_country_modifier = {
-				name = "tanzania_and_rawanda"
-				duration = 3650
-			}
-		    malawi_region = {
-		        limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			buha_area = {
-		        limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		    central_swahili_coast_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			ruvuma_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			rwanda_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_zambezi_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			zambia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	eng_take_zambia_rhodesia_and_nyasaland = {
-		icon = mission_rb_zambia_rhodesia_and_nyasaland
-		required_missions = { eng_take_tanzania_and_rawanda }
-		position = 19
-
-		provinces_to_highlight = {
-		    OR = {
-			    region = malawi_region
-				area = ruvuma_area
-				area = upper_zambezi_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-		    malawi_region = {
-		        type = all
-		        country_or_non_sovereign_subject_holds = ROOT
-		    }
-			ruvuma_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			upper_zambezi_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		effect = {
-		    add_permanent_claim = 4040
-			add_treasury = 5000
-			add_country_modifier = {
-				name = "eng_rb_conquest_of_east_africa"
-				duration = 3650
-			}
-			butua_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			chokwe_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		    zambia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			zimbabwe_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 }

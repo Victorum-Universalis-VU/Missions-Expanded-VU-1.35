@@ -331,6 +331,7 @@ MLC_generic_missions_3 = {
 		}
 		effect = {
 			malacca_area = { add_local_autonomy = -25 }
+			tenasserim_area = { add_local_autonomy = -25 }
 			kedah_area = { add_local_autonomy = -25 }
 			malaya_area = { add_local_autonomy = -25 }
 			indonesian_islands_area = { add_local_autonomy = -25 }
@@ -623,6 +624,7 @@ MLC_generic_missions_5 = {
 			OR = {
 				area = malacca_area
 				area = malaya_area
+				area = tenasserim_area
 				area = kedah_area
 				area = indonesian_islands_area
 				area = riau_islands_area
@@ -634,6 +636,10 @@ MLC_generic_missions_5 = {
 				owned_by = ROOT
 			}
 			malaya_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tenasserim_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -653,6 +659,7 @@ MLC_generic_missions_5 = {
 				OR = {
 					area = malacca_area
 					area = malaya_area
+					area = tenasserim_area
 					area = kedah_area
 					area = indonesian_islands_area
 					area = riau_islands_area
@@ -683,6 +690,12 @@ MLC_generic_missions_5 = {
 					}
 				}
 				riau_islands_area = {
+					add_province_modifier = {
+						name = MLC_golden_peninsula_modifier
+						duration = -1
+					}
+				}
+				tenasserim_area = {
 					add_province_modifier = {
 						name = MLC_golden_peninsula_modifier
 						duration = -1

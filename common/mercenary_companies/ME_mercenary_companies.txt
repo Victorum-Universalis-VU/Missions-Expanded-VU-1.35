@@ -18,9 +18,6 @@ ME_merc_ambonese_warriors = {
 		moluccas_region = {
 			owned_by = ROOT
 		}
-		nusa_tenggara_region = {
-			owned_by = ROOT
-		}
 	}
 	modifier = {
 		shock_damage_received = -0.05
@@ -976,10 +973,7 @@ ME_Old_Guard = {
 	home_province = 183
 	sprites = { westerngfx_sprite_pack }
 	trigger = {
-		OR = {
-			tag = FRA
-			tag = BFR
-		}
+		tag = FRA
 		is_revolution_target = yes
 	}
 	modifier = {
@@ -992,10 +986,7 @@ ME_French_Musketeers = {
 	regiments_per_development = 0.03
 	sprites = { westerngfx_sprite_pack }
 	trigger = {
-		OR = {
-			tag = FRA
-			tag = BFR
-		}
+		tag = FRA
 		has_age_ability = ab_france_fire_damage
 	}
 	modifier = {

@@ -17,20 +17,10 @@ country_decisions = {
 				}
 				AND = {
 					NOT = { exists = POR }
-					OR = {
-						exists = FRA
-						exists = BFR
-					}
-					OR = {
-						FRA = {
-							any_owned_province = {
-								has_discovered = ROOT
-							}
-						}
-						BFR = {
-							any_owned_province = {
-								has_discovered = ROOT
-							}
+					exists = FRA
+					FRA = {
+						any_owned_province = {
+							has_discovered = ROOT
 						}
 					}
 				}
@@ -248,10 +238,7 @@ country_decisions = {
 			OR = {
 				tag = POR
 				AND = {
-					OR = {
-						tag = FRA
-						tag = BFR
-					}
+					tag = FRA
 					NOT = { exists = POR }
 				}
 				tag = SPA

@@ -52,19 +52,26 @@ WLS_CYR_BRL_missions_1 = {
 			}
 		}
 	}
-	
+
 	WLS_wessex = { #conquer wessex
 		icon = mission_cannons_firing
-		required_missions = { 
+		required_missions = {
 			WLS_indep_3
 		}
 		provinces_to_highlight = {
-			area = cornwall_area
+			OR = {
+			   area = cornwall_area
+				 area = south_east_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		position = 4
 		trigger = {
 			cornwall_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_east_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -119,10 +126,10 @@ WLS_CYR_BRL_missions_1 = {
 			}
 		}
 	}
-	
+
 	WLS_south_eng = { #south england
 		icon = mission_cannons_firing
-		required_missions = { 
+		required_missions = {
 			WLS_wessex
 		}
 		provinces_to_highlight = {
@@ -175,10 +182,10 @@ WLS_CYR_BRL_missions_1 = {
 			}
 		}
 	}
-	
-	WLS_london = { #london 
+
+	WLS_london = { #london
 		icon = mission_conquer_50_development
-		required_missions = { 
+		required_missions = {
 			WLS_south_eng
 		}
 		provinces_to_highlight = {
@@ -238,7 +245,7 @@ WLS_CYR_BRL_missions_2 = {
 			}
 		}
 	}
-	
+
 	WLS_marches = { #administration of the marches
 		icon = mission_cannons_firing
 		required_missions = { WLS_indep_3 }
@@ -286,7 +293,7 @@ WLS_CYR_BRL_missions_2 = {
 			}
 		}
 	}
-	
+
 	WLS_marches_2 = { #administration of the marches
 		icon = mission_have_two_subjects
 		required_missions = { WLS_marches }
@@ -347,7 +354,7 @@ WLS_CYR_BRL_missions_2 = {
 			}
 		}
 	}
-	
+
 	WLS_north_england = { #north england
 		icon = mission_cannons_firing
 		required_missions = { WLS_marches_2 }
@@ -410,7 +417,7 @@ WLS_CYR_BRL_missions_3 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	WLS_indep_1 = { #create a standing army
 		icon = mission_assemble_an_army
 		required_missions = { }
@@ -427,7 +434,7 @@ WLS_CYR_BRL_missions_3 = {
 			}
 		}
 	}
-	
+
 	WLS_indep_2 = { #diplomatic outreach
 		icon = mission_monarch_in_throne_room
 		required_missions = { WLS_indep_1 }
@@ -443,10 +450,10 @@ WLS_CYR_BRL_missions_3 = {
 			}
 		}
 	}
-	
+
 	WLS_indep_3 = { #become independent
 		icon = mission_empire
-		required_missions = { 
+		required_missions = {
 			WLS_indep_2
 			WLS_fort
 		}
@@ -475,10 +482,10 @@ WLS_CYR_BRL_missions_3 = {
 			}
 		}
 	}
-	
+
 	WLS_scottish_marches = { #scottish marches
 		icon = mission_cannons_firing
-		required_missions = { 
+		required_missions = {
 			WLS_marches
 		}
 		position = 5
@@ -559,10 +566,10 @@ WLS_CYR_BRL_missions_4 = {
 			}
 		}
 	}
-	
+
 	WLS_parliment = { #found Welsh parliment; plans of Owain Glyndŵr
 		icon = me_mission_wales_parliament
-		required_missions = { 
+		required_missions = {
 			WLS_capital
 			WLS_indep_3
 		}
@@ -612,10 +619,10 @@ WLS_CYR_BRL_missions_4 = {
 			}
 		}
 	}
-	
+
 	WLS_parliment_2 = { #Preserve our culture
 		icon = me_mission_wales_flower
-		required_missions = { 
+		required_missions = {
 			WLS_parliment
 		}
 		position = 6
@@ -674,7 +681,7 @@ WLS_CYR_BRL_missions_5 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	WLS_pope = { #seek papal sanction
 		icon = mission_religious
 		required_missions = { WLS_indep_1 }
@@ -694,7 +701,7 @@ WLS_CYR_BRL_missions_5 = {
 			}
 		}
 	}
-	
+
 	WLS_church = { #evangelize
 		icon = mission_european_church
 		required_missions = { WLS_pope }
@@ -722,10 +729,10 @@ BRL_missions_1 = {
 		tag = BRL
 	}
 	has_country_shield = yes
-	
-	WLS_brl = { 
+
+	WLS_brl = {
 		icon = me_mission_wales_celtic
-		required_missions = { 
+		required_missions = {
 			WLS_galicia
 		}
 		position = 11
@@ -753,10 +760,10 @@ CYR_BRL_missions_2 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	WLS_brittany = { #duke of Brittany
 		icon = me_mission_wales_bri_flower
-		required_missions = { 
+		required_missions = {
 			WLS_parliment_2
 		}
 		provinces_to_highlight = {
@@ -774,10 +781,10 @@ CYR_BRL_missions_2 = {
 			country_event = { id = ME_Wales_Events.5 }
 		}
 	}
-	
+
 	WLS_galicia = { #duke of Galicia
 		icon = me_mission_wales_gal_flower
-		required_missions = { 
+		required_missions = {
 			WLS_brittany
 			WLS_mann
 		}
@@ -806,10 +813,10 @@ BRL_missions_2 = {
 		tag = BRL
 	}
 	has_country_shield = yes
-	
+
 	WLS_colonize_thirteen_colonies = {
 		icon = mission_invade_island
-		required_missions = { 
+		required_missions = {
 			WLS_brl
 		}
 		provinces_to_highlight = {
@@ -851,10 +858,10 @@ CYR_BRL_missions_3 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	WLS_cornwall = { #duke of Cornwall
 		icon = me_mission_wales_crn_flower
-		required_missions = { 
+		required_missions = {
 			WLS_parliment_2
 		}
 		provinces_to_highlight = {
@@ -871,10 +878,10 @@ CYR_BRL_missions_3 = {
 			country_event = { id = ME_Wales_Events.1 }
 		}
 	}
-	
+
 	WLS_mann = { #duke of Mann
 		icon = me_mission_wales_mann_flower
-		required_missions = { 
+		required_missions = {
 			WLS_scotland
 			WLS_cornwall
 		}
@@ -902,10 +909,10 @@ BRL_missions_3 = {
 		tag = BRL
 	}
 	has_country_shield = yes
-	
+
 	WLS_colonize_carribean = {
 		icon = mission_trade_company_region_abroad
-		required_missions = { 
+		required_missions = {
 			WLS_brl
 		}
 		provinces_to_highlight = {
@@ -937,17 +944,17 @@ CYR_BRL_missions_4 = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential = {	
+	potential = {
 		OR = {
 			tag = CYR
 			tag = BRL
 		}
 	}
 	has_country_shield = yes
-	
+
 	WLS_scotland = { #kingdom of scotland
 		icon = me_mission_wales_sco_flower
-		required_missions = { 
+		required_missions = {
 			WLS_parliment_2
 		}
 		provinces_to_highlight = {
@@ -987,10 +994,10 @@ BRL_missions_4 = {
 		tag = BRL
 	}
 	has_country_shield = yes
-	
+
 	WLS_colonize_canada= {
 		icon = mission_dominate_home_trade_node
-		required_missions = { 
+		required_missions = {
 			WLS_brl
 		}
 		provinces_to_highlight = {
@@ -1029,10 +1036,10 @@ CYR_BRL_missions_5 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	WLS_ireland = { #kingdom of ireland
 		icon = me_mission_wales_ire_flower
-		required_missions = { 
+		required_missions = {
 			WLS_parliment_2
 		}
 		provinces_to_highlight = {
@@ -1070,10 +1077,10 @@ BRL_missions_5 = {
 		tag = BRL
 	}
 	has_country_shield = yes
-	
+
 	WLS_colonize_louisiana = {
 		icon = mission_galleys_in_port
-		required_missions = { 
+		required_missions = {
 			WLS_brl
 		}
 		provinces_to_highlight = {
@@ -1110,10 +1117,10 @@ WLS_missions_3 = {
 		has_country_flag = wls_assimilated
 	}
 	has_country_shield = yes
-	
+
 	WLS_conquer_scotland = {
 		icon = mission_cannons_firing
-		required_missions = { 
+		required_missions = {
 			WLS_parliment_2
 		}
 		provinces_to_highlight = {
@@ -1163,10 +1170,10 @@ WLS_missions_3 = {
 			}
 		}
 	}
-	
+
 	WLS_conquer_isles = {
 		icon = mission_invade_island
-		required_missions = { 
+		required_missions = {
 			WLS_conquer_scotland
 		}
 		provinces_to_highlight = {
@@ -1215,15 +1222,15 @@ WLS_missions_4 = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential = {	
+	potential = {
 		tag = WLS
 		has_country_flag = wls_assimilated
 	}
 	has_country_shield = yes
-	
+
 	WLS_london_trade = {
 		icon = mission_war_chest
-		required_missions = { 
+		required_missions = {
 			WLS_parliment_2
 		}
 		provinces_to_highlight = {
@@ -1249,7 +1256,7 @@ WLS_missions_4 = {
 					has_building = stock_exchange
 				}
 			}
-			
+
 		}
 		effect = {
 			236 = {
@@ -1283,10 +1290,10 @@ WLS_missions_5 = {
 		has_country_flag = wls_assimilated
 	}
 	has_country_shield = yes
-	
+
 	WLS_conquer_ireland_1 = {
 		icon = mission_assemble_an_army
-		required_missions = { 
+		required_missions = {
 			WLS_parliment_2
 		}
 		provinces_to_highlight = {
@@ -1341,10 +1348,10 @@ WLS_missions_5 = {
 			}
 		}
 	}
-	
+
 	WLS_conquer_ireland_2 = {
 		icon = mission_unite_home_region
-		required_missions = { 
+		required_missions = {
 			WLS_conquer_ireland_1
 		}
 		provinces_to_highlight = {

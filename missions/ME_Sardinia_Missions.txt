@@ -36,6 +36,7 @@ sardinia_missions_1 = {
 				AND = {
 					NOT = { has_building = naval_base }
 					NOT = { has_building = naval_arsenal }
+					NOT = { has_building = coastal_artillery }
 					NOT = { has_shipyard_building_trigger = yes }
 					NOT = { has_dock_building_trigger = yes }
 				}
@@ -46,8 +47,9 @@ sardinia_missions_1 = {
 				owned_by = ROOT
 				base_manpower = 5
 				OR = {
-					has_building = naval_base
-					has_building = naval_arsenal
+				  has_building = naval_base
+				  has_building = naval_arsenal
+				  has_building = coastal_artillery
 					has_shipyard_building_trigger = yes
 					has_dock_building_trigger = yes
 				}
@@ -102,6 +104,7 @@ sardinia_missions_1 = {
 				AND = {
 					NOT = { has_building = naval_base }
 					NOT = { has_building = naval_arsenal }
+					NOT = { has_building = coastal_artillery }
 				}
 				NOT = { fort_level = 2 }
 			}
@@ -109,8 +112,9 @@ sardinia_missions_1 = {
 				corsica_sardinia_area = {
 					owned_by = ROOT
 					OR = {
-						has_building = naval_base
-						has_building = naval_arsenal
+					   has_building = naval_base
+					   has_building = naval_arsenal
+					   has_building = coastal_artillery
 					}
 					fort_level = 2
 				}
@@ -120,8 +124,9 @@ sardinia_missions_1 = {
 			corsica_sardinia_area = {
 				owned_by = ROOT
 				OR = {
-					has_building = naval_base
-					has_building = naval_arsenal
+				   has_building = naval_base
+				   has_building = naval_arsenal
+				   has_building = coastal_artillery
 				}
 				fort_level = 2
 			}
@@ -554,12 +559,8 @@ sardinia_missions_2 = {
 			sar_naval_preparation
 		}
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					area = sicily_area
-					NOT = { province_id = 126 }
-				}
-			}
+			area = sicily_area
+			NOT = { province_id = 126 }
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {

@@ -195,6 +195,13 @@ PAL_Missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			tirol_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			custom_tooltip = PAL_get_pu_cb
 			if = {
 				limit = {
@@ -224,7 +231,10 @@ PAL_Missions_3 = {
 		position = 3
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = bavaria_area
+				OR = {
+					area = bavaria_area
+					area = tirol_area
+				}
 				value = 8
 			}
 		}

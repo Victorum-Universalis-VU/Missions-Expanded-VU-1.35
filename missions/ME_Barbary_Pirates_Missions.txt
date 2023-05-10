@@ -40,7 +40,7 @@ BRBR_missions_1 = { #BRBR is the namespace for this
 			}
 			add_yearly_sailors = 0.5
 			add_yearly_manpower = 0.5
-			
+
 			ME_overlord_effect = {
 				effect = "
 					add_country_modifier = {
@@ -51,7 +51,7 @@ BRBR_missions_1 = { #BRBR is the namespace for this
 			}
 		}
 	}
-	
+
 	BRBR_popular_support = {
 		icon = mission_reclaim_morocco
 		required_missions = { BRBR_haven_for_the_expelled }
@@ -65,7 +65,7 @@ BRBR_missions_1 = { #BRBR is the namespace for this
 					}
 				}
 				AND = {
-					ROOT = { 
+					ROOT = {
 						NOT = { is_subject = yes }
 					}
 					owner = {
@@ -90,7 +90,7 @@ BRBR_missions_1 = { #BRBR is the namespace for this
 					overlord = {
 						reverse_has_opinion = {
 							who = ROOT
-							value = 150 
+							value = 150
 						}
 					}
 				}
@@ -105,7 +105,7 @@ BRBR_missions_1 = { #BRBR is the namespace for this
 						}
 						reverse_has_opinion = {
 							who = ROOT
-							value = 150 
+							value = 150
 						}
 					}
 				}
@@ -113,7 +113,7 @@ BRBR_missions_1 = { #BRBR is the namespace for this
 		}
 		effect = {
 			TUN_enable_raiding_half_money = yes
-		
+
 			ME_overlord_effect = {
 				effect = "
 					add_dip_power = 50
@@ -173,7 +173,7 @@ BRBR_missions_2 = {
 			}
 		}
 	}
-	
+
 	BRBR_pirate_havens = {
 		icon = mission_control_venice
 		required_missions = { BRBR_the_coast BRBR_haven_for_the_expelled }
@@ -194,9 +194,9 @@ BRBR_missions_2 = {
 			tooltip = {
 				add_or_upgrade_shipyard_building = yes
 			}
-			
+
 			custom_tooltip = " "
-			 
+
 			hidden_effect = {
 				pick_best_provinces = {
 					3 = yes
@@ -217,7 +217,7 @@ BRBR_missions_2 = {
 					add_or_upgrade_shipyard_building = yes
 				}
 			}
-			
+
 			ME_overlord_effect = {
 				effect = "
 					add_yearly_sailors = 1
@@ -225,7 +225,7 @@ BRBR_missions_2 = {
 			}
 		}
 	}
-	
+
 	BRBR_dockyards = {
 		icon = mission_combat_barbary_piracy
 		required_missions = { BRBR_pirate_havens BRBR_large_navy }
@@ -246,7 +246,7 @@ BRBR_missions_2 = {
 				name = BRBR_the_barbary_arsenal
 				duration = -1
 			}
-			
+
 			ME_overlord_effect = {
 				effect = "
 					tooltip = {
@@ -255,10 +255,10 @@ BRBR_missions_2 = {
 					country_event = { id = ME_Barbary_Pirates_Events.2 }
 				"
 			}
-			
+
 			custom_tooltip = " "
-			
-			add_liberty_desire = -50 
+
+			add_liberty_desire = -50
 		}
 	}
 }
@@ -300,11 +300,11 @@ BRBR_missions_3 = {
 				name = BRBR_berber_navy_1
 				duration = -1
 			}
-			
+
 			create_admiral = { tradition = 40 }
 		}
 	}
-	
+
 	BRBR_large_navy = {
 		icon = mission_corsairs_of_the_north_sea
 		required_missions = { BRBR_barbary_navy BRBR_pirate_havens }
@@ -320,7 +320,7 @@ BRBR_missions_3 = {
 				name = BRBR_berber_navy_2
 				duration = -1
 			}
-			
+
 			ME_overlord_effect = {
 				effect = "
 					tooltip = {
@@ -378,7 +378,7 @@ BRBR_missions_4 = {
 				name = BRBR_marines
 				duration = -1
 			}
-			
+
 			ME_overlord_effect = {
 				effect = "
 					add_mil_power = 100
@@ -388,7 +388,7 @@ BRBR_missions_4 = {
 			}
 		}
 	}
-	
+
 	BRBR_capture_islands = {
 		icon = mission_portuguese_malacca
 		required_missions = { BRBR_boarding_parties BRBR_begin_the_raids }
@@ -417,7 +417,7 @@ BRBR_missions_4 = {
 				duration = 9125
 			}
 			add_navy_tradition = 25
-				
+
 			ME_overlord_effect = {
 				effect = "
 					add_navy_tradition = 25
@@ -426,7 +426,7 @@ BRBR_missions_4 = {
 			}
 		}
 	}
-	
+
 	BRBR_fortify_islands = {
 		icon = mission_occupy_alexandria
 		required_missions = { BRBR_capture_islands }
@@ -453,16 +453,16 @@ BRBR_missions_4 = {
 		}
 		effect = {
 			add_army_tradition_or_mil_power = { amount = 15 }
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = BRBR_3_most_developed_forts_be_like
 			tooltip = {
 				add_or_upgrade_fort_building = yes
 			}
-			
+
 			custom_tooltip = " "
-			 
+
 			hidden_effect = {
 				pick_best_provinces = {
 					3 = yes
@@ -488,11 +488,11 @@ BRBR_missions_4 = {
 					add_or_upgrade_fort_building = yes
 				}
 			}
-			
+
 			ME_overlord_effect = {
 				effect = "
 					add_army_tradition_or_mil_power = { amount = 10 }
-					add_mil_power = 50 
+					add_mil_power = 50
 				"
 			}
 		}
@@ -533,15 +533,15 @@ BRBR_missions_5 = {
 		}
 		effect = {
 			add_yearly_manpower = 0.5
-			
+
 			create_general_with_pips = { tradition = 60 add_manuever = 2 }
-			
+
 			ME_give_claims = { area = baleares_area }
 			ME_give_claims = { area = corsica_sardinia_area }
 			ME_give_claims = { area = sicily_area }
 		}
 	}
-	
+
 	BRBR_begin_the_raids = {
 		icon = mission_raid_on_venice
 		required_missions = { }
@@ -601,7 +601,7 @@ BRBR_missions_5 = {
 					}
 				}
 			}
-			if = { 
+			if = {
 				limit = {
 					OR = {
 						has_dlc = "Golden Century"
@@ -623,7 +623,7 @@ BRBR_missions_5 = {
 				name = BRBR_relentless_vile_raids
 				duration = 10950
 			}
-			
+
 			set_country_flag = BRBR_slave_trade_nation
 			set_global_flag = BRBR_slave_trade
 			ME_overlord_effect = {
@@ -633,7 +633,7 @@ BRBR_missions_5 = {
 			}
 		}
 	}
-	
+
 	BRBR_christians_fear_us = {
 		icon = mission_raid_christian_trade
 		required_missions = { BRBR_begin_the_raids }
@@ -641,7 +641,7 @@ BRBR_missions_5 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			if = { 
+			if = {
 				limit = {
 					OR = {
 						has_dlc = "Golden Century"
@@ -671,13 +671,13 @@ BRBR_missions_5 = {
 		}
 		effect = {
 			TUN_enable_raiding_monarch_power = yes
-			
+
 			custom_tooltip = " "
-			
+
 			create_admiral = { tradition = 100 } #well deserved!
-			
+
 			custom_tooltip = " "
-			
+
 			ME_overlord_effect = {
 				effect = "
 					add_power_projection = {

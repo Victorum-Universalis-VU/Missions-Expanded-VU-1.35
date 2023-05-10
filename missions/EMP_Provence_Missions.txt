@@ -1,4 +1,3 @@
-#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 provence_missions_1 = {
 	slot = 1
 	generic = no
@@ -19,7 +18,12 @@ provence_missions_1 = {
 		required_missions = { emp_pro_naples }
 		position = 3
 		provinces_to_highlight = {
-			emp_pro_aragon_provinces = yes
+			OR = {
+				area = aragon_area
+				area = catalonia_area
+				area = valencia_area
+				area = baleares_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -27,10 +31,14 @@ provence_missions_1 = {
 				ARA = {
 					is_subject_of = ROOT
 				}
-				has_fulfiled_province_requirement_for_mission_trigger = {
-					tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-					provinces=emp_pro_aragon_provinces
-					owner_type=country_or_non_sovereign_subject_holds
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 15
+					OR = {
+						area = aragon_area
+						area = catalonia_area
+						area = valencia_area
+						area = baleares_area
+					}
 				}
 			}
 		}
@@ -51,7 +59,27 @@ provence_missions_1 = {
 				}
 			}
 			else = {
-				give_permaclaims_for_mission = { mission=emp_pro_hungary }
+				slovakia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				transdanubia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				alfold_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -60,7 +88,13 @@ provence_missions_1 = {
 		required_missions = { emp_pro_aragon }
 		position = 4
 		provinces_to_highlight = {
-			emp_pro_hungary_provinces = yes
+			OR = {
+				area = transdanubia_area
+				area = alfold_area
+				area = slovakia_area
+				area = transylvania_area
+				area = southern_transylvania_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -68,10 +102,15 @@ provence_missions_1 = {
 				HUN = {
 					is_subject_of = ROOT
 				}
-				has_fulfiled_province_requirement_for_mission_trigger = {
-					tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-					provinces=emp_pro_hungary_provinces
-					owner_type=country_or_non_sovereign_subject_holds
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 15
+					OR = {
+						area = transdanubia_area
+						area = alfold_area
+						area = slovakia_area
+						area = transylvania_area
+						area = southern_transylvania_area
+					}
 				}
 			}		
 		}
@@ -103,16 +142,15 @@ provence_missions_2 = {
 		icon = rule_corsica
 		required_missions = {  }
 		provinces_to_highlight = {
-			area = corsica_sardinia_area #Corsica
+			province_id = 1247
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
-				corsica_sardinia_area = { 
-					type = all
+				1247 = {
 					owned_by = ROOT
 				}
-				total_development = 200
+				total_development = 100
 			}
 		}
 		effect = {
@@ -131,7 +169,32 @@ provence_missions_2 = {
 				}
 			}
 			else = {
-				give_permaclaims_for_mission = { mission=emp_pro_naples }
+				naples_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+				calabria_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+				apulia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+				120 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+						}
+						add_core = ROOT
+					}
+				}
 			}
 			corsica_sardinia_area = {
 				limit = {
@@ -146,7 +209,12 @@ provence_missions_2 = {
 		icon = king_of_naples
 		required_missions = { emp_pro_corsica }
 		provinces_to_highlight = {
-			emp_pro_naples_provinces = yes
+			OR = {
+				area = naples_area
+				area = calabria_area
+				area = apulia_area
+				province_id = 120
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -154,10 +222,14 @@ provence_missions_2 = {
 				NAP = {
 					is_subject_of = ROOT
 				}
-				has_fulfiled_province_requirement_for_mission_trigger = {
-					tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-					provinces=emp_pro_naples_provinces
-					owner_type=country_or_non_sovereign_subject_holds
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					OR = {
+						area = naples_area
+						area = calabria_area
+						area = apulia_area
+						province_id = 120
+					}
 				}
 			}
 		}
@@ -169,7 +241,13 @@ provence_missions_2 = {
 				}
 				set_government_rank = 2
 			}
-			give_permaclaims_for_mission = { mission=emp_pro_sicily }
+			sicily_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			if = {
 				limit = {
 					exists = ARA
@@ -185,7 +263,27 @@ provence_missions_2 = {
 				}
 			}
 			else = {
-				give_permaclaims_for_mission = { mission=emp_pro_aragon }
+				aragon_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				catalonia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				valencia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -193,25 +291,48 @@ provence_missions_2 = {
 		icon = king_of_sicily
 		required_missions = { emp_pro_naples }
 		provinces_to_highlight = {
-			emp_pro_sicily_provinces = yes
+			area = sicily_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=emp_pro_sicily_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				area = sicily_area
 			}
 		}
 		effect = {
-			give_permaclaims_for_mission = { mission=emp_pro_jerusalem }
+			palestine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			syria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			trans_jordan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_pro_jerusalem = {
 		icon = jerusalem
 		required_missions = { emp_pro_sicily }
 		provinces_to_highlight = {
-			emp_pro_jerusalem_provinces = yes
+			OR = {
+				area = palestine_area
+				area = syria_area
+				area = trans_jordan_area
+			}
 			OR = {
 				AND = {
 					NOT = { province_id = 379 }
@@ -225,10 +346,13 @@ provence_missions_2 = {
 		}
 		trigger = {
 			owns = 379
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=emp_pro_jerusalem_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = palestine_area
+					area = syria_area
+					area = trans_jordan_area
+				}
 			}
 		}
 		effect = {
@@ -250,7 +374,7 @@ provence_missions_2 = {
 		}
 		position = 5
 		trigger = {
-			total_own_and_non_tributary_subject_development = 2000
+			total_own_and_non_tributary_subject_development = 1000
 		}
 		effect = {
 			if = {	
@@ -287,22 +411,11 @@ provence_missions_3 = {
 		required_missions = {  }
 		position = 3
 		provinces_to_highlight = {
-			OR = {
-				province_id = 189
-				province_id = 7945
-				province_id = 7949
-				
-			}
+			province_id = 189
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			189 = {
-				owned_by = ROOT
-			}
-			7945 = {
-				owned_by = ROOT
-			}
-			7949 = {
 				owned_by = ROOT
 			}
 		}
@@ -419,25 +532,78 @@ provence_missions_4 = {
 				}
 				custom_tooltip = pro_avignon_tt
 			}
-			give_permaclaims_for_mission = { mission=emp_pro_occitania }
+			guyenne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			languedoc_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			massif_central_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			savoy_dauphine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pyrenees_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_pro_occitania = {
 		icon = mission_invade_occitania
 		required_missions = { emp_pro_avignon }
 		provinces_to_highlight = {
-			emp_pro_occitania_provinces = yes
+			OR = {
+				area = provence_area
+				area = guyenne_area
+				area = languedoc_area
+				area = massif_central_area
+				area = savoy_dauphine_area
+				area = pyrenees_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = { #Was number of, but I can't be arsed.
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=emp_pro_occitania_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					area = provence_area
+					area = guyenne_area
+					area = languedoc_area
+					area = massif_central_area
+					area = savoy_dauphine_area
+					area = pyrenees_area
+				}
 			}
 		}
 		effect = {
-			give_permaclaims_for_mission = { mission=emp_pro_france }
+			france_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_pro_france = {
@@ -445,7 +611,7 @@ provence_missions_4 = {
 		required_missions = { emp_pro_occitania }
 		position = 4
 		provinces_to_highlight = {
-			emp_pro_france_provinces = yes
+			region = france_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -457,11 +623,9 @@ provence_missions_4 = {
 					NOT = { owned_by = FRA }
 				}
 			}
-			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted_num 
-				provinces=emp_pro_france_provinces
-				owner_type=country_or_non_sovereign_subject_holds
-				value=75
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = france_region
 			}
 		}
 		effect = {
@@ -502,8 +666,8 @@ provence_missions_5 = {
 		}
 		effect = {
 			capital_scope = {
-				add_base_tax = 3
-				add_base_production	= 3
+				add_base_tax = 1
+				add_base_production	= 1
 				add_base_manpower = 1
 				add_province_modifier = {
 					name = "pro_renaissance"
@@ -521,33 +685,33 @@ provence_missions_5 = {
 					province_id = 201
 					OR = {
 						NOT = { owned_by = ROOT }
-						NOT = { development = 25 } #Feels better to highlight provinces that don't yet meet requirements than highlighting those that do.
+						development = 30
 					}
 				}
 				AND = {
 					area = provence_area
 					OR = {
 						NOT = { owned_by = ROOT }
-						NOT = { development = 15 } #Feels better to highlight provinces that don't yet meet requirements than highlighting those that do.
+						development = 15
 					}
 				}
 			}
 		}
 		trigger = {
 			201 = {
-				development = 25
+				development = 30
 				owned_by = ROOT
 			}
 			num_of_owned_provinces_with = {
 				area = provence_area
-				value = 5
+				value = 3
 				development = 15
 			}
 		}
 		effect = {
 			201 = {
-				#change_province_name = "Marseille"
-				#rename_capital = "Marseille"
+				change_province_name = "Marseille"
+				rename_capital = "Marseille"
 				add_province_modifier = {
 					name = "pro_marseille"
 					duration = -1

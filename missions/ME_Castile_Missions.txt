@@ -166,7 +166,7 @@ CAS_missions_1 = {
 			}
 		}
 	}
-	
+
 	Castile_La_Mancha = {
 		icon = mission_colonial
 		required_missions = { spa_rb_incans_two_ME }
@@ -558,7 +558,6 @@ CAS_missions_2 = {
 				area = luzon_area
 				area = southern_luzon_area
 				area = mindanao_area
-				area = sulu_archipelago_area
 				area = visayas_area
 			}
 			NOT = { owned_by = ROOT }
@@ -572,9 +571,6 @@ CAS_missions_2 = {
 					owned_by = ROOT
 				}
 				mindanao_area = {
-					owned_by = ROOT
-				}
-				sulu_archipelago_area = {
 					owned_by = ROOT
 				}
 				visayas_area = {
@@ -602,13 +598,6 @@ CAS_missions_2 = {
 				add_permanent_claim = ROOT
 			}
 			mindanao_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			sulu_archipelago_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1224,13 +1213,6 @@ CAS_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			barbary_coast_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
@@ -1239,18 +1221,11 @@ CAS_missions_4 = {
 		required_missions = { spa_rb_iberia_christian_ME }
 		position = 5
 		provinces_to_highlight = {
-			OR = {
-			    area = northern_morocco_area
-			    area = barbary_coast_area
-			}
+			area = northern_morocco_area
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			northern_morocco_area = {
-				type = all
-				owned_by = ROOT
-			}
-			barbary_coast_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -1295,14 +1270,14 @@ CAS_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			northern_morocco_area = {
+			barbary_coast_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			barbary_coast_area = {
+			northern_morocco_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_claim = ROOT }
@@ -1319,7 +1294,6 @@ CAS_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = northern_morocco_area
-				area = barbary_coast_area
 				area = southern_morocco_area
 				area = western_morocco_area
 				area = marrekesh_area
@@ -1330,10 +1304,6 @@ CAS_missions_4 = {
 		}
 		trigger = {
 			northern_morocco_area = {
-				type = all
-				owned_by = ROOT
-			}
-			barbary_coast_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -1378,7 +1348,6 @@ CAS_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = northern_morocco_area
-				area = barbary_coast_area
 				area = southern_morocco_area
 				area = western_morocco_area
 				area = marrekesh_area
@@ -1389,10 +1358,6 @@ CAS_missions_4 = {
 		}
 		trigger = {
 			northern_morocco_area = {
-				type = all
-				religion = ROOT
-			}
-			barbary_coast_area = {
 				type = all
 				religion = ROOT
 			}
@@ -1612,8 +1577,8 @@ CAS_missions_5 = {
 		required_missions = { }
 		position = 1
 		trigger = {
-			army_size_percentage = 0.6
-			navy_size_percentage = 0.6
+			army_size_percentage = 1
+			navy_size_percentage = 1
 			manpower_percentage = 0.6
 			num_of_generals = 1
 		}

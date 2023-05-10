@@ -9,7 +9,7 @@ MZB_missions_1 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	MZB_unify_the_oases = {
 		icon = mission_conquer_timbuktu
 		required_missions = { MZB_expansionist_intent }
@@ -42,7 +42,7 @@ MZB_missions_1 = {
 					duration = -1
 				}
 			}
-			
+
 			north_saharan_area = {
 				limit = {
 					country_or_non_sovereign_subject_holds = ROOT
@@ -54,18 +54,18 @@ MZB_missions_1 = {
 					duration = -1
 				}
 			}
-			
+
 			add_adm_power = 100
-			
+
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { area = djerba_area }
 			ME_give_claims = { area = tripolitania_area }
 			ME_give_claims = { area = fezzan_area }
 			ME_give_claims = { area = tunisia_area }
 		}
 	}
-	
+
 	MZB_free_the_ibadi = {
 		icon = mission_cope_with_refugees
 		required_missions = { MZB_unify_the_oases }
@@ -93,7 +93,7 @@ MZB_missions_1 = {
 			country_event = { id = ME_Mzab_Events.5 }
 		}
 	}
-	
+
 	MZB_rustamid_glory = {
 		icon = mission_fatimid_caliphate
 		required_missions = { MZB_rustamid_ambition MZB_free_the_ibadi }
@@ -115,7 +115,7 @@ MZB_missions_1 = {
 				}
 				value = 9
 			}
-			total_development = 100 
+			total_development = 100
 		}
 		effect = {
 			add_age_modifier = {
@@ -123,9 +123,9 @@ MZB_missions_1 = {
 				duration = -1
 				age = age_of_discovery
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			ME_add_power_projection = { amount = 40 }
 		}
 	}
@@ -142,7 +142,7 @@ MZB_missions_2 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	MZB_expansionist_intent = {
 		icon = mission_levantine_restoration
 		required_missions = { }
@@ -164,16 +164,16 @@ MZB_missions_2 = {
 			ME_give_claims = { area = barbary_coast_area }
 			ME_give_claims = { area = northern_morocco_area }
 			ME_give_claims = { id = 349 }
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = MZB_expansionist_help
 				duration = 10950
 			}
 		}
 	}
-	
+
 	MZB_rustamid_ambition = {
 		icon = mission_golden_century
 		required_missions = { MZB_expansionist_intent }
@@ -204,16 +204,16 @@ MZB_missions_2 = {
 		}
 		effect = {
 			country_event = { id = ME_Mzab_Events.6 }
-		
+
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { area = kabylia_area }
 			ME_give_claims = { area = northern_morocco_area }
 			ME_give_claims = { area = western_morocco_area }
 			ME_give_claims = { area = marrekesh_area }
 		}
 	}
-	
+
 	MZB_greater_root = {
 		icon = mission_empire
 		required_missions = { MZB_rustamid_ambition }
@@ -221,27 +221,27 @@ MZB_missions_2 = {
 		provinces_to_highlight = {
 			NOT = { owned_by = ROOT }
 			OR = {
-				is_claim = ROOT 
+				is_claim = ROOT
 				is_permanent_claim = ROOT
 				is_core = ROOT
 			}
 		}
 		trigger = {
 			total_development = 250
-			#ME_pt_feedback_requested = yes 
+			#ME_pt_feedback_requested = yes
 		}
 		effect = {
 			ME_give_claims = { area = lower_andalucia_area }
 			ME_give_claims = { area = upper_andalucia_area }
 			ME_give_claims = { area = maghreb_region }
-			
+
 			custom_tooltip = " "
-			
+
 			TUN_enable_colonize_djado_decision = yes
 			TUN_enable_colonize_tuat_decision = yes
-			
+
 			custom_tooltip = " "
-			
+
 			add_prestige = 5 #it's a joke
 		}
 	}
@@ -281,19 +281,19 @@ MZB_missions_3 = {
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1
-				
+
 				add_province_modifier = {
 					name = MZB_conversion_of_laghouat
 					duration = 9125
 				}
-				
+
 				change_culture = berber
-				
+
 				set_local_autonomy = 0
 			}
 		}
 	}
-	
+
 	MZB_ouargla_community = {
 		icon = mission_imperial_cities
 		required_missions = { MZB_convert_laghouat MZB_expansionist_intent MZB_lone_imamate }
@@ -314,11 +314,11 @@ MZB_missions_3 = {
 					}
 					change_religion = ROOT
 				}
-				
+
 				add_base_tax = 2
 				add_base_production = 2
 				add_base_manpower = 2
-				
+
 				add_province_modifier = {
 					name = MZB_conversion_of_ouargla
 					duration = 9125
@@ -326,7 +326,7 @@ MZB_missions_3 = {
 			}
 		}
 	}
-	
+
 	MZB_convert_maghreb = {
 		icon = mission_friends_or_enemies
 		required_missions = { MZB_ouargla_community MZB_religious_declaration }
@@ -339,17 +339,17 @@ MZB_missions_3 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				region = maghreb_region
-				religion = ROOT 
+				religion = ROOT
 				value = 20
 			}
 		}
 		effect = {
 			add_corruption = -2
-		
+
 			custom_tooltip = " "
 			add_stability_or_adm_power = yes
 			custom_tooltip = " "
-		
+
 			custom_tooltip = MZB_if_we_are_ibadi
 			tooltip = {
 				add_country_modifier = {
@@ -357,7 +357,7 @@ MZB_missions_3 = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -371,13 +371,13 @@ MZB_missions_3 = {
 			}
 		}
 	}
-	
+
 	MZB_develop_tahert = {
 		icon = mission_into_persia_2
 		required_missions = { MZB_rustamid_ambition }
 		position = 5
 		provinces_to_highlight = {
-			province_id = 2462 
+			province_id = 2462
 		}
 		trigger = {
 			2462 = {
@@ -388,7 +388,7 @@ MZB_missions_3 = {
 		}
 		effect = {
 			custom_tooltip = MZB_distribute_15_base_tax
-			
+
 			hidden_effect = {
 				for = {
 					amount = 15
@@ -397,14 +397,14 @@ MZB_missions_3 = {
 							limit = {
 								has_terrain = desert
 							}
-							add_base_tax = 1 
+							add_base_tax = 1
 						}
 					"
 				}
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			2462 = {
 				add_province_modifier = {
 					name = MZB_restored_tahert
@@ -427,7 +427,7 @@ MZB_missions_4 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	MZB_lone_imamate = {
 		icon = mission_traverse_the_sahara
 		required_missions = { }
@@ -441,12 +441,12 @@ MZB_missions_4 = {
 			}
 			employed_advisor = {
 			}
-			
+
 			OR = {
 				2457 = {
 					num_of_times_improved = 2
 				}
-				num_of_estate_agendas_completed = { 
+				num_of_estate_agendas_completed = {
 					estate = estate_church
 					value = 1
 				}
@@ -458,9 +458,9 @@ MZB_missions_4 = {
 				add_base_production = 2
 				add_base_manpower = 2
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			350 = {
 				if = {
 					limit = {
@@ -474,7 +474,7 @@ MZB_missions_4 = {
 			}
 		}
 	}
-	
+
 	MZB_religious_declaration = {
 		icon = me_mission_muslim_priest
 		required_missions = { MZB_lone_imamate }
@@ -488,7 +488,7 @@ MZB_missions_4 = {
 				inquisitor = 1
 				sufi_scholar_advisor = 1
 			}
-			
+
 			total_development = 25 #the berber tribes
 		}
 		effect = {
@@ -499,23 +499,23 @@ MZB_missions_4 = {
 						limit = {
 							religion = ibadi
 						}
-						add_core = ROOT 
+						add_core = ROOT
 					}
 				}
-				
+
 				custom_tooltip = " "
-				
+
 				add_age_modifier = {
 					name = MZB_quest_to_free_the_ibadiyya
 					duration = -1
 					age = age_of_discovery
 				}
 			}
-			
+
 			country_event = { id = ME_Mzab_Events.3 }
 		}
 	}
-	
+
 	MZB_berber_support = {
 		icon = mission_control_surat
 		required_missions = { }
@@ -552,9 +552,9 @@ MZB_missions_4 = {
 					}
 				}
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			define_advisor = {
 				type = commandant
 				skill = 1
@@ -564,11 +564,11 @@ MZB_missions_4 = {
 			}
 		}
 	}
-	
+
 	MZB_berber_converts = {
 		icon = mission_protect_granada
 		required_missions = { MZB_berber_support }
-		position = 6 
+		position = 6
 		provinces_to_highlight = {
 		}
 		trigger = {
@@ -593,9 +593,9 @@ MZB_missions_4 = {
 		effect = {
 			custom_tooltip = MZB_unlock_the_berber_privilege
 			set_country_flag = MZB_unlock_the_berber_privilege_flag
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = MZB_gain_20_mil_power
 			hidden_effect = {
 				if = {
@@ -635,7 +635,7 @@ MZB_missions_5 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	MZB_five_qsar = {
 		icon = mission_pacify_the_berbers
 		required_missions = { }
@@ -657,11 +657,11 @@ MZB_missions_5 = {
 					duration = -1
 				}
 			}
-			
-			add_stability_or_adm_power = yes 
+
+			add_stability_or_adm_power = yes
 		}
 	}
-	
+
 	MZB_pentapolis = {
 		icon = mission_patronize_art_and_religion
 		required_missions = { MZB_five_qsar MZB_lone_imamate }
@@ -679,9 +679,9 @@ MZB_missions_5 = {
 		effect = {
 			2457 = {
 				custom_tooltip = MZB_modify_the_five_towns
-				
+
 				custom_tooltip = " "
-				
+
 				hidden_effect = {
 					remove_province_modifier = MZB_five_qsar_of_the_valley
 					add_province_modifier = {
@@ -689,12 +689,12 @@ MZB_missions_5 = {
 						duration = -1
 					}
 				}
-				
+
 				add_or_upgrade_tax_building = yes
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			add_age_modifier = {
 				name = MZB_prosperity_in_the_desert
 				duration = -1
@@ -702,7 +702,7 @@ MZB_missions_5 = {
 			}
 		}
 	}
-	
+
 	MZB_ibadiyya_scholars = {
 		icon = mission_restore_trade_superiority
 		required_missions = { MZB_religious_declaration }
@@ -711,17 +711,17 @@ MZB_missions_5 = {
 		}
 		trigger = {
 			ME_has_religious_scholars_trigger = yes
-			
+
 			religious_unity = 0.8
-			
+
 			has_adm_advisor_2 = yes
 		}
 		effect = {
 			custom_tooltip = MZB_piety_events_will_give_double_the_piety
 			set_country_flag = ME_piety_events_double
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = MZB_religious_scholars
 				duration = 9125

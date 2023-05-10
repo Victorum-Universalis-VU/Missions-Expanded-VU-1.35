@@ -11,13 +11,14 @@ Timurid_main_1 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	TIM_kazan = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { TIM_nogai }
 		position = 5
 		provinces_to_highlight = {
 			OR = {
+				area = samara_area
 				area = kazan_area
 				area = kama_area
 				area = bashkiria_area
@@ -25,6 +26,13 @@ Timurid_main_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			samara_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
 			kazan_area = {
 				type = all
 				OR = {
@@ -47,7 +55,7 @@ Timurid_main_1 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -88,7 +96,7 @@ Timurid_main_1 = {
 			}
 		}
 	}
-	
+
 	TIM_rus = {
 		icon = mission_land_of_churches
 		required_missions = { TIM_kazan TIM_great_horde }
@@ -98,7 +106,7 @@ Timurid_main_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			calc_true_if = { 
+			calc_true_if = {
 				all_province = {
 					region = russia_region
 					OR = {
@@ -106,10 +114,10 @@ Timurid_main_1 = {
 						is_empty = yes
 					}
 				}
-				amount = 40 
+				amount = 40
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -130,7 +138,7 @@ Timurid_main_1 = {
 			}
 		}
 	}
-	
+
 	TIM_caspian = {
 		icon = mission_conquer_50_development
 		required_missions = { }
@@ -158,7 +166,7 @@ Timurid_main_1 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -176,7 +184,7 @@ Timurid_main_1 = {
 			}
 		}
 	}
-	
+
 	TIM_georgia = {
 		icon = fortress_switzerland
 		required_missions = { TIM_caspian TIM_qq }
@@ -190,7 +198,7 @@ Timurid_main_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			calc_true_if = { 
+			calc_true_if = {
 				all_province = {
 					OR = {
 						area = armenia_area
@@ -205,7 +213,7 @@ Timurid_main_1 = {
 				amount = 10
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -227,7 +235,7 @@ Timurid_main_1 = {
 						scope = every_owned_province
 						event_target_name = "fort_province"
 					}
-					
+
 					event_target:fort_province_1 = {
 						add_province_modifier = {
 							name = me_tim_georgian_engineers
@@ -270,7 +278,7 @@ Timurid_main_1 = {
 			}
 		}
 	}
-	
+
 	TIM_caliphate = {
 		icon = mission_mosque
 		required_missions = { TIM_levant }
@@ -285,7 +293,7 @@ Timurid_main_1 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			custom_tooltip = me_tim_if_we_captured_caliph
 			tooltip = {
@@ -309,7 +317,7 @@ Timurid_main_1 = {
 			}
 		}
 	}
-	
+
 	TIM_a_new_empire = {
 		icon = mission_empire
 		required_missions = { TIM_caliphate TIM_ottomans }
@@ -346,7 +354,7 @@ Timurid_main_1 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -384,7 +392,7 @@ Timurid_main_2 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	TIM_solidify_succession = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { }
@@ -394,7 +402,7 @@ Timurid_main_2 = {
 			army_size = 40
 			is_at_war = no
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -411,7 +419,7 @@ Timurid_main_2 = {
 			ME_give_claims = { region = persia_region }
 		}
 	}
-	
+
 	TIM_expedition = {
 		icon = mission_abu_saids_dream
 		required_missions = { }
@@ -420,7 +428,7 @@ Timurid_main_2 = {
 			num_of_generals = 2
 			num_of_cavalry = 15
 		}
-		
+
 		effect = {
 			ME_give_claims = { area = transcaspia_area }
 			ME_give_claims = { area = nogai_area }
@@ -431,7 +439,7 @@ Timurid_main_2 = {
 			}
 		}
 	}
-	
+
 	TIM_nogai = {
 		icon = mission_collect_yasak
 		required_missions = { TIM_expedition TIM_uzbek }
@@ -467,11 +475,12 @@ Timurid_main_2 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			ME_give_claims = { area = astrakhan_area }
 			ME_give_claims = { area = lower_don_area }
 			ME_give_claims = { area = saratov_area }
+			ME_give_claims = { area = samara_area }
 			ME_give_claims = { area = bashkiria_area }
 			ME_give_claims = { area = kama_area }
 			ME_give_claims = { area = kazan_area }
@@ -489,7 +498,7 @@ Timurid_main_2 = {
 			}
 		}
 	}
-	
+
 	TIM_great_horde = {
 		icon = mission_break_the_tatar_yoke
 		required_missions = { TIM_nogai }
@@ -526,7 +535,7 @@ Timurid_main_2 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			ME_give_claims = { area = azov_area }
 			ME_give_claims = { area = zaporizhia_area }
@@ -569,7 +578,7 @@ Timurid_main_2 = {
 			}
 		}
 	}
-	
+
 	TIM_crimea = {
 		icon = mission_sca_lit_conquer_crimea
 		required_missions = { TIM_great_horde }
@@ -607,7 +616,7 @@ Timurid_main_2 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			ME_give_claims = { area = astrakhan_area }
 			ME_give_claims = { area = lower_don_area }
@@ -627,7 +636,7 @@ Timurid_main_2 = {
 			}
 		}
 	}
-	
+
 	TIM_persia = {
 		icon = mission_persian_soldiers
 		required_missions = { }
@@ -637,7 +646,7 @@ Timurid_main_2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			calc_true_if = { 
+			calc_true_if = {
 				all_province = {
 					region = persia_region
 					OR = {
@@ -645,10 +654,10 @@ Timurid_main_2 = {
 						is_empty = yes
 					}
 				}
-				amount = 40 
+				amount = 40
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -676,7 +685,7 @@ Timurid_main_2 = {
 			}
 		}
 	}
-	
+
 	TIM_qq = {
 		icon = mission_have_two_subjects
 		required_missions = { TIM_persia }
@@ -692,7 +701,7 @@ Timurid_main_2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			calc_true_if = { 
+			calc_true_if = {
 				all_province = {
 					OR = {
 						area = iraq_arabi_area
@@ -706,7 +715,7 @@ Timurid_main_2 = {
 						is_empty = yes
 					}
 				}
-				amount = 10 
+				amount = 10
 			}
 			410 = {
 				OR = {
@@ -721,7 +730,7 @@ Timurid_main_2 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -734,7 +743,7 @@ Timurid_main_2 = {
 			}
 		}
 	}
-	
+
 	TIM_levant = {
 		icon = mission_egyptian_mamluk_soldier
 		required_missions = { TIM_qq }
@@ -770,7 +779,7 @@ Timurid_main_2 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			ME_give_claims = { region = anatolia_region }
 			if = {
@@ -793,7 +802,7 @@ Timurid_main_2 = {
 			}
 		}
 	}
-	
+
 	TIM_ottomans = {
 		icon = mission_ottoman_harem
 		required_missions = { TIM_levant }
@@ -811,7 +820,7 @@ Timurid_main_2 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -824,7 +833,7 @@ Timurid_main_2 = {
 			}
 		}
 	}
-	
+
 	TIM_constantinople = {
 		icon = mission_plc_purple_phoenix
 		required_missions = { TIM_ottomans }
@@ -841,7 +850,7 @@ Timurid_main_2 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -880,7 +889,7 @@ Timurid_main_3 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	TIM_nomadic_conquest = {
 		icon = mission_conquer_central_deccan
 		required_missions = { TIM_nomadic_frontier TIM_solidify_succession }
@@ -891,7 +900,7 @@ Timurid_main_3 = {
 				area = khiva_area
 			}
 			NOT = { owned_by = ROOT }
-				
+
 		}
 		trigger = {
 			kyzylkum_area = {
@@ -909,7 +918,7 @@ Timurid_main_3 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			country_event = { id = ME_Timurid_Main_Events.1 }
 			ME_give_claims = { area = kazakhstan_area }
@@ -918,7 +927,7 @@ Timurid_main_3 = {
 			ME_give_claims = { area = aqmola_area }
 		}
 	}
-	
+
 	TIM_uzbek = {
 		icon = mission_extent_yasak_to_the_east
 		required_missions = { TIM_nomadic_conquest }
@@ -962,12 +971,12 @@ Timurid_main_3 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			country_event = { id = ME_Timurid_Main_Events.2 }
 		}
 	}
-	
+
 	TIM_great_wall = {
 		icon = mission_great_wall
 		required_missions = { TIM_chagatai }
@@ -998,7 +1007,7 @@ Timurid_main_3 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			custom_tooltip = me_tim_if_completed_with_spy_network
 			custom_tooltip = me_tim_north_china_occupation
@@ -1022,7 +1031,7 @@ Timurid_main_3 = {
 			}
 		}
 	}
-	
+
 	TIM_europe = {
 		icon = mission_european_politics
 		required_missions = { TIM_great_horde }
@@ -1036,7 +1045,7 @@ Timurid_main_3 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -1056,7 +1065,7 @@ Timurid_main_3 = {
 			}
 		}
 	}
-	
+
 	TIM_arabia = {
 		icon = mission_arabian_fort
 		required_missions = { TIM_persia }
@@ -1070,7 +1079,7 @@ Timurid_main_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			calc_true_if = { 
+			calc_true_if = {
 				all_province = {
 					OR = {
 						area = bahrain_area
@@ -1082,10 +1091,10 @@ Timurid_main_3 = {
 						is_empty = yes
 					}
 				}
-				amount = 3 
+				amount = 3
 			}
 		}
-		
+
 		effect = {
 			ME_give_claims = { region = arabia_region }
 			add_country_modifier = {
@@ -1124,7 +1133,7 @@ Timurid_main_3 = {
 			}
 		}
 	}
-	
+
 	TIM_arabia_conquest = {
 		icon = mission_invade_island
 		required_missions = { TIM_arabia TIM_hormuz }
@@ -1134,7 +1143,7 @@ Timurid_main_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			calc_true_if = { 
+			calc_true_if = {
 				all_province = {
 					region = arabia_region
 					OR = {
@@ -1142,10 +1151,10 @@ Timurid_main_3 = {
 						is_empty = yes
 					}
 				}
-				amount = 30 
+				amount = 30
 			}
 		}
-		
+
 		effect = {
 			custom_tooltip = me_tim_unlocks_arid_development_privilege
 			if = {
@@ -1179,7 +1188,7 @@ Timurid_main_4 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	TIM_nomadic_frontier = {
 		icon = mission_cossack_cavalry
 		required_missions = { }
@@ -1196,7 +1205,7 @@ Timurid_main_4 = {
 				development = 10
 			}
 		}
-		
+
 		effect = {
 			ME_give_claims = { area = kyzylkum_area }
 			ME_give_claims = { area = khiva_area }
@@ -1206,7 +1215,7 @@ Timurid_main_4 = {
 			}
 		}
 	}
-	
+
 	TIM_yarkand = {
 		icon = mission_saharan_route
 		required_missions = { }
@@ -1242,7 +1251,7 @@ Timurid_main_4 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			country_event = { id = ME_Timurid_Main_Events.3 }
 			ME_give_claims = { area = jetysuu_area }
@@ -1250,7 +1259,7 @@ Timurid_main_4 = {
 			ME_give_claims = { area = turpan_kumul_area }
 		}
 	}
-	
+
 	TIM_chagatai = {
 		icon = mission_imperial_cities
 		required_missions = { TIM_yarkand TIM_uzbek }
@@ -1264,7 +1273,7 @@ Timurid_main_4 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			calc_true_if = { 
+			calc_true_if = {
 				all_province = {
 					OR = {
 						area = jetysuu_area
@@ -1276,17 +1285,17 @@ Timurid_main_4 = {
 						is_empty = yes
 					}
 				}
-				amount = 10 
+				amount = 10
 			}
 		}
-		
+
 		effect = {
 			country_event = { id = ME_Timurid_Main_Events.4 }
 			custom_tooltip = " "
 			ME_give_claims = { region = north_china_region }
 		}
 	}
-	
+
 	TIM_china = {
 		icon = mission_to_china
 		required_missions = { TIM_siege_engines TIM_great_wall }
@@ -1315,7 +1324,7 @@ Timurid_main_4 = {
 				limit = {
 					has_country_flag = me_tim_horde_path
 				}
-				custom_trigger_tooltip = { 
+				custom_trigger_tooltip = {
 					tooltip = ME_tim_no_eoc
 					all_country = {
 						is_emperor_of_china = no
@@ -1323,7 +1332,7 @@ Timurid_main_4 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -1336,7 +1345,7 @@ Timurid_main_4 = {
 			}
 		}
 	}
-	
+
 	TIM_mandate = {
 		icon = me_mission_timurids_mandate_of_heaven
 		required_missions = { TIM_china TIM_oirat }
@@ -1388,7 +1397,7 @@ Timurid_main_4 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -1398,15 +1407,15 @@ Timurid_main_4 = {
 				#custom_tooltip = me_tim_mandate_interactions
 				#Not yet.......not yet........
 				if = {
-					limit = { in_golden_age = yes }  
-					reset_golden_age = yes 
+					limit = { in_golden_age = yes }
+					reset_golden_age = yes
 					custom_tooltip = me_hab_extend_golden_age_50
 					hidden_effect = {
 						extend_golden_age = 600
 					}
 				}
 				else = {
-					reset_golden_age = yes 
+					reset_golden_age = yes
 				}
 			}
 			else = {
@@ -1417,7 +1426,7 @@ Timurid_main_4 = {
 			}
 		}
 	}
-	
+
 	TIM_hormuz = {
 		icon = mission_advance_to_the_arabian_sea
 		required_missions = { }
@@ -1434,7 +1443,7 @@ Timurid_main_4 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			country_event = { id = ME_Timurid_Main_Events.16 }
 		}
@@ -1454,7 +1463,7 @@ Timurid_main_5 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	TIM_chinese_invasion = {
 		icon = mission_open_up_china
 		required_missions = { }
@@ -1472,7 +1481,7 @@ Timurid_main_5 = {
 			is_at_war = no
 			army_tradition = 30
 		}
-		
+
 		effect = {
 			add_country_modifier = {
 				name = me_tim_preparing_the_army
@@ -1481,7 +1490,7 @@ Timurid_main_5 = {
 			}
 		}
 	}
-	
+
 	TIM_siege_engines = {
 		icon = mission_cannons_firing
 		required_missions = { TIM_chagatai TIM_chinese_invasion }
@@ -1494,7 +1503,7 @@ Timurid_main_5 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			custom_tooltip = me_tim_when_we_declare_on_eoc
 			set_country_flag = me_tim_planned_war_with_china
@@ -1521,7 +1530,7 @@ Timurid_main_5 = {
 			add_yearly_manpower = 1
 		}
 	}
-	
+
 	TIM_oirat = {
 		icon = mission_manchu_warrior
 		required_missions = { TIM_siege_engines }
@@ -1531,7 +1540,7 @@ Timurid_main_5 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			calc_true_if = { 
+			calc_true_if = {
 				all_province = {
 					region = mongolia_region
 					OR = {
@@ -1539,10 +1548,10 @@ Timurid_main_5 = {
 						is_empty = yes
 					}
 				}
-				amount = 30 
+				amount = 30
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {

@@ -116,7 +116,7 @@ ire_conquest_main = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	ire_conquer_munster = {
 		icon = mission_rb_conquer_munster
 		required_missions = { }
@@ -175,7 +175,7 @@ ire_conquest_main = {
 			}
 		}
 	}
-	
+
 	unite_the_clans_ire = {
 		icon = mission_rb_unite_the_clans
 		required_missions = { ire_conquer_munster ire_conquer_leinster ire_conquer_ulster ire_conquer_connacht }
@@ -301,7 +301,14 @@ ire_conquest_main = {
 			cornwall_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_east_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -314,6 +321,7 @@ ire_conquest_main = {
 			OR = {
 				area = west_midlands_area
 				area = cornwall_area
+				area = south_east_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -328,10 +336,14 @@ ire_conquest_main = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			south_east_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_army_tradition = 10
-			south_east_area = {
+			greater_london_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -378,7 +390,7 @@ ire_conquest_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	ire_conquer_connacht = {
 		icon = mission_rb_conquer_connacth
 		required_missions = { }
@@ -556,7 +568,7 @@ ire_conquest_4 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	ire_conquer_leinster = {
 		icon = mission_rb_conquer_leinster
 		required_missions = { }

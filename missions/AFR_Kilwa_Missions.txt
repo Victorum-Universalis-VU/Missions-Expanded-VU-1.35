@@ -963,27 +963,11 @@ kilwa_colonization_missions_slot = {
 			OR = {
 				region = indonesia_region
 				region = malaya_region
-				region = riau_islands_region
-				region = nusa_tenggara_region
-				region = borneo_region
-				region = celebes_region
 			}
 			NOT = { has_discovered = ROOT }
 		}
 		trigger = {
 			indonesia_region = {
-				has_discovered = ROOT
-			}
-			riau_islands_region = {
-				has_discovered = ROOT
-			}
-			nusa_tenggara_region = {
-				has_discovered = ROOT
-			}
-			borneo_region = {
-				has_discovered = ROOT
-			}
-			celebes_region = {
 				has_discovered = ROOT
 			}
 			malaya_region = {

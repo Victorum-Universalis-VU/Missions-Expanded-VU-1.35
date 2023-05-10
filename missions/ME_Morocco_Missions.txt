@@ -11,7 +11,7 @@ MOR_missions_1 = {
 		NOT = { has_country_flag = BRBR_mission_enabled }
 	}
 	has_country_shield = yes
-	
+
 	MOR_tribal_mission = {
 		icon = mission_conquer_air
 		required_missions = { }
@@ -41,7 +41,7 @@ MOR_missions_1 = {
 			}
 		}
 	}
-	
+
 	MOR_inner_tribes = {
 		icon = mission_invade_mali
 		required_missions = { MOR_tlemcen MOR_tribal_mission }
@@ -67,13 +67,13 @@ MOR_missions_1 = {
 		}
 		effect = {
 			TUN_enable_colonize_djado_decision = yes
-			
+
 			custom_tooltip = " "
-			
+
 			add_war_exhaustion = -1
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = MOR_if_we_have_at_least_60_berber_loyalty
 			hidden_effect = {
 				if = {
@@ -99,7 +99,7 @@ MOR_missions_1 = {
 			}
 		}
 	}
-	
+
 	MOR_hintata = {
 		icon = mission_friends_or_enemies
 		required_missions = { }
@@ -130,11 +130,11 @@ MOR_missions_1 = {
 		}
 		effect = {
 			country_event = { id = ME_Morocco_Events.7 }
-			
+
 			country_event = { id = ME_Morocco_Events.8 days = 30 }
 		}
 	}
-	
+
 	MOR_sufis = {
 		icon = mission_reclaim_morocco
 		required_missions = { MOR_hintata }
@@ -166,9 +166,9 @@ MOR_missions_1 = {
 			owns_core_province = 347
 			owns_core_province = 1110
 			owns_core_province = 2464
-			
+
 			342 = { has_tax_building_trigger = yes }
-			
+
 			OR = {
 				NOT = { piety = -0.25 }
 				piety = 0.5 #legalists get it harder
@@ -176,18 +176,18 @@ MOR_missions_1 = {
 		}
 		effect = {
 			country_event = { id = ME_Morocco_Events.9 }
-			
+
 			348 = { add_base_tax = 1 }
 			347 = { add_base_tax = 1 }
 			1110 = { add_base_tax = 1 }
 			2464 = { add_base_tax = 1 }
-			
+
 			ME_give_claims = { area = macaronesia_area }
-			
+
 			macaronesia_area = { discover_country = ROOT }
 		}
 	}
-	
+
 	MOR_canaries = {
 		icon = mission_claim_the_canaries
 		required_missions = { MOR_sufis }
@@ -197,23 +197,23 @@ MOR_missions_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			366 = { 
-				country_or_non_sovereign_subject_holds = ROOT 
+			366 = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			add_temporary_colonist = { duration = 14600 }
-			
+
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { id = 1111 }
-			
+
 			custom_tooltip = " "
-			
+
 			create_explorer = { tradition = 20 }
 		}
 	}
-	
+
 	MOR_west_africa = {
 		icon = mission_son_invade_mali
 		required_missions = { MOR_pashalik }
@@ -236,25 +236,25 @@ MOR_missions_1 = {
 			}
 		}
 		effect = {
-			ME_give_claims = { region = sahel_region } 
+			ME_give_claims = { region = sahel_region }
 			ME_give_claims = { region = niger_region }
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = MOR_west_africa_conquest
 				duration = 10950
 			}
 		}
 	}
-	
+
 	MOR_corsair_fleet = {
 		icon = mission_construct_a_corsair_fleet
 		required_missions = { }
 		position = 9
 		provinces_to_highlight = {
 			owned_by = ROOT
-			has_port = yes 
+			has_port = yes
 			NOT = { has_shipyard_building_trigger = yes }
 		}
 		trigger = {
@@ -269,7 +269,7 @@ MOR_missions_1 = {
 			tooltip = {
 				add_or_upgrade_shipyard_building = yes
 			}
-			
+
 			hidden_effect = {
 				pick_best_provinces = {
 					3 = yes
@@ -290,14 +290,14 @@ MOR_missions_1 = {
 					add_or_upgrade_shipyard_building = yes
 				}
 			}
-			
+
 			add_country_modifier = {
 				name = MOR_corsairs_of_the_mediterranean
 				duration = 9125
 			}
 		}
 	}
-	
+
 	MOR_sponsor_piracy = {
 		icon = mission_sponsor_piracy
 		required_missions = { MOR_corsair_fleet }
@@ -421,7 +421,7 @@ MOR_missions_1 = {
 					}
 				}
 			}
-			if = { 
+			if = {
 				limit = {
 					OR = {
 						has_dlc = "Golden Century"
@@ -440,9 +440,9 @@ MOR_missions_1 = {
 		}
 		effect = {
 			add_years_of_income = 2
-			
+
 			custom_tooltip = " "
-			
+
 			random_owned_province = {
 				limit = {
 					has_port = yes
@@ -454,9 +454,9 @@ MOR_missions_1 = {
 					cost = 0
 				}
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = MOR_raiding
 				duration = -1
@@ -478,7 +478,7 @@ MOR_missions_2 = {
 		NOT = { has_country_flag = BRBR_mission_enabled }
 	}
 	has_country_shield = yes
-	
+
 	MOR_tlemcen = {
 		icon = mission_conquer_algiers
 		required_missions = { MOR_fc }
@@ -505,14 +505,14 @@ MOR_missions_2 = {
 		}
 		effect = {
 			add_accepted_culture_or_dip_power = { culture = algerian }
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = MOR_zayyanids_subjugated
 				duration = 9125
 			}
-			
+
 			ME_give_claims = { area = kabylia_area }
 			ME_give_claims = { area = tunisia_area }
 			ME_give_claims = { area = ouled_nail_area }
@@ -522,7 +522,7 @@ MOR_missions_2 = {
 			ME_give_claims = { area = fezzan_area }
 		}
 	}
-	
+
 	MOR_hafsids = {
 		icon = mission_conquer_tunis
 		required_missions = { MOR_tlemcen }
@@ -550,11 +550,11 @@ MOR_missions_2 = {
 				name = MOR_supremacy_over_maghreb
 				duration = -1
 			}
-			
+
 			add_accepted_culture_or_dip_power = { culture = tunisian }
 		}
 	}
-	
+
 	MOR_wattasids = {
 		icon = mission_eliminate_pretenders
 		required_missions = { }
@@ -574,7 +574,7 @@ MOR_missions_2 = {
 			add_stability_or_adm_power = yes
 		}
 	}
-	
+
 	MOR_saadi = {
 		icon = mission_claim_hispaniola
 		required_missions = { MOR_hintata }
@@ -600,16 +600,16 @@ MOR_missions_2 = {
 			owns_core_province = 2460
 			owns_core_province = 2466
 			NOT = { exists = TFL }
-			
+
 			if = {
 				limit = {
 					ai = no
 				}
 				num_of_provinces_developed = { amount = 10 }
 			} #cant make ai dev or else they will be blocked
-			
+
 			has_adm_advisor_2 = yes
-			
+
 			OR = {
 				NOT = { current_age = age_of_discovery }
 				custom_trigger_tooltip = {
@@ -620,20 +620,20 @@ MOR_missions_2 = {
 		}
 		effect = {
 			TUN_enable_colonize_tuat_decision = yes
-			
+
 			custom_tooltip = " "
 			GHD_grant_vision_on_west_africa = yes
 			custom_tooltip = " "
-			
+
 			country_event = { id = ME_Morocco_Events.10 }
-			
+
 			custom_tooltip = " "
 			ME_give_claims = { area = niger_bend_area }
 			ME_give_claims = { area = baghena_area }
 			ME_give_claims = { area = western_sahara_area }
 		}
 	}
-	
+
 	MOR_pashalik = {
 		icon = mission_conquer_timbuktu
 		required_missions = { MOR_saadi }
@@ -654,20 +654,20 @@ MOR_missions_2 = {
 					area = baghena_area
 					area = western_sahara_area
 				}
-				value = 5 
+				value = 5
 			}
 			NOT = { exists = TMB }
 		}
 		effect = {
 			country_event = { id = ME_Morocco_Events.11 }
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = MOR_black_guard
 			set_country_flag = MOR_black_guard_flag
-			
+
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { area = massina_area }
 			ME_give_claims = { area = manding_area }
 			ME_give_claims = { area = jenne_area }
@@ -679,7 +679,7 @@ MOR_missions_2 = {
 			ME_give_claims = { area = east_azbin_area }
 		}
 	}
-	
+
 	MOR_transsaharan_trade = {
 		icon = mission_traverse_the_sahara
 		required_missions = { MOR_pashalik }
@@ -700,7 +700,7 @@ MOR_missions_2 = {
 			country_event = { id = ME_Morocco_Events.12 }
 		}
 	}
-	
+
 	MOR_ben_youssef = {
 		icon = mission_growth_of_golcond
 		required_missions = { MOR_expand_marrakesh }
@@ -723,7 +723,7 @@ MOR_missions_2 = {
 		effect = {
 			344 = {
 				add_or_upgrade_tax_building = yes
-				add_or_upgrade_production_building = yes 
+				add_or_upgrade_production_building = yes
 				add_province_modifier = {
 					name = MOR_mosque_of_ben_youssef
 					duration = -1
@@ -746,7 +746,7 @@ MOR_missions_3 = {
 		NOT = { has_country_flag = BRBR_mission_enabled }
 	}
 	has_country_shield = yes
-	
+
 	MOR_fc = {
 		icon = mission_levantine_restoration
 		required_missions = { }
@@ -765,14 +765,14 @@ MOR_missions_3 = {
 				name = MOR_reorganized_forces
 				duration = 7300
 			}
-			
+
 			ME_give_claims = { area = northern_morocco_area }
 			ME_give_claims = { area = hautes_plaines_area }
 			ME_give_claims = { area = barbary_coast_area }
 			ME_give_claims = { id = 349 }
 		}
 	}
-	
+
 	MOR_navy = {
 		icon = mission_launch_a_flagship
 		required_missions = { MOR_fc }
@@ -791,11 +791,11 @@ MOR_missions_3 = {
 				name = MOR_accross_the_strait
 				duration = 9125
 			}
-			
+
 			add_navy_tradition = 20
 		}
 	}
-	
+
 	MOR_eastern_mediterranean_piracy = {
 		icon = mission_raid_on_genoa
 		required_missions = { MOR_navy MOR_hafsids }
@@ -824,12 +824,12 @@ MOR_missions_3 = {
 			354 = {
 				create_or_add_center_of_trade_level = { level = 1 }
 			}
-			
+
 			add_yearly_sailors = 1
 			add_years_of_income = 0.5
 		}
 	}
-	
+
 	MOR_stabilize = {
 		icon = mission_new_world_power
 		required_missions = { MOR_wattasids }
@@ -855,7 +855,7 @@ MOR_missions_3 = {
 			set_country_flag = MOR_stabilized_the_sultanate_flag
 		}
 	}
-	
+
 	MOR_allies = {
 		icon = mission_ottoman_diplomacy
 		required_missions = { }
@@ -877,7 +877,7 @@ MOR_missions_3 = {
 					all_ally = {
 						religion_group = muslim
 						OR = {
-							NOT = { 
+							NOT = {
 								capital_scope = {
 									continent = africa
 								}
@@ -895,7 +895,7 @@ MOR_missions_3 = {
 			country_event = { id = ME_Morocco_Events.6 }
 		}
 	}
-	
+
 	MOR_ottoman_corps = {
 		icon = mission_non-western_soldiers
 		required_missions = { MOR_allies MOR_military_reforms }
@@ -905,13 +905,13 @@ MOR_missions_3 = {
 				limit = {
 					exists = TUR
 				}
-				owned_by = TUR 
+				owned_by = TUR
 			}
 			# else_if = {
 				# limit = {
-					# exists = RUM
+					# exists = RMM
 				# }
-				# owned_by = RUM
+				# owned_by = RMM
 			# }
 			else = {
 			}
@@ -936,17 +936,17 @@ MOR_missions_3 = {
 			}
 			# else_if = {
 				# limit = {
-					# exists = RUM
+					# exists = RMM
 				# }
 				# OR = {
-					# RUM = {
+					# RMM = {
 						# has_opinion = {
 							# who = ROOT
 							# value = 150
 						# }
 					# }
 					# army_strength = {
-						# who = RUM
+						# who = RMM
 						# value = 0.75
 					# }
 				# }
@@ -960,9 +960,9 @@ MOR_missions_3 = {
 			set_country_flag = MOR_ottoman_company
 			custom_tooltip = MOR_ottoman_company_tt
 			custom_tooltip = " "
-			
+
 			define_advisor = {
-				type = ME_mercenary_commander 
+				type = ME_mercenary_commander
 				skill = 3
 				culture = TUR
 				religion = TUR
@@ -970,7 +970,7 @@ MOR_missions_3 = {
 			}
 		}
 	}
-	
+
 	MOR_expand_marrakesh = {
 		icon = mission_found_havana
 		required_missions = { }
@@ -997,13 +997,13 @@ MOR_missions_3 = {
 					duration = -1
 				}
 			}
-			
+
 			344 = {
 				add_prosperity = 100
 			}
 		}
 	}
-	
+
 	MOR_el_badi = {
 		icon = mission_el_badi_palace
 		required_missions = { MOR_expand_marrakesh }
@@ -1020,7 +1020,7 @@ MOR_missions_3 = {
 				owned_by = ROOT
 				development = 35
 			}
-			
+
 			legitimacy = 90
 		}
 		effect = {
@@ -1029,7 +1029,7 @@ MOR_missions_3 = {
 				skill = 2
 				culture = ROOT
 				religion = ROOT
-				cost_multiplier = 0.25 
+				cost_multiplier = 0.25
 			}
 			344 = {
 				add_province_modifier = {
@@ -1037,14 +1037,14 @@ MOR_missions_3 = {
 					duration = -1
 				}
 			}
-			
+
 			custom_tooltip = MOR_if_we_like_an_italian_nation
 			tooltip = {
 				add_prestige_or_monarch_power = { amount = 25 }
 				add_splendor = 100
 			}
 			hidden_effect = {
-				if = { 
+				if = {
 					limit = {
 						any_country = {
 							culture_group = latin
@@ -1075,7 +1075,7 @@ MOR_missions_4 = {
 		NOT = { has_country_flag = BRBR_mission_enabled }
 	}
 	has_country_shield = yes
-	
+
 	MOR_turn_against_portugal = {
 		icon = mission_union_with_portugal
 		required_missions = { }
@@ -1093,9 +1093,9 @@ MOR_missions_4 = {
 		}
 		effect = {
 			# TUN_enable_expel_europeans_decision = yes
-			
+
 			# custom_tooltip = " "
-			
+
 			add_age_modifier = {
 				name = MOR_repel_the_europeans
 				duration = -1
@@ -1106,7 +1106,7 @@ MOR_missions_4 = {
 			}
 		}
 	}
-	
+
 	MOR_reconquer_sabtah = {
 		icon = mission_retake_ceuta
 		required_missions = { MOR_turn_against_portugal }
@@ -1126,14 +1126,14 @@ MOR_missions_4 = {
 		}
 		effect = {
 			add_dip_power = 50
-			
-			1751 = { 
+
+			1751 = {
 				create_or_add_center_of_trade_level = { level = 1 }
 				province_event = { id = ME_Morocco_Events.1 } #bargain with granada
 			}
-			
+
 			add_legitimacy = 10
-			
+
 			ME_give_claims = { area = upper_andalucia_area }
 			ME_give_claims = { area = lower_andalucia_area }
 			ME_give_claims = { area = alentejo_area }
@@ -1141,7 +1141,7 @@ MOR_missions_4 = {
 			ME_give_claims = { area = toledo_area }
 		}
 	}
-	
+
 	MOR_ambitions_in_iberia = {
 		icon = mission_al_andalus
 		required_missions = { MOR_reconquer_sabtah MOR_plight_of_granada MOR_navy }
@@ -1174,16 +1174,16 @@ MOR_missions_4 = {
 				name = MOR_al_andalus
 				duration = 14600
 			}
-			
+
 			change_national_focus_effect = yes
-			
+
 			ME_give_claims = { area = beieras_area }
 			ME_give_claims = { area = extremadura_area }
 			ME_give_claims = { area = aragon_area }
 			ME_give_claims = { area = catalonia_area }
 		}
 	}
-	
+
 	MOR_return_the_moors = {
 		icon = mission_expel_the_moriscos
 		required_missions = { MOR_ambitions_in_iberia }
@@ -1201,12 +1201,12 @@ MOR_missions_4 = {
 		trigger = {
 			lower_andalucia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 				religion_group = muslim
 			}
 			upper_andalucia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 				religion_group = muslim
 			}
 		}
@@ -1215,7 +1215,7 @@ MOR_missions_4 = {
 			ME_technology_split_120_power = yes
 		}
 	}
-	
+
 	MOR_military_reforms = {
 		icon = mission_conquer_sindh_mer
 		required_missions = { }
@@ -1226,20 +1226,20 @@ MOR_missions_4 = {
 			has_mil_advisor = yes
 			army_tradition = 40
 			army_size_percentage = 0.8
-			
-			num_of_generals = 2 
+
+			num_of_generals = 2
 		}
 		effect = {
 			add_mil_power = 100
 			add_army_professionalism = 0.05
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = MOR_if_we_have_at_least_60_noble_loyalty
 			tooltip = {
 				add_yearly_manpower = 0.5
 			}
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1253,7 +1253,7 @@ MOR_missions_4 = {
 			}
 		}
 	}
-	
+
 	MOR_adopt_gunpowder = {
 		icon = mission_gunpowder_warfare
 		required_missions = { MOR_military_reforms }
@@ -1279,7 +1279,7 @@ MOR_missions_4 = {
 				name = MOR_gunpowder_warfare
 				duration = 7300
 			}
-			
+
 			define_advisor = {
 				type = army_reformer
 				skill = 3
@@ -1289,7 +1289,7 @@ MOR_missions_4 = {
 			}
 		}
 	}
-	
+
 	MOR_fezzian_funduqs = {
 		icon = mission_valencian_silk
 		required_missions = { MOR_expand_fez }
@@ -1313,9 +1313,9 @@ MOR_missions_4 = {
 				custom_tooltip = " "
 				create_or_add_center_of_trade_level = { level = 1 }
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			home_trade_node_effect_scope = {
 				add_trade_modifier = {
 					who = ROOT
@@ -1341,7 +1341,7 @@ MOR_missions_5 = {
 		NOT = { has_country_flag = BRBR_mission_enabled }
 	}
 	has_country_shield = yes
-	
+
 	MOR_guarantee_the_nasrids = {
 		icon = mission_castillian_aggression
 		required_missions = { }
@@ -1355,7 +1355,7 @@ MOR_missions_5 = {
 				NOT = { exists = GRA }
 				GRA = {
 					OR = {
-						guaranteed_by = ROOT 
+						guaranteed_by = ROOT
 						alliance_with = ROOT
 						is_subject_of = ROOT
 					}
@@ -1381,20 +1381,20 @@ MOR_missions_5 = {
 				custom_tooltip = MOR_if_we_can_save_them_for_10_years
 			}
 			custom_tooltip = " "
-			
+
 			custom_tooltip = MOR_completed_by_not_existance_insult
-			
+
 			tooltip = {
 				ME_give_claims = { area = upper_andalucia_area }
 				add_mil_power = 100
 			}
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
 						GRA = {
 							OR = {
-								guaranteed_by = ROOT 
+								guaranteed_by = ROOT
 								alliance_with = ROOT
 								is_subject_of = ROOT
 							}
@@ -1408,7 +1408,7 @@ MOR_missions_5 = {
 						cost_multiplier = 0.75
 					}
 					set_country_flag = MOR_vassalage
-					
+
 					GRA = {
 						add_country_modifier = {
 							name = MOR_moroccan_support
@@ -1426,7 +1426,7 @@ MOR_missions_5 = {
 			}
 		}
 	}
-	
+
 	MOR_plight_of_granada = {
 		icon = mission_protect_granada
 		required_missions = { MOR_guarantee_the_nasrids }
@@ -1434,7 +1434,7 @@ MOR_missions_5 = {
 		provinces_to_highlight = {
 			OR = {
 				area = upper_andalucia_area
-				owned_by = GRA 
+				owned_by = GRA
 			}
 		}
 		trigger = {
@@ -1442,7 +1442,7 @@ MOR_missions_5 = {
 				AND = {
 					GRA = {
 						OR = {
-							guaranteed_by = ROOT 
+							guaranteed_by = ROOT
 							alliance_with = ROOT
 							is_subject_of = ROOT
 						}
@@ -1459,7 +1459,7 @@ MOR_missions_5 = {
 					NOT = {
 						GRA = {
 							OR = {
-								guaranteed_by = ROOT 
+								guaranteed_by = ROOT
 								alliance_with = ROOT
 								is_subject_of = ROOT
 							}
@@ -1467,7 +1467,7 @@ MOR_missions_5 = {
 					}
 					upper_andalucia_area = {
 						type = all
-						controller = { 
+						controller = {
 							tag = ROOT
 						}
 					}
@@ -1479,22 +1479,22 @@ MOR_missions_5 = {
 			tooltip = {
 				GRA = {
 					country_event = { id = ME_Morocco_Events.3 }
-					
+
 					disable_annex_penalty = yes
 				}
 			}
-			
+
 			custom_tooltip = MOR_completed_by_occupation
 			tooltip = {
 				create_general = { tradition = 80 }
 			}
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
 						GRA = {
 							OR = {
-								guaranteed_by = ROOT 
+								guaranteed_by = ROOT
 								alliance_with = ROOT
 								is_subject_of = ROOT
 							}
@@ -1502,7 +1502,7 @@ MOR_missions_5 = {
 					}
 					GRA = {
 						country_event = { id = ME_Morocco_Events.3 }
-						
+
 						disable_annex_penalty = yes
 					}
 				}
@@ -1512,7 +1512,7 @@ MOR_missions_5 = {
 			}
 		}
 	}
-	
+
 	MOR_restore_old_taifas = {
 		icon = mission_golden_century
 		required_missions = { MOR_ambitions_in_iberia }
@@ -1539,19 +1539,19 @@ MOR_missions_5 = {
 		}
 		effect = {
 			country_event = { id = ME_Morocco_Events.5 }
-			
+
 			custom_tooltip = " "
-			
+
 			add_army_tradition_or_mil_power = { amount = 15 }
-			
+
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { area = galicia_area }
 			ME_give_claims = { area = asturias_area }
 			ME_give_claims = { area = basque_area }
 		}
 	}
-	
+
 	MOR_successors_of_the_almoravids = {
 		icon = mission_plus_ultra #special mission icon here!
 		required_missions = { MOR_restore_old_taifas }
@@ -1595,7 +1595,7 @@ MOR_missions_5 = {
 				}
 				value = 35
 			}
-			
+
 		}
 		effect = {
 			set_government_rank = 3
@@ -1603,11 +1603,11 @@ MOR_missions_5 = {
 				name = MOR_almohads
 				duration = -1
 			}
-			
+
 			set_defender_of_the_faith_effect = yes
 		}
 	}
-	
+
 	MOR_guich = {
 		icon = mission_arabian_fort
 		required_missions = { MOR_military_reforms }
@@ -1634,8 +1634,8 @@ MOR_missions_5 = {
 				has_manpower_building_trigger = yes
 				has_forcelimit_building_trigger = yes
 			}
-			
-			has_mil_advisor_2 = yes 
+
+			has_mil_advisor_2 = yes
 		}
 		effect = {
 			343 = {
@@ -1643,7 +1643,7 @@ MOR_missions_5 = {
 				add_or_upgrade_forcelimit_building = yes
 				add_province_modifier = {
 					name = MOR_local_guich_tribes_stationed
-					duration = -1 
+					duration = -1
 				}
 			}
 			344 = {
@@ -1651,17 +1651,17 @@ MOR_missions_5 = {
 				add_or_upgrade_forcelimit_building = yes
 				add_province_modifier = {
 					name = MOR_local_guich_tribes_stationed
-					duration = -1 
+					duration = -1
 				}
 			}
-			
+
 			add_country_modifier = {
 				name = MOR_garrison_tribes
 				duration = 10950
 			}
 		}
 	}
-	
+
 	MOR_expand_fez = {
 		icon = mission_imperial_cities
 		required_missions = { }
@@ -1679,18 +1679,18 @@ MOR_missions_5 = {
 				development = 20
 			}
 		}
-		effect = {	
+		effect = {
 			343 = {
 				add_province_modifier = {
 					name = MOR_fez_growing_city
 					duration = -1
 				}
 			}
-			
+
 			add_years_of_income = 0.25
 		}
 	}
-	
+
 	MOR_kasbah_mosque = { #this is in marrakesh, what was I thinking!? I renamed this in loc
 		icon = mission_conquer_rewakantha
 		required_missions = { MOR_expand_fez }
@@ -1713,7 +1713,7 @@ MOR_missions_5 = {
 		effect = {
 			343 = {
 				add_or_upgrade_tax_building = yes
-				add_or_upgrade_university_building = yes 
+				add_or_upgrade_university_building = yes
 				add_province_modifier = {
 					name = MOR_mosque_of_al_qarawiyyin
 					duration = -1

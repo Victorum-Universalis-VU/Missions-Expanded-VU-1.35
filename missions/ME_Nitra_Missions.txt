@@ -332,24 +332,24 @@ nitra_second = {
 			}
 			hidden_effect = {
 				1772 = {
-					change_province_name = "Prešporok"
-					rename_capital = "Prešporok"
+					change_province_name = "Preï¿½porok"
+					rename_capital = "Preï¿½porok"
 				}
 				154 = {
 					change_province_name = "Nitra"
 					rename_capital = "Nitra"
 				}
 				4236 = {
-					change_province_name = "Trencín"
-					rename_capital = "Trencín"
+					change_province_name = "Trencï¿½n"
+					rename_capital = "Trencï¿½n"
 				}
 				1318 = {
-					change_province_name = "Spiš"
-					rename_capital = "Spiš"
+					change_province_name = "Spiï¿½"
+					rename_capital = "Spiï¿½"
 				}
 				162 = {
-					change_province_name = "Zemplín"
-					rename_capital = "Zemplín"
+					change_province_name = "Zemplï¿½n"
+					rename_capital = "Zemplï¿½n"
 				}
 			}
 		}
@@ -866,40 +866,40 @@ nitra_third = {
 					rename_capital = "Solnok"
 				}
 				1953 = {
-					change_province_name = "Debrecín"
-					rename_capital = "Debrecín"
+					change_province_name = "Debrecï¿½n"
+					rename_capital = "Debrecï¿½n"
 				}
 				155 = {
-					change_province_name = "Békeš"
-					rename_capital = "Békešská Caba"
+					change_province_name = "Bï¿½keï¿½"
+					rename_capital = "Bï¿½keï¿½skï¿½ Caba"
 				}
 				1954 = {
 					change_province_name = "Vojvodina"
-					rename_capital = "Velký Beckerek"
+					rename_capital = "Velkï¿½ Beckerek"
 				}
 				156 = {
-					change_province_name = "Temešvár"
-					rename_capital = "Temešvár"
+					change_province_name = "Temeï¿½vï¿½r"
+					rename_capital = "Temeï¿½vï¿½r"
 				}
 				1951 = {
 					change_province_name = "Balhrad"
 					rename_capital = "Balhrad"
 				}
 				157 = {
-					change_province_name = "Velký Varadín"
-					rename_capital = "Velký Varadín"
+					change_province_name = "Velkï¿½ Varadï¿½n"
+					rename_capital = "Velkï¿½ Varadï¿½n"
 				}
 				1952 = {
 					change_province_name = "Podkarpatie"
 					rename_capital = "Chust"
 				}
 				4127 = {
-					change_province_name = "Kluž"
-					rename_capital = "Kluž"
+					change_province_name = "Kluï¿½"
+					rename_capital = "Kluï¿½"
 				}
 				158 = {
-					change_province_name = "Maruša"
-					rename_capital = "Marušské Trhovište"
+					change_province_name = "Maruï¿½a"
+					rename_capital = "Maruï¿½skï¿½ Trhoviï¿½te"
 				}
 				4128 = {
 					change_province_name = "Sibin"
@@ -1218,16 +1218,16 @@ nitra_fourth = {
 					rename_capital = "Kamenec"
 				}
 				4240 = {
-					change_province_name = "Stolicný Belehrad"
-					rename_capital = "Stolicný Belehrad"
+					change_province_name = "Stolicnï¿½ Belehrad"
+					rename_capital = "Stolicnï¿½ Belehrad"
 				}
 				1864 = {
 					change_province_name = "Blatnohrad"
 					rename_capital = "Blatnohrad"
 				}
 				153 = {
-					change_province_name = "Pestbudín"
-					rename_capital = "Pestbudín"
+					change_province_name = "Pestbudï¿½n"
+					rename_capital = "Pestbudï¿½n"
 				}
 				4126 = {
 					change_province_name = "Backa"
@@ -1580,7 +1580,7 @@ nitra_fourth = {
 			tooltip = {
 				define_advisor = {
 					type = theologian
-					name = "Anton Bernolák"
+					name = "Anton Bernolï¿½k"
 					skill = 3
 					culture = slovak
 					religion = catholic
@@ -1591,7 +1591,7 @@ nitra_fourth = {
 			tooltip = {
 				define_advisor = {
 					type = philosopher
-					name = "Ludovít Štúr"
+					name = "Ludovï¿½t ï¿½tï¿½r"
 					skill = 3
 					culture = slovak
 					religion = protestant
@@ -1605,7 +1605,7 @@ nitra_fourth = {
 					}
 					define_advisor = {
 						type = theologian
-						name = "Anton Bernolák"
+						name = "Anton Bernolï¿½k"
 						skill = 3
 						culture = slovak
 						religion = catholic
@@ -1623,7 +1623,7 @@ nitra_fourth = {
 					}
 					define_advisor = {
 						type = philosopher
-						name = "Ludovít Štúr"
+						name = "Ludovï¿½t ï¿½tï¿½r"
 						skill = 3
 						culture = slovak
 						religion = protestant

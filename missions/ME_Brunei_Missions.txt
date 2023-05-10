@@ -77,7 +77,7 @@ BEI_missions_1 = {
 					limit = {
 						SMB = { is_subject_of = ROOT }
 					}
-					SMB = { 
+					SMB = {
 						country_event = { id = ME_Brunei_Events.2 }
 					}
 				}
@@ -111,6 +111,13 @@ BEI_missions_1 = {
 				add_permanent_claim = ROOT
 			}
 			malaya_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tenasserim_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -151,6 +158,7 @@ BEI_missions_1 = {
 				area = central_sumatra_area
 				area = palembang_area
 				area = malacca_area
+				area = tenasserim_area
 				area = kedah_area
 				area = indonesian_islands_area
 				area = riau_islands_area
@@ -165,6 +173,7 @@ BEI_missions_1 = {
 							area = central_sumatra_area
 							area = palembang_area
 							area = malacca_area
+							area = tenasserim_area
 							area = kedah_area
 							area = indonesian_islands_area
 							area = riau_islands_area
@@ -182,6 +191,7 @@ BEI_missions_1 = {
 					area = central_sumatra_area
 					area = palembang_area
 					area = malacca_area
+					area = tenasserim_area
 					area = kedah_area
 					area = indonesian_islands_area
 					area = riau_islands_area
@@ -450,7 +460,6 @@ BEI_missions_3 = {
 				area = luzon_area
 				area = visayas_area
 				area = mindanao_area
-				area = sulu_archipelago_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
@@ -461,7 +470,6 @@ BEI_missions_3 = {
 							area = luzon_area
 							area = visayas_area
 							area = mindanao_area
-							area = sulu_archipelago_area
 						}
 						value = 10
 					}
@@ -475,7 +483,6 @@ BEI_missions_3 = {
 					area = luzon_area
 					area = visayas_area
 					area = mindanao_area
-					area = sulu_archipelago_area
 				}
 				value = 10
 			}
@@ -678,19 +685,13 @@ BEI_missions_4 = {
 		required_missions = { BEI_sulu }
 		position = 2
 		provinces_to_highlight = {
-			OR = {
-				area = sulu_archipelago_area
-				area = mindanao_area
-			}
+			area = mindanao_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = { is_empty = yes }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						OR = {
-							area = sulu_archipelago_area
-							area = mindanao_area
-						}
+						area = mindanao_area
 						value = 2
 					}
 				}
@@ -698,10 +699,7 @@ BEI_missions_4 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					area = sulu_archipelago_area
-					area = mindanao_area
-				}
+				area = mindanao_area
 				value = 2
 			}
 		}

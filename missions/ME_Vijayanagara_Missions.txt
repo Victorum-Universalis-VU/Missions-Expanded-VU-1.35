@@ -1409,6 +1409,7 @@ vijayanagara_mission_1_expansion = {
 					NOT = { has_building = fort_18th }
 					NOT = { has_building = naval_base }
 					NOT = { has_building = naval_arsenal }
+					NOT = { has_building = coastal_artillery }
 				}
 			}
 		}
@@ -1426,7 +1427,8 @@ vijayanagara_mission_1_expansion = {
 					has_building = fort_17th
 					has_building = fort_18th
 					has_building = naval_base
-						has_building = naval_arsenal
+					has_building = naval_arsenal
+					has_building = coastal_artillery
 				}
 			}
 			num_of_owned_provinces_with = {
@@ -1443,6 +1445,7 @@ vijayanagara_mission_1_expansion = {
 					has_building = fort_18th
 					has_building = naval_base
 					has_building = naval_arsenal
+					has_building = coastal_artillery
 				}
 			}
 		}
@@ -1463,6 +1466,7 @@ vijayanagara_mission_1_expansion = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
+						has_building = coastal_artillery
 					}
 				}
 				add_base_manpower = 2
@@ -1482,6 +1486,7 @@ vijayanagara_mission_1_expansion = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
+						has_building = coastal_artillery
 					}
 				}
 				add_base_manpower = 2
@@ -1501,6 +1506,7 @@ vijayanagara_mission_1_expansion = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
+						has_building = coastal_artillery
 					}
 				}
 				add_base_manpower = 2
@@ -1520,6 +1526,7 @@ vijayanagara_mission_1_expansion = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
+						has_building = coastal_artillery
 					}
 				}
 				add_base_manpower = 2

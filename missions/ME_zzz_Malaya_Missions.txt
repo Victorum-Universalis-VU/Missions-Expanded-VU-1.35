@@ -335,6 +335,13 @@ MSA_Missions_Expansion_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			khorat_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			south_laos_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -352,6 +359,7 @@ MSA_Missions_Expansion_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = south_laos_area
+				area = sukothai_area
 				area = northern_thai_area
 				area = cambodia_area
 				area = mekong_area
@@ -361,7 +369,6 @@ MSA_Missions_Expansion_2 = {
 				area = north_tenasserim_area
 				area = degar_highlands_area
 				area = champa_area
-				area = sukothai_area
 				area = north_laos_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -737,13 +744,6 @@ MSA_Missions_Expansion_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			nusa_tenggara_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			champa_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -869,7 +869,6 @@ MSA_Missions_Expansion_4 = {
 						region = australia_region
 						OR = {
 							trade_goods = gold
-							trade_goods = silver
 						}
 						value = 3
 					}
@@ -886,7 +885,6 @@ MSA_Missions_Expansion_4 = {
 					region = australia_region
 					OR = {
 						trade_goods = gold
-						trade_goods = silver
 					}
 					value = 3
 				}
@@ -918,7 +916,6 @@ MSA_Missions_Expansion_5 = {
 			OR = {
 				area = luzon_area
 				area = visayas_area
-				area = sulu_archipelago_area
 				area = mindanao_area
 				area = southern_luzon_area
 			}
@@ -929,7 +926,6 @@ MSA_Missions_Expansion_5 = {
 						OR = {
 							area = luzon_area
 							area = visayas_area
-							area = sulu_archipelago_area
 							area = mindanao_area
 							area = southern_luzon_area
 						}
@@ -943,7 +939,6 @@ MSA_Missions_Expansion_5 = {
 				OR = {
 					area = luzon_area
 					area = visayas_area
-					area = sulu_archipelago_area
 					area = mindanao_area
 					area = southern_luzon_area
 				}
@@ -1288,7 +1283,11 @@ MSA_Missions_Trade_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			kedah_area = {
+			indonesian_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			riau_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1310,7 +1309,13 @@ MSA_Missions_Trade_1 = {
 					duration = -1
 				}
 			}
-			kedah_area = {
+			indonesian_islands_area = {
+				add_province_modifier = {
+					name = MSA_strait_of_malaya
+					duration = -1
+				}
+			}
+			riau_islands_area = {
 				add_province_modifier = {
 					name = MSA_strait_of_malaya
 					duration = -1
@@ -2030,7 +2035,6 @@ MSA_Missions_Trade_5 = {
 					limit = {
 						OR = {
 							trade_goods = gold
-							trade_goods = silver
 						}
 					}
 					add_province_modifier = {
@@ -2322,6 +2326,18 @@ MSA_Missions_Muslim_1 = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
 							}
+							indonesian_islands_area = {
+								owned_by = ROOT
+								has_tax_building_trigger = yes
+							}
+							riau_islands_area = {
+								owned_by = ROOT
+								has_tax_building_trigger = yes
+							}
+							tenasserim_area = {
+								owned_by = ROOT
+								has_tax_building_trigger = yes
+							}
 							kedah_area = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
@@ -2390,6 +2406,18 @@ MSA_Missions_Muslim_1 = {
 						has_tax_building_trigger = yes
 					}
 					malaya_area = {
+						owned_by = ROOT
+						has_tax_building_trigger = yes
+					}
+					indonesian_islands_area = {
+						owned_by = ROOT
+						has_tax_building_trigger = yes
+					}
+					riau_islands_area = {
+						owned_by = ROOT
+						has_tax_building_trigger = yes
+					}
+					tenasserim_area = {
 						owned_by = ROOT
 						has_tax_building_trigger = yes
 					}
@@ -2639,7 +2667,6 @@ MSA_Missions_Muslim_2 = {
 				any_owned_province = {
 					OR = {
 						region = indo_china_region
-						region = south_china_sea_islands_region
 						region = south_china_region
 					}
 					religion_group = ROOT
@@ -3493,11 +3520,6 @@ MSA_Missions_Hindu_2 = {
 							OR = {
 								region = indonesia_region
 								region = malaya_region
-								region = moluccas_region
-								region = riau_islands_region
-								region = nusa_tenggara_region
-								region = borneo_region
-								region = celebes_region
 							}
 							owner = {
 								religion_group = muslim
@@ -5014,35 +5036,7 @@ MSA_Missions_Independence_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			riau_islands_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			borneo_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			celebes_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			moluccas_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			nusa_tenggara_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -5142,10 +5136,6 @@ MSA_Missions_Independence_5 = {
 				region = indonesia_region
 				region = malaya_region
 				region = moluccas_region
-				region = riau_islands_region
-				region = nusa_tenggara_region
-				region = borneo_region
-				region = celebes_region
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = { area = indian_ocean_islands_area }
@@ -5163,22 +5153,6 @@ MSA_Missions_Independence_5 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			moluccas_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			riau_islands_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			nusa_tenggara_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			borneo_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			celebes_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

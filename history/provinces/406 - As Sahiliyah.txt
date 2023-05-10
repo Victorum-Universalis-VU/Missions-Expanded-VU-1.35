@@ -6,7 +6,7 @@ add_core = BAG
 culture = al_iraqiya_arabic
 religion = sunni
 capital = "Sahiliyah"
-trade_goods = saffron
+trade_goods = livestock
 hre = no
 base_tax = 2 
 base_production = 2
@@ -21,19 +21,7 @@ discovered_by = indian
 discovered_by = nomad_group
 discovered_by = BYZ
 
-1440.1.1 = {
-	revolt = {
-		type = noble_rebels
-		size = 0
-	}
-	unrest = 5
-	controller = REB
-}
-1450.1.1 = {
-	revolt = {}
-	unrest = 0
-	controller = QAR
-}
+
 1469.2.4 = {
 	owner = AKK
 	controller = AKK

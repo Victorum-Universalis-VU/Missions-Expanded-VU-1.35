@@ -3,10 +3,7 @@
 	generic = no
 	ai = yes
 	potential = {
-		OR= {
-			tag = FRA
-			tag = BFR
-		}
+		tag = FRA
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -702,7 +699,7 @@ france_missions_2 = {
 				area = west_midlands_area
 				area = east_midlands_area
 				area = yorkshire_area
-				area = south_east_area
+				area = greater_london_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -719,7 +716,7 @@ france_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			south_east_area = {
+			greater_london_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1185,10 +1182,7 @@ france_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = FRA
-			tag = BFR
-		}
+		tag = FRA
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -2050,10 +2044,7 @@ france_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = FRA
-			tag = BFR
-		}
+		tag = FRA
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -2139,7 +2130,7 @@ france_missions_4 = {
 				name = fra_french_fabric
 				duration = 10950
 			}
-			add_base_production = 2
+			add_base_production = 1
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -2152,7 +2143,7 @@ france_missions_4 = {
 						name = fra_french_fabric
 						duration = 10950
 					}
-					add_base_production = 2
+					add_base_production = 1
 				}
 			}
 		}
@@ -2803,10 +2794,7 @@ france_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = FRA
-			tag = BFR
-		}
+		tag = FRA
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -2818,7 +2806,7 @@ france_missions_5 = {
 		trigger = {
 			is_year = 1456
 			OR = {
-				total_development = 800
+				total_development = 400
 				senior_union_with = BUR
 			}
 			if = {
@@ -3110,7 +3098,7 @@ france_missions_5 = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				AND = {
-					ROOT = { 
+					ROOT = {
 						NOT = { has_country_flag = fra_francia_formed }
 					}
 					NOT = { owned_by = ROOT }
@@ -3224,11 +3212,11 @@ france_missions_5 = {
 				duration = -1
 			}
 			if = {
-				limit = { has_had_golden_age = yes } 
-				reset_golden_age = yes 
+				limit = { has_had_golden_age = yes }
+				reset_golden_age = yes
 			}
 			else_if = {
-				limit = { in_golden_age = yes } 
+				limit = { in_golden_age = yes }
 				custom_tooltip = me_hab_extend_golden_age_50
 				hidden_effect = {
 					extend_golden_age = 600
@@ -3443,7 +3431,7 @@ france_missions_5 = {
 					}
 					random_owned_province = {
 						limit = {
-							base_production = 16
+							base_production = 8
 							has_manufactory_trigger = yes
 							trade_goods = wine
 							NOT = { has_province_flag = fra_wine_flag }

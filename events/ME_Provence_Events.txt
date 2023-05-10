@@ -8,12 +8,12 @@ country_event = { #Naples Reclaimed
 
 	is_triggered_only = yes
 	major = yes
-	
+
 	option = {
 		name = ME_Provence_Events.1.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		add_country_modifier = {
 			name = PRO_Naples
 			duration = 9125
@@ -32,9 +32,9 @@ country_event = { #Aragon Reclaimed
 
 	option = {
 		name = ME_Provence_Events.2.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		add_country_modifier = {
 			name = PRO_Aragon
 			duration = 9125
@@ -53,9 +53,9 @@ country_event = { #France Reclaimed
 
 	option = {
 		name = ME_Provence_Events.3.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		add_country_modifier = {
 			name = PRO_France
 			duration = 9125
@@ -81,9 +81,9 @@ country_event = { #Sicily Reclaimed
 
 	option = {
 		name = ME_Provence_Events.4.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		add_country_modifier = {
 			name = PRO_Sicily
 			duration = 9125
@@ -102,9 +102,9 @@ country_event = { #Hungary Reclaimed
 
 	option = {
 		name = ME_Provence_Events.5.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		add_country_modifier = {
 			name = PRO_Hungary
 			duration = 9125
@@ -123,9 +123,9 @@ country_event = { #Jerusalem Reclaimed
 
 	option = {
 		name = ME_Provence_Events.6.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		add_country_modifier = {
 			name = PRO_Jerusalem
 			duration = 9125
@@ -143,9 +143,9 @@ country_event = { #Grant Cores on Sicily
 
 	option = {
 		name = ME_Provence_Events.7.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		sicily_area = {
 			add_core = ROOT
 		}
@@ -164,9 +164,9 @@ country_event = { #A Modest Request (Avignon)
 
 	option = {
 		name = ME_Provence_Events.8.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		202 = {
 			if = {
 				limit = {
@@ -181,9 +181,9 @@ country_event = { #A Modest Request (Avignon)
 	}
 	option = {
 		name = ME_Provence_Events.8.b
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		add_prestige = -10
 		add_historical_rival = PRO
 		add_country_modifier = {
@@ -205,13 +205,13 @@ country_event = { #"Good Offer" (Lorraine)
 
 	option = {
 		name = ME_Provence_Events.9.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		188 = {
 			if = {
 				limit = {
-					owned_by = ROOT 
+					owned_by = ROOT
 				}
 				cede_province = FROM
 				add_core = FROM
@@ -221,7 +221,7 @@ country_event = { #"Good Offer" (Lorraine)
 		189 = {
 			if = {
 				limit = {
-					owned_by = ROOT 
+					owned_by = ROOT
 				}
 				cede_province = FROM
 				add_core = FROM
@@ -231,9 +231,9 @@ country_event = { #"Good Offer" (Lorraine)
 	}
 	option = {
 		name = ME_Provence_Events.9.b
-		
+
 		ai_chance = { factor = 0 }
-		
+
 		add_liberty_desire = 30
 		add_mil_power = 100
 	}
@@ -255,33 +255,33 @@ country_event = { #Letter from Emperor
 
 	option = {
 		name = ME_Provence_Events.10.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		set_in_empire = yes
 		add_historical_rival = FRA
 		FRA = {
 			add_opinion = {
 				who = ROOT
-				modifier = pro_did_join_empire   
+				modifier = pro_did_join_empire
 			}
 		}
 	}
 	option = {
 		name = ME_Provence_Events.10.b
-		
+
 		ai_chance = { factor = 0 }
-		
+
 		emperor = {
 			add_opinion = {
 				who = ROOT
-				modifier = pro_didnt_join_empire_for_emperor 
+				modifier = pro_didnt_join_empire_for_emperor
 			}
 		}
 		FRA = {
 			add_opinion = {
 				who = ROOT
-				modifier = pro_didnt_join_empire  
+				modifier = pro_didnt_join_empire
 			}
 		}
 		add_trust = {
@@ -341,9 +341,9 @@ country_event = { #Letter from Emperor
 
 	option = {
 		name = ME_Provence_Events.11.a
-		
+
 		ai_chance = { factor = 1 }
-		
+
 		FRA = {
 			random_owned_province = {
 				limit = {

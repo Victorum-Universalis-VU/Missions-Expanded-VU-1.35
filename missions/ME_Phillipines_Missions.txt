@@ -65,7 +65,7 @@ PHI_missions_1 = {
 				}
 				else = { add_core = ROOT }
 			}
-			
+
 			738 = {
 				if = {
 					limit = {
@@ -84,7 +84,7 @@ PHI_missions_1 = {
 				}
 				else = { add_core = ROOT }
 			}
-			
+
 			custom_tooltip = PHI_phil_borneo_claim_tt
 			hidden_effect = {
 				if = {
@@ -96,8 +96,8 @@ PHI_missions_1 = {
 					MSA_claims_borneo = yes
 				}
 			}
-			
-			
+
+
 		}
 	}
 
@@ -277,7 +277,7 @@ PHI_missions_2 = {
 				}
 				else = { add_core = ROOT }
 			}
-			
+
 			custom_tooltip = PHI_phil_borneo_claim_tt
 			hidden_effect = {
 				if = {
@@ -313,7 +313,7 @@ PHI_missions_2 = {
 				name = PHI_maharlika_ascendant
 				duration = -1
 			}
-			
+
 			MSA_claims_sulawesi = yes
 			MSA_claims_malaya = yes
 			MSA_claims_java = yes
@@ -346,7 +346,7 @@ PHI_missions_2 = {
 					key = MKS_gateway
 				}
 			}
-			
+
 			MSA_claims_sumatra = yes
 		}
 	}
@@ -377,10 +377,7 @@ PHI_missions_3 = {
 		required_missions = { PHI_rally_the_timawa }
 		position = 2
 		provinces_to_highlight = {
-			OR = {
-				area = mindanao_area
-				area = sulu_archipelago_area
-			}
+			area = mindanao_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			is_empty = no
 		}
@@ -392,25 +389,9 @@ PHI_missions_3 = {
 					is_empty = yes
 				}
 			}
-			sulu_archipelago_area = {
-				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					is_empty = yes
-				}
-			}
 		}
 		effect = {
 			mindanao_area = {
-				if = {
-					limit = {
-						is_empty = yes
-					}
-					add_siberian_construction = 10
-				}
-				else = { add_core = ROOT }
-			}
-			sulu_archipelago_area = {
 				if = {
 					limit = {
 						is_empty = yes

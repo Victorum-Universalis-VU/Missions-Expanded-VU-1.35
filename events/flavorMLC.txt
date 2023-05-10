@@ -30,7 +30,6 @@ country_event = {
 	
 	option = { 
 		name = flavor_mlc.1.a #Raja Ibrahim will not be forgotten.
-		add_stability = -1
 		kill_ruler = yes
 		set_ruler_flag = mlc_death_or_raja_ibrahim
 	}
@@ -100,18 +99,7 @@ country_event = {
 					area = malaya_area
 					area = malacca_area
 				}
-				OR = {
-					has_discovered = ARA
-					has_discovered = CAS
-					has_discovered = IBE
-					has_discovered = NAV
-					has_discovered = POR
-					has_discovered = SPA
-					has_discovered = BSP
-					has_discovered = SPB
-					has_discovered = BBS
-					has_discovered = CSP
-				}
+				has_discovered = POR
 			}
 		}
 	}

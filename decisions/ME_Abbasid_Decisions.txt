@@ -32,7 +32,7 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
+
 	Abbasid_flee = {
 		major = yes
 		potential = {
@@ -45,10 +45,11 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { war_exhaustion = 2 }
+			if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "I'M GETTIN TOO OLD FOR THIS" }
 			event_target:Caliph_province = {
 				has_siege = yes
 			}
-			mil_power = 100 
+			mil_power = 100
 			any_owned_province = {
 				Abbasid_valid_escape_route = yes
 			}
@@ -57,13 +58,14 @@ country_decisions = {
 			add_mil_power = -100
 			country_event = { id = ME_Abbasid_Events.4 }
 		}
-		
+
 		ai_will_do = { #if we have mil to spare, there is lots of enemies on province, and we don't have units there, flee!
 			factor = 1
 			modifier = {
 				factor = 0
 				NOT = {
 					mil_power = 500
+					if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "FACE PALM PICARD" }
 					event_target:Caliph_province = {
 						has_siege = yes
 						num_of_units_in_province = {
@@ -80,16 +82,17 @@ country_decisions = {
 			}
 		}
 	}
-	
+
 	Abbasid_put_in_capital = {
 		major = yes
 		potential = {
+		  if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "DON'T BE A LEMON!" }
 			event_target:Caliph_province = {
 				owned_by = ROOT
 				NOT = { is_capital_of = ROOT }
 			}
 			NOT = { is_at_war = yes }
-			
+
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -110,20 +113,21 @@ country_decisions = {
 				ME_set_abbasid_caliph_province = yes
 			}
 		}
-		ai_will_do = { 
+		ai_will_do = {
 			factor = 0 #Don't, it's more interesting this way :-)
 		}
 	}
-	
+
 	# Abbasid_mecca = {
 		# major = yes
 		# potential = {
+		  # if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "YOU FOUND IT YET?" }
 			# event_target:Caliph_province = {
 				# owned_by = ROOT
 				# NOT = { is_capital_of = ROOT }
 			# }
 			# NOT = { is_at_war = yes }
-			# always = no 
+			# always = no
 		# }
 		# provinces_to_highlight = {
 			# OR = {
@@ -144,11 +148,11 @@ country_decisions = {
 				# ME_set_abbasid_caliph_province = yes
 			# }
 		# }
-		# ai_will_do = { 
+		# ai_will_do = {
 			# factor = 0 #Don't, it's more interesting this way :-)
 		# }
 	# }
-	
+
 	Abbasid_restore_abbasid_caliphate = {
 		major = yes
 		potential = {
@@ -164,17 +168,17 @@ country_decisions = {
 		}
 		allow = {
 			adm_power_cost = 100
-			
+
 			custom_trigger_tooltip = {
 				tooltip = ABA_most_developed_muslim_tag
 				NOT = {
 					any_country = {
-						religion = sunni 
+						religion = sunni
 						total_development = ROOT
 					}
 				}
 			}
-			
+
 			custom_trigger_tooltip = {
 				tooltip = ABA_has_not_executed_caliph_in_5_years
 				OR = {
@@ -185,7 +189,7 @@ country_decisions = {
 					}
 				}
 			}
-			
+
 			if = {
 				limit = {
 					has_estate = estate_church
@@ -202,7 +206,7 @@ country_decisions = {
 				ME_set_abbasid_caliph_province = yes
 			}
 		}
-		ai_will_do = { 
+		ai_will_do = {
 			factor = 1
 		}
 	}

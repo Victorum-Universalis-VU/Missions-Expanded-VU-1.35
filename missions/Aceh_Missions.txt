@@ -295,7 +295,7 @@ atj_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			palembang_area = {
+			palembang_area = { 
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -316,7 +316,28 @@ atj_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			kedah_area = {
+			tenasserim_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kedah_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			indonesian_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			riau_islands_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -333,6 +354,9 @@ atj_2 = {
 		required_missions = { atj_sumatra_campaign }
 		provinces_to_highlight = {
 			OR = {
+				area = indonesian_islands_area
+				area = riau_islands_area
+				area = tenasserim_area 
 				area = kedah_area
 				area = malaya_area
 				area = malacca_area
@@ -344,6 +368,9 @@ atj_2 = {
 				amount = 10
 				all_province = {
 					OR = {
+						area = indonesian_islands_area
+						area = riau_islands_area
+						area = tenasserim_area
 						area = kedah_area
 						area = malaya_area
 						area = malacca_area

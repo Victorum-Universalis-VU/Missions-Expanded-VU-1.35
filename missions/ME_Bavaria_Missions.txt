@@ -877,28 +877,29 @@ me_bavaria_missions_1 = {
 		}
 		trigger = {
 			owns = 65
-			OR = {
-				production_leader = {
-					trade_goods = grain
+				OR = {
+					production_leader = {
+						trade_goods = grain
+					}
+					production_leader = {
+						trade_goods = wine
+					}
 				}
-				production_leader = {
-					trade_goods = wine
+				OR = {
+					trading_bonus = {
+						trade_goods = grain
+						value = yes
+					}
+					trading_bonus = {
+						trade_goods = wine
+						value = yes
+					}
 				}
-			}
-			OR = {
-				trading_bonus = {
-					trade_goods = grain
-					value = yes
+				65 = {
+					development = 35
+					base_production = 15
 				}
-				trading_bonus = {
-					trade_goods = wine
-					value = yes
-				}
-			}
-			65 = {
-				development = 35
-				base_production = 15
-			}
+
 		}
 		effect = {
 			if = {
@@ -1123,7 +1124,10 @@ me_bavaria_missions_2 = {
 		required_missions = { bavaria_the_imperial_city_of_regensburg }
 		position = 8
 		provinces_to_highlight = {
-			area = bavaria_area
+			OR = {
+				area = tirol_area
+				area = bavaria_area
+			}
 			OR = {
 				AND = {
 					province_id = 1757
@@ -1136,6 +1140,10 @@ me_bavaria_missions_2 = {
 			}
 		}
 		trigger = {
+			tirol_area = {
+				type = all
+				owned_by = ROOT
+			}
 			bavaria_area = {
 				type = all
 				OR = {
@@ -1335,15 +1343,16 @@ me_bavaria_missions_3 = {
 			}
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
-				value = 3
-				OR = {
-					trade_goods = wine
-					trade_goods = grain
+				num_of_owned_provinces_with = {
+					value = 3
+					OR = {
+						trade_goods = wine
+						trade_goods = grain
+					}
+					development = 10
+					num_of_times_improved_by_owner = 3
 				}
-				development = 10
-				num_of_times_improved_by_owner = 3
-			}
+
 		}
 		effect = {
 			custom_tooltip = BAVARIA_MUENCHNER_REINHEITSGEBOT_TT
@@ -1413,6 +1422,7 @@ me_bavaria_missions_3 = {
 		}
 	}
 
+
 	bavaria_monastery_breweries = {
 		icon = leiden_university
 		required_missions = { bavaria_muenchner_reinheitsgebot bavaria_minor_bavarian_churches }
@@ -1455,15 +1465,16 @@ me_bavaria_missions_3 = {
 					loyalty = 60
 				}
 			}
-			num_of_owned_provinces_with = {
-				value = 5
-				OR = {
-					trade_goods = wine
-					trade_goods = grain
+				num_of_owned_provinces_with = {
+					value = 5
+					OR = {
+						trade_goods = wine
+						trade_goods = grain
+					}
+					development = 15
+					has_tax_building_trigger = yes
 				}
-				development = 15
-				has_tax_building_trigger = yes
-			}		
+
 		}
 		effect = {
 			add_country_modifier = {
@@ -1632,6 +1643,13 @@ me_bavaria_missions_3 = {
 				duration = 5475
 			}
 			swabia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			franconia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2021,10 +2039,17 @@ me_bavaria_missions_4 = {
 		required_missions = { bavaria_reunification_of_bavaria }
 		position = 7
 		provinces_to_highlight = {
-			area = thuringia_area
+			OR = {
+			   area = franconia_area
+				 area = thuringia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			franconia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			thuringia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2074,8 +2099,8 @@ me_bavaria_missions_4 = {
 				random_province = {
 					limit = {
 						OR = {
-							area = thuringia_area
 							area = franconia_area
+							area = thuringia_area
 						}
 						country_or_non_sovereign_subject_holds = ROOT
 						NOT = { has_province_flag = bavaria_capture_lower_franconia_flag }
@@ -4116,7 +4141,7 @@ me_bavaria_missions_welf_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			holstein_area = {
+			lower_saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -4131,13 +4156,6 @@ me_bavaria_missions_welf_1 = {
 				add_permanent_claim = ROOT
 			}
 			anhalt_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			hesse_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -4298,10 +4316,9 @@ me_bavaria_missions_welf_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = braunschweig_area
-				area = holstein_area
+				area = lower_saxony_area
 				area = altmark_area
 				area = anhalt_area
-				area = hesse_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -4310,11 +4327,7 @@ me_bavaria_missions_welf_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			holstein_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			altmark_area = {
+			lower_saxony_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -4322,7 +4335,7 @@ me_bavaria_missions_welf_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			hesse_area = {
+			altmark_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

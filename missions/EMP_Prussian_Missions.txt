@@ -1,4 +1,3 @@
-#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 emp_bra_pru_1 = {
 	slot = 1
 	generic = no
@@ -39,7 +38,6 @@ emp_bra_pru_1 = {
 			OR = {
 				province_id = 49
 				province_id = 4747
-				province_id = 7819
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -48,7 +46,6 @@ emp_bra_pru_1 = {
 		trigger = {
 			owns_core_province = 49
 			owns_core_province = 4747
-			owns_core_province = 7819
 		}
 		effect = {
 			vorpommern_area = {
@@ -208,7 +205,7 @@ emp_bra_pru_1 = {
 						}
 					}
 				}
-				43 = { 
+				1926 = { 
 					add_trade_modifier = {
 						who = ROOT
 						duration = 9125
@@ -314,6 +311,7 @@ emp_bra_pru_1 = {
 			}
 		}
 	}
+	
 	emp_brapru_army_reforms_1 = {
 		icon = professional_army
 		required_missions = { emp_brapru_renovate_berlin }
@@ -375,7 +373,7 @@ emp_bra_pru_1_b = {
 		trigger = {
 			has_global_modifier_value = {
 				which = discipline
-				value = 0.2
+				value = 0.15
 				extra_shortcut = yes
 			}
 			OR = {
@@ -419,7 +417,7 @@ emp_bra_pru_1_b = {
 			}
 			else = {
 				army_tradition = 95
-			}
+			}					
 		}
 		effect = {
 			set_country_flag = brapru_army_reforms_3
@@ -439,6 +437,8 @@ emp_bra_pru_1_b = {
 					duration = -1
 				}
 			}
+			
+			
 			if = {
 				limit = { has_dlc = "Domination" }
 				custom_tooltip = pru_access_advanced_militarization_tt
@@ -503,6 +503,20 @@ emp_bra_pru_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			thuringia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bavaria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			if = { 
 				limit = { has_dlc = "Domination"  NOT = { has_country_flag = declined_ANS_union_flag } }
 				custom_tooltip = pru_access_franconian_conquest_success_tt
@@ -525,20 +539,28 @@ emp_bra_pru_2 = {
 		icon = mission_eastern_european_city
 		required_missions = { emp_brapru_ansbach_succession }
 		provinces_to_highlight = {
-			area = franconia_area
+			OR = {
+				area = franconia_area
+				area = bavaria_area
+				area = thuringia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
-				area = franconia_area
+				OR = {
+					area = franconia_area
+					area = bavaria_area
+					area = thuringia_area
+				}
 			}
 		}
 		effect = {
 			if = { 
 				limit = { 
 					has_country_flag = accepted_ANS_union_flag 
-					has_dlc = "Domination"
+					has_dlc = "Domination" 
 				}
 				add_power_projection = {
 					type = pru_lords_franconia_power_projection
@@ -691,6 +713,7 @@ emp_bra_pru_2 = {
 				name = "pru_chinese_trade"
 				duration = 7300
 			}
+			
 			if = { 
 				limit = { 
 					has_dlc = "Domination" 
@@ -827,7 +850,7 @@ emp_bra_pru_3 = {
 			}
 		}
 		effect = {
-			saxony_area = {
+			altmark_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -884,7 +907,8 @@ emp_bra_pru_3 = {
 		required_missions = { emp_brapru_show_of_strength }
 		provinces_to_highlight = {
 			OR = {
-				area = saxony_area
+				area = altmark_area
+				area = anhalt_area
 				area = lower_saxony_area
 				area = weser_area
 				province_id = 1931
@@ -897,7 +921,8 @@ emp_bra_pru_3 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				OR = {
-					area = saxony_area
+					area = altmark_area
+					area = anhalt_area
 					area = lower_saxony_area
 					area = weser_area
 				}
@@ -1214,6 +1239,7 @@ emp_bra_pru_4 = {
 				type = mission_rewards_power_projection
 				amount = 25
 			}
+			
 			if = {
 				limit = { 
 					has_dlc = "Domination" 
@@ -1254,12 +1280,15 @@ emp_bra_pru_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			
+			
 			if = { 
 				limit = { has_dlc = "Domination" }
 				change_ruler_stat = {
 					stat = adm
 					amount = 1
 				}
+				
 				custom_tooltip = pru_spread_5_dev_tt
 				hidden_effect = {
 					random_province = {

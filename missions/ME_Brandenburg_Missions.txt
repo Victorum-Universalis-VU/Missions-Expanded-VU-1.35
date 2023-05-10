@@ -13,7 +13,7 @@ BRA_missions_1 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	BRA_duchy_of_prussia = {
 		icon = the_balance_of_power
 		required_missions = { BRA_neumark }
@@ -76,7 +76,7 @@ BRA_missions_1 = {
 						NOT = { renaissance = 100 }
 					}
 				}
-				capital_scope = { 
+				capital_scope = {
 					add_institution_embracement = {
 						which = renaissance
 						value = 40
@@ -124,7 +124,7 @@ BRA_missions_1_franconia = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	BRA_hohenzollerns_in_franconia = {
 		icon = ansbach_succession
 		required_missions = { }
@@ -182,7 +182,7 @@ BRA_missions_1_franconia = {
 			else = {
 				OR = {
 					franconia_area = {
-						owner = { 
+						owner = {
 							dynasty = "von Hohenzollern"
 							OR = {
 								tag = ROOT
@@ -194,7 +194,7 @@ BRA_missions_1_franconia = {
 						}
 					}
 					thuringia_area = {
-						owner = { 
+						owner = {
 							dynasty = "von Hohenzollern"
 							OR = {
 								tag = ROOT
@@ -283,7 +283,7 @@ BRA_missions_2 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	BRA_neumark = {
 		icon = catholic_confraternity
 		required_missions = { }
@@ -295,7 +295,7 @@ BRA_missions_2 = {
 		trigger = {
 			OR = {
 				grown_by_development = 15
-				neumark_area = { 
+				neumark_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -316,7 +316,7 @@ BRA_missions_2 = {
 			}
 			hidden_effect = {
 				if = {
-					limit = {					
+					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = 4747 }
 					}
 					4747 = {
@@ -331,7 +331,7 @@ BRA_missions_2 = {
 					}
 				}
 				if = {
-					limit = {					
+					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = 49 }
 					}
 					49 = {
@@ -585,7 +585,7 @@ BRA_missions_3 = {
 		}
 		effect = {
 			custom_tooltip = BRA_for_every_war_reparations_15_dip
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -770,7 +770,7 @@ BRA_missions_4 = {
 					value = army_size
 					who = BRA
 				}
-				change_variable = {			
+				change_variable = {
 					which = BRA_SAX_Army
 					which = BRA_THU_Army
 				}
@@ -821,13 +821,6 @@ BRA_missions_4 = {
 				add_permanent_claim = ROOT
 			}
 			anhalt_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			hesse_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1057,7 +1050,7 @@ BRA_missions_5 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	BRA_political_dynasty = {
 		icon = spread_the_von_wettins
 		required_missions = { }
@@ -1085,7 +1078,7 @@ BRA_missions_5 = {
 				}
 			}
 			set_country_flag = BRA_extra_dip_slot
-			custom_tooltip = BRA_extra_dip_slot_tt			
+			custom_tooltip = BRA_extra_dip_slot_tt
 		}
 	}
 	BRA_magdeburg = {
@@ -1097,7 +1090,7 @@ BRA_missions_5 = {
 		trigger = {
 			OR = {
 				52 = { owned_by = ROOT }
-				AND = { 
+				AND = {
 					alliance_with = MAG
 					reverse_has_opinion = {
 						who = MAG
@@ -1119,7 +1112,7 @@ BRA_missions_5 = {
 				add_papal_influence = 40
 			}
 			custom_tooltip = BRA_rewards_when_alliance
-			tooltip = { 
+			tooltip = {
 				country_event = { id = ME_Prussia_Events.1 }
 			}
 			custom_tooltip = BRA_MAGDEBURG_VASSALIZATION
@@ -1136,7 +1129,7 @@ BRA_missions_5 = {
 					set_country_flag = BRA_recipient
 				}
 			}
-			
+
 			#Tooltip for the event allowing for vassalization
 			custom_tooltip = BRA_ROOT
 			custom_tooltip = BRA_von_Hohenzollern_ROOT
@@ -1219,7 +1212,7 @@ BRA_missions_5 = {
 				duration = 9125
 			}
 			add_stability_or_adm_power = yes
-			country_event = { id = ME_Prussia_Events.18 } 
+			country_event = { id = ME_Prussia_Events.18 }
 		}
 	}
 	BRA_kreditwerk = {

@@ -427,55 +427,24 @@ verona_mission_3 = {
 		trigger = {
 			if = {
 				limit = { hre_size = 1 }
-				if = {
-					limit = {
-						is_expanded_mod_active = { mod = subjects }
+				OR = {
+					emperor = {
+						OR = {
+							alliance_with = ROOT
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
 					}
-					OR = {
-						emperor = {
+					calc_true_if = {
+						amount = 2
+						all_elector = {
 							OR = {
 								alliance_with = ROOT
 								has_opinion = {
 									who = ROOT
 									value = 100
-								}
-							}
-						}
-						calc_true_if = {
-							amount = 2
-							all_elector = {
-								OR = {
-									alliance_with = ROOT
-									has_opinion = {
-										who = ROOT
-										value = 100
-									}
-								}
-							}
-						}
-					#	is_subject_of_type = imperial_feud_subject
-					}
-				}
-				else = {
-					OR = {
-						emperor = {
-							OR = {
-								alliance_with = ROOT
-								has_opinion = {
-									who = ROOT
-									value = 100
-								}
-							}
-						}
-						calc_true_if = {
-							amount = 2
-							all_elector = {
-								OR = {
-									alliance_with = ROOT
-									has_opinion = {
-										who = ROOT
-										value = 100
-									}
 								}
 							}
 						}
@@ -587,8 +556,7 @@ verona_mission_3 = {
 									}
 								}
 							}
-							any_country = {
-								is_papal_controller = yes
+							papal_controller = {
 								NOT = {
 									has_opinion = {
 										who = ROOT
@@ -645,8 +613,7 @@ verona_mission_3 = {
 									}
 								}
 							}
-							any_country = {
-								is_papal_controller = yes
+							papal_controller = {
 								has_opinion = {
 									who = ROOT
 									value = 75
@@ -701,8 +668,7 @@ verona_mission_3 = {
 								war_with = ROOT
 							}
 						}
-						any_country = {
-							is_papal_controller = yes
+						papal_controller = {
 							war_with = ROOT
 						}
 					}
@@ -1040,8 +1006,7 @@ verona_mission_4 = {
 							}
 							}
 						}
-						any_country = {
-							is_papal_controller = yes
+						papal_controller = {
 							ROOT = {
 								has_won_war_against = {
 									who = PREV
@@ -1110,6 +1075,13 @@ verona_mission_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				tirol_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -1121,12 +1093,8 @@ verona_mission_4 = {
 		}
 		position = 12
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					area = sicily_area
-					NOT = { province_id = 126 }
-				}
-			}
+			area = sicily_area
+			NOT = { province_id = 126 }
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -1357,6 +1325,10 @@ verona_mission_5 = {
 				overlord_of = BAV
 				AND = {
 					bavaria_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					tirol_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}

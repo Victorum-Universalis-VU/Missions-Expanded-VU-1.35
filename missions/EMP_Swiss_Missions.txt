@@ -1,4 +1,3 @@
-#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 swiss_missions_1 = {
 	slot = 1
 	generic = no
@@ -225,14 +224,14 @@ swiss_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			alsace_area = {
+			baden_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			baden_area = {
+			alsace_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -377,9 +376,9 @@ swiss_missions_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = wurttemburg_area
+				area = baden_area
 				area = swabia_area
 				area = alsace_area
-				area = baden_area
 				province_id = 4710
 			}
 			NOT = {
@@ -391,9 +390,9 @@ swiss_missions_3 = {
 				value = 10
 				OR = {
 					area = wurttemburg_area
+					area = baden_area
 					area = swabia_area
 					area = alsace_area
-					area = baden_area
 					province_id = 4710
 				}
 			}

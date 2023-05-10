@@ -764,7 +764,7 @@ italy_missions_3 = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = ita_seafering 
+				name = ita_seafering
 				duration = -1
 			}
 			341 = {
@@ -2029,6 +2029,7 @@ italy_missions_1_tall = {
 						}
 					}
 				}
+
 			}
 			else = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

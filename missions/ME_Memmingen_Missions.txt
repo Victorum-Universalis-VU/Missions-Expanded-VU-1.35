@@ -47,7 +47,7 @@
 			# }
 		# }
 	# }
-	
+
 	# memmingen_church = {
 		# icon = mission_early_game_buildings
 		# required_missions = { memmingen_dev_25 }
@@ -77,7 +77,7 @@
 			# }
 		# }
 	# }
-	
+
 	# memmingen_dev_40 = {
 		# icon = mission_have_manufactories
 		# required_missions = { memmingen_church }
@@ -117,7 +117,7 @@
 			# }
 		# }
 	# }
-	
+
 	# memmingen_workshop = {
 		# icon = mission_early_game_buildings
 		# required_missions = { memmingen_dev_40 }
@@ -147,7 +147,7 @@
 			# }
 		# }
 	# }
-	
+
 	# memmingen_dev_60 = {
 		# icon = mission_have_manufactories
 		# required_missions = { memmingen_workshop }
@@ -187,7 +187,7 @@
 			# }
 		# }
 	# }
-	
+
 	# memmingen_unite_upper_swabia = {
 		# icon = mission_assemble_an_army
 		# required_missions = { memmingen_dev_60 }
@@ -225,7 +225,7 @@ memmingen_missions_5 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	mem_ulm = {
 		icon = mission_conquer_50_development
 		required_missions = { }
@@ -248,7 +248,7 @@ memmingen_missions_5 = {
 			}
 		}
 	}
-	
+
 	mem_swabia = {
 		icon = mission_conquer_5_states
 		required_missions = { mem_ulm }
@@ -272,7 +272,7 @@ memmingen_missions_5 = {
 			}
 		}
 	}
-	
+
 	mem_franconia = {
 		icon = mission_early_game_buildings
 		required_missions = { mem_swabia }
@@ -296,7 +296,7 @@ memmingen_missions_5 = {
 			}
 		}
 	}
-	
+
 	mem_bav_1 = {
 		icon = mission_cossack_cavalry
 		required_missions = { mem_franconia }
@@ -320,7 +320,7 @@ memmingen_missions_5 = {
 			}
 		}
 	}
-	
+
 	mem_bav_2 = {
 		icon = mission_empire
 		required_missions = { mem_bav_1 }

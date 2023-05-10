@@ -304,7 +304,7 @@ mantua_mission_2 = {
 		}
 		position = 10
 		provinces_to_highlight = {
-			AND = {
+			OR = {
 				area = sicily_area
 				NOT = { province_id = 126 }
 			}
@@ -783,7 +783,7 @@ mantua_mission_4 = {
 					type = cb_restore_personal_union
 				}
 			}
-			191 = { 
+			191 = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT }
@@ -792,7 +792,7 @@ mantua_mission_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			2981 = { 
+			2981 = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT }

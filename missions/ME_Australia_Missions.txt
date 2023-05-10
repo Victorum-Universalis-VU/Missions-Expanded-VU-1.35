@@ -522,13 +522,6 @@ australia_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			sulu_archipelago_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
@@ -540,18 +533,11 @@ australia_missions_3 = {
 			aus_borneo
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = mindanao_area
-				area = sulu_archipelago_area
-			}
+			area = mindanao_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			mindanao_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			sulu_archipelago_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -560,13 +546,6 @@ australia_missions_3 = {
 			add_mercantilism = 3
 			add_years_of_income = 2
 			mindanao_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			sulu_archipelago_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -657,19 +636,14 @@ australia_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = tokerau_area
-				area = tainui_area
 				area = te_ika_a_maui_area
-				area = heretaunga_area 
+				area = heretaunga_area
 				area = te_waipounamu_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			tokerau_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tainui_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -785,7 +759,6 @@ australia_missions_5 = {
 			OR = {
 				area = te_waipounamu_area
 				area = tokerau_area
-				area = tainui_area
 				area = te_ika_a_maui_area
 				area = heretaunga_area
 			}
@@ -822,10 +795,6 @@ australia_missions_5 = {
 				type = all
 				owned_by = ROOT
 			}
-			tainui_area = {
-				type = all
-				owned_by = ROOT
-			}
 			te_ika_a_maui_area = {
 				type = all
 				owned_by = ROOT
@@ -848,12 +817,6 @@ australia_missions_5 = {
 				}
 			}
 			tokerau_area = {
-				add_province_modifier = {
-					name = aus_settling
-					duration = 9125
-				}
-			}
-			tainui_area = {
 				add_province_modifier = {
 					name = aus_settling
 					duration = 9125

@@ -1,12 +1,13 @@
 ME_set_abbasid_caliph_province = {
 	hidden_effect = {
 		set_global_flag = ME_abbasid_caliph_exists
+    if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "HEY YOU THERE!" }
 		event_target:Caliph_province = {
 			save_event_target_as = Old_caliph_province #should go out of scope because not global
 			ME_remove_abbasid_modifiers = yes
 		}
 		save_global_event_target_as = Caliph_province
-		
+
 		if = { #this if checks if the owner of the caliph changes
 			limit = {
 				NOT = {
@@ -18,17 +19,18 @@ ME_set_abbasid_caliph_province = {
 				}
 				religion = sunni
 			}
-			owner = { 
+			owner = {
 				remove_country_modifier = ME_khalifah
 				country_event = { id = ME_Abbasid_Events.8 }
 			}
 		}
 	}
-	
+
 	ME_add_abbasid_modifiers = yes
 }
 
-ME_caliph_tag_effect = { 
+ME_caliph_tag_effect = {
+  if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "NOT THERE, HERE!" }
 	event_target:Caliph_province = {
 		owner = {
 			$effect$
@@ -63,7 +65,7 @@ ME_become_caliphate_effect = {
 			religion_group = muslim
 		}
 		change_government = monarchy #necessary condition
-		
+
 		if = {
 			limit = {
 				religion = sunni # the three sunni caliphate types
@@ -86,34 +88,35 @@ ME_become_caliphate_effect = {
 			}
 			hidden_effect = {
 				save_global_event_target_as = ME_caliphate_tag
-				
+
 				clr_global_flag = ME_abbasid_caliph_exists
-				event_target:Caliph_province = {
-					save_event_target_as = Old_caliph_province #should go out of scope because not global
-					ME_remove_abbasid_modifiers = yes
-				}
+				if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "NO YOU NUMPTY, HERE!" }
+		    event_target:Caliph_province = {
+		      save_event_target_as = Old_caliph_province #should go out of scope because not global
+		      ME_remove_abbasid_modifiers = yes
+		    }
 				clear_global_event_target = Caliph_province
 			}
 		}
 		else = { #the shia caliphate
 			add_government_reform = ME_caliphate_reform_shia_ibadi
 		}
-		
+
 		custom_tooltip = ME_Ayyubid_Tooltips.12
-			
+
 		custom_tooltip = " "
-			
+
 		custom_tooltip = ME_caliphal_actions
-		
+
 		custom_tooltip = " "
-		
+
 		if = {
 			limit = {
 				has_dlc = "Cradle of Civilization"
 			}
 			country_event = { id = ME_Abbasid_Events.24 }
 		}
-	}		
+	}
 }
 
 
@@ -123,18 +126,19 @@ ME_become_caliphate_effect = {
 # This decision does not have any benefits or failsafes. It is the content designer's job to keep track!
 ME_execute_caliph = {
 	custom_tooltip = ABA_mechanic_will_be_disabled_for_5_years
-	
+
 	hidden_effect = {
-		set_global_flag = ABA_executed_caliph
-		clr_global_flag = ME_abbasid_caliph_exists
-		event_target:Caliph_province = {
-			save_event_target_as = Old_caliph_province #should go out of scope because not global
-			ME_remove_abbasid_modifiers = yes
-		}
-		clear_global_event_target = Caliph_province
-		
-		# country_event = { id = ME_Abbasid_Events.21 }
-	}
+    set_global_flag = ABA_executed_caliph
+    clr_global_flag = ME_abbasid_caliph_exists
+    if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "SERIOUSLY HERE!" }
+    event_target:Caliph_province = {
+      save_event_target_as = Old_caliph_province #should go out of scope because not global
+      ME_remove_abbasid_modifiers = yes
+    }
+    clear_global_event_target = Caliph_province
+
+    # country_event = { id = ME_Abbasid_Events.21 }
+  }
 }
 
 ME_abbasid_bimonthly_check_effect = {
@@ -180,9 +184,9 @@ ME_abbasid_bimonthly_check_effect = {
 
 ME_enable_abbasid_ransom = {
 	custom_tooltip = ABA_enable_abbasid_ransom
-	
+
 	custom_tooltip = " "
-	
+
 	capital_scope = {
 		ME_set_abbasid_caliph_province = yes
 	}
@@ -396,7 +400,7 @@ ABA_convert_provinces_to_ibadi = {
 		event_target:Abbasid_ibadi_target_1 = {
 			change_religion = ibadi
 		}
-	
+
 		if = {
 			limit = {
 				has_country_flag = ABA_has_2_provs
@@ -404,7 +408,7 @@ ABA_convert_provinces_to_ibadi = {
 			event_target:Abbasid_ibadi_target_2 = {
 				change_religion = ibadi
 			}
-		
+
 			if = {
 				limit = {
 					has_country_flag = ABA_has_3_provs
@@ -412,7 +416,7 @@ ABA_convert_provinces_to_ibadi = {
 				event_target:Abbasid_ibadi_target_3 = {
 					change_religion = ibadi
 				}
-			
+
 				if = {
 					limit = {
 						has_country_flag = ABA_has_4_provs
@@ -420,7 +424,7 @@ ABA_convert_provinces_to_ibadi = {
 					event_target:Abbasid_ibadi_target_4 = {
 						change_religion = ibadi
 					}
-				
+
 					if = {
 						limit = {
 							has_country_flag = ABA_has_5_provs

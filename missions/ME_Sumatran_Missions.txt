@@ -24,7 +24,7 @@ SUM_generic_missions_1 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	SUM_generic_army = {
 		icon = mission_conquer_malwa_guj
 		required_missions = { }
@@ -41,7 +41,7 @@ SUM_generic_missions_1 = {
 				duration = 7300
 			}
 			custom_tooltip = SUM_when_both_are_completed
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -60,7 +60,7 @@ SUM_generic_missions_1 = {
 			}
 		}
 	}
-	
+
 	SUM_defeat_the_fakes = {
 		icon = mission_conquer_sindh_dlh
 		required_missions = { SUM_generic_srivijaya }
@@ -85,7 +85,7 @@ SUM_generic_missions_1 = {
 			add_adm_power = 100
 		}
 	}
-	
+
 	SUM_generic_unite_the_island = {
 		icon = mission_conquer_malwa_mug
 		required_missions = { SUM_defeat_the_fakes }
@@ -106,7 +106,7 @@ SUM_generic_missions_1 = {
 			add_army_tradition_or_mil_power = { amount = 10 }
 		}
 	}
-	
+
 	SUM_generic_celebes = {
 		icon = mission_rb_colonise_spice_islands
 		required_missions = { SUM_generic_java }
@@ -154,7 +154,7 @@ SUM_generic_missions_2 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	SUM_generic_srivijaya = {
 		icon = me_mission_malay_ruler
 		required_missions = { SUM_generic_navy SUM_generic_army }
@@ -163,7 +163,7 @@ SUM_generic_missions_2 = {
 			is_claim = ROOT
 		}
 		trigger = {
-			grown_by_development = 50 
+			grown_by_development = 50
 		}
 		effect = {
 			MSA_sumatra_reward = yes
@@ -171,7 +171,7 @@ SUM_generic_missions_2 = {
 			MSA_claims_malaya = yes
 		}
 	}
-	
+
 	SUM_generic_might = {
 		icon = mission_conquer_lower_burma_tau
 		required_missions = { SUM_generic_srivijaya }
@@ -191,7 +191,7 @@ SUM_generic_missions_2 = {
 			add_prestige_or_monarch_power = { amount = 15 }
 		}
 	}
-	
+
 	SUM_generic_java = {
 		icon = mission_mnd_maj_end_disaster
 		required_missions = { SUM_generic_unite_the_island SUM_generic_borneo }
@@ -239,7 +239,7 @@ SUM_generic_missions_3 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	SUM_generic_navy = {
 		icon = mission_divert_trade_from_bengal
 		required_missions = { }
@@ -274,7 +274,7 @@ SUM_generic_missions_3 = {
 			}
 		}
 	}
-	
+
 	SUM_defeat_malaka = {
 		icon = me_mission_sack_malacca
 		required_missions = { SUM_generic_srivijaya }
@@ -283,7 +283,7 @@ SUM_generic_missions_3 = {
 			MSA_is_in_malaya = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		trigger = {	
+		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				MSA_is_in_malaya = yes
 				value = 8
@@ -303,7 +303,7 @@ SUM_generic_missions_3 = {
 			MSA_claims_borneo = yes
 		}
 	}
-	
+
 	SUM_generic_borneo = {
 		icon = mission_mnd_maj_rein_in_brunei
 		required_missions = { SUM_defeat_malaka }
@@ -324,7 +324,7 @@ SUM_generic_missions_3 = {
 			MSA_claims_java = yes
 		}
 	}
-	
+
 	SUM_generic_alam_melayu = {
 		icon = mission_sail_to_the_east_indies
 		required_missions = { SUM_generic_java SUM_generic_borneo }
@@ -367,7 +367,7 @@ SUM_generic_missions_4 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	SUM_generic_architecture_sumatra = {
 		icon = me_mission_sea_throne_room
 		required_missions = { }
@@ -386,13 +386,13 @@ SUM_generic_missions_4 = {
 				name = SUM_sumatran_architecture
 				duration = 10950
 			}
-			
+
 			capital_scope = {
 				add_or_upgrade_tax_building = yes
 			}
 		}
 	}
-	
+
 	SUM_generic_suvarnadwipa = {
 		icon = mission_zambezi_gold
 		required_missions = { SUM_generic_architecture_sumatra }
@@ -459,7 +459,7 @@ SUM_generic_missions_4 = {
 			}
 		}
 	}
-	
+
 	SUM_generic_lampung_peppers = {
 		icon = mission_dominate_persian_gulf
 		required_missions = { }
@@ -487,7 +487,7 @@ SUM_generic_missions_4 = {
 			}
 		}
 	}
-	
+
 	SUM_generic_spice_kings = {
 		icon = mission_gharbianss
 		required_missions = { SUM_generic_lampung_peppers SUM_generic_orang_laut }
@@ -548,7 +548,7 @@ SUM_generic_missions_5 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	SUM_generic_secure_trade = {
 		icon = mission_dharma_mission_arabian_trade
 		required_missions = { SUM_generic_architecture_sumatra }
@@ -573,7 +573,7 @@ SUM_generic_missions_5 = {
 			}
 		}
 	}
-	
+
 	SUM_generic_orang_laut = {
 		icon = mission_arabian_ports
 		required_missions = { SUM_generic_secure_trade }
@@ -587,7 +587,7 @@ SUM_generic_missions_5 = {
 			MSA_orang_laut_effect = yes
 		}
 	}
-	
+
 	SUM_generic_religious_conflicts = {
 		icon = mission_mnd_maj_candi_shrines
 		required_missions = { }
@@ -607,7 +607,7 @@ SUM_generic_missions_5 = {
 			raise_war_taxes = yes
 		}
 	}
-	
+
 	SUM_generic_battlefield = {
 		icon = mission_prosperity_in_bengal
 		required_missions = { SUM_generic_religious_conflicts }
@@ -625,7 +625,7 @@ SUM_generic_missions_5 = {
 					tooltip = obj_force_converted_tooltip
 					has_country_flag = force_converted
 				}
-				
+
 				custom_trigger_tooltip = {
 					tooltip = MSA_converted_3_provinces
 					check_variable = { which = num_converted_religion value = 3 }
@@ -637,7 +637,7 @@ SUM_generic_missions_5 = {
 				name = SUM_hegemony
 				duration = -1
 			}
-			
+
 			add_army_tradition_or_mil_power = { amount = 15 }
 		}
 	}
