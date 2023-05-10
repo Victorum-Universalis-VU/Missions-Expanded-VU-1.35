@@ -1,4 +1,3 @@
-#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 poland_sca_slot_1 = { #Made by William 'Big Boss' S.
 	slot = 1
 	generic = no
@@ -13,7 +12,7 @@ poland_sca_slot_1 = { #Made by William 'Big Boss' S.
 			tag = PLC 
 			tag = POL 
 		}
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -164,7 +163,7 @@ poland_sca_slot_1_b = {
 		NOT = { map_setup = map_setup_random }
 		tag = POL 
 		NOT = { tag = PLC }
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -315,7 +314,7 @@ poland_sca_slot_1_plc_1 = {
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		tag = PLC 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -490,7 +489,7 @@ poland_sca_slot_1_c = {
 			tag = PLC 
 			tag = POL 
 		}
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -587,7 +586,7 @@ poland_sca_slot_1_d = {
 		NOT = { map_setup = map_setup_random }
 		tag = POL
 		NOT = { tag = PLC }
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 
@@ -632,7 +631,7 @@ poland_sca_slot_1_plc_2 = {
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		tag = PLC 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -675,7 +674,7 @@ poland_sca_slot_2_a = {
 			tag = POL 
 			tag = PLC 
 		}
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -1061,7 +1060,7 @@ poland_sca_slot_2_plc_1 = {
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		tag = PLC
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -1142,7 +1141,7 @@ poland_sca_slot_2_c = {
 			tag = POL 
 			tag = PLC 
 		}
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -1214,7 +1213,7 @@ poland_sca_slot_2_d = {
 		NOT = { map_setup = map_setup_random }
 		tag = POL 
 		NOT = { tag = PLC } 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -1291,7 +1290,7 @@ poland_sca_slot_2_plc_2 = {
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		tag = PLC 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -1366,7 +1365,7 @@ poland_sca_slot_2_e = {
 			tag = POL 
 			tag = PLC 
 		}
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes	
 	
@@ -1455,7 +1454,7 @@ poland_sca_slot_3_a = {
 			tag = POL 
 			tag = PLC 
 		}
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -2013,7 +2012,7 @@ poland_sca_slot_3_b = {
 		NOT = { map_setup = map_setup_random }
 		tag = POL 
 		NOT = { tag = PLC } 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -2321,7 +2320,7 @@ poland_sca_slot_3_plc_1 = {
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		tag = PLC 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -2798,7 +2797,7 @@ poland_sca_slot_4_a = {
 		NOT = { map_setup = map_setup_random }
 		tag = POL 
 		NOT = { tag = PLC } 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 
@@ -2916,7 +2915,7 @@ poland_sca_slot_4_plc_1 = {
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		tag = PLC
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 
@@ -3032,7 +3031,7 @@ poland_sca_slot_4_b = {
 			tag = POL 
 			tag = PLC 
 		}
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -3205,7 +3204,7 @@ poland_sca_slot_4_c = {
 		NOT = { map_setup = map_setup_random }
 		tag = POL 
 		NOT = { tag = PLC } 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes	
 	
@@ -3257,7 +3256,7 @@ poland_sca_slot_4_plc_2 = {
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		tag = PLC 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes	
 	
@@ -3314,7 +3313,7 @@ poland_sca_slot_4_d = {
 			tag = POL 
 			tag = PLC 
 		}
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -3439,7 +3438,7 @@ poland_sca_slot_4_e = {
 		NOT = { map_setup = map_setup_random }
 		tag = POL 
 		NOT = { tag = PLC } 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								   
 	}
 	has_country_shield = yes
 	
@@ -3641,7 +3640,7 @@ poland_sca_slot_4_plc_3 = {
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		tag = PLC
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -3944,7 +3943,7 @@ poland_sca_slot_5_branching_lit_hre = {
 		}
 		NOT = { has_country_flag = pol_chose_pu_flag }
 		NOT = { has_country_flag = pol_denied_pu_flag }
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -4282,8 +4281,7 @@ poland_sca_slot_5_branching_lit_east = {
 			tag = PLC 
 		}
 		has_country_flag = pol_chose_pu_flag
-		NOT = { has_country_flag = pol_denied_pu_flag }
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -4556,8 +4554,7 @@ poland_sca_slot_5_branching_hre_west = {
 			tag = PLC 
 		}
 		has_country_flag = pol_denied_pu_flag 
-		NOT = { has_country_flag = pol_chose_pu_flag }
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -4787,7 +4784,7 @@ poland_sca_slot_5_b = {
 			tag = POL 
 			tag = PLC 
 		}
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 
@@ -4923,7 +4920,7 @@ poland_sca_slot_5_c = {
 		NOT = { map_setup = map_setup_random }
 		tag = POL 
 		NOT = { tag = PLC } 
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -4972,7 +4969,7 @@ poland_sca_slot_5_plc_2 = {
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		tag = PLC
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -5019,7 +5016,7 @@ poland_sca_slot_5_d = {
 			tag = PLC 
 			tag = POL 
 		}
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -5133,7 +5130,7 @@ poland_sca_slot_5_e = {
 		NOT = { map_setup = map_setup_random }
 		tag = POL 
 		NOT = { tag = PLC }
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	
@@ -5315,7 +5312,7 @@ poland_sca_slot_5_plc_3 = {
 		has_dlc = "Lions of the North"
 		NOT = { map_setup = map_setup_random }
 		tag = PLC
-		has_country_flag = use_paradox_missions
+		has_country_flag = use_paradox_missions								 
 	}
 	has_country_shield = yes
 	

@@ -52,7 +52,7 @@ mnd_maj_1 = {
 			}
 		}
 	}
-	
+
 	mnd_maj_negara_agung = {
 		icon = mission_mnd_maj_negara_agung
 		required_missions = { mnd_maj_end_disaster }
@@ -83,7 +83,7 @@ mnd_maj_1 = {
 		required_missions = { mnd_maj_negara_agung }
 		provinces_to_highlight = {
 		}
-		trigger = {	
+		trigger = {
 			total_development = 500
 			if = {
 				limit = {
@@ -131,6 +131,7 @@ mnd_maj_1 = {
 							tag = MLC
 						}
 						area = malacca_area
+						area = tenasserim_area
 						area = kedah_area
 						area = malaya_area
 						area = tenasserim_area
@@ -164,6 +165,7 @@ mnd_maj_1 = {
 					country_or_non_sovereign_subject_holds = ROOT
 					OR = {
 						area = malacca_area
+						area = tenasserim_area
 						area = kedah_area
 						area = malaya_area
 						area = tenasserim_area
@@ -192,7 +194,7 @@ mnd_maj_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	mnd_maj_stability = {
 		icon = mission_mnd_khm_protect_the_cham
 		required_missions = { }
@@ -219,7 +221,7 @@ mnd_maj_2 = {
 			}
 		}
 	}
-	
+
 	mnd_maj_end_disaster = {
 		icon = mission_mnd_maj_end_disaster
 		required_missions = { mnd_maj_stability mnd_maj_subjects mnd_maj_religion }
@@ -259,7 +261,7 @@ mnd_maj_2 = {
 			}
 		}
 	}
-	
+
 	mnd_maj_enforce_loyalty = {
 		icon = mission_mnd_maj_enforce_loyalty
 		required_missions = { mnd_maj_end_disaster }
@@ -366,10 +368,6 @@ mnd_maj_2 = {
 			OR = {
 				region = malaya_region
 				region = indonesia_region
-				region = riau_islands_region
-				region = nusa_tenggara_region
-				region = borneo_region
-				region = celebes_region
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -386,7 +384,6 @@ mnd_maj_2 = {
 		provinces_to_highlight = {
 			OR = {
 				region = indo_china_region
-				region = south_china_sea_islands_region
 				region = burma_region
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -398,7 +395,6 @@ mnd_maj_2 = {
 					country_or_non_sovereign_subject_holds = ROOT
 					OR = {
 						region = indo_china_region
-						region = south_china_sea_islands_region
 						region = burma_region
 					}
 				}
@@ -423,7 +419,7 @@ mnd_maj_3 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	mnd_maj_religion = {
 		icon = mission_buddhist_monk_praying
 		required_missions = { }
@@ -533,12 +529,8 @@ mnd_maj_3 = {
 						NOT = { religion_group = muslim }
 						capital_scope = {
 							OR = {
-							    region = malaya_region
+								region = malaya_region
 								region = indonesia_region
-								region = riau_islands_region
-								region = nusa_tenggara_region
-								region = borneo_region
-								region = celebes_region
 							}
 						}
 					}
@@ -550,12 +542,8 @@ mnd_maj_3 = {
 						religion_group = muslim
 						capital_scope = {
 							OR = {
-							    region = malaya_region
+								region = malaya_region
 								region = indonesia_region
-								region = riau_islands_region
-								region = nusa_tenggara_region
-								region = borneo_region
-								region = celebes_region
 							}
 						}
 					}
@@ -574,13 +562,9 @@ mnd_maj_3 = {
 							religion_group = muslim
 							capital_scope = {
 								OR = {
-							        region = malaya_region
-								    region = indonesia_region
-								    region = riau_islands_region
-								    region = nusa_tenggara_region
-								    region = borneo_region
-								    region = celebes_region
-							    }
+									region = malaya_region
+									region = indonesia_region
+								}
 							}
 						}
 					}
@@ -594,13 +578,9 @@ mnd_maj_3 = {
 							NOT = { religion_group = muslim }
 							capital_scope = {
 								OR = {
-							        region = malaya_region
-								    region = indonesia_region
-								    region = riau_islands_region
-								    region = nusa_tenggara_region
-								    region = borneo_region
-								    region = celebes_region
-							    }
+									region = malaya_region
+									region = indonesia_region
+								}
 							}
 						}
 					}
@@ -625,6 +605,12 @@ mnd_maj_3 = {
 						religion = hinduism
 					}
 					custom_tooltip = propagate_religion_maj_tt
+					enable_propagate_religion_in_abrahamic_provinces= yes
+				}
+				else = {
+					hidden_effect = {
+						enable_propagate_religion_in_abrahamic_provinces= yes
+					}
 				}
 				every_province = {
 					limit = {
@@ -803,7 +789,7 @@ mnd_maj_4 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	mnd_maj_sunda_relations = {
 		icon = mnd_maj_sunda_relations
 		required_missions = { }
@@ -811,7 +797,7 @@ mnd_maj_4 = {
 			OR = {
 				owned_by = SUN
 				AND = {
-					area = west_java_area
+				  area = west_java_area
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
@@ -853,7 +839,7 @@ mnd_maj_4 = {
 				SUN = {
 					change_primary_culture = javanese
 					add_accepted_culture_or_dip_power = { culture = sundanese }
-				}				
+				}
 			}
 			if = {
 				limit = {
@@ -897,7 +883,7 @@ mnd_maj_4 = {
 			}
 		}
 	}
-	
+
 	mnd_maj_fleet = {
 		icon = mission_junk_boat
 		required_missions = { }

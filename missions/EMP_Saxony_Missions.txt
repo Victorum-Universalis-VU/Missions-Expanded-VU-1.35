@@ -1,4 +1,5 @@
-#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
+
+
 emp_sax_missions_conquest = {
 	slot = 1
 	generic = no
@@ -16,7 +17,7 @@ emp_sax_missions_conquest = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	emp_sax_conquer_erzgebirge = {
 		icon = claim_the_borderlands
 		required_missions = {  }
@@ -77,7 +78,7 @@ emp_sax_missions_conquest = {
 			}
 		}
 	}
-	
+
 	emp_sax_conquer_silesia = {
 		icon = take_silesia
 		position = 2
@@ -144,7 +145,7 @@ emp_sax_missions_defragment_and_go_east = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	emp_sax_conquer_brunswick = {
 		icon = conquer_brunswick
 		position = 1
@@ -156,12 +157,23 @@ emp_sax_missions_defragment_and_go_east = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					area = saxony_area
+					area = altmark_area
 					ROOT = {
 						NOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 								value = 2
-								area = saxony_area
+								area = altmark_area
+							}
+						}
+					}
+				}
+				AND = {
+					area = anhalt_area
+					ROOT = {
+						NOT = {
+							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+								value = 2
+								area = anhalt_area
 							}
 						}
 					}
@@ -183,7 +195,11 @@ emp_sax_missions_defragment_and_go_east = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 2
-				area = saxony_area
+				area = altmark_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = anhalt_area
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 2
@@ -221,7 +237,7 @@ emp_sax_missions_defragment_and_go_east = {
 			}
 		}
 	}
-	
+
 	emp_sax_reclaim_ancestral_lands = {
 		icon = reclaim_our_ancestral_lands
 		position = 2
@@ -266,7 +282,7 @@ emp_sax_missions_defragment_and_go_east = {
 			}
 		}
 	}
-	
+
 	emp_sax_conquer_brandenburg = {
 		icon = electorate_of_brandenburg
 		position = 3
@@ -328,12 +344,12 @@ emp_sax_missions_conquer_franconia = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	emp_sax_defragment = {
 		icon = avoid_fragmentation
 		position = 1
 		required_missions = {  }
-		
+
 		ai_weight = {
 			factor = 10
 		}
@@ -350,7 +366,7 @@ emp_sax_missions_conquer_franconia = {
 				}
 				AND = {
 					OR = {
-						area = lower_saxony_area
+						area = saxony_area
 						area = thuringia_area
 					}
 					OR = {
@@ -371,7 +387,7 @@ emp_sax_missions_conquer_franconia = {
 			else = {
 				NOT = { exists = SAX }
 			}
-			lower_saxony_area = {
+			saxony_area = {
 				type = all
 				owned_by = root
 				is_core = root
@@ -383,6 +399,13 @@ emp_sax_missions_conquer_franconia = {
 			}
 		}
 		effect = {
+			thuringia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			franconia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -393,7 +416,7 @@ emp_sax_missions_conquer_franconia = {
 			if = {
 				limit = {
 					NOT = {
-						saxony_area = {
+						altmark_area = {
 							type = all
 							OR = {
 								is_core = ROOT
@@ -402,7 +425,27 @@ emp_sax_missions_conquer_franconia = {
 						}
 					}
 				}
-				saxony_area = {
+				altmark_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						anhalt_area = {
+							type = all
+							OR = {
+								is_core = ROOT
+								is_permanent_claim = ROOT
+							}
+						}
+					}
+				}
+				anhalt_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -432,19 +475,25 @@ emp_sax_missions_conquer_franconia = {
 			}
 		}
 	}
-	
+
 	emp_sax_conquer_franconia = {
 		icon = conquer_franconia
 		position = 2
 		required_missions = { emp_sax_defragment }
 		provinces_to_highlight = {
-			area = franconia_area
+			OR = {
+				area = franconia_area
+				area = thuringia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = root }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						value = 6
-						area = franconia_area
+						OR = {
+							area = franconia_area
+							area = thuringia_area
+						}
 					}
 				}
 			}
@@ -452,7 +501,10 @@ emp_sax_missions_conquer_franconia = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
-				area = franconia_area
+				OR = {
+					area = franconia_area
+					area = thuringia_area
+				}
 			}
 		}
 		effect = {
@@ -460,7 +512,7 @@ emp_sax_missions_conquer_franconia = {
 			add_country_modifier = {
 				name = sax_holder_of_duchies
 				duration = 7300
-				
+
 			}
 		}
 	}
@@ -483,7 +535,7 @@ emp_sax_missions_religion = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	emp_sax_found_wittenberg = {
 		icon = wittenberg_university
 		completed_by = 1502.10.18
@@ -530,7 +582,7 @@ emp_sax_missions_religion = {
 			}
 		}
 	}
-	
+
 	emp_sax_victor_for_faith = {
 		icon = victor_for_the_true_faith
 		position = 4
@@ -604,7 +656,7 @@ emp_sax_missions_religion = {
 			}
 		}
 	}
-	
+
 	emp_sax_union_with_poland = {
 		icon = king_of_poland
 		required_missions = { emp_sax_spread_wettins }
@@ -669,7 +721,7 @@ emp_sax_missions_culture_1 = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	emp_sax_weimar_classicism = {
 		icon = weimar_classicism
 		position = 4
@@ -708,7 +760,7 @@ emp_sax_missions_culture_2 = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-		
+
 	emp_sax_spread_wettins = {
 		icon = spread_the_von_wettins
 		position = 4
@@ -973,7 +1025,7 @@ emp_sax_missions_culture_2 = {
 			}
 		}
 	}
-	
+
 	emp_sax_become_king = {
 		icon = become_king
 		position = 3
@@ -1037,7 +1089,7 @@ emp_sax_missions_economic = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	emp_sax_manufacturing = {
 		icon = saxon_manufacturing
 		required_missions = {  }
@@ -1061,7 +1113,7 @@ emp_sax_missions_economic = {
 			}
 		}
 	}
-	
+
 	emp_sax_meissen_porcelain = {
 		icon = porcelain_from_meissen
 		required_missions = { emp_sax_manufacturing }
@@ -1109,7 +1161,7 @@ emp_sax_missions_economic = {
 			}
 		}
 	}
-	
+
 	emp_sax_industrialisation = {
 		icon = mission_rb_build_furnaces
 		required_missions = { emp_sax_meissen_porcelain }

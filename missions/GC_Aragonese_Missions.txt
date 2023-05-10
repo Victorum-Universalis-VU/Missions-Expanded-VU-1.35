@@ -1,4 +1,3 @@
-#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 gc_aragon_1 = {
 	slot = 1
 	generic = no
@@ -10,16 +9,10 @@ gc_aragon_1 = {
 		has_dlc = "Golden Century"
 		OR = {
 			tag = ARA
-			tag = CAT
+			tag = CTT
 			tag = VAL
 			AND = {
-			    OR = {
-				    tag = SPA
-					tag = BSP
-					tag = SPB
-					tag = BBS
-					tag = CSP
-				}
+				tag = SPA
 				OR = {
 					primary_culture = aragonese
 					primary_culture = catalan
@@ -31,17 +24,14 @@ gc_aragon_1 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	gc_ara_consultate_of_the_sea = {
 		icon = mission_consulate_of_the_sea
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1295 #Gulf of Valencia
-				province_id = 121 #Naples
-				province_id = 203 #Lyon
-				province_id = 1298 #Ligurian Sea
-				province_id = 5224 #Nabil
+				province_id = 1298
+				province_id = 1295
 				AND = {
 					OR = {
 						province_id = 213
@@ -54,35 +44,17 @@ gc_aragon_1 = {
 				}
 			}
 		}
-		trigger = { #This used to be Valencia + Lyon + Genoa, and in earlier version + Naples. So I'm going to expand this since the point is to dominate the Eastern med.
-			1295 = { #Gulf of Valencia
-				is_strongest_trade_power = ARA #Now need to be the hegemon in Valencia, Should easy since almost the entire node is owned by ARA
-			}
-			OR = { #Exception for Naples if still hold it under PU, I feel like owning Naples counts as influence here
-				121 = { #Naples
-					trade_share = {
-						country = ARA
-						share = 33
-					}
-				}
-				owns_or_non_sovereign_subject_of = 121 #Naples
-			}
-			203 = { #Lyon
+		trigger = {
+			1295 = {
 				trade_share = {
-					country = ARA
-					share = 25
+					country = ROOT
+					share = 70
 				}
 			}
-			1298 = { #Ligurian Sea
+			1298 = {
 				trade_share = {
-					country = ARA
-					share = 10 #Light ships should be able to get this
-				}
-			}
-			5224 = { #Nabil
-				trade_share = {
-					country = ARA
-					share = 10 #Light ships should be able to get this
+					country = ROOT
+					share = 15
 				}
 			}
 			213 = {
@@ -97,7 +69,20 @@ gc_aragon_1 = {
 		effect = {
 			set_country_flag = ara_consulate_flag
 			country_event = { id = flavor_ara.1 }
-			give_permaclaims_for_mission = { mission=gc_ara_genoa }
+			liguria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_ara_valencian_silk = {
@@ -114,15 +99,15 @@ gc_aragon_1 = {
 					has_dlc = "Dharma"
 				}
 				220 = {
-					OR = { 
+					OR = {
 						province_has_center_of_trade_of_level = 3
-						development = 30
+						development = 20
 					}
 				}
 			}
 			else = {
 				220 = {
-					development = 30
+					development = 20
 				}
 			}
 		}
@@ -156,10 +141,6 @@ gc_aragon_1 = {
 				}
 				production_leader = {
 					trade_goods = paper
-					value = yes
-				}
-				production_leader = { #Added Silk, the desc mentions Silk, and the preceding mission gives Silk to Valencia, so why isn't it included?
-					trade_goods = silk
 					value = yes
 				}
 			}
@@ -198,16 +179,10 @@ gc_aragon_2 = {
 		has_dlc = "Golden Century"
 		OR = {
 			tag = ARA
-			tag = CAT
+			tag = CTT
 			tag = VAL
 			AND = {
-				OR = {
-				    tag = SPA
-					tag = BSP
-					tag = SPB
-					tag = BBS
-					tag = CSP
-				}
+				tag = SPA
 				OR = {
 					primary_culture = aragonese
 					primary_culture = catalan
@@ -223,20 +198,26 @@ gc_aragon_2 = {
 		icon = mission_dominate_genoa
 		required_missions = { gc_ara_consultate_of_the_sea }
 		position = 2
-		
+
 		provinces_to_highlight = {
-			gc_ara_genoa_provinces = yes
+			OR = {
+				area = corsica_sardinia_area
+				area = liguria_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-				
+
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-                provinces=gc_ara_genoa_provinces
-                owner_type=country_or_non_sovereign_subject_holds
-            }
+			liguria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			if = {
 				limit = {
 					has_dlc = "Dharma"
@@ -244,30 +225,49 @@ gc_aragon_2 = {
 				101 = {
 					OR = {
 						province_has_center_of_trade_of_level = 3
-						development = 40
+						development = 30
 					}
 				}
 			}
 			else = {
 				101 = {
-					development = 40
+					development = 30
 				}
 			}
 		}
 		effect = {
-			give_permaclaims_for_mission = { mission=gc_ara_venice }
-			give_permaclaims_for_mission = { mission=gc_ara_italy_1 }
+			venetia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tuscany_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			piedmont_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_ara_trade_guilds = {
 		icon = mission_guilds_of_barcelona
 		required_missions = { gc_ara_valencian_silk }
 		position = 4
-		
+
 		provinces_to_highlight = {
 			province_id = 213
 		}
-		
+
 		trigger = {
 			owns_core_province = 213
 			if = {
@@ -293,7 +293,6 @@ gc_aragon_2 = {
 		}
 		effect = {
 			213 = {
-				add_base_tax = 3
 				add_base_production = 3
 				add_province_modifier = {
 					name = "barcelona_guilds"
@@ -305,7 +304,7 @@ gc_aragon_2 = {
 	gc_ara_banking = {
 		icon = mission_taula_de_canvi
 		required_missions = { gc_ara_trade_guilds }
-		
+
 		trigger = {
 			NOT = { num_of_loans = 1 }
 			treasury = 3000
@@ -320,22 +319,48 @@ gc_aragon_2 = {
 	gc_ara_crowns_of_iberia = {
 		icon = mission_empire
 		required_missions = { gc_ara_navarra }
-		
+
 		# free mission
-		
+
 		provinces_to_highlight = {
-			gc_ara_crowns_of_iberia_provinces = yes
+			OR = {
+				area = castille_area
+				area = toledo_area
+				area = asturias_area
+				area = leon_area
+				area = extremadura_area
+				area = basque_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-                provinces=gc_ara_crowns_of_iberia_provinces
-                owner_type=country_or_non_sovereign_subject_holds
-            }
+			castille_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			toledo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			asturias_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			leon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			extremadura_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			basque_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_legitimacy = 20
@@ -354,34 +379,67 @@ gc_aragon_2 = {
 				}
 			}
 			else = {
-				give_permaclaims_for_mission = { mission=gc_ara_portugal }
+				alentejo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				beieras_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			lower_andalucia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
+			upper_andalucia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
 			}
 		}
 	}
 	gc_ara_portugal = {
 		icon = mission_union_with_portugal
 		required_missions = { gc_ara_crowns_of_iberia }
-		
+
 		provinces_to_highlight = {
-			gc_ara_portugal_provinces = yes
+			OR = {
+				area = alentejo_area
+				area = beieras_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-                provinces=gc_ara_portugal_provinces
-                owner_type=country_or_non_sovereign_subject_holds
-            }
+			alentejo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			beieras_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_dip_power = 100
 			add_prestige = 20
 		}
 	}
-	
+
 }
 
 gc_aragon_3 = {
@@ -395,16 +453,10 @@ gc_aragon_3 = {
 		has_dlc = "Golden Century"
 		OR = {
 			tag = ARA
-			tag = CAT
+			tag = CTT
 			tag = VAL
 			AND = {
-				OR = {
-				    tag = SPA
-					tag = BSP
-					tag = SPB
-					tag = BBS
-					tag = CSP
-				}
+				tag = SPA
 				OR = {
 					primary_culture = aragonese
 					primary_culture = catalan
@@ -420,125 +472,272 @@ gc_aragon_3 = {
 		icon = mission_control_venice
 		required_missions = { gc_ara_genoa }
 		position = 3
-		
+
 		provinces_to_highlight = {
 			OR = {
-				gc_ara_venice_provinces = yes
+				area = venetia_area
 				province_id = 1308
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-                provinces=gc_ara_venice_provinces
-                owner_type=country_or_non_sovereign_subject_holds
-            }
+			venetia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			1308 = {
 				is_strongest_trade_power = ROOT
 			}
 		}
 		effect = {
-			give_permaclaims_for_mission = { mission=gc_ara_italy_2 }
+			lombardy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			po_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			emilia_romagna_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_italy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			118 = {
+				if = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
-	gc_ara_italy = { #Updated by C1CK
+	gc_ara_italy = {
 		icon = mission_rule_italy
 		required_missions = { gc_ara_venice }
-		
+
 		provinces_to_highlight = {
-			gc_ara_italy_provinces = yes
+			region = italy_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-                provinces=gc_ara_venice_provinces
-                owner_type=country_or_non_sovereign_subject_holds
-            }
+			italy_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			give_permaclaims_for_mission = { mission=gc_ara_mare_nostrum_2 }
+			east_adriatic_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			croatia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			carinthia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			rascia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-	gc_ara_navarra = { #Updated by C1CK
+	gc_ara_navarra = {
 		icon = mission_have_two_subjects
 		required_missions = {  }
 		position = 4
-		
+
 		# free mission
-		
+
 		provinces_to_highlight = {
-			gc_ara_navarra_provinces = yes
+			province_id = 210
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-                provinces=gc_ara_navarra_provinces
-                owner_type=country_or_non_sovereign_subject_holds
-            }
+			210 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = military_vassalization
 				duration = 7300
 			}
-			give_permaclaims_for_mission = { mission=gc_ara_provence }
-			give_permaclaims_for_mission = { mission=gc_ara_crowns_of_iberia }
+			provence_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			castille_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			toledo_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			asturias_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			leon_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			extremadura_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			basque_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-	gc_ara_provence = { #Updated by C1CK
+	gc_ara_provence = {
 		icon = mission_humiliate_provence
 		required_missions = { gc_ara_navarra }
-		
+
 		provinces_to_highlight = {
-			gc_ara_provence_provinces = yes
+			area = provence_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-                provinces=gc_ara_provence_provinces
-                owner_type=country_or_non_sovereign_subject_holds
-            }
+			provence_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			give_permaclaims_for_mission = { mission=gc_ara_occitania }
+			savoy_dauphine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			languedoc_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			guyenne_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			pyrenees_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_ara_occitania = {
 		icon = mission_invade_occitania
 		required_missions = { gc_ara_provence }
 		provinces_to_highlight = {
-			gc_ara_occitania_provinces = yes
+			OR = {
+				area = savoy_dauphine_area
+				area = languedoc_area
+				area = guyenne_area
+				area = pyrenees_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		trigger = {
-			owns_core_province = 4696 #Toulon
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-                provinces=gc_ara_occitania_provinces
-                owner_type=country_or_non_sovereign_subject_holds
-            }
+			owns_core_province = 201
+			savoy_dauphine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			languedoc_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			guyenne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pyrenees_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			4696 = {
+			201 = {
 				add_province_modifier = {
 					name = "ara_toulon_dockyard"
 					duration = -1
@@ -551,16 +750,8 @@ gc_aragon_3 = {
 				}
 				add_claim = ROOT
 			}
-			#Removing this, not required for a mission so therefore not a permaclaim.
-			# poitou_area = { #Historically spoke Occitan, and lies in Bordeaux node, so this can be perm.
-				# limit = {
-					# NOT = { is_permanent_claim = ROOT }
-					# NOT = { is_core = ROOT	}
-				# }
-				# add_permanent_claim = ROOT
-			# }
 		}
-	}	
+	}
 }
 
 gc_aragon_4 = {
@@ -574,16 +765,10 @@ gc_aragon_4 = {
 		has_dlc = "Golden Century"
 		OR = {
 			tag = ARA
-			tag = CAT
+			tag = CTT
 			tag = VAL
 			AND = {
-				OR = {
-				    tag = SPA
-					tag = BSP
-					tag = SPB
-					tag = BBS
-					tag = CSP
-				}
+				tag = SPA
 				OR = {
 					primary_culture = aragonese
 					primary_culture = catalan
@@ -598,66 +783,115 @@ gc_aragon_4 = {
 	gc_ara_naples = {
 		icon = mission_unite_home_region
 		required_missions = {  }
-		
+
 		# free mission
-		
+
 		provinces_to_highlight = {
-			gc_ara_naples_provinces = yes
+			OR = {
+				area = calabria_area
+				area = apulia_area
+				area = naples_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-                tooltip=country_holds_highlighted 
-                provinces=gc_ara_naples_provinces
-                owner_type=owned_by
-            }
+			calabria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			apulia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			naples_area = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
 			121 = {
-				add_base_tax = 4
-				add_base_manpower = 4
-				add_base_production = 4
+				add_base_tax = 2
+				add_base_manpower = 2
+				add_base_production = 2
 			}
-			give_permaclaims_for_mission = { mission=gc_ara_athens }
-			give_permaclaims_for_mission = { mission=gc_ara_italy_3 }
+			morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			3003 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 	gc_ara_athens = {
 		icon = mission_assemble_an_army
 		required_missions = { gc_ara_naples }
-		
+
 		# free mission
-		
+
 		provinces_to_highlight = {
-			gc_ara_athens_provinces = yes
+			OR = {
+				area = morea_area
+				area = northern_greece_area
+				province_id = 3003
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-                provinces=gc_ara_athens_provinces
-                owner_type=country_or_non_sovereign_subject_holds
-            }
+			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3003 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = "mediterranean_ambition"
 				duration = 7300
 			}
-			give_permaclaims_for_mission = { mission=gc_ara_albania }
-			give_permaclaims_for_mission = { mission=gc_ara_mare_nostrum_3 }
+			albania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-	gc_ara_albania = { #Updated by C1CK
+	gc_ara_albania = {
 		icon = mission_protect_albania
 		required_missions = { gc_ara_athens }
-		
+
 		provinces_to_highlight = {
-			gc_ara_albania_provinces = yes
+			area = albania_area
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				NOT = {
@@ -668,7 +902,7 @@ gc_aragon_4 = {
 				}
 			}
 		}
-		
+
 		trigger = {
 			if = {
 				limit = {
@@ -688,12 +922,11 @@ gc_aragon_4 = {
 				}
 			}
 			else = {
-				has_fulfiled_province_requirement_for_mission_trigger = { 
-					tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-					provinces=gc_ara_albania_provinces
-					owner_type=country_or_non_sovereign_subject_holds
+				albania_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-			}				
+			}
 		}
 		effect = {
 			if = {
@@ -711,95 +944,139 @@ gc_aragon_4 = {
 						who = ROOT
 						modifier = opinion_aragon_protector
 					}
-				}						
+				}
 			}
-			give_permaclaims_for_mission = { mission=gc_ara_constantinople }
+			thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-	gc_ara_constantinople = { #Updated by C1CK (Extended slightly to East Pontus)
+	gc_ara_constantinople = {
 		icon = mission_city_of_the_world's_desire
 		required_missions = { gc_ara_albania }
-		
+
 		provinces_to_highlight = {
 			OR = {
-				gc_ara_constantinople_provinces = yes
+				area = thrace_area
+				area = macedonia_area
 				province_id = 1320
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		trigger = {
 			1320 = {
 				is_strongest_trade_power = ROOT
 			}
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_ara_constantinople_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			add_mercantilism = 3
-			give_permaclaims_for_mission = { mission=gc_ara_mare_nostrum_4 }
+			hudavendigar_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			aydin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			cukurova_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			kastamonu_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-	gc_ara_mare_nostrum = { #Updated by C1CK (Requires anything else on the med. coast not already required) (Now grants perm. claims on the remaining land in; Maghreb, Levant, Anatolia, Balkans, and Carniola)
+	gc_ara_mare_nostrum = {
 		icon = mission_mare_nostrum
 		required_missions = { gc_ara_alexandria gc_ara_italy gc_ara_constantinople }
-		
+
 		provinces_to_highlight = {
-			gc_ara_mare_nostrum_provinces = yes
+			OR = {
+				area = hudavendigar_area
+				area = aydin_area
+				area = cukurova_area
+				area = kastamonu_area
+				area = east_adriatic_coast_area
+				area = carinthia_area
+				area = rascia_area
+				area = bahari_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_ara_mare_nostrum_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			hudavendigar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cukurova_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kastamonu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_adriatic_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			carinthia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			rascia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bahari_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			add_mercantilism = 10
 			add_navy_tradition = 25
 			add_prestige = 50
-			#Removing permaclaims from these. Permaclaims are exclusively for when they are required for other missions. These are not.
-			anatolia_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_claim = ROOT
-			}
-			balkan_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_claim = ROOT
-			}
-			mashriq_region = { #Levant
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_claim = ROOT
-			}
-			maghreb_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_claim = ROOT
-			}
-			carinthia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_claim = ROOT
-			}
 		}
 	}
 }
@@ -815,16 +1092,10 @@ gc_aragon_5 = {
 		has_dlc = "Golden Century"
 		OR = {
 			tag = ARA
-			tag = CAT
+			tag = CTT
 			tag = VAL
 			AND = {
-				OR = {
-				    tag = SPA
-					tag = BSP
-					tag = SPB
-					tag = BBS
-					tag = CSP
-				}
+				tag = SPA
 				OR = {
 					primary_culture = aragonese
 					primary_culture = catalan
@@ -836,37 +1107,56 @@ gc_aragon_5 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-	
+
 	gc_ara_navy = {
 		icon = mission_aragonese_navy
 		required_missions = {  }
-		
+
 		trigger = {
 			naval_forcelimit = 30
 			navy_size_percentage = 0.9
 			num_of_admirals = 1
 		}
 		effect = {
-			give_permaclaims_for_mission = { mission=gc_ara_barbary_ports }
+			barbary_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_morocco_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-	
+
 	gc_ara_barbary_ports = {
 		icon = mission_combat_barbary_piracy
 		required_missions = { gc_ara_navy }
-		
+
 		provinces_to_highlight = {
-			gc_ara_barbary_ports_provinces = yes
+			OR = {
+				area = barbary_coast_area
+				area = northern_morocco_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_ara_barbary_ports_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			barbary_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_morocco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -874,26 +1164,44 @@ gc_aragon_5 = {
 				name = "refoming_barbary_pirates"
 				duration = 7300
 			}
-			give_permaclaims_for_mission = { mission=gc_ara_tunis }
-			give_permaclaims_for_mission = { mission=gc_ara_mare_nostrum_1 }
+			kabylia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			tunisia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_ara_tunis = {
 		icon = mission_conquer_tunis
 		required_missions = { gc_ara_barbary_ports }
-		
+
 		provinces_to_highlight = {
-			gc_ara_tunis_provinces = yes
+			OR = {
+				area = kabylia_area
+				area = tunisia_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_ara_tunis_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			kabylia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tunisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -901,15 +1209,31 @@ gc_aragon_5 = {
 				name = "ara_ship_trade_modifier"
 				duration = 7300
 			}
-			give_permaclaims_for_mission = { mission=gc_ara_alexandria }
+			delta_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			cyrenaica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_ara_alexandria = {
 		icon = mission_occupy_alexandria
 		required_missions = { gc_ara_tunis }
-		
+
 		provinces_to_highlight = {
-			gc_ara_alexandria_provinces = yes
+			OR = {
+				area = delta_area
+				area = cyrenaica_area
+			}
 			OR = {
 				NOT = {
 					country_or_non_sovereign_subject_holds = ROOT
@@ -917,15 +1241,18 @@ gc_aragon_5 = {
 				province_id = 358
 			}
 		}
-		
+
 		trigger = {
 			358 = {
 				is_strongest_trade_power = ROOT
 			}
-			has_fulfiled_province_requirement_for_mission_trigger = { 
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_ara_alexandria_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cyrenaica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -934,15 +1261,35 @@ gc_aragon_5 = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
-			give_permaclaims_for_mission = { mission=gc_ara_mare_nostrum_5 }
+			palestine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			syria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			aleppo_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_ara_envoy_to_ethiopia = {
 		icon = mission_envoy_to_ethiopia
 		required_missions = { gc_ara_alexandria }
-		
+
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = ara_ethiopia_tooltip
@@ -960,7 +1307,7 @@ gc_aragon_5 = {
 			}
 		}
 		effect = {
-			add_country_modifier ={	
+			add_country_modifier ={
 				name = "ara_envoy_to_ethiopia"
 				duration = 7300
 			}

@@ -22,7 +22,7 @@ beylik_missions_1 = {
 		}
 		trigger = {
 			capital_scope = {
-				has_tax_building_trigger = yes 
+				has_tax_building_trigger = yes
 			}
 			if = {
 				limit = {
@@ -48,7 +48,7 @@ beylik_missions_1 = {
 			capital_scope = {
 				add_or_upgrade_tax_building = yes
 			}
-			
+
 			add_adm_power = 50
 			if = {
 				limit = {
@@ -87,7 +87,7 @@ beylik_missions_1 = {
 			}
 		}
 	}
-	
+
 	BEY_splendid_court = {
 		icon = mission_deccanis
 		required_missions = { BEY_madrasah BEY_anatolian_architecture }
@@ -105,16 +105,16 @@ beylik_missions_1 = {
 				name = BEY_court_of_a_great_bey
 				duration = 10950
 			}
-			
+
 			add_stability_or_adm_power = yes
 			# custom_tooltip = ERE_tombs_tt #probably will be adapted for a mechanic elsewhere :)
 		}
 	}
-	
+
 	BEY_accessing_the_maritime_routes = {
 		icon = mission_bengal_entrepot
 		required_missions = { BEY_revitalize_trade }
-		position = 6 
+		position = 6
 		provinces_to_highlight = {
 		}
 		trigger = {
@@ -130,7 +130,7 @@ beylik_missions_1 = {
 				duration = 7300
 			}
 			#invite venetians over?
-			
+
 			add_navy_tradition = 10
 		}
 	}
@@ -170,14 +170,14 @@ beylik_missions_2 = {
 		}
 		effect = {
 			add_prestige_or_monarch_power = { amount = 25 }
-			
+
 			add_country_modifier = {
 				name = BEY_anatolian_architecture_modifier
 				duration = 14600
 			}
 		}
 	}
-	
+
 	BEY_madrasah = {
 		icon = mission_conquer_nagaur
 		required_missions = { BEY_supporting_the_arts }
@@ -187,7 +187,7 @@ beylik_missions_2 = {
 		}
 		trigger = {
 			capital_scope = {
-				num_of_times_improved_by_owner = 10 
+				num_of_times_improved_by_owner = 10
 			}
 		}
 		effect = {
@@ -208,7 +208,7 @@ beylik_missions_2 = {
 			}
 		}
 	}
-	
+
 	BEY_capture_ottoman_fortresses = {
 		icon = mission_crush_delhi
 		required_missions = { BEY_march_on_the_osman }
@@ -224,7 +224,7 @@ beylik_missions_2 = {
 					province_id = 326
 					NOT = { controlled_by = ROOT }
 				}
-			}	
+			}
 		}
 		trigger = {
 			326 = { controlled_by = ROOT }
@@ -244,7 +244,7 @@ beylik_missions_2 = {
 			add_legitimacy = 15
 		}
 	}
-	
+
 	BEY_revitalize_trade = {
 		icon = mission_establish_mint_towns
 		required_missions = { }
@@ -269,8 +269,8 @@ beylik_missions_2 = {
 					tag = CND
 				}
 				328 = {
-					owned_by = ROOT 
-					has_trade_building_trigger = yes 
+					owned_by = ROOT
+					has_trade_building_trigger = yes
 				}
 			}
 		}
@@ -280,25 +280,25 @@ beylik_missions_2 = {
 				# custom_tooltip = four_years_of_trade_income
 			# }
 			add_treasury = 100
-			
+
 			add_mercantilism = 3
-			
+
 			if = {
 				limit = {
 					tag = CND
 				}
 				country_event = { id = ME_Beylik_Events.9 }
 				328 = {
-					add_or_upgrade_trade_building = yes 
+					add_or_upgrade_trade_building = yes
 				}
 			}
 		}
 	}
-	
+
 	BEY_stop_on_the_silk_road = {
 		icon = mission_gujarati_textiles
 		required_missions = { BEY_revitalize_trade }
-		position = 6 
+		position = 6
 		provinces_to_highlight = {
 			OR = {
 				province_id = 329
@@ -310,7 +310,7 @@ beylik_missions_2 = {
 				NOT = { owned_by = ROOT }
 				NOT = { num_of_times_improved = 3 }
 			}
-		} 
+		}
 		trigger = {
 			OR = {
 				329 = {
@@ -405,7 +405,7 @@ beylik_missions_3 = {
 				duration = -1
 				desc = RUM_until_age_of_reformation
 			}
-			
+
 			custom_tooltip = RUM_gain_claims_on_ottos
 			hidden_effect = {
 				TUR = {
@@ -420,7 +420,7 @@ beylik_missions_3 = {
 			}
 		}
 	}
-	
+
 	BEY_march_on_the_osman = {
 		icon = mission_eliminate_pretenders
 		required_missions = { BEY_protect_against_ottomans }
@@ -441,7 +441,7 @@ beylik_missions_3 = {
 			custom_tooltip = RUM_otto_pwsc
 		}
 	}
-	
+
 	BEY_empire_in_ruin = {
 		icon = mission_fortify_rajputana
 		required_missions = { BEY_march_on_the_osman }
@@ -471,7 +471,7 @@ beylik_missions_3 = {
 				}
 			}
 			add_adm_power = 100
-			
+
 			thrace_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -533,7 +533,7 @@ AYD_missions_3 = { #Aydin missions created by claivin and adapted by Stiopa
 			ME_give_claims = { id = 321 } #cyprus
 		}
 	}
-	
+
 	AYD_raids = {
 		icon = me_mission_ottomans_piracy
 		required_missions = { AYD_scio }
@@ -702,7 +702,7 @@ RAM_missions_3 = {
 			}
 		}
 	}
-	
+
 	RAM_copts = {
 		icon = mission_expel_the_moriscos
 		required_missions = { RAM_allies }
@@ -740,9 +740,9 @@ RAM_missions_3 = {
 		effect = {
 			custom_tooltip = RUM_may_form_rum
 			set_country_flag = RUM_may_form_rum_irrespective_of_religion
-		
+
 			custom_tooltip = " "
-			
+
 			country_event = {
 				id = ME_Beylik_Events.10
 			}
@@ -776,7 +776,7 @@ beylik_missions_4 = {
 				army_size = 10
 				army_size_percentage = 0.85
 				custom_trigger_tooltip = {
-					tooltip = RUM_national_focus_mil 
+					tooltip = RUM_national_focus_mil
 					national_focus = mil
 				}
 			}
@@ -795,9 +795,9 @@ beylik_missions_4 = {
 				}
 			}
 			custom_tooltip = RUM_gain_claims
-			
+
 			define_advisor = {
-				type = spymaster 
+				type = spymaster
 				skill = 1
 				culture = ROOT
 				religion = ROOT
@@ -805,7 +805,7 @@ beylik_missions_4 = {
 			}
 		}
 	}
-	
+
 	BEY_gain_strength = {
 		icon = mission_unite_rajputana
 		required_missions = { BEY_threat_on_our_doorstep }
@@ -829,7 +829,7 @@ beylik_missions_4 = {
 			}
 		}
 	}
-	
+
 	BEY_enlist_lesser_beys = {
 		icon = mission_dharma_mission_the_riches_of_india
 		required_missions = { BEY_gain_strength }
@@ -850,11 +850,11 @@ beylik_missions_4 = {
 			}
 			# custom_tooltip = BEY_extra_2_siege
 			custom_tooltip = " "
-			
+
 			add_yearly_manpower = 0.25
 		}
 	}
-	
+
 	BEY_ascendant = {
 		icon = mission_conquer_rewakantha
 		required_missions = { BEY_enlist_lesser_beys BEY_empire_in_ruin }
@@ -875,18 +875,18 @@ beylik_missions_4 = {
 				name = RUM_rum_resurgent
 				duration = -1
 			}
-			
+
 			if = {
 				limit = {
 					tag = GRM #_old_tt GUH?
 				}
 				custom_tooltip = GRM_old_tt
-				ME_give_claims = { area = kerman_area } 
-				ME_give_claims = { area = farsistan_area } 
+				ME_give_claims = { area = kerman_area }
+				ME_give_claims = { area = farsistan_area }
 			}
 		}
 	}
-	
+
 	BEY_rum = {
 		icon = me_mission_ottomans_sultan_of_rum
 		required_missions = { BEY_ascendant BEY_konya }
@@ -982,7 +982,7 @@ beylik_missions_5 = {
 				}
 			}
 			custom_tooltip = BEY_if_we_ally_specific_nations
-			
+
 			custom_tooltip = BEY_venice
 			tooltip = {
 				add_country_modifier = {
@@ -1054,7 +1054,7 @@ beylik_missions_5 = {
 			}
 		}
 	}
-	
+
 	BEY_filling_our_ranks = {
 		icon = mission_abu_saids_dream
 		required_missions = { BEY_seek_allies BEY_gain_strength }
@@ -1066,7 +1066,7 @@ beylik_missions_5 = {
 			num_of_generals = 2
 		}
 		effect = {
-			add_mil_power = 50 
+			add_mil_power = 50
 			add_country_modifier = {
 				name = BEY_a_grand_force
 				duration = 9125
@@ -1074,7 +1074,7 @@ beylik_missions_5 = {
 		}
 	}
 }
-	
+
 DUL_missions_5 = { #made by claivin, adapted by Stiopa
 	slot = 5
 	generic = no
@@ -1131,7 +1131,7 @@ beylik_missions_5_cont = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	BEY_konya = {
 		icon = mission_growth_of_golcond
 		required_missions = { }
@@ -1174,7 +1174,7 @@ RUM_missions_1 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_sinope = {
 		icon = capture_adriatic_ports
 		required_missions = { BEY_accessing_the_maritime_routes }
@@ -1203,12 +1203,12 @@ RUM_missions_1 = {
 					duration = 10950
 					power = 25
 					key = RUM_sinop
-				} 
+				}
 			}
 			add_mercantilism = 2
-		} 
+		}
 	}
-	
+
 	RUM_devshirme = {
 		icon = me_mission_ottomans_expand_janissaries
 		required_missions = { }
@@ -1242,10 +1242,10 @@ RUM_missions_1 = {
 					name = RUM_janissary_caste
 					duration = 9125
 				}
-				
+
 				custom_tooltip = RUM_decrease_jannissary_cost
 			}
-			
+
 			else = {
 				create_general_with_pips = {
 					tradition = 80
@@ -1253,11 +1253,11 @@ RUM_missions_1 = {
 				}
 			}
 			set_country_flag = RUM_cost_of_janissaries_decreased
-			
+
 			#set_country_flag = RUM_devshirme_decision #recruit janissaries once in a while #TODO: Add this when PDX adds effect :)
 		}
 	}
-	
+
 	# RUM_anatolian_empire = {
 		# icon = me_mission_ottomans_expand_janissaries
 		# required_missions = { }
@@ -1266,7 +1266,7 @@ RUM_missions_1 = {
 			# region = anatolia_region
 			# OR = {
 				# NOT = { owned_by = ROOT }
-				# nationalism = 5 
+				# nationalism = 5
 			# }
 		# }
 		# trigger = {
@@ -1288,7 +1288,7 @@ RUM_missions_1 = {
 				# }
 				# add_permanent_claim = ROOT
 			# }
-			# jambi_area = {
+			# palembang_area = {
 				# limit = {
 					# NOT = { is_core = ROOT }
 					# NOT = { is_permanent_claim = ROOT }
@@ -1297,7 +1297,7 @@ RUM_missions_1 = {
 			# }
 		# }
 	# }
-	
+
 	RUM_rumelia = {
 		icon = the_latin_empire
 		required_missions = { }
@@ -1319,15 +1319,15 @@ RUM_missions_1 = {
 			ME_give_claims = { area = macedonia_area }
 			ME_give_claims = { area = bulgaria_area }
 			ME_give_claims = { area = silistria_area }
-			
-			
+
+
 			add_country_modifier = {
 				name = RUM_claimant_of_the_rum
 				duration = 10950
 			}
 		}
 	}
-	
+
 	RUM_balkans = {
 		icon = fight_bosnian_heresies
 		required_missions = { RUM_rumelia }
@@ -1356,7 +1356,7 @@ RUM_missions_1 = {
 		}
 		effect = {
 			add_accepted_culture_or_dip_power = { culture = greek }
-			
+
 			define_advisor = {
 				type = philosopher
 				skill = 3
@@ -1405,11 +1405,11 @@ RUM_missions_2 = {
 					duration = -1
 				}
 			}
-			
+
 			add_yearly_sailors = 1
 		}
 	}
-	
+
 	RUM_eastern_seas = {
 		icon = mission_look_west
 		required_missions = { RUM_arsenal RUM_sinope }
@@ -1420,23 +1420,23 @@ RUM_missions_2 = {
 			151 = {
 				trade_share = {
 					country = ROOT
-					share = 50 
+					share = 50
 				}
 			}
 			num_of_light_ship = 20
-			
+
 		}
 		effect = {
 			add_years_of_trade_income = { years = 3 }
 			custom_tooltip = RUM_3_years_of_trade
-			
+
 			add_country_modifier = {
 				name = RUM_unique_position
 				duration = 14600
 			}
 		}
 	}
-	
+
 	RUM_strategic_position = {
 		icon = mission_restore_trade_superiority
 		required_missions = { RUM_eastern_seas RUM_crossroads }
@@ -1478,7 +1478,7 @@ RUM_missions_2 = {
 			}
 		}
 	}
-	
+
 	RUM_janissary_corps = {
 		icon = mission_non-western_soldiers
 		required_missions = { RUM_devshirme }
@@ -1491,7 +1491,7 @@ RUM_missions_2 = {
 		trigger = {
 			if = {
 				limit = {
-					has_dlc = "Cradle of Civilization" 
+					has_dlc = "Cradle of Civilization"
 				}
 				num_of_janissaries = 20
 			}
@@ -1517,7 +1517,7 @@ RUM_missions_2 = {
 					duration = 10950
 				}
 			}
-			
+
 			add_mil_power = 100
 		}
 	}
@@ -1534,7 +1534,7 @@ RUM_missions_2_seljuk_janissaries = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_mobile_janissaries = {
 		icon = mission_unite_the_deccan
 		required_missions = { RUM_janissary_corps }
@@ -1546,7 +1546,7 @@ RUM_missions_2_seljuk_janissaries = {
 				num_of_cavalry = 20
 				cavalry_fraction = 0.2
 			}
-			
+
 			janissary_percentage = 0.2
 		}
 		effect = {
@@ -1565,7 +1565,7 @@ RUM_missions_2_continued = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_trebizond = {
 		icon = mission_guilds_of_barcelona
 		required_missions = { RUM_anatolia }
@@ -1584,7 +1584,7 @@ RUM_missions_2_continued = {
 		}
 		effect = {
 			country_event = { id = ME_Rum_Events.100 } #Accept pontic culture or assimilate it
-			
+
 			add_country_modifier = {
 				name = RUM_komnenoi_defeated
 				duration = 9125
@@ -1636,14 +1636,14 @@ RUM_missions_3 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_silk_road = {
 		icon = mission_claim_hispaniola
 		required_missions = { BEY_stop_on_the_silk_road }
 		position = 7
 		provinces_to_highlight = {
 			OR = {
-				province_id = 323 
+				province_id = 323
 				province_id = 329
 				province_id = 2298
 				province_id = 326
@@ -1681,13 +1681,13 @@ RUM_missions_3 = {
 			2298 = { create_or_add_center_of_trade_level = { level = 1 } }
 			329 = { create_or_add_center_of_trade_level = { level = 1 } }
 			323 = { create_or_add_center_of_trade_level = { level = 1 } }
-			
+
 			custom_tooltip = RUM_monopoly_on_textiles
 			set_country_flag = RUM_monopoly_on_textiles_flag
 			# country_event = { id = ME_Rum_Events.1 } #Open Silk Road - affect prices
 		}
 	}
-	
+
 	RUM_crossroads = {
 		icon = mission_develop_alhambra
 		required_missions = { RUM_silk_road RUM_caravan }
@@ -1739,7 +1739,7 @@ RUM_missions_3 = {
 			}
 		}
 	}
-	
+
 	RUM_city_of_worlds_desire = {
 		icon = end_the_schism
 		required_missions = { }
@@ -1765,16 +1765,16 @@ RUM_missions_3 = {
 				add_or_upgrade_courthouse_building = yes
 				add_or_upgrade_tax_building = yes
 				add_or_upgrade_production_building = yes
-				
+
 				custom_tooltip = " "
 				create_or_add_center_of_trade_level = { level = 1 }
 			}
-			
+
 			custom_tooltip = " "
 			country_event = { id = ME_Rum_Events.110 }
 		}
 	}
-	
+
 	RUM_pasha = {
 		icon = mission_viceroyalty_of_the_deccan
 		required_missions = { RUM_city_of_worlds_desire }
@@ -1826,9 +1826,9 @@ RUM_missions_3 = {
 						}
 					}
 				}
-				
+
 				custom_tooltip = " "
-				
+
 				add_adm_power = 100
 			}
 			else = {
@@ -1836,12 +1836,12 @@ RUM_missions_3 = {
 					name = RUM_loyal_pashas
 					duration = 9125
 				}
-				
+
 				add_adm_power = 100
 			}
 		}
 	}
-	
+
 	RUM_anatolia = {
 		icon = anatolian_frontier
 		required_missions = { }
@@ -1862,11 +1862,11 @@ RUM_missions_3 = {
 				name = RUM_rum_resurgent_2
 				duration = -1
 			}
-			
+
 			add_war_exhaustion = -2
 		}
 	}
-	
+
 	RUM_lake_van = {
 		icon = mission_ne_great_lakes_conquest
 		required_missions = { RUM_anatolia }
@@ -1899,7 +1899,7 @@ RUM_missions_3 = {
 				name = RUM_restored_the_old_border
 				duration = 10950
 			}
-			
+
 			add_mil_power = 50
 		}
 	}
@@ -1933,7 +1933,7 @@ RUM_missions_3_choice = {
 				}
 				mil = 5
 				overextension_percentage = 0.5
-				
+
 			}
 			OR = {
 				army_size = 60
@@ -1982,9 +1982,9 @@ RUM_missions_4 = {
 			# set_country_flag = RUM_caravanserai
 			custom_tooltip = RUM_trader_advisor_will_now_give_province_trade_power
 			set_country_flag = RUM_trader_flag
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = RUM_if_we_have_a_trader_or_burgher_loyalty
 			tooltip = {
 				add_local_autonomy = -10
@@ -2000,7 +2000,7 @@ RUM_missions_4 = {
 							trader = 1
 							estate_loyalty = {
 								estate = estate_burghers
-								loyalty = 60 
+								loyalty = 60
 							}
 						}
 					}
@@ -2019,7 +2019,7 @@ RUM_missions_4 = {
 			}
 		}
 	}
-	
+
 	RUM_influenced_by_persia = {
 		icon = mission_patronize_art_and_religion
 		required_missions = { RUM_seljuk_influences }
@@ -2032,11 +2032,11 @@ RUM_missions_4 = {
 				development = 50
 				num_of_buildings_in_province = 5
 			}
-			
+
 			prestige = 90
-			
+
 			legitimacy_equivalent = 90
-			
+
 			monthly_adm = 13
 		}
 		effect = {
@@ -2045,11 +2045,11 @@ RUM_missions_4 = {
 				amount = 10
 			}
 			custom_tooltip = MAM_permanent_PP
-			
+
 			add_splendor = 800
 		}
 	}
-	
+
 	RUM_antiochia = {
 		icon = mission_al-wadi_al-kabir
 		required_missions = { RUM_anatolia }
@@ -2125,7 +2125,7 @@ RUM_missions_5 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_workshop = {
 		icon = mission_african_gold
 		required_missions = { }
@@ -2137,7 +2137,7 @@ RUM_missions_5 = {
 				trade_node_value = 20
 				has_most_province_trade_power = ROOT
 			}
-			
+
 			num_of_owned_provinces_with = {
 				has_production_building_trigger = yes
 				value = 10
@@ -2148,7 +2148,7 @@ RUM_missions_5 = {
 				name = RUM_weve_been_gifted
 				duration = 10950
 			}
-			
+
 			custom_tooltip = RUM_10_tax
 			hidden_effect = {
 				for = {
@@ -2165,7 +2165,7 @@ RUM_missions_5 = {
 			}
 		}
 	}
-	
+
 	RUM_manufactories = {
 		icon = mission_valencian_silk
 		required_missions = { RUM_workshop RUM_caravan }
@@ -2197,7 +2197,7 @@ RUM_missions_5 = {
 		effect = {
 			custom_tooltip = RUM_unlock_decision_to_convert_up_to_3_provinces
 			set_country_flag = RUM_silk_decision
-			
+
 			hidden_effect = {
 				set_variable = {
 					which = RUM_silk_provinces_var
@@ -2206,7 +2206,7 @@ RUM_missions_5 = {
 			}
 		}
 	}
-	
+
 	RUM_seljuk_influences = {
 		icon = mission_central_asian_city
 		required_missions = { }
@@ -2221,7 +2221,7 @@ RUM_missions_5 = {
 				}
 				amount = 2
 			}
-			
+
 			has_adm_advisor_2 = yes
 			has_dip_advisor_2 = yes
 			has_mil_advisor_2 = yes
@@ -2229,9 +2229,9 @@ RUM_missions_5 = {
 		effect = {
 			custom_tooltip = AYY_buff_prestige_priv
 			set_country_flag = AYY_buff_prestige_priv
-			
+
 			custom_tooltip = " "
-			
+
 			add_age_modifier = {
 				name = RUM_seljuk_inspired_arts
 				duration = -1
@@ -2239,7 +2239,7 @@ RUM_missions_5 = {
 			}
 		}
 	}
-	
+
 	RUM_monumental_architecture = {
 		icon = mission_golden_century
 		required_missions = { RUM_seljuk_influences }
@@ -2276,7 +2276,7 @@ RUM_missions_5 = {
 				name = RUM_erecting_monuments
 				duration = -1
 			}
-			
+
 			if = {
 				limit = {
 					has_dlc = "Rights of Man"
@@ -2298,7 +2298,7 @@ RUM_missions_1_rome = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_illyria = {
 		icon = emperor_and_autocrat
 		required_missions = { RUM_balkans }
@@ -2316,7 +2316,7 @@ RUM_missions_1_rome = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = albania_area
@@ -2335,18 +2335,18 @@ RUM_missions_1_rome = {
 				name = RUM_bosnia_eyalet
 				duration = -1
 			}
-			
+
 			create_general = { tradition = 80 }
 		}
 	}
-	
+
 	RUM_venice = {
 		icon = nuova_promissione_ducale
 		required_missions = { RUM_illyria }
 		position = 15
 		provinces_to_highlight = {
 			OR = {
-				area = carinthia_area 
+				area = carinthia_area
 				area = venetia_area
 				province_id = 113
 				province_id = 4730
@@ -2355,10 +2355,10 @@ RUM_missions_1_rome = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
-					area = carinthia_area 
+					area = carinthia_area
 					area = venetia_area
 					province_id = 113
 					province_id = 4730
@@ -2366,20 +2366,20 @@ RUM_missions_1_rome = {
 				}
 				value = 7
 			}
-			
+
 			112 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			RUM_decrease_illegitimacy = yes
 			add_mercantilism = 2
-			
+
 			112 = {
 				add_local_autonomy = -50
-				add_or_upgrade_trade_building = yes 
+				add_or_upgrade_trade_building = yes
 			}
 		}
 	}
-	
+
 	RUM_handling_new_markets = {
 		icon = new_pilings
 		required_missions = { RUM_venice }
@@ -2387,7 +2387,7 @@ RUM_missions_1_rome = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			1308 = {
 				trade_share = {
 					country = ROOT
@@ -2401,7 +2401,7 @@ RUM_missions_1_rome = {
 				name = RUM_trade_efficiency_venice
 				duration = -1
 			}
-			
+
 			define_advisor = {
 				type = trader
 				skill = 3
@@ -2421,7 +2421,7 @@ RUM_missions_2_rome = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_south_italy = {
 		icon = renaissance_city
 		required_missions = { RUM_balkans }
@@ -2434,7 +2434,7 @@ RUM_missions_2_rome = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = apulia_area
@@ -2448,16 +2448,16 @@ RUM_missions_2_rome = {
 				name = RUM_italian_ambition
 				duration = 10950
 			}
-			
+
 			add_mil_power = 50
-			
+
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { area = naples_area }
 			ME_give_claims = { area = sicily_area }
 		}
 	}
-	
+
 	RUM_approach_to_rome = {
 		icon = state_of_the_presidi
 		required_missions = { RUM_south_italy }
@@ -2471,7 +2471,7 @@ RUM_missions_2_rome = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			apulia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2487,18 +2487,18 @@ RUM_missions_2_rome = {
 		}
 		effect = {
 			add_army_tradition_or_mil_power = { amount = 20 }
-			
+
 			custom_tooltip = " "
-			
+
 			add_adm_power = 100
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = RUM_winning_battles
 			set_country_flag = RUM_pp_from_battles
 		}
 	}
-	
+
 	RUM_rome = {
 		icon = sway_the_pope
 		required_missions = { RUM_approach_to_rome RUM_venice }
@@ -2508,7 +2508,7 @@ RUM_missions_2_rome = {
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			118 = {
 				owned_by = ROOT
 			}
@@ -2520,7 +2520,7 @@ RUM_missions_2_rome = {
 			RUM_decrease_illegitimacy = yes
 		}
 	}
-	
+
 	# RUM_all_roads_lead_to_rome = {
 		# icon = subiaco_press
 		# required_missions = { RUM_rome }
@@ -2544,7 +2544,7 @@ RUM_missions_3_rome = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_sicily = {
 		icon = adriatic_access
 		required_missions = { RUM_south_italy }
@@ -2554,7 +2554,7 @@ RUM_missions_3_rome = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				area = sicily_area
 				value = 5
@@ -2571,7 +2571,7 @@ RUM_missions_3_rome = {
 				}
 			}
 			add_dip_power = 50
-			
+
 			corsica_sardinia_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -2588,7 +2588,7 @@ RUM_missions_3_rome = {
             }
 		}
 	}
-	
+
 	RUM_sardinia = {
 		icon = seize_sardinia
 		required_missions = { RUM_sicily }
@@ -2601,7 +2601,7 @@ RUM_missions_3_rome = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = corsica_sardinia_area
@@ -2625,7 +2625,7 @@ RUM_missions_3_rome = {
                 }
                 add_permanent_claim = ROOT
             }
-			
+
 			add_country_modifier = {
 				name = RUM_morale
 				duration = 9125
@@ -2644,7 +2644,7 @@ RUM_missions_4_rome = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_byzantine_levant = {
 		icon = mission_levantine_restoration
 		required_missions = { RUM_antiochia }
@@ -2659,7 +2659,7 @@ RUM_missions_4_rome = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = syria_area
@@ -2678,17 +2678,17 @@ RUM_missions_4_rome = {
                 }
                 add_permanent_claim = ROOT
             }
-			
+
 			custom_tooltip = " "
-			
+
 			add_war_exhaustion = -2
-			
+
 			custom_tooltip = " "
 			custom_tooltip = RUM_roman_pasha_tooltip
 			set_country_flag = RUM_pasha_roman_flag
 		}
 	}
-	
+
 	RUM_tunis = {
 		icon = secure_the_republic
 		required_missions = { RUM_byzantine_egypt }
@@ -2703,7 +2703,7 @@ RUM_missions_4_rome = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = kabylia_area
@@ -2716,17 +2716,17 @@ RUM_missions_4_rome = {
 		}
 		effect = {
 			RUM_decrease_illegitimacy = yes
-			
+
 			custom_tooltip = RUM_space
-			
+
 			create_general = { tradition = 80 }
-			
+
 			custom_tooltip = RUM_space
-			
+
 			add_war_exhaustion = -2
 		}
 	}
-	
+
 	RUM_granadas = {
 		icon = mission_al_andalus
 		required_missions = { RUM_tunis RUM_sardinia }
@@ -2739,7 +2739,7 @@ RUM_missions_4_rome = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = lower_andalucia_area
@@ -2768,7 +2768,7 @@ RUM_missions_5_rome = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_byzantine_egypt = {
 		icon = mission_fatimid_caliphate
 		required_missions = { RUM_byzantine_levant }
@@ -2778,7 +2778,7 @@ RUM_missions_5_rome = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = egypt_region
 				value = 20
@@ -2816,7 +2816,7 @@ RUM_missions_5_rome = {
 			add_accepted_culture_or_dip_power = { culture = al_misr_arabic }
 		}
 	}
-	
+
 	RUM_byzantine_breadbasket = {
 		icon = mission_egyptian_mamluk_soldier
 		required_missions = { RUM_byzantine_egypt }
@@ -2825,16 +2825,16 @@ RUM_missions_5_rome = {
 			region = egypt_region
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_owned_provinces_with = {
 				region = egypt_region
 				has_production_building_trigger = yes
 				value = 6
 			}
-			
+
 			358 = {
-				owned_by = ROOT 
-				has_trade_building_trigger = yes 
+				owned_by = ROOT
+				has_trade_building_trigger = yes
 			}
 		}
 		effect = {
@@ -2842,10 +2842,10 @@ RUM_missions_5_rome = {
 				add_center_of_trade_level = 1
 				add_or_upgrade_trade_building = yes
 			}
-			
+
 			custom_tooltip = " "
 			custom_tooltip = " "
-			
+
 			custom_tooltip = RUM_3_most_developed
 			tooltip = {
 				add_or_upgrade_production_building = yes
@@ -2901,7 +2901,7 @@ RUM_missions_1_seljuk = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_caucasia = {
 		icon = alpine_fortifications
 		required_missions = { RUM_trebizond }
@@ -2916,7 +2916,7 @@ RUM_missions_1_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = imereti_area
@@ -2930,14 +2930,14 @@ RUM_missions_1_seljuk = {
 		effect = {
 			add_army_tradition_or_mil_power = { amount = 20 }
 			custom_tooltip = RUM_space
-			
+
 			create_general = { tradition = 60 add_manuever = 2 }
-			
+
 			custom_tooltip = RUM_general_will_have_extra_2_manuever
-			
+
 			custom_tooltip = RUM_space
 			add_adm_power = 50
-			
+
 			tabriz_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -2947,7 +2947,7 @@ RUM_missions_1_seljuk = {
             }
 		}
 	}
-	
+
 	RUM_gulf_of_persia = {
 		icon = mission_dharma_mission_arabian_trade
 		required_missions = { RUM_oman }
@@ -2980,7 +2980,7 @@ RUM_missions_1_seljuk = {
 			}
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			1335 = {
 				trade_share = {
 					country = ROOT
@@ -3010,7 +3010,7 @@ RUM_missions_1_seljuk = {
 			2999 = { add_or_upgrade_trade_building = yes }
 			408 = { add_or_upgrade_trade_building = yes }
 			4332 = { add_or_upgrade_trade_building = yes }
-			
+
 			add_country_modifier = {
 				name = RUM_gulf_of_persia_trade
 				duration = -1
@@ -3030,7 +3030,7 @@ RUM_missions_2_seljuk = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_tabriz = {
 		icon = mission_pacify_punjab
 		required_missions = { RUM_mesopotamia_seljuk RUM_caucasia }
@@ -3040,7 +3040,7 @@ RUM_missions_2_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			tabriz_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -3051,19 +3051,19 @@ RUM_missions_2_seljuk = {
 				type = mission_rewards_power_projection
 				amount = 40
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = RUM_entering_iran
 				duration = 10950
 			}
-			
+
 			set_country_flag = RUM_pasha_seljuk_flag
 			custom_tooltip = RUM_seljuk_pasha_tooltip
 		}
 	}
-	
+
 	RUM_oman = {
 		icon = mission_arabian_ports
 		required_missions = { RUM_persia }
@@ -3077,7 +3077,7 @@ RUM_missions_2_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = oman_area
@@ -3102,11 +3102,11 @@ RUM_missions_2_seljuk = {
 				add_base_production = 2
 				add_or_upgrade_production_building = yes
 			}
-			
+
 			add_years_of_income = 0.5
 		}
 	}
-	
+
 }
 # Double conqueror trait for seljuk, double zealot for caliph buff for defender of faith
 
@@ -3120,7 +3120,7 @@ RUM_missions_3_seljuk = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_mesopotamia_seljuk = {
 		icon = mission_subjugate_saurashtra
 		required_missions = { RUM_lake_van RUM_antiochia }
@@ -3136,7 +3136,7 @@ RUM_missions_3_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = shahrizor_area
@@ -3154,7 +3154,7 @@ RUM_missions_3_seljuk = {
 				duration = 9125
 			}
 			add_war_exhaustion = -2
-				
+
 			mogostan_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -3226,8 +3226,8 @@ RUM_missions_3_seljuk = {
                 add_permanent_claim = ROOT
             }
 		}
-	} 
-	
+	}
+
 	RUM_persia = {
 		icon = mission_persianate_empire
 		required_missions = { RUM_mesopotamia_seljuk }
@@ -3242,7 +3242,7 @@ RUM_missions_3_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = mogostan_area
@@ -3258,7 +3258,7 @@ RUM_missions_3_seljuk = {
 				name = RUM_economic_heartland_conquered
 				duration = 7300
 			}
-			
+
 			# 2999 = {
 				# add_trade_modifier = {
 					# who = ROOT
@@ -3267,13 +3267,13 @@ RUM_missions_3_seljuk = {
 					# key = RUM_persian_gulf
 				# }
 			# }
-		
+
 			if = {
 				limit = {
 					has_dlc = "Rights of Man"
 				}
 				custom_tooltip = RUM_conqueror_personality
-		
+
 				custom_tooltip = " "
 			}
 			set_country_flag = RUM_conqueror_personality_flag
@@ -3313,8 +3313,8 @@ RUM_missions_3_seljuk = {
                 add_permanent_claim = ROOT
             }
 		}
-	} 
-	
+	}
+
 	RUM_advance_the_frontier = {
 		icon = mission_central_asian_city
 		required_missions = { RUM_herat RUM_persia }
@@ -3328,7 +3328,7 @@ RUM_missions_3_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = kabulistan_area
@@ -3343,12 +3343,12 @@ RUM_missions_3_seljuk = {
 		effect = {
 			578 = { add_or_upgrade_fort_building = yes }
 			576 = { add_or_upgrade_fort_building = yes }
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = RUM_winning_battles
 			set_country_flag = RUM_pp_from_battles
-			
+
 			sindh_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -3386,7 +3386,7 @@ RUM_missions_3_seljuk = {
             }
 		}
 	}
-	
+
 	RUM_indus = {
 		icon = mission_afghan_frontier
 		required_missions = { RUM_advance_the_frontier }
@@ -3396,19 +3396,19 @@ RUM_missions_3_seljuk = {
 				area = sindh_area
 				area = northern_sindh_area
 				area = multan_area
-				area = sind_sagar_area 
+				area = sind_sagar_area
 				area = lahore_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = sindh_area
 					area = northern_sindh_area
 					area = multan_area
-					area = sind_sagar_area 
+					area = sind_sagar_area
 					area = lahore_area
 				}
 				value = 15
@@ -3421,7 +3421,7 @@ RUM_missions_3_seljuk = {
 				name = RUM_indus_conquered
 				duration = 5475
 			}
-			
+
 			add_mil_power = 100
 			507 = {
 				create_or_add_center_of_trade_level = { level = 1 }
@@ -3443,7 +3443,7 @@ RUM_missions_4_seljuk = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_hamadan = {
 		icon = mission_into_persia_1
 		required_missions = { RUM_mesopotamia_seljuk }
@@ -3459,7 +3459,7 @@ RUM_missions_4_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = luristan_area
@@ -3477,14 +3477,14 @@ RUM_missions_4_seljuk = {
 				name = RUM_following_the_footsteps
 				duration = -1
 			}
-			
+
 			414 = {
 				add_province_modifier = {
 					name = RUM_western_capital
 					duration = -1
 				}
 			}
-			
+
 			country_event = { id = ME_Rum_Events.107 }
 			mashhad_area = {
 				limit = {
@@ -3537,7 +3537,7 @@ RUM_missions_4_seljuk = {
             }
 		}
 	}
-	
+
 	RUM_herat = {
 		icon = mission_into_persia_2
 		required_missions = { RUM_hamadan }
@@ -3555,7 +3555,7 @@ RUM_missions_4_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = mashhad_area
@@ -3568,7 +3568,7 @@ RUM_missions_4_seljuk = {
 				}
 				value = 19
 			}
-			
+
 			445 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
@@ -3580,14 +3580,14 @@ RUM_missions_4_seljuk = {
 				}
 				remove_country_modifier = RUM_following_the_footsteps
 			}
-			
+
 			445 = {
 				add_province_modifier = {
 					name = RUM_eastern_capital
 					duration = -1
 				}
 			}
-			
+
 			country_event = { id = ME_Rum_Events.108 }
 			kabulistan_area = {
 				limit = {
@@ -3603,7 +3603,7 @@ RUM_missions_4_seljuk = {
                 }
                 add_permanent_claim = ROOT
             }
-			
+
 			transcaspia_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -3674,7 +3674,7 @@ RUM_missions_5_seljuk = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_seljuk_levant = {
 		icon = mission_al-wadi_al-kabir
 		required_missions = { RUM_antiochia }
@@ -3689,7 +3689,7 @@ RUM_missions_5_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = syria_area
@@ -3705,11 +3705,11 @@ RUM_missions_5_seljuk = {
 				name = RUM_the_heirs_of_alp_arslan
 				duration = 10950
 			}
-			
+
 			add_prestige_or_monarch_power = { amount = 15 }
-		
+
 			custom_tooltip = " "
-			
+
 			mecca_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -3742,7 +3742,7 @@ RUM_missions_5_seljuk = {
 			}
 		}
 	}
-	
+
 	RUM_seljuk_mecca = {
 		icon = mission_into_arabia
 		required_missions = { RUM_seljuk_levant }
@@ -3757,7 +3757,7 @@ RUM_missions_5_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = tabuk_area
@@ -3780,8 +3780,8 @@ RUM_missions_5_seljuk = {
 			}
 			country_event = { id = ME_Rum_Events.106 } #Release Mecca
 		}
-	} 
-	
+	}
+
 	RUM_the_steppe = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { RUM_herat }
@@ -3791,7 +3791,7 @@ RUM_missions_5_seljuk = {
 				area = transcaspia_area
 				area = khiva_area
 				area = transoxiana_area
-				area = termez_area 
+				area = termez_area
 				area = ferghana_area
 				area = kyzylkum_area
 				area = arys_area
@@ -3800,13 +3800,13 @@ RUM_missions_5_seljuk = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = transcaspia_area
 					area = khiva_area
 					area = transoxiana_area
-					area = termez_area 
+					area = termez_area
 					area = ferghana_area
 					area = kyzylkum_area
 					area = arys_area
@@ -3826,7 +3826,7 @@ RUM_missions_5_seljuk = {
 				remove_country_modifier = RUM_following_the_footsteps_2
 				remove_country_modifier = RUM_rum_resurgent_2
 			}
-			
+
 			override_country_name = RUM_SELJUKS
 		}
  	}
@@ -3842,8 +3842,8 @@ RUM_missions_1_religion = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
-	
+
+
 	RUM_defeat_the_crusaders = {
 		icon = crusader_fleet
 		required_missions = { RUM_religion_levant }
@@ -3875,7 +3875,7 @@ RUM_missions_1_religion = {
 			}
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			aegean_archipelago_area = {
 				type = all
 				owner = { religion = ROOT }
@@ -3892,7 +3892,7 @@ RUM_missions_1_religion = {
 				type = all
 				owner = { religion = ROOT }
 			}
-			
+
 			1854 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				has_shipyard_building_trigger = yes
@@ -3916,14 +3916,14 @@ RUM_missions_1_religion = {
 			378 = {
 				add_or_upgrade_shipyard_building = yes
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = RUM_for_as_long_as_we_control_above_areas
 			set_country_flag = RUM_crusader_bonus
 		}
 	}
-	
+
 	RUM_religion_breadbasket = {
 		icon = mission_egyptian_mamluk_soldier
 		required_missions = { RUM_religion_egypt }
@@ -3932,16 +3932,16 @@ RUM_missions_1_religion = {
 			region = egypt_region
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_owned_provinces_with = {
 				region = egypt_region
 				has_production_building_trigger = yes
 				value = 6
 			}
-			
+
 			358 = {
-				owned_by = ROOT 
-				has_trade_building_trigger = yes 
+				owned_by = ROOT
+				has_trade_building_trigger = yes
 			}
 		}
 		effect = {
@@ -3950,9 +3950,9 @@ RUM_missions_1_religion = {
 				add_center_of_trade_level = 1
 				add_or_upgrade_trade_building = yes
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = RUM_3_most_developed
 			tooltip = {
 				add_or_upgrade_production_building = yes
@@ -4008,7 +4008,7 @@ RUM_missions_2_religion = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_religion_levant = {
 		icon = mission_levantine_restoration
 		required_missions = { RUM_lake_van }
@@ -4023,7 +4023,7 @@ RUM_missions_2_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = syria_area
@@ -4033,7 +4033,7 @@ RUM_missions_2_religion = {
 				}
 				value = 10
 			}
-			
+
 			379 = {
 				is_core = owner
 				country_or_non_sovereign_subject_holds = ROOT
@@ -4053,8 +4053,8 @@ RUM_missions_2_religion = {
 					duration = -1
 				}
 			}
-				
-			
+
+
 			custom_tooltip = RUM_required_provinces
 			tooltip = {
 				add_province_modifier = {
@@ -4062,13 +4062,13 @@ RUM_missions_2_religion = {
 					duration = -1
 				}
 			}
-		
+
 			379 = {
 				add_base_tax = 2
 				add_base_production = 2
 				add_base_manpower = 1
 			}
-			
+
 			egypt_region = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -4108,7 +4108,7 @@ RUM_missions_2_religion = {
 			}
 		}
 	}
-	
+
 	RUM_religion_egypt = {
 		icon = mission_fatimid_caliphate
 		required_missions = { RUM_religion_levant }
@@ -4118,7 +4118,7 @@ RUM_missions_2_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = egypt_region
 				value = 20
@@ -4126,9 +4126,9 @@ RUM_missions_2_religion = {
 		}
 		effect = {
 			country_event = { id = ME_Rum_Events.103 } #Event to keep the mamluks in power as a military caste orrr to yeet them and be our own lords
-			
+
 			country_event = { id = ME_Rum_Events.102 days = 60 random = 30 } #Discover west africa
-			
+
 			dongola_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -4152,7 +4152,7 @@ RUM_missions_2_religion = {
             }
 		}
 	}
-	
+
 	RUM_horn_of_africa = {
 		icon = mission_mal_fighting_musa
 		required_missions = { RUM_religion_egypt RUM_yemen }
@@ -4170,7 +4170,7 @@ RUM_missions_2_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = dongola_area
@@ -4187,7 +4187,7 @@ RUM_missions_2_religion = {
 		effect = {
 			add_adm_power = 100
 			add_army_tradition_or_mil_power = { amount = 15 }
-			
+
 			central_swahili_coast_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -4218,7 +4218,7 @@ RUM_missions_2_religion = {
             }
 		}
 	}
-	
+
 	RUM_kilwa = {
 		icon = mission_son_own_develop_clothes_and_salt
 		required_missions = { RUM_horn_of_africa }
@@ -4233,7 +4233,7 @@ RUM_missions_2_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = central_swahili_coast_area
@@ -4249,7 +4249,7 @@ RUM_missions_2_religion = {
 				name = RUM_rich_coast
 				duration = 7300
 			}
-			
+
 			1448 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -4258,9 +4258,9 @@ RUM_missions_2_religion = {
 					key = RUM_merchants_in_zanzibar
 				}
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = RUM_conversion_adm_power
 			set_country_flag = RUM_conversion
 		}
@@ -4292,7 +4292,7 @@ RUM_missions_3_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = tabuk_area
@@ -4308,14 +4308,14 @@ RUM_missions_3_religion = {
 				name = RUM_holy_city_custodian
 				duration = -1
 			}
-			
+
 			#add_stability_or_adm_power = yes
-		
+
 			custom_tooltip = RUM_caliphate_pasha_tooltip
 			set_country_flag RUM_pasha_caliphate_flag
-			
+
 			custom_tooltip = " "
-		
+
 			yemen_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -4381,7 +4381,7 @@ RUM_missions_3_religion = {
             }
 		}
 	}
-	
+
 	RUM_yemen = {
 		icon = mission_dharma_mission_arabian_trade
 		required_missions = { RUM_religion_mecca }
@@ -4398,7 +4398,7 @@ RUM_missions_3_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = yemen_area
@@ -4464,7 +4464,7 @@ RUM_missions_3_religion = {
             }
 		}
 	}
-	
+
 	RUM_thatta = {
 		icon = mission_conquer_sindh_dlh
 		required_missions = { RUM_arabia }
@@ -4480,7 +4480,7 @@ RUM_missions_3_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = sindh_area
@@ -4517,7 +4517,7 @@ RUM_missions_4_religion = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_religion_baghdad = {
 		icon = mission_pacify_the_berbers
 		required_missions = { RUM_religion_mesopotamia }
@@ -4533,7 +4533,7 @@ RUM_missions_4_religion = {
 			}
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			410 = {
 				is_state_core = ROOT
 				NOT = { local_autonomy_above_min = 10 }
@@ -4547,20 +4547,20 @@ RUM_missions_4_religion = {
 				name = RUM_idea_cost
 				duration = 7300
 			}
-			
+
 			custom_tooltip = RUM_distribute_some_powah
 			hidden_effect = { #sorry?
 				export_to_variable = {
 					which = MSA_our_adm_tech
-					value = trigger_value:adm_tech
+					value = adm_tech
 				}
 				export_to_variable = {
 					which = MSA_our_dip_tech
-					value = trigger_value:dip_tech
+					value = dip_tech
 				}
 				export_to_variable = {
 					which = MSA_our_mil_tech
-					value = trigger_value:mil_tech
+					value = mil_tech
 				}
 				set_variable = {
 					which = MSA_our_lowest_tech
@@ -4594,7 +4594,7 @@ RUM_missions_4_religion = {
 						which = MSA_our_mil_tech
 					}
 				}
-				
+
 				subtract_variable = {
 					which = MSA_our_adm_tech
 					which = MSA_our_lowest_tech
@@ -4607,7 +4607,7 @@ RUM_missions_4_religion = {
 					which = MSA_our_mil_tech
 					which = MSA_our_lowest_tech
 				}
-				
+
 				if = {
 					limit = {
 						is_variable_equal = {
@@ -4680,7 +4680,7 @@ RUM_missions_4_religion = {
 						add_mil_power = 120
 					}
 				}
-				
+
 				#flush the vars
 				set_variable = {
 					which = MSA_our_adm_tech
@@ -4701,7 +4701,7 @@ RUM_missions_4_religion = {
 			}
 		}
 	}
-	
+
 	RUM_religion_holy_cities  = {
 		icon = mission_bedouins
 		required_missions = { RUM_religion_mecca }
@@ -4720,7 +4720,7 @@ RUM_missions_4_religion = {
 			}
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			385 = {
 				is_state_core = ROOT
 				NOT = { local_autonomy_above_min = 10 }
@@ -4745,14 +4745,14 @@ RUM_missions_4_religion = {
 				add_or_upgrade_tax_building = yes
 				add_prosperity = 100
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = RUM_devout_management
 				duration = -1
 			}
-			
+
 			#if ulema is 60 loyalty, gain something :)
 			custom_tooltip = RUM_ulema_privileges
 			hidden_effect = {
@@ -4795,7 +4795,7 @@ RUM_missions_4_religion = {
 			}
 		}
 	}
-	
+
 	RUM_arabia  = {
 		icon = mission_traverse_the_sahara
 		required_missions = { RUM_religion_gulf RUM_yemen }
@@ -4805,7 +4805,7 @@ RUM_missions_4_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = arabia_region
 				value = 13
@@ -4822,9 +4822,9 @@ RUM_missions_4_religion = {
 					duration = -1
 				}
 			}
-			
+
 			custom_tooltip = " "
-		
+
 			tanjore_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -4897,7 +4897,7 @@ RUM_missions_4_religion = {
             }
 		}
 	}
-	
+
 	RUM_the_caliphate_actual = {
 		icon = mission_restore_caliphate_of_cordoba
 		required_missions = { RUM_arabia }
@@ -4905,7 +4905,7 @@ RUM_missions_4_religion = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			total_development = 200
 			num_of_owned_provinces_with = {
 				has_tax_building_trigger = yes
@@ -4921,7 +4921,7 @@ RUM_missions_4_religion = {
 			country_event = { id = ME_Rum_Events.101 }
 			#maybe a CB?
 			custom_tooltip = " "
-			
+
 			set_country_flag = RUM_alternative_unify_islam_decision
 			if = {
 				limit = {
@@ -4931,7 +4931,7 @@ RUM_missions_4_religion = {
 			}
 		}
 	}
-	
+
 	RUM_malaya = {
 		icon = mission_subjugate_saurashtra
 		required_missions = { RUM_india }
@@ -4947,7 +4947,7 @@ RUM_missions_4_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = north_sumatra_area
@@ -4958,11 +4958,11 @@ RUM_missions_4_religion = {
 				}
 				value = 5
 			}
-			
+
 			1361 = {
 				trade_share = {
 					country = ROOT
-					share = 20 
+					share = 20
 				}
 			}
 		}
@@ -4985,7 +4985,7 @@ RUM_missions_5_religion = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	RUM_religion_mesopotamia = {
 		icon = mission_defeat_jaunpur
 		required_missions = { RUM_antiochia }
@@ -5002,7 +5002,7 @@ RUM_missions_5_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = luristan_area
@@ -5014,7 +5014,7 @@ RUM_missions_5_religion = {
 				}
 				value = 22
 			}
-			
+
 			410 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
@@ -5022,13 +5022,13 @@ RUM_missions_5_religion = {
 				name = RUM_center_of_religious_culture
 				duration = -1
 			}
-			
+
 			410 = {
 				add_or_upgrade_tax_building = yes
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			bahrain_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -5080,7 +5080,7 @@ RUM_missions_5_religion = {
             }
 		}
 	}
-	
+
 	RUM_religion_gulf = {
 		icon = mission_dominate_gujarati_trade
 		required_missions = { RUM_religion_mesopotamia }
@@ -5092,13 +5092,13 @@ RUM_missions_5_religion = {
 				area = oman_area
 				area = mascat_area
 				area = dhofar_area
-				area = mogostan_area 
+				area = mogostan_area
 				area = persian_gulf_coast
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = bahrain_area
@@ -5106,7 +5106,7 @@ RUM_missions_5_religion = {
 					area = oman_area
 					area = mascat_area
 					area = dhofar_area
-					area = mogostan_area 
+					area = mogostan_area
 					area = persian_gulf_coast
 				}
 				value = 15
@@ -5121,9 +5121,9 @@ RUM_missions_5_religion = {
 				add_center_of_trade_level = 1
 				add_or_upgrade_trade_building = yes
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = RUM_steering_through_mesopotamia
 				duration = 7300
@@ -5152,7 +5152,7 @@ RUM_missions_5_religion = {
             }
 		}
 	}
-	
+
 	RUM_india = {
 		icon = mission_the_tamil_trade_guilds
 		required_missions = { RUM_arabia }
@@ -5168,7 +5168,7 @@ RUM_missions_5_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = tanjore_area
@@ -5185,7 +5185,7 @@ RUM_missions_5_religion = {
 			discover_province = 1622
 			discover_province = 1248
 			discover_province = 1619
-			
+
 			1340 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -5194,7 +5194,7 @@ RUM_missions_5_religion = {
 					key = RUM_mercantile_ventures
 				}
 			}
-			
+
 			east_bengal_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -5225,11 +5225,11 @@ RUM_missions_5_religion = {
             }
 			riau_islands_area = {
 				limit = {
-                    NOT = { is_core = ROOT }
-                    NOT = { is_permanent_claim = ROOT }
-                }
-                add_permanent_claim = ROOT
-			}
+			              NOT = { is_core = ROOT }
+			              NOT = { is_permanent_claim = ROOT }
+			          }
+			          add_permanent_claim = ROOT
+			      }
 			malacca_area = {
 				limit = {
                     NOT = { is_core = ROOT }
@@ -5246,7 +5246,7 @@ RUM_missions_5_religion = {
             }
 		}
 	}
-	
+
 	RUM_bengal = {
 		icon = mission_bengal_entrepot
 		required_missions = { RUM_india }
@@ -5259,7 +5259,7 @@ RUM_missions_5_religion = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			RUM_preview = yes 
+			RUM_preview = yes
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = west_bengal_area
@@ -5286,7 +5286,7 @@ RUM_missions_5_religion = {
 					light_ship = ROOT
 				}
 			}
-			
+
 			add_country_modifier = {
 				name = RUM_indian_ocean
 				duration = -1

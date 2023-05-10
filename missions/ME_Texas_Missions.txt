@@ -384,14 +384,14 @@ texas_missions_2_native = {
 				}
 			}
 			else = {
-				ozarks_area = {
+				lower_louisiana_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
-				lower_louisiana_area = {
+				ozarks_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
@@ -812,7 +812,7 @@ texas_missions_4 = {
 		position = 4
 		required_missions = { tex_rein_wild_west }
 		provinces_to_highlight = {
-			area = california_area
+		  area = california_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {

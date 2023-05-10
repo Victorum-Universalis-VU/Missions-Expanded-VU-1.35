@@ -60,10 +60,7 @@ country_decisions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			AND = {
-				NOT = { exists = FRA }
-				NOT = { exists = BFR }
-			}
+			NOT = { exists = FRA }
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = frx_empire_dismantled.tooltip

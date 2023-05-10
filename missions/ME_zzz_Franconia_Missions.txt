@@ -14,9 +14,9 @@
 			tag = FKN
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
-	} 
+	}
 	has_country_shield  = yes
-	
+
 	FKN_conquer_nuremburg = {
 		icon = sources_of_trade
 		required_missions = { FKN_build_an_army }
@@ -70,7 +70,7 @@
 			}
 		}
 	}
-	
+
 	FKN_strength_in_unity = {
 		icon = catholic_confraternity
 		required_missions = { }
@@ -82,7 +82,7 @@
 						who = ROOT
 						value = 150
 					}
-					
+
 				}
 				amount = 2
 			}
@@ -101,7 +101,7 @@
 			}
 		}
 	}
-	
+
 	FKN_recognition_of_emperor = {
 		icon = switzerland_and_the_empire
 		required_missions = { FKN_strength_in_unity }
@@ -148,7 +148,7 @@
 		}
 	}
 }
-	
+
 FKN_Gen_Missions_3 = {
 	slot = 3
 	generic = yes
@@ -165,9 +165,9 @@ FKN_Gen_Missions_3 = {
 			tag = FKN
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
-	} 
+	}
 	has_country_shield = yes
-	
+
 	FKN_build_an_army = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { }
@@ -202,7 +202,7 @@ FKN_Gen_Missions_3 = {
 			}
 		}
 	}
-	
+
 	FKN_conquer_wurzburg = {
 		icon = subiaco_press
 		required_missions = { FKN_build_an_army }
@@ -256,7 +256,7 @@ FKN_Gen_Missions_3 = {
 			}
 		}
 	}
-	
+
 	FKN_unifying_franconia = {
 		icon = influence_the_princes
 		required_missions = { FKN_conquer_wurzburg FKN_conquer_nuremburg FKN_conquer_ansbach }
@@ -302,7 +302,7 @@ FKN_Gen_Missions_3 = {
 			add_yearly_manpower = 1
 		}
 	}
-	
+
 	FKN_dux_francorum = {
 		icon = conquer_franconia
 		required_missions = { FKN_unifying_franconia }
@@ -336,6 +336,13 @@ FKN_Gen_Missions_3 = {
 		effect = {
 			change_national_focus_effect = yes
 			country_event = { id = ME_Franconia_Events.1 }
+			tirol_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -418,9 +425,9 @@ FKN_Gen_Missions_4 = {
 			tag = FKN
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
-	} 
+	}
 	has_country_shield = yes
-	
+
 	FKN_conquer_ansbach = {
 		icon = army_reforms
 		required_missions = { FKN_build_an_army }
@@ -474,7 +481,7 @@ FKN_Gen_Missions_4 = {
 			}
 		}
 	}
-	
+
 	FKN_growing_cities = {
 		icon = purely_for_commerce
 		required_missions = { }
@@ -500,7 +507,7 @@ FKN_Gen_Missions_4 = {
 			}
 		}
 	}
-	
+
 	FKN_raubritter = {
 		icon = rein_in_the_nobles
 		required_missions = { FKN_growing_cities }
@@ -511,7 +518,7 @@ FKN_Gen_Missions_4 = {
 					estate = estate_nobles
 					loyalty = 60
 				}
-				has_estate_privilege = estate_nobles_land_rights 
+				has_estate_privilege = estate_nobles_land_rights
 			}
 		}
 		effect = {
@@ -538,9 +545,9 @@ FKN_Missions_1 = {
 	potential = {
 		tag = FKN
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
-	} 
+	}
 	has_country_shield  = yes
-	
+
 	FKN_trade_center = {
 		icon = return_visby_to_the_league
 		required_missions = { }
@@ -574,7 +581,7 @@ FKN_Missions_1 = {
 			}
 		}
 	}
-	
+
 	FKN_heritage_of_kilian = {
 		icon = new_st_peters_basilica
 		required_missions = { FKN_trade_center }
@@ -602,7 +609,7 @@ FKN_Missions_1 = {
 			add_fervor = 50
 		}
 	}
-	
+
 	FKN_developing_land = {
 		icon = claim_the_borderlands
 		required_missions = { FKN_heritage_of_kilian }
@@ -639,11 +646,11 @@ FKN_Missions_1 = {
 			}
 			add_country_modifier = {
 				name = growing_economy
-				duration = 9125 
+				duration = 9125
 			}
 		}
 	}
-	
+
 	FKN_capital = {
 		icon = sway_cologne
 		required_missions = { FKN_developing_land }
@@ -671,7 +678,7 @@ FKN_Missions_1 = {
 			}
 		}
 	}
-	
+
 	FKN_universities = {
 		icon = wittenberg_university
 		required_missions = { FKN_capital }
@@ -698,7 +705,7 @@ FKN_Missions_1 = {
 				}
 			}
 		}
-		trigger = {	
+		trigger = {
 			franconia_area = {
 				owned_by = ROOT
 				has_building = university
@@ -715,7 +722,7 @@ FKN_Missions_1 = {
 			}
 		}
 	}
-	
+
 	FKN_in_defense = {
 		icon = protect_against_austria
 		required_missions = { FKN_powerbase }
@@ -772,20 +779,26 @@ FKN_Missions_2 = {
 	potential = {
 		tag = FKN
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
-	} 
+	}
 	has_country_shield  = yes
-	
+
 	FKN_bavaria = {
 		icon = establish_a_standing_army
 		required_missions = { FKN_dux_francorum }
 		position = 6
 		provinces_to_highlight = {
-			area = bavaria_area
+			OR = {
+				area = tirol_area
+				area = bavaria_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = bavaria_area
+				OR = {
+					area = tirol_area
+					area = bavaria_area
+				}
 				value = 7
 			}
 		}
@@ -800,7 +813,7 @@ FKN_Missions_2 = {
 			}
 		}
 	}
-	
+
 	FKN_workshops = {
 		icon = public_works
 		required_missions = { }
@@ -881,7 +894,7 @@ FKN_Missions_2 = {
 			}
 		}
 	}
-	
+
 	FKN_franconian_beverages = {
 		icon = establish_oktoberfest
 		required_missions = { FKN_heritage_of_kilian FKN_workshops }
@@ -891,7 +904,7 @@ FKN_Missions_2 = {
 			trade_goods = wine
 		}
 		trigger = {
-			development_in_provinces = {	
+			development_in_provinces = {
 				trade_goods = wine
 				value = 75
 			}
@@ -903,7 +916,7 @@ FKN_Missions_2 = {
 			}
 		}
 	}
-	
+
 	FKN_franconian_dominance = {
 		icon = bavarian_cultural_dominance
 		required_missions = { FKN_franconian_beverages FKN_capital }
@@ -928,7 +941,7 @@ FKN_Missions_2 = {
 			}
 		}
 	}
-	
+
 	FKN_abase_loyalists = {
 		icon = take_the_littoral
 		required_missions = { FKN_hre_capital }
@@ -981,7 +994,7 @@ FKN_Missions_2 = {
 			}
 		}
 	}
-	
+
 	FKN_powerbase = {
 		icon = lead_the_empire
 		required_missions = { FKN_emperorship }
@@ -1007,7 +1020,7 @@ FKN_Missions_2 = {
 			}
 		}
 	}
-	
+
 	FKN_imperial_ban = {
 		icon = the_imperial_border
 		required_missions = { FKN_powerbase }
@@ -1024,7 +1037,7 @@ FKN_Missions_2 = {
 			}
 		}
 	}
-	
+
 	FKN_imperial_enemies = {
 		icon = balance_of_power
 		required_missions = { FKN_imperial_ban FKN_in_defense }
@@ -1065,9 +1078,9 @@ FKN_Missions_3 = {
 	potential = {
 		tag = FKN
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
-	} 
+	}
 	has_country_shield  = yes
-	
+
 	FKN_west_franconia = {
 		icon = all_bases_covered
 		required_missions = { FKN_dux_francorum }
@@ -1110,7 +1123,7 @@ FKN_Missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			holstein_area = {
+			lower_saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1182,7 +1195,7 @@ FKN_Missions_3 = {
 			}
 		}
 	}
-	
+
 	FKN_swabia = {
 		icon = connect_further_austria
 		required_missions = { FKN_west_franconia }
@@ -1218,7 +1231,7 @@ FKN_Missions_3 = {
 			}
 		}
 	}
-	
+
 	FKN_manufactories = {
 		icon = mission_have_manufactories
 		required_missions = { FKN_franconian_beverages }
@@ -1241,7 +1254,7 @@ FKN_Missions_3 = {
 			}
 		}
 	}
-	
+
 	FKN_hre_capital = {
 		icon = join_the_empire
 		required_missions = { }
@@ -1266,7 +1279,7 @@ FKN_Missions_3 = {
 			set_country_flag = FKN_CB
 		}
 	}
-	
+
 	FKN_emperorship = {
 		icon = centralized_empire
 		required_missions = { FKN_support FKN_abase_loyalists }
@@ -1280,7 +1293,7 @@ FKN_Missions_3 = {
 			country_event = { id = ME_Franconia_Events.3 }
 		}
 	}
-	
+
 	FKN_absolute_loyalty = {
 		icon = imperial_ascendancy
 		required_missions = { FKN_emperorship }
@@ -1306,7 +1319,7 @@ FKN_Missions_3 = {
 			}
 		}
 	}
-	
+
 	FKN_franconia_ascendant = {
 		icon = carolingian_empire
 		required_missions = { FKN_absolute_loyalty FKN_religious_peace FKN_imperial_enemies }
@@ -1324,7 +1337,7 @@ FKN_Missions_3 = {
 				}
 			}
 			else = {
-				hre_reform_passed = erbkaisertum 
+				hre_reform_passed = erbkaisertum
 			}
 			custom_trigger_tooltip = {
 				tooltip = FKN_largest_army_in_europe
@@ -1361,10 +1374,10 @@ FKN_Missions_4 = {
 	potential = {
 		tag = FKN
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
-	} 
+	}
 	has_country_shield  = yes
-	
-	
+
+
 	FKN_saxony = {
 		icon = electorate_of_saxony
 		required_missions = { FKN_dux_francorum }
@@ -1417,16 +1430,9 @@ FKN_Missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			hesse_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
-	
+
 	FKN_westphalia = {
 		icon = westphalian_conquest
 		required_missions = { FKN_west_franconia }
@@ -1435,7 +1441,7 @@ FKN_Missions_4 = {
 			OR = {
 				area = braunschweig_area
 				area = weser_area
-				area = holstein_area
+				area = lower_saxony_area
 				area = lower_rhineland_area
 				area = north_rhine_area
 				area = westphalia_area
@@ -1448,7 +1454,7 @@ FKN_Missions_4 = {
 				OR = {
 					area = braunschweig_area
 					area = weser_area
-					area = holstein_area
+					area = lower_saxony_area
 					area = lower_rhineland_area
 					area = north_rhine_area
 					area = westphalia_area
@@ -1464,7 +1470,7 @@ FKN_Missions_4 = {
 			country_event = { id = ME_Franconia_Events.4 }
 		}
 	}
-	
+
 	FKN_bauernkrieg = {
 		icon = prosper_in_piedmont
 		required_missions = { FKN_reformation }
@@ -1495,7 +1501,7 @@ FKN_Missions_4 = {
 			custom_tooltip = FKN_if_no_rebel_faction
 		}
 	}
-	
+
 	FKN_estates = {
 		icon = appease_the_estates
 		required_missions = { FKN_kleinstaaterei }
@@ -1523,7 +1529,7 @@ FKN_Missions_4 = {
 			country_event = { id = ME_Franconia_Events.2 }
 		}
 	}
-	
+
 	FKN_support = {
 		icon = mission_alliances
 		required_missions = { FKN_hre_capital }
@@ -1559,7 +1565,7 @@ FKN_Missions_4 = {
 			}
 		}
 	}
-	
+
 	FKN_grace = {
 		icon = regal_splendour
 		required_missions = { FKN_emperorship }
@@ -1571,7 +1577,7 @@ FKN_Missions_4 = {
 				NOT = {
 					has_opinion_modifier = {
 						who = ROOT
-						modifier = improved_imperial_relations 
+						modifier = improved_imperial_relations
 					}
 				}
 			}
@@ -1581,7 +1587,7 @@ FKN_Missions_4 = {
 				all_country = {
 					has_opinion_modifier = {
 						who = ROOT
-						modifier = improved_imperial_relations 
+						modifier = improved_imperial_relations
 					}
 				}
 				amount = 10
@@ -1594,7 +1600,7 @@ FKN_Missions_4 = {
 			}
 		}
 	}
-	
+
 	FKN_reform_the_empire = {
 		icon = glory_to_von_habsburg
 		required_missions = { FKN_grace }
@@ -1604,7 +1610,7 @@ FKN_Missions_4 = {
 				limit = {
 					has_dlc = "Emperor"
 				}
-				hre_reform_passed = emperor_gemeinerpfennig 
+				hre_reform_passed = emperor_gemeinerpfennig
 			}
 			else = {
 				hre_reform_passed = gemeinerpfennig
@@ -1631,7 +1637,7 @@ FKN_Missions_4 = {
 			}
 		}
 	}
-	
+
 	FKN_religious_peace = {
 		icon = show_piety
 		required_missions = { FKN_reform_the_empire FKN_ensure_loyalty }
@@ -1659,9 +1665,9 @@ FKN_Missions_5 = {
 	potential = {
 		tag = FKN
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
-	} 
+	}
 	has_country_shield  = yes
-	
+
 	FKN_capture_berlin = {
 		icon = develop_konigsberg
 		required_missions = { FKN_saxony }
@@ -1682,7 +1688,7 @@ FKN_Missions_5 = {
 			}
 		}
 	}
-	
+
 	FKN_reformation = {
 		icon = victor_for_the_true_faith
 		required_missions = { }
@@ -1787,7 +1793,7 @@ FKN_Missions_5 = {
 			}
 		}
 	}
-	
+
 	FKN_bettenberger_taffelrunde = {
 		icon = weimar_classicism
 		required_missions = { FKN_reformation }
@@ -1813,7 +1819,7 @@ FKN_Missions_5 = {
 			}
 		}
 	}
-	
+
 	FKN_kleinstaaterei = {
 		icon = control_swabia
 		required_missions = { }
@@ -1836,7 +1842,7 @@ FKN_Missions_5 = {
 			add_mil_power = 25
 		}
 	}
-	
+
 	FKN_ritterschaften = {
 		icon = feast_of_pheasants
 		required_missions = { FKN_kleinstaaterei }
@@ -1870,7 +1876,7 @@ FKN_Missions_5 = {
 			}
 		}
 	}
-	
+
 	FKN_ensure_loyalty = {
 		icon = imperial_capitals
 		required_missions = { FKN_grace }

@@ -7,7 +7,7 @@ MOS_1 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	muscovy_influence_patriarchate = {
 		icon = mission_autocephalous_archbishopric
 		required_missions = { }
@@ -43,7 +43,7 @@ MOS_1 = {
 			295 = { add_base_tax = 1 }
 		}
 	}
-	
+
 	muscovy_town_church = {
 		icon = mission_sovereign_principality
 		required_missions = { muscovy_influence_patriarchate }
@@ -78,7 +78,7 @@ MOS_1 = {
 			}
 		}
 	}
-	
+
 	muscovy_proclamation_faith = {
 		icon = mission_land_of_churches
 		required_missions = {
@@ -158,7 +158,7 @@ MOS_1 = {
 			}
 			303 = { change_religion = ROOT }
 			1082 = { change_religion = ROOT }
-			
+
 			310 = {
 				add_base_tax = 1
 				add_base_production = 1
@@ -174,11 +174,11 @@ MOS_1 = {
 				add_base_production = 1
 				add_base_manpower = 1
 			}
-			
+
 			add_patriarch_authority = 0.05
 		}
 	}
-	
+
 	muscovy_cathedral_basil = {
 		icon = mission_land_of_churches
 		required_missions = { muscovy_proclamation_faith }
@@ -246,7 +246,7 @@ MOS_2 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	muscovy_republic_pskov = {
 		icon = mission_seize_north_sea_trade
 		required_missions = { muscovy_stability_regained }
@@ -283,7 +283,7 @@ MOS_2 = {
 			}
 		}
 	}
-	
+
 	muscovy_demands_loyalty = {
 		icon = mission_dethrone_the_rurikovichs
 		required_missions = { muscovy_fall_novgorod }
@@ -309,14 +309,14 @@ MOS_2 = {
 			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 			add_prestige = 10
 			add_dip_power = 50
-			
+
 			4116 = { add_local_autonomy = -25 }
 			4249 = { add_local_autonomy = -25 }
 			294 = { add_local_autonomy = -25 }
 			4248 = { add_local_autonomy = -25 }
 		}
 	}
-	
+
 	muscovy_conquer_raiders = {
 		icon = mission_recruit_the_cossacks
 		required_missions = { muscovy_dynasty_rule }
@@ -357,7 +357,7 @@ MOS_2 = {
 			}
 		}
 	}
-	
+
 	muscovy_wealth_zlatoust = {
 		icon = mission_war_chest
 		required_missions = { muscovy_conquer_raiders }
@@ -405,7 +405,7 @@ MOS_3 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	muscovy_stability_regained = {
 		icon = mission_defeat_muscovy
 		required_missions = { }
@@ -428,7 +428,7 @@ MOS_3 = {
 		}
 		effect = {
 			add_yearly_manpower = 2
-			
+
 			#tr_invade_novgorod_mission from TR_Russian_missions.txt
 			novgorod_area = {
 				limit = {
@@ -510,7 +510,7 @@ MOS_3 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			
+
 			custom_tooltip = muscovy_stability_regained_tta
 			hidden_effect = {
 				every_subject_country = { add_liberty_desire = -10 }
@@ -563,7 +563,7 @@ MOS_3 = {
 			}
 		}
 	}
-	
+
 	muscovy_retrieve_codex = {
 		icon = mission_weather_the_troubles
 		required_missions = { muscovy_fall_novgorod }
@@ -637,7 +637,7 @@ MOS_3 = {
 			}
 		}
 	}
-	
+
 	muscovy_dynasty_rule = {
 		icon = mission_the_third_rome
 		required_missions = {
@@ -657,10 +657,10 @@ MOS_3 = {
 		trigger = {
 			legitimacy_equivalent = 90
 			army_size = 50
-			
+
 			custom_trigger_tooltip = {
 				tooltip = muscovy_dynasty_rule_tta
-				
+
 				NOT = {
 					any_known_country = {
 						NOT = { tag = ROOT }
@@ -728,7 +728,7 @@ MOS_3 = {
 			}
 		}
 	}
-	
+
 	muscovy_city_artillery = {
 		icon = mission_cannons_firing
 		required_missions = { muscovy_dynasty_rule }
@@ -777,7 +777,7 @@ MOS_4 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	muscovy_incorporate_rurikovich = {
 		icon = mission_conquer_tver
 		required_missions = { muscovy_fall_novgorod }
@@ -790,7 +790,7 @@ MOS_4 = {
 				province_id = 4261
 				province_id = 312
 			}
-			NOT = { owned_by = ROOT } 
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			owns = 308
@@ -818,14 +818,14 @@ MOS_4 = {
 			}
 			remove_country_modifier = annexers_legacy
 			add_dip_power = 100
-			
+
 			change_estate_land_share = {
 				estate = all
 				share = -5
 			}
 		}
 	}
-	
+
 	muscovy_not_great = {
 		icon = mission_break_the_tatar_yoke
 		required_missions = { muscovy_dynasty_rule }
@@ -933,7 +933,7 @@ MOS_4 = {
 			}
 		}
 	}
-	
+
 	muscovy_city_steppes = {
 		icon = mission_collect_yasak
 		required_missions = { muscovy_not_great }
@@ -975,7 +975,7 @@ MOS_5 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	muscovy_the_boyars = {
 		icon = mission_unite_the_princes
 		required_missions = { muscovy_stability_regained }
@@ -1002,7 +1002,7 @@ MOS_5 = {
 			}
 		}
 	}
-	
+
 	muscovy_sudebnik_codex = {
 		icon = mission_establish_the_prikazy
 		required_missions = { muscovy_the_boyars }
@@ -1032,7 +1032,7 @@ MOS_5 = {
 			}
 		}
 	}
-	
+
 	muscovy_kremlin_walls = {
 		icon = mission_conquer_moscow
 		required_missions = { muscovy_sudebnik_codex }

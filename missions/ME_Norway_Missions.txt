@@ -10,7 +10,7 @@ NOR_mission_group_1 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	militarize_norway = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { }
@@ -23,7 +23,7 @@ NOR_mission_group_1 = {
 			add_army_tradition = 15
 		}
 	}
-	
+
 	expand_norwegian_military = {
 		icon = mission_assemble_an_army
 		required_missions = { militarize_norway }
@@ -44,7 +44,7 @@ NOR_mission_group_1 = {
 			add_mil_power = 50
 		}
 	}
-	
+
 	build_norges_arme = {
 		icon = mission_assemble_an_army
 		required_missions = { expand_norwegian_military }
@@ -60,7 +60,7 @@ NOR_mission_group_1 = {
 			add_mil_power = 50
 		}
 	}
-	
+
 	reinforce_akershus_festning = {
 		icon = mission_conquer_50_development
 		required_missions = { }
@@ -88,7 +88,7 @@ NOR_mission_group_1 = {
 			add_mil_power = 50
 		}
 	}
-	
+
 	development_of_lensing = {
 		icon = mission_have_manufactories
 		required_missions = { }
@@ -151,7 +151,7 @@ NOR_mission_group_2 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	declare_norwegian_independence = {
 		icon = mission_cannons_firing
 		required_missions = { }
@@ -192,7 +192,7 @@ NOR_mission_group_2 = {
 			}
 		}
 	}
-	
+
 	conquer_southwestern_sweden = {
 		icon = mission_cossack_cavalry
 		required_missions = { declare_norwegian_independence }
@@ -237,7 +237,7 @@ NOR_mission_group_2 = {
 			}
 		}
 	}
-	
+
 	conquer_skaane_norway = {
 		icon = mission_invade_island
 		required_missions = { conquer_southwestern_sweden }
@@ -279,7 +279,7 @@ NOR_mission_group_2 = {
 			}
 		}
 	}
-	
+
 	conquer_denmark_norway = {
 		icon = mission_invade_island
 		required_missions = { conquer_skaane_norway }
@@ -395,7 +395,7 @@ NOR_mission_group_3 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	conquer_northeastern_sweden = {
 		icon = mission_galleys_in_port
 		required_missions = { declare_norwegian_independence }
@@ -457,7 +457,7 @@ NOR_mission_group_3 = {
 			}
 		}
 	}
-	
+
 	conquer_finland_norway = {
 		icon = mission_conquer_5_states
 		required_missions = { conquer_northeastern_sweden }
@@ -528,7 +528,7 @@ NOR_mission_group_3 = {
 			}
 		}
 	}
-	
+
 	norway_control_baltic_trade = {
 		icon = mission_galleys_in_port
 		required_missions = {
@@ -599,7 +599,7 @@ NOR_mission_group_3 = {
 			}
 		}
 	}
-	
+
 	norwegian_north_sea_empire = {
 		icon = mission_empire
 		required_missions = {
@@ -650,7 +650,7 @@ NOR_mission_group_4 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	gain_norwegian_independence = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { declare_norwegian_independence }
@@ -660,7 +660,6 @@ NOR_mission_group_4 = {
 				area = eastern_norway
 				area = western_norway
 				area = subarctic_islands_area
-				area = iceland_area
 				province_id = 16
 				province_id = 315
 			}
@@ -683,10 +682,6 @@ NOR_mission_group_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			subarctic_islands_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			iceland_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -734,7 +729,7 @@ NOR_mission_group_4 = {
 			}
 		}
 	}
-	
+
 	restore_norwegian_rule_highlands = {
 		icon = mission_invade_island
 		required_missions = { gain_norwegian_independence }
@@ -799,7 +794,7 @@ NOR_mission_group_4 = {
 			}
 		}
 	}
-	
+
 	restore_norwegian_rule_lowlands = {
 		icon = mission_have_manufactories
 		required_missions = { restore_norwegian_rule_highlands }
@@ -869,7 +864,7 @@ NOR_mission_group_4 = {
 			}
 		}
 	}
-	
+
 	restore_norwegian_jorvik = {
 		icon = mission_cannons_firing
 		required_missions = { restore_norwegian_rule_lowlands }
@@ -984,7 +979,7 @@ NOR_mission_group_4 = {
 			add_legitimacy_equivalent = { amount = 25 republican_tradition = 25 }
 		}
 	}
-	
+
 	norway_control_english_channel = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { restore_norwegian_jorvik }
@@ -1046,7 +1041,7 @@ NOR_mission_group_5 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	reclaim_greenland = {
 		icon = mission_invade_island
 		required_missions = { }
@@ -1072,7 +1067,7 @@ NOR_mission_group_5 = {
 			}
 		}
 	}
-	
+
 	reclaim_vinland = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { reclaim_greenland }
@@ -1104,7 +1099,7 @@ NOR_mission_group_5 = {
 			add_dip_power = 50
 		}
 	}
-	
+
 	norwegian_colony_carribean = {
 		icon = mission_colonial
 		required_missions = { reclaim_vinland }
@@ -1143,7 +1138,7 @@ NOR_mission_group_5 = {
 			}
 		}
 	}
-	
+
 	restore_norwegian_rule_ulster = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { restore_norwegian_rule_highlands }
@@ -1182,7 +1177,7 @@ NOR_mission_group_5 = {
 			}
 		}
 	}
-	
+
 	norway_introduce_constitutional_monarchy = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { }
@@ -1204,7 +1199,7 @@ NOR_mission_group_5 = {
 			custom_tooltip = NOR_GAINS_CONSTITUTIONAL_MONARCHY_MODIFIER
 		}
 	}
-	
+
 	restore_norwegian_rule_normandy = {
 		icon = mission_galleys_in_port
 		required_missions = { restore_norwegian_jorvik }
@@ -1237,7 +1232,7 @@ NOR_mission_group_5 = {
 			}
 		}
 	}
-	
+
 	norwegian_invasion_brittany = {
 		icon = mission_assemble_an_army
 		required_missions = { restore_norwegian_rule_normandy }

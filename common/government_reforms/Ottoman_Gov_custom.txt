@@ -18,7 +18,7 @@ ME_ottoman_government = {
 		unjustified_demands = -0.1
 		legitimacy = 0.5
 		max_absolutism = 5
-		governing_capacity = 300 # Was 150 in ME
+		governing_capacity = 150
 	}
 
 	custom_attributes = {

@@ -412,50 +412,39 @@ MAJ_missions_2 = {
 						}
 					"
 				} #inefficient use of space but eh
-				east_java_area = {
-					limit = {
-						has_production_building_trigger = yes
-						development = 10
-						has_terrain = grasslands
+					east_java_area = {
+						limit = {
+							has_production_building_trigger = yes
+							development = 10
+							has_terrain = grasslands
+						}
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
 					}
-					add_province_modifier = {
-						name = MAJ_rice_fields
-						duration = 9125
+					central_java_area = {
+						limit = {
+							has_production_building_trigger = yes
+							development = 10
+							has_terrain = grasslands
+						}
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
 					}
-				}
-				central_java_area = {
-					limit = {
-						has_production_building_trigger = yes
-						development = 10
-						has_terrain = grasslands
+					west_java_area = {
+						limit = {
+							has_production_building_trigger = yes
+							development = 10
+							has_terrain = grasslands
+						}
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
 					}
-					add_province_modifier = {
-						name = MAJ_rice_fields
-						duration = 9125
-					}
-				}
-				west_java_area = {
-					limit = {
-						has_production_building_trigger = yes
-						development = 10
-						has_terrain = grasslands
-					}
-					add_province_modifier = {
-						name = MAJ_rice_fields
-						duration = 9125
-					}
-				}
-				kalimantan_area = {
-					limit = {
-						has_production_building_trigger = yes
-						development = 10
-						has_terrain = grasslands
-					}
-					add_province_modifier = {
-						name = MAJ_rice_fields
-						duration = 9125
-					}
-				}				
 			}
 		}
 	}
@@ -1034,10 +1023,6 @@ MAJ_missions_5 = {
 						all_province = {
 							OR = {
 								region = indonesia_region
-								region = riau_islands_region
-								region = nusa_tenggara_region
-								region = borneo_region
-								region = celebes_region
 								region = malaya_region
 							}
 							owner = {

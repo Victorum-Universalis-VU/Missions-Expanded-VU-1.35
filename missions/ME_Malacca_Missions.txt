@@ -58,12 +58,6 @@ MLC_missions_1 = {
 								navy_size = ROOT
 							}
 						}
-						kalimantan_area = {
-							is_capital = yes
-							owner = {
-								navy_size = ROOT
-							}
-						}
 					}
 				}
 			}
@@ -498,6 +492,13 @@ MLC_missions_3 = {
 				add_permanent_claim = ROOT
 			}
 			malaya_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tenasserim_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -953,7 +954,7 @@ MLC_missions_5 = {
 				}
 			}
 			else = {
-				monthly_mil = 11 
+				monthly_mil = 11
 			}
 		}
 		effect = {
@@ -1132,6 +1133,7 @@ MLC_missions_5 = {
 			OR = {
 				area = malacca_area
 				area = malaya_area
+				area = tenasserim_area
 				area = kedah_area
 				area = indonesian_islands_area
 				area = riau_islands_area
@@ -1143,6 +1145,10 @@ MLC_missions_5 = {
 				owned_by = ROOT
 			}
 			malaya_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tenasserim_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -1162,6 +1168,7 @@ MLC_missions_5 = {
 				OR = {
 					area = malacca_area
 					area = malaya_area
+					area = tenasserim_area
 					area = kedah_area
 					area = indonesian_islands_area
 					area = riau_islands_area
@@ -1192,6 +1199,12 @@ MLC_missions_5 = {
 					}
 				}
 				riau_islands_area = {
+					add_province_modifier = {
+						name = MLC_golden_peninsula_modifier
+						duration = -1
+					}
+				}
+				tenasserim_area = {
 					add_province_modifier = {
 						name = MLC_golden_peninsula_modifier
 						duration = -1

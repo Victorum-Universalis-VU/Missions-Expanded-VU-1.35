@@ -127,7 +127,7 @@ sicily_mission_1 = {
 					add_devastation = -25
 				}
 				else = {
-					add_devastation = -10					
+					add_devastation = -10
 				}
 				add_province_modifier = {
 					name = nap_legacy_ruggero
@@ -353,7 +353,7 @@ sicily_mission_2 = {
 						}
 					}
 					else_if = {
-						limit = { 
+						limit = {
 							has_cardinal = yes
 						}
 						add_building_construction = {
@@ -470,7 +470,7 @@ sicily_mission_2 = {
 
 	sic_mountains_piedmont = {
 		icon = union_with_naples
-		position = 5		
+		position = 5
 		required_missions = {
 			sic_sardinian_shores
 		}
@@ -491,7 +491,7 @@ sicily_mission_2 = {
 		}
 	}
 
-	sic_stretto_sicilia = {	
+	sic_stretto_sicilia = {
 		icon = invest_in_the_rich_trades
 		position = 7
 		required_missions = {
@@ -516,7 +516,7 @@ sicily_mission_2 = {
 		effect = {
 			add_country_modifier = {
 				name = sic_difendere_lu_mari
-				duration = -1 
+				duration = -1
 			}
 			add_navy_tradition = 15
 		}
@@ -553,7 +553,7 @@ sicily_mission_3 = {
 		required_missions = { }
 		trigger = {
 			if = {
-				limit = { 
+				limit = {
 					is_subject = yes
 					NOT = { is_subject_of = NAP }
 				}
@@ -633,7 +633,7 @@ sicily_mission_3 = {
 		trigger = {
 			125 = {
 				owned_by = ROOT
-				OR = {	
+				OR = {
 					base_production = 10
 					num_of_times_improved = 4
 				}
@@ -714,7 +714,7 @@ sicily_mission_3 = {
 				name = sic_norman_navy_modifier
 				duration = -1
 			}
-			add_yearly_sailors = 3			
+			add_yearly_sailors = 3
 			if = {
 				limit = {
 					has_dlc = "Golden Century"
@@ -727,7 +727,7 @@ sicily_mission_3 = {
 					limit = {
 						has_port = yes
 					}
-					create_flagship = {	
+					create_flagship = {
 						name = "Ruggiero"
 						type = galley
 					}
@@ -736,7 +736,7 @@ sicily_mission_3 = {
 		}
 	}
 
-	sic_provinces_africa = {		
+	sic_provinces_africa = {
 		icon = mission_occupy_alexandria
 		position = 6
 		required_missions = {
@@ -1000,7 +1000,7 @@ sicily_mission_4 = {
 	}
 	has_country_shield = yes
 
-	sic_citra_pharum = {		
+	sic_citra_pharum = {
 		icon = me_mission_aragon_lighthouse_of_alexandria
 		position = 2
 		required_missions = { sic_vespri_siciliani }
@@ -1207,13 +1207,13 @@ sicily_mission_5 = {
 	}
 	has_country_shield = yes
 
-	sic_blooming_art = {		
+	sic_blooming_art = {
 		icon = sponsor_the_arts
 		position = 1
 		required_missions = { }
 		trigger = {
 			is_institution_enabled = renaissance
-			OR = {				
+			OR = {
 				has_adm_advisor_2 = yes
 				ADM = 4
 			}
@@ -1232,7 +1232,7 @@ sicily_mission_5 = {
 	sic_parramentu_sicilianu = {
 		icon = immaculate_government
 		position = 2
-		required_missions = { 
+		required_missions = {
 			sic_vespri_siciliani
 			sic_blooming_art
 		}

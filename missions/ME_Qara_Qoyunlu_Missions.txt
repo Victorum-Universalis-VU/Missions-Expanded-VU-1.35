@@ -2,7 +2,7 @@ QAR_missions_1 = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential = {	
+	potential = {
 		OR = {
 			tag = QAR
 			AND = {
@@ -13,7 +13,7 @@ QAR_missions_1 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	QAR_blue_mosque = {
 		icon = mission_mosque
 		required_missions = { QAR_patron_of_persian_arts }
@@ -30,7 +30,7 @@ QAR_missions_1 = {
 					owned_by = ROOT
 					has_tax_building_trigger = yes
 					has_great_project = {
-						type = fu_blue_mosque 
+						type = fu_blue_mosque
 						tier = 1
 					}
 				}
@@ -64,11 +64,11 @@ QAR_missions_1 = {
 					}
 				}
 			}
-			
+
 			country_event = { id = ME_Qara_Qoyunlu_Events.22 }
-			
+
 			custom_tooltip = " "
-			
+
 			define_advisor = {
 				type = muscovy_architect
 				skill = 3
@@ -78,7 +78,7 @@ QAR_missions_1 = {
 			}
 		}
 	}
-	
+
 	QAR_maragheh_observatory = {
 		icon = innovative_missions_icon
 		required_missions = { QAR_blue_mosque }
@@ -102,13 +102,13 @@ QAR_missions_1 = {
 			define_advisor = {
 				type = GRA_astronomer
 				skill = 3
-				culture = ROOT 
+				culture = ROOT
 				religion = ROOT
 				cost_multiplier = 0.25
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			if = {
 				limit = {
 					has_dlc = "Rule Britannia"
@@ -120,14 +120,14 @@ QAR_missions_1 = {
 					}
 				}
 			}
-			
+
 			custom_tooltip = no_more_comet_sighted_event_tt
 			hidden_effect = {
 				set_country_flag = no_more_comet_sighted_event
 			}
 		}
 	}
-	
+
 	QAR_bitlis = {
 		icon = mission_friends_or_enemies
 		required_missions = { QAR_centralize }
@@ -149,14 +149,14 @@ QAR_missions_1 = {
 		}
 		effect = {
 			add_yearly_manpower = 0.5
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = QAR_diplomats
 				duration = 7300
 			}
-			
+
 			4296 = {
 				add_base_manpower = 2
 			}
@@ -178,7 +178,7 @@ QAR_missions_1 = {
 				army_size = 19
 				army_size_percentage = 0.85
 			}
-			
+
 			if = {
 				limit = {
 					has_dlc = "Common Sense"
@@ -203,11 +203,11 @@ QAR_missions_1 = {
 				type = cb_qq_ambition
 				months = 600
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = QAR_make_jahan_shah_into_god_general
-			tooltip = { 
+			tooltip = {
 				country_event = { id = ME_Qara_Qoyunlu_Events.21 }
 			}
 			hidden_effect = {
@@ -220,7 +220,7 @@ QAR_missions_1 = {
 				}
 			}
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { area = north_kurdistan_area }
 			ME_give_claims = { area = al_jazira_area }
 			ME_give_claims = { id = 2308 }
@@ -228,36 +228,36 @@ QAR_missions_1 = {
 			ME_give_claims = { id = 331 }
 		}
 	}
-	
+
 	QAR_aq_qoyunlu = {
 		icon = mission_afghan_frontier
 		required_missions = { QAR_ambitions_of_jahan_shah }
 		position = 8
 		provinces_to_highlight = {
 			OR = {
-				province_id = 407 
-				province_id = 418 
-				province_id = 4292 
+				province_id = 407
+				province_id = 418
+				province_id = 4292
 				province_id = 4295
-				province_id = 2306 
-				province_id = 2308 
-				province_id = 2305 
-				province_id = 331 
+				province_id = 2306
+				province_id = 2308
+				province_id = 2305
+				province_id = 331
 				is_core = AKK
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
-				AKK = { is_subject_of = ROOT } 
+				AKK = { is_subject_of = ROOT }
 				NOT = { exists = AKK }
-			}	
+			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					province_id = 407 #rakka
-					province_id = 418 #diyarbakir 
+					province_id = 418 #diyarbakir
 					province_id = 4292 #Mardin
-					province_id = 4295 #Hisn Kayfa 
+					province_id = 4295 #Hisn Kayfa
 					province_id = 2306 #Mush
 					province_id = 2308 #urfa
 					province_id = 2305 #erzican
@@ -269,13 +269,13 @@ QAR_missions_1 = {
 		}
 		effect = {
 			country_event = { id = ME_Qara_Qoyunlu_Events.23 }
-			
+
 			custom_tooltip = " "
-			
+
 			ME_add_power_projection = { amount = 25 }
-			
+
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { area = aleppo_area }
 			ME_give_claims = { area = syria_area }
 			ME_give_claims = { area = syrian_desert_area }
@@ -294,7 +294,7 @@ QAR_missions_1 = {
 			}
 		}
 	}
-	
+
 	QAR_anatolia = {
 		icon = anatolian_frontier
 		required_missions = { QAR_aq_qoyunlu }
@@ -311,29 +311,29 @@ QAR_missions_1 = {
 		}
 		effect = {
 			ME_give_claims = { region = anatolia_region }
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = QAR_conquest_of_anatolia
 				duration = -1
 			}
-			
+
 			if = {
 				limit = {
 					religion = shiite
 				} #I don't think it needs to be declared explicitly
 				custom_tooltip = QAR_shia_turk_events #for sivas and other shia starting provs + maybe a few extras; they get converted to shia + piety + dev
 				#TODO: Implement this
-				
+
 				hidden_effect = {
 					2303 = { set_province_flag = QAR_shia_event_viable }
 					4310 = { set_province_flag = QAR_shia_event_viable }
 					329 = { set_province_flag = QAR_shia_event_viable }
-					
+
 					random_province = {
 						limit = {
-							OR = { 
+							OR = {
 								area = dulkadir_area
 								area = rum_area
 								province_id = 2301
@@ -345,7 +345,7 @@ QAR_missions_1 = {
 					}
 					random_province = {
 						limit = {
-							OR = { 
+							OR = {
 								area = dulkadir_area
 								area = rum_area
 								province_id = 2301
@@ -390,7 +390,7 @@ QAR_missions_2 = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential = {	
+	potential = {
 		OR = {
 			tag = QAR
 			AND = {
@@ -401,7 +401,7 @@ QAR_missions_2 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	QAR_patron_of_persian_arts = {
 		icon = mission_vedic_education
 		required_missions = { }
@@ -424,16 +424,16 @@ QAR_missions_2 = {
 				name = QAR_persianate_sultanate
 				duration = 10950
 			}
-			
+
 			capital_scope = {
 				add_institution_embracement = {
-					which = renaissance	
+					which = renaissance
 					value = 30
 				}
 			}
 		}
 	}
-	
+
 	QAR_mausoleum = {
 		icon = mission_found_havana
 		required_missions = { QAR_patron_of_persian_arts QAR_the_house_of_qq QAR_blue_mosque }
@@ -447,7 +447,7 @@ QAR_missions_2 = {
 				owned_by = ROOT
 				num_of_buildings_in_province = 1
 			}
-			
+
 			stability = 2
 			diplomatic_reputation = 2
 		}
@@ -458,7 +458,7 @@ QAR_missions_2 = {
 					duration = -1
 				}
 			}
-			
+
 			#edit the low legitimacy event, making the pretenders less likely to spawn?
 			custom_tooltip = QAR_our_tribal_population_will_have_more_respect
 			set_country_flag = QAR_respect_towards_dynasty
@@ -522,7 +522,7 @@ QAR_missions_2 = {
 					2202 = { owned_by = ROOT }
 				}
 			}
-			
+
 			#Nobility ?
 		}
 		effect = {
@@ -532,9 +532,9 @@ QAR_missions_2 = {
 			MLK = {
 				disable_annex_penalty = yes
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			define_advisor = {
 				type = statesman
 				skill = 3
@@ -544,7 +544,7 @@ QAR_missions_2 = {
 			}
 		}
 	}
-	
+
 	QAR_the_matter_of_religion = {
 		icon = me_mission_great_mosque
 		required_missions = { QAR_centralize }
@@ -561,11 +561,11 @@ QAR_missions_2 = {
 		}
 		effect = {
 			country_event = { id = ME_Qara_Qoyunlu_Events.19 }
-			
+
 			#prolly some QQ scholar ? gotta do more research on QQ
 			#with a quick search; turns out I found nothing
 			custom_tooltip = " "
-			
+
 			if = {
 				limit = {
 					has_estate = estate_church
@@ -577,7 +577,7 @@ QAR_missions_2 = {
 			}
 		}
 	}
-	
+
 	QAR_shah_rukh = {
 		icon = mission_central_asian_city
 		required_missions = { QAR_ambitions_of_jahan_shah }
@@ -590,7 +590,7 @@ QAR_missions_2 = {
 				tooltip = QAR_shah_rukh_died_rip
 				has_global_flag = death_of_shah_rukh
 			}
-			
+
 			OR = {
 				NOT = { exists = TIM }
 				total_development = TIM
@@ -602,7 +602,7 @@ QAR_missions_2 = {
 		}
 		effect = {
 			country_event = { id = ME_Qara_Qoyunlu_Events.8 }
-			
+
 			ME_give_claims = { area = shirvan_area }
 			ME_give_claims = { area = azerbaijan_area }
 			ME_give_claims = { id = 4340 }
@@ -610,7 +610,7 @@ QAR_missions_2 = {
 			ME_give_claims = { id = 417 }
 		}
 	}
-	
+
 	QAR_ardabil = {
 		icon = mission_persian_soldiers
 		required_missions = { QAR_shah_rukh }
@@ -630,27 +630,27 @@ QAR_missions_2 = {
 		effect = {
 			custom_tooltip = QAR_unlock_safawiyya_merc_company #do this at home with the green tooltip
 			set_country_flag = QAR_safawiyya
-		
+
 			custom_tooltip = " "
 			custom_tooltip = QAR_if_done_via_vassalization
 			tooltip = {
 				ARL = {
 					add_liberty_desire = -25
-					
+
 					custom_tooltip = " "
-					
+
 					disable_annex_penalty = yes
 				}
-				
+
 				custom_tooltip = " "
-					
-				add_positive_or_negative_piety = { amount = 0.25 } 
+
+				add_positive_or_negative_piety = { amount = 0.25 }
 			}
 			custom_tooltip = " "
 			custom_tooltip = QAR_if_done_via_conquest
 			tooltip = {
 				ME_add_power_projection = { amount = 10 }
-				
+
 				if = {
 					limit = {
 						has_dlc = "Cradle of Civilization"
@@ -662,12 +662,12 @@ QAR_missions_2 = {
 						value = 20
 					}
 				}
-				
+
 				custom_tooltip = " "
-				
+
 				424 = { add_local_autonomy = -50 }
 			}
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -677,19 +677,19 @@ QAR_missions_2 = {
 					}
 					ARL = {
 						add_liberty_desire = -25
-						
+
 						custom_tooltip = " "
-						
+
 						disable_annex_penalty = yes
 					}
-					
+
 					custom_tooltip = " "
-						
-					add_positive_or_negative_piety = { amount = 0.25 } 
+
+					add_positive_or_negative_piety = { amount = 0.25 }
 				}
 				else = {
 					ME_add_power_projection = { amount = 10 }
-				
+
 					if = {
 						limit = {
 							has_dlc = "Cradle of Civilization"
@@ -701,17 +701,17 @@ QAR_missions_2 = {
 							value = 20
 						}
 					}
-					
+
 					custom_tooltip = " "
-					
+
 					424 = { add_local_autonomy = -50 }
 				}
 			}
-			
+
 			QAR_complete_AKK_ardabil_missions = yes
 		}
 	}
-	
+
 	QAR_syria = {
 		icon = mission_pacify_the_berbers
 		required_missions = { QAR_aq_qoyunlu }
@@ -739,7 +739,7 @@ QAR_missions_2 = {
 				name = QAR_advance_against_mamluks
 				duration = 10950
 			}
-			
+
 			custom_tooltip = QAR_directly_owned_provinces_in_syria_get
 			hidden_effect = {
 				syria_area = {
@@ -760,13 +760,13 @@ QAR_missions_2 = {
 					}
 					add_local_autonomy = -25
 				}
-			}	
-		
+			}
+
 			custom_tooltip = QAR_if_we_have_syria_subject
 			hidden_effect = {
 				if = {
 					limit = {
-						SYR = { 
+						SYR = {
 							is_subject_of = ROOT
 						}
 					}
@@ -775,7 +775,7 @@ QAR_missions_2 = {
 					}
 				}
 			}
-		
+
 			QIR_complete_syria_missions = yes
 		}
 	}
@@ -785,7 +785,7 @@ QAR_missions_3 = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential = {	
+	potential = {
 		OR = {
 			tag = QAR
 			AND = {
@@ -796,7 +796,7 @@ QAR_missions_3 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	QAR_the_house_of_qq = {
 		icon = mission_dansk_ostindia
 		required_missions = { }
@@ -829,23 +829,23 @@ QAR_missions_3 = {
 					}
 				}
 			}
-			
+
 			legitimacy_equivalent = 95
-			
+
 			NOT = { num_of_rebel_armies = 1 }
 			NOT = { num_of_rebel_controlled_provinces = 1 }
-		}	
+		}
 		effect = {
 			add_country_modifier = {
 				name = QAR_tribal_allegiance
 				duration = 10950
 			}
-			
+
 			custom_tooltip = QAR_disable_tribal_feud_event
 			set_country_flag = no_more_tribal_feud_event
 		}
 	}
-	
+
 	QAR_ties_with_trebizond = {
 		icon = mission_into_persia_1
 		required_missions = { QAR_the_house_of_qq }
@@ -882,12 +882,12 @@ QAR_missions_3 = {
 					}
 					custom_tooltip = " "
 				}
-				
+
 				add_adm_power = 50
-				
+
 				custom_tooltip = " "
-				
-				330 = { 
+
+				330 = {
 					add_local_autonomy = -25
 					add_nationalism = -10
 				}
@@ -896,10 +896,10 @@ QAR_missions_3 = {
 			tooltip = {
 				custom_tooltip = QAR_if_trebizond_grows_no_larger
 				custom_tooltip = " "
-				
+
 				add_dip_power = 75
 			}
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -918,12 +918,12 @@ QAR_missions_3 = {
 						}
 						custom_tooltip = " "
 					}
-					
+
 					add_adm_power = 50
-					
+
 					custom_tooltip = " "
-					
-					330 = { 
+
+					330 = {
 						add_local_autonomy = -25
 						add_nationalism = -10
 					}
@@ -932,7 +932,7 @@ QAR_missions_3 = {
 					limit = {
 						marriage_with = TRE
 					}
-					
+
 					custom_tooltip = QAR_if_trebizond_grows_no_larger
 					custom_tooltip = " "
 					set_country_flag = QAR_may_vassalize_trebizond
@@ -950,12 +950,12 @@ QAR_missions_3 = {
 						}
 						custom_tooltip = " "
 					}
-					
+
 					add_adm_power = 50
-					
+
 					custom_tooltip = " "
-					
-					330 = { 
+
+					330 = {
 						add_local_autonomy = -25
 						add_nationalism = -10
 					}
@@ -963,7 +963,7 @@ QAR_missions_3 = {
 			}
 		}
 	}
-	
+
 	QAR_kharabakh = {
 		icon = mission_city_of_the_world's_desire
 		required_missions = { QAR_armenia QAR_centralize }
@@ -984,7 +984,7 @@ QAR_missions_3 = {
 				name = QAR_administrators_of_armenia
 				duration = 7300
 			}
-			
+
 			custom_tooltip = QAR_effect_of_this_will_depend
 			if = {
 				limit = {
@@ -992,7 +992,7 @@ QAR_missions_3 = {
 				}
 				2202 = {
 					add_base_manpower = -1
-					add_base_tax = -1 
+					add_base_tax = -1
 				}
 				add_treasury = 50
 			}
@@ -1021,7 +1021,7 @@ QAR_missions_3 = {
 			}
 		}
 	}
-	
+
 	QAR_georgia = {
 		icon = mission_crusade_for_varna
 		required_missions = { QAR_vakhtang }
@@ -1045,16 +1045,16 @@ QAR_missions_3 = {
 		}
 		effect = {
 			add_accepted_culture_or_dip_power = { culture = georgian }
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = QAR_conquest_of_georgia
 				duration = 3650
 			}
 		}
 	}
-	
+
 	QAR_azerbaijan = {
 		icon = mission_turning_the_tables
 		required_missions = { QAR_shah_rukh }
@@ -1076,7 +1076,7 @@ QAR_missions_3 = {
 			}
 
 			custom_tooltip = " "
-			
+
 			define_general = {
 				shock = 3
 				fire = 4
@@ -1088,7 +1088,7 @@ QAR_missions_3 = {
 			set_country_flag = QAR_pir_budaq_10_battles
 
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { area = iraq_e_ajam_area }
 			ME_give_claims = { area = luristan_area }
 			ME_give_claims = { area = tabarestan_area }
@@ -1101,7 +1101,7 @@ QAR_missions_4 = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential = {	
+	potential = {
 		OR = {
 			tag = QAR
 			AND = {
@@ -1112,7 +1112,7 @@ QAR_missions_4 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	QAR_horselords = {
 		icon = mission_conquer_malwa_mer
 		required_missions = { QAR_emirs }
@@ -1135,18 +1135,18 @@ QAR_missions_4 = {
 		}
 		effect = {
 			custom_tooltip = QAR_cavalry_fraction_trig_mod
-			
+
 			custom_tooltip = " "
-			
+
 			416 = { add_province_triggered_modifier = QAR_grazing_grounds }
 			set_country_flag = QAR_grazing_grounds_flag
-			
+
 			custom_tooltip = " "
-			
+
 			create_general_with_pips = { tradition = 60 add_shock = 1 add_manuever = 2 }
 		}
 	}
-	
+
 	QAR_heirs_of_the_oghuz = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { QAR_horselords QAR_the_house_of_qq }
@@ -1173,7 +1173,7 @@ QAR_missions_4 = {
 					value = 50
 				}
 			}
-		
+
 			if = {
 				limit = {
 					has_dlc = "Rights of Man"
@@ -1196,18 +1196,18 @@ QAR_missions_4 = {
 					"
 				}
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = QAR_heirs_of_the_oghuz_flag
 				duration = -1
 			}
-			
+
 			# custom_tooltip = QAR_if_we_go_with_horde_path_the_above_modifier_will_grant
 		}
 	}
-	
+
 	QAR_armenia = {
 		icon = mission_taula_de_canvi
 		required_missions = { }
@@ -1228,40 +1228,40 @@ QAR_missions_4 = {
 		}
 		effect = {
 			country_event = { id = ME_Qara_Qoyunlu_Events.13 }
-			
+
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { area = imereti_area }
 			ME_give_claims = { area = samtskhe_area }
 		}
 	}
-	
+
 	QAR_vakhtang = {
 		icon = mission_protect_albania
 		required_missions = { QAR_armenia }
 		position = 5
-		provinces_to_highlight = {  #Not to figure what to replace it with
+		provinces_to_highlight = {
 			area = samtskhe_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			samtskhe_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			ME_add_power_projection = { amount = 10 }
-			
+
 			custom_tooltip = " "
-			
+
 			custom_tooltip = QAR_if_jahan_shah
 			tooltip = {
 				add_stat_or_monarch_power = { stat = mil amount = 1 }
 			}
-			
+
 			custom_tooltip = " "
-			
+
 			if = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
@@ -1275,8 +1275,8 @@ QAR_missions_4 = {
 			else = {
 				add_legitimacy = 10
 			}
-			
-			
+
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1287,7 +1287,7 @@ QAR_missions_4 = {
 			}
 		}
 	}
-	
+
 	QAR_wrestle_ardalan = {
 		icon = mission_conquer_mewar
 		required_missions = { QAR_mesopotamia }
@@ -1317,10 +1317,10 @@ QAR_missions_4 = {
 			2211 = {
 				add_core = ROOT
 			}
-			
+
 			custom_tooltip = " "
 			custom_tooltip = QAR_if_we_complete_by_diplomacy
-			
+
 			tooltip = {
 				# let me be clear: this is really on the line. I don't think this is particularly good design
 				custom_tooltip = QAR_if_ajam_cannot_enact_the_curb_qara_qoyunlu
@@ -1333,19 +1333,19 @@ QAR_missions_4 = {
 				hidden_effect = {
 					save_global_event_target_as = qara_qoyunlu_we_are_wrestling
 				}
-				
+
 				custom_tooltip = " "
 			}
-			
+
 			custom_tooltip = QAR_if_we_complete_by_conquest
 			tooltip = {
 				add_mil_power = 100
-				
+
 				2211 = {
 					add_local_autonomy = -25
 				}
 			}
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1371,16 +1371,16 @@ QAR_missions_4 = {
 					QOM = {
 						save_global_event_target_as = qara_qoyunlu_wrestled
 					}
-					
+
 					country_event = { id = ME_Qara_Qoyunlu_Events.17 days = 365 }
-					
+
 					1 = {
 						province_event = { id = ME_Qara_Qoyunlu_Events.28 days = 480 } #in case it fails, and we need to clean up
 					}
 				}
 				else = {
 					add_mil_power = 100
-				
+
 					2211 = {
 						add_local_autonomy = -25
 					}
@@ -1388,8 +1388,8 @@ QAR_missions_4 = {
 			}
 		}
 	}
-	
-	
+
+
 	QAR_persia = {
 		icon = mission_into_persia_1
 		required_missions = { QAR_trample_the_scoundrel QAR_wrestle_ardalan QAR_azerbaijan }
@@ -1419,30 +1419,30 @@ QAR_missions_4 = {
 			}
 		}
 		effect = {
-			country_event = { id = ME_Qara_Qoyunlu_Events.29 } 
-			
+			country_event = { id = ME_Qara_Qoyunlu_Events.29 }
+
 			custom_tooltip = " "
-			
+
 			tooltip = {
 				add_power_projection = {
 					type = QAR_perma_persia_pp
-					amount = 10 
+					amount = 10
 				}
-				
+
 				custom_tooltip = MAM_permanent_PP
-				
+
 				custom_tooltip = " "
-				
+
 				set_government_rank = 3
-				
+
 				custom_tooltip = " "
-				
+
 				add_country_modifier = {
 					name = QAR_conquest_of_persia
 					duration = -1
 				}
 			}
-			
+
 			QIR_complete_persian_missions = yes
 		}
 	}
@@ -1452,7 +1452,7 @@ QAR_missions_5 = {
 	slot = 5
 	generic = no
 	ai = yes
-	potential = {	
+	potential = {
 		OR = {
 			tag = QAR
 			AND = {
@@ -1463,7 +1463,7 @@ QAR_missions_5 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	QAR_emirs = {
 		icon = mission_reclaim_morocco
 		required_missions = { }
@@ -1482,7 +1482,7 @@ QAR_missions_5 = {
 					}
 					# NOT = { #ME_pt_feedback_requested = yes }
 					num_of_estate_agendas_completed = {
-						estate = estate_nobles 
+						estate = estate_nobles
 						value = 3
 					}
 					AND = {
@@ -1517,22 +1517,22 @@ QAR_missions_5 = {
 					has_government_mechanic = tribal_federation_mechanic
 				}
 				custom_tooltip = QAR_enable_promote_tribal_chiefs
-				
+
 				custom_tooltip = " "
 			}
 			set_country_flag = QAR_enable_promote_tribal_chiefs_flag
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = QAR_all_power_for_the_chief
 				duration = 9125
 			}
-			
+
 			add_mil_power = 50
 		}
 	}
-	
+
 	QAR_true_turkomans = {
 		icon = mission_lit_harness_steppes
 		required_missions = { QAR_emirs }
@@ -1549,19 +1549,19 @@ QAR_missions_5 = {
 					ME_tribal_federation_trigger = yes
 				}
 				has_country_modifier = train_horsemanship_modifier
-				
+
 				#custom TT?
 			}
-			
+
 			num_of_owned_provinces_with = {
 				trade_goods = livestock
 				has_manpower_building_trigger = yes
 				value = 3
 			}
-			
+
 			OR = {
 				has_global_modifier_value = {
-					which = cavalry_power			
+					which = cavalry_power
 					value = 0.4
 				}
 				num_of_cavalry = 50
@@ -1575,16 +1575,16 @@ QAR_missions_5 = {
 				custom_tooltip = QIR_unlock_decision_to_have_up_to_5_cossacks
 			}
 			set_country_flag = QIR_cossack_units
-			
+
 			custom_tooltip = " "
-			
+
 			add_country_modifier = {
 				name = QIR_true_turkoman
 				duration = -1
 			}
 		}
 	}
-	
+
 	QAR_catholicoi = {
 		icon = mission_autocephalous_archbishopric
 		required_missions = { QAR_armenia }
@@ -1600,15 +1600,15 @@ QAR_missions_5 = {
 		trigger = {
 			OR = {
 				AND = {
-					armenia_area = { 
+					armenia_area = {
 						type = all
 						NOT = { religion = coptic }
 					}
-					north_kurdistan_area = { 
+					north_kurdistan_area = {
 						type = all
 						NOT = { religion = coptic }
 					}
-					erzurum_area = { 
+					erzurum_area = {
 						type = all
 						NOT = { religion = coptic }
 					}
@@ -1622,7 +1622,7 @@ QAR_missions_5 = {
 							value = 12
 						}
 					}
-					#ME_pt_feedback_requested = yes 
+					#ME_pt_feedback_requested = yes
 				}
 			}
 		}
@@ -1636,7 +1636,7 @@ QAR_missions_5 = {
 					}
 					custom_tooltip = QAR_armenian_manpower
 				}
-				
+
 				custom_tooltip = " "
 			}
 			custom_tooltip = QAR_if_accepted_armenian
@@ -1648,9 +1648,9 @@ QAR_missions_5 = {
 					religion = coptic
 					cost_multiplier = 0.15
 				}
-				
+
 				custom_tooltip = " "
-				
+
 				if = {
 					limit = {
 						has_dlc = "The Cossacks"
@@ -1659,7 +1659,7 @@ QAR_missions_5 = {
 				}
 				set_country_flag = QAR_catholicoi_privilege_flag
 			}
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1679,9 +1679,9 @@ QAR_missions_5 = {
 						religion = coptic
 						cost_multiplier = 0.15
 					}
-					
+
 					custom_tooltip = " "
-					
+
 					if = {
 						limit = {
 							has_dlc = "The Cossacks"
@@ -1702,7 +1702,7 @@ QAR_missions_5 = {
 			}
 		}
 	}
-	
+
 	QAR_mesopotamia = {
 		icon = mission_the_varangians
 		required_missions = { }
@@ -1727,10 +1727,10 @@ QAR_missions_5 = {
 		}
 		effect = {
 			country_event = { id = ME_Qara_Qoyunlu_Events.14 }
-			
+
 			ME_give_claims = { area = khuzestan_area }
 			ME_give_claims = { area = basra_area }
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1744,7 +1744,7 @@ QAR_missions_5 = {
 			}
 		}
 	}
-	
+
 	QAR_trample_the_scoundrel = {
 		icon = me_mission_muslim_priest
 		required_missions = { QAR_mesopotamia }
@@ -1767,17 +1767,17 @@ QAR_missions_5 = {
 			}
 			4290 = { country_or_non_sovereign_subject_holds = ROOT }
 			412 = { country_or_non_sovereign_subject_holds = ROOT }
-			4289 = { country_or_non_sovereign_subject_holds = ROOT }	
+			4289 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			country_event = { id = ME_Qara_Qoyunlu_Events.15 }
 			custom_tooltip = " "
-			
+
 			tooltip = {
 				add_yearly_manpower = 1
-				
+
 				custom_tooltip = " "
-		
+
 				add_age_modifier = {
 					name = QAR_fake_toppled
 					duration = -1
@@ -1790,7 +1790,7 @@ QAR_missions_5 = {
 			ME_give_claims = { area = persian_gulf_coast }
 		}
 	}
-	
+
 	QAR_expand_into_arabia = {
 		icon = mission_arabian_fort
 		required_missions = { QAR_trample_the_scoundrel }
@@ -1813,15 +1813,15 @@ QAR_missions_5 = {
 		}
 		effect = {
 			QIR_complete_into_arabia_missions = yes
-			
+
 			ME_add_years_of_trade_income = { years = 4 }
-			
+
 			custom_tooltip = " "
-			
+
 			add_mercantilism = 3
-			
+
 			custom_tooltip = " "
-			
+
 			ME_give_claims = { area = oman_area }
 			ME_give_claims = { area = mascat_area }
 		}

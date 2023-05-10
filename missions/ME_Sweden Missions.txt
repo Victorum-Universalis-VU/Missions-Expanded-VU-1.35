@@ -7,7 +7,7 @@ SWE_missions_1 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	sweden_organizing_our_provinces = {
 		icon = mission_early_game_buildings
 		required_missions = { }
@@ -35,7 +35,7 @@ SWE_missions_1 = {
 			}
 		}
 	}
-	
+
 	sweden_carolean_infantry = {
 		icon = me_mission_conquer
 		required_missions = { sweden_organizing_our_provinces sweden_defeating_the_tercios }
@@ -54,7 +54,7 @@ SWE_missions_1 = {
 			}
 		}
 	}
-	
+
 	sweden_influence_in_livonia = {
 		icon = me_mission_sweden_livonia
 		required_missions = { sweden_cold_port_at_neva }
@@ -108,7 +108,7 @@ SWE_missions_1 = {
 			}
 		}
 	}
-	
+
 	sweden_foothold_in_prussia = {
 		icon = me_mission_prussia_coat
 		required_missions = { sweden_influence_in_livonia }
@@ -138,7 +138,7 @@ SWE_missions_1 = {
 			}
 		}
 	}
-	
+
 	sweden_swedish_pomerania = {
 		icon = me_mission_sweden_pomerania
 		required_missions = { sweden_dealing_with_the_hansa sweden_foothold_in_prussia }
@@ -189,7 +189,7 @@ SWE_missions_2 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	sweden_defeating_the_tercios = {
 		icon = mission_cannons_firing
 		required_missions = { sweden_organizing_our_provinces }
@@ -206,7 +206,7 @@ SWE_missions_2 = {
 			}
 		}
 	}
-	
+
 	sweden_cold_port_at_neva = {
 		icon = me_mission_sweden_neva
 		required_missions = { sweden_ending_the_kalmar_union }
@@ -256,7 +256,7 @@ SWE_missions_2 = {
 			}
 		}
 	}
-	
+
 	sweden_the_straits_of_denmark = {
 		icon = mission_disrupt_portuguese_trade
 		required_missions = { sweden_reclaiming_gotland }
@@ -307,7 +307,7 @@ SWE_missions_2 = {
 			}
 		}
 	}
-	
+
 	sweden_dealing_with_the_hansa = {
 		icon = mission_rb_control_the_hansa
 		required_missions = { sweden_foothold_in_prussia sweden_the_straits_of_denmark }
@@ -356,7 +356,7 @@ SWE_missions_2 = {
 			}
 		}
 	}
-	
+
 	sweden_dominium_maris_baltici = {
 		icon = me_mission_sweden_dominium_maris_baltici
 		required_missions = { sweden_swedish_pomerania sweden_dealing_with_the_hansa }
@@ -520,7 +520,7 @@ SWE_missions_3 = {
 			}
 		}
 	}
-	
+
 	sweden_ending_the_kalmar_union = {
 		icon = mission_assemble_an_army
 		required_missions = { sweden_echoes_of_freedom }
@@ -560,7 +560,7 @@ SWE_missions_3 = {
 			}
 		}
 	}
-	
+
 	sweden_reclaiming_gotland = {
 		icon = me_mission_sweden_gotland
 		required_missions = { sweden_ending_the_kalmar_union }
@@ -617,7 +617,7 @@ SWE_missions_3 = {
 			}
 		}
 	}
-	
+
 	sweden_liberate_norway = {
 		icon = me_mission_sweden_norway
 		required_missions = { sweden_the_straits_of_denmark }
@@ -669,7 +669,7 @@ SWE_missions_3 = {
 			}
 		}
 	}
-	
+
 	sweden_uniting_the_three_crowns = {
 		icon = me_mission_shiny_crown
 		required_missions = { sweden_liberate_norway }
@@ -742,7 +742,7 @@ SWE_missions_4 = {
 			}
 		}
 	}
-	
+
 	sweden_foundation_of_karlskrona = {
 		icon = me_mission_aachen_city_view
 		required_missions = { sweden_expand_dalaskogen }
@@ -784,7 +784,7 @@ SWE_missions_5 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-	
+
 	sweden_the_city_of_gothenburg = {
 		icon = mission_hanseatic_city
 		required_missions = { sweden_expand_dalaskogen }
@@ -859,7 +859,7 @@ SWE_missions_5 = {
 			}
 		}
 	}
-	
+
 	sweden_the_reformation_in_sweden = {
 		icon = mission_luther_theses
 		required_missions = { }
@@ -891,7 +891,7 @@ SWE_missions_5_catholic_1 = {
 		NOT = { has_country_flag = swe_protestant_missions }
 	}
 	has_country_shield = yes
-	
+
 	sweden_support_the_roman_church = {
 		icon = me_mission_one_country_one_faith
 		required_missions = { sweden_the_reformation_in_sweden }
@@ -955,7 +955,7 @@ SWE_missions_4_catholic = {
 		NOT = { has_country_flag = swe_protestant_missions }
 	}
 	has_country_shield = yes
-	
+
 	sweden_deus_vult = {
 		icon = mission_hands_praying
 		required_missions = { sweden_support_the_roman_church }
@@ -1000,7 +1000,7 @@ SWE_missions_5_catholic_2 = {
 		NOT = { has_country_flag = swe_protestant_missions }
 	}
 	has_country_shield = yes
-	
+
 	sweden_protect_scandinavia = {
 		icon = me_mission_scandinavia_coat
 		required_missions = { sweden_support_the_roman_church }
@@ -1057,7 +1057,7 @@ SWE_missions_5_catholic_2 = {
 			}
 		}
 	}
-	
+
 	sweden_bastion_of_catholicism = {
 		icon = mission_restore_faith_in_the_throne
 		required_missions = { sweden_deus_vult sweden_protect_scandinavia }
@@ -1113,7 +1113,7 @@ SWE_missions_4_protestant_1 = {
 		NOT = { has_country_flag = swe_catholic_missions }
 	}
 	has_country_shield = yes
-	
+
 	sweden_support_the_lutherans = {
 		icon = mission_hands_praying
 		required_missions = { sweden_the_reformation_in_sweden }
@@ -1162,7 +1162,7 @@ SWE_missions_4_protestant_2 = {
 		NOT = { has_country_flag = swe_catholic_missions }
 	}
 	has_country_shield = yes
-	
+
 	sweden_the_dacke_wars = {
 		icon = mission_cannons_firing
 		required_missions = { sweden_support_the_lutherans }
@@ -1222,7 +1222,7 @@ SWE_missions_5_protestant = {
 		NOT = { has_country_flag = swe_catholic_missions }
 	}
 	has_country_shield = yes
-	
+
 	sweden_defending_against_the_heretics = {
 		icon = mission_assemble_an_army
 		required_missions = { sweden_support_the_lutherans }
@@ -1257,7 +1257,7 @@ SWE_missions_5_protestant = {
 			}
 		}
 	}
-	
+
 	sweden_church_of_sweden = {
 		icon = mission_european_church
 		required_missions = { sweden_the_dacke_wars sweden_defending_against_the_heretics }

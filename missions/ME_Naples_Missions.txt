@@ -20,7 +20,7 @@ naples_missions_1 = {
 			AND = {
 				NOT = { was_tag = NAP }
 				NOT = { was_tag = SIC }
-				OR = { 
+				OR = {
 					tag = TTS
 					AND = {
 						was_tag = TTS
@@ -599,7 +599,7 @@ naples_missions_2 = {
 			AND = {
 				NOT = { was_tag = NAP }
 				NOT = { was_tag = SIC }
-				OR = { 
+				OR = {
 					tag = TTS
 					AND = {
 						was_tag = TTS
@@ -806,7 +806,7 @@ naples_missions_2 = {
 							}
 						}
 						NOT = { num_of_light_ship = ROOT }
-						NOT = { num_of_galley = ROOT } 
+						NOT = { num_of_galley = ROOT }
 					}
 				}
 				358 = { #Alexandria
@@ -920,7 +920,7 @@ naples_missions_2 = {
 			}
 			if = {
 				limit = { exists = GEN }
-				num_of_light_ship = GEN	
+				num_of_light_ship = GEN
 			}
 			else_if = {
 				limit = {
@@ -984,7 +984,7 @@ naples_missions_3 = {
 			AND = {
 				NOT = { was_tag = NAP }
 				NOT = { was_tag = SIC }
-				OR = { 
+				OR = {
 					tag = TTS
 					AND = {
 						was_tag = TTS
@@ -1300,7 +1300,7 @@ naples_missions_3 = {
 		trigger = {
 			army_size_percentage = 1
 			if = {
-				limit = { 
+				limit = {
 					NOT = { is_subject_of = SIC }
 					is_subject = yes
 				}
@@ -1480,7 +1480,7 @@ naples_missions_4 = {
 			AND = {
 				NOT = { was_tag = NAP }
 				NOT = { was_tag = SIC }
-				OR = { 
+				OR = {
 					tag = TTS
 					AND = {
 						was_tag = TTS
@@ -1803,7 +1803,7 @@ naples_missions_5 = {
 			AND = {
 				NOT = { was_tag = NAP }
 				NOT = { was_tag = SIC }
-				OR = { 
+				OR = {
 					tag = TTS
 					AND = {
 						was_tag = TTS
@@ -1995,7 +1995,7 @@ naples_missions_5 = {
 				OR = {
 					owned_by = ROOT
 					owner = {
-						NOT = { 
+						NOT = {
 							army_strength = {
 								who = ROOT
 								value = 1

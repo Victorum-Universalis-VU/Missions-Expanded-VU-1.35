@@ -63,14 +63,16 @@ ETH_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			tigray_area = {
-				limit = {
+			2766 = {
+				if = {
+					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
 					}
-				add_permanent_claim = ROOT
+					add_permanent_claim = ROOT
+				}
 			}
-			1226 = {
+			2787 = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT }
@@ -80,24 +82,6 @@ ETH_slot_2 = {
 				}
 			}
 			1230 = {
-				if = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			5283 = {
-				if = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			5288 = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT }
@@ -299,6 +283,13 @@ ETH_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			vostani_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			bahari_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -307,13 +298,6 @@ ETH_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 			delta_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			vostani_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

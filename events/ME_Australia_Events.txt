@@ -173,6 +173,7 @@ country_event = { # The Scouring of New Zealand
 						area = tokerau_area
 						area = te_waipounamu_area
 						area = te_ika_a_maui_area
+
 					}
 					renaissance = 100
 				}

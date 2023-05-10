@@ -834,7 +834,7 @@ HLR_missions_1 = {
 			}
 		}
 	}
-	
+
 	HRE_Netherland_Textile = {
 		icon = mission_have_manufactories
 		required_missions = { }
@@ -1681,6 +1681,7 @@ HLR_missions_2 = {
 				area = connecticut_valley_area
 				area = massachusetts_bay_area
 				area = hudson_bay_area
+				area = upper_american_georgia_area
 				area = chesapeake_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1699,6 +1700,10 @@ HLR_missions_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			hudson_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_american_georgia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1924,7 +1929,7 @@ HLR_missions_2 = {
 			}
 		}
 	}
-	
+
 	HRE_Wine = {
 		icon = mission_early_game_buildings
 		required_missions = { }
@@ -2595,7 +2600,7 @@ HLR_missions_3 = {
 			controls = 235
 		}
 		effect = {
-			south_east_area = {
+			greater_london_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2611,8 +2616,9 @@ HLR_missions_3 = {
 		position = 14
 		provinces_to_highlight = {
 			OR = {
-				area = cornwall_area
-				area = south_east_area
+			  area = cornwall_area
+			  area = south_east_area
+				area = greater_london_area
 				area = east_anglia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -2623,6 +2629,10 @@ HLR_missions_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			south_east_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			greater_london_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -3022,7 +3032,7 @@ HLR_missions_3 = {
 			}
 		}
 	}
-	
+
 	HRE_Westphalian_Plan = {
 		icon = mission_early_game_buildings
 		required_missions = { HRE_Prepare_the_Plan }
@@ -3384,6 +3394,13 @@ HLR_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_east_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -3634,7 +3651,7 @@ HLR_missions_4 = {
 			}
 		}
 	}
-	
+
 	HRE_Prepare_the_Plan = {
 		icon = mission_empire
 		required_missions = { }
@@ -4614,7 +4631,7 @@ HLR_missions_5 = {
 			}
 		}
 	}
-	
+
 	HRE_Pomeranian_Plan = {
 		icon = mission_early_game_buildings
 		required_missions = { HRE_Prepare_the_Plan }

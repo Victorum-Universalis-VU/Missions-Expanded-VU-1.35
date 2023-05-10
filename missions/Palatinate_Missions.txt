@@ -9,20 +9,27 @@ palatinate_conquest_group = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	pal_expand_a_bit = {
 		icon = mission_have_two_subjects
 		required_missions = { }
 
 		completed_by = 1618.05.20
-		
+
 		trigger = {
 			num_of_cities = 7
 			army_size = 15
 		}
-		
+
 		effect = {
 			franconia_area = {
+				limit = {
+					NOT = { is_claim = root }
+					NOT = { is_core = root }
+				}
+				add_permanent_claim = root
+			}
+			thuringia_area = {
 				limit = {
 					NOT = { is_claim = root }
 					NOT = { is_core = root }
@@ -72,7 +79,7 @@ palatinate_conquest_group = {
 				is_in_capital_area = no
 			}
 		}
-		
+
 		trigger = {
 			77 = {
 				owned_by = root
@@ -83,7 +90,7 @@ palatinate_conquest_group = {
 				is_in_capital_area = yes
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -174,6 +181,13 @@ palatinate_conquest_group = {
 					}
 					add_permanent_claim = root
 				}
+				tirol_area = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
 			}
 		}
 	}
@@ -182,12 +196,18 @@ palatinate_conquest_group = {
 		required_missions = { pal_connect_oberpfalz }
 
 		provinces_to_highlight = {
-			area = bavaria_area
+			OR = {
+				area = bavaria_area
+				area = tirol_area
+			}
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						value = 8
-						area = bavaria_area
+						OR = {
+							area = bavaria_area
+							area = tirol_area
+						}
 					}
 				}
 			}
@@ -197,7 +217,10 @@ palatinate_conquest_group = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 8
-				area = bavaria_area
+				OR = {
+					area = bavaria_area
+					area = tirol_area
+				}
 			}
 			if = {
 				limit = {
@@ -244,7 +267,7 @@ palatinate_conquest_group = {
 				}
 			}
 		}
-		
+
 		effect = {
 			north_rhine_area = {
 				limit = {
@@ -276,12 +299,12 @@ palatinate_conquest_group = {
 			}
 		}
 	}
-	
+
 	pal_kingdom_of_the_rhine = {
 		icon = mission_empire
 		position = 5
 		required_missions = { pal_one_true_wittelsbach }
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = north_rhine_area
@@ -316,7 +339,7 @@ palatinate_conquest_group = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -349,7 +372,7 @@ palatinate_other_group = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	pal_religious_leadership = {
 		icon = mission_religious
 		position = 2
@@ -370,7 +393,7 @@ palatinate_other_group = {
 				NOT = { religion = root }
 			}
 		}
-		
+
 		trigger = {
 			OR = {
 				AND = {
@@ -414,7 +437,7 @@ palatinate_other_group = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -455,11 +478,11 @@ palatinate_other_group = {
 			}
 		}
 	}
-	
+
 	pal_kingdom_of_bohemia = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { pal_religious_leadership }
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = bohemia_area
@@ -482,7 +505,7 @@ palatinate_other_group = {
 				country_or_non_sovereign_subject_holds = root
 			}
 		}
-		
+
 		effect = {
 			add_country_modifier = {
 				name = pal_great_king
@@ -490,7 +513,7 @@ palatinate_other_group = {
 			}
 		}
 	}
-	
+
 	pal_protect_from_france = {
 		icon = mission_assemble_an_army
 		required_missions = { pal_kingdom_of_bohemia }
@@ -504,7 +527,7 @@ palatinate_other_group = {
 				army_size = root
 			}
 		}
-		
+
 		trigger = {
 			OR = {
 				custom_trigger_tooltip = {
@@ -531,7 +554,7 @@ palatinate_other_group = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = { #has completed the mission objectives
@@ -715,7 +738,7 @@ palatinate_other_group = {
 		icon = mission_early_modern_university
 		position = 5
 		required_missions = { pal_protect_from_france }
-		
+
 		trigger = {
 			prestige = 75
 			capital_scope = {
@@ -726,7 +749,7 @@ palatinate_other_group = {
 			has_mil_advisor_3 = yes
 			is_in_deficit = no
 		}
-		
+
 		effect = {
 			add_prestige = 25
 			add_country_modifier = {

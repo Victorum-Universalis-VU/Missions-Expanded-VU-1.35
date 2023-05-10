@@ -7,55 +7,46 @@ tr_russian_minors_1 = {
 	}
 	potential = {
 		OR = {
-			AND = {
-				has_country_flag = use_paradox_missions
-				OR = {
-					tag = VOL
-					tag = KIE
-					tag = CHR
-					tag = PSK
-					tag = RYA
-					tag = TVE
-					tag = YAR
-					tag = PLT
-					#tag = PRM #Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
-					tag = RSO
-					tag = SMO
-					tag = NZH
-					tag = ZAZ
-					tag = OKA
+			OR = {
+				AND = {
+					has_country_flag = use_paradox_missions
+					OR = {
+						tag = VOL
+						tag = KIE
+						tag = CHR
+						tag = PSK
+						tag = RYA
+						tag = TVE
+						tag = YAR
+						tag = PLT
+						tag = PRM
+						tag = RSO
+						tag = SMO
+						tag = NZH
+						tag = ZAZ
+						tag = OKA
+					}
 				}
+				tag = BLO
+				tag = UKR
 			}
-			tag = UKR			
-			tag = BLO
 			AND = {
-				is_playing_custom_nation = yes 
+				is_playing_custom_nation = yes
 				capital_scope = {
 					region = russia_region
 				}
 				NOT = { technology_group = nomad_group }
 			}
-			#VU Added
-			tag = ZBT
-			tag = GLC
-			tag = MLL
-			tag = SPK
-			tag = MOZ
-			tag = PRS
-			tag = BLV
-			tag = MSL
-			tag = VTN
-			tag = VYA
 		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	tr_independence = {
 		icon = mission_sovereign_principality
 		required_missions = {  }
-		position = 1 
+		position = 1
 		provinces_to_highlight = {
 			area_for_scope_province = {
 				is_capital_of = ROOT
@@ -65,7 +56,7 @@ tr_russian_minors_1 = {
 		trigger = {
 			is_subject = no
 			capital_scope = {
-				fort_level = 2
+				fort_level = 3
 				area_for_scope_province = {
 					type = all
 					owned_by = ROOT
@@ -91,7 +82,7 @@ tr_russian_minors_1 = {
 			}
 		}
 	}
-	
+
 	tr_conquer_nov = {
 		icon = mission_conquer_novgorod
 		required_missions = { tr_independence tr_stability }
@@ -106,7 +97,7 @@ tr_russian_minors_1 = {
 			novgorod_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
-			}			
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -141,7 +132,7 @@ tr_russian_minors_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			west_karelia_area = {
+			north_karelia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -271,54 +262,45 @@ tr_russian_minors_2 = {
 	}
 	potential = {
 		OR = {
-			AND = {
-				has_country_flag = use_paradox_missions
-				OR = {
-					tag = VOL
-					tag = KIE
-					tag = CHR
-					tag = PSK
-					tag = RYA
-					tag = TVE
-					tag = YAR
-					tag = PLT
-					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
-					tag = BLO
-					tag = RSO
-					tag = SMO
-					tag = NZH
-					tag = ZAZ
-					tag = OKA
+			OR = {
+				AND = {
+					has_country_flag = use_paradox_missions
+					OR = {
+						tag = VOL
+						tag = KIE
+						tag = CHR
+						tag = PSK
+						tag = RYA
+						tag = TVE
+						tag = YAR
+						tag = PLT
+						tag = PRM
+						tag = RSO
+						tag = SMO
+						tag = NZH
+						tag = ZAZ
+						tag = OKA
+					}
 				}
-			#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
-			tag = BLO
+				tag = BLO
+				tag = UKR
+			}
 			AND = {
-				is_playing_custom_nation = yes 
+				is_playing_custom_nation = yes
 				capital_scope = {
 					region = russia_region
 				}
 				NOT = { technology_group = nomad_group }
 			}
-			#VU Added
-			tag = ZBT
-			tag = GLC
-			tag = MLL
-			tag = SPK
-			tag = MOZ
-			tag = PRS
-			tag = BLV
-			tag = MSL
-			tag = VTN
-			tag = VYA
 		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
-    tr_stability = {
+	tr_stability = {
 		icon = mission_consolidate_the_state
-		position = 1 
+		position = 1
 		required_missions = {  }
 		provinces_to_highlight = {
 		}
@@ -343,9 +325,9 @@ tr_russian_minors_2 = {
 			add_prestige = 10
 			add_adm_power = 50
 			capital_scope = {
-				region = { 
-					limit = { 
-						NOT = { is_core = ROOT }  
+				region = {
+					limit = {
+						NOT = { is_core = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -379,7 +361,7 @@ tr_russian_minors_2 = {
 			}
 		}
 	}
-	
+
 	tr_cossacks = {
 		icon = mission_recruit_the_cossacks
 		required_missions = { tr_conquer_russia }
@@ -433,7 +415,7 @@ tr_russian_minors_2 = {
 		}
 	}
 }
-	
+
 tr_russian_minors_3 = {
 	slot = 3
 	generic = no
@@ -443,52 +425,42 @@ tr_russian_minors_3 = {
 	}
 	potential = {
 		OR = {
-			AND = {
-				has_country_flag = use_paradox_missions
-				OR = {
-				tag = VOL
-				tag = KIE
-				tag = CHR
-				tag = OKA
-				tag = PSK
-				tag = RYA
-				tag = TVE
-				tag = YAR
-				tag = PLT
-				#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
-				tag = BLO
-				tag = RSO
-				tag = SMO
-				tag = NZH
-				tag = ZAZ
-				tag = OKA
+			OR = {
+				AND = {
+					has_country_flag = use_paradox_missions
+					OR = {
+						tag = VOL
+						tag = KIE
+						tag = CHR
+						tag = PSK
+						tag = RYA
+						tag = TVE
+						tag = YAR
+						tag = PLT
+						tag = PRM
+						tag = RSO
+						tag = SMO
+						tag = NZH
+						tag = ZAZ
+						tag = OKA
+					}
 				}
+				tag = BLO
+				tag = UKR
 			}
 			AND = {
-				is_playing_custom_nation = yes 
+				is_playing_custom_nation = yes
 				capital_scope = {
 					region = russia_region
 				}
 				NOT = { technology_group = nomad_group }
 			}
-			tag = UKR
-			#VU Added
-			tag = ZBT
-			tag = GLC
-			tag = MLL
-			tag = SPK
-			tag = MOZ
-			tag = PRS
-			tag = BLV
-			tag = MSL
-			tag = VTN
-			tag = VYA
 		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	tr_conquer_mos = {
 		icon = mission_conquer_moscow
 		required_missions = { tr_stability }
@@ -567,40 +539,13 @@ tr_russian_minors_3 = {
 		required_missions = { tr_conquer_russia tr_conquer_mos }
 		position = 4
 		provinces_to_highlight = {
-			OR = {
-				area = east_dniepr_area
-				area = bryansk_area
-				area = severia_area
-				area = oka_area
-				area = smolensk_area
-				area = white_ruthenia_area
-			}
+			area = east_dniepr_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			east_dniepr_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			bryansk_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			severia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			oka_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			smolensk_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			white_ruthenia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -621,55 +566,9 @@ tr_russian_minors_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			280 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			lower_dnieper_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			sloboda_ukraine_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			middle_don_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			yedisan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			pryazovia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
-	
+
 	tr_tatar_yoke = {
 		icon = mission_break_the_tatar_yoke
 		required_missions = { tr_dniepr tr_cossacks }

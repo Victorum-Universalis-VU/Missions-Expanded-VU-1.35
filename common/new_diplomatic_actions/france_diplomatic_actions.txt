@@ -192,11 +192,11 @@ make_french_hre_subject_action = {
 				variable_arithmetic_trigger = {
 					export_to_variable = {
 						which = our_mil_tech
-						value = trigger_value:mil_tech
+						value = mil_tech
 					}
 					export_to_variable = {
 						which = their_mil_tech
-						value = trigger_value:mil_tech
+						value = mil_tech
 						who = FROM
 					}
 					export_to_variable = {
@@ -236,11 +236,11 @@ make_french_hre_subject_action = {
 				variable_arithmetic_trigger = {
 					export_to_variable = {
 						which = our_mil_tech
-						value = trigger_value:mil_tech
+						value = mil_tech
 					}
 					export_to_variable = {
 						which = their_mil_tech
-						value = trigger_value:mil_tech
+						value = mil_tech
 						who = FROM
 					}
 					export_to_variable = {
@@ -275,11 +275,11 @@ make_french_hre_subject_action = {
 			}
 			export_to_variable = {
 				which = our_mil_tech
-				value = trigger_value:mil_tech
+				value = mil_tech
 			}
 			export_to_variable = {
 				which = their_mil_tech
-				value = trigger_value:mil_tech
+				value = mil_tech
 				who = FROM
 			}
 			export_to_variable = {
@@ -306,11 +306,11 @@ make_french_hre_subject_action = {
 				variable_arithmetic_trigger = {
 					export_to_variable = {
 						which = our_mil_tech
-						value = trigger_value:mil_tech
+						value = mil_tech
 					}
 					export_to_variable = {
 						which = their_mil_tech
-						value = trigger_value:mil_tech
+						value = mil_tech
 						who = FROM
 					}
 					export_to_variable = {

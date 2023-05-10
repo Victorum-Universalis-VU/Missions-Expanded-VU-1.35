@@ -13,7 +13,7 @@ THU_missions_1 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	thuringia_build_an_army = {
 		icon = mission_assemble_an_army
 		position = 5
@@ -36,7 +36,7 @@ THU_missions_1 = {
 			}
 		}
 	}
-	
+
 	thuringia_conquer_home_area = {
 		icon = mission_unite_home_region
 		position = 6
@@ -68,7 +68,7 @@ THU_missions_1 = {
 			}
 		}
 	}
-	
+
 	thuringia_conquer_south_saxony_and_erzgebirge = {
 		icon = mission_conquer_5_states
 		position = 7
@@ -107,7 +107,7 @@ THU_missions_1 = {
 			}
 		}
 	}
-	
+
 	thuringia_conquer_mittelmark = {
 		icon = mission_cannons_firing
 		position = 8
@@ -137,25 +137,17 @@ THU_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			hesse_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
-	
+
 	thuringia_conquer_north_saxony = {
 		icon = me_mission_army
 		position = 9
 		required_missions = { thuringia_conquer_mittelmark }
 		provinces_to_highlight = {
-		    OR = {
-			    area = altmark_area
+			OR = {
+				area = altmark_area
 				area = anhalt_area
-				area = hesse_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -165,10 +157,6 @@ THU_missions_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			anhalt_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			hesse_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -198,7 +186,7 @@ THU_missions_1 = {
 			}
 		}
 	}
-	
+
 	thuringia_conquer_braunschweig = {
 		icon = mission_unite_home_region
 		position = 10
@@ -238,7 +226,7 @@ THU_missions_2 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	thuringia_conquer_franconia = {
 		icon = mission_assemble_an_army
 		position = 8
@@ -263,7 +251,7 @@ THU_missions_2 = {
 			}
 		}
 	}
-	
+
 	thuringia_conquer_hesse = {
 		icon = mission_build_up_to_force_limit
 		position = 9
@@ -320,7 +308,7 @@ THU_missions_3 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	thuringia_develop_wittenberg = {
 		icon = mission_conquer_50_development
 		position = 8
@@ -362,7 +350,7 @@ THU_missions_3 = {
 			}
 		}
 	}
-	
+
 	thuringia_support_reformation = {
 		icon = mission_luther_theses
 		position = 9
@@ -383,7 +371,7 @@ THU_missions_3 = {
 			}
 		}
 	}
-	
+
 	thuringia_have_center_of_reformation = {
 		icon = mission_european_church
 		position = 7
@@ -405,7 +393,7 @@ THU_missions_3 = {
 			}
 		}
 	}
-	
+
 	thuringia_become_defender_of_faith = {
 		icon = mission_hands_praying
 		position = 8
@@ -456,7 +444,7 @@ THU_missions_4 = {
 		}
 	}
 	has_country_shield = yes
-	
+
 	thuringia_leader_of_protestant_union = {
 		icon = mission_hands_praying
 		position = 10

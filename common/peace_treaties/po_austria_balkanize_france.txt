@@ -25,10 +25,7 @@ po_austria_balkanize_france = {
 	}
 	is_allowed = { 
 		FROM = {
-			OR = {
-				tag = FRA
-				tag = BFR
-			}
+			tag = FRA
 		}
 	}
 	effect = { 

@@ -132,6 +132,13 @@ WES_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			tirol_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -140,12 +147,18 @@ WES_missions_1 = {
 		required_missions = { WES_swabia WES_franconia }
 		position = 8
 		provinces_to_highlight = {
-			area = bavaria_area
+			OR = {
+				area = bavaria_area
+				area = tirol_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = bavaria_area
+				OR = {
+					area = bavaria_area
+					area = tirol_area
+				}
 				value = 8
 			}
 		}
@@ -268,7 +281,7 @@ WES_missions_2 = {
 			57 = {
 				create_or_add_center_of_trade_level = { level = 1 }
 			}
-			bavaria_area = {
+			tirol_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -470,7 +483,7 @@ WES_missions_3 = {
 		position = 6
 		provinces_to_highlight = {
 			OR = {
-				area = holstein_area
+				area = lower_saxony_area
 				area = braunschweig_area
 				province_id = 54
 				province_id = 4771
@@ -481,7 +494,7 @@ WES_missions_3 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
-					area = holstein_area
+					area = lower_saxony_area
 					area = braunschweig_area
 					province_id = 54
 					province_id = 4771
@@ -533,21 +546,14 @@ WES_missions_3 = {
 			}
 			altmark_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			anhalt_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			hesse_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
@@ -564,7 +570,6 @@ WES_missions_3 = {
 				area = mecklenburg_area
 				area = altmark_area
 				area = anhalt_area
-				area = hesse_area
 				area = thuringia_area
 				area = saxony_area
 				area = mittelmark_area
@@ -578,7 +583,6 @@ WES_missions_3 = {
 					area = mecklenburg_area
 					area = altmark_area
 					area = anhalt_area
-					area = hesse_area
 					area = thuringia_area
 					area = saxony_area
 					area = mittelmark_area
@@ -641,7 +645,7 @@ WES_missions_3 = {
 			tooltip = {
 				define_advisor = {
 					type = philosopher
-					culture = francien
+					culture = franconian
 					religion = ROOT
 					cost_multiplier = 0.5
 					skill = 1
@@ -663,7 +667,7 @@ WES_missions_3 = {
 					}
 					define_advisor = {
 						type = philosopher
-						culture = francien
+						culture = franconian
 						religion = ROOT
 						cost_multiplier = 0.5
 						skill = 1

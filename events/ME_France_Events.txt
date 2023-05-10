@@ -1121,30 +1121,13 @@ country_event = {
 
 	option = {
 		name = ME_France_Events.32.OPT1
-		if = { #Added code to make sure you don't go in debt if you happen to have a short regency #By Altan
-			limit = {
-				OR = {
-					has_regency = yes
-					has_consort_regency = yes
-				}
-				heir_age = 10
-			}
-			custom_tooltip = royal_musketeers_contract_extension
-			hidden_effect = {
-				add_ruler_modifier = {
-					name = fra_the_royal_musketeers
-					duration = -1
-				}
-			}
-		}
-		else = {
-			add_years_of_income = -0.5
-			custom_tooltip = royal_musketeers_contract_extension
-			hidden_effect = {
-				add_ruler_modifier = {
-					name = fra_the_royal_musketeers
-					duration = -1
-				}
+
+		add_years_of_income = -0.5
+		custom_tooltip = royal_musketeers_contract_extension
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = fra_the_royal_musketeers
+				duration = -1
 			}
 		}
 	}

@@ -1,4 +1,3 @@
-#VU updated for 1.35 by San Felipe # Amended by Altan for EE-VU
 genoa_missions_africa = {
 	slot = 1
 	generic = no
@@ -14,7 +13,7 @@ genoa_missions_africa = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { }
 		provinces_to_highlight = {
-		    OR = {
+			OR = {
 				AND = {
 					NOT = { is_strongest_trade_power = ROOT }
 					province_id = 1298
@@ -29,7 +28,7 @@ genoa_missions_africa = {
 			1298 = {
 				is_strongest_trade_power = ROOT
 			}
-		    101 = {
+			101 = {
 				province_trade_power = 60
 			}
 		}
@@ -237,7 +236,7 @@ genoa_europe_slot = {
 		icon = mission_empire
 		required_missions = { }
 		trigger = {
-		    OR = {
+			OR = {
 				NOT = { is_part_of_hre = yes }
 				AND = {
 					is_year = 1500
@@ -352,53 +351,6 @@ genoa_europe_slot = {
 				name = "black_sea_ambition"
 				duration = 5475
 			}
-		}
-	}
-	
-	gen_war_ottomans = {
-		icon = mission_siege_of_galata
-		required_missions = { }
-		position = 5
-		
-		trigger = {
-			if = {
-				limit = {
-					exists = TUR
-				}
-				OR = {
-					war_with = TUR
-					custom_trigger_tooltip = {
-						tooltip = gen_war_ottomans.tooltip
-						has_country_flag = gen_gave_up_galata
-					}
-				}
-			}
-			else_if = {
-				limit = { 
-					NOT = { exists = TUR }
-				}
-				OR = {
-					6932 = {
-						owner = {
-							war_with = ROOT
-						}
-					}
-					6932 = {
-						owned_by = ROOT
-						is_core = ROOT
-					}
-				}
-			}
-		}
-		
-		effect = {
-		    add_country_modifier = {
-				name = "galata_retaken"
-				duration = 5475
-			}
-			151 = {
-		        add_permanent_claim = ROOT
-		    }
 		}
 	}
 }

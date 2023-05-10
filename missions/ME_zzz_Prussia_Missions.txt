@@ -1091,7 +1091,7 @@ PRU_missions_3 = {
 				limit = {
 					OR = {
 						culture = polish
-						culture = silesian
+						culture = schlesian
 					}
 				}
 				add_province_modifier = {
@@ -1103,7 +1103,7 @@ PRU_missions_3 = {
 				limit = {
 					OR = {
 						culture = polish
-						culture = silesian
+						culture = schlesian
 					}
 				}
 				add_province_modifier = {
@@ -1115,7 +1115,7 @@ PRU_missions_3 = {
 				limit = {
 					OR = {
 						culture = polish
-						culture = silesian
+						culture = schlesian
 					}
 				}
 				add_province_modifier = {
@@ -1127,7 +1127,7 @@ PRU_missions_3 = {
 				limit = {
 					OR = {
 						culture = polish
-						culture = silesian
+						culture = schlesian
 					}
 				}
 				add_province_modifier = {
@@ -1139,7 +1139,7 @@ PRU_missions_3 = {
 				limit = {
 					OR = {
 						culture = polish
-						culture = silesian
+						culture = schlesian
 					}
 				}
 				add_province_modifier = {
@@ -1151,7 +1151,7 @@ PRU_missions_3 = {
 				limit = {
 					OR = {
 						culture = polish
-						culture = silesian
+						culture = schlesian
 					}
 				}
 				add_province_modifier = {

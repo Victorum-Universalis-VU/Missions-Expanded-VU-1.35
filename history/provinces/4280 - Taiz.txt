@@ -2,9 +2,9 @@
 
 owner = RSL
 controller = RSL
-capital = "Ta'izz"
 culture = yemeni_culture
 religion = shiite
+capital = "Taiz"
 trade_goods = coffee
 hre = no
 base_tax = 4
@@ -30,13 +30,6 @@ discovered_by = east_african
 	controller = MAM
 	add_core = MAM
 }
-
-1516.8.24 = {
-	owner = YEM
-	controller = YEM
-	add_claim = TUR
-} #Nominal independence after the fall of the Mamluks to the Ottomans
-
 #De facto controlled by Ottoman Officers.
 1521.1.1 = { #After the fall of Egypt these lands are held by autonomous Ottoman Officers
 	#owner = ADE #Ottoman Officers

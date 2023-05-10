@@ -1,4 +1,3 @@
-#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 indonesians_3 = {
 	slot = 3
 	generic = yes
@@ -11,7 +10,7 @@ indonesians_3 = {
 		NOT = { has_reform = pirate_republic_reform }
 	}
 	has_country_shield = yes
-	
+
 	indonesia_navy = {
 		icon = mission_junk_boat
 		required_missions = {  }
@@ -74,7 +73,7 @@ indonesians_3 = {
 			}
 		}
 	}
-	
+
 	indonesia_spice_must_flow = {
 		icon = mission_asian_trader
 		required_missions = { indonesia_trade_dominance }
@@ -118,13 +117,10 @@ indonesians_3 = {
 		}
 	}
 	indonesia_invade_the_mainland = {
-		icon = mission_asian_cannon
+		icon = mission_asian_city
 		required_missions = { indonesia_unite_nusantara }
 		provinces_to_highlight = {
-			OR = {
-			    region = indo_china_region
-			    region = south_china_sea_islands_region
-			}
+			region = indo_china_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -132,10 +128,7 @@ indonesians_3 = {
 				amount = 50
 				all_province = {
 					country_or_non_sovereign_subject_holds = ROOT
-					OR = { 
-					    region = indo_china_region 
-						region = south_china_sea_islands_region
-					}
+					region = indo_china_region
 				}
 			}
 		}
@@ -157,7 +150,7 @@ indonesians_3 = {
 
 indonesians_4 = {
 	slot = 4
-	generic = no
+	generic = yes
 	ai = yes
 	potential = {
 		technology_group = chinese
@@ -167,7 +160,7 @@ indonesians_4 = {
 		NOT = { has_reform = pirate_republic_reform }
 	}
 	has_country_shield = yes
-	
+
 	indonesia_vassals = {
 		icon = mission_kowtow
 		required_missions = {  }
@@ -187,12 +180,11 @@ indonesians_4 = {
 				duration = 7300
 			}
 		}
-	}	
+	}
 	indonesia_convert_island = {
 		icon = mission_hands_praying
 		required_missions = {  }
 		provinces_to_highlight = {
-			is_empty = no
 			NOT = { religion = ROOT }
 			OR = {
 				AND = { # borneo
@@ -314,14 +306,13 @@ indonesians_4 = {
 						area = visayas_area
 						area = palawan_area
 					}
-				}		
+				}
 			}
 		}
 		trigger = {
+			NOT = { current_age = age_of_discovery }
 			custom_trigger_tooltip = {
 				tooltip = indonesia_convert_island.tooltip
-				NOT = { current_age = age_of_discovery }
-				NOT = { religion_group = pagan }
 				if = { # borneo
 					limit = {
 						capital_scope = {
@@ -330,7 +321,6 @@ indonesians_4 = {
 								area = brunei_area
 								area = kalimantan_area
 								area = sabah_area
-								area = lesser_sunda_islands_area
 							}
 						}
 					}
@@ -342,15 +332,11 @@ indonesians_4 = {
 						type = all
 						religion = ROOT
 					}
-					kalimantan_area = {
-						type = all
-						religion = ROOT
-					}
 					sabah_area = {
 						type = all
 						religion = ROOT
 					}
-					lesser_sunda_islands_area = {
+					kalimantan_area = {
 						type = all
 						OR = {
 							religion = ROOT
@@ -537,7 +523,7 @@ indonesians_4 = {
 							religion = ROOT
 							is_empty = yes
 						}
-					}	
+					}
 					southern_luzon_area = {
 						type = all
 						OR = {
@@ -593,10 +579,6 @@ indonesians_4 = {
 			OR = {
 				region = moluccas_region
 				region = indonesia_region
-				region = riau_islands_region
-				region = nusa_tenggara_region
-				region = borneo_region
-				region = celebes_region
 				region = malaya_region
 			}
 		}
@@ -610,10 +592,6 @@ indonesians_4 = {
 						OR = {
 							region = moluccas_region
 							region = indonesia_region
-							region = riau_islands_region
-							region = nusa_tenggara_region
-							region = borneo_region
-							region = celebes_region
 							region = malaya_region
 						}
 					}
@@ -659,25 +637,18 @@ indonesians_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_china_sea_islands_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			add_country_modifier = {
 				name = malay_united_nusantara
 				duration = -1
 			}
-			if = { 
-				limit = { 
-					NOT = { government_rank = 3 } 
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
 				}
 				set_government_rank = 3
 			}
 		}
-	}	
+	}
 	indonesia_expel_europeans = {
 		icon = mission_have_two_subjects
 		required_missions = { indonesia_unite_nusantara }
@@ -727,7 +698,7 @@ indonesians_4 = {
 
 indonesians_5 = {
 	slot = 5
-	generic = no
+	generic = yes
 	ai = yes
 	potential = {
 		technology_group = chinese
@@ -736,22 +707,22 @@ indonesians_5 = {
 		NOT = { has_reform = pirate_republic_reform }
 	}
 	has_country_shield = yes
-	
+
 	indonesia_palopo_iron = {
-		icon = mission_war_chest
+		icon = mission_have_manufactories
 		required_missions = { }
 		provinces_to_highlight = {
 			has_discovered = ROOT
 			province_id = 2715
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_manufactory_trigger = yes }
+				NOT = { has_building = weapons }
 			}
 		}
 		trigger = {
 			2715 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_manufactory_trigger = yes
+				has_building = weapons
 			}
 		}
 		effect = {
@@ -771,13 +742,13 @@ indonesians_5 = {
 			province_id = 639
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_manufactory_trigger = yes }
+				NOT = { has_building = textile }
 			}
 		}
 		trigger = {
 			639 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_manufactory_trigger = yes
+				has_building = textile
 			}
 		}
 		effect = {
@@ -790,20 +761,20 @@ indonesians_5 = {
 		}
 	}
 	indonesia_lampung_pepper = {
-		icon = mission_war_chest
+		icon = mission_rb_colonise_spice_islands
 		required_missions = { }
 		provinces_to_highlight = {
 			has_discovered = ROOT
 			province_id = 623
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_manufactory_trigger = yes }
+				NOT = { has_building = tradecompany }
 			}
 		}
 		trigger = {
 			623 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_manufactory_trigger = yes
+				has_building = tradecompany
 			}
 		}
 		effect = {
@@ -816,7 +787,7 @@ indonesians_5 = {
 		}
 	}
 	indonesia_moluccan_cloves = {
-		icon = mission_war_chest
+		icon = mission_rb_monopolize_the_channel
 		required_missions = { }
 		provinces_to_highlight = {
 			has_discovered = ROOT
@@ -826,17 +797,17 @@ indonesians_5 = {
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_manufactory_trigger = yes }
+				NOT = { has_building = tradecompany }
 			}
 		}
 		trigger = {
 			649 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_manufactory_trigger = yes
+				has_building = tradecompany
 			}
 			650 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_manufactory_trigger = yes
+				has_building = tradecompany
 			}
 		}
 		effect = {
@@ -855,14 +826,15 @@ indonesians_5 = {
 		}
 	}
 	indonesia_sea_cucumbers = {
-		icon = mission_war_chest
+		icon = mission_junk_boat
 		required_missions = { }
 		provinces_to_highlight = {
 			has_discovered = ROOT
 			province_id = 2728
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_manufactory_trigger = yes }
+				NOT = { has_building = wharf }
+				NOT = { has_building = trade_depot }
 			}
 		}
 		trigger = {
@@ -889,6 +861,7 @@ indonesians_5 = {
 						}
 					}
 					OR = {
+						has_building = wharf
 						has_building = trade_depot
 						has_manufactory_trigger = yes
 					}

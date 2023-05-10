@@ -2,6 +2,7 @@ ABB_abbasid_caliph_revolt = {
 	potential = {
 		custom_trigger_tooltip = {
 			tooltip = ME_has_abbasid_caliph
+      if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "HEY!" }
 			event_target:Caliph_province = {
 				owned_by = ROOT
 			}
@@ -18,11 +19,11 @@ ABB_abbasid_caliph_revolt = {
 	can_stop = {
 		stability = 1
 	}
-	
+
 	down_progress = {
 		factor = 1
 	}
-	
+
 	progress = {
 		modifier = {
 			factor = -2
@@ -52,12 +53,12 @@ ABB_abbasid_caliph_revolt = {
 			factor = 0.5
 			unrest = 0
 		}
-		
+
 		modifier = {
 			factor = 1
 			always = yes
 		}
-		
+
 		modifier = {
 			factor = 1
 			war_exhaustion = 1
@@ -77,7 +78,7 @@ ABB_abbasid_caliph_revolt = {
 		NOT = {
 			unrest = -2
 		}
-		
+
 		custom_trigger_tooltip = {
 			tooltip = ABA_5_years_of_disaster
 			OR = {
@@ -89,14 +90,14 @@ ABB_abbasid_caliph_revolt = {
 			}
 		}
 	}
-	
+
 	modifier = {
 		tolerance_own = -3
 	}
 
 	on_start = ME_Abbasid_Events.17
 	on_end = ME_Abbasid_Events.18
-	
+
 	on_monthly = {
 		events = {
 		}
@@ -105,7 +106,7 @@ ABB_abbasid_caliph_revolt = {
 			10 = ME_Abbasid_Events.26
 		}
 	}
-	
+
 	on_progress_effect = {
 	}
 }

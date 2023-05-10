@@ -10,7 +10,7 @@ mughal_government_me = {
 
 	modifiers = {
 		tolerance_own = 1
-		governing_capacity = 300 #Was 150 in ME
+		governing_capacity = 150
 	}
 
 	assimilation_cultures = {
@@ -171,7 +171,7 @@ mughal_government_me_modifier_buff = {
 
 	modifiers = {
 		tolerance_own = 1
-		governing_capacity = 1000 #Was 500 in ME
+		governing_capacity = 500
 		tolerance_heathen = 2
 	}
 
@@ -329,7 +329,7 @@ me_mughal_empire = {
 	modifiers = {
 		tolerance_heathen = 3
 		tolerance_of_heathens_capacity = 2
-		governing_capacity = 200 #Was 100 in ME
+		governing_capacity = 100
 	}
 
 	conditional = {

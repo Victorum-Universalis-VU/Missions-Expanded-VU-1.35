@@ -11,9 +11,9 @@ POL_Missions_1 = {
 				was_tag = POL
 			}
 		}
-	}  
+	}
 	has_country_shield  = yes
-	
+
 	POL_mission_to_pope = {
 		icon = catholic_confraternity
 		position = 1
@@ -92,7 +92,7 @@ POL_Missions_1 = {
 			}
 		}
 	}
-	
+
 	POL_embrace_renaissance = {
 		icon = me_mission_poland_copernicus
 		position = 2
@@ -108,7 +108,7 @@ POL_Missions_1 = {
 			set_country_flag = POL_polish_renaissance
 		}
 	}
-	
+
 	POL_zamosc = {
 		icon = me_mission_poland_renaissance
 		position = 3
@@ -116,7 +116,7 @@ POL_Missions_1 = {
 		provinces_to_highlight = {
 			province_id = 4538
 			OR = {
-				NOT = { owned_by = ROOT } 
+				NOT = { owned_by = ROOT }
 				NOT = { num_of_buildings_in_province = 3 }
 			}
 		}
@@ -130,7 +130,7 @@ POL_Missions_1 = {
 			country_event = { id = ME_Poland_Events.2 } #Zamość
 		}
 	}
-	
+
 	POL_support_cities = {
 		icon = connect_further_austria
 		position = 4
@@ -150,7 +150,7 @@ POL_Missions_1 = {
 			}
 		}
 		effect = {
-			add_country_modifier = { 
+			add_country_modifier = {
 				name = POL_leave_brick
 				duration = 7300
 			}
@@ -185,7 +185,7 @@ POL_Missions_1 = {
 					limit = {
 						development = 25
 						has_production_building_trigger = yes
-						has_tax_building_trigger = yes 
+						has_tax_building_trigger = yes
 					}
 					add_province_modifier = {
 						name = POL_faithful_adherence
@@ -195,7 +195,7 @@ POL_Missions_1 = {
 			}
 		}
 	}
-	
+
 	POL_prospering_poland = {
 		icon = prosper_in_piedmont
 		position = 6
@@ -233,7 +233,7 @@ POL_Missions_1 = {
 			country_event = { id = ME_Poland_Events.11 }
 		}
 	}
-	
+
 	POL_revenge_for_varna = {
 		icon = mission_crusade_for_varna
 		position = 7
@@ -280,7 +280,7 @@ POL_Missions_1 = {
 			}
 		}
 	}
-	
+
 	POL_establish_autoramenty = {
 		icon = army_reforms
 		position = 8
@@ -310,7 +310,7 @@ POL_Missions_1 = {
 					duration = 10950
 				}
 			}
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -330,7 +330,7 @@ POL_Missions_1 = {
 			}
 		}
 	}
-	
+
 	POL_wojsko_komputowe = { #changed to kwarciane
 		icon = mission_noble_council
 		position = 9
@@ -377,7 +377,7 @@ POL_Missions_1 = {
 			}
 		}
 	}
-	
+
 	POL_order_of_the_white_eagle = {
 		icon = me_mission_poland_order
 		position = 11
@@ -395,14 +395,14 @@ POL_Missions_1 = {
 			country_event = { id = ME_Poland_Events.20 } #order orla bialego
 		}
 	}
-	
+
 	POL_jagiellonian_university = {
 		icon = interest_of_holland
 		position = 12
 		required_missions = { POL_warszawa }
 		provinces_to_highlight = {
 			province_id = 262
-			OR = { 
+			OR = {
 				NOT = { development = 30 }
 				NOT = { owned_by = ROOT }
 			}
@@ -427,7 +427,7 @@ POL_Missions_1 = {
 			}
 		}
 	}
-	
+
 	POL_szkola_rycerska = {
 		icon = me_mission_poland_corps_of_cadets
 		position = 13
@@ -467,7 +467,7 @@ POL_Missions_1 = {
 			country_event = { id = ME_Poland_Events.28 }
 		}
 	}
-	
+
 	POL_new_amber_coast = {
 		icon = develop_konigsberg
 		position = 14
@@ -499,13 +499,13 @@ POL_Missions_1 = {
 				}
 			}
 			else = {
-				43 = { 
+				43 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				41 = { 
+				41 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				39 = { 
+				39 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 				custom_trigger_tooltip = {
@@ -582,7 +582,7 @@ POL_Missions_1 = {
 					}
 				}
 			}
-			
+
 			custom_tooltip = POL_if_we_have_wroclaw
 			hidden_effect = {
 				if = {
@@ -596,7 +596,7 @@ POL_Missions_1 = {
 			}
 		}
 	}
-	
+
 	POL_exquisite_exports = {
 		icon = mission_high_income
 		position = 16
@@ -615,9 +615,7 @@ POL_Missions_1 = {
 					owned_by = ROOT
 					NOT = { province_id = 4545}
 					OR = {
-						trade_goods = jewellery
 						trade_goods = gems
-						trade_goods = amber
 						trade_goods = cloth
 						trade_goods = dyes
 					}
@@ -636,9 +634,7 @@ POL_Missions_1 = {
 				has_production_building_trigger = yes
 				has_manufactory_trigger = yes
 				OR = {
-					trade_goods = jewellery
 					trade_goods = gems
-					trade_goods = amber
 					trade_goods = cloth
 					trade_goods = dyes
 				}
@@ -655,16 +651,16 @@ POL_Missions_1 = {
 				name = POL_sluck_sashes
 				duration = 10950
 			}
-			
+
 			add_country_modifier = {
 				name = POL_world_renowned
 				duration = 5475
 			}
-			
+
 			add_years_of_income = 0.5
 		}
 	}
-	
+
 	POL_konstytucja = {
 		icon = me_mission_poland_may_constitution
 		required_missions = { POL_deal_with_the_liberum  }
@@ -703,9 +699,9 @@ POL_Missions_2 = {
 				was_tag = POL
 			}
 		}
-	} 
+	}
 	has_country_shield  = yes
-	
+
 	POL_ruthenia = {
 		icon = mission_conquer_novgorod
 		position = 2
@@ -755,7 +751,7 @@ POL_Missions_2 = {
 			}
 		}
 	}
-	
+
 	POL_expand_krakow = {
 		icon = mission_eastern_european_city
 		position = 3
@@ -784,7 +780,7 @@ POL_Missions_2 = {
 			}
 		}
 	}
-	
+
 	POL_fortify_podole = {
 		icon = sway_cologne
 		position = 4
@@ -818,7 +814,7 @@ POL_Missions_2 = {
 			add_army_tradition_or_mil_power = { amount = 15 }
 		}
 	}
-	
+
 	POL_expand_gdansk = {
 		icon = mission_danzig_or_war
 		position = 5
@@ -872,7 +868,7 @@ POL_Missions_2 = {
 			}
 		}
 	}
-	
+
 	POL_moldavia = {
 		icon = jageillonian_union
 		position = 6
@@ -913,7 +909,7 @@ POL_Missions_2 = {
 			}
 		}
 	}
-	
+
 	POL_wallachia = {
 		icon = mission_impaled_soldies
 		position = 7
@@ -958,7 +954,7 @@ POL_Missions_2 = {
 			}
 		}
 	}
-	
+
 	POL_inflanty = {
 		icon = mission_conquer_riga
 		position = 8
@@ -989,11 +985,11 @@ POL_Missions_2 = {
 				siege = 1
 				name = "Jan Karol Chodkiewicz"
 			}
-			
+
 			add_army_tradition_or_mil_power = { amount = 10 }
 		}
 	}
-	
+
 	POL_sea_commission = {
 		icon = mission_heart_of_the_hansa
 		position = 9
@@ -1014,11 +1010,11 @@ POL_Missions_2 = {
 				manuever = 3
 				name = "Arend Dickmann"
 			}
-			
+
 			add_navy_tradition = 10
 			set_country_flag = POL_is_POL
 			custom_tooltip = POL_special_cb_on_sweden
-			
+
 			1 = {
 				owner = {
 					reverse_add_casus_belli = {
@@ -1030,7 +1026,7 @@ POL_Missions_2 = {
 			}
 		}
 	}
-	
+
 	POL_swedish_deluge = {
 		icon = mission_scandinavian_port_authority
 		position = 10
@@ -1055,14 +1051,14 @@ POL_Missions_2 = {
 				type = mission_rewards_power_projection
 				amount = 10
 			}
-			
+
 			add_country_modifier = {
 				name = POL_dominium_maris_baltici
 				duration = -1
 			}
 		}
 	}
-	
+
 	POL_warszawa = {
 		icon = versailles_palace
 		position = 11
@@ -1113,7 +1109,7 @@ POL_Missions_2 = {
 			}
 		}
 	}
-	
+
 	POL_collegium_nobili = {
 		icon = me_mission_protect_throne
 		position = 12
@@ -1144,7 +1140,7 @@ POL_Missions_2 = {
 			}
 		}
 	}
-	
+
 	POL_zaluski = {
 		icon = bibliotheca_corviana
 		position = 14
@@ -1169,7 +1165,7 @@ POL_Missions_2 = {
 			}
 		}
 	}
-	
+
 	POL_industrial_cities = {
 		icon = fund_the_monasteries
 		position = 15
@@ -1213,14 +1209,14 @@ POL_Missions_2 = {
 		}
 		effect = {
 			add_stability_or_adm_power = yes
-			
+
 			add_country_modifier = {
 				name = POL_crown_investments
 				duration = 7300
 			}
 		}
 	}
-	
+
 	POL_deal_with_the_liberum = {
 		icon = me_mission_poland_piotr_skarga
 		required_missions = { }
@@ -1243,7 +1239,7 @@ POL_Missions_2 = {
 			}
 		}
 	}
-	
+
 	POL_strengthen_royal_power = {
 		icon = letat_cest_moi
 		required_missions = { POL_deal_with_the_liberum  }
@@ -1261,7 +1257,7 @@ POL_Missions_2 = {
 				name = POL_control_over_the_army_and_state
 				duration = 10950
 			}
-			
+
 			custom_tooltip = POL_the_noble_privileges
 			hidden_effect = {
 				if = {
@@ -1326,9 +1322,9 @@ POL_Missions_3_1 = {
 				was_tag = POL
 			}
 		}
-	}  
+	}
 	has_country_shield  = yes
-	
+
 	POL_sejm_mission = {
 		icon = subiaco_press
 		position = 1
@@ -1368,7 +1364,7 @@ POL_Missions_3_1 = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1463,9 +1459,9 @@ POL_Missions_3_Piast = {
 				was_tag = POL
 			}
 		}
-	}  
+	}
 	has_country_shield  = yes
-	
+
 	POL_nitra = {
 		icon = fight_bosnian_heresies
 		required_missions = { POL_sejm_mission }
@@ -1492,7 +1488,7 @@ POL_Missions_3_Piast = {
 			add_accepted_culture_or_dip_power = { culture = slovak }
 		}
 	}
-	
+
 	POL_morawy = {
 		icon = moravian_arms
 		required_missions = { POL_nitra POL_reconquer_silesia }
@@ -1534,9 +1530,9 @@ POL_Missions_3_2 = {
 				was_tag = POL
 			}
 		}
-	}  
+	}
 	has_country_shield  = yes
-	
+
 	POL_end_knights = {
 		icon = mission_teutonic_knights
 		position = 4
@@ -1588,7 +1584,7 @@ POL_Missions_3_2 = {
 			}
 		}
 	}
-	
+
 	POL_union_of_lublin = {
 		icon = me_mission_poland_lublin
 		position = 7
@@ -1619,7 +1615,7 @@ POL_Missions_3_2 = {
 			add_stability_or_adm_power = yes
 		}
 	}
-	
+
 	POL_culture_mission = {
 		icon = mission_russian_patriarchatee
 		position = 9
@@ -1668,7 +1664,7 @@ POL_Missions_3_2 = {
 			}
 		}
 	}
-	
+
 	POL_vilnius_university = {
 		icon = pontifical_universities
 		position = 11
@@ -1705,7 +1701,7 @@ POL_Missions_3_2 = {
 			}
 		}
 	}
-	
+
 	POL_folwark = {
 		icon = austria_prospers
 		position = 12
@@ -1714,8 +1710,6 @@ POL_Missions_3_2 = {
 			OR = {
 				trade_goods = livestock
 				trade_goods = grain
-				trade_goods = horses
-				trade_goods = apiculture 
 			}
 			owned_by = ROOT
 			OR = {
@@ -1728,8 +1722,6 @@ POL_Missions_3_2 = {
 				OR = {
 					trade_goods = livestock
 					trade_goods = grain
-					trade_goods = horses
-					trade_goods = apiculture 
 				}
 				development = 8
 				has_building = farm_estate
@@ -1741,7 +1733,7 @@ POL_Missions_3_2 = {
 				name = POL_the_folwarks
 				duration = 7300
 			}
-			
+
 			custom_tooltip = 10_base_tax_distributed_among_farm_estates
 			hidden_effect = {
 				for = {
@@ -1758,7 +1750,7 @@ POL_Missions_3_2 = {
 			}
 		}
 	}
-	
+
 	POL_industrialization = {
 		icon = mission_have_manufactories
 		position = 14
@@ -1781,7 +1773,7 @@ POL_Missions_3_2 = {
 			add_years_of_income = 1.5
 		}
 	}
-	
+
 	POL_coal = {
 		icon = industrialized_rhineland
 		position = 16
@@ -1809,7 +1801,7 @@ POL_Missions_3_2 = {
 			}
 		}
 		effect = {
-			add_estate_loyalty = {	
+			add_estate_loyalty = {
 				estate = estate_burghers
 				loyalty = 15
 			}
@@ -1835,9 +1827,9 @@ POL_Missions_4_Jagiellon = {
 				was_tag = POL
 			}
 		}
-	}  
+	}
 	has_country_shield  = yes
-	
+
 	POL_reinforce_jagiellons = {
 		icon = polish_diplomacy
 		position = 2
@@ -1879,9 +1871,9 @@ POL_Missions_4_Piast = {
 				was_tag = POL
 			}
 		}
-	}  
+	}
 	has_country_shield  = yes
-	
+
 	POL_reconquer_silesia = {
 		icon = take_silesia
 		required_missions = { POL_rada_krolewska POL_sejm_mission }
@@ -1920,9 +1912,9 @@ POL_Missions_4_1 = {
 				was_tag = POL
 			}
 		}
-	}  
+	}
 	has_country_shield  = yes
-	
+
 	POL_zwiazek_pruski = {
 		icon = return_visby_to_the_league
 		position = 3
@@ -1968,7 +1960,7 @@ POL_Missions_4_1 = {
 			}
 			custom_tooltip = POL_flota_kaperska
 			set_country_flag = POL_flota_kaperska_flag
-			
+
 			1859 = {
 				if = {
 					limit = {
@@ -1998,7 +1990,7 @@ POL_Missions_4_1 = {
 		}
 	}
 }
-	
+
 POL_Missions_4_Jagiellon_2 = {
 	slot = 4
 	generic = no
@@ -2013,9 +2005,9 @@ POL_Missions_4_Jagiellon_2 = {
 				was_tag = POL
 			}
 		}
-	}  
+	}
 	has_country_shield  = yes
-	
+
 	POL_bohemian_PU = {
 		icon = hussite_regency
 		position = 4
@@ -2095,7 +2087,7 @@ POL_Missions_4_Jagiellon_2 = {
 						limit = {
 							OR = {
 								culture = czech
-								culture = silesian
+								culture = schlesian
 							}
 						}
 						add_nationalism = -10
@@ -2121,9 +2113,9 @@ POL_Missions_4_Piast_2 = {
 				was_tag = POL
 			}
 		}
-	}  
+	}
 	has_country_shield  = yes
-	
+
 	POL_beyond_the_oder = {
 		icon = mission_advance_to_the_dnieper
 		required_missions = { POL_morze }
@@ -2171,9 +2163,9 @@ POL_Missions_4_2 = {
 				was_tag = POL
 			}
 		}
-	}  
+	}
 	has_country_shield  = yes
-	
+
 	POL_curonia = {
 		icon = overseas_empire
 		position = 5
@@ -2201,7 +2193,7 @@ POL_Missions_4_2 = {
 			}
 		}
 	}
-	
+
 	POL_relations_mazovia = {
 		icon = mission_alliances
 		position = 6
@@ -2278,7 +2270,7 @@ POL_Missions_4_2 = {
 			}
 		}
 	}
-	
+
 	POL_integrate_mazovia = {
 		icon = mission_unite_home_region
 		position = 7
@@ -2308,7 +2300,7 @@ POL_Missions_4_2 = {
 			}
 		}
 	}
-	
+
 	POL_cossacks = {
 		icon = mission_recruit_the_cossacks
 		position = 8
@@ -2346,8 +2338,8 @@ POL_Missions_4_2 = {
 			}
 		}
 	}
-	
-	
+
+
 	POL_secure_ukraina = {
 		icon = mission_cathedral_cities
 		required_missions = { POL_muscovy POL_cossacks }
@@ -2376,7 +2368,7 @@ POL_Missions_4_2 = {
 			}
 		}
 	}
-	
+
 	POL_frontier_ruthenia = {
 		icon = mission_land_of_churches
 		position = 10
@@ -2419,7 +2411,7 @@ POL_Missions_4_2 = {
 			}
 		}
 	}
-	
+
 	POL_restore_kiev = {
 		icon = mission_restore_kiev
 		position = 11
@@ -2446,7 +2438,7 @@ POL_Missions_4_2 = {
 			}
 		}
 	}
-	
+
 	POL_bulwark = {
 		icon = me_mission_poland_sobieski
 		position = 12
@@ -2498,12 +2490,12 @@ POL_Missions_4_2 = {
 				duration = 9125
 			}
 			add_mil_power = 50
-			
+
 			set_country_flag = POL_Custom_Cb_flag
 			custom_tooltip = POL_gain_cb_on_ottos
 		}
 	}
-	
+
 	POL_free_the_balkans = {
 		icon = protectors_of_christendom
 		position = 14
@@ -2529,12 +2521,12 @@ POL_Missions_4_2 = {
 				name = POL_defeated_the_ottoman_empire
 				duration = 10950
 			}
-			
+
 			add_papal_influence = 50
 			add_army_tradition_or_mil_power = { amount = 30 }
 		}
 	}
-	
+
 	POL_ruthenian_breadbasket = {
 		icon = prosperity_for_all
 		position = 15
@@ -2570,7 +2562,7 @@ POL_Missions_4_2 = {
 				duration = 10950
 			}
 			custom_tooltip = POL_distribute_10_manpower
-			
+
 			hidden_effect = {
 				for = {
 					amount = 10
@@ -2583,7 +2575,7 @@ POL_Missions_4_2 = {
 			}
 		}
 	}
-	
+
 	POL_printing_press = {
 		icon = victor_for_the_true_faith
 		required_missions = { }
@@ -2609,7 +2601,7 @@ POL_Missions_4_2 = {
 				has_trade_building_trigger = yes
 				has_shipyard_building_trigger = yes
 			}
-			
+
 			OR = {
 				has_institution = new_world_i
 				custom_trigger_tooltip = {
@@ -2623,11 +2615,11 @@ POL_Missions_4_2 = {
 				name = POL_spread_of_ideas
 				duration = 18250
 			}
-			
+
 			add_dip_power = 100
 		}
 	}
-	
+
 	POL_support_barok = {
 		icon = me_mission_poland_noble
 		required_missions = { POL_printing_press }
@@ -2650,7 +2642,7 @@ POL_Missions_4_2 = {
 					has_dlc = "Mandate of Heaven"
 				}
 				OR = {
-					has_had_golden_age = yes 
+					has_had_golden_age = yes
 					num_of_owned_states_with = {
 						custom_trigger_tooltip = {
 							tooltip = POL_prospers
@@ -2666,7 +2658,7 @@ POL_Missions_4_2 = {
 				name = POL_sarmatism
 				duration = 10950
 			}
-			
+
 			define_foreign_advisor = {
 				type = muscovy_architect
 				name = "Giovanni Battista Gisleni"
@@ -2692,9 +2684,9 @@ POL_Missions_5_1 = {
 				was_tag = POL
 			}
 		}
-	} 
+	}
 	has_country_shield  = yes
-	
+
 	POL_rada_krolewska = {
 		icon = mission_noble_council
 		position = 1
@@ -2790,7 +2782,7 @@ POL_Missions_5_1 = {
 			}
 		}
 	}
-	
+
 	POL_estates_of_poland = {
 		icon = appease_the_estates
 		position = 2
@@ -2826,9 +2818,9 @@ POL_Missions_5_Jagiellon = {
 				was_tag = POL
 			}
 		}
-	} 
+	}
 	has_country_shield  = yes
-	
+
 	POL_bohemian_diplomacy = {
 		icon = hungarian_union
 		position = 3
@@ -2903,7 +2895,7 @@ POL_Missions_5_Jagiellon = {
 				hidden_effect = {
 					add_casus_belli = {
 						target = BOH
-						type = cb_restore_personal_union 
+						type = cb_restore_personal_union
 					}
 					country_event = { id = ME_Poland_Events.8 }
 				}
@@ -2951,7 +2943,7 @@ POL_Missions_5_Jagiellon = {
 			tooltip = {
 				add_casus_belli = {
 					target = BOH
-					type = cb_restore_personal_union 
+					type = cb_restore_personal_union
 				}
 				custom_tooltip = PRO_cb_lasts_for_20_years
 				country_event = { id = ME_Poland_Events.8 }
@@ -2966,7 +2958,7 @@ POL_Missions_5_Jagiellon = {
 			}
 		}
 	}
-	
+
 	POL_hungarian_diplomacy = {
 		icon = the_hungarian_succession
 		position = 4
@@ -3037,7 +3029,7 @@ POL_Missions_5_Jagiellon = {
 				hidden_effect = {
 					add_casus_belli = {
 						target = HUN
-						type = cb_restore_personal_union 
+						type = cb_restore_personal_union
 					}
 					set_country_flag = POL_hun_decisions
 				}
@@ -3085,7 +3077,7 @@ POL_Missions_5_Jagiellon = {
 			tooltip = {
 				add_casus_belli = {
 					target = HUN
-					type = cb_restore_personal_union 
+					type = cb_restore_personal_union
 				}
 				custom_tooltip = PRO_cb_lasts_for_20_years
 				#custom_tooltip = POL_extra_decisions
@@ -3100,7 +3092,7 @@ POL_Missions_5_Jagiellon = {
 			}
 		}
 	}
-	
+
 	POL_hungarian_PU = {
 		icon = king_of_hungary
 		position = 6
@@ -3140,7 +3132,7 @@ POL_Missions_5_Jagiellon = {
 			add_prestige_or_monarch_power = { amount = 20 }
 		}
 	}
-	
+
 	POL_unite_jagiellon_states = {
 		icon = unite_the_wittelsbachs
 		position = 7
@@ -3227,9 +3219,9 @@ POL_Missions_5_Piast = {
 				was_tag = POL
 			}
 		}
-	} 
+	}
 	has_country_shield  = yes
-	
+
 	POL_morze = {
 		icon = mission_look_west
 		required_missions = { POL_reconquer_silesia }
@@ -3268,17 +3260,17 @@ POL_Missions_5_Piast = {
 				name = POL_access_to_sea_regained
 				duration = 10950
 			}
-			
+
 			add_country_modifier = {
 				name = POL_west
 				duration = 9125
 			}
-			
+
 			custom_tooltip = POL_tuchola_and_gdansk
 			43 = { set_province_flag = POL_tuchola_and_gdansk }
 			2997 = { set_province_flag = POL_tuchola_and_gdansk }
-			
-			
+
+
 			mecklenburg_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -3302,7 +3294,7 @@ POL_Missions_5_Piast = {
 			}
 		}
 	}
-	
+
 	POL_lusatia = {
 		icon = claim_the_borderlands
 		required_missions = { POL_morze }
@@ -3325,7 +3317,7 @@ POL_Missions_5_Piast = {
 			add_accepted_culture_or_dip_power = { culture = sorbian }
 		}
 	}
-	
+
 	POL_a_show_of_strength = {
 		icon = lead_the_empire
 		required_missions = { POL_lusatia }
@@ -3351,7 +3343,7 @@ POL_Missions_5_Piast = {
 		}
 	}
 }
-	
+
 POL_Missions_5_2 = {
 	slot = 5
 	generic = no
@@ -3365,9 +3357,9 @@ POL_Missions_5_2 = {
 				was_tag = POL
 			}
 		}
-	} 
+	}
 	has_country_shield  = yes
-	
+
 	POL_muscovy = {
 		icon = me_mission_poland_bathory
 		required_missions = { POL_union_of_lublin }
@@ -3511,7 +3503,7 @@ POL_Missions_5_2 = {
 			}
 		}
 	}
-	
+
 	POL_russia = {
 		icon = mission_dethrone_the_rurikovichs
 		required_missions = { POL_muscovy }
@@ -3526,7 +3518,7 @@ POL_Missions_5_2 = {
 				OR = {
 					senior_union_with = RUS
 					AND = {
-						NOT = { 
+						NOT = {
 							exists = MOS
 							exists = RUS
 						}
@@ -3538,7 +3530,7 @@ POL_Missions_5_2 = {
 				OR = {
 					senior_union_with = MOS
 					AND = {
-						NOT = { 
+						NOT = {
 							exists = MOS
 							exists = RUS
 						}
@@ -3588,7 +3580,7 @@ POL_Missions_5_2 = {
 			}
 		}
 	}
-	
+
 	POL_warsaw_confederation = {
 		icon = peace_in_europe
 		position = 11
@@ -3612,8 +3604,8 @@ POL_Missions_5_2 = {
 			country_event = { id = ME_Poland_Events.21 } #Konfederacja Warszawska
 		}
 	}
-	
-	
+
+
 	POL_unitary_church = {
 		icon = eastern_catholicization
 		position = 12
@@ -3633,34 +3625,34 @@ POL_Missions_5_2 = {
 					}
 				}
 			}
-			
+
 		}
 		trigger = {
 			280 = {
 				owned_by = ROOT
 				has_tax_building_trigger = yes
 			}
-			
+
 			custom_trigger_tooltip = {
 				tooltip = LIT_employs_east_slavic
 				OR = {
 					employed_advisor = {
-						culture = russian 
+						culture = russian
 					}
 					employed_advisor = {
-						culture = novgorodian 
+						culture = novgorodian
 					}
 					employed_advisor = {
-						culture = ryazanian 
+						culture = ryazanian
 					}
 					employed_advisor = {
-						culture = byelorussian 
+						culture = byelorussian
 					}
 					employed_advisor = {
 						culture = ruthenian
 					}
 					employed_advisor = {
-						culture = karelian 
+						culture = karelian
 					}
 				}
 			}
@@ -3688,7 +3680,7 @@ POL_Missions_5_2 = {
 			}
 		}
 	}
-	
+
 	POL_gaude_mater_polonia = {
 		icon = spread_piety
 		position = 13
@@ -3729,7 +3721,7 @@ POL_Missions_5_2 = {
 			}
 		}
 	}
-	
+
 	POL_expanding_our_influences = {
 		icon = mission_develop_nevas_port
 		position = 14
@@ -3793,7 +3785,7 @@ POL_Missions_5_2 = {
 				duration = 9125
 			}
 			add_mercantilism = 2
-			
+
 			262 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -3804,7 +3796,7 @@ POL_Missions_5_2 = {
 			}
 		}
 	}
-	
+
 	POL_connections_to_the_east = {
 		icon = mission_reconquer_vologda
 		position = 16

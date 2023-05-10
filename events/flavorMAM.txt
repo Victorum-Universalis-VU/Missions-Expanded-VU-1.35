@@ -58,6 +58,10 @@ country_event = {
 
 	is_triggered_only = yes #mission event now
 	
+	mean_time_to_happen = { 
+		days = 1
+	}
+	
 	trigger = {
 		#tag = MAM
 		#is_year = 1457
@@ -65,9 +69,6 @@ country_event = {
 		#NOT = { is_year = 1459 }
 		#has_regency = no
 		#is_female = no
-	}
-	mean_time_to_happen = {
-		months = 12
 	}
 	option = {
 		name = flavor_mam.2.a
@@ -512,7 +513,7 @@ country_event = {
 		exists = POR
 		manpower_percentage = 0.5
 		owns = 2315
-		1331 = {				#Gulf of Aden
+		4346 = {				#Gulf of Aden
 			is_strongest_trade_power = POR
 		}
 		
@@ -562,7 +563,7 @@ country_event = {
 	option = {
 		name = flavor_mam.15.b
 		add_prestige = -25
-		1331 = {
+		4346 = {
 			add_trade_modifier = {
 				who = root
 				duration = 3650

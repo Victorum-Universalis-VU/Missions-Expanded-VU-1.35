@@ -698,6 +698,7 @@ ROM_missions_3 = {
 				area = scottish_marches_area
 				area = cornwall_area
 				area = south_east_area
+				area = greater_london_area
 				area = west_midlands_area
 				area = wales_area
 				area = armenia_area
@@ -824,6 +825,10 @@ ROM_missions_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			south_east_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			greater_london_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -977,10 +982,6 @@ ROM_missions_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			anhalt_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			hesse_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1938,14 +1939,14 @@ ROM_missions_5 = {
 			}
 			altmark_area = {
 				limit = {
-					NOT = { is_core = ROOT }
+          NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			anhalt_area = {
 				limit = {
-					NOT = { is_core = ROOT }
+				  NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
