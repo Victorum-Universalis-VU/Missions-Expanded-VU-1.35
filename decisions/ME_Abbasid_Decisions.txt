@@ -86,7 +86,8 @@ country_decisions = {
 	Abbasid_put_in_capital = {
 		major = yes
 		potential = {
-		  if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "DON'T BE A LEMON!" }
+		  #if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "DON'T BE A LEMON!" }
+			has_saved_event_target = Caliph_province
 			event_target:Caliph_province = {
 				owned_by = ROOT
 				NOT = { is_capital_of = ROOT }
