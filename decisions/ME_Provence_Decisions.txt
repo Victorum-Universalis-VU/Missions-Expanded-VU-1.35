@@ -5,7 +5,10 @@ country_decisions = {
 			has_country_flag = PRO_form_capet
 		}
 		allow = {
-			NOT = { exists = FRA }
+			AND = {
+				NOT = { exists = FRA }
+				NOT = { exists = BFR }
+			}
 			total_development = 600
 			is_at_war = no
 		}
