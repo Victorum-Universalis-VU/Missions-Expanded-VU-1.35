@@ -808,7 +808,7 @@ ME_Jurchen_Band = {
 	cavalry_weight = 1
 	sprites = {dlc048_nog_sprite_pack asiangfx_sprite_pack }
     trigger = {
-		NOT = { 
+		NOT = {
 			has_government_attribute = enables_horde_idea_group
 			#government = tribal #Or this one, but not government = horde that aint existing
 		}
@@ -987,7 +987,7 @@ ME_French_Musketeers = {
 	sprites = { westerngfx_sprite_pack }
 	trigger = {
 		tag = FRA
-		has_age_ability = ab_france_fire_damage
+		#has_age_ability = ab_france_fire_damage
 	}
 	modifier = {
 		fire_damage_received = -0.2

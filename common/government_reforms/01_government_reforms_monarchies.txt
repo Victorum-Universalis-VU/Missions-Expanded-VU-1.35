@@ -318,6 +318,7 @@ feudal_france_reform = {
 		has_dlc = "Domination"
 		OR = {
 			tag = FRA
+			tag = BFR
 			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = feudal_france_reform
@@ -369,7 +370,10 @@ absolutist_france_reform = {
 		has_dlc = "Domination"
 		OR = {
 			AND = {
-				tag = FRA
+			  OR = {
+				  tag = FRA
+					tag = BFR
+				}
 				OR = {
 					has_reform = absolutist_france_reform
 					have_had_reform = absolutist_france_reform
@@ -386,7 +390,10 @@ absolutist_france_reform = {
 	trigger = {
 		OR = {
 			AND = {
-				tag = FRA
+			  OR = {
+			  	tag = FRA
+			  	tag = BFR
+			  }
 				OR = {
 					has_reform = absolutist_france_reform
 					have_had_reform = absolutist_france_reform
@@ -6083,6 +6090,10 @@ letat_cest_moi_reform = {
 			factor = 2
 			tag = FRA
 		}
+		modifier = {
+			factor = 2
+			tag = BFR
+		}
 	}
 }
 
@@ -6150,6 +6161,10 @@ political_absolutism_reform = {
 		modifier = {
 			factor = 2
 			tag = FRA
+		}
+		modifier = {
+			factor = 2
+			tag = BFR
 		}
 	}
 }

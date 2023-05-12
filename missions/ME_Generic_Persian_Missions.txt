@@ -232,59 +232,20 @@ Generic_Persian_Missions_BAL_2 = {
 	}
 }
 
-Generic_Persian_Missions_PER_2_2 = {
-	slot = 2
-	ai = yes
-	potential = {
-		OR = {
-			tag = SIS
-			tag = BAL
-			tag = KRM
-			tag = ISF
-			tag = YZD
-		}
-	}
-	has_country_shield = no
-
-	PER_abase_timurids = {
-		icon = mission_afghan_frontier
-		required_missions = { PER_exploit_the_discord }
-		position = 3
-		trigger = {
-			if = {
-				limit = {
-					calc_true_if = {
-						all_province = {
-							is_core = TIM
-						}
-						amount = 15
-					}
-					NOT = { has_global_flag = me_tim_flight_to_india_check }
-				}
-				custom_trigger_tooltip = {
-					tooltip = ME_Persian_Generic_Tooltips.8
-					num_of_owned_provinces_with = {
-						is_core = TIM
-						value = 2
-					}
-				}
-			}
-			else = {
-				army_size = 40
-				owns = 446
-			}
-			all_country = {
-				OR = {
-					NOT = { dynasty = "Timurid" }
-					NOT = { army_size = ROOT }
-				}
-			}
-		}
-		effect = {
-			country_event = { id = ME_Persian_Generic_Events.1 }
-		}
-	}
-}
+#Generic_Persian_Missions_PER_2_2 = {
+#	slot = 2
+#	ai = yes
+#	potential = {
+#		OR = {
+#			tag = SIS
+#			tag = BAL
+#			tag = KRM
+#			tag = ISF
+#			tag = YZD
+#		}
+#	}
+#	has_country_shield = no
+#}
 
 Generic_Persian_Missions_PER_3 = {
 	slot = 3
@@ -754,10 +715,56 @@ Generic_Persian_Missions_KRM_YZD_ISF_2 = {
 	}
 	has_country_shield = yes
 
+	PER_abase_timurids = {
+		icon = mission_afghan_frontier
+		required_missions = { PER_exploit_the_discord }
+		position = 3
+		trigger = {
+		  OR = {
+		    tag = SIS
+		    tag = BAL
+		    tag = KRM
+		    tag = ISF
+		    tag = YZD
+	    }
+			if = {
+				limit = {
+					calc_true_if = {
+						all_province = {
+							is_core = TIM
+						}
+						amount = 15
+					}
+					NOT = { has_global_flag = me_tim_flight_to_india_check }
+				}
+				custom_trigger_tooltip = {
+					tooltip = ME_Persian_Generic_Tooltips.8
+					num_of_owned_provinces_with = {
+						is_core = TIM
+						value = 2
+					}
+				}
+			}
+			else = {
+				army_size = 40
+				owns = 446
+			}
+			all_country = {
+				OR = {
+					NOT = { dynasty = "Timurid" }
+					NOT = { army_size = ROOT }
+				}
+			}
+		}
+		effect = {
+			country_event = { id = ME_Persian_Generic_Events.1 }
+		}
+	}
+
 	YZD_KRM_ISF_state_of_the_capital = {
 		icon = mission_advance_to_kalyana
 		required_missions = { PER_improving_the_capital }
-		position = 3
+		position = 4
 		provinces_to_highlight = {
 			is_capital_of = ROOT
 			NOT = { development = 25 }
@@ -780,7 +787,7 @@ Generic_Persian_Missions_KRM_YZD_ISF_2 = {
 	YZD_KRM_ISF_ostan = {
 		icon = mission_central_asian_city
 		required_missions = { YZD_KRM_ISF_state_of_the_capital }
-		position = 4
+		position = 5
 		provinces_to_highlight = {
 			NOT = { development = 15 }
 			area_for_scope_province = {

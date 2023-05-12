@@ -1,8 +1,6 @@
 ME_set_abbasid_caliph_province = {
     hidden_effect = {
         set_global_flag = ME_abbasid_caliph_exists
-				#if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "HEY YOU THERE!" }
-				#if = { limit = { NOT = { has_saved_event_target = Old_caliph_province } } log = "Oi" }
         if = {
             limit = {
                 has_saved_global_event_target = Caliph_province
@@ -17,18 +15,18 @@ ME_set_abbasid_caliph_province = {
         if = { #this if checks if the owner of the caliph changes
             limit = {
                 has_saved_event_target = Old_caliph_province
-                NOT = {
-                    event_target:Old_caliph_province = {
-                        owner = {
-                            ME_has_abbasid_caliph = yes
-                        }
+                event_target:Old_caliph_province = {
+                    owner = {
+                        NOT = { ME_has_abbasid_caliph = yes }
+                        religion = sunni
                     }
                 }
-                religion = sunni
             }
-            owner = {
-                remove_country_modifier = ME_khalifah
-                country_event = { id = ME_Abbasid_Events.8 }
+            event_target:Old_caliph_province = {
+                owner = {
+                    remove_country_modifier = ME_khalifah
+                    country_event = { id = ME_Abbasid_Events.8 }
+                }
             }
         }
     }
