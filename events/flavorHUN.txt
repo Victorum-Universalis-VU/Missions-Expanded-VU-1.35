@@ -21,7 +21,7 @@ country_event = {
 		has_regency = yes
 		has_consort_regency = no
 		is_lesser_in_union = no
-		has_leader = "J�nos Hunyadi"
+		has_leader = "János Hunyadi"
 		is_year = 1445
 		NOT = { is_year = 1470 }
 		has_government_attribute = heir
@@ -38,13 +38,13 @@ country_event = {
 		}
 		name = flavor_hun.1.a
 		define_ruler = {
-			name = "J�nos"
+			name = "János"
 			dynasty = "Hunyadi"
 			DIP = 5
 			ADM = 4
 			MIL = 5
 			age = 39
-			attach_leader = "J�nos Hunyadi"
+			attach_leader = "János Hunyadi"
 		}
 		if = {
 			limit = {
@@ -124,16 +124,16 @@ country_event = {
 		}
 		name = flavor_hun.1.c
 		define_ruler = {
-			name = "J�nos"
+			name = "János"
 			dynasty = "Hunyadi"
 			DIP = 5
 			ADM = 4
 			MIL = 5
 			age = 39
-			attach_leader = "J�nos Hunyadi"
+			attach_leader = "János Hunyadi"
 		}
 		define_heir = {
-			name = "M�ty�s"
+			name = "Mátyás"
 			culture = hungarian
 			dynasty = "Hunyadi"
 			adm = 4
@@ -228,7 +228,7 @@ country_event = {
 		HAB = { remove_historical_friend = HUN }
 		hidden_effect = { clr_country_flag = hun_ladislaus_postumus_heir }
 		define_heir = {
-			name = "M�ty�s"
+			name = "Mátyás"
 			culture = hungarian
 			dynasty = "Hunyadi"
 			adm = 4
@@ -404,7 +404,7 @@ country_event = {
 		HAB = { remove_historical_friend = HUN }
 		kill_heir = { allow_new_heir = no }
 		define_heir = {
-			name = "M�ty�s"
+			name = "Mátyás"
 			culture = hungarian
 			dynasty = "Hunyadi"
 			adm = 4
@@ -502,7 +502,7 @@ country_event = {
 		remove_historical_friend = HAB
 		HAB = { remove_historical_friend = HUN }
 		define_heir = {
-			name = "M�ty�s"
+			name = "Mátyás"
 			culture = hungarian
 			dynasty = "Hunyadi"
 			adm = 4
@@ -853,7 +853,7 @@ country_event = {
 }
 
 #magyar Peasant Revolt
-#Gy�rgy D�zsa
+#György Dózsa
 country_event = {
 	id = flavor_hun.11
 	title = flavor_hun.11.t
@@ -904,7 +904,7 @@ country_event = {
 			spawn_rebels = {
 				type = anti_tax_rebels
 				size = 2
-				leader = "Gy�rgy D�zsa"
+				leader = "György Dózsa"
 			}
 			clr_province_flag = hun_peasant_revolt
 		}
@@ -919,7 +919,7 @@ country_event = {
 	}
 }
 
-#Tam�s Bak�cz
+#Tamás Bakócz
 country_event = {
 	id = flavor_hun.12
 	title = flavor_hun.12.t
@@ -950,7 +950,7 @@ country_event = {
 		add_prestige = 5
 		define_advisor = {
 			type = statesman
-			name = "Tam�s Bak�cz"
+			name = "Tamás Bakócz"
 			culture = hungarian
 			discount = yes
 			skill = 2
@@ -1804,7 +1804,7 @@ country_event = {
 		name = flavor_hun.23.a
 		add_adm_power = 50
 		define_advisor = {
-			name = "Tam�s N�dasdy"
+			name = "Tamás Nádasdy"
 			culture = hungarian
 			type = master_of_mint
 			skill = 3
@@ -1815,7 +1815,7 @@ country_event = {
 		name = flavor_hun.23.b
 		add_dip_power = 50
 		define_advisor = {
-			name = "Tam�s N�dasdy"
+			name = "Tamás Nádasdy"
 			culture = hungarian
 			type = diplomat
 			skill = 3
@@ -1826,7 +1826,7 @@ country_event = {
 		name = flavor_hun.23.c
 		add_mil_power = 50
 		define_advisor = {
-			name = "Tam�s N�dasdy"
+			name = "Tamás Nádasdy"
 			type = fortification_expert
 			culture = hungarian
 			skill = 3
@@ -1893,7 +1893,7 @@ country_event = {
 		change_tag = TRA
 		on_change_tag_effect = yes
 		define_ruler = {
-			name = "J�nos"
+			name = "János"
 			culture = hungarian
 			dynasty = "Z�polya"
 			claim = 95
@@ -2212,7 +2212,7 @@ country_event = {
 }
 
 
-# Tam�s Erd�dy
+# Tamás Erdödy
 country_event = {
 	id = flavor_hun.28
 	title = flavor_hun.28.t
@@ -2235,7 +2235,7 @@ country_event = {
 	option = {
 		name = flavor_hun.28.a
 		define_advisor = {
-			name = "Tam�s Erd�dy"
+			name = "Tamás Erdödy"
 			culture = hungarian
 			skill = 3
 			discount = yes
@@ -2246,7 +2246,7 @@ country_event = {
 	option = {
 		name = flavor_hun.28.b
 		define_general = {
-			name = "Tam�s Erd�dy"
+			name = "Tamás Erdödy"
 			shock = 3
 			fire = 3
 			manuever = 2
@@ -2257,7 +2257,7 @@ country_event = {
 }
 
 
-# Matthias D�vay
+# Matthias Dévay
 country_event = {
 	id = flavor_hun.29
 	title = flavor_hun.29.t
@@ -2310,7 +2310,7 @@ country_event = {
 	option = {
 		name = flavor_hun.29.a
 		define_advisor = {
-			name = "Matthias D�vay"
+			name = "Matthias Dévay"
 			skill = 3
 			discount = yes
 			religion = protestant
@@ -2332,7 +2332,7 @@ country_event = {
 			clr_province_flag = magyar_reform
 		}
 		define_advisor = {
-			name = "Thomas Szalah�zy"
+			name = "Thomas Szalaházy"
 			culture = hungarian
 			religion = catholic
 			skill = 3
@@ -2605,7 +2605,7 @@ country_event = {
 }
 
 
-#Francis (II) R�k�czi
+#Francis (II) Rákóczy
 #Event for independent Hungary
 country_event = {
 	id = flavor_hun.34
@@ -2668,7 +2668,7 @@ country_event = {
 	}
 }
 
-#Francis (II) R�k�czi
+#Francis (II) Rákóczy
 #Event for subjected Hungary
 country_event = {
 	id = flavor_hun.35
@@ -2739,7 +2739,7 @@ country_event = {
 	}
 }
 
-#Francis (II) R�k�czi
+#Francis (II) Rákóczy
 #Event for subjected Hungary
 country_event = {
 	id = flavor_hun.36
@@ -2771,7 +2771,7 @@ country_event = {
 }
 
 
-#Francis (II) R�k�czi
+#Francis (II) Rákóczy
 #Event for subjected Hungary
 country_event = {
 	id = flavor_hun.37
