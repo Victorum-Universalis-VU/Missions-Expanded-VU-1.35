@@ -7,7 +7,7 @@ HAN_missions_1 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	HAN_pommern = {
 		icon = return_visby_to_the_league
 		required_missions = { HAN_brandenburg }
@@ -38,7 +38,7 @@ HAN_missions_1 = {
 			add_navy_tradition = 10
 		}
 	}
-
+	
 	HAN_found_the_state_stud = {
 		icon = mission_recruit_the_cossacks
 		required_missions = { }
@@ -60,7 +60,7 @@ HAN_missions_1 = {
 			country_event = { id = ME_Hannover_Events.2 }
 		}
 	}
-
+	
 	HAN_hanoverian = {
 		icon = mission_cossack_cavalry
 		required_missions = { HAN_found_the_state_stud }
@@ -92,14 +92,14 @@ HAN_missions_1 = {
 			}
 		}
 		effect = {
-			add_prestige_or_monarch_power = { amount = 50 }
+			add_prestige_or_monarch_power = { amount = 50 } 
 			add_country_modifier = {
 				name = HAN_winner_of_tournaments
 				duration = 9125
 			}
 		}
 	}
-
+	
 	HAN_kingdom_for_a_horse = {
 		icon = mission_break_the_tatar_yoke
 		required_missions = { HAN_hanoverian HAN_saxon_circle }
@@ -119,7 +119,7 @@ HAN_missions_1 = {
 			}
 		}
 	}
-
+	
 	HAN_nationalize_horse_breeding = {
 		icon = consolidate_the_stadholders
 		required_missions = { HAN_kingdom_for_a_horse }
@@ -142,7 +142,7 @@ HAN_missions_1 = {
 			}
 		}
 	}
-
+	
 	HAN_france = {
 		icon = establish_the_musketeers
 		required_missions = { HAN_rivalry }
@@ -165,7 +165,7 @@ HAN_missions_1 = {
 						has_won_war_against = { who = FRA }
 						FRA = { is_subject_of = ROOT }
 					}
-				}
+				} 
 			}
 		}
 		effect = {
@@ -179,7 +179,7 @@ HAN_missions_1 = {
 			}
 		}
 	}
-
+	
 	HAN_export_grain = {
 		icon = prosper_in_piedmont
 		required_missions = { HAN_agrarian_economy }
@@ -242,7 +242,7 @@ HAN_missions_2 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	HAN_brandenburg = {
 		icon = tame_brandenburg
 		required_missions = { HAN_hanover }
@@ -253,6 +253,7 @@ HAN_missions_2 = {
 				area = neumark_area
 				area = altmark_area
 				area = anhalt_area
+				area = hesse_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -263,6 +264,7 @@ HAN_missions_2 = {
 					area = neumark_area
 					area = altmark_area
 					area = anhalt_area
+					area = hesse_area
 				}
 				value = 8
 			}
@@ -286,7 +288,7 @@ HAN_missions_2 = {
 			}
 		}
 	}
-
+	
 	HAN_guard = {
 		icon = the_italian_league
 		required_missions = { }
@@ -306,7 +308,7 @@ HAN_missions_2 = {
 			}
 		}
 	}
-
+	
 	HAN_saxon_circle = {
 		icon = hand-picked_bureaucrats
 		required_missions = { HAN_guard }
@@ -356,7 +358,7 @@ HAN_missions_2 = {
 			}
 		}
 	}
-
+	
 	HAN_rivalry = {
 		icon = army_reforms
 		required_missions = { HAN_saxon_circle }
@@ -389,7 +391,7 @@ HAN_missions_2 = {
 			}
 		}
 	}
-
+	
 	HAN_agrarian_economy = {
 		icon = prosperity_for_all
 		required_missions = { }
@@ -417,7 +419,7 @@ HAN_missions_2 = {
 			add_adm_power = 50
 		}
 	}
-
+	
 	HAN_support_the_guilds = {
 		icon = unite_the_league
 		required_missions = { HAN_agrarian_economy }
@@ -451,7 +453,7 @@ HAN_missions_2 = {
 					"
 				}
 			}
-
+			
 			add_country_modifier = {
 				name = HAN_guilds
 				duration = 7300
@@ -469,7 +471,7 @@ HAN_missions_3 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	HAN_saxon = {
 		icon = regal_splendour
 		required_missions = { HAN_hanover }
@@ -500,7 +502,7 @@ HAN_missions_3 = {
 			}
 		}
 	}
-
+	
 	HAN_danish = {
 		icon = construct_the_kiel_canal
 		required_missions = { HAN_guard }
@@ -537,7 +539,7 @@ HAN_missions_3 = {
 					name = HAN_conquest_of_denmark
 					duration = 9125
 				}
-				4149 = {
+				4149 = {	
 					add_trade_modifier = {
 						who = ROOT
 						duration = 10950
@@ -556,7 +558,7 @@ HAN_missions_3 = {
 				add_mil_power = 50
 			}
 			hidden_effect = {
-				if = {
+				if = {	
 					limit = {
 						jutland_area = {
 							type = all
@@ -567,7 +569,7 @@ HAN_missions_3 = {
 						name = HAN_conquest_of_denmark
 						duration = 9125
 					}
-					4149 = {
+					4149 = {	
 						add_trade_modifier = {
 							who = ROOT
 							duration = 10950
@@ -592,7 +594,7 @@ HAN_missions_3 = {
 			}
 		}
 	}
-
+	
 	HAN_emperorship = {
 		icon = the_viennese_waltz
 		required_missions = { HAN_dynastic_games }
@@ -644,26 +646,20 @@ HAN_missions_3 = {
 			}
 		}
 	}
-
+	
 	HAN_bavaria_PU = {
 		icon = duchy_of_bavaria
 		required_missions = { HAN_henry }
 		position = 12
 		provinces_to_highlight = {
-			OR = {
-				area = bavaria_area
-				area = tirol_area
-			}
+			area = bavaria_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
 				senior_union_with = BAV
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					OR = {
-						area = bavaria_area
-						area = tirol_area
-					}
+					area = bavaria_area
 					value = 8
 				}
 			}
@@ -733,7 +729,7 @@ HAN_missions_3 = {
 			create_general = { tradition = 80 }
 		}
 	}
-
+	
 	HAN_manufactories = {
 		icon = saxon_manufacturing
 		required_missions = { HAN_support_trade HAN_agrarian_economy }
@@ -766,7 +762,7 @@ HAN_missions_4 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	HAN_westphalia = {
 		icon = develop_konigsberg
 		required_missions = { HAN_hanover }
@@ -819,7 +815,7 @@ HAN_missions_4 = {
 			}
 		}
 	}
-
+	
 	HAN_franken = {
 		icon = conquer_franconia
 		required_missions = { HAN_rhineland }
@@ -841,13 +837,6 @@ HAN_missions_4 = {
 			}
 		}
 		effect = {
-			tirol_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			bavaria_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -855,30 +844,25 @@ HAN_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			
 			add_country_modifier = {
 				name = HAN_franconians
 				duration = 9125
 			}
 		}
 	}
-
+	
 	HAN_bavaria = {
 		icon = establish_oktoberfest
 		required_missions = { HAN_franken HAN_swabia }
 		position = 8
 		provinces_to_highlight = {
-			OR = {
-				area = bavaria_area
-				area = tirol_area
-			}
+			area = bavaria_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					area = bavaria_area
-					area = tirol_area
-				}
+				area = bavaria_area
 				value = 8
 			}
 		}
@@ -890,7 +874,7 @@ HAN_missions_4 = {
 			}
 		}
 	}
-
+	
 	HAN_dynastic_games = {
 		icon = feast_of_pheasants
 		required_missions = { HAN_salic_law }
@@ -919,7 +903,7 @@ HAN_missions_4 = {
 			}
 		}
 	}
-
+	
 	HAN_henry = {
 		icon = rein_in_the_nobles
 		required_missions = { HAN_dynastic_games }
@@ -943,9 +927,9 @@ HAN_missions_4 = {
 			}
 		}
 		effect = {
-			custom_tooltip = HAN_if_a_unified_BAV_nation_exists
+			custom_tooltip = HAN_if_a_unified_BAV_nation_exists 
 			custom_tooltip = PRO_cb_lasts_for_20_years
-			custom_tooltip = HAN_if_a_PAL_nation_exists
+			custom_tooltip = HAN_if_a_PAL_nation_exists 
 			custom_tooltip = PRO_cb_lasts_for_20_years
 			custom_tooltip = HAN_get_pu_cb_on_every_bavarian_nation
 			every_country = {
@@ -955,7 +939,7 @@ HAN_missions_4 = {
 				}
 				reverse_add_casus_belli = {
 					target = ROOT
-					type = cb_vassalize_mission
+					type = cb_vassalize_mission 
 					months = 10000
 				}
 			}
@@ -967,7 +951,7 @@ HAN_missions_4 = {
 					}
 					add_casus_belli = {
 						target = BAV
-						type = cb_restore_personal_union
+						type = cb_restore_personal_union 
 					}
 				}
 				if = {
@@ -977,13 +961,13 @@ HAN_missions_4 = {
 					}
 					add_casus_belli = {
 						target = PAL
-						type = cb_restore_personal_union
+						type = cb_restore_personal_union 
 					}
 				}
 			}
 		}
 	}
-
+	
 	HAN_palatine_PU = {
 		icon = unite_the_wittelsbachs
 		required_missions = { HAN_henry }
@@ -1024,7 +1008,7 @@ HAN_missions_4 = {
 			}
 		}
 	}
-
+	
 	HAN_game_of_thrones = {
 		icon = spread_the_von_wettins
 		required_missions = { HAN_palatine_PU HAN_bavaria_PU HAN_england_PU }
@@ -1053,7 +1037,7 @@ HAN_missions_4 = {
 			}
 		}
 		effect = {
-			custom_tooltip = HAN_special_event_tooltip
+			custom_tooltip = HAN_special_event_tooltip 
 			set_country_flag = HAN_throne_decision
 			add_country_modifier = {
 				name = HAN_throne_game
@@ -1061,7 +1045,7 @@ HAN_missions_4 = {
 			}
 		}
 	}
-
+	
 	HAN_support_trade = {
 		icon = purely_for_commerce
 		required_missions = { }
@@ -1094,12 +1078,12 @@ HAN_missions_4 = {
 				has_trade_building_trigger = yes
 				value = 3
 			}
-			45 = {
+			45 = { 
 				country_or_non_sovereign_subject_holds = ROOT
 				has_trade_building_trigger = yes
 			}
 		}
-		effect = {
+		effect = {	
 			45 = {
 				add_or_upgrade_trade_building = yes
 			}
@@ -1112,7 +1096,7 @@ HAN_missions_4 = {
 			}
 		}
 	}
-
+	
 	HAN_mint = {
 		icon = medici_bank_ledgers
 		required_missions = { HAN_support_trade }
@@ -1137,7 +1121,7 @@ HAN_missions_5_1 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	HAN_rhineland = {
 		icon = levee_the_arno
 		required_missions = { HAN_westphalia }
@@ -1215,7 +1199,7 @@ HAN_missions_5_1 = {
 			}
 		}
 	}
-
+	
 	HAN_swabia = {
 		icon = mercenary_companies
 		required_missions = { HAN_rhineland }
@@ -1247,13 +1231,6 @@ HAN_missions_5_1 = {
 				hidden = yes
 			}
 			custom_tooltip = WES_more_mercs
-			tirol_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			bavaria_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1263,7 +1240,7 @@ HAN_missions_5_1 = {
 			}
 		}
 	}
-
+	
 	HAN_salic_law = {
 		icon = avoid_fragmentation
 		required_missions = { }
@@ -1292,7 +1269,7 @@ HAN_missions_5_salic = {
 		has_country_flag = HAN_electorship_mission
 	}
 	has_country_shield = yes
-
+	
 	HAN_electorship = {
 		icon = invest_in_the_provinces
 		required_missions = { HAN_salic_law }
@@ -1343,7 +1320,7 @@ HAN_missions_5_salic = {
 						country_event = { id = ME_Hannover_Events.8 }
 					}
 				}
-			}
+			} 
 			add_country_modifier = {
 				name = HAN_electoral_dignity
 				duration = 7300
@@ -1362,7 +1339,7 @@ HAN_missions_5_2 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	HAN_meddle_in_england = {
 		icon = mission_rb_invade_england
 		required_missions = { HAN_dynastic_games }
@@ -1408,7 +1385,7 @@ HAN_missions_5_2 = {
 			custom_tooltip = HAN_if_a_GBR_or_ENG_nation_exists
 			custom_tooltip = PRO_cb_lasts_for_20_years
 			custom_tooltip = HAN_perma_claims_on_ENG_and_GBR_core_land
-			greater_london_area = {
+			south_east_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -1423,7 +1400,7 @@ HAN_missions_5_2 = {
 					}
 					add_casus_belli = {
 						target = GBR
-						type = cb_restore_personal_union
+						type = cb_restore_personal_union 
 					}
 				}
 				else_if = {
@@ -1433,7 +1410,7 @@ HAN_missions_5_2 = {
 					}
 					add_casus_belli = {
 						target = ENG
-						type = cb_restore_personal_union
+						type = cb_restore_personal_union 
 					}
 				}
 				ENG = {
@@ -1457,7 +1434,7 @@ HAN_missions_5_2 = {
 			}
 		}
 	}
-
+	
 	HAN_england_PU = {
 		icon = mission_rb_empire
 		required_missions = { HAN_meddle_in_england }
@@ -1488,7 +1465,7 @@ HAN_missions_5_2 = {
 			}
 		}
 	}
-
+	
 	HAN_trade_ostsee = {
 		icon = develop_provence
 		required_missions = { HAN_support_trade }
@@ -1501,7 +1478,7 @@ HAN_missions_5_2 = {
 				has_most_province_trade_power = ROOT
 			}
 		}
-		effect = {
+		effect = {	
 			add_years_of_income = 1
 			custom_tooltip = HAN_if_we_have_trader_cut_some_dip_cost
 			tooltip = {

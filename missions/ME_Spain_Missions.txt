@@ -2461,7 +2461,7 @@ SPA_missions_4 = {
 			owns_core_province = 4371
 		}
 		effect = {
-			greater_london_area = {
+			south_east_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2486,14 +2486,6 @@ SPA_missions_4 = {
 				add_claim = ROOT
 			}
 			cornwall_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			south_east_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2732,6 +2724,7 @@ SPA_missions_5 = {
 				area = palawan_area
 				area = visayas_area
 				area = mindanao_area
+				area = sulu_archipelago_area
 			}
 			has_discovered = ROOT
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -2745,6 +2738,7 @@ SPA_missions_5 = {
 					area = palawan_area
 					area = visayas_area
 					area = mindanao_area
+					area = sulu_archipelago_area
 				}
 			}
 		}

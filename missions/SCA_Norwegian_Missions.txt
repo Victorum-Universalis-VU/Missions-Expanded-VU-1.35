@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 nor_colonialism_mission_slot = {
 	slot = 1
 	generic = no
@@ -18,7 +19,7 @@ nor_colonialism_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_handle_the_burghers = {
 		icon = hungarian_union
 		position = 1
@@ -61,7 +62,7 @@ nor_colonialism_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_north_sea_markets = {
 		icon = mission_fish_markets
 		position = 2
@@ -130,7 +131,7 @@ nor_colonialism_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_dominate_trade = {
 		icon = mission_rb_scottish_north_sea_trade
 		position = 3
@@ -207,7 +208,7 @@ nor_colonialism_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_the_great_disovery_fleet = {
 		icon = mission_norwegian_ship
 		position = 4
@@ -239,7 +240,7 @@ nor_colonialism_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_discover_new_world = {
 		icon = mission_invade_island
 		position = 5
@@ -359,7 +360,7 @@ nor_colonize_north_america_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_colonize_canada_and_na = {
 		icon = mission_rb_colonise_canada
 		position = 6
@@ -487,7 +488,7 @@ nor_colonize_north_america_slot = {
 			}
 		}
 	}
-
+	
 	nor_colonize_the_north = {
 		icon = settle_north_america
 		position = 7
@@ -561,7 +562,7 @@ nor_colonize_random_new_world_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_colonize_new_world = {
 		icon = mission_settlers_north_america
 		position = 6
@@ -588,7 +589,7 @@ nor_colonize_random_new_world_slot = {
 			}
 		}
 	}
-
+	
 	nor_dominate_new_world = {
 		icon = settle_north_america
 		position = 7
@@ -666,7 +667,7 @@ nor_conquest_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_find_allies = {
 		icon = mission_alliances
 		position = 1
@@ -726,7 +727,7 @@ nor_conquest_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_build_navy = {
 		icon = imperial_navy
 		position = 2
@@ -753,7 +754,7 @@ nor_conquest_mission_slot = {
 			add_navy_tradition = 10
 		}
 	}
-
+	
 	nor_get_colonial = {
 		icon = mission_colonial
 		position = 3
@@ -780,7 +781,7 @@ nor_conquest_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_conquer_scotland = {
 		icon = mission_rb_conquer_scotland
 		position = 4
@@ -907,7 +908,7 @@ nor_colonize_middle_america_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_colonize_greenland = {
 		icon = mission_rb_settle_the_north
 		position = 5
@@ -994,7 +995,7 @@ nor_colonize_middle_america_slot = {
 					}
 				}
 				else = {
-					custom_tooltip = nor_colonize_greenland_bt
+					custom_tooltip = nor_colonize_greenland_vu
 				}
 				if = {
 					limit = {
@@ -1020,7 +1021,7 @@ nor_colonize_middle_america_slot = {
 			}
 		}
 	}
-
+	
 	nor_colonize_mexico = {
 		icon = mission_war_chest
 		position = 6
@@ -1074,7 +1075,7 @@ nor_circumnavigate_the_world_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_circumnavigate_the_world = {
 		icon = mission_explore_the_world
 		position = 7
@@ -1151,7 +1152,7 @@ nor_circumnavigate_the_world_slot = {
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = nor_circumnavigate_the_world_bt
+				tooltip = nor_circumnavigate_the_world_vu
 				OR = {
 					AND = {
 						OR = {
@@ -1223,7 +1224,7 @@ nor_kalmar_union_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_declare_independence = {
 		icon = mission_norwegian_independence
 		position = 2
@@ -1261,7 +1262,7 @@ nor_kalmar_union_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_get_independent = {
 		icon = mission_norways_is_independent
 		position = 3
@@ -1333,11 +1334,11 @@ nor_kalmar_union_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_norway_denmark = {
 		icon = mission_crown_of_denmark
 		position = 5
-		required_missions = {
+		required_missions = { 
 			nor_get_independent
 			nor_restore_norwegian_nobility
 		}
@@ -1423,7 +1424,7 @@ nor_dominate_colonialism_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_colonize_caribbeans = {
 		icon = explore_caribbean
 		position = 6
@@ -1508,7 +1509,7 @@ nor_development_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_build_troops = {
 		icon = mission_norwegian_royal_army
 		position = 1
@@ -1526,7 +1527,7 @@ nor_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_restore_the_leidang = {
 		icon = mission_marines
 		position = 2
@@ -1566,7 +1567,7 @@ nor_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_the_grand_norwegian_fleet = {
 		icon = mission_rb_a_mighty_fleet
 		position = 3
@@ -1596,7 +1597,7 @@ nor_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_restore_norwegian_nobility = {
 		icon = mission_noble_council
 		position = 4
@@ -1621,7 +1622,7 @@ nor_development_mission_slot = {
 			add_government_reform = norwegian_parliamentary_monarchy
 		}
 	}
-
+	
 	nor_an_absolute_kingdom = {
 		icon = mission_monarch_in_throne_room
 		position = 6
@@ -1719,7 +1720,7 @@ nor_west_africa_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_colonize_west_africa = {
 		icon = mission_west_african_ports
 		position = 7
@@ -1786,7 +1787,7 @@ nor_army_and_religion_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_fortify_norway = {
 		icon = alpine_fortifications
 		position = 1
@@ -1815,7 +1816,7 @@ nor_army_and_religion_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_restore_infrastructure = {
 		icon = mission_have_manufactories
 		position = 2
@@ -1859,7 +1860,7 @@ nor_army_and_religion_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_industrialize_norway = {
 		icon = mission_state_manufactories
 		position = 3
@@ -1894,11 +1895,11 @@ nor_army_and_religion_mission_slot = {
 			}
 		}
 	}
-
+	
 	nor_powerhouse_of_the_north = {
 		icon = mission_norwegian_great_power
 		position = 4
-		required_missions = {
+		required_missions = { 
 			nor_industrialize_norway
 			nor_the_grand_norwegian_fleet
 		}
@@ -1964,7 +1965,7 @@ nor_religion_start_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_religious_path_mission = {
 		icon = catholic_confraternity
 		position = 5
@@ -1975,7 +1976,7 @@ nor_religion_start_mission_slot = {
 		}
 		trigger = {
 			if = {
-				limit = {
+				limit = { 
 					religion = norse_pagan_reformed
 				}
 				OR = {
@@ -2069,7 +2070,7 @@ nor_religion_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_second_religion_mission = {
 		icon = mission_unknown_mission
 		position = 6
@@ -2174,7 +2175,7 @@ nor_religion_mission_slot = {
 			add_years_of_income = 0.5
 		}
 	}
-
+	
 	nor_third_religion_mission = {
 		icon = mission_unknown_mission
 		position = 7
@@ -2684,7 +2685,7 @@ nor_norse_mission_slot = {
 				has_manpower_building_trigger = yes
 				value = 10
 			}
-			1 = {
+			1 = { 
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
@@ -2720,7 +2721,7 @@ nor_norse_mission_slot = {
 			}
 			british_isles_region = {
 				limit = {
-					NOT = { is_core = ROOT }
+					NOT = { is_core = ROOT } 
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
@@ -2780,7 +2781,7 @@ nor_sca_colonize_more_na_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_sca_rio_grande_and_california = {
 		icon = mission_southern_frontier_lotn
 		position = 8
@@ -2794,7 +2795,7 @@ nor_sca_colonize_more_na_slot = {
 			OR = {
 				is_city = no
 				country_or_non_sovereign_subject_holds = ROOT
-			}
+			}			
 			NOT = { has_manufactory_trigger = yes }
 			NOT = { has_production_building_trigger = yes }
 			NOT = { has_trade_building_trigger = yes }
@@ -2876,7 +2877,7 @@ nor_sca_colonize_more_na_slot = {
 			}
 		}
 	}
-
+	
 	nor_dominate_north_america = {
 		icon = mission_ruler_of_north_america
 		position = 9
@@ -2967,7 +2968,7 @@ nor_sca_colonize_sa_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_sca_control_the_panama = {
 		icon = mission_colonize_panama
 		position = 7
@@ -3020,7 +3021,7 @@ nor_sca_colonize_sa_slot = {
 			}
 		}
 	}
-
+	
 	nor_sca_norwegian_colombia = {
 		icon = mission_new_kingdom_of_granada
 		position = 8
@@ -3089,7 +3090,7 @@ nor_sca_colonize_peru_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_sca_norwegian_peru = {
 		icon = mission_potosi_silver
 		position = 8
@@ -3113,7 +3114,7 @@ nor_sca_colonize_peru_slot = {
 			add_treasury = 1000
 		}
 	}
-
+	
 	nor_sca_colonial_empire = {
 		icon = mission_norwegian_south_america
 		position = 9
@@ -3208,7 +3209,7 @@ nor_sca_charter_west_africa_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_sca_landgrab_of_west_africa = {
 		icon = mission_the_songhai_campaign
 		position = 8
@@ -3246,7 +3247,7 @@ nor_sca_charter_west_africa_slot = {
 			}
 		}
 	}
-
+	
 	nor_sca_consolidate_west_africa = {
 		icon = mission_african_gold
 		position = 9
@@ -3293,26 +3294,26 @@ nor_sca_south_africa_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_sca_land_fall_in_congo = {
 		icon = mission_invade_kanem
 		position = 8
 		required_missions = { nor_colonize_west_africa }
-
+		
 		provinces_to_highlight = {
 			region = kongo_region
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
-
-		trigger = {
+		
+		trigger = { 
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_kongo
 				kongo_region = {
 					has_discovered = ROOT
 				}
 			}
-			custom_trigger_tooltip = {
+			custom_trigger_tooltip = {	
 				tooltip = miss_colonize_kongo
 				kongo_region = {
 					owned_by = ROOT
@@ -3320,7 +3321,7 @@ nor_sca_south_africa_slot = {
 				}
 			}
 		}
-
+	
 		effect = {
 			hidden_effect = {
 				4097 = {
@@ -3344,7 +3345,7 @@ nor_sca_south_africa_slot = {
 			}
 		}
 	}
-
+	
 	nor_sca_the_cape = {
 		icon = colonize_the_cape
 		position = 9
@@ -3387,7 +3388,7 @@ nor_sca_navy_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_sca_a_high_income = {
 		icon = mission_high_income
 		position = 9
@@ -3408,7 +3409,7 @@ nor_sca_navy_slot = {
 			}
 		}
 	}
-
+	
 	nor_sca_kingdom_on_sea = {
 		icon = mission_naval_kingdom
 		position = 11
@@ -3481,7 +3482,7 @@ nor_sca_marine_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_sca_expand_marines = {
 		icon = mission_expanded_leidang
 		position = 10
@@ -3540,7 +3541,7 @@ nor_sca_mighty_fleet_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_sca_a_mighty_fleet = {
 		icon = mission_launch_a_flagship
 		position = 10
@@ -3598,7 +3599,7 @@ nor_sca_internal_development = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_sca_handle_the_sami = {
 		icon = mission_the_sami
 		position = 10
@@ -3616,19 +3617,19 @@ nor_sca_internal_development = {
 			}
 		}
 		trigger = {
-			laponia_area = {
+			laponia_area = { 
 				owned_by = ROOT
 				religion = ROOT
 				has_owner_accepted_culture = yes
 				type = all
 			}
-			norrland_area = {
+			norrland_area = { 
 				owned_by = ROOT
 				religion = ROOT
 				has_owner_accepted_culture = yes
 				type = all
 			}
-			bothnia_area = {
+			bothnia_area = { 
 				owned_by = ROOT
 				religion = ROOT
 				has_owner_accepted_culture = yes
@@ -3653,7 +3654,7 @@ nor_sca_internal_development = {
 			}
 		}
 	}
-
+	
 	nor_sca_forest_expansion = {
 		icon = mission_expand_into_the_forest
 		position = 11
@@ -3728,7 +3729,7 @@ nor_sca_conquest = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	nor_sca_conquer_the_enterpots = {
 		icon = mission_hanseatic_city
 		position = 10
@@ -3865,7 +3866,7 @@ nor_sca_conquest = {
 			}
 		}
 	}
-
+	
 	nor_sca_dominate_the_baltic_sea = {
 		icon = mission_baltic_empire
 		position = 11

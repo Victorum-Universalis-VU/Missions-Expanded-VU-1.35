@@ -1,3 +1,4 @@
+#VU updated by San Felipe for 1.35 # Amended by Altan for EE-VU
 tr_novgorod_1 = {
 	slot = 1
 	generic = no
@@ -6,7 +7,10 @@ tr_novgorod_1 = {
 		has_dlc = "Third Rome"
 	}
 	potential = {
-		tag = NOV
+		OR = {
+			tag = NOV
+			tag = NRU
+		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
@@ -21,7 +25,6 @@ tr_novgorod_1 = {
 				province_id = 314
 				province_id = 4262
 				province_id = 1755
-				province_id = 4129
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -31,101 +34,93 @@ tr_novgorod_1 = {
 			owns = 314
 			owns = 4262
 			owns = 1755
-			owns = 4129
 		}
 		effect = {
-			4249 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			294 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			4248 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			vologda_area = {
+			#Tver claims
+			tver_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			beloozero_area = {
+			#Muscovy claims. I'm going a bit overboard here because chances are Muscovy will expand, thus resulting in a situation where they have way more provinces than you got claims for.
+			vologda_area = { #Sukhoma
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			galich_area = {
+			yaroslavl_area = { #Yaroslavl
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			moscow_area = {
+			beloozero_area = { #Bezhetsk
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			suzdal_area = {
+			suzdal_area = { #Zalesye
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			vladimir_area = {
+			moscow_area = { #Moscow
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			yaroslavl_area = {
+			ryazan_area = { #Ryazan
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			1752 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			galich_area = { #Upper Don
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
+			}
+			perm_area = { #Perm
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vyatka_area = { #Vyatka
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kazan_area = { #Kazan
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pskov_area = { #Pskov
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -134,49 +129,41 @@ tr_novgorod_1 = {
 		required_missions = { nov_recover_cores }
 		provinces_to_highlight = {
 			OR = {
-				area = vologda_area
-				area = beloozero_area
-				area = galich_area
+				region = russia_region
+				region = ural_region
+				region = scandinavia_region
+			}
+			OR = {
+				owner = { tag = MOS }
+				owner = { is_subject_of = MOS }
 				area = moscow_area
-				area = suzdal_area
-				area = vladimir_area
-				area = yaroslavl_area
-				province_id = 1752
 			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			vologda_area = {
+			russia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					NOT = { owned_by = MOS }
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
-			beloozero_area = {
+			ural_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					NOT = { owned_by = MOS }
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
-			galich_area = {
+			scandinavia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					NOT = { owned_by = MOS }
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 			moscow_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			suzdal_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			vladimir_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			yaroslavl_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			1752 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -185,30 +172,12 @@ tr_novgorod_1 = {
 				name = "nov_defeated_muscovy"
 				duration = 7300
 			}
-			oka_area = {
+			russia_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			ryazan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			2408 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
 			}
 		}
 	}
@@ -222,7 +191,10 @@ tr_novgorod_2 = {
 		has_dlc = "Third Rome"
 	}
 	potential = {
-		tag = NOV
+		OR = {
+			tag = NOV
+			tag = NRU
+		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
@@ -234,23 +206,22 @@ tr_novgorod_2 = {
 		required_missions = { nov_recover_cores }
 		position = 2
 		provinces_to_highlight = {
+			region = russia_region
 			OR = {
-				province_id = 4249
+				owner = { tag = TVE }
 				province_id = 294
-				province_id = 4248
 			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			4249 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			russia_region = {
+				type = all
+				OR = {
+					NOT = { owned_by = TVE }
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 			294 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4248 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -264,27 +235,12 @@ tr_novgorod_2 = {
 					duration = 7300
 				}
 			}
-			274 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			russia_region = {
+				limit = {
+					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 				}
-			}
-			1960 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -294,17 +250,12 @@ tr_novgorod_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = oka_area
-				area = ryazan_area
-				province_id = 2408
-				province_id = 274
-				province_id = 1960
+				area = galich_area
+				area = pskov_area
 				owner = {
 					AND = {
 						dynasty = "Rurikovich"
-						OR = {
-							culture_group = east_slavic
-							culture_group = slavic
-						}
+						culture_group = east_slavic
 					}
 				}
 			}
@@ -317,10 +268,7 @@ tr_novgorod_2 = {
 				any_country = {
 					AND = {
 						dynasty = "Rurikovich"
-						OR = {
-							culture_group = east_slavic
-							culture_group = slavic
-						}
+						culture_group = east_slavic
 						NOT = {
 							is_subject_of = ROOT
 						}
@@ -331,17 +279,11 @@ tr_novgorod_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			ryazan_area = {
+			galich_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			2408 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			274 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			1960 = {
+			pskov_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -362,7 +304,10 @@ tr_novgorod_3 = {
 		has_dlc = "Third Rome"
 	}
 	potential = {
-		tag = NOV
+		OR = {
+			tag = NOV
+			tag = NRU
+		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
@@ -467,7 +412,7 @@ tr_novgorod_3 = {
 			43 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1926 = {
+			43 = { #Baltic Sea split.
 				is_strongest_trade_power = ROOT
 			}
 		}
@@ -525,6 +470,7 @@ tr_novgorod_3 = {
 					province_id = 45
 					NOT = { is_strongest_trade_power = ROOT }
 				}
+					
 			}
 		}
 		trigger = {
@@ -554,13 +500,13 @@ tr_novgorod_3 = {
 		required_missions = { nov_conquer_lubeck nov_scandinavian_ports  }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 33
+				province_id = 310
 				province_id = 1652
 			}
 		}
 		trigger = {
 			OR = {
-				33 = {
+				310 = {
 					highest_value_trade_node = yes
 					is_strongest_trade_power = ROOT
 				}
@@ -590,7 +536,10 @@ tr_novgorod_4 = {
 		has_dlc = "Third Rome"
 	}
 	potential = {
-		tag = NOV
+		OR = {
+			tag = NOV
+			tag = NRU
+		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
@@ -601,11 +550,11 @@ tr_novgorod_4 = {
 		icon = mission_found_arkhangelsk
 		required_missions = {  }
 		provinces_to_highlight = {
-			province_id = 1955
+			province_id = 313
 		}
 		trigger = {
-			owns = 1955
-			1955 = {
+			owns = 313
+			313 = {
 				OR = {
 					has_building = marketplace
 					has_building = dock
@@ -613,12 +562,17 @@ tr_novgorod_4 = {
 			}
 		}
 		effect = {
-			1955 = {
-				change_province_name = "Arkhangelsk"
-				rename_capital = "Arkhangelsk"
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
+		    1955 = {
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+				add_center_of_trade_level = -1
+			}
+			313 = {
+				center_of_trade = 2
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 3
 				add_province_modifier = {
 					name = "arkhangelsk_modifier"
 					duration = -1
@@ -638,6 +592,48 @@ tr_novgorod_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			#vychegda_area = { #Not sure what to replace that with or if it should be replaced.
+			#	limit = {
+			#		NOT = { is_core = ROOT }
+			#		NOT = { is_permanent_claim = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
+			laponia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pechora_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pomor_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			arkhangelsk_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			karelia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	nov_white_sea = {
@@ -645,8 +641,12 @@ tr_novgorod_4 = {
 		required_missions = { nov_arkhangelsk }
 		provinces_to_highlight = {
 			OR = {
-				area = perm_area
+				#area = vychegda_area
 				area = laponia_area
+				area = pechora_area
+				area = pomor_area
+				area = arkhangelsk_area
+				area = karelia_area
 				province_id = 1652
 			}
 			OR = {
@@ -660,11 +660,30 @@ tr_novgorod_4 = {
 			1652 = {
 				is_strongest_trade_power = ROOT
 			}
-			perm_area = {
+			laponia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			laponia_area = {
+			pechora_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			#vychegda_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			pomor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			arkhangelsk_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			karelia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -685,18 +704,21 @@ tr_novgorod_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			30 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			west_karelia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			northern_norway = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			trondelag_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -717,16 +739,17 @@ tr_novgorod_4 = {
 		required_missions = { nov_white_sea  }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 30
 				area = finland_area
 				area = bothnia_area
+				area = west_karelia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			30 = {
+			west_karelia_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			finland_area = {
@@ -839,7 +862,10 @@ tr_novgorod_5 = {
 		has_dlc = "Third Rome"
 	}
 	potential = {
-		tag = NOV
+		OR = {
+			tag = NOV
+			tag = NRU
+		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
@@ -912,6 +938,7 @@ tr_novgorod_5 = {
 				AND = {
 					province_id = 1975
 					NOT = { is_strongest_trade_power = ROOT }
+												  
 				}
 			}
 		}

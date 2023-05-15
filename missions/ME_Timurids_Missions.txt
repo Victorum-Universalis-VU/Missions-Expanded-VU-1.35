@@ -196,7 +196,7 @@ TIM_crisis_missions_2 = {
 							}
 							employed_advisor = {
 								category = ADM
-								culture = afghani
+								culture = afghan
 							}
 						}
 					}
@@ -215,7 +215,7 @@ TIM_crisis_missions_2 = {
 							}
 							employed_advisor = {
 								category = DIP
-								culture = afghani
+								culture = afghan
 							}
 						}
 					}
@@ -234,7 +234,7 @@ TIM_crisis_missions_2 = {
 							}
 							employed_advisor = {
 								category = MIL
-								culture = afghani
+								culture = afghan
 							}
 						}
 					}

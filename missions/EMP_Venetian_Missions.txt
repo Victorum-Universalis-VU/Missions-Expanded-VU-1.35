@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 emp_ven_slot_1 = {
 	slot = 1
 	generic = no
@@ -298,12 +299,44 @@ emp_ven_slot_3 = {
 		required_missions = { emp_ven_hire_more_venture_captains }
 		
 		trigger = {
-			total_development = 200
+			total_development = 500
 		}
 		effect = {
 			add_country_modifier = {
 				name = ven_mercenaries_paid_with_land
 				duration = 7300
+			}
+			emilia_romagna_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			emilia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			109 = {
+				if = {
+					limit = {
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			7081 = {
+				if = {
+					limit = {
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
 			}
 		}
 	}
@@ -331,7 +364,7 @@ emp_ven_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			emilia_romagna_area = {
+			upper_emilia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -350,7 +383,7 @@ emp_ven_slot_3 = {
 			OR = {
 				area = lombardy_area
 				area = po_valley_area
-				area = emilia_romagna_area
+				area = upper_emilia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -363,13 +396,20 @@ emp_ven_slot_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			emilia_romagna_area = {
+			upper_emilia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			tirol_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			trentino_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -385,11 +425,18 @@ emp_ven_slot_3 = {
 		required_missions = { emp_ven_north_italian_rivals }
 		
 		provinces_to_highlight = {
-			area = tirol_area
+			OR = {	
+				area = tirol_area
+				area = trentino_area 
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			tirol_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			trentino_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -541,6 +588,17 @@ emp_ven_slot_4 = {
 				name = "ven_genoese_humiliation"
 				duration = 3650
 			}
+			101 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 	
@@ -640,6 +698,27 @@ emp_ven_slot_5 = {
 		effect = {
 			add_mercantilism = 2
 			add_dip_power = 100
+			aegean_archipelago_area	= {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_mediterrenean_islands_area 	= {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			morea_area 	= {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -649,21 +728,22 @@ emp_ven_slot_5 = {
 		required_missions = { emp_ven_monopolize_adriatic_trade emp_ven_expand_the_arsenal }
 		
 		provinces_to_highlight = {
-			OR = {
-				area = morea_area
-				area = aegean_archipelago_area
+				province_id = 5493
+			NOT = {
+				trade_share = {
+					country = ROOT
+					share = 25
+				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-		morea_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			5493 = {
+				trade_share = {
+					country = ROOT
+					share = 25
+				}
 			}
-			aegean_archipelago_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+
 		}
 		effect = {
 			151 = {
@@ -677,16 +757,12 @@ emp_ven_slot_5 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			321 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			cyprus_area	= {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -697,13 +773,14 @@ emp_ven_slot_5 = {
 		required_missions = { emp_ven_reclaim_the_aegean }
 		
 		provinces_to_highlight = {
-			province_id = 321
+			area = cyprus_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			321 = {
+			cyprus_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -833,7 +910,7 @@ emp_ven_slot_5 = {
 						superregion = east_indies_superregion
 					}
 				}
-				amount = 10
+				amount = 20
 			}
 			1340 = { # Coromandel
 				is_strongest_trade_power = ROOT

@@ -1,16 +1,16 @@
 KHM_missions_1 = {
 	slot = 1
-	generic = no
+	generic = no 
 	ai = yes
 	potential = {
-		tag = KHM
+		tag = KHM 
 		OR = {
 			has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			NOT = { has_dlc = "Leviathan" }
 		}
 	}
 	has_country_shield = yes
-
+	
 	khm_champa_rice = {
 		icon = mission_rice_field
 		required_missions = { khm_conquer_champa }
@@ -57,7 +57,7 @@ KHM_missions_1 = {
 			}
 		}
 	}
-
+	
 	khm_barays = {
 		icon = me_mission_khmer_barays
 		required_missions = { khm_champa_rice }
@@ -79,17 +79,17 @@ KHM_missions_1 = {
 
 KHM_missions_2 = {
 	slot = 2
-	generic = no
+	generic = no 
 	ai = yes
 	potential = {
-		tag = KHM
+		tag = KHM 
 		OR = {
 			has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			NOT = { has_dlc = "Leviathan" }
 		}
 	}
 	has_country_shield = yes
-
+	
 	khm_end_the_decline = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { }
@@ -119,7 +119,7 @@ KHM_missions_2 = {
 			hidden_effect= { complete_mission = mnd_khm_resurgence }
 		}
 	}
-
+	
 	khm_conquer_champa = {
 		icon = mission_a_million_rice_fields
 		required_missions = { khm_end_the_decline }
@@ -175,7 +175,7 @@ KHM_missions_2 = {
 			}
 		}
 	}
-
+	
 	khm_beat_dai_viet = {
 		icon = me_mission_annam_rekindle_fires
 		required_missions = { khm_conquer_champa }
@@ -213,7 +213,7 @@ KHM_missions_2 = {
 			}
 		}
 	}
-
+	
 	khm_break_tributary = {
 		icon = mission_open_up_china
 		required_missions = { khm_beat_dai_viet }
@@ -237,17 +237,17 @@ KHM_missions_2 = {
 
 KHM_missions_3 = {
 	slot = 3
-	generic = no
+	generic = no 
 	ai = yes
 	potential = {
-		tag = KHM
+		tag = KHM 
 		OR = {
 			has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			NOT = { has_dlc = "Leviathan" }
 		}
 	}
-	has_country_shield = yes
-
+	has_country_shield = yes 
+	
 	khm_ballista_elephants = {
 		icon = mission_conquer_siam
 		required_missions = { }
@@ -271,7 +271,7 @@ KHM_missions_3 = {
 			}
 		}
 	}
-
+	
 	khm_scorn_siam = {
 		icon = mission_alliances
 		required_missions = { khm_renew_angkor }
@@ -301,7 +301,7 @@ KHM_missions_3 = {
 			}
 		}
 	}
-
+	
 	khm_occupy_ayutthaya = {
 		icon = mission_restore_pagodas
 		required_missions = { khm_scorn_siam }
@@ -401,7 +401,7 @@ KHM_missions_3 = {
 			}
 		}
 	}
-
+	
 	khm_conquer_siam = {
 		icon = mission_rice_field
 		required_missions = { khm_occupy_ayutthaya }
@@ -435,7 +435,7 @@ KHM_missions_3 = {
 			}
 			612 = {
 				owned_by = ROOT
-			}
+			} 
 		}
 		effect = {
 			add_adm_power = 150
@@ -450,7 +450,7 @@ KHM_missions_3 = {
 			add_accepted_culture_or_dip_power = { culture = central_thai }
 		}
 	}
-
+	
 	khm_khmer_empire = {
 		icon = mission_empire
 		required_missions = { khm_conquer_siam khm_break_tributary khm_conquer_laos }
@@ -479,14 +479,14 @@ KHM_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KHM
+		tag = KHM 
 		OR = {
 			has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			NOT = { has_dlc = "Leviathan" }
 		}
 	}
 	has_country_shield = yes
-
+	
 	khm_renew_angkor = {
 		icon = mission_restore_pagodas
 		required_missions = { }
@@ -520,7 +520,7 @@ KHM_missions_4 = {
 			country_event = { id = ME_Khmer_Events.2 }
 		}
 	}
-
+	
 	khm_new_wat = {
 		icon = me_mission_khmer_wat
 		required_missions = { khm_renew_angkor }
@@ -557,29 +557,29 @@ KHM_missions_4 = {
 			}
 		}
 	}
-
+	
 	khm_conquer_laos = {
 		icon = mission_cannons_firing
 		required_missions = { khm_occupy_ayutthaya }
 		position = 4
 		provinces_to_highlight = {
 			OR = {
+				area = south_laos_area
 				area = north_laos_area
 				area = khorat_area
-				area = south_laos_area
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
+			south_laos_area = {
+				type = all
+				owned_by = ROOT
+			}
 			north_laos_area = {
 				type = all
 				owned_by = ROOT
 			}
 			khorat_area = {
-				type = all
-				owned_by = ROOT
-			}
-			south_laos_area = {
 				type = all
 				owned_by = ROOT
 			}

@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 emp_ned_slot1_branch = {
 	slot = 1
 	generic = no
@@ -114,6 +115,13 @@ emp_ned_slot1_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_china_sea_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -123,7 +131,10 @@ emp_ned_slot1_branch = {
 		position = 9
 
 		provinces_to_highlight = {
-			area = taiwan_area
+			OR = {
+			    area = taiwan_area
+			    area = south_china_sea_islands_area
+			}
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
@@ -131,23 +142,39 @@ emp_ned_slot1_branch = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = ned_taiwan.tooltip
-				taiwan_area = {
-					type = all
-					owned_by = ROOT
-					is_city = yes
+				OR = {
+				    taiwan_area = {
+				    	type = all
+				    	owned_by = ROOT
+				    	is_city = yes
+				    }
+				    south_china_sea_islands_area = {
+				    	type = all
+				    	owned_by = ROOT
+				    	is_city = yes
+				    }
 				}
 			}
 		}
 		
 		effect = {
 			taiwan_area = {
-				add_province_modifier = {
+				add_province_modifier = { #Dev boost unchanged as there's twice as many provinces.
 					name = "ned_zeelandia_mod"
 					duration = "-1"
 				}
 				add_base_tax = 2
 				add_base_production = 2
 				add_base_manpower = 2
+			}
+			south_china_sea_islands_area = {
+				add_province_modifier = { #Dev boost unchanged as there's twice as many provinces.
+					name = "ned_zeelandia_mod"
+					duration = "-1"
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 			}
 		}
 	}
@@ -218,7 +245,7 @@ emp_ned_slot2_branch = {
 			custom_trigger_tooltip = {
 				tooltip = emp_ned_assert_dutch_sovereignty_tt
 				num_of_owned_provinces_with = {
-					value = 4
+					value = 7 #Up from Vanilla 4
 					is_core = ROOT
 				}
 			}
@@ -339,7 +366,7 @@ emp_ned_slot2_branch = {
 						has_building = fort_18th
 					}
 				}
-				amount = 3
+				amount = 7
 			}
 		}
 		effect = {
@@ -497,6 +524,9 @@ emp_ned_slot2_indies_branch = {
 			trade_company_moluccas = {
 				has_discovered = ROOT
 			}
+			trade_company_polynesia = {
+				has_discovered = ROOT
+			}
 		}
 		effect = {
 			lanka_area = {
@@ -562,6 +592,7 @@ emp_ned_slot2_indies_branch = {
 			OR = {
 				trade_company_region = trade_company_moluccas
 				trade_company_region = trade_company_indonesia
+				trade_company_region = trade_company_polynesia
 			}
 			is_sea = no
 			NOT = { owned_by = ROOT }
@@ -574,6 +605,7 @@ emp_ned_slot2_indies_branch = {
 					OR = {
 						trade_company_region = trade_company_moluccas
 						trade_company_region = trade_company_indonesia
+						trade_company_region = trade_company_polynesia
 					}
 				}
 				amount = 15
@@ -670,14 +702,46 @@ emp_ned_slot3_branch = {
 		position = 3
 		completed_by = 1550.1.1
 		
-		provinces_to_highlight = {
-			province_id = 45
+		provinces_to_highlight = { ##Since Lubeck doesn't feed directly, now it's any european node feeding into EC
+			OR = { 
+				province_id = 85
+				province_id = 183
+				province_id = 167
+				province_id = 1284
+				province_id = 1975
+			}
 		}
 		trigger = {
-			45 = {
-				trade_share = {
-					country = ROOT
-					share = 33
+			OR = {
+				85 = { #Cologne
+					trade_share = {
+						country = ROOT
+						share = 33
+					}
+				}
+				183 = { #Paris
+					trade_share = {
+						country = ROOT
+						share = 33
+					}
+				}
+				167 = { #Rouen
+					trade_share = {
+						country = ROOT
+						share = 33
+					}
+				}
+				1284 = { #Irish Sea
+					trade_share = {
+						country = ROOT
+						share = 33
+					}
+				}
+				1975 = { #North Sea
+					trade_share = {
+						country = ROOT
+						share = 33
+					}
 				}
 			}
 		}
@@ -718,7 +782,10 @@ emp_ned_slot3_branch = {
 		completed_by = 1621.6.3
 		
 		provinces_to_highlight = {
-			region = guinea_region
+		    OR = {
+			    region = guinea_region
+			    region = lower_guinea_region
+		    }
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -726,6 +793,10 @@ emp_ned_slot3_branch = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				region = guinea_region
+				value = 6
+			}
+			num_of_owned_provinces_with = {
+				region = lower_guinea_region
 				value = 6
 			}
 		}
@@ -742,34 +813,17 @@ emp_ned_slot3_branch = {
 		required_missions = { emp_ned_charter_the_voc }
 		position = 6
 		completed_by = 1652.1.1
-		
 		provinces_to_highlight = {
-			OR = {
-				province_id = 833
-				province_id = 1177
-				province_id = 1179
-			}
-			NOT = { owned_by = ROOT }
+			colonial_region = colonial_cape
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 				
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = ned_south_africa_colony.tooltip
-				OR = {
-					833 = {
-						owned_by = ROOT
-						is_city = yes
-					}
-					1177 = {
-						owned_by = ROOT
-						is_city = yes
-					}
-					1179 = {
-						owned_by = ROOT
-						is_city = yes
-					}
-				}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				colonial_region = colonial_cape
+				is_city = yes
 			}
 		}
 		
@@ -788,12 +842,6 @@ emp_ned_slot3_branch = {
 			custom_trigger_tooltip = {
 				tooltip = ned_spice_australia.tooltip
 				colonial_australia = {
-					has_discovered = ROOT
-				}
-				trade_company_indonesia = {
-					has_discovered = ROOT
-				}
-				trade_company_moluccas = {
 					has_discovered = ROOT
 				}
 			}
@@ -924,7 +972,7 @@ emp_ned_slot4_branch = { # Statists
 					region = low_countries_region
 					base_tax = 8
 				}
-				amount = 5
+				amount = 15 #From 5 to 15
 			}
 		}
 		effect = {
@@ -1016,13 +1064,6 @@ emp_ned_slot4_branch = { # Statists
 			}
 			else = {
 				greater_london_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-				south_east_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -1358,20 +1399,11 @@ emp_ned_slot5_branch = { # Orangists
 					}
 				}
 			}
-			modifier = {
-				factor = 0
-				south_east_area = {
-					owner = {
-						alliance_with = ROOT
-					}
-				}
-			}
 		}
 		
 		provinces_to_highlight = {
 			OR = {
 				area = greater_london_area
-				area = south_east_area
 				area = east_anglia_area
 				area = east_midlands_area
 			}
@@ -1379,10 +1411,6 @@ emp_ned_slot5_branch = { # Orangists
 		}
 		trigger = {
 			greater_london_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

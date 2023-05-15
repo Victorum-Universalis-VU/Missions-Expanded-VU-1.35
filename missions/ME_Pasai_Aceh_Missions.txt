@@ -607,7 +607,9 @@ PSA_ATJ_missions_4 = {
 				trigger = {
 					OR = {
 						trade_goods = spices
+						trade_goods = nutmeg
 						trade_goods = cloves
+						trade_goods = vanilla
 					}
 				}
 				custom_tooltip = MSA_from_spice_production_TGE

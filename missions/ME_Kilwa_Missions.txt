@@ -334,7 +334,7 @@ ZAN_missions_2 = {
 			advisor = trader
 			num_of_light_ship = 15
 			trade_ideas = 2
-			4346 = {
+			1331 = {
 				trade_share = {
 					country = ROOT
 					share = 5
@@ -343,7 +343,7 @@ ZAN_missions_2 = {
 			}
 		}
 		effect = {
-			4346 = {
+			1331 = {
 				if = {
 					limit = {
 						NOT = { is_strongest_trade_power = ROOT }
@@ -1025,6 +1025,18 @@ ZAN_missions_5 = {
 				indonesia_region = {
 					has_discovered = ROOT
 				}
+				riau_islands_region = {
+					has_discovered = ROOT
+				}
+				nusa_tenggara_region = {
+					has_discovered = ROOT
+				}
+				borneo_region = {
+					has_discovered = ROOT
+				}
+				celebes_region = {
+					has_discovered = ROOT
+				}
 			}
 		}
 		effect = {
@@ -1042,6 +1054,7 @@ ZAN_missions_5 = {
 		provinces_to_highlight = {
 			OR = {
 				area = indonesian_islands_area
+				area = riau_islands_area
 				area = indian_ocean_islands_area
 				area = mascarenes_area
 			}
@@ -1063,6 +1076,13 @@ ZAN_missions_5 = {
 								AND = {
 									area = indonesian_islands_area
 									indonesian_islands_area = {
+										type = all
+										NOT = { num_of_times_improved = 5 }
+									}
+								}
+								AND = {
+									area = riau_islands_area
+									riau_islands_area = {
 										type = all
 										NOT = { num_of_times_improved = 5 }
 									}
@@ -1093,6 +1113,16 @@ ZAN_missions_5 = {
 					has_dlc = "Mandate of Heaven"
 				}
 				indonesian_islands_area = {
+					type = all
+					is_city = yes
+					owned_by = ROOT
+					is_state = yes
+					custom_trigger_tooltip = {
+						tooltip = IS_PROSPEROUS
+						is_prosperous = yes
+					}
+				}
+				riau_islands_area = {
 					type = all
 					is_city = yes
 					owned_by = ROOT
@@ -1134,6 +1164,16 @@ ZAN_missions_5 = {
 				indonesian_islands_area = {
 					num_of_times_improved = 5
 				}
+				riau_islands_area = {
+					type = all
+					is_city = yes
+					owned_by = ROOT
+					is_state = yes
+					NOT = { devastation = 1 }
+				}
+				riau_islands_area = {
+					num_of_times_improved = 5
+				}
 				indian_ocean_islands_area = {
 					type = all
 					is_city = yes
@@ -1163,6 +1203,12 @@ ZAN_missions_5 = {
 					duration = -1
 				}
 			}
+			riau_islands_area = {
+				add_province_modifier = {
+					name = kilwa_bahari_yetu_province_modifier
+					duration = -1
+				}
+			}
 			indian_ocean_islands_area = {
 				add_province_modifier = {
 					name = kilwa_bahari_yetu_province_modifier
@@ -1183,13 +1229,25 @@ ZAN_missions_5 = {
 		required_missions = { kilwa_men_at_work kilwa_bahari_yetu }
 		position = 7
 		provinces_to_highlight = {
-			region = indonesia_region
+			OR = {
+				region = indonesia_region
+				region = riau_islands_region
+				region = nusa_tenggara_region
+				region = borneo_region
+				region = celebes_region
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 10
-				region = indonesia_region
+				OR = {
+				    region = indonesia_region
+				    region = riau_islands_region
+				    region = nusa_tenggara_region
+				    region = borneo_region
+				    region = celebes_region
+			    }
 			}
 			spices = 5
 		}

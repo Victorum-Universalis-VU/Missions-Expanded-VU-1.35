@@ -20,7 +20,7 @@ BEI_generic_missions_1 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	BEI_generic_defeat_brunei = {
 		icon = me_mission_brunei_flag
 		required_missions = { BEI_generic_rise_of_empire }
@@ -46,16 +46,16 @@ BEI_generic_missions_1 = {
 					key = MSA_brunei_sultanate
 				}
 			}
-
+			
 			add_country_modifier = {
 				name = BEI_generic_discipline
 				duration = 5475
 			}
-
+			
 			MSA_claims_malaya = yes
 		}
 	}
-
+	
 	BEI_generic_malacca	= {
 		icon = me_mission_sack_malacca
 		required_missions = { BEI_generic_kalimantan }
@@ -64,7 +64,7 @@ BEI_generic_missions_1 = {
 			MSA_is_in_malaya = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		trigger = {
+		trigger = {	
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				MSA_is_in_malaya = yes
 				value = 8
@@ -75,7 +75,7 @@ BEI_generic_missions_1 = {
 			MSA_claims_sumatra = yes
 		}
 	}
-
+	
 	BEI_generic_sumatra	= {
 		icon = me_mission_malay_ruler
 		required_missions = { BEI_generic_malacca }
@@ -118,7 +118,7 @@ BEI_generic_missions_2 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	BEI_generic_rise_of_empire = {
 		icon = me_mission_malay_leader
 		required_missions = { }
@@ -136,7 +136,7 @@ BEI_generic_missions_2 = {
 			MSA_claims_borneo = yes
 		}
 	}
-
+	
 	BEI_generic_kalimantan = {
 		icon = mission_mnd_maj_rein_in_brunei
 		required_missions = { BEI_generic_defeat_brunei BEI_generic_rise_of_empire }
@@ -153,13 +153,13 @@ BEI_generic_missions_2 = {
 		effect = {
 			MSA_claims_sulawesi = yes
 			MSA_claims_java = yes
-
+			
 			MSA_borneo_reward = yes
-
+			
 			MSA_colonies_in_borneo = yes
 		}
 	}
-
+	
 	BEI_generic_makassar = {
 		icon = mission_retake_ceuta
 		required_missions = { BEI_generic_kalimantan }
@@ -192,7 +192,7 @@ BEI_generic_missions_2 = {
 				add_siberian_construction = 100
 			}
 			add_years_of_income = 0.5
-
+			
 			custom_tooltip = BEI_if_we_have_galleys
 			tooltip = {
 				add_country_modifier = {
@@ -237,7 +237,7 @@ BEI_generic_missions_3 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	BEI_generic_majapahit = {
 		icon = mission_mnd_maj_end_disaster
 		required_missions = { BEI_generic_kalimantan }
@@ -257,7 +257,7 @@ BEI_generic_missions_3 = {
 			MSA_claims_sumatra = yes
 		}
 	}
-
+	
 	BEI_generic_alam_melayu = {
 		icon = mission_sail_to_the_east_indies
 		required_missions = { BEI_generic_majapahit BEI_generic_sumatra }
@@ -296,7 +296,7 @@ BEI_generic_missions_4 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	BEI_generic_bruneian_coast = {
 		icon = mission_dharma_mission_arabian_trade
 		required_missions = { }
@@ -360,7 +360,7 @@ BEI_generic_missions_4 = {
 			}
 		}
 	}
-
+	
 	BEI_generic_camphor_trade = {
 		icon = mission_grand_bengali_shipyards
 		required_missions = { BEI_generic_bruneian_coast }
@@ -390,7 +390,7 @@ BEI_generic_missions_4 = {
 			add_mercantilism = 3
 		}
 	}
-
+	
 	BEI_generic_center_of_trade_extra = {
 		icon = mission_magadna_and_varanasi
 		required_missions = { }
@@ -420,7 +420,7 @@ BEI_generic_missions_4 = {
 			add_years_of_income = 0.5
 		}
 	}
-
+	
 	BEI_generic_developing_the_islands = {
 		icon = mission_conquer_central_deccan
 		required_missions = { BEI_generic_center_of_trade_extra }
@@ -505,7 +505,7 @@ BEI_generic_missions_5 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	BEI_generic_sea_dayaks = {
 		icon = mission_follow_the_brahmaputra
 		required_missions = { BEI_generic_bruneian_coast }
@@ -519,7 +519,7 @@ BEI_generic_missions_5 = {
 			MSA_orang_laut_effect = yes
 		}
 	}
-
+	
 	BEI_generic_religion_1 = {
 		icon = mission_mnd_maj_candi_shrines
 		required_missions = { }
@@ -536,15 +536,15 @@ BEI_generic_missions_5 = {
 		}
 		effect = {
 			create_general = { tradition = 40 }
-
+			
 			add_mil_power = 50
 		}
 	}
-
+	
 	BEI_generic_religion_2 = {
 		icon = mission_spoils_of_war
 		required_missions = { BEI_generic_religion_1 }
-		position = 5
+		position = 5 
 		provinces_to_highlight = {
 			NOT = { religion = ROOT }
 			OR = {
@@ -558,7 +558,7 @@ BEI_generic_missions_5 = {
 					tooltip = obj_force_converted_tooltip
 					has_country_flag = force_converted
 				}
-
+				
 				custom_trigger_tooltip = {
 					tooltip = MSA_converted_3_provinces
 					check_variable = { which = num_converted_religion value = 3 }
@@ -570,11 +570,11 @@ BEI_generic_missions_5 = {
 				name = SUM_hegemony
 				duration = -1
 			}
-
+			
 			add_army_tradition_or_mil_power = { amount = 15 }
 		}
 	}
-
+	
 	BEI_generic_overcoming = {
 		icon = mission_clear_the_delta
 		required_missions = { BEI_generic_center_of_trade_extra }

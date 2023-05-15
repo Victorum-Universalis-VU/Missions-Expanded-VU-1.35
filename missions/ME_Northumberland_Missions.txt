@@ -1,12 +1,12 @@
 northumberland_missions_1 = {
-	slot = 1
+	slot = 1	
 	generic = no
 	ai = yes
 	potential = {
 		tag = NOL
 	}
 	has_country_shield = yes
-
+	
 	northumberland_yorkshire = {
 		icon = mission_assemble_an_army
 		required_missions = { }
@@ -31,7 +31,7 @@ northumberland_missions_1 = {
 			}
 		}
 	}
-
+	
 	northumberland_scottish_marches = {
 		icon = mission_cannons_firing
 		required_missions = { northumberland_yorkshire }
@@ -63,7 +63,7 @@ northumberland_missions_1 = {
 			}
 		}
 	}
-
+	
 	northumberland_highlands = {
 		icon = mission_conquer_50_development
 		required_missions = { northumberland_scottish_marches }
@@ -95,7 +95,7 @@ northumberland_missions_1 = {
 			}
 		}
 	}
-
+	
 	northumberland_kingdom_of_the_isles = {
 		icon = mission_conquer_5_states
 		required_missions = { northumberland_highlands }
@@ -116,20 +116,20 @@ northumberland_missions_1 = {
 			add_yearly_manpower = 2
 		}
 	}
-
+	
 	northumberland_england = {
 		icon = mission_unite_home_region
 		required_missions = { northumberland_kingdom_of_the_isles northumberland_south_west_england }
 		position = 10
 		provinces_to_highlight = {
 			OR = {
-				area = greater_london_area
+				area = south_east_area
 				area = east_anglia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			greater_london_area = {
+			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -148,14 +148,14 @@ northumberland_missions_1 = {
 }
 
 northumberland_missions_2 = {
-	slot = 2
+	slot = 2	
 	generic = no
 	ai = yes
 	potential = {
 		tag = NOL
 	}
 	has_country_shield = yes
-
+	
 	northumberland_east_midlands = {
 		icon = mission_assemble_an_army
 		required_missions = { northumberland_yorkshire }
@@ -180,7 +180,7 @@ northumberland_missions_2 = {
 			}
 		}
 	}
-
+	
 	northumberland_west_midlands = {
 		icon = me_mission_army
 		required_missions = { northumberland_east_midlands }
@@ -210,16 +210,9 @@ northumberland_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_east_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
-
+	
 	northumberland_south_west_england = {
 		icon = mission_cannons_firing
 		required_missions = { northumberland_west_midlands }
@@ -228,7 +221,6 @@ northumberland_missions_2 = {
 			OR = {
 				area = wales_area
 				area = cornwall_area
-				area = south_east_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -241,13 +233,9 @@ northumberland_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			south_east_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 		}
 		effect = {
-			greater_london_area = {
+			south_east_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -266,14 +254,14 @@ northumberland_missions_2 = {
 }
 
 northumberland_missions_3 = {
-	slot = 3
+	slot = 3	
 	generic = no
 	ai = yes
 	potential = {
 		tag = NOL
 	}
 	has_country_shield = yes
-
+	
 	northumberland_build_army_buildings = {
 		icon = mission_early_game_buildings
 		position = 9
@@ -299,7 +287,7 @@ northumberland_missions_3 = {
 			}
 		}
 	}
-
+	
 	northumberland_army_tradition = {
 		icon = mission_assemble_an_army
 		position = 10
@@ -314,7 +302,7 @@ northumberland_missions_3 = {
 			}
 		}
 	}
-
+	
 	northumberland_become_great_power = {
 		icon = mission_unite_home_region
 		position = 11
@@ -360,7 +348,7 @@ northumberland_missions_4 = {
 		tag = NOL
 	}
 	has_country_shield = yes
-
+	
 	northumberland_build_production_buildings = {
 		icon = mission_have_manufactories
 		position = 9
@@ -384,7 +372,7 @@ northumberland_missions_4 = {
 			}
 		}
 	}
-
+	
 	northumberland_build_trade_buildings = {
 		icon = mission_early_game_buildings
 		position = 10
@@ -419,7 +407,7 @@ northumberland_missions_5 = {
 		tag = NOL
 	}
 	has_country_shield = yes
-
+	
 	northumberland_build_naval_buildings = {
 		icon = mission_early_game_buildings
 		position = 9
@@ -445,7 +433,7 @@ northumberland_missions_5 = {
 			}
 		}
 	}
-
+	
 	northumberland_high_navy_tradition = {
 		icon = mission_establish_high_seas_navy
 		position = 10

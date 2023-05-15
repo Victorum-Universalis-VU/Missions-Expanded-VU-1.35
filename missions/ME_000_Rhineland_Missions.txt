@@ -146,13 +146,6 @@ generic_rhenish_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			bavaria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			franconia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -182,13 +175,6 @@ generic_rhenish_missions_2 = {
 				add_permanent_claim = ROOT
 			}
 			swabia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			wurttemburg_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -389,7 +375,7 @@ generic_rhenish_missions_4 = {
 							type = muscovy_architect
 							name = "Alessandro Pasqualini"
 							skill = 1
-							culture = romagnan
+							culture = romagnol
 							religion = catholic
 							location = 4730
 							culture = PREV
@@ -409,7 +395,7 @@ generic_rhenish_missions_4 = {
 								type = muscovy_architect
 								name = "Alessandro Pasqualini"
 								skill = 1
-								culture = romagnan
+								culture = romagnol
 								religion = catholic
 								location = 4730
 								culture = PREV

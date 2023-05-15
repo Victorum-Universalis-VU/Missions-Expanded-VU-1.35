@@ -2,7 +2,7 @@ AKK_missions_1 = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential = {
+	potential = {	
 		OR = {
 			tag = AKK
 			AND = {
@@ -34,7 +34,7 @@ AKK_missions_1 = {
 		effect = {
 			custom_tooltip = AKK_patronage_of_arts_buff
 			set_country_flag = AKK_patronage_of_arts_buff_flag
-
+		
 			define_advisor = {
 				type = artist
 				name = "Ahli Shirazi"
@@ -45,7 +45,7 @@ AKK_missions_1 = {
 			}
 		}
 	}
-
+	
 	AKK_raise_monuments = {
 		icon = mission_golden_century
 		required_missions = { AKK_patron_of_poets AKK_compiling_history_of_aq }
@@ -73,9 +73,9 @@ AKK_missions_1 = {
 		}
 		effect = {
 			add_prestige_or_monarch_power = { amount = 25 }
-
+			
 			custom_tooltip = " "
-
+			
 			if = {
 				limit = {
 					has_dlc = "Leviathan"
@@ -99,7 +99,7 @@ AKK_missions_1 = {
 					"
 				}
 			}
-
+			
 			if = {
 				limit = {
 					has_dlc = "Mandate of Heaven"
@@ -108,7 +108,7 @@ AKK_missions_1 = {
 			}
 		}
 	}
-
+	
 	AKK_defeat_dulkadir = {
 		icon = mission_found_havana
 		required_missions = { AKK_deal_with_the_unrest }
@@ -129,9 +129,9 @@ AKK_missions_1 = {
 		}
 		effect = {
 			ME_add_power_projection = { amount = 15 }
-
-			custom_tooltip = " "
-
+			
+			custom_tooltip = " " 
+			
 			if = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
@@ -143,23 +143,23 @@ AKK_missions_1 = {
 				}
 				custom_tooltip = " "
 			}
-
+			
 			add_country_modifier = {
 				name = AKK_subduing_the_tribes_of_dulkadir
 				duration = 9125
 			}
-
+			
 			ME_give_claims = { area = rum_area }
 			ME_give_claims = { area = karaman_area }
 			ME_give_claims = { area = cukurova_area }
 			ME_give_claims = { id = 2304 }
 		}
 	}
-
+	
 	AKK_ottoman_campaign = {
 		icon = mission_ottoman_diplomacy
 		required_missions = { AKK_defeat_dulkadir }
-		position = 8
+		position = 8 
 		provinces_to_highlight = {
 			owned_by = TUR
 		}
@@ -182,16 +182,16 @@ AKK_missions_1 = {
 				custom_tooltip = " "
 			}
 			set_country_flag = AKK_unlock_improve_inland_routes_for_turkish_nodes_flag
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = AKK_war_is_imminent
 				duration = 10950
 			}
 		}
 	}
-
+	
 	AKK_anatolia = {
 		icon = anatolian_frontier
 		required_missions = { AKK_ottoman_campaign }
@@ -208,11 +208,11 @@ AKK_missions_1 = {
 		}
 		effect = {
 			ME_give_claims = { region = anatolia_region }
-
+			
 			custom_tooltip = " "
-
+			
 			country_event = { id = ME_Aq_Qoyunlu_Events.6 }
-
+			
 			QIR_complete_anatolia_missions = yes
 		}
 	}
@@ -222,7 +222,7 @@ AKK_missions_2 = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential = {
+	potential = {	
 		OR = {
 			tag = AKK
 			AND = {
@@ -244,7 +244,7 @@ AKK_missions_2 = {
 		trigger = {
 			share_of_starting_income = 1.5
 			#ME_pt_feedback_requested = yes
-
+			
 			OR = {
 				capital_scope = {
 					development = 12
@@ -260,9 +260,9 @@ AKK_missions_2 = {
 		}
 		effect = {
 			add_years_of_income = 1.5
-
+		
 			custom_tooltip = " "
-
+			
 			define_advisor = {
 				type = treasurer
 				name = "Mahmud Jan Daylami"
@@ -271,7 +271,7 @@ AKK_missions_2 = {
 			}
 		}
 	}
-
+	
 	AKK_compiling_history_of_aq = {
 		icon = mission_court_education
 		required_missions = { AKK_diwan_of_aq_qoyunlu }
@@ -285,12 +285,12 @@ AKK_missions_2 = {
 			}
 		}
 		effect = {
-			add_age_modifier = {
+			add_age_modifier = { 
 				name = AKK_kitab_i_diyarbakriyya
 				duration = -1
 				age = age_of_reformation
 			}
-
+			
 			if = {
 				limit = {
 					has_dlc = "Mandate of Heaven"
@@ -299,7 +299,7 @@ AKK_missions_2 = {
 			}
 		}
 	}
-
+	
 	AKK_deal_with_the_unrest = {
 		icon = mission_eliminate_pretenders
 		required_missions = { }
@@ -318,17 +318,17 @@ AKK_missions_2 = {
 				name = AKK_loyalist_court
 				duration = 7300
 			}
-
+			
 			add_stability_or_adm_power = yes
-
+			
 			custom_tooltip = " "
-
+			
 			ME_give_claims = { area = dulkadir_area }
 			ME_give_claims = { area = aleppo_area }
-			ME_give_claims = { id = 4295 }
+			ME_give_claims = { id = 4295 }	
 		}
 	}
-
+	
 	AKK_into_syria = {
 		icon = mission_levantine_restoration
 		required_missions = { AKK_deal_with_the_unrest AKK_defeat_dulkadir }
@@ -337,7 +337,7 @@ AKK_missions_2 = {
 			area = aleppo_area
 			NOT = {
 				OR = {
-					controller = {
+					controller = { 
 						OR = {
 							tag = ROOT
 							alliance_with = ROOT
@@ -351,7 +351,7 @@ AKK_missions_2 = {
 			aleppo_area = {
 				type = all
 				OR = {
-					controller = {
+					controller = { 
 						OR = {
 							tag = ROOT
 							alliance_with = ROOT
@@ -363,13 +363,13 @@ AKK_missions_2 = {
 		}
 		effect = {
 			country_event = { id = ME_Aq_Qoyunlu_Events.4 } #Destabilizing syria, gives us manpower, lower pwsc
-
+			
 			custom_tooltip = " "
-
+			
 			tooltip = { add_yearly_manpower = 1 }
-
+			
 			custom_tooltip = " "
-
+			
 			custom_tooltip = AKK_reduced_pwsc_of_syria
 			tooltip = {
 				add_province_modifier = {
@@ -377,7 +377,7 @@ AKK_missions_2 = {
 					duration = 5475
 				}
 			}
-
+			
 			custom_tooltip = AKK_if_syria_is_our_vassal
 			tooltip = {
 				SYR = {
@@ -414,14 +414,14 @@ AKK_missions_2 = {
 					}
 				}
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			ME_give_claims = { area = syria_area }
 			ME_give_claims = { area = syrian_desert_area }
 		}
 	}
-
+	
 	AKK_syria = {
 		icon = mission_pacify_the_berbers
 		required_missions = { AKK_into_syria }
@@ -449,7 +449,7 @@ AKK_missions_2 = {
 				name = QAR_advance_against_mamluks
 				duration = 10950
 			}
-
+			
 			custom_tooltip = QAR_directly_owned_provinces_in_syria_get
 			hidden_effect = {
 				syria_area = {
@@ -470,13 +470,13 @@ AKK_missions_2 = {
 					}
 					add_local_autonomy = -25
 				}
-			}
-
+			}	
+		
 			custom_tooltip = QAR_if_we_have_syria_subject
 			hidden_effect = {
 				if = {
 					limit = {
-						SYR = {
+						SYR = { 
 							is_subject_of = ROOT
 						}
 					}
@@ -485,7 +485,7 @@ AKK_missions_2 = {
 					}
 				}
 			}
-
+		
 			QIR_complete_syria_missions = yes
 		}
 	}
@@ -495,7 +495,7 @@ AKK_missions_3 = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential = {
+	potential = {	
 		OR = {
 			tag = AKK
 			AND = {
@@ -526,11 +526,11 @@ AKK_missions_3 = {
 				name = AKK_raids_on_qq_begin
 				duration = 7300
 			}
-
+			
 			QIR_add_turkic_tribes_loyalty = { amount = 15 }
 		}
 	}
-
+	
 	AKK_ties_with_trebizond = {
 		icon = mission_into_persia_2
 		required_missions = { AKK_uzun_hasan }
@@ -567,12 +567,12 @@ AKK_missions_3 = {
 					}
 					custom_tooltip = " "
 				}
-
+				
 				add_adm_power = 50
-
+				
 				custom_tooltip = " "
-
-				330 = {
+				
+				330 = { 
 					add_local_autonomy = -25
 					add_nationalism = -10
 				}
@@ -581,10 +581,10 @@ AKK_missions_3 = {
 			tooltip = {
 				custom_tooltip = QAR_if_trebizond_grows_no_larger
 				custom_tooltip = " "
-
+				
 				add_dip_power = 75
 			}
-
+			
 			hidden_effect = {
 				if = {
 					limit = {
@@ -603,12 +603,12 @@ AKK_missions_3 = {
 						}
 						custom_tooltip = " "
 					}
-
+					
 					add_adm_power = 50
-
+					
 					custom_tooltip = " "
-
-					330 = {
+					
+					330 = { 
 						add_local_autonomy = -25
 						add_nationalism = -10
 					}
@@ -617,7 +617,7 @@ AKK_missions_3 = {
 					limit = {
 						alliance_with = TRE
 					}
-
+					
 					custom_tooltip = QAR_if_trebizond_grows_no_larger
 					custom_tooltip = " "
 					set_country_flag = QAR_may_vassalize_trebizond
@@ -635,12 +635,12 @@ AKK_missions_3 = {
 						}
 						custom_tooltip = " "
 					}
-
+					
 					add_adm_power = 50
-
+					
 					custom_tooltip = " "
-
-					330 = {
+					
+					330 = { 
 						add_local_autonomy = -25
 						add_nationalism = -10
 					}
@@ -648,7 +648,7 @@ AKK_missions_3 = {
 			}
 		}
 	}
-
+	
 	AKK_ponts = {
 		icon = mission_retake_ceuta
 		required_missions = { AKK_ties_with_trebizond }
@@ -664,13 +664,13 @@ AKK_missions_3 = {
 		effect = {
 			custom_tooltip = AKK_ponts_company_tt
 			set_country_flag = AKK_ponts_company
-
+			
 			custom_tooltip = " "
-
+			
 			country_event = { id = ME_Aq_Qoyunlu_Events.7 } #get accepted pontic or naa
 		}
 	}
-
+	
 	AKK_ayyubid_remnant = {
 		icon = mission_patronize_art_and_religion
 		required_missions = { AKK_deal_with_the_unrest }
@@ -684,13 +684,13 @@ AKK_missions_3 = {
 		}
 		effect = {
 			country_event = { id = ME_Aq_Qoyunlu_Events.2 }
-
+			
 			tooltip = {
 				add_country_modifier = {
 					name = AKK_defeated_the_last_remnant
 					duration = 5475
 				}
-
+			
 				if = {
 					limit = {
 						has_dlc = "Cradle of Civilization"
@@ -702,12 +702,12 @@ AKK_missions_3 = {
 					}
 					custom_tooltip = " "
 				}
-
+				
 				add_prestige_or_monarch_power = { amount = 10 }
 			}
 		}
 	}
-
+	
 	AKK_georgia = {
 		icon = mission_crusade_for_varna
 		required_missions = { AKK_armenia }
@@ -730,23 +730,23 @@ AKK_missions_3 = {
 		}
 		effect = {
 			ME_add_power_projection = { amount = 10 }
-
+			
 			custom_tooltip = " "
-
+			
 			QIR_give_legitimacy_or_tribal_allegiance = {
 				t_amount = 20
 				l_amount = 15
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = AKK_georgian_dissent
 				duration = 9125
 			}
 		}
 	}
-
+	
 	AKK_northern_turkomans = {
 		icon = mission_into_persia_1
 		required_missions = { AKK_tabriz }
@@ -758,7 +758,7 @@ AKK_missions_3 = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		trigger = {
+		trigger = {	
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = azerbaijan_area
@@ -774,22 +774,22 @@ AKK_missions_3 = {
 					duration = -1
 				}
 			}
-
+			
 			add_accepted_culture = azerbaijani
-
+			
 			custom_tooltip = AKK_this_culture_will_not_take_up_a_slot
-
+			
 			custom_tooltip = " "
-
+			
 			QIR_give_legitimacy_or_tribal_allegiance = {
 				t_amount = 25
 				l_amount = 10
 			}
-
+			
 			custom_tooltip = " "
-
-			add_dip_power = 50
-
+			
+			add_dip_power = 50 
+			
 			AKK_complete_QAR_ardabil_missions = yes
 		}
 	}
@@ -799,7 +799,7 @@ AKK_missions_4 = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential = {
+	potential = {	
 		OR = {
 			tag = AKK
 			AND = {
@@ -831,18 +831,18 @@ AKK_missions_4 = {
 		}
 		effect = {
 			custom_tooltip = AKK_cavalry_fraction_trig_mod
-
+			
 			custom_tooltip = " "
-
+			
 			418 = { add_province_triggered_modifier = AKK_grazing_grounds }
 			set_country_flag = AKK_grazing_grounds_flag
-
+			
 			custom_tooltip = " "
-
+			
 			create_general_with_pips = { tradition = 60 add_shock = 1 add_manuever = 2 }
 		}
 	}
-
+	
 	AKK_oghuz_khan = {
 		icon = mission_abu_saids_dream
 		required_missions = { AKK_horselords AKK_uzun_hasan }
@@ -869,7 +869,7 @@ AKK_missions_4 = {
 					value = 50
 				}
 			}
-
+		
 			if = {
 				limit = {
 					has_dlc = "Rights of Man"
@@ -892,23 +892,23 @@ AKK_missions_4 = {
 					"
 				}
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = AKK_heirs_of_oghuz_khan
 				duration = -1
 			}
-
+			
 			add_yearly_manpower = 1
-
+			
 			custom_tooltip = " "
-
+			
 			custom_tooltip = QAR_our_tribal_population_will_have_more_respect
 			set_country_flag = QAR_respect_towards_dynasty
 		}
 	}
-
+	
 	AKK_armenia = {
 		icon = mission_autocephalous_archbishopric
 		required_missions = { AKK_quell_jahan_shah }
@@ -955,18 +955,18 @@ AKK_missions_4 = {
 					}
 				}
 			}
-
+			
 			add_country_modifier = {
 				name = AKK_seizing_qara_qoyunlu_north
 				duration = -1
 			}
-
+			
 			ME_give_claims = { area = imereti_area }
 			ME_give_claims = { area = tabriz_area }
-			ME_give_claims = { area = shirvan_area }
+			ME_give_claims = { area = shirvan_area } 
 		}
 	}
-
+	
 	AKK_tabriz = {
 		icon = mission_central_asian_city
 		required_missions = { AKK_armenia AKK_advance_into_QQ }
@@ -994,12 +994,12 @@ AKK_missions_4 = {
 		}
 		effect = {
 			country_event = { id = ME_Aq_Qoyunlu_Events.5 }
-
-			hidden_effect = {
+			
+			hidden_effect = {			
 				country_event = { id = ME_Aq_Qoyunlu_Events.9 days = 30 }
 			}
 			custom_tooltip = " "
-
+			
 			custom_tooltip = AKK_upgrade_AKK_seizing_qara_qoyunlu_north
 			hidden_effect = {
 				remove_country_modifier = AKK_seizing_qara_qoyunlu_north
@@ -1008,14 +1008,14 @@ AKK_missions_4 = {
 					duration = -1
 				}
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			ME_give_claims = { area = azerbaijan_area }
 			ME_give_claims = { area = tabarestan_area }
 		}
 	}
-
+	
 	AKK_persia = {
 		icon = mission_into_persia_2
 		required_missions = { AKK_tabriz AKK_conquest_of_mesopotamia }
@@ -1045,10 +1045,10 @@ AKK_missions_4 = {
 			}
 		}
 		effect = {
-			country_event = { id = ME_Aq_Qoyunlu_Events.10 }
-
+			country_event = { id = ME_Aq_Qoyunlu_Events.10 } 
+			
 			custom_tooltip = " "
-
+			
 			hidden_effect = {
 				set_country_flag = Fazlallah_Mission_Reward
 				country_event = { id = ME_Aq_Qoyunlu_Events.13 days = 365 random = 730 }
@@ -1056,17 +1056,17 @@ AKK_missions_4 = {
 			tooltip = {
 				add_power_projection = {
 					type = QAR_perma_persia_pp
-					amount = 10
+					amount = 10 
 				}
-
+				
 				custom_tooltip = MAM_permanent_PP
-
+				
 				custom_tooltip = " "
-
+				
 				set_government_rank = 3
-
+				
 				custom_tooltip = " "
-
+				
 				custom_tooltip = AKK_modifier_upgrade_last
 				hidden_effect = {
 					remove_country_modifier = AKK_seizing_qara_qoyunlu_north_2
@@ -1077,7 +1077,7 @@ AKK_missions_4 = {
 					}
 				}
 			}
-
+				
 			QIR_complete_persian_missions = yes
 		}
 	}
@@ -1087,7 +1087,7 @@ AKK_missions_5 = {
 	slot = 5
 	generic = no
 	ai = yes
-	potential = {
+	potential = {	
 		OR = {
 			tag = AKK
 			AND = {
@@ -1098,7 +1098,7 @@ AKK_missions_5 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	AKK_unite_the_tribes = {
 		icon = mission_conquer_tunisia
 		required_missions = { }
@@ -1119,14 +1119,14 @@ AKK_missions_5 = {
 			else = {
 				legitimacy = 90
 			}
-
+			
 			stability = 1
 		}
 		effect = {
 			add_yearly_manpower = 1
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = AKK_tribal_cohesion
 				duration = 7300
@@ -1150,19 +1150,19 @@ AKK_missions_5 = {
 					ME_tribal_federation_trigger = yes
 				}
 				has_country_modifier = train_horsemanship_modifier
-
+				
 				#custom TT?
 			}
-
+			
 			num_of_owned_provinces_with = {
 				trade_goods = livestock
 				has_manpower_building_trigger = yes
 				value = 3
 			}
-
+			
 			OR = {
 				has_global_modifier_value = {
-					which = cavalry_power
+					which = cavalry_power			
 					value = 0.4
 				}
 				num_of_cavalry = 50
@@ -1176,16 +1176,16 @@ AKK_missions_5 = {
 				custom_tooltip = QIR_unlock_decision_to_have_up_to_5_cossacks
 			}
 			set_country_flag = QIR_cossack_units
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = QIR_true_turkoman
 				duration = -1
 			}
 		}
 	}
-
+	
 	AKK_quell_jahan_shah = {
 		icon = mission_reclaim_morocco
 		required_missions = { }
@@ -1203,15 +1203,15 @@ AKK_missions_5 = {
 				name = AKK_tribal_feuds
 				duration = 10950
 			}
-
+			
 			add_casus_belli = {
 				target = QAR
 				type = cb_aq_ambition
 				months = 1200
 			}
-
+			
 			custom_tooltip = " "
-
+		
 			ME_give_claims = { area = armenia_area }
 			ME_give_claims = { area = samtskhe_area }
 			ME_give_claims = { area = north_kurdistan_area }
@@ -1220,7 +1220,7 @@ AKK_missions_5 = {
 			ME_give_claims = { area = shahrizor_area }
 		}
 	}
-
+	
 	AKK_advance_into_QQ = {
 		icon = mission_claim_hispaniola
 		required_missions = { AKK_quell_jahan_shah }
@@ -1248,24 +1248,24 @@ AKK_missions_5 = {
 				name = AKK_seizing_qara_qoyunlu_lands
 				duration = -1
 			}
-
+		
 			custom_tooltip = " "
-
+			
 			country_event = { id = ME_Aq_Qoyunlu_Events.8 }
-
+		
 			custom_tooltip = " "
-
+			
 			hidden_effect = {
 				country_event = { id = ME_Aq_Qoyunlu_Events.12 days = 180 random = 360 }
 			}
-
+			
 			ME_give_claims = { area = basra_area }
 			ME_give_claims = { area = luristan_area }
 			ME_give_claims = { area = khuzestan_area }
 			ME_give_claims = { area = tabriz_area }
 		}
 	}
-
+	
 	AKK_conquest_of_mesopotamia = {
 		icon = mission_conquer_algiers
 		required_missions = { AKK_advance_into_QQ }
@@ -1303,9 +1303,9 @@ AKK_missions_5 = {
 				}
 				remove_country_modifier = AKK_seizing_qara_qoyunlu_lands
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			custom_tooltip = AKK_distribute_10_base_tax_5_manpower
 			hidden_effect = {
 				for = {
@@ -1331,18 +1331,18 @@ AKK_missions_5 = {
 					"
 				}
 			}
-
+			
 			custom_tooltip = " "
-
+		
 			ME_give_claims = { area = pirate_coast_area }
 			ME_give_claims = { area = bahrain_area }
 			ME_give_claims = { area = persian_gulf_coast }
 			ME_give_claims = { area = farsistan_area }
 			ME_give_claims = { area = isfahan_area }
-			ME_give_claims = { area = iraq_e_ajam_area }
+			ME_give_claims = { area = iraq_e_ajam_area }	
 		}
 	}
-
+	
 	AKK_into_arabia = {
 		icon = mission_arabian_fort
 		required_missions = { AKK_conquest_of_mesopotamia }
@@ -1365,15 +1365,15 @@ AKK_missions_5 = {
 		}
 		effect = {
 			QIR_complete_into_arabia_missions = yes
-
+			
 			ME_add_years_of_trade_income = { years = 4 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_mercantilism = 3
-
+			
 			custom_tooltip = " "
-
+			
 			ME_give_claims = { area = oman_area }
 			ME_give_claims = { area = mascat_area }
 		}

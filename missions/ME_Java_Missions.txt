@@ -15,7 +15,7 @@ Javan_missions_1 = {
 							was_tag = SUN
 							was_tag = CRB
 							was_tag = BLI
-							was_tag = MTR
+							was_tag = MTR 
 							was_tag = BAN
 							was_tag = BLM
 						}
@@ -41,7 +41,7 @@ Javan_missions_1 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	JAV_bedil = {
 		icon = mission_gunpowder_warfare
 		required_missions = { JAV_army }
@@ -61,7 +61,7 @@ Javan_missions_1 = {
 			}
 		}
 	}
-
+	
 	JAV_importing_iron = {
 		icon = mission_portuguese_malacca
 		required_missions = { JAV_bedil JAV_sulawesi }
@@ -85,7 +85,7 @@ Javan_missions_1 = {
 					duration = -1
 				}
 			}
-
+			
 			add_mercantilism = 3
 			hidden_effect = {
 				random_owned_province = {
@@ -102,7 +102,7 @@ Javan_missions_1 = {
 			}
 		}
 	}
-
+	
 	JAV_javan_religion = {
 		icon = mission_interfaith_relations
 		required_missions = { }
@@ -126,7 +126,7 @@ Javan_missions_1 = {
 			}
 		}
 	}
-
+	
 	JAV_temple = {
 		icon = mission_mnd_maj_candi_shrines
 		required_missions = { JAV_javan_religion }
@@ -156,12 +156,12 @@ Javan_missions_1 = {
 				limit = {
 					religion_group = muslim
 				}
-
+				
 				add_country_modifier = {
 					name = JAV_converting_candi
 					duration = 9125
 				}
-
+				
 				add_dip_power = 50
 			}
 			else = {
@@ -169,7 +169,7 @@ Javan_missions_1 = {
 					name = JAV_spiritual_awakening
 					duration = 10950
 				}
-
+				
 				add_stability_or_adm_power = yes
 			}
 		}
@@ -193,7 +193,7 @@ Javan_missions_2 = {
 							was_tag = SUN
 							was_tag = CRB
 							was_tag = BLI
-							was_tag = MTR
+							was_tag = MTR 
 							was_tag = BAN
 							was_tag = BLM
 						}
@@ -219,7 +219,7 @@ Javan_missions_2 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	JAV_army = {
 		icon = mission_annex_prome
 		required_missions = { }
@@ -237,7 +237,7 @@ Javan_missions_2 = {
 			}
 		}
 	}
-
+	
 	JAV_sulawesi = {
 		icon = me_mission_malay_alliance
 		required_missions = { JAV_java }
@@ -260,7 +260,7 @@ Javan_missions_2 = {
 			MSA_claims_spice_islands = yes
 		}
 	}
-
+	
 	JAV_funnel_spice = {
 		icon = mission_rb_colonise_spice_islands
 		required_missions = { JAV_sulawesi }
@@ -282,7 +282,7 @@ Javan_missions_2 = {
 			}
 		}
 	}
-
+	
 	JAV_spread = {
 		icon = mission_prosperity_in_bengal
 		required_missions = { JAV_javan_religion }
@@ -306,10 +306,10 @@ Javan_missions_2 = {
 				limit = {
 					religion = hinduism
 				}
-
+				
 				custom_tooltip = MAJ_immunity_from_spread
 				set_country_flag = MAJ_immunity_from_spread
-
+				
 				add_country_modifier = {
 					name = MAJ_conversion
 					duration = -1
@@ -320,7 +320,7 @@ Javan_missions_2 = {
 					name = JAV_spreading_islam
 					duration = -1
 				}
-
+				
 				add_stability_or_adm_power = yes
 			}
 		}
@@ -344,7 +344,7 @@ Javan_missions_3 = {
 							was_tag = SUN
 							was_tag = CRB
 							was_tag = BLI
-							was_tag = MTR
+							was_tag = MTR 
 							was_tag = BAN
 							was_tag = BLM
 						}
@@ -370,7 +370,7 @@ Javan_missions_3 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	JAV_java = {
 		icon = me_mission_garuda
 		required_missions = { JAV_navy JAV_army }
@@ -446,7 +446,7 @@ Javan_missions_3 = {
 			}
 		}
 	}
-
+	
 	JAV_borneo = {
 		icon = mission_mnd_maj_rein_in_brunei
 		required_missions = { JAV_java }
@@ -466,7 +466,7 @@ Javan_missions_3 = {
 			add_accepted_culture_or_dip_power = { culture = bornean }
 		}
 	}
-
+	
 	JAV_brunei = {
 		icon = me_mission_brunei_flag
 		required_missions = { JAV_borneo }
@@ -487,11 +487,11 @@ Javan_missions_3 = {
 			MSA_claims_philippines = yes
 		}
 	}
-
+	
 	JAV_hegemon = {
 		icon = me_mission_sea_throne_room
 		required_missions = { JAV_brunei JAV_funnel_spice JAV_collect_spice }
-		position = 6
+		position = 6 
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1361
@@ -526,11 +526,11 @@ Javan_missions_3 = {
 			}
 		}
 	}
-
+	
 	JAV_alam_melayu = {
 		icon = mission_sail_to_the_east_indies
 		required_missions = { JAV_hegemon }
-		position = 7
+		position = 7 
 		provinces_to_highlight = {
 			MSA_malaya_pth = yes
 		}
@@ -560,7 +560,7 @@ Javan_missions_4 = {
 							was_tag = SUN
 							was_tag = CRB
 							was_tag = BLI
-							was_tag = MTR
+							was_tag = MTR 
 							was_tag = BAN
 							was_tag = BLM
 						}
@@ -586,7 +586,7 @@ Javan_missions_4 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	JAV_navy = {
 		icon = mission_conquer_arakan
 		required_missions = { }
@@ -602,11 +602,11 @@ Javan_missions_4 = {
 				name = JAV_javanese_malangbangs
 				duration = 7300
 			}
-
+			
 			add_navy_tradition = 10
 		}
 	}
-
+	
 	JAV_strait = {
 		icon = me_mission_sack_malacca
 		required_missions = { JAV_java }
@@ -643,7 +643,7 @@ Javan_missions_4 = {
 			MSA_claims_sumatra = yes
 		}
 	}
-
+	
 	JAV_collect_spice = {
 		icon = me_mission_malay_ruler
 		required_missions = { JAV_strait }
@@ -672,7 +672,7 @@ Javan_missions_4 = {
 			}
 		}
 	}
-
+	
 	JAV_building_up_a_reserve = {
 		icon = mission_bijapur_karnatak
 		required_missions = { JAV_rice_fields }
@@ -698,7 +698,7 @@ Javan_missions_4 = {
 				name = JAV_javan_manpower_might
 				duration = -1
 			}
-
+			
 			add_country_modifier = {
 				name = JAV_reserves
 				duration = 7300
@@ -724,7 +724,7 @@ Javan_missions_5 = {
 							was_tag = SUN
 							was_tag = CRB
 							was_tag = BLI
-							was_tag = MTR
+							was_tag = MTR 
 							was_tag = BAN
 							was_tag = BLM
 						}
@@ -750,7 +750,7 @@ Javan_missions_5 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	JAV_naval_empires = {
 		icon = mission_dominate_trade_in_aden
 		required_missions = { JAV_navy }
@@ -767,7 +767,7 @@ Javan_missions_5 = {
 			add_yearly_sailors = 1
 		}
 	}
-
+	
 	JAV_immense_wealth = {
 		icon = mission_mnd_maj_cloves
 		required_missions = { JAV_naval_empires JAV_strait }
@@ -797,7 +797,7 @@ Javan_missions_5 = {
 			capital_scope = {
 				add_or_upgrade_trade_building = yes
 			}
-
+			
 			1361 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -806,7 +806,7 @@ Javan_missions_5 = {
 					key = MAJ_spice_trade
 				}
 			}
-
+			
 			1357 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -817,7 +817,7 @@ Javan_missions_5 = {
 			}
 		}
 	}
-
+	
 	JAV_rice_fields = {
 		icon = mission_a_million_rice_fields
 		required_missions = { }
@@ -861,43 +861,54 @@ Javan_missions_5 = {
 					"
 				}
 				#inefficient use of space but eh
-					east_java_area = {
-						limit = {
-							has_production_building_trigger = yes
-							development = 10
-							has_terrain = grasslands
-						}
-						add_province_modifier = {
-							name = MAJ_rice_fields
-							duration = 9125
-						}
+				east_java_area = {
+					limit = {
+						has_production_building_trigger = yes
+						development = 10
+						has_terrain = grasslands
 					}
-					central_java_area = {
-						limit = {
-							has_production_building_trigger = yes
-							development = 10
-							has_terrain = grasslands
-						}
-						add_province_modifier = {
-							name = MAJ_rice_fields
-							duration = 9125
-						}
+					add_province_modifier = {
+						name = MAJ_rice_fields
+						duration = 9125
 					}
+				}
+				central_java_area = {
+					limit = {
+						has_production_building_trigger = yes
+						development = 10
+						has_terrain = grasslands
+					}
+					add_province_modifier = {
+						name = MAJ_rice_fields
+						duration = 9125
+					}
+				}
 					west_java_area = {
-						limit = {
-							has_production_building_trigger = yes
-							development = 10
-							has_terrain = grasslands
-						}
-						add_province_modifier = {
-							name = MAJ_rice_fields
-							duration = 9125
-						}
+					limit = {
+						has_production_building_trigger = yes
+						development = 10
+						has_terrain = grasslands
 					}
+					add_province_modifier = {
+						name = MAJ_rice_fields
+						duration = 9125
+					}
+				}
+				kalimantan_area = {
+					limit = {
+						has_production_building_trigger = yes
+						development = 10
+						has_terrain = grasslands
+					}
+					add_province_modifier = {
+						name = MAJ_rice_fields
+						duration = 9125
+					}
+				}
 			}
 		}
 	}
-
+	
 	JAV_bountiful_island = {
 		icon = mission_mnd_maj_negara_agung
 		required_missions = { JAV_rice_fields }
@@ -937,6 +948,12 @@ Javan_missions_5 = {
 					}
 				}
 				west_java_area = {
+					add_province_modifier = {
+						name = JAV_mancanegara
+						duration = -1
+					}
+				}
+				kalimantan_area = {
 					add_province_modifier = {
 						name = JAV_mancanegara
 						duration = -1

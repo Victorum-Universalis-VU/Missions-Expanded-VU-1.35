@@ -7,7 +7,7 @@ ENG_UKS_missions_1 = {
 			AND = {
 				OR = {
 					tag = ENG
-					tag = AVE
+					tag = AVE 
 				}
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 				has_country_flag = ENG_Angevin_Missions
@@ -16,7 +16,7 @@ ENG_UKS_missions_1 = {
 		}
 	}
 	has_country_shield  = yes
-
+	
 	UKS_Integrate_French_Concessions = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { }
@@ -58,7 +58,7 @@ ENG_UKS_missions_1 = {
 			}
 		}
 	}
-
+	
 	UKS_quell_down = {
 		icon = mission_conquer_50_development
 		required_missions = { UKS_Integrate_French_Concessions }
@@ -133,7 +133,7 @@ ENG_UKS_missions_1 = {
 			}
 		}
 	}
-
+	
 	UKS_our_possessions = {
 		icon = mission_colonial
 		required_missions = { UKS_quell_down }
@@ -184,7 +184,7 @@ ENG_UKS_missions_1 = {
 			}
 		}
 	}
-
+	
 	UKS_Palace = {
 		icon = me_mission_united_kingdoms_palace
 		required_missions = { UKS_our_possessions }
@@ -209,7 +209,7 @@ ENG_UKS_missions_2 = {
 			AND = {
 				OR = {
 					tag = ENG
-					tag = AVE
+					tag = AVE 
 				}
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 				has_country_flag = ENG_Angevin_Missions
@@ -218,7 +218,7 @@ ENG_UKS_missions_2 = {
 		}
 	}
 	has_country_shield  = yes
-
+	
 	UKS_brittany = {
 		icon = mission_rb_conquer_brittany
 		required_missions = { UKS_Integrate_French_Concessions UKS_recover_england }
@@ -246,7 +246,7 @@ ENG_UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_anjou = {
 		icon = mission_rb_angevin_kingdom
 		required_missions = { UKS_brittany }
@@ -295,7 +295,7 @@ ENG_UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_extend_possessions = {
 		icon = mission_unite_home_region
 		required_missions = { UKS_anjou UKS_quell_down }
@@ -316,7 +316,7 @@ ENG_UKS_missions_2 = {
 		}
 		effect = {
 			add_years_of_income = 0.25
-			87 = {
+			87 = {	
 				if = {
 					limit = {
 						NOT = { province_has_center_of_trade_of_level = 1 }
@@ -374,7 +374,7 @@ ENG_UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_Flanders = {
 		icon = me_mission_netherlands_polders
 		required_missions = { UKS_Burgundy UKS_extend_possessions }
@@ -428,7 +428,7 @@ ENG_UKS_missions_3 = {
 			AND = {
 				OR = {
 					tag = ENG
-					tag = AVE
+					tag = AVE 
 				}
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 				has_country_flag = ENG_Angevin_Missions
@@ -437,7 +437,7 @@ ENG_UKS_missions_3 = {
 		}
 	}
 	has_country_shield  = yes
-
+	
 	UKS_recover_england = {
 		icon = mission_alliances
 		required_missions = { }
@@ -464,7 +464,7 @@ ENG_UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_the_isles = {
 		icon = me_mission_united_kingdoms_terra_brittanica
 		required_missions = { UKS_recover_england }
@@ -522,7 +522,7 @@ ENG_UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_Provence  = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { UKS_anjou }
@@ -565,7 +565,7 @@ ENG_UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_Burgundy  = {
 		icon = me_mission_united_kingdoms_burgundy
 		required_missions = { UKS_Provence UKS_extend_possessions }
@@ -597,7 +597,7 @@ ENG_UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_Lorraine = {
 		icon = me_mission_united_kingdoms_lorraine
 		required_missions = { UKS_Burgundy }
@@ -621,7 +621,7 @@ ENG_UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_low_countries = {
 		icon = me_mission_netherlands_reclaiming_land
 		required_missions = { UKS_Lorraine UKS_Flanders }
@@ -643,20 +643,35 @@ ENG_UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_union = {
 		icon = me_mission_shiny_crown
 		required_missions = { UKS_Palace UKS_develop_french_lands }
 		position = 8
 		trigger = {
-			overlord_of = FRA
-			FRA = {
-				NOT = { num_of_cities = 60 }
-				NOT = { liberty_desire = 10 }
-			}
-			reverse_has_opinion = {
-				who = FRA
-				value = 190
+			OR = {
+				AND = {
+					overlord_of = FRA
+					FRA = {
+						NOT = { num_of_cities = 120 }
+						NOT = { liberty_desire = 10 }
+					}
+					reverse_has_opinion = {
+						who = FRA
+						value = 190
+					}
+				}
+				AND = {
+					overlord_of = BFR
+					BFR = {
+						NOT = { num_of_cities = 120 }
+						NOT = { liberty_desire = 10 }
+					}
+					reverse_has_opinion = {
+						who = BFR
+						value = 190
+					}
+				}
 			}
 			mission_completed = UKS_Burgundy
 		}
@@ -682,7 +697,7 @@ ENG_UKS_missions_4 = {
 			AND = {
 				OR = {
 					tag = ENG
-					tag = AVE
+					tag = AVE 
 				}
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 				has_country_flag = ENG_Angevin_Missions
@@ -691,7 +706,7 @@ ENG_UKS_missions_4 = {
 		}
 	}
 	has_country_shield  = yes
-
+	
 	UKS_recover_france = {
 		icon = mission_rb_control_electors
 		required_missions = { UKS_recover_england UKS_loyalty_of_france }
@@ -727,7 +742,7 @@ ENG_UKS_missions_4 = {
 			}
 		}
 	}
-
+	
 	UKS_bromance = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { UKS_cultures_of_France UKS_recover_france }
@@ -746,7 +761,7 @@ ENG_UKS_missions_4 = {
 			custom_tooltip = England_tooltip.16
 		}
 	}
-
+	
 	UKS_Savoyard = {
 		icon = me_mission_united_kingdoms_savoy
 		required_missions = { UKS_bromance UKS_Burgundy }
@@ -797,7 +812,7 @@ ENG_UKS_missions_5 = {
 			AND = {
 				OR = {
 					tag = ENG
-					tag = AVE
+					tag = AVE 
 				}
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 				has_country_flag = ENG_Angevin_Missions
@@ -806,7 +821,7 @@ ENG_UKS_missions_5 = {
 		}
 	}
 	has_country_shield  = yes
-
+	
 	UKS_loyalty_of_france = {
 		icon = mission_have_two_subjects
 		required_missions = { }
@@ -828,7 +843,7 @@ ENG_UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_cultures_of_France = {
 		icon = mission_alliances
 		required_missions = { UKS_loyalty_of_france }
@@ -837,13 +852,13 @@ ENG_UKS_missions_5 = {
 			custom_trigger_tooltip = {
 				tooltip = England_tooltip.25
 				calc_true_if = {
-					accepted_culture = cosmopolitan_french
-					accepted_culture = gascon
-					accepted_culture = normand
-					accepted_culture = aquitaine
-					accepted_culture = burgundian
-					accepted_culture = occitain
-					accepted_culture = wallonian
+					accepted_culture = cosmopolitan_french 
+					accepted_culture = gascon 
+					accepted_culture = normand 
+					accepted_culture = aquitaine 
+					accepted_culture = burgundian 
+					accepted_culture = occitain 
+					accepted_culture = wallonian 
 					amount = 2
 				}
 			}
@@ -858,7 +873,7 @@ ENG_UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_develop_france = {
 		icon = mission_colonial
 		required_missions = { UKS_bromance }
@@ -887,7 +902,7 @@ ENG_UKS_missions_5 = {
 		}
 		trigger = {
 			overlord_of = FRA
-			if = {
+			if = { 
 				limit = {
 					has_dlc = "Rights of Man"
 				}
@@ -969,7 +984,7 @@ ENG_UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_develop_french_lands = { #religious now ok?
 		icon = mission_rb_control_state_religion
 		required_missions = { UKS_develop_france }
@@ -992,7 +1007,7 @@ ENG_UKS_missions_5 = {
 				all_owned_province = {
 					OR = {
 						religion = ROOT
-						has_province_modifier = religious_zeal_at_conv
+						has_province_modifier = religious_zeal_at_conv 
 					}
 				}
 			}
@@ -1026,7 +1041,7 @@ UKS_missions_1 = {
 		}
 	}
 	has_country_shield  = yes
-
+	
 	UKS_uaval_power = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { }
@@ -1044,7 +1059,7 @@ UKS_missions_1 = {
 			}
 		}
 	}
-
+	
 	UKS_brest_arsenal = {
 		icon = me_mission_venice_small_ship_in_port
 		required_missions = { UKS_uaval_power }
@@ -1084,7 +1099,7 @@ UKS_missions_1 = {
 			}
 		}
 	}
-
+	
 	UKS_Catalonia = {
 		icon = mission_unite_home_region
 		required_missions = { }
@@ -1103,7 +1118,7 @@ UKS_missions_1 = {
 			country_event = { id = ME_United_Kingdoms_Events.12 }
 		}
 	}
-
+	
 	UKS_overpower = {
 		icon = mission_assemble_an_army
 		required_missions = { UKS_Catalonia }
@@ -1124,7 +1139,7 @@ UKS_missions_1 = {
 			}
 		}
 	}
-
+	
 	UKS_elector_support = {
 		icon = mission_rb_control_electors
 		required_missions = { UKS_overpower }
@@ -1149,7 +1164,7 @@ UKS_missions_1 = {
 			}
 		}
 	}
-
+	
 	UKS_the_emperor = {
 		icon = me_mission_shiny_crown_hre
 		required_missions = { UKS_elector_support }
@@ -1164,7 +1179,7 @@ UKS_missions_1 = {
 			}
 		}
 	}
-
+	
 	UKS_quebec = {
 		icon = mission_colonial
 		required_missions = { UKS_Canada }
@@ -1219,7 +1234,7 @@ UKS_missions_1 = {
 			}
 		}
 	}
-
+	
 	UKS_toronto = {
 		icon = mission_early_game_buildings
 		required_missions = { UKS_quebec }
@@ -1261,7 +1276,7 @@ UKS_missions_1 = {
 			}
 		}
 	}
-
+	
 	UKS_inner_canada = {
 		icon = mission_settlers_north_america
 		required_missions = { UKS_toronto UKS_louisianian_colony }
@@ -1271,8 +1286,8 @@ UKS_missions_1 = {
 				area = red_river_area
 				area = saskatchewan_area
 				area = assiniboia_area
-				area = dakota_area
 				area = yellowstone_area
+				area = dakota_area
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1295,12 +1310,12 @@ UKS_missions_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_city = yes
 			}
-			dakota_area = {
+			yellowstone_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_city = yes
 			}
-			yellowstone_area = {
+			dakota_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_city = yes
@@ -1329,7 +1344,7 @@ UKS_missions_2 = {
 		}
 	}
 	has_country_shield  = yes
-
+	
 	UKS_wessex_ports = {
 		icon = me_mission_venice_navy
 		required_missions = { UKS_uaval_power }
@@ -1379,7 +1394,7 @@ UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_major_cherbourg = {
 		icon = me_mission_venice_ship_in_port
 		required_missions = { UKS_wessex_ports UKS_brest_arsenal }
@@ -1420,7 +1435,7 @@ UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_challange_italians = {
 		icon = me_mission_modern_army
 		required_missions = { UKS_Catalonia }
@@ -1466,7 +1481,7 @@ UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_naples = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { UKS_challange_italians }
@@ -1517,7 +1532,7 @@ UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_destroy_hre = {
 		icon = mission_cannons_firing
 		required_missions = { UKS_overpower }
@@ -1533,7 +1548,7 @@ UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_Canada = {
 		icon = mission_rb_colonise_canada
 		required_missions = { UKS_colonization }
@@ -1569,7 +1584,7 @@ UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_Nieuw_amsterdam = {
 		icon = mission_rb_the_thirteen_colonies
 		required_missions = { UKS_Canada }
@@ -1611,7 +1626,7 @@ UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_Boston = {
 		icon = mission_early_game_buildings
 		required_missions = { UKS_Nieuw_amsterdam }
@@ -1651,7 +1666,7 @@ UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_found_new_orleans = {
 		icon = mission_rb_hanseatic_east
 		required_missions = { UKS_colonize_caribbean }
@@ -1704,7 +1719,7 @@ UKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	UKS_louisianian_colony = {
 		icon = mission_advance_to_the_dnieper
 		required_missions = { UKS_found_new_orleans }
@@ -1724,7 +1739,7 @@ UKS_missions_2 = {
 			}
 		}
 		effect = {
-			893 = {
+			893 = {	
 				add_trade_modifier = {
 					who = ROOT
 					duration = -1
@@ -1750,7 +1765,7 @@ UKS_missions_3 = {
 		}
 	}
 	has_country_shield  = yes
-
+	
 	UKS_taxation = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { }
@@ -1822,7 +1837,7 @@ UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_develop_13 = {
 		icon = mission_colonial
 		required_missions = { UKS_taxation }
@@ -1872,7 +1887,7 @@ UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_oxbridge = {
 		icon = mission_rb_renovate_oxbridge
 		required_missions = { }
@@ -1889,7 +1904,7 @@ UKS_missions_3 = {
 					NOT = { development = 15 }
 				}
 			}
-
+			
 		}
 		trigger = {
 			237 = {
@@ -1941,7 +1956,7 @@ UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_land_of_unis = {
 		icon = mission_early_modern_university
 		required_missions = { UKS_oxbridge }
@@ -2028,7 +2043,7 @@ UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_Lombardy = {
 		icon = mission_cannons_firing
 		required_missions = { UKS_challange_italians }
@@ -2076,7 +2091,7 @@ UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_genoa = {
 		icon = me_mission_venice_small_ship_in_port
 		required_missions = { UKS_Lombardy }
@@ -2105,7 +2120,7 @@ UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_colonization = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { }
@@ -2127,7 +2142,7 @@ UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_colonize_caribbean = {
 		icon = mission_found_havana
 		required_missions = { UKS_colonization }
@@ -2142,7 +2157,7 @@ UKS_missions_3 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 7
-				colonial_region = colonial_the_carribean
+				colonial_region = colonial_the_carribean 
 				is_city = yes
 			}
 		}
@@ -2162,13 +2177,13 @@ UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_contest_brazil = {
 		icon = mission_iberian_conquistador
 		required_missions = { UKS_colonize_caribbean }
 		position = 20
 		provinces_to_highlight = {
-			colonial_region = colonial_brazil
+			colonial_region = colonial_brazil 
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				is_city = no
@@ -2273,7 +2288,7 @@ UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_spices = {
 		icon = mission_high_income
 		required_missions = { UKS_east_african }
@@ -2313,7 +2328,7 @@ UKS_missions_3 = {
 			}
 		}
 	}
-
+	
 	UKS_down_under = {
 		icon = mission_colonial
 		required_missions = { UKS_spices }
@@ -2355,7 +2370,7 @@ UKS_missions_4 = {
 		}
 	}
 	has_country_shield  = yes
-
+	
 	UKS_revitalize = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { UKS_english_cot UKS_taxation }
@@ -2469,7 +2484,7 @@ UKS_missions_4 = {
 						hidden = yes
 					}
 				}
-				greater_london_area = {
+				south_east_area = {
 					add_province_modifier = {
 						name = UKS_plus
 						duration = -1
@@ -2479,7 +2494,7 @@ UKS_missions_4 = {
 			}
 		}
 	}
-
+	
 	UKS_via_gallica = {
 		icon = me_mission_road_city
 		required_missions = { UKS_revitalize }
@@ -2515,7 +2530,7 @@ UKS_missions_4 = {
 				province_id = 4389
 				province_id = 184
 				province_id = 4776
-
+				
 				#Chartres-Calais
 				province_id = 4388
 				province_id = 167
@@ -2916,7 +2931,7 @@ UKS_missions_4 = {
 			}
 		}
 	}
-
+	
 	UKS_via_catalunya = {
 		icon = me_mission_road_village
 		required_missions = { UKS_via_gallica }
@@ -3136,7 +3151,7 @@ UKS_missions_4 = {
 			}
 		}
 	}
-
+	
 	UKS_dutch_unis = {
 		icon = me_mission_generic_old_university
 		required_missions = { UKS_oxbridge }
@@ -3210,7 +3225,7 @@ UKS_missions_4 = {
 			}
 		}
 	}
-
+	
 	UKS_merchants_of_marseille = {
 		icon = mission_asian_trader
 		required_missions = { UKS_genoese_trade }
@@ -3271,7 +3286,7 @@ UKS_missions_4 = {
 			}
 		}
 	}
-
+	
 	UKS_ivory_coast = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { UKS_colonization }
@@ -3286,7 +3301,7 @@ UKS_missions_4 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				region = guinea_region
+				region = guinea_region 
 				is_city = yes
 			}
 		}
@@ -3316,7 +3331,7 @@ UKS_missions_4 = {
 			}
 		}
 	}
-
+	
 	UKS_cape = {
 		icon = mission_colonial
 		required_missions = { UKS_ivory_coast }
@@ -3324,7 +3339,7 @@ UKS_missions_4 = {
 		provinces_to_highlight = {
 			province_id = 1177
 			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 				is_city = no
 			}
 		}
@@ -3352,7 +3367,7 @@ UKS_missions_4 = {
 			}
 		}
 	}
-
+	
 	UKS_east_african = {
 		icon = mission_african_soldier
 		required_missions = { UKS_cape }
@@ -3391,9 +3406,41 @@ UKS_missions_4 = {
 				}
 				add_claim = ROOT
 			}
+			riau_islands_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			nusa_tenggara_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			borneo_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			celebes_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
 		}
 	}
-
+	
 	UKS_indochina = {
 		icon = mission_asian_trader
 		required_missions = { UKS_india UKS_spices}
@@ -3402,6 +3449,7 @@ UKS_missions_4 = {
 			OR = {
 				region = burma_region
 				region = indo_china_region
+				region = south_china_sea_islands_region
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -3414,6 +3462,7 @@ UKS_missions_4 = {
 				OR = {
 					region = burma_region
 					region = indo_china_region
+					region = south_china_sea_islands_region
 				}
 				is_city = yes
 			}
@@ -3431,6 +3480,13 @@ UKS_missions_4 = {
 				add_permanent_claim = ROOT
 			}
 			indo_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_china_sea_islands_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -3455,7 +3511,7 @@ UKS_missions_5 = {
 		}
 	}
 	has_country_shield  = yes
-
+	
 	UKS_english_cot = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { }
@@ -3538,7 +3594,7 @@ UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_monopolize_the_channel = {
 		icon = mission_rb_monopolize_the_channel
 		required_missions = { UKS_english_cot }
@@ -3568,7 +3624,7 @@ UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_expand_production_sector = {
 		icon = mission_have_manufactories
 		required_missions = { UKS_monopolize_the_channel }
@@ -3621,7 +3677,7 @@ UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_via_gallica_expanded = {
 		icon = me_mission_road_city
 		required_missions = { UKS_via_gallica }
@@ -3838,7 +3894,7 @@ UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_genoese_trade = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { }
@@ -3859,7 +3915,7 @@ UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_toulon = {
 		icon = mission_galleys_in_port
 		required_missions = { UKS_genoese_trade }
@@ -3906,7 +3962,7 @@ UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_denounce = {
 		icon = mission_pirate_havens
 		required_missions = { }
@@ -3929,7 +3985,7 @@ UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_curb = {
 		icon = mission_conquer_tunis
 		required_missions = { UKS_denounce }
@@ -3968,7 +4024,7 @@ UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_west_africa = {
 		icon = mission_west_african_ports
 		required_missions = { UKS_curb UKS_ivory_coast }
@@ -3998,7 +4054,7 @@ UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_india = {
 		icon = mission_trade_company_region_abroad
 		required_missions = { UKS_east_african }
@@ -4011,7 +4067,7 @@ UKS_missions_5 = {
 				region = west_india_region
 				region = coromandel_region
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -4033,7 +4089,7 @@ UKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	UKS_full_india = {
 		icon = mission_rb_take_indian_coast
 		required_missions = { UKS_india }
@@ -4046,7 +4102,7 @@ UKS_missions_5 = {
 				region = west_india_region
 				region = coromandel_region
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
 			bengal_region = {

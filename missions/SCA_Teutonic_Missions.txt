@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe # Amended by Altan for EE-VU
 teu_hre_protection_mission_slot = {
 	slot = 1
 	generic = no
@@ -20,7 +21,7 @@ teu_hre_protection_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_seek_imperial_protection = {
 		icon = join_the_empire
 		position = 1
@@ -83,7 +84,7 @@ teu_livonian_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_livonian_alliance = {
 		icon = mission_diplomatic_relation
 		position = 1
@@ -152,7 +153,7 @@ teu_livonian_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_strengthen_livonia = {
 		icon = mission_livonian_knights
 		position = 2
@@ -276,7 +277,7 @@ teu_danzig_and_poland_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_handle_the_prussian_confederation = {
 		icon = mission_rb_hanseatic_east
 		position = 1
@@ -318,7 +319,7 @@ teu_danzig_and_poland_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_defeat_the_poles = {
 		icon = mission_conquer_5_states
 		position = 2
@@ -376,7 +377,7 @@ teu_army_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_build_to_force_limit = {
 		icon = mission_teutonic_knights
 		position = 1
@@ -434,7 +435,7 @@ teu_pru_hre_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_teutonic_order_and_the_empire = {
 		icon = glory_to_von_habsburg
 		position = 2
@@ -521,7 +522,7 @@ teu_pru_dummy_hre_mission_slot_1 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_hre_mission_1 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -651,7 +652,7 @@ teu_pru_dummy_hre_mission_slot_1 = {
 			}
 		}
 	}
-
+	
 	teu_pru_hre_mission_2 = {
 		icon = mission_unknown_mission
 		position = 4
@@ -774,20 +775,6 @@ teu_pru_dummy_hre_mission_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			altmark_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			anhalt_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
 			thuringia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -818,7 +805,7 @@ teu_pru_dummy_hre_mission_slot_1 = {
 			}
 		}
 	}
-
+	
 	teu_pru_hre_mission_3 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -922,8 +909,6 @@ teu_pru_dummy_hre_mission_slot_1 = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						OR = {
 							area = saxony_area
-							area = altmark_area
-							area = anhalt_area
 							area = thuringia_area
 						}
 						value = 8
@@ -1030,13 +1015,6 @@ teu_pru_dummy_hre_mission_slot_1 = {
 				name = teu_pru_saxon_productivity
 				duration = 9125
 			}
-			thuringia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			franconia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1065,7 +1043,7 @@ teu_pru_dummy_hre_mission_slot_1 = {
 			}
 		}
 	}
-
+	
 	teu_pru_hre_mission_4 = {
 		icon = mission_unknown_mission
 		position = 6
@@ -1116,7 +1094,6 @@ teu_pru_dummy_hre_mission_slot_1 = {
 					}
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						OR = {
-							area = thuringia_area
 							area = franconia_area
 							area = palatinate_area
 						}
@@ -1188,21 +1165,7 @@ teu_pru_dummy_hre_mission_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			wurttemburg_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			swabia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			tirol_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1221,11 +1184,11 @@ teu_pru_dummy_hre_mission_slot_1 = {
 			custom_tooltip = teu_pru_fortify_the_borders_ct
 		}
 	}
-
+	
 	teu_pru_hre_mission_5 = {
 		icon = mission_unknown_mission
 		position = 7
-		required_missions = {
+		required_missions = { 
 			teu_pru_hre_mission_4
 			teu_pru_hre_mission_9
 		}
@@ -1322,18 +1285,12 @@ teu_pru_dummy_hre_mission_slot_1 = {
 								area = silesia_area
 								area = lusatia_area
 								area = saxony_area
-								area = altmark_area
-								area = anhalt_area
-								area = lower_saxony_area
 								area = thuringia_area
-								area = bavaria_area
 								area = franconia_area
 								area = palatinate_area
 								area = alsace_area
 								area = baden_area
-								area = wurttemburg_area
 								area = swabia_area
-								area = tirol_area
 								area = bavaria_area
 								area = vorpommern_area
 								area = hinter_pommern_area
@@ -1472,7 +1429,7 @@ teu_pru_dummy_hre_mission_slot_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_hre_mission_6 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -1571,7 +1528,7 @@ teu_pru_dummy_hre_mission_slot_2 = {
 				}
 				add_nationalism = -10
 			}
-			lower_saxony_area = {
+			saxony_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1649,7 +1606,7 @@ teu_pru_dummy_hre_mission_slot_2 = {
 			}
 		}
 	}
-
+	
 	teu_pru_hre_mission_7 = {
 		icon = mission_unknown_mission
 		position = 4
@@ -1668,7 +1625,7 @@ teu_pru_dummy_hre_mission_slot_2 = {
 					}
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						OR = {
-							area = lower_saxony_area
+							area = saxony_area
 							area = holstein_area
 							area = braunschweig_area
 							area = weser_area
@@ -1768,7 +1725,7 @@ teu_pru_dummy_hre_mission_slot_2 = {
 			}
 		}
 	}
-
+	
 	teu_pru_hre_mission_8 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -1906,10 +1863,10 @@ teu_pru_dummy_hre_mission_slot_2 = {
 				name = teu_pru_integration_of_the_ruthenians
 				duration = -1
 			}
-			custom_tooltip = teu_pru_conquer_poland_bt
+			custom_tooltip = teu_pru_conquer_poland_vu
 		}
 	}
-
+	
 	teu_pru_hre_mission_9 = {
 		icon = mission_unknown_mission
 		position = 6
@@ -2004,7 +1961,7 @@ teu_pru_diplomatic_hre_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_vassalize_brandenburg = {
 		icon = electorate_of_brandenburg
 		position = 3
@@ -2040,11 +1997,11 @@ teu_pru_diplomatic_hre_mission_slot = {
 			add_army_tradition = 10
 		}
 	}
-
+	
 	teu_pru_become_an_elector = {
 		icon = invest_in_the_provinces
 		position = 4
-		required_missions = {
+		required_missions = { 
 			teu_pru_vassalize_brandenburg
 			teu_pru_improve_diplomatic_skills
 		}
@@ -2100,7 +2057,7 @@ teu_pru_diplomatic_hre_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_the_religious_war = {
 		icon = back_the_league
 		position = 5
@@ -2278,14 +2235,14 @@ teu_pru_diplomatic_hre_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_become_emperor = {
 		icon = mission_empire
 		position = 6
-		required_missions = {
+		required_missions = { 
 			teu_pru_the_religious_war
 			teu_pru_secularize_the_state
-		}
+		}		
 		provinces_to_highlight = {
 			if = {
 				limit = { hre_size = 1 }
@@ -2359,7 +2316,7 @@ teu_pru_diplomatic_hre_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_unite_the_empire = {
 		icon = imperial_ascendancy
 		position = 7
@@ -2498,7 +2455,7 @@ teu_pru_diplomatic_seculization_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_improve_diplomatic_skills = {
 		icon = mission_religious
 		position = 3
@@ -2568,11 +2525,11 @@ teu_pru_diplomatic_seculization_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_secularize_the_state = {
 		icon = holy_state
 		position = 5
-		required_missions = {
+		required_missions = { 
 			teu_pru_improve_diplomatic_skills
 			teu_pru_become_an_elector
 		}
@@ -2645,7 +2602,7 @@ teu_pru_conquest_hre_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_conquer_brandenburg = {
 		icon = electorate_of_brandenburg
 		position = 3
@@ -2655,7 +2612,7 @@ teu_pru_conquest_hre_mission_slot = {
 				area = neumark_area
 				area = mittelmark_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -2687,7 +2644,7 @@ teu_pru_conquest_hre_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_conquer_silesia = {
 		icon = mission_unite_home_region
 		position = 4
@@ -2732,7 +2689,7 @@ teu_pru_conquest_hre_mission_slot = {
 				}
 				accepted_culture = sorbian
 				custom_trigger_tooltip = {
-					tooltip = teu_pru_conquer_silesia_bt
+					tooltip = teu_pru_conquer_silesia_vu
 					NOT = {
 						north_german_region = {
 							culture = sorbian
@@ -2759,20 +2716,6 @@ teu_pru_conquest_hre_mission_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			altmark_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			anhalt_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			thuringia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -2782,7 +2725,7 @@ teu_pru_conquest_hre_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_unite_the_saxons = {
 		icon = electorate_of_saxony
 		position = 5
@@ -2790,8 +2733,6 @@ teu_pru_conquest_hre_mission_slot = {
 		provinces_to_highlight = {
 			OR = {
 				area = saxony_area
-				area = altmark_area
-				area = anhalt_area
 				area = thuringia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -2801,8 +2742,6 @@ teu_pru_conquest_hre_mission_slot = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = saxony_area
-					area = altmark_area
-					area = anhalt_area
 					area = thuringia_area
 				}
 				value = 8
@@ -2812,13 +2751,6 @@ teu_pru_conquest_hre_mission_slot = {
 			add_country_modifier = {
 				name = teu_pru_saxon_productivity
 				duration = 9125
-			}
-			thuringia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 			franconia_area = {
 				limit = {
@@ -2836,14 +2768,13 @@ teu_pru_conquest_hre_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_push_into_southern_germany = {
 		icon = claim_tirol
 		position = 6
 		required_missions = { teu_pru_unite_the_saxons }
 		provinces_to_highlight = {
 			OR = {
-				area = thuringia_area
 				area = franconia_area
 				area = palatinate_area
 			}
@@ -2852,7 +2783,6 @@ teu_pru_conquest_hre_mission_slot = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
-					area = thuringia_area
 					area = franconia_area
 					area = palatinate_area
 				}
@@ -2875,21 +2805,7 @@ teu_pru_conquest_hre_mission_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			wurttemburg_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			swabia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			tirol_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -2905,11 +2821,11 @@ teu_pru_conquest_hre_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_an_empire_of_blood_and_iron = {
 		icon = Blood_Iron
 		position = 7
-		required_missions = {
+		required_missions = { 
 			teu_pru_take_over_northern_germany
 			teu_pru_push_into_southern_germany
 		}
@@ -2920,18 +2836,12 @@ teu_pru_conquest_hre_mission_slot = {
 				area = silesia_area
 				area = lusatia_area
 				area = saxony_area
-				area = altmark_area
-				area = anhalt_area
-				area = lower_saxony_area
 				area = thuringia_area
-				area = bavaria_area
 				area = franconia_area
 				area = palatinate_area
 				area = alsace_area
 				area = baden_area
-				area = wurttemburg_area
 				area = swabia_area
-				area = tirol_area
 				area = bavaria_area
 				area = vorpommern_area
 				area = hinter_pommern_area
@@ -2958,18 +2868,12 @@ teu_pru_conquest_hre_mission_slot = {
 						area = silesia_area
 						area = lusatia_area
 						area = saxony_area
-						area = altmark_area
-						area = anhalt_area
-						area = lower_saxony_area
 						area = thuringia_area
-						area = bavaria_area
 						area = franconia_area
 						area = palatinate_area
 						area = alsace_area
 						area = baden_area
-						area = wurttemburg_area
 						area = swabia_area
-						area = tirol_area
 						area = bavaria_area
 						area = vorpommern_area
 						area = hinter_pommern_area
@@ -3036,7 +2940,7 @@ teu_pru_secondary_conquest_hre_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_push_into_pomarania = {
 		icon = mission_hanseatic_city
 		position = 3
@@ -3078,7 +2982,7 @@ teu_pru_secondary_conquest_hre_mission_slot = {
 				}
 				add_nationalism = -10
 			}
-			lower_saxony_area = {
+			saxony_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -3108,14 +3012,14 @@ teu_pru_secondary_conquest_hre_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_annex_the_lower_saxons = {
 		icon = conquer_lower_saxony
 		position = 4
 		required_missions = { teu_pru_push_into_pomarania }
 		provinces_to_highlight = {
 			OR = {
-				area = lower_saxony_area
+				area = saxony_area
 				area = holstein_area
 				area = braunschweig_area
 				area = weser_area
@@ -3125,7 +3029,7 @@ teu_pru_secondary_conquest_hre_mission_slot = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
-					area = lower_saxony_area
+					area = saxony_area
 					area = holstein_area
 					area = braunschweig_area
 					area = weser_area
@@ -3179,11 +3083,11 @@ teu_pru_secondary_conquest_hre_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_annex_western_germany = {
 		icon = westphalian_conquest
 		position = 5
-		required_missions = {
+		required_missions = { 
 			teu_pru_annex_the_lower_saxons
 		}
 		provinces_to_highlight = {
@@ -3247,7 +3151,7 @@ teu_pru_secondary_conquest_hre_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_take_over_northern_germany = {
 		icon = ger_kaiserreich
 		position = 6
@@ -3309,7 +3213,7 @@ teu_pru_kingdom_of_prussia_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_warsaw_and_krakow = {
 		icon = invade_poland
 		position = 3
@@ -3361,7 +3265,7 @@ teu_pru_kingdom_of_prussia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_conquer_poland = {
 		icon = king_of_poland
 		position = 4
@@ -3405,7 +3309,7 @@ teu_pru_kingdom_of_prussia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_take_over_moldavia = {
 		icon = mission_have_two_subjects
 		position = 5
@@ -3434,7 +3338,7 @@ teu_pru_kingdom_of_prussia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_fortify_the_borders = {
 		icon = mission_marienburg
 		position = 6
@@ -3524,11 +3428,11 @@ teu_pru_kingdom_of_prussia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_empire_of_the_east = {
 		icon = mission_prussian_kaiserreich
 		position = 7
-		required_missions = {
+		required_missions = { 
 			teu_pru_fortify_dnieper
 			teu_pru_fortify_the_borders
 		}
@@ -3616,7 +3520,7 @@ teu_pru_secondary_kingdom_of_prussia_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_conquer_lithuania = {
 		icon = mission_conquer_lithuania
 		position = 3
@@ -3688,7 +3592,7 @@ teu_pru_secondary_kingdom_of_prussia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_push_into_ruthenia = {
 		icon = mission_cossack_cavalry
 		position = 4
@@ -3745,7 +3649,7 @@ teu_pru_secondary_kingdom_of_prussia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_teutonic_ruthenia = {
 		icon = mission_develop_kiev
 		position = 5
@@ -3780,10 +3684,10 @@ teu_pru_secondary_kingdom_of_prussia_mission_slot = {
 				name = teu_pru_integration_of_the_ruthenians
 				duration = -1
 			}
-			custom_tooltip = teu_pru_conquer_poland_bt
+			custom_tooltip = teu_pru_conquer_poland_vu
 		}
 	}
-
+	
 	teu_pru_fortify_dnieper = {
 		icon = fight_bosnian_heresies
 		position = 6
@@ -3847,8 +3751,8 @@ teu_pru_secondary_kingdom_of_prussia_mission_slot = {
 							province_id = 283
 							province_id = 2406
 						}
-						province_has_current_tech_fort_trigger = yes
-						NOT = { has_province_modifier = teu_pru_fortified_border }
+						province_has_current_tech_fort_trigger = yes 
+						NOT = { has_province_modifier = teu_pru_fortified_border } 
 					}
 					add_province_modifier = { name = teu_pru_fortified_border duration = -1 }
 				}
@@ -3866,8 +3770,8 @@ teu_pru_secondary_kingdom_of_prussia_mission_slot = {
 							province_id = 283
 							province_id = 2406
 						}
-						province_has_current_tech_fort_trigger = yes
-						NOT = { has_province_modifier = teu_pru_fortified_border }
+						province_has_current_tech_fort_trigger = yes 
+						NOT = { has_province_modifier = teu_pru_fortified_border } 
 					}
 					add_province_modifier = { name = teu_pru_fortified_border duration = -1 }
 				}
@@ -3885,8 +3789,8 @@ teu_pru_secondary_kingdom_of_prussia_mission_slot = {
 							province_id = 283
 							province_id = 2406
 						}
-						province_has_current_tech_fort_trigger = yes
-						NOT = { has_province_modifier = teu_pru_fortified_border }
+						province_has_current_tech_fort_trigger = yes 
+						NOT = { has_province_modifier = teu_pru_fortified_border } 
 					}
 					add_province_modifier = { name = teu_pru_fortified_border duration = -1 }
 				}
@@ -3904,8 +3808,8 @@ teu_pru_secondary_kingdom_of_prussia_mission_slot = {
 							province_id = 283
 							province_id = 2406
 						}
-						province_has_current_tech_fort_trigger = yes
-						NOT = { has_province_modifier = teu_pru_fortified_border }
+						province_has_current_tech_fort_trigger = yes 
+						NOT = { has_province_modifier = teu_pru_fortified_border } 
 					}
 					add_province_modifier = { name = teu_pru_fortified_border duration = -1 }
 				}
@@ -3923,8 +3827,8 @@ teu_pru_secondary_kingdom_of_prussia_mission_slot = {
 							province_id = 283
 							province_id = 2406
 						}
-						province_has_current_tech_fort_trigger = yes
-						NOT = { has_province_modifier = teu_pru_fortified_border }
+						province_has_current_tech_fort_trigger = yes 
+						NOT = { has_province_modifier = teu_pru_fortified_border } 
 					}
 					add_province_modifier = { name = teu_pru_fortified_border duration = -1 }
 				}
@@ -3961,7 +3865,7 @@ teu_pru_prussia_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_develop_the_country = {
 		icon = develop_our_capital
 		position = 3
@@ -4013,7 +3917,7 @@ teu_pru_prussia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_reform_the_state = {
 		icon = reform_the_state
 		position = 4
@@ -4043,7 +3947,7 @@ teu_pru_prussia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_an_absolute_kingdom = {
 		icon = mission_monarch_in_throne_room
 		position = 5
@@ -4051,7 +3955,7 @@ teu_pru_prussia_mission_slot = {
 		provinces_to_highlight = {}
 		trigger = {
 			if = {
-				limit = {
+				limit = { 
 					is_revolutionary = yes
 					has_dlc = "Emperor"
 				}
@@ -4087,7 +3991,7 @@ teu_pru_prussia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_prussian_enlightenment = {
 		icon = enlightened_absolutism
 		position = 6
@@ -4111,7 +4015,7 @@ teu_pru_prussia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_crush_the_republics = {
 		icon = crush_the_revolution
 		position = 7
@@ -4190,7 +4094,7 @@ teu_pru_military_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_army_reforms = {
 		icon = army_reforms
 		position = 3
@@ -4208,7 +4112,7 @@ teu_pru_military_mission_slot = {
 			country_event = { id = flavor_brapru.6 }
 		}
 	}
-
+	
 	teu_pru_disciplined_army = {
 		icon = empower_the_junkers
 		position = 4
@@ -4287,7 +4191,7 @@ teu_pru_military_mission_slot = {
 					OR = {
 						land_forcelimit = ROOT
 						custom_trigger_tooltip = {
-							tooltip = teu_pru_proof_of_strength_bt
+							tooltip = teu_pru_proof_of_strength_vu
 							total_development = ROOT
 						}
 					}
@@ -4321,11 +4225,11 @@ teu_pru_military_mission_slot = {
 			add_army_professionalism = 0.05
 		}
 	}
-
+	
 	teu_pru_an_army_with_a_state = {
 		icon = an_army_with_a_state
 		position = 6
-		required_missions = {
+		required_missions = { 
 			teu_pru_manufactories_for_prussia
 			teu_pru_proof_of_strength
 		}
@@ -4391,7 +4295,7 @@ teu_pru_development_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_pru_a_prussian_navy = {
 		icon = mission_establish_high_seas_navy
 		position = 1
@@ -4411,7 +4315,7 @@ teu_pru_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_strengthen_mercantilism = {
 		icon = mission_dominate_home_trade_node
 		position = 2
@@ -4470,7 +4374,7 @@ teu_pru_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_dominate_baltic_trade = {
 		icon = reform_the_monte
 		position = 4
@@ -4493,7 +4397,7 @@ teu_pru_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_manufactories_for_prussia = {
 		icon = mission_industrial_forging
 		position = 5
@@ -4517,7 +4421,7 @@ teu_pru_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_employ_advisors = {
 		icon = establish_the_chancellorship
 		position = 6
@@ -4548,7 +4452,7 @@ teu_pru_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_pru_develop_konigsberg = {
 		icon = develop_konigsberg
 		position = 7
@@ -4564,7 +4468,7 @@ teu_pru_development_mission_slot = {
 		}
 		trigger = {
 			owns_core_province = 41
-			41 = {
+			41 = { 
 				development = 30
 				is_capital_of = ROOT
 			}
@@ -4593,7 +4497,7 @@ teu_crusader_russia_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_crusader_clergy_influence = {
 		icon = control_the_church
 		position = 2
@@ -4647,11 +4551,11 @@ teu_crusader_russia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_conquer_novgorod = {
 		icon = mission_conquer_novgorod
 		position = 3
-		required_missions = {
+		required_missions = { 
 			teu_crusader_clergy_influence
 			teu_strengthen_livonia
 		}
@@ -4720,7 +4624,7 @@ teu_crusader_russia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_third_rome = {
 		icon = mission_fall_of_third_rome
 		position = 4
@@ -4778,7 +4682,7 @@ teu_crusader_russia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_end_the_schism = {
 		icon = end_the_schism
 		position = 5
@@ -4835,8 +4739,8 @@ teu_crusader_russia_mission_slot = {
 				hidden_effect = {
 					set_global_flag = catholics_healed_schism
 					every_country = {
-						limit = {
-							religion = orthodox
+						limit = { 
+							religion = orthodox 
 							knows_country = ROOT
 						}
 						country_event = { id = flavor_teu.38 }
@@ -4852,7 +4756,7 @@ teu_crusader_russia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_land_of_churches = {
 		icon = mission_land_of_churches
 		position = 6
@@ -4887,7 +4791,7 @@ teu_crusader_russia_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_build_cathedrals = {
 		icon = mission_european_church
 		position = 7
@@ -4932,7 +4836,7 @@ teu_crusader_more_conquest_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_crusader_lithuanian_crusade = {
 		icon = mission_conquer_lithuania
 		position = 3
@@ -4995,7 +4899,7 @@ teu_crusader_more_conquest_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_conquer_crimea = {
 		icon = mission_lit_harness_steppes
 		position = 4
@@ -5051,7 +4955,7 @@ teu_crusader_more_conquest_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_fortify_the_caucasus = {
 		icon = mission_castle_construction
 		position = 5
@@ -5101,7 +5005,7 @@ teu_crusader_more_conquest_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_bulwark_against_the_turks = {
 		icon = mission_ottoman_diplomacy
 		position = 6
@@ -5152,7 +5056,7 @@ teu_crusader_eastern_conquest_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_crusader_conquer_poland = {
 		icon = mission_unite_home_region
 		position = 3
@@ -5202,11 +5106,11 @@ teu_crusader_eastern_conquest_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_push_into_ruthenia = {
 		icon = mission_pol_breadbasket_europe
 		position = 4
-		required_missions = {
+		required_missions = { 
 			teu_crusader_conquer_poland
 			teu_crusader_lithuanian_crusade
 		}
@@ -5246,11 +5150,11 @@ teu_crusader_eastern_conquest_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_eliminate_the_great_horde = {
 		icon = mission_non-western_cavalry_raid
 		position = 5
-		required_missions = {
+		required_missions = { 
 			teu_crusader_conquer_crimea
 			teu_crusader_push_into_ruthenia
 		}
@@ -5281,7 +5185,7 @@ teu_crusader_eastern_conquest_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_steppes_crusade = {
 		icon = mission_chinese_general_riding
 		position = 6
@@ -5330,12 +5234,12 @@ teu_crusader_eastern_conquest_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_a_holy_horde = {
 		icon = mission_holy_horde
 		position = 7
-		required_missions = {
-			teu_crusader_steppes_crusade
+		required_missions = { 
+			teu_crusader_steppes_crusade 
 			teu_crusader_mil_reform_4
 		}
 		provinces_to_highlight = {}
@@ -5369,7 +5273,7 @@ teu_crusader_military_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_crusader_mil_reform_1 = {
 		icon = mission_united_knight_order
 		position = 3
@@ -5393,7 +5297,7 @@ teu_crusader_military_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_mil_reform_2 = {
 		icon = mission_knight
 		position = 4
@@ -5432,11 +5336,11 @@ teu_crusader_military_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_mil_reform_3 = {
 		icon = mission_teutonic_lancer
 		position = 5
-		required_missions = {
+		required_missions = { 
 			teu_crusader_push_into_ruthenia
 			teu_crusader_mil_reform_2
 		}
@@ -5470,11 +5374,11 @@ teu_crusader_military_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_mil_reform_4 = {
 		icon = mission_teutonic_riders
 		position = 6
-		required_missions = {
+		required_missions = { 
 			teu_crusader_eliminate_the_great_horde
 			teu_crusader_mil_reform_3
 		}
@@ -5530,7 +5434,7 @@ teu_crusader_development_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_crusader_secure_papal_alliance = {
 		icon = answer_the_roman_question
 		position = 1
@@ -5583,7 +5487,7 @@ teu_crusader_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_embrace_religious_ideas = {
 		icon = show_piety
 		position = 2
@@ -5599,7 +5503,7 @@ teu_crusader_development_mission_slot = {
 				inquisitor = 3
 				theologian = 3
 			}
-			if = {
+			if = { 
 				limit = { has_dlc = "Common Sense" }
 				legitimacy_equivalent = 100
 			}
@@ -5628,11 +5532,11 @@ teu_crusader_development_mission_slot = {
 				}
 			}
 			else = {
-				custom_tooltip = teu_crusader_embrace_religious_ideas_bt
+				custom_tooltip = teu_crusader_embrace_religious_ideas_vu
 			}
 		}
 	}
-
+	
 	teu_crusader_convert_provinces = {
 		icon = spread_piety
 		position = 3
@@ -5655,7 +5559,7 @@ teu_crusader_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_gain_income = {
 		icon = mission_high_income
 		position = 4
@@ -5688,7 +5592,7 @@ teu_crusader_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_castle_expertise = {
 		icon = mission_marienburg
 		position = 5
@@ -5712,7 +5616,7 @@ teu_crusader_development_mission_slot = {
 			}
 		}
 	}
-
+	
 	teu_crusader_survive_the_reformation = {
 		icon = counter_reformation
 		position = 6
@@ -5750,7 +5654,7 @@ teu_crusader_development_mission_slot = {
 			set_country_flag = can_always_embrace_the_counter_reformation
 		}
 	}
-
+	
 	teu_crusader_destroy_the_heresies = {
 		icon = crush_heretic_strongholds
 		position = 7
@@ -5787,7 +5691,7 @@ teu_crusader_development_mission_slot = {
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = teu_crusader_destroy_the_heresies_bt
+				tooltip = teu_crusader_destroy_the_heresies_vu
 				NOT = {
 					europe = {
 						owner = {
@@ -5827,7 +5731,7 @@ teu_dummy_mission_slot_1 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_dummy_mission_1 = {
 		icon = mission_unknown_mission
 		position = 2
@@ -5945,7 +5849,7 @@ teu_dummy_mission_slot_1 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_2 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -6024,7 +5928,7 @@ teu_dummy_mission_slot_1 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_3 = {
 		icon = mission_unknown_mission
 		position = 4
@@ -6101,7 +6005,7 @@ teu_dummy_mission_slot_1 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_4 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -6177,8 +6081,8 @@ teu_dummy_mission_slot_1 = {
 				hidden_effect = {
 					set_global_flag = catholics_healed_schism
 					every_country = {
-						limit = {
-							religion = orthodox
+						limit = { 
+							religion = orthodox 
 							knows_country = ROOT
 						}
 						country_event = { id = flavor_teu.38 }
@@ -6194,7 +6098,7 @@ teu_dummy_mission_slot_1 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_5 = {
 		icon = mission_unknown_mission
 		position = 6
@@ -6248,7 +6152,7 @@ teu_dummy_mission_slot_1 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_6 = {
 		icon = mission_unknown_mission
 		position = 7
@@ -6306,7 +6210,7 @@ teu_dummy_mission_slot_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_dummy_mission_7 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -6385,7 +6289,7 @@ teu_dummy_mission_slot_2 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_8 = {
 		icon = mission_unknown_mission
 		position = 4
@@ -6460,7 +6364,7 @@ teu_dummy_mission_slot_2 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_9 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -6525,7 +6429,7 @@ teu_dummy_mission_slot_2 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_10 = {
 		icon = mission_unknown_mission
 		position = 6
@@ -6600,7 +6504,7 @@ teu_dummy_mission_slot_3 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_dummy_mission_11 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -6694,7 +6598,7 @@ teu_dummy_mission_slot_3 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_12 = {
 		icon = mission_unknown_mission
 		position = 4
@@ -6768,7 +6672,7 @@ teu_dummy_mission_slot_3 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_13 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -6786,7 +6690,7 @@ teu_dummy_mission_slot_3 = {
 						always = no
 					}
 					if = {
-						limit = {
+						limit = { 
 							is_revolutionary = yes
 							has_dlc = "Emperor"
 						}
@@ -6847,7 +6751,7 @@ teu_dummy_mission_slot_3 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_14 = {
 		icon = mission_unknown_mission
 		position = 6
@@ -6917,7 +6821,7 @@ teu_dummy_mission_slot_3 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_15 = {
 		icon = mission_unknown_mission
 		position = 7
@@ -7007,7 +6911,7 @@ teu_dummy_mission_slot_4 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_dummy_mission_16 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -7057,7 +6961,7 @@ teu_dummy_mission_slot_4 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_17 = {
 		icon = mission_unknown_mission
 		position = 4
@@ -7150,7 +7054,7 @@ teu_dummy_mission_slot_4 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_18 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -7247,7 +7151,7 @@ teu_dummy_mission_slot_4 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_19 = {
 		icon = mission_unknown_mission
 		position = 6
@@ -7345,7 +7249,7 @@ teu_dummy_mission_slot_5 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	teu_dummy_mission_20 = {
 		icon = mission_unknown_mission
 		position = 1
@@ -7425,7 +7329,7 @@ teu_dummy_mission_slot_5 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_21 = {
 		icon = mission_unknown_mission
 		position = 2
@@ -7516,11 +7420,11 @@ teu_dummy_mission_slot_5 = {
 				}
 			}
 			else = {
-				custom_tooltip = teu_crusader_embrace_religious_ideas_bt
+				custom_tooltip = teu_crusader_embrace_religious_ideas_vu
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_22 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -7552,7 +7456,7 @@ teu_dummy_mission_slot_5 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_23 = {
 		icon = mission_unknown_mission
 		position = 4
@@ -7615,7 +7519,7 @@ teu_dummy_mission_slot_5 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_24 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -7669,7 +7573,7 @@ teu_dummy_mission_slot_5 = {
 			}
 		}
 	}
-
+	
 	teu_dummy_mission_25 = {
 		icon = mission_unknown_mission
 		position = 6
@@ -7735,7 +7639,7 @@ teu_dummy_mission_slot_5 = {
 			custom_tooltip = can_always_embrace_the_counter_reformation_tt
 		}
 	}
-
+	
 	teu_dummy_mission_26 = {
 		icon = mission_unknown_mission
 		position = 7
@@ -7753,7 +7657,7 @@ teu_dummy_mission_slot_5 = {
 						always = no
 					}
 					owns_core_province = 41
-					41 = {
+					41 = { 
 						development = 30
 						is_capital_of = ROOT
 					}
@@ -7777,7 +7681,7 @@ teu_dummy_mission_slot_5 = {
 						}
 					}
 					custom_trigger_tooltip = {
-						tooltip = teu_crusader_destroy_the_heresies_bt
+						tooltip = teu_crusader_destroy_the_heresies_vu
 						NOT = {
 							europe = {
 								owner = {

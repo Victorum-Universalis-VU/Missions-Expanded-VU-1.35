@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 mug_timurid_resurgence = {
 	slot = 1
 	generic = no
@@ -12,7 +13,7 @@ mug_timurid_resurgence = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_pacify_punjab = {
 		icon = mission_pacify_punjab
 		required_missions = {  }
@@ -293,7 +294,7 @@ mug_towards_china = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_follow_the_brahmaputra = {
 		icon = mission_follow_the_brahmaputra
 		required_missions = { mug_ganges_delta }
@@ -499,7 +500,7 @@ mug_land_assesement = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_general_land_assessement = {
 		icon = mission_general_land_assessment
 		required_missions = {  }
@@ -536,7 +537,7 @@ mug_indus_branch = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_sind_campaign = {
 		icon = mission_sindh_campaign
 		position = 2
@@ -546,7 +547,7 @@ mug_indus_branch = {
 				area = sindh_area
 				area = northern_sindh_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
 			sindh_area = {
@@ -590,7 +591,7 @@ mug_ganges_branch = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_ganges_delta = {
 		icon = mission_control_the_ganges_delta
 		position = 3
@@ -828,7 +829,7 @@ mug_ganges_branch = {
 				area = tenasserim_area
 				area = north_tenasserim_area
 				area = central_thai_area
-				area = sukothai_area
+				area = sukothai_area 
 				area = northern_thai_area
 				area = north_laos_area
 				area = south_laos_area
@@ -869,7 +870,7 @@ mug_ganges_branch = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-
+			
 		}
 		effect = {
 			600 = {
@@ -906,24 +907,6 @@ mug_ganges_branch = {
 				add_permanent_claim = ROOT
 			}
 			kedah_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			indonesian_islands_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			riau_islands_area = {
 				limit = {
 					NOT = {
 						is_permanent_claim = ROOT
@@ -989,10 +972,8 @@ mug_ganges_branch = {
 			OR = {
 				area = malaya_area
 				area = tenasserim_area
-				area = kedah_area
 				area = malacca_area
-				area = indonesian_islands_area
-				area = riau_islands_area
+				area = kedah_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1005,19 +986,11 @@ mug_ganges_branch = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			kedah_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			malaya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			indonesian_islands_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			riau_islands_area = {
+			kedah_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1057,7 +1030,7 @@ mug_hindustan_branch = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_emperor_of_hindustan = {
 		icon = mission_emperor_of_hindusthan
 		required_missions = {  }
@@ -1396,7 +1369,7 @@ mug_desh = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_control_the_desh = {
 		icon = mission_control_the_desh
 		required_missions = { mug_across_vindhyas }
@@ -1444,7 +1417,7 @@ mug_sufis = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_sufi_shrines = {
 		icon = mission_sufi_shrines
 		required_missions = { }
@@ -1522,7 +1495,7 @@ mug_sufis = {
 			factor = 500	#Reasonable conquest
 		}
 	}
-
+	
 }
 
 mug_rajput_branch = {
@@ -1539,7 +1512,7 @@ mug_rajput_branch = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_subdue_rajputana = {
 		icon = mission_subdue_rajputana
 		required_missions = { mug_gwalior_and_ranthambore }
@@ -1786,7 +1759,7 @@ mug_hyderabad_branch = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_conquer_central_deccan = {
 		icon = mission_conquer_central_deccan
 		required_missions = { mug_across_vindhyas }
@@ -1831,7 +1804,7 @@ mug_hyderabad_branch = {
 			factor = 500	#Reasonable conquest
 		}
 	}
-
+	
 	mug_viceroyalty_of_the_deccan = {
 		icon = mission_viceroyalty_of_the_deccan
 		required_missions = {
@@ -1898,7 +1871,7 @@ mug_deccan_branch = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mug_gwalior_and_ranthambore = {
 		icon = mission_gwalior_and_rathambore
 		required_missions = {  }

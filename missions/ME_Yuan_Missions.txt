@@ -482,11 +482,18 @@ Yuan_missions_3 = {
 		}
 		position = 4
 		provinces_to_highlight = {
-			region = moluccas_region
+			OR = {
+			    region = moluccas_region
+				region = nusa_tenggara_region
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			moluccas_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nusa_tenggara_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
