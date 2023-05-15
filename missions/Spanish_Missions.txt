@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 spa_colonial_group = {
 	slot = 1
 	generic = no
@@ -6,6 +7,10 @@ spa_colonial_group = {
 		OR = {
 			tag = CAS
 			tag = SPA
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
 		}
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -13,32 +18,24 @@ spa_colonial_group = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	spa_rb_caribbean_discovery = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { }
 		position = 1
 		completed_by = 1492.1.1
-
+		
 		trigger = {
-			if = {
-				limit = {
-					is_random_new_world = yes
-				}
-				custom_trigger_tooltip = {
-					tooltip = miss_discover_caribbean
-					colonial_the_carribean = {
-						has_discovered = ROOT
-					}
-				}
-				else = {
-					490 = {
-						has_discovered = ROOT
-					}
+			custom_trigger_tooltip = {
+				tooltip = miss_discover_caribbean
+				OR = {
+					colonial_the_carribean = { has_discovered = ROOT }
+					colonial_hispaniola = { has_discovered = ROOT }
+					colonial_cuba = { has_discovered = ROOT }
 				}
 			}
 		}
-
+		
 		effect = {
 			add_country_modifier = {
 				name = "spa_hispaniola_discovered"
@@ -46,30 +43,45 @@ spa_colonial_group = {
 			}
 		}
 	}
-
+	
 	spa_rb_caribbean_colony = {
-		icon = mission_iberian_conquistador
+		icon = mission_dominate_home_trade_node
 		required_missions = { spa_rb_caribbean_discovery }
 		position = 5
 		completed_by = 1493.1.1
-
+		
 		provinces_to_highlight = {
 			colonial_region = colonial_the_carribean
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
-
+		
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = miss_colonize_caribbean
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 1
-					colonial_region = colonial_the_carribean
-					is_city = yes
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = miss_colonize_caribbean
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						colonial_region = colonial_the_carribean
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = vu_mission_tooltip_hispaniola_colonisation
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						colonial_region = colonial_hispaniola
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = vu_mission_tooltip_cuba_colonisation
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						colonial_region = colonial_cuba
+					}
 				}
 			}
 		}
-
+		
 		effect = {
 			add_prestige = 15
 			add_country_modifier = {
@@ -78,26 +90,29 @@ spa_colonial_group = {
 			}
 		}
 	}
-
+	
 	spa_rb_la_plata = {
-		icon = mission_iberian_conquistador
+		icon = mission_trade_company_region_abroad
 		required_missions = { spa_rb_caribbean_colony }
 		completed_by = 1508.1.1
-
+		
 		provinces_to_highlight = {
 			colonial_region = colonial_la_plata
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
-
+		
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
-				colonial_region = colonial_la_plata
-				is_city = yes
+			custom_trigger_tooltip = {
+				tooltip = spa_rb_la_plata.tooltip
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_la_plata
+					is_city = yes
+				}
 			}
 		}
-
+		
 		effect = {
 			add_country_modifier = {
 				name = "spa_rb_overseas_trade"
@@ -115,21 +130,25 @@ spa_colonial_group_rnw_off = {
 		OR = {
 			tag = CAS
 			tag = SPA
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
 		}
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
 		has_country_flag = use_paradox_missions
 	}
-
+	
 	has_country_shield = yes
-
+	
 	spa_rb_incans = {
-		icon = mission_iberian_conquistador
+		icon = mission_assemble_an_army
 		required_missions = { spa_rb_spanish_main }
 		position = 7
 		completed_by = 1536.1.1
-
+		
 		provinces_to_highlight = {
 			OR = {
 				area = upper_peru
@@ -142,7 +161,7 @@ spa_colonial_group_rnw_off = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
-
+		
 		trigger = {
 			upper_peru = {
 				type = all
@@ -166,9 +185,9 @@ spa_colonial_group_rnw_off = {
 			2837 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-
+			
 		}
-
+		
 		effect = {
 			add_treasury = 500
 			795 = {
@@ -197,12 +216,12 @@ spa_colonial_group_rnw_off = {
 			}
 		}
 	}
-
+	
 	spa_rb_incans_two = {
-		icon = mission_iberian_conquistador
+		icon = mission_cannons_firing
 		required_missions = { spa_rb_incans }
 		completed_by = 1538.1.1
-
+		
 		provinces_to_highlight = {
 			OR = {
 				area = huanuco_area
@@ -217,7 +236,7 @@ spa_colonial_group_rnw_off = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
-
+		
 		trigger = {
 			NOT = {
 				exists = INC
@@ -250,7 +269,7 @@ spa_colonial_group_rnw_off = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-
+		
 		effect = {
 			add_treasury = 800
 			colonial_peru = {
@@ -292,6 +311,10 @@ spa_colonial_group_two = {
 		OR = {
 			tag = CAS
 			tag = SPA
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
 		}
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -299,74 +322,77 @@ spa_colonial_group_two = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	spa_rb_spanish_main = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { spa_rb_caribbean_colony }
 		position = 6
 		completed_by = 1509.1.1
-
+		
 		provinces_to_highlight = {
 			colonial_region = colonial_colombia
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
-
+		
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
-				colonial_region = colonial_colombia
-				is_city = yes
+			custom_trigger_tooltip = {
+				tooltip = spa_rb_spanish_main.tooltip
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_colombia
+					is_city = yes
+				}
 			}
 		}
-
+		
 		effect = {
 			upper_peru = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			potosi_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			antisuyu_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			kuntisuyu_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			huanuco_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			cajamarca_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			quito_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -394,57 +420,57 @@ spa_colonial_group_two = {
 			guatemala_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			east_yucatan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			yucatan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			chiapas_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			oaxaca_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-
+			
 			eastern_mexico_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			guerrero_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			michoacan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -472,6 +498,10 @@ spa_colonial_group_two_rnw_off = {
 		OR = {
 			tag = CAS
 			tag = SPA
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
 		}
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -479,13 +509,13 @@ spa_colonial_group_two_rnw_off = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	spa_rb_aztecs = {
-		icon = mission_iberian_conquistador
+		icon = mission_conquer_50_development
 		required_missions = { spa_rb_spanish_main }
 		position = 7
 		completed_by = 1521.1.1
-
+			
 		provinces_to_highlight = {
 			OR = {
 				area = mexico_area
@@ -494,17 +524,17 @@ spa_colonial_group_two_rnw_off = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
-
+			
 		trigger = {
 			NOT = {
-				exists = AZT
+				exists = AZT 
 			}
 			mexico_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-
+		
 		effect = {
 			add_treasury = 800
 		}
@@ -519,30 +549,38 @@ spa_iberia_convert = {
 		OR = {
 			tag = CAS
 			tag = SPA
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	spa_rb_iberia_christian = {
 		icon = mission_religious
 		required_missions = { spa_rb_reconquista_one }
 		position = 6
 		completed_by = 1511.1.1
-
+		
 		provinces_to_highlight = {
 			region = iberia_region
+			NOT = { area = macaronesia_area }
 		}
-
+		
 		trigger = {
 			iberia_region = {
 				type = all
-				religion_group = ROOT
+				OR = {
+					religion_group = christian
+					area = macaronesia_area
+				}
 			}
 		}
-
+		
 		effect = {
 			add_country_modifier = {
 				name = "spa_rb_christian_iberia"
@@ -554,7 +592,7 @@ spa_iberia_convert = {
 			northern_morocco_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -570,6 +608,10 @@ spa_colonial_group_three_rnw_off = {
 		OR = {
 			tag = CAS
 			tag = SPA
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
 		}
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -577,13 +619,13 @@ spa_colonial_group_three_rnw_off = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	spa_rb_zapotecs = {
-		icon = mission_iberian_conquistador
+		icon = mission_unite_home_region
 		required_missions = { spa_rb_spanish_main }
 		position = 7
 		completed_by = 1530.1.1
-
+		
 		provinces_to_highlight = {
 			OR = {
 				area = michoacan_area
@@ -592,7 +634,7 @@ spa_colonial_group_three_rnw_off = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
-
+		
 		trigger = {
 			NOT = {
 				exists = TAR
@@ -602,7 +644,7 @@ spa_colonial_group_three_rnw_off = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-
+		
 		effect = {
 			add_treasury = 800
 		}
@@ -617,26 +659,29 @@ spa_reconquista = {
 		OR = {
 			tag = CAS
 			tag = SPA
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
 		}
-		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	spa_rb_army_ready = {
 		icon = mission_assemble_an_army
 		required_missions = {  }
 		position = 1
 		completed_by = 1445.1.1
-
+		
 		trigger = {
 			army_size_percentage = 1
 			navy_size_percentage = 1
 			manpower_percentage = 0.6
 			num_of_generals = 1
 		}
-
+		
 		effect = {
 			add_country_modifier = {
 				name = "spa_rb_morale"
@@ -645,76 +690,90 @@ spa_reconquista = {
 			upper_andalucia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_andalucia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
+	
 	spa_rb_reconquista_one = {
 		icon = mission_unite_home_region
 		required_missions = { spa_rb_army_ready }
 		position = 5
 		completed_by = 1492.1.1
-
+		
 		provinces_to_highlight = {
-			area = upper_andalucia_area
+			OR = {
+				area = upper_andalucia_area
+				area = lower_andalucia_area
+			}
 			NOT = { owned_by = ROOT }
 		}
-
+		
 		trigger = {
 			upper_andalucia_area = {
 				type = all
 				owned_by = ROOT
 			}
+			lower_andalucia_area = {
+				type = all
+				owned_by = ROOT
+			}
 		}
-
+		
 		effect = {
 			beieras_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			alentejo_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			aragon_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			catalonia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			valencia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
+	
 	spa_rb_reconquista_three = {
 		icon = mission_have_two_subjects
 		required_missions = { spa_rb_reconquista_one }
 		position = 6
 		completed_by = 1479.1.1
-
+		
 		provinces_to_highlight = {
 			OR = {
 				area = valencia_area
@@ -723,7 +782,7 @@ spa_reconquista = {
 			}
 			NOT = { owned_by = ROOT }
 		}
-
+		
 		trigger = {
 			valencia_area = {
 				type = all
@@ -738,30 +797,30 @@ spa_reconquista = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-
+		
 		effect = {
 			add_dip_power = 100
 			add_prestige = 10
 		}
 	}
-
+	
 	spa_rb_reconquista_four = {
 		icon = mission_assemble_an_army
 		required_missions = { spa_rb_iberia_christian }
 		position = 7
-
+		
 		provinces_to_highlight = {
 			area = northern_morocco_area
 			NOT = { owned_by = ROOT }
 		}
-
+		
 		trigger = {
 			northern_morocco_area = {
 				type = all
 				owned_by = ROOT
 			}
 		}
-
+		
 		effect = {
 			add_country_modifier = {
 			name = "completing_the_reconquista"
@@ -770,27 +829,13 @@ spa_reconquista = {
 			western_morocco_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			northern_morocco_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			barbary_coast_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_claim = ROOT
 			}
 		}
 	}
-
+	
 }
 
 spa_reconquista_por = {
@@ -801,18 +846,22 @@ spa_reconquista_por = {
 		OR = {
 			tag = CAS
 			tag = SPA
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	spa_rb_reconquista_two = {
 		icon = mission_cannons_firing
 		required_missions = { spa_rb_reconquista_one }
 		position = 6
-
+		
 		provinces_to_highlight = {
 			OR = {
 				area = beieras_area
@@ -820,7 +869,7 @@ spa_reconquista_por = {
 			}
 			NOT = { owned_by = ROOT }
 		}
-
+		
 		trigger = {
 			beieras_area = {
 				type = all
@@ -831,80 +880,84 @@ spa_reconquista_por = {
 				owned_by = ROOT
 			}
 		}
-
+		
 		effect = {
 			add_prestige = 25
 			add_adm_power = 100
 		}
 	}
-
+	
 	spa_rb_christian_fleet = {
 		icon = mission_sea_battles
 		required_missions = { spa_rb_iberia_christian }
 		position = 7
 		completed_by = 1516.1.1
-
+		
 		provinces_to_highlight = {
 			province_id = 126
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-
+		
 		trigger = {
 			126 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			num_of_galley = TUR
 		}
-
+		
 		effect = {
-			sicily_area = {
+			apulia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			calabria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			naples_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			apulia_area = {
+			abruzzo_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
+			add_permanent_claim = 7016
+			add_permanent_claim = 7017
 		}
 	}
-
+	
 	spa_rb_italian_ambition = {
-		icon = mission_italian_condottiere
+		icon = mission_conquer_50_development
 		required_missions = { spa_rb_christian_fleet }
 		completed_by = 1516.1.1
-
+		
 		provinces_to_highlight = {
 			OR = {
-				area = sicily_area
+				area = apulia_area
 				area = calabria_area
 				area = naples_area
-				area = apulia_area
+				area = abruzzo_area
+				province_id = 7016
+				province_id = 7017
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-
+		
 		trigger = {
-			sicily_area = {
+			apulia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -916,12 +969,14 @@ spa_reconquista_por = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			apulia_area = {
+			abruzzo_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			7016 = { country_or_non_sovereign_subject_holds = ROOT }
+			7017 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-
+		
 		effect = {
 			add_country_modifier = {
 				name = "spa_rb_italian_ambition_mod"

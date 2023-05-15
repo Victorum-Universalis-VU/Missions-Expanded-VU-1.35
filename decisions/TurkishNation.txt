@@ -20,6 +20,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = BYZ }
 			NOT = { tag = RUS }
+			NOT = { tag = TZR }
 			NOT = { tag = PRU }
 			NOT = { tag = ENG }
 			NOT = { tag = AKK }
@@ -62,6 +63,8 @@ country_decisions = {
 				religion_group = muslim
 			}
 			NOT = { exists = RMM }
+			NOT = { exists = TUR }
+			NOT = { exists = BYZ }
 			owns_core_province = 151		# Constantinople
 			owns_core_province = 316		# Iznik
 			owns_core_province = 323		# Konya

@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 cro_1 = {
 	slot = 1
 	generic = no
@@ -21,12 +22,22 @@ cro_1 = {
 			OR = {
 				province_id = 4753
 				province_id = 136
+				area = east_adriatic_coast_area 
 			}
 			NOT = { owned_by = ROOT }
+			NOT = { province_id = 4754 }
+			NOT = { province_id = 136 }
 		}
 		trigger = {
-			4753 = { owned_by = ROOT }
-			136 = { owned_by = ROOT }
+			is_subject = no
+			east_adriatic_coast_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					province_id = 4754
+					province_id = 136
+				}
+			}
 		}
 		effect = {
 			add_prestige = 20
@@ -77,6 +88,24 @@ cro_1 = {
 			else = {
 				add_treasury = 200
 			}
+			carinthia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			4752 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 		ai_weight = {
 			factor = 500	#More expansion at the coast line
@@ -95,7 +124,7 @@ cro_1 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				region = balkan_region
-				value = 20
+				value = 40
 			}
 			balkan_region = {
 				type = all
@@ -136,7 +165,7 @@ cro_1 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				region = balkan_region
-				value = 30
+				value = 70
 			}
 			if = {
 				limit = {
@@ -146,7 +175,7 @@ cro_1 = {
 					tooltip = cro_tur_army
 					army_strength = {
 						who = TUR
-						value = 0.5
+						value = 0.8
 					}
 				}
 			}
@@ -203,6 +232,44 @@ cro_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			herzegovina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_adriatic_coast_area  = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { province_id = 137 }
+					NOT = { province_id = 4754 }
+				}
+				add_permanent_claim = ROOT
+			}
+			1828 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			7727 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 		ai_weight = {
 			factor = 75	#Default
@@ -215,6 +282,9 @@ cro_2 = {
 			OR = {
 				area = croatia_area
 				area = bosnia_area
+				area = herzegovina_area
+				province_id = 1828
+				province_id = 7727
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -230,9 +300,23 @@ cro_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
+			herzegovina_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = ROOT
+				
+			}
+			7727 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = ROOT
+			}
+			1828 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = ROOT
+			}
 		}
 		effect = {
-			if = {
+		    if = {
 				limit = { has_updated_culture = { culture = slavic } }
 				add_accepted_culture_or_dip_power = { culture = bosnian_new }
 			}
@@ -269,7 +353,10 @@ cro_2 = {
 		icon = mission_landsknecht_soldier
 		required_missions = { cro_dominate_dubrovnik }
 		provinces_to_highlight = {
-			area = carinthia_area
+			OR = {
+				area = carinthia_area
+				province_id = 4752
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		position = 5
@@ -278,6 +365,7 @@ cro_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			4752 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			add_army_tradition = 30
@@ -313,7 +401,7 @@ cro_5 = {
 			num_of_owned_provinces_with = {
 				area = slavonia_area
 				development = 10
-				value = 3
+				value = 4
 			}
 		}
 		effect = {

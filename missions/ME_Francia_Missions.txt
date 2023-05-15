@@ -10,7 +10,7 @@ francia_missions_1 = {
 		tag = FRX
 	}
 	has_country_shield = yes
-
+	
 	francia_culture_1 = {
 		icon = mission_cannons_firing
 		required_missions = { }
@@ -39,7 +39,7 @@ francia_missions_1 = {
 			change_primary_culture = frankish
 		}
 	}
-
+	
 	francia_culture_2 = {
 		icon = mission_cannons_firing
 		required_missions = { francia_culture_1 }
@@ -68,7 +68,7 @@ francia_missions_1 = {
 			}
 		}
 	}
-
+	
 	francia_culture_3 = {
 		icon = mission_cannons_firing
 		required_missions = { francia_culture_2 }
@@ -104,7 +104,7 @@ francia_missions_1 = {
 			}
 		}
 	}
-
+	
 	frx_austrasia_mission_1 = {
 		icon = mission_cannons_firing
 		required_missions = { }
@@ -153,7 +153,7 @@ francia_missions_1 = {
 			}
 		}
 	}
-
+	
 	frx_austrasia_mission_2 = {
 		icon = mission_cannons_firing
 		required_missions = { frx_austrasia_mission_1 }
@@ -216,7 +216,7 @@ francia_missions_1 = {
 			}
 		}
 	}
-
+	
 	frx_bavaria_mission_2 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -244,7 +244,7 @@ francia_missions_1 = {
 			}
 		}
 	}
-
+	
 	frx_bavaria_mission_3 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -265,7 +265,7 @@ francia_missions_1 = {
 			add_years_of_income = 4
 		}
 	}
-
+	
 	frx_lombardy_2 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -299,7 +299,7 @@ francia_missions_2 = {
 		tag = FRX
 	}
 	has_country_shield = yes
-
+	
 	frx_palatinate = {
 		icon = mission_cannons_firing
 		required_missions = { frx_austrasia_mission_1 }
@@ -324,7 +324,7 @@ francia_missions_2 = {
 			}
 		}
 	}
-
+	
 	frx_franconia = {
 		icon = mission_cannons_firing
 		required_missions = { frx_palatinate }
@@ -344,7 +344,7 @@ francia_missions_2 = {
 			add_yearly_manpower = 1.0
 		}
 	}
-
+	
 	frx_swabia_mission_1 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -400,7 +400,7 @@ francia_missions_2 = {
 			}
 		}
 	}
-
+	
 	frx_swabia_mission_2 = {
 		icon = mission_cannons_firing
 		required_missions = { frx_swabia_mission_1 }
@@ -435,7 +435,7 @@ francia_missions_2 = {
 			}
 		}
 	}
-
+	
 	frx_carinthia_mission_1 = {
 		icon = mission_cannons_firing
 		required_missions = { frx_bavaria_mission_2 }
@@ -457,7 +457,7 @@ francia_missions_2 = {
 			add_yearly_manpower = 1.5
 		}
 	}
-
+	
 	frx_croatia = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -488,7 +488,7 @@ francia_missions_2 = {
 			}
 		}
 	}
-
+	
 	frx_spain = {
 		icon = mission_cannons_firing
 		required_missions = { }
@@ -561,7 +561,7 @@ francia_missions_2 = {
 			}
 		}
 	}
-
+	
 	frx_lombardy_3 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -594,7 +594,7 @@ francia_missions_2 = {
 			}
 		}
 	}
-
+	
 	frx_lombardy_8 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -641,7 +641,7 @@ francia_missions_3 = {
 		tag = FRX
 	}
 	has_country_shield = yes
-
+	
 	frx_helvetia_mission_1 = {
 		icon = mission_cannons_firing
 		required_missions = { }
@@ -666,7 +666,7 @@ francia_missions_3 = {
 			}
 		}
 	}
-
+	
 	frx_helvetia_mission_2 = {
 		icon = mission_cannons_firing
 		required_missions = { frx_helvetia_mission_1 }
@@ -709,7 +709,7 @@ francia_missions_3 = {
 			}
 		}
 	}
-
+	
 	frx_bavaria_mission_1 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -747,7 +747,7 @@ francia_missions_3 = {
 			}
 		}
 	}
-
+	
 	frx_carinthia_mission_2 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -781,7 +781,7 @@ francia_missions_3 = {
 			}
 		}
 	}
-
+	
 	frx_carinthia_mission_3 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -805,7 +805,7 @@ francia_missions_3 = {
 			}
 		}
 	}
-
+	
 	frx_lombardy_1 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -869,7 +869,7 @@ francia_missions_3 = {
 			}
 		}
 	}
-
+	
 	frx_lombardy_4 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -902,7 +902,7 @@ francia_missions_3 = {
 			}
 		}
 	}
-
+	
 	frx_lombardy_7 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -947,7 +947,7 @@ francia_missions_3 = {
 			}
 		}
 	}
-
+	
 	frx_lombardy_10 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -985,7 +985,7 @@ francia_missions_3 = {
 			}
 		}
 	}
-
+	
 	frx_lombardy_11 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1035,7 +1035,7 @@ francia_missions_4 = {
 		tag = FRX
 	}
 	has_country_shield = yes
-
+	
 	frx_old_saxony_1 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1061,7 +1061,7 @@ francia_missions_4 = {
 			}
 		}
 		effect = {
-			lower_saxony_area = {
+			holstein_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1076,6 +1076,13 @@ francia_missions_4 = {
 				add_permanent_claim = ROOT
 			}
 			anhalt_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hesse_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1084,21 +1091,22 @@ francia_missions_4 = {
 			}
 		}
 	}
-
+	
 	frx_old_saxony_2 = {
 		icon = mission_cannons_firing
 		required_missions = { frx_old_saxony_1 }
 		position = 10
 		provinces_to_highlight = {
 			OR = {
-				area = lower_saxony_area
+				area = holstein_area
 				area = altmark_area
 				area = anhalt_area
+				area = hesse_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			lower_saxony_area = {
+			holstein_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1107,6 +1115,10 @@ francia_missions_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			anhalt_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hesse_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1118,7 +1130,7 @@ francia_missions_4 = {
 			add_yearly_manpower = 1.5
 		}
 	}
-
+	
 	frx_obotrites = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1161,7 +1173,7 @@ francia_missions_4 = {
 			}
 		}
 	}
-
+	
 	frx_czechia = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1194,7 +1206,7 @@ francia_missions_4 = {
 			}
 		}
 	}
-
+	
 	frx_moravia = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1223,7 +1235,7 @@ francia_missions_4 = {
 			}
 		}
 	}
-
+	
 	frx_avaria = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1247,7 +1259,7 @@ francia_missions_4 = {
 			}
 		}
 	}
-
+	
 	frx_lombardy_5 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1289,7 +1301,7 @@ francia_missions_4 = {
 			}
 		}
 	}
-
+	
 	frx_lombardy_9 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1349,7 +1361,7 @@ francia_missions_5 = {
 		tag = FRX
 	}
 	has_country_shield = yes
-
+	
 	frx_frisian_coast_1 = {
 		icon = mission_cannons_firing
 		required_missions = { }
@@ -1374,7 +1386,7 @@ francia_missions_5 = {
 			}
 		}
 	}
-
+	
 	frx_frisian_coast_2 = {
 		icon = mission_cannons_firing
 		required_missions = { frx_frisian_coast_1 }
@@ -1399,7 +1411,7 @@ francia_missions_5 = {
 			}
 		}
 	}
-
+	
 	frx_frisian_coast_3 = {
 		icon = mission_cannons_firing
 		required_missions = { frx_frisian_coast_2 }
@@ -1421,7 +1433,7 @@ francia_missions_5 = {
 			}
 		}
 	}
-
+	
 	frx_veleti = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1456,7 +1468,7 @@ francia_missions_5 = {
 			}
 		}
 	}
-
+	
 	frx_sorbia = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1479,7 +1491,7 @@ francia_missions_5 = {
 			add_dip_power = 50
 		}
 	}
-
+	
 	frx_lombardy_6 = {
 		icon = mission_cannons_firing
 		required_missions = {

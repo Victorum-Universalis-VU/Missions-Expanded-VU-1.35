@@ -12,7 +12,7 @@ dagestan_missions_1 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	dagestan_shamkhal_levy_system = {
 		icon = me_mission_ottomans_conquer_georgian_realms
 		required_missions = { }
@@ -39,7 +39,7 @@ dagestan_missions_1 = {
 			}
 		}
 	}
-
+	
 	dagestan_assault_en_masse = {
 		icon = mission_assemble_an_army
 		required_missions = { dagestan_shamkhal_levy_system dagestan_circassian_unity }
@@ -70,7 +70,7 @@ dagestan_missions_2 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	dagestan_dogged_contenders = {
 		icon = mission_unite_home_region
 		required_missions = { }
@@ -123,7 +123,7 @@ dagestan_missions_3 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	dagestan_circassian_unity = {
 		icon = mission_conquer_50_development
 		required_missions = { dagestan_dogged_contenders dagestan_messenger_system }
@@ -150,7 +150,7 @@ dagestan_missions_3 = {
 			}
 		}
 	}
-
+	
 	dagestan_march_on_georgia = {
 		icon = mission_cannons_firing
 		required_missions = { dagestan_circassian_unity }
@@ -179,7 +179,7 @@ dagestan_missions_3 = {
 			}
 		}
 	}
-
+	
 	dagestan_georgian_consolidation = {
 		icon = me_mission_army
 		required_missions = { dagestan_march_on_georgia }
@@ -217,7 +217,7 @@ dagestan_missions_4 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	dagestan_messenger_system = {
 		icon = mission_trade_company_region_abroad
 		required_missions = { }
@@ -272,7 +272,7 @@ dagestan_missions_4 = {
 			}
 		}
 	}
-
+	
 	dagestan_permanent_roads = {
 		icon = me_mission_hungary_road
 		required_missions = { dagestan_messenger_system }
@@ -325,7 +325,7 @@ dagestan_missions_4 = {
 			}
 		}
 	}
-
+	
 	dagestan_strike_at_shirvan = {
 		icon = mission_conquer_5_states
 		required_missions = { dagestan_circassian_unity }
@@ -353,7 +353,7 @@ dagestan_missions_4 = {
 			}
 		}
 	}
-
+	
 	dagestan_armenian_liberation = {
 		icon = mission_golden_century
 		required_missions = { dagestan_strike_at_shirvan }
@@ -418,7 +418,7 @@ dagestan_missions_5 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	dagestan_the_fringes_of_islam = {
 		icon = me_mission_muslim_priest
 		required_missions = { }
@@ -477,7 +477,7 @@ dagestan_missions_5 = {
 			}
 		}
 	}
-
+	
 	dagestan_faith_above_all = {
 		icon = mission_hands_praying
 		required_missions = { dagestan_the_fringes_of_islam }
@@ -527,7 +527,7 @@ dagestan_missions_5 = {
 			}
 		}
 	}
-
+	
 	dagestan_ameer_rule = {
 		icon = mission_noble_council
 		required_missions = { dagestan_faith_above_all }

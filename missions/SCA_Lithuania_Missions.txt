@@ -1,4 +1,5 @@
-lit_dlc_1 = { #Designed / Scripted and Localised by Big Boss
+#VU updated for 1.35 by San Felipe
+lit_dlc_1 = {
 	slot = 1  #Special thanks to ####nekalakinahappen#### for providing valuable research
 	generic = no
 	ai = yes

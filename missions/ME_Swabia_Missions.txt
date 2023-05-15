@@ -382,6 +382,13 @@ SWA_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			hesse_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			mittelmark_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -408,6 +415,7 @@ SWA_missions_4 = {
 				area = thuringia_area
 				area = altmark_area
 				area = anhalt_area
+				area = hesse_area
 				area = mittelmark_area
 				area = saxony_area
 			}
@@ -423,6 +431,10 @@ SWA_missions_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			anhalt_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hesse_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

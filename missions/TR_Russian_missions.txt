@@ -1,3 +1,4 @@
+#VU updated and ammended by San Felipe #Amended by Altan for EE-VU
 tr_russia_religious_missions = {
 	slot = 1
 	generic = no
@@ -10,6 +11,7 @@ tr_russia_religious_missions = {
 		OR = {
 			tag = MOS
 			tag = RUS
+			tag = TZR
 		}
 		has_dlc = "Third Rome"
 		NOT = { has_dlc = "Domination" }
@@ -17,7 +19,7 @@ tr_russia_religious_missions = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	rus_churches_mission = {
 		icon = mission_land_of_churches
 		required_missions = {  }
@@ -33,7 +35,7 @@ tr_russia_religious_missions = {
 			}
 		}
 		effect = {
-			add_patriarch_authority = 0.1
+			add_patriarch_authority = 0.75
 			add_estate_loyalty = {
 				estate = estate_church
 				loyalty = 10
@@ -46,6 +48,8 @@ tr_russia_religious_missions = {
 				}
 				add_prestige = 10
 			}
+			add_adm_power = 250
+			add_prestige = 25
 		}
 	}
 }
@@ -59,14 +63,14 @@ tr_russia_exclusive_church = {
 		NOT = { has_dlc = "Domination" }
 	}
 	potential = {
-		tag = RUS
+	    OR = { tag = RUS tag = TZR }
 		has_dlc = "Third Rome"
 		NOT = { has_dlc = "Domination" }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	rus_patriarchate_mission = {
 		icon = mission_russian_patriarchatee
 		required_missions = { rus_churches_mission }
@@ -86,9 +90,9 @@ tr_russia_exclusive_church = {
 			}
 		}
 		trigger = {
-			NOT = {
-				151 = {
-					owned_by = BYZ
+			NOT = { 
+				151 = { 
+					owned_by = BYZ 
 				}
 			}
 			religion = orthodox
@@ -104,6 +108,9 @@ tr_russia_exclusive_church = {
 				name = "russian_patriarchate"
 				duration = -1
 			}
+			add_treasury = -1500
+			add_adm_power = 500
+			add_prestige = 50
 		}
 	}
 }
@@ -117,14 +124,14 @@ tr_muscovy_conquest = {
 		NOT = { has_dlc = "Domination" }
 	}
 	potential = {
-		tag = RUS
+		OR = { tag = RUS tag = TZR }
 		has_dlc = "Third Rome"
 		NOT = { has_dlc = "Domination" }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	tr_access_to_the_baltic_sea = {
 		icon = mission_galleys_in_port
 		required_missions = { tr_consolidate_russia_mission }
@@ -143,15 +150,15 @@ tr_muscovy_conquest = {
 		trigger = {
 			curonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			estonia_ingria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			livonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -159,6 +166,8 @@ tr_muscovy_conquest = {
 				name = "baltic_ambition_new"
 				duration = 5475
 			}
+			add_treasury = 7500
+			add_dip_power = 250
 		}
 	}
 	rus_partition_poland_mission = {
@@ -198,12 +207,15 @@ tr_muscovy_conquest = {
 				name = "rus_partition_poland_modifier"
 				duration = 7300
 			}
+			add_treasury = 15000
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
-
+	
 }
-
-
+	
 tr_russia_conquest_1 = {
 	slot = 2
 	generic = no
@@ -216,6 +228,7 @@ tr_russia_conquest_1 = {
 		OR = {
 			tag = MOS
 			tag = RUS
+			tag = TZR
 		}
 		has_dlc = "Third Rome"
 		NOT = { has_dlc = "Domination" }
@@ -223,13 +236,13 @@ tr_russia_conquest_1 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	tr_invade_novgorod_mission = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_invade_novgorod
 		required_missions = {  }
 		completed_by = 1478.1.15
 		trigger = {
-			army_size_percentage = 1
+			army_size_percentage = 0.75
 		}
 		effect = {
 			novgorod_area = {
@@ -253,7 +266,14 @@ tr_russia_conquest_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			north_karelia_area = {
+			karelia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_karelia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -328,18 +348,23 @@ tr_russia_conquest_1 = {
 					add_permanent_claim = ROOT
 				}
 			}
+			add_treasury = 7500
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
 	tr_subjugate_novgorod = {
-		icon = mission_have_two_subjects
-		required_missions = { tr_invade_novgorod_mission }
+		icon = mission_subjugate_novgorod
+required_missions = { tr_invade_novgorod_mission }
 		completed_by = 1478.1.15
 		provinces_to_highlight = {
 			OR = {
 				area = novgorod_area
 				area = beloozero_area
 				area = pomor_area
-				area = north_karelia_area
+				area = karelia_area
+				area = west_karelia_area
 				area = arkhangelsk_area
 				province_id = 4148
 				province_id = 1777
@@ -364,7 +389,11 @@ tr_russia_conquest_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			north_karelia_area = {
+			karelia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_karelia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -397,14 +426,33 @@ tr_russia_conquest_1 = {
 				add_permanent_claim = ROOT
 			}
 			310 = {
+				add_base_tax = -3
+				add_base_production = -3
+				add_base_manpower = -3
+			}
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			random_owned_province = {
+				limit = {
+					owned_by = ROOT
+					is_core = ROOT
+					culture = ROOT
+				}
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1
 			}
+			add_treasury = 7500
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
 	tr_consolidate_russia_mission = {
-		icon = mission_unite_home_region
+		icon = mission_consolidate_russia
 		required_missions = { tr_subjugate_novgorod }
 		completed_by = 1776.1.1
 		provinces_to_highlight = {
@@ -531,7 +579,7 @@ tr_russia_conquest_1 = {
 	}
 	# liberate ruthenia
 	tr_russia_partitions_poland_new = {
-		icon = mission_conquer_5_states
+		icon = mission_liberate_ruthenia
 		required_missions = { tr_consolidate_russia_mission }
 		provinces_to_highlight = {
 			region = ruthenia_region
@@ -542,7 +590,7 @@ tr_russia_conquest_1 = {
 		trigger = {
 			ruthenia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -595,6 +643,10 @@ tr_russia_conquest_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			add_treasury = 5000
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
 }
@@ -608,14 +660,14 @@ tr_russia_exclusive_1 = {
 		NOT = { has_dlc = "Domination" }
 	}
 	potential = {
-		tag = RUS
+		OR = { tag = RUS tag = TZR }
 		has_dlc = "Third Rome"
 		NOT = { has_dlc = "Domination" }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	rus_romania_conquest = {
 		icon = mission_conquer_romania
 		required_missions = { tr_russia_partitions_poland_new }
@@ -658,12 +710,17 @@ tr_russia_exclusive_1 = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
+							   
 				}
 				add_permanent_claim = ROOT
 			}
+			add_treasury = 7500
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
-
+	
 	rus_third_rome_mission = {
 		icon = mission_the_third_rome
 		required_missions = { rus_romania_conquest }
@@ -704,6 +761,9 @@ tr_russia_exclusive_1 = {
 		}
 		effect = {
 			country_event = { id = flavor_rus.2001 }
+			add_treasury = -1500
+			add_adm_power = 250
+			add_dip_power = 250
 		}
 	}
 	rus_streltsy_mission = {
@@ -715,11 +775,13 @@ tr_russia_exclusive_1 = {
 			army_size_percentage = 1
 		}
 		effect = {
-			add_army_tradition = 15
+			add_army_tradition = 250
 			add_country_modifier = {
 				name = "loyal_streltsy"
 				duration = 7300
 			}
+			add_treasury = -2500
+			add_mil_power = 250
 		}
 	}
 	russian_abolutism_mission = {
@@ -753,7 +815,8 @@ tr_russia_exclusive_1 = {
 			crown_land_share = 75
 		}
 		effect = {
-			add_adm_power = 50
+			add_adm_power = 250 # or reform mana if dharma enabled
+			add_dip_power = 250
 			add_country_modifier = {
 				name = "russian_autocracy"
 				duration = 7300
@@ -774,6 +837,7 @@ tr_russia_conquest_2 = {
 		OR = {
 			tag = MOS
 			tag = RUS
+			tag = TZR
 		}
 		has_dlc = "Third Rome"
 		NOT = { has_dlc = "Domination" }
@@ -781,9 +845,9 @@ tr_russia_conquest_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	tr_conquer_finland = {
-		icon = mission_assemble_an_army
+		icon = mission_conquer_finland
 		required_missions = { tr_consolidate_russia_mission }
 		position = 4
 		provinces_to_highlight = {
@@ -799,22 +863,100 @@ tr_russia_conquest_2 = {
 		trigger = {
 			finland_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			bothnia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			laponia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "conquest_of_finland"
+				duration = 7300
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_treasury = 5000
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
+		}
+	}
+	tr_conquest_of_scandinavia = {
+		icon = mission_conquest_of_scandinavia
+		required_missions = { tr_conquer_finland }
+		completed_by = 1790.1.1
+		provinces_to_highlight = {
+		    region = scandinavia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			scandinavia_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "conquest_of_finland"
-				duration = 5475
+				name = "conquest_of_scandinavia"
+				duration = 7300
 			}
+			add_treasury = 7500
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
+		}
+	}
+	tr_conquest_of_khorasan = {
+		icon = mission_conquest_of_khorasan
+		required_missions = { tr_conquest_of_persia }
+		completed_by = 1857.1.1
+		provinces_to_highlight = {
+			region = khorasan_region
+			NOT = {
+			    area = mashhad_area
+				area = tambov_area
+				province_id = 434
+				province_id = 2233
+				province_id = 4325
+				province_id = 6129
+			} 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			khorasan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			khorasan_region = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "convert_khorasan"
+					duration = 7300
+				}
+			}
+			add_treasury = 7500
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
 }
@@ -828,14 +970,14 @@ tr_russia_exclusive_2 = {
 		NOT = { has_dlc = "Domination" }
 	}
 	potential = {
-		tag = RUS
+		OR = { tag = RUS tag = TZR }
 		has_dlc = "Third Rome"
 		NOT = { has_dlc = "Domination" }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	rus_manchuria_coast = {
 		icon = mission_amur_acquisition
 		required_missions = { tr_russian_colony_in_east_siberia }
@@ -887,6 +1029,9 @@ tr_russia_exclusive_2 = {
 					duration = -1
 				}
 			}
+			add_treasury = -2500
+			add_adm_power = 150
+			add_dip_power = 150
 		}
 	}
 	time_of_troubles_mission = {
@@ -909,7 +1054,12 @@ tr_russia_exclusive_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige = 25
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
+			# gov reform mana if dharma
+			add_treasury = 15000
 		}
 	}
 	tr_revolution_mission = {
@@ -934,7 +1084,6 @@ tr_russia_exclusive_2 = {
 					}
 				}
 			}
-
 		}
 		effect = {
 			add_army_tradition = 25
@@ -944,7 +1093,7 @@ tr_russia_exclusive_2 = {
 						has_reform = revolutionary_empire_reform
 						has_reform = revolutionary_republic_reform
 					}
-				}
+				}		
 				add_country_modifier = {
 					name = "rus_revolutionary_zeal"
 					duration = -1
@@ -956,6 +1105,10 @@ tr_russia_exclusive_2 = {
 					duration = -1
 				}
 			}
+			add_treasury = -25000
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
 		}
 	}
 }
@@ -972,6 +1125,7 @@ tr_russia_conquest_3 = {
 		OR = {
 			tag = MOS
 			tag = RUS
+			tag = TZR
 		}
 		has_dlc = "Third Rome"
 		NOT = { has_dlc = "Domination" }
@@ -979,7 +1133,7 @@ tr_russia_conquest_3 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	# Tame the Steppes
 	tr_conquer_steppes_russia_mission = {
 		icon = mission_non-western_cavalry_raid
@@ -1054,6 +1208,10 @@ tr_russia_conquest_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			add_treasury = 5000
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
 	tr_cross_the_mongol_border = {
@@ -1147,6 +1305,10 @@ tr_russia_conquest_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			add_treasury = 7500
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
 	tr_subjugate_crimea = {
@@ -1179,6 +1341,17 @@ tr_russia_conquest_3 = {
 					duration = 5475
 				}
 			}
+			caucasia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_treasury = 7500
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
 	rus_complete_west_siberia = {
@@ -1226,8 +1399,152 @@ tr_russia_conquest_3 = {
 					duration = 7300
 				}
 			}
+			add_treasury = 5000
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
 		}
 	}
+	tr_into_the_caucasus = {
+		icon = mission_into_the_caucasus
+		required_missions = { tr_subjugate_crimea }
+		completed_by = 1864.6.1
+		provinces_to_highlight = {
+			region = caucasia_region
+			NOT = { province_id = 4303 }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			caucasia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			caucasia_region = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "convert_the_caucasus"
+					duration = 7300
+				}
+			}
+			persia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			birjand_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			mashhad_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_treasury = 15000
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
+		}
+	}
+	tr_conquest_of_persia = {
+		icon = mission_conquest_of_persia
+		required_missions = { tr_into_the_caucasus }
+		completed_by = 1828.1.1
+		provinces_to_highlight = {
+		    OR = {
+			    region = persia_region
+				area = mashhad_area
+				area = tambov_area
+				province_id = 434
+				province_id = 2233
+				province_id = 4325
+				province_id = 6129
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mashhad_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tambov_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			434 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2233 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4325 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			6129 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			persia_region = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "convert_persia"
+					duration = 7300
+				}
+			}
+			mashhad_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "convert_persia"
+					duration = 7300
+				}
+			}
+			tambov_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "convert_persia"
+					duration = 7300
+				}
+			}
+			khorasan_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_treasury = 30000
+			add_adm_power = 350
+			add_dip_power = 350
+			add_mil_power = 350
+		}
+	}
+	
 	rus_complete_east_siberia = {
 		icon = mission_extent_yasak_to_the_east
 		required_missions = { tr_russian_colony_in_east_siberia }
@@ -1256,6 +1573,10 @@ tr_russia_conquest_3 = {
 					duration = 7300
 				}
 			}
+			add_treasury = 5000
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
 }
@@ -1269,14 +1590,14 @@ tr_russia_exclusive_3 = {
 		NOT = { has_dlc = "Domination" }
 	}
 	potential = {
-		tag = RUS
+	    OR = { tag = RUS tag = TZR }
 		has_dlc = "Third Rome"
 		NOT = { has_dlc = "Domination" }
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	tr_prikazy_mission = {
 		icon = mission_establish_the_prikazy
 		required_missions = { time_of_troubles_mission }
@@ -1328,9 +1649,13 @@ tr_russia_exclusive_3 = {
 				name = "prikazy_modifier"
 				duration = 7300
 			}
+			add_treasury = -2000
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
 		}
 	}
-
+	
 	tr_state_manufactories = {
 		icon = mission_state_manufactories
 		required_missions = { tr_prikazy_mission }
@@ -1356,7 +1681,8 @@ tr_russia_exclusive_3 = {
 				name = "proto_industrialization"
 				duration = 9125
 			}
-			add_years_of_income = 1.5
+			add_years_of_income = 2.5
+			add_treasury = 100000
 		}
 	}
 }
@@ -1373,6 +1699,7 @@ tr_siberia_missions = {
 		OR = {
 			tag = MOS
 			tag = RUS
+			tag = TZR
 		}
 		has_dlc = "Third Rome"
 		NOT = { has_dlc = "Domination" }
@@ -1380,9 +1707,9 @@ tr_siberia_missions = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	tr_subjugate_kazan = {
-		icon = mission_conquer_50_development
+		icon = mission_subjugate_kazan
 		required_missions = { tr_conquer_steppes_russia_mission }
 		position = 2
 		completed_by = 1552.10.2
@@ -1447,6 +1774,10 @@ tr_siberia_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			add_treasury = 10000
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
 		}
 	}
 	tr_conquer_remaining_steppes_mission = {
@@ -1532,6 +1863,7 @@ tr_siberia_missions = {
 					name = "convert_the_steppes"
 					duration = 5475
 				}
+							  
 			}
 			lower_yik_area = {
 				limit = {
@@ -1542,9 +1874,52 @@ tr_siberia_missions = {
 					duration = 5475
 				}
 			}
+			central_asia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_treasury = 5000
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
 		}
 	}
-
+	tr_conquer_transoxania = {
+		icon = mission_conquer_transoxania
+		required_missions = { tr_conquer_remaining_steppes_mission }
+		completed_by = 1855.1.1
+		provinces_to_highlight = {
+		    region = central_asia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			central_asia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			central_asia_region = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "convert_transoxania"
+					duration = 5475
+				}
+			}
+			add_treasury = 5000
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
+		}
+	}
+	
 	rus_integrate_perm = {
 		icon = mission_integrate_perm
 		required_missions = {  }
@@ -1561,13 +1936,23 @@ tr_siberia_missions = {
 				type = all
 				owned_by = ROOT
 			}
+			ural_region = {
+				type = all
+				OR = {
+					NOT = { owned_by = PRM }
+					owned_by = ROOT
+				}
+			}
 		}
 		effect = {
-			add_dip_power = 50
+			add_dip_power = 250
+			add_adm_power = 250
+			add_mil_power = 250
+			add_treasury = 5000
 		}
 	}
 	tr_russian_colony_in_west_siberia_new = {
-		icon = mission_colonial
+		icon = mission_russian_colony_in_west_siberia
 		required_missions = { rus_integrate_perm }
 		completed_by = 1618.1.1
 		provinces_to_highlight = {
@@ -1581,6 +1966,7 @@ tr_siberia_missions = {
 			num_of_owned_provinces_with = {
 				region = west_siberia_region
 				value = 15
+	 
 			}
 		}
 		effect = {
@@ -1592,6 +1978,10 @@ tr_siberia_missions = {
 				manuever = 5
 				siege = 0
 			}
+			add_treasury = -2500
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
 		}
 	}
 	tr_russian_colony_in_east_siberia = {
@@ -1668,8 +2058,13 @@ tr_siberia_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			add_treasury = -2500
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
 		}
 	}
+	
 	rus_alaskan_colony = {
 		icon = mission_colonize_alaska
 		required_missions = { tr_russian_colony_in_east_siberia }
@@ -1698,6 +2093,10 @@ tr_siberia_missions = {
 				add_base_production = 1
 				add_base_manpower = 1
 			}
+			add_treasury = -5000
+			add_adm_power = 250
+			add_dip_power = 250
+			add_mil_power = 250
 		}
 	}
 }

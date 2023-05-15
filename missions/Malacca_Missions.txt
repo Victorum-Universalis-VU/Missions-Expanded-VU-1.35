@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe #Amended by Altan for EEVU
 mnd_mlc_1 = {
 	slot = 1
 	generic = no
@@ -7,7 +8,7 @@ mnd_mlc_1 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mnd_mlc_pajang = {
 		icon = mission_kowtow
 		required_missions = { }
@@ -114,13 +115,6 @@ mnd_mlc_1 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				tenasserim_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
 				kedah_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -137,17 +131,12 @@ mnd_mlc_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = malaya_area
-				area = tenasserim_area
 				area = kedah_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			malaya_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tenasserim_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -252,16 +241,16 @@ mnd_mlc_1 = {
 			OR = {
 				area = palembang_area
 				area = central_sumatra_area
-			}
+			}			
 		}
 		trigger = {
 			palembang_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT 
 			}
 			central_sumatra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ROOT 
 			}
 		}
 		effect = {
@@ -321,7 +310,7 @@ mnd_mlc_1 = {
 	mnd_mlc_defeat_ayutthaya = {
 		icon = mission_indian_soldier_elephant
 		required_missions = { }
-		provinces_to_highlight = {
+		provinces_to_highlight = {	
 			OR = {
 				AND = {
 					is_capital = yes
@@ -375,13 +364,6 @@ mnd_mlc_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			sukothai_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 }
@@ -395,7 +377,7 @@ mnd_mlc_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mnd_mlc_ming = {
 		icon = mission_great_wall
 		required_missions = { }
@@ -406,26 +388,26 @@ mnd_mlc_2 = {
 		trigger = {
 			if = {
 				limit = {
-					MNG = {
-						exists = yes
-						is_emperor_of_china = yes
+					MNG = { 
+						exists = yes 
+						is_emperor_of_china = yes 
 					}
-					is_subject = no
+					is_subject = no 
 				}
 				MNG = {
 					is_at_war = no
 				}
 				MNG = {
-					OR = {
-						is_rival = ROOT
+					OR = { 
+						is_rival = ROOT 
 						AND = {
 							has_opinion = {
 								who = ROOT
 								value = 100
 							}
-							trust = {
-								who = ROOT
-								value = 65
+							trust = { 
+								who = ROOT 
+								value = 65 
 							}
 						}
 					}
@@ -441,12 +423,12 @@ mnd_mlc_2 = {
 		effect = {
 			if = {
 				limit = {
-					MNG = {
-						exists = yes
-						is_emperor_of_china = yes
-						is_subject = no
+					MNG = { 
+						exists = yes 
+						is_emperor_of_china = yes 
+						is_subject = no 
 					}
-					is_subject = no
+					is_subject = no 
 				}
 				MNG = {
 					create_subject = {
@@ -455,30 +437,30 @@ mnd_mlc_2 = {
 					}
 				}
 				add_favors = {
-					who = MNG
+					who = MNG 
 					amount = 15
 				}
-				change_dip = 1
+				change_dip = 1 
 			}
 			else_if = {
 				limit = {
 					exists = MNG
 					NOT = { has_dlc = "Mandate of Heaven" }
 					MNG = { is_subject = no }
-					is_subject = no
+					is_subject = no 
 				}
 				MNG = {
 					create_guarantee = ROOT
 				}
 			}
 			else_if = {
-				limit = {
+				limit = { 
 					MNG = { is_subject = yes }
 				}
 				add_dip_power = 100
 			}
 		}
-	}
+	}	
 	mnd_mlc_champa = {
 		icon = mission_kowtow
 		required_missions = {  }
@@ -646,13 +628,6 @@ mnd_mlc_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_java_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	mnd_mlc_destroy_majapahit = {
@@ -662,16 +637,11 @@ mnd_mlc_2 = {
 			OR = {
 				owned_by = MAJ
 				area = central_java_area
-				area = east_java_area
 			}
 		}
 		trigger = {
 			NOT = { exists = MAJ }
 			central_java_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			east_java_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

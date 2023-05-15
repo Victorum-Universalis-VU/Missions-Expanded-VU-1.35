@@ -22,7 +22,7 @@ Ulm_missions_1 = {
 			}
 		}
 	}
-
+	
 	ulm_get_army = {
 		icon = mission_assemble_an_army
 		required_missions = { ulm_get_allies }
@@ -37,7 +37,7 @@ Ulm_missions_1 = {
 			}
 		}
 	}
-
+	
 	ulm_city_of_worlds_desire = {
 		icon = mission_early_game_buildings
 		position = 3
@@ -69,13 +69,13 @@ Ulm_missions_1 = {
 			}
 		}
 	}
-
+	
 	ulm_subjugate_someone = {
 		icon = mission_have_two_subjects
 		position = 4
 		required_missions = { ulm_city_of_worlds_desire }
 		trigger = {
-			num_of_subjects = 2
+			num_of_subjects = 2 
 		}
 		effect = {
 			add_country_modifier = {
@@ -98,7 +98,7 @@ Ulm_missions_1 = {
 			}
 		}
 	}
-
+	
 	ulm_unite_swabia = {
 		icon = mission_cannons_firing
 		position = 5
@@ -130,7 +130,7 @@ Ulm_missions_1 = {
 			}
 		}
 	}
-
+	
 	ulm_unite_upper_rhineland = {
 		icon = mission_conquer_50_development
 		position = 6
@@ -204,7 +204,7 @@ Ulm_missions_2 = {
 			}
 		}
 	}
-
+	
 	ulm_leading_producer = {
 		icon = mission_early_game_buildings
 		position = 7
@@ -270,7 +270,7 @@ Ulm_missions_3 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	ulm_minster = {
 		icon = mission_european_church
 		position = 6

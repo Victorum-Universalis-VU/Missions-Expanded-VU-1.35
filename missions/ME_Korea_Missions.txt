@@ -2710,6 +2710,38 @@ KOR_missions_1_Colonial = {
 					}
 					add_permanent_claim = ROOT
 				}
+				riau_islands_region = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				nusa_tenggara_region = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				borneo_region = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				celebes_region = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				malaya_region = {
 					limit = {
 						province_has_center_of_trade_of_level = 1
@@ -2892,6 +2924,10 @@ KOR_missions_2_Colonial = {
 		provinces_to_highlight = {
 			OR = {
 				region = indonesia_region
+				region = riau_islands_region
+				region = nusa_tenggara_region
+				region = borneo_region
+				region = celebes_region
 				region = malaya_region
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -2901,6 +2937,10 @@ KOR_missions_2_Colonial = {
 						value = 5
 						OR = {
 							region = indonesia_region
+							region = riau_islands_region
+							region = nusa_tenggara_region
+							region = borneo_region
+							region = celebes_region
 							region = malaya_region
 						}
 					}
@@ -2912,6 +2952,10 @@ KOR_missions_2_Colonial = {
 				value = 5
 				OR = {
 					region = indonesia_region
+					region = riau_islands_region
+					region = nusa_tenggara_region
+					region = borneo_region
+					region = celebes_region
 					region = malaya_region
 				}
 			}
@@ -2934,13 +2978,19 @@ KOR_missions_2_Colonial = {
 		required_missions = { KOR_presence_in_indonesia }
 		position = 19
 		provinces_to_highlight = {
-			region = moluccas_region
+			OR = {
+			    region = moluccas_region
+			    region = nusa_tenggara_region
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						value = 15
-						region = moluccas_region
+						OR = {
+						    region = moluccas_region
+						    region = nusa_tenggara_region
+						}
 					}
 				}
 			}
@@ -2948,7 +2998,10 @@ KOR_missions_2_Colonial = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 15
-				region = moluccas_region
+				OR = {
+				    region = moluccas_region
+				    region = nusa_tenggara_region
+				}
 			}
 		}
 		effect = {

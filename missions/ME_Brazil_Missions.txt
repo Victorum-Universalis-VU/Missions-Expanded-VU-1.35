@@ -915,71 +915,70 @@ BRZ_missions_5 = {
 			add_prestige_or_monarch_power = { amount = 10 }
 				custom_tooltip = ME_BRZ_GOLD_MODIFIER
 				hidden_effect = {
-					antisuyu_area = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							trade_goods = gold
-						}
-						add_province_modifier = {
-							name = BRZ_gold_modifier
-							duration = -1
-						}
+				antisuyu_area = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						trade_goods = gold
 					}
-					potosi_area = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							trade_goods = gold
-						}
-						add_province_modifier = {
-							name = BRZ_gold_modifier
-							duration = -1
-						}
-					}
-					jujuy_area = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							trade_goods = gold
-						}
-						add_province_modifier = {
-							name = BRZ_gold_modifier
-							duration = -1
-						}
-					}
-					upper_peru = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							trade_goods = gold
-						}
-						add_province_modifier = {
-							name = BRZ_gold_modifier
-							duration = -1
-						}
-					}
-					northern_chile_area = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							trade_goods = gold
-						}
-						add_province_modifier = {
-							name = BRZ_gold_modifier
-							duration = -1
-						}
-					}
-					tucuman_area = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							trade_goods = gold
-						}
-						add_province_modifier = {
-							name = BRZ_gold_modifier
-							duration = -1
-						}
+					add_province_modifier = {
+						name = BRZ_gold_modifier
+						duration = -1
 					}
 				}
-
+				potosi_area = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						trade_goods = gold
+					}
+					add_province_modifier = {
+						name = BRZ_gold_modifier
+						duration = -1
+					}
+				}
+				jujuy_area = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						trade_goods = gold
+					}
+					add_province_modifier = {
+						name = BRZ_gold_modifier
+						duration = -1
+					}
+				}
+				upper_peru = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						trade_goods = gold
+					}
+					add_province_modifier = {
+						name = BRZ_gold_modifier
+						duration = -1
+					}
+				}
+				northern_chile_area = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						trade_goods = gold
+					}
+					add_province_modifier = {
+						name = BRZ_gold_modifier
+						duration = -1
+					}
+				}
+				tucuman_area = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						trade_goods = gold
+					}
+					add_province_modifier = {
+						name = BRZ_gold_modifier
+						duration = -1
+					}
+				}
+			}	
 		}
 	}
-
+	
 	BRZ_patagonia = {
 		icon = mission_unite_home_region
 		required_missions = { BRZ_buenos_aires }

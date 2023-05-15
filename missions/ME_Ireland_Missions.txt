@@ -492,13 +492,6 @@ ireland_missions_column_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_east_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
@@ -514,7 +507,6 @@ ireland_missions_column_3 = {
 				area = wales_area
 				area = cornwall_area
 				area = south_east_area
-				area = greater_london_area
 				area = east_anglia_area
 				area = yorkshire_area
 				area = east_midlands_area
@@ -534,10 +526,6 @@ ireland_missions_column_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			south_east_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			greater_london_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -678,10 +666,7 @@ ireland_missions_column_4 = {
 		required_missions = { ireland_mission_12 }
 		position = 5
 		provinces_to_highlight = {
-			OR = {
-			   area = cornwall_area
-				 area = south_east_area
-			}
+			area = cornwall_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -689,13 +674,9 @@ ireland_missions_column_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			south_east_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 		}
 		effect = {
-			greater_london_area = {
+			south_east_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT }

@@ -659,6 +659,13 @@ me_manchu_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_china_sea_islands_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			#country_event = {
 			#	id = ME_Manchu_Events.6
 			#}

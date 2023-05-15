@@ -2,13 +2,13 @@ BUR_missions_1 = {
 	slot = 1
 	generic = no
 	ai = yes
-
+	
 	potential = {
 		tag = BUR
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	bur_subjects_ME = {
 		icon = mission_alliances
 		required_missions = { }
@@ -33,7 +33,7 @@ BUR_missions_1 = {
 			}
 		}
 	}
-
+	
 	bur_lorraine_ME = {
 		icon = mission_conquer_50_development
 		required_missions = { bur_subjects_ME }
@@ -87,7 +87,7 @@ BUR_missions_1 = {
 			}
 		}
 	}
-
+	
 	bur_liege_ME = {
 		icon = mission_have_two_subjects
 		required_missions = { bur_lorraine_ME }
@@ -130,7 +130,7 @@ BUR_missions_1 = {
 			}
 		}
 	}
-
+	
 	bur_frisia_ME = {
 		icon = mission_cannons_firing
 		required_missions = { bur_liege_ME }
@@ -158,8 +158,8 @@ BUR_missions_1 = {
 			}
 		}
 	}
-
-	BUR_ned_ambitions = {
+	
+	BUR_ned_ambitions = { 
 		icon = mission_cannons_firing
 		required_missions = { bur_frisia_ME }
 		position = 7
@@ -187,7 +187,7 @@ BUR_missions_1 = {
 			}
 		}
 	}
-
+	
 	BUR_holland = {
 		icon = mission_have_two_subjects
 		required_missions = { BUR_ned_ambitions }
@@ -233,7 +233,7 @@ BUR_missions_1 = {
 			}
 		}
 	}
-
+	
 	BUR_eng_3 = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_eng_1 }
@@ -257,7 +257,7 @@ BUR_missions_1 = {
 			}
 		}
 	}
-
+	
 	BUR_eng_7 = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_eng_3 }
@@ -282,7 +282,7 @@ BUR_missions_1 = {
 			}
 		}
 	}
-
+	
 	BUR_eng_8 = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_eng_7 }
@@ -308,7 +308,7 @@ BUR_missions_1 = {
 			}
 		}
 	}
-
+	
 	BUR_eng_9 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -346,7 +346,7 @@ BUR_missions_2 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	BUR_flanders = {
 		icon = mission_have_two_subjects
 		required_missions = { BUR_ned_ambitions }
@@ -388,7 +388,7 @@ BUR_missions_2 = {
 			}
 		}
 	}
-
+	
 	BUR_challenge_eng = {
 		icon = mission_establish_high_seas_navy
 		required_missions = {
@@ -420,7 +420,7 @@ BUR_missions_2 = {
 			}
 		}
 	}
-
+	
 	BUR_eng_1 = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_challenge_eng }
@@ -444,7 +444,7 @@ BUR_missions_2 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			greater_london_area = {
+			south_east_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -453,17 +453,17 @@ BUR_missions_2 = {
 			}
 		}
 	}
-
+	
 	BUR_eng_2 = {
 		icon = mission_conquer_50_development
 		required_missions = { BUR_eng_1 }
 		position = 11
 		provinces_to_highlight = {
-			area = greater_london_area
+			area = south_east_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			greater_london_area = {
+			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -484,33 +484,19 @@ BUR_missions_2 = {
 				}
 				add_claim = ROOT
 			}
-			south_east_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_claim = ROOT
-			}
 		}
 	}
-
+	
 	BUR_eng_4 = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_eng_2 }
 		position = 12
 		provinces_to_highlight = {
-		  OR = {
-			   area = cornwall_area
-				 area = south_east_area
-			}
+			area = cornwall_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			cornwall_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -525,7 +511,7 @@ BUR_missions_2 = {
 			}
 		}
 	}
-
+	
 	BUR_eng_5 = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_eng_4 }
@@ -550,7 +536,7 @@ BUR_missions_2 = {
 			}
 		}
 	}
-
+	
 	BUR_eng_6 = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_eng_5 }
@@ -570,7 +556,7 @@ BUR_missions_2 = {
 			add_mil_power = 50
 		}
 	}
-
+	
 	BUR_eng_10 = {
 		icon = mission_empire
 		required_missions = {
@@ -609,7 +595,7 @@ BUR_missions_3 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	BUR_brabant = {
 		icon = mission_have_two_subjects
 		required_missions = { BUR_ned_ambitions }
@@ -657,7 +643,7 @@ BUR_missions_3 = {
 			}
 		}
 	}
-
+	
 	BUR_picardy_area = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_challenge_fra }
@@ -677,7 +663,7 @@ BUR_missions_3 = {
 			add_dip_power = 50
 		}
 	}
-
+	
 	BUR_reims_area = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_picardy_area }
@@ -710,7 +696,7 @@ BUR_missions_3 = {
 			}
 		}
 	}
-
+	
 	BUR_norman_area = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_reims_area }
@@ -729,10 +715,10 @@ BUR_missions_3 = {
 			add_dip_power = 150
 		}
 	}
-
+	
 	BUR_thicc_capital = {
 		icon = mission_empire
-		required_missions = {
+		required_missions = { 
 			BUR_fra_2
 			BUR_eng_2
 		}
@@ -766,7 +752,7 @@ BUR_missions_4 = {
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
-
+	
 	BUR_challenge_fra = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { BUR_italy_ambitions }
@@ -795,7 +781,7 @@ BUR_missions_4 = {
 			}
 		}
 	}
-
+	
 	BUR_swiss = {
 		icon = mission_cannons_firing
 		required_missions = { BUR_challenge_hre }
@@ -814,7 +800,7 @@ BUR_missions_4 = {
 			add_adm_power = 100
 		}
 	}
-
+	
 	BUR_fra_1 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -841,7 +827,7 @@ BUR_missions_4 = {
 			}
 		}
 	}
-
+	
 	BUR_fra_2 = {
 		icon = mission_conquer_50_development
 		required_missions = {
@@ -868,7 +854,7 @@ BUR_missions_4 = {
 			}
 		}
 	}
-
+	
 	BUR_fra_4 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -908,7 +894,7 @@ BUR_missions_4 = {
 			}
 		}
 	}
-
+	
 	BUR_fra_6 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -935,7 +921,7 @@ BUR_missions_4 = {
 			}
 		}
 	}
-
+	
 	BUR_fra_7 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -963,7 +949,7 @@ BUR_missions_5 = {
 	slot = 5
 	generic = no
 	ai = yes
-
+	
 	potential = {
 		tag = BUR
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -1002,7 +988,7 @@ BUR_missions_5 = {
 			}
 		}
 	}
-
+	
 	bur_romandie_ME = {
 		icon = mission_unite_home_region
 		required_missions = { bur_nevers_ME }
@@ -1078,7 +1064,7 @@ BUR_missions_5 = {
 			}
 		}
 	}
-
+	
 	bur_cisjurania_ME = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { bur_romandie_ME }
@@ -1146,7 +1132,7 @@ BUR_missions_5 = {
 			}
 		}
 	}
-
+	
 	BUR_italy_ambitions = {
 		icon = mission_cannons_firing
 		required_missions = { bur_cisjurania_ME }
@@ -1175,7 +1161,7 @@ BUR_missions_5 = {
 			}
 		}
 	}
-
+	
 	BUR_challenge_hre = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { BUR_italy_ambitions }
@@ -1196,7 +1182,7 @@ BUR_missions_5 = {
 			set_in_empire = no
 		}
 	}
-
+	
 	BUR_fra_3 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1239,7 +1225,7 @@ BUR_missions_5 = {
 			}
 		}
 	}
-
+	
 	BUR_fra_5 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1272,7 +1258,7 @@ BUR_missions_5 = {
 			}
 		}
 	}
-
+	
 	BUR_fra_8 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1299,7 +1285,7 @@ BUR_missions_5 = {
 			}
 		}
 	}
-
+	
 	BUR_fra_9 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1336,7 +1322,7 @@ BUR_missions_5 = {
 			}
 		}
 	}
-
+	
 	BUR_fra_10 = {
 		icon = mission_cannons_firing
 		required_missions = {
@@ -1367,7 +1353,7 @@ BUR_missions_5 = {
 			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 		}
 	}
-
+	
 	BUR_fra_11 = {
 		icon = mission_empire
 		required_missions = {

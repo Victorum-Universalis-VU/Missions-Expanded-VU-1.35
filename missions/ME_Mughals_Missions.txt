@@ -2324,7 +2324,7 @@ Mughal_missions_2_1_unlocked = {
 			has_institution = global_trade
 			num_of_owned_provinces_with = {
 				OR = {
-					development = 25
+					development = 40 #Was 25, nerfed it for VU
 					num_of_times_improved = 5
 				}
 				value = 20
@@ -3399,7 +3399,7 @@ Mughal_missions_3_2_locked = {
 			}
 			num_of_owned_provinces_with = {
 				region = bengal_region
-				development = 25
+				development = 40 #Was 25, nerfed it for VU
 				value = 5
 			}
 			OR = {
@@ -3663,7 +3663,7 @@ Mughal_missions_3_2_unlocked = {
 						OR = {
 							has_courthouse_building_trigger = yes
 							has_manufactory_trigger = no
-							NOT = { development = 25 }
+							NOT = { development = 40 } #Was 25, nerfed it for VU
 						}
 					}
 				}
@@ -3683,7 +3683,7 @@ Mughal_missions_3_2_unlocked = {
 			}
 			num_of_owned_provinces_with = {
 				region = bengal_region
-				development = 25
+				development = 40 #Was 25, nerfed it for VU
 				value = 5
 			}
 			OR = {
@@ -4422,7 +4422,7 @@ Mughal_missions_4_1_locked = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = naval_supplies
-				amount = 15
+				amount = 20 #Was 15, nerfed it for VU
 			}
 		}
 		
@@ -4714,7 +4714,7 @@ Mughal_missions_4_1_unlocked = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = naval_supplies
-				amount = 15
+				amount = 20 # Was 15, nerfed it for VU
 			}
 		}
 		
@@ -6089,7 +6089,7 @@ Mughal_missions_5_1_unlocked = {
 			num_of_owned_provinces_with = {
 				has_port = yes
 				OR = {
-					development = 15
+					development = 20 #Was 15, nerfed it for VU
 					has_dock_building_trigger = yes
 				}
 				superregion = india_superregion

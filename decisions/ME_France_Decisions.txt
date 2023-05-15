@@ -1,7 +1,10 @@
 country_decisions = {
 	me_fra_establish_the_plantation_economy = {
 		potential = {
-			tag = FRA
+			OR = {
+				tag = FRA
+				tag = BFR
+			}
 			has_institution = new_world_i
 			any_subject_country = {
 				is_colonial_nation = yes
@@ -103,7 +106,10 @@ country_decisions = {
 
 	me_fra_dirigiste_reforms = {
 		potential = {
-			tag = FRA
+			OR = {
+				tag = FRA
+				tag = BFR
+			}
 			has_institution = global_trade
 			NOT = { has_country_modifier = fra_dirigiste }
 		}
@@ -140,7 +146,10 @@ country_decisions = {
 
 	me_fra_continental_system = {
 		potential = {
-			tag = FRA
+			OR = {
+				tag = FRA
+				tag = BFR
+			}
 			current_age = age_of_revolutions
 			NOT = { has_country_flag = continental_system }
 		}
@@ -175,7 +184,10 @@ country_decisions = {
 	me_fra_end_hre = {
 		major = yes
 		potential = {
-			tag = FRA
+			OR = {
+				tag = FRA
+				tag = BFR
+			}
 			has_country_flag = fra_sanctum_romanum_decision
 			NOT = { has_country_flag = fra_end_decision_taken }
 		}

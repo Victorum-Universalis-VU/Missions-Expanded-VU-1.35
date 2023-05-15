@@ -248,7 +248,7 @@ me_venice_missions_1 = {
 							PREV = {
 								trade_share = {
 									share = 5
-									country = PREV
+									country = PREV 
 								}
 							}
 							navy_size = ROOT
@@ -641,7 +641,7 @@ me_venice_missions_2 = {
 							PREV = {
 								trade_share = {
 									share = 5
-									country = PREV
+									country = PREV 
 								}
 							}
 							navy_size = ROOT
@@ -1313,8 +1313,8 @@ me_venice_missions_4 = {
 								has_building = fort_17th
 								has_building = fort_18th
 								has_building = naval_base
-							  has_building = naval_arsenal
-						  	has_building = coastal_artillery
+								has_building = naval_arsenal
+								has_building = coastal_artillery
 							}
 						}
 					}
@@ -1349,8 +1349,8 @@ me_venice_missions_4 = {
 							has_building = fort_17th
 							has_building = fort_18th
 							has_building = naval_base
-						  has_building = naval_arsenal
-					  	has_building = coastal_artillery
+							has_building = naval_arsenal
+							has_building = coastal_artillery
 						}
 					}
 					add_permanent_province_modifier = {

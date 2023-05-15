@@ -14,7 +14,7 @@ GRA_ADU_missions_1 = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_our_plea_for_help = {
 		icon = mission_rajput_mansabdars
 		required_missions = { }
@@ -30,19 +30,19 @@ GRA_ADU_missions_1 = {
 					}
 				}
 				desc = GRA_improving_relation
-				amount = 3
+				amount = 3 
 			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = GRA_looking_for_help
-				duration = 7300
+				duration = 7300 
 			}
-
+			
 			add_dip_power = 25
 		}
 	}
-
+	
 	GRA_loyal_allies = {
 		icon = mission_viceroyalty_of_the_deccan
 		required_missions = { GRA_our_plea_for_help }
@@ -53,7 +53,7 @@ GRA_ADU_missions_1 = {
 			}
 		}
 		trigger = {
-			calc_true_if = {
+			calc_true_if = { 
 				all_ally = {
 					has_opinion = {
 						who = ROOT
@@ -70,9 +70,9 @@ GRA_ADU_missions_1 = {
 					ROOT = { add_favors = { who = PREV amount = 5 } }
 				}
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			define_advisor = {
 				type = statesman
 				skill = 1
@@ -82,7 +82,7 @@ GRA_ADU_missions_1 = {
 			}
 		}
 	}
-
+	
 	GRA_lend_lease = {
 		icon = mission_afghan_frontier
 		required_missions = { GRA_loyal_allies }
@@ -104,13 +104,13 @@ GRA_ADU_missions_1 = {
 		effect = {
 			add_country_modifier = {
 				name = GRA_military_support
-				duration = 9125
+				duration = 9125 
 			}
-
+			
 			add_mil_power = 75
 		}
 	}
-
+	
 	GRA_gharb = {
 		icon = mission_look_west
 		required_missions = { GRA_reconquer_muwsat }
@@ -135,29 +135,29 @@ GRA_ADU_missions_1 = {
 		effect = {
 			country_event = { id = ME_Granada_Events.4 }
 			custom_tooltip = " "
-
+			
 			add_yearly_sailors = 1
 			custom_tooltip = " "
 			230 = {
 				light_ship = ROOT
 				light_ship = ROOT
-				light_ship = ROOT
+				light_ship = ROOT 
 			}
 			custom_tooltip = " "
-
+			
 			ME_give_claims = { id = 228 }
 			ME_give_claims = { id = 1851 }
 			ME_give_claims = { id = 4556 }
-
+			
 			custom_tooltip = " "
-
+			
 			ME_give_claims = { area = macaronesia_area }
 			macaronesia_area = {
-				discover_country = ROOT
+				discover_country = ROOT 
 			}
 		}
 	}
-
+	
 	GRA_western_march = {
 		icon = mission_union_with_portugal
 		required_missions = { GRA_gharb }
@@ -177,14 +177,14 @@ GRA_ADU_missions_1 = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.7 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_al_tagr_al_adna
 				duration = -1
 			}
-
+			
 			ME_give_claims = { id = 232 }
 			ME_give_claims = { id = 231 }
 			ME_give_claims = { area = galicia_area }
@@ -209,7 +209,7 @@ GRA_ADU_missions_2 = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_civil_war = {
 		icon = mission_restore_faith_in_the_throne
 		required_missions = { }
@@ -231,11 +231,11 @@ GRA_ADU_missions_2 = {
 		}
 		effect = {
 			add_stability_or_adm_power = yes
-
+			
 			custom_tooltip = " "
-
+			
 			add_legitimacy = 20
-
+			
 			if = {
 				limit = {
 					has_estate = estate_nobles
@@ -248,7 +248,7 @@ GRA_ADU_missions_2 = {
 			}
 		}
 	}
-
+	
 	GRA_stable_leadership = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { GRA_civil_war }
@@ -268,7 +268,7 @@ GRA_ADU_missions_2 = {
 				name = GRA_stable_leadership_modifier
 				duration = 9125
 			}
-
+			
 			define_advisor = {
 				type = ME_historian
 				skill = 1
@@ -278,7 +278,7 @@ GRA_ADU_missions_2 = {
 			}
 		}
 	}
-
+	
 	GRA_reconquer_muwsat = {
 		icon = mission_reclaim_andalucia
 		required_missions = { GRA_break_out_of_containment }
@@ -301,14 +301,14 @@ GRA_ADU_missions_2 = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.1 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_muwsat
 				duration = -1
 			}
-
+			
 			ME_give_claims = { id = 218 }
 			ME_give_claims = { id = 1747 }
 			ME_give_claims = { id = 4788 }
@@ -322,7 +322,7 @@ GRA_ADU_missions_2 = {
 			ME_give_claims = { id = 227 }
 		}
 	}
-
+	
 	GRA_middle_march = {
 		icon = mission_portuguese_oman
 		required_missions = { GRA_reconquer_muwsat }
@@ -347,14 +347,14 @@ GRA_ADU_missions_2 = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.5 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_al_tagr_al_awsat
 				duration = -1
 			}
-
+			
 			ME_give_claims = { id = 4551 }
 			ME_give_claims = { id = 217 }
 			ME_give_claims = { id = 2755 }
@@ -407,9 +407,9 @@ GRA_ADU_missions_3 = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.12 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_casus_belli = {
 				target = CAS
 				type = cb_granada_fight_crusaders
@@ -418,7 +418,7 @@ GRA_ADU_missions_3 = {
 			custom_tooltip = GRA_the_wargoal_will_be_superiority
 		}
 	}
-
+	
 	GRA_break_out_of_containment = {
 		icon = mission_castillian_aggression
 		required_missions = { GRA_secure_an_advantage }
@@ -435,13 +435,13 @@ GRA_ADU_missions_3 = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.9 } #Castilian incident
-
+			
 			custom_tooltip = " "
-
+			
 			add_prestige_or_monarch_power = { amount = 10 }
-
+			
 			custom_tooltip = " "
-
+			
 			ME_give_claims = { id = 4547 }
 			ME_give_claims = { id = 221 }
 			ME_give_claims = { id = 1750 }
@@ -455,7 +455,7 @@ GRA_ADU_missions_3 = {
 			ME_give_claims = { id = 1748 }
 		}
 	}
-
+	
 	GRA_reconquer_levant = {
 		icon = mission_levantine_restoration #kekw
 		required_missions = { GRA_break_out_of_containment }
@@ -481,14 +481,14 @@ GRA_ADU_missions_3 = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.3 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_al_xarq
 				duration = -1
 			}
-
+			
 			ME_give_claims = { area = baleares_area }
 			ME_give_claims = { id = 2988 }
 			ME_give_claims = { id = 214 }
@@ -496,7 +496,7 @@ GRA_ADU_missions_3 = {
 			ME_give_claims = { id = 2990 }
 		}
 	}
-
+	
 	GRA_northeast_march = {
 		icon = mission_pacify_the_berbers
 		required_missions = { GRA_reconquer_levant }
@@ -517,14 +517,14 @@ GRA_ADU_missions_3 = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.6 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_al_tagr_al_ala
 				duration = -1
 			}
-
+			
 			ME_give_claims = { area = catalonia_area }
 		}
 	}
@@ -558,7 +558,7 @@ GRA_ADU_missions_4 = {
 				army_size = 9
 				army_size_percentage = 0.85
 			}
-
+			
 			monthly_mil = 5
 		}
 		effect = {
@@ -567,11 +567,11 @@ GRA_ADU_missions_4 = {
 				duration = -1
 				age = age_of_discovery
 			}
-
+			
 			ME_give_claims = { area = lower_andalucia_area }
 		}
 	}
-
+	
 	GRA_forced_contribution = {
 		icon = mission_high_income
 		required_missions = { GRA_siege_mentality }
@@ -600,13 +600,13 @@ GRA_ADU_missions_4 = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.11 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_adm_power = 25
 		}
 	}
-
+	
 	GRA_the_great_mosque = {
 		icon = mission_conquer_rewakantha
 		required_missions = { GRA_invite_the_faithful }
@@ -643,7 +643,7 @@ GRA_ADU_missions_4 = {
 			}
 		}
 	}
-
+	
 	GRA_court_of_lions = {
 		icon = mission_conquer_tunisia
 		required_missions = { GRA_the_great_mosque GRA_qaysariyya }
@@ -658,7 +658,7 @@ GRA_ADU_missions_4 = {
 				}
 				OR = {
 					223 = {
-						owned_by = ROOT
+						owned_by = ROOT 
 						OR = {
 							has_great_project = {
 								type = alhambra
@@ -688,12 +688,12 @@ GRA_ADU_missions_4 = {
 				type = muscovy_architect
 				skill = 2
 				religion = ROOT
-				culture = ROOT
+				culture = ROOT 
 				cost_multiplier = 0.33
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			if = {
 				limit = {
 					has_dlc = "Leviathan"
@@ -716,7 +716,7 @@ GRA_ADU_missions_4 = {
 					223 = {
 						add_base_tax = 1
 						add_base_production = 1
-						add_base_manpower = 1
+						add_base_manpower = 1 
 					}
 				}
 				hidden_effect = {
@@ -742,7 +742,7 @@ GRA_ADU_missions_4 = {
 							}
 							add_base_tax = 2
 						}
-
+						
 					}
 					else = {
 						223 = {
@@ -752,14 +752,14 @@ GRA_ADU_missions_4 = {
 							}
 							add_base_tax = 1
 							add_base_production = 1
-							add_base_manpower = 1
+							add_base_manpower = 1 
 						}
 					}
 				}
 			}
 		}
 	}
-
+	
 	GRA_alhambra = {
 		icon = mission_develop_alhambra
 		required_missions = { GRA_court_of_lions }
@@ -817,7 +817,7 @@ GRA_ADU_missions_4 = {
 				}
 			}
 			custom_tooltip = " "
-
+			
 			223 = {
 				add_province_modifier = {
 					name = GRA_the_alhambra
@@ -826,7 +826,7 @@ GRA_ADU_missions_4 = {
 			}
 		}
 	}
-
+	
 	GRA_majorca = {
 		icon = reclaim_the_aegean
 		required_missions = { GRA_reconquer_levant }
@@ -846,14 +846,14 @@ GRA_ADU_missions_4 = {
 				add_nationalism = -30
 				add_province_modifier = {
 					name = GRA_island_possessions
-					duration = -1
+					duration = -1 
 				}
 			}
-
+			
 			hidden_effect = {
 				country_event = { id = ME_Granada_Events.16 days = 30 }
 			}
-
+			
 			ME_give_claims = { area = corsica_sardinia_area }
 			ME_give_claims = { area = sicily_area }
 		}
@@ -891,7 +891,7 @@ GRA_ADU_missions_5 = {
 					has_estate = estate_church
 				}
 				estate_loyalty = {
-					estate = estate_church
+					estate = estate_church 
 					loyalty = 55
 				}
 			}
@@ -903,7 +903,7 @@ GRA_ADU_missions_5 = {
 			country_event = { id = ME_Granada_Events.17 }
 		}
 	}
-
+	
 	GRA_qaysariyya = {
 		icon = mission_dominate_trade_in_bengal
 		required_missions = { GRA_invite_the_faithful }
@@ -935,13 +935,13 @@ GRA_ADU_missions_5 = {
 				add_or_upgrade_trade_building = yes
 				create_or_add_center_of_trade_level = { level = 1 }
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			ME_add_years_of_trade_income = { years = 3 }
 		}
 	}
-
+	
 	GRA_naval_superiority = {
 		icon = mission_raid_on_venice
 		required_missions = { }
@@ -957,16 +957,16 @@ GRA_ADU_missions_5 = {
 		}
 		effect = {
 			create_admiral = { tradition = 40 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_galleys
 				duration = 9125
 			}
 		}
 	}
-
+	
 	GRA_ceuta = {
 		icon = mission_retake_ceuta
 		required_missions = { GRA_naval_superiority }
@@ -976,7 +976,7 @@ GRA_ADU_missions_5 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			1751 = {
+			1751 = { 
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -986,9 +986,9 @@ GRA_ADU_missions_5 = {
 			}
 			custom_tooltip = " "
 			add_dip_power = 100
-
+			
 			custom_tooltip = " "
-
+			
 			ME_give_claims = { area = marrekesh_area }
 			ME_give_claims = { area = northern_morocco_area }
 			ME_give_claims = { area = western_morocco_area }
@@ -1009,7 +1009,7 @@ ADU_missions_1 = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_dar_jihad = {
 		icon = mission_al_andalus
 		required_missions = { }
@@ -1035,7 +1035,7 @@ ADU_missions_1 = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.34 } #pick your military style
-
+			
 			add_mil_power = 100
 		}
 	}
@@ -1055,7 +1055,7 @@ ADU_missions_1_branching = {
 		NOT = { has_country_flag = GRA_chose_military_path }
 	}
 	has_country_shield = yes
-
+	
 	GRA_mil_branch_1_1 = {
 		icon = mission_unknown_mission
 		required_missions = { GRA_dar_jihad }
@@ -1072,7 +1072,7 @@ ADU_missions_1_branching = {
 			custom_tooltip = GRA_rewards_will_be_decided_after_dar_jihad
 		}
 	}
-
+	
 	GRA_mil_branch_1_2 = {
 		icon = mission_unknown_mission
 		required_missions = { GRA_mil_branch_1_1 }
@@ -1089,7 +1089,7 @@ ADU_missions_1_branching = {
 			custom_tooltip = GRA_rewards_will_be_decided_after_dar_jihad
 		}
 	}
-
+	
 	GRA_mil_branch_1_3 = {
 		icon = mission_unknown_mission
 		required_missions = { GRA_mil_branch_1_2 GRA_mil_branch_2_2 }
@@ -1122,7 +1122,7 @@ ADU_missions_1_western = {
 		has_country_flag = GRA_western_military_flag
 	}
 	has_country_shield = yes
-
+	
 	GRA_adopt_gunpowder = {
 		icon = mission_gunpowder_warfare
 		required_missions = { GRA_dar_jihad }
@@ -1133,7 +1133,7 @@ ADU_missions_1_western = {
 			hidden_trigger = {
 				NOT = { has_country_flag = GRA_military_preview }
 			}
-
+			
 			num_of_artillery = 15
 			if = {
 				limit = {
@@ -1155,7 +1155,7 @@ ADU_missions_1_western = {
 				duration = -1
 				else = " add_army_tradition_or_mil_power = { amount = 10 } "
 			}
-
+			
 			define_advisor = {
 				type = commandant
 				skill = 2
@@ -1165,7 +1165,7 @@ ADU_missions_1_western = {
 			}
 		}
 	}
-
+	
 	GRA_western_mercenaries = {
 		icon = swiss_mercenaries
 		required_missions = { GRA_adopt_gunpowder }
@@ -1179,7 +1179,7 @@ ADU_missions_1_western = {
 			hidden_trigger = {
 				NOT = { has_country_flag = GRA_military_preview }
 			}
-
+			
 			OR = {
 				num_of_mercenaries = 20
 				num_of_hired_mercenary_companies = 2
@@ -1192,14 +1192,14 @@ ADU_missions_1_western = {
 		effect = {
 			custom_tooltip = GRA_western_mercenaries_effect
 			set_country_flag = GRA_western_mercenaries_effect_flag
-
+			
 			add_country_modifier = {
 				name = GRA_merc_discipline
 				duration = 9125
 			}
 		}
 	}
-
+	
 	GRA_western_muslim_military = {
 		icon = fight_bosnian_heresies
 		required_missions = { GRA_western_mercenaries GRA_integrate_westerners }
@@ -1210,19 +1210,19 @@ ADU_missions_1_western = {
 			hidden_trigger = {
 				NOT = { has_country_flag = GRA_military_preview }
 			}
-
+			
 			is_ahead_of_time_in_tech = { type = mil }
-
+			
 			has_global_modifier_value = {
 				which = land_morale
 				value = 0.25
 			}
-
+			
 			has_mil_advisor_3 = yes
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.46 }
-
+			
 			custom_tooltip = GRA_may_change_to_western_units
 		}
 	}
@@ -1253,14 +1253,14 @@ ADU_missions_1_muslim = {
 			hidden_trigger = {
 				NOT = { has_country_flag = GRA_military_preview }
 			}
-
+			
 			OR = {
 				slaves = 3
 				any_ally = {
 					OR = {
-						culture_group = mande
-						culture_group = sahelian
-						culture_group = west_african
+						culture_group = mande 
+						culture_group = sahelian 
+						culture_group = west_african 
 					}
 					has_opinion = {
 						who = ROOT
@@ -1272,13 +1272,13 @@ ADU_missions_1_muslim = {
 		effect = {
 			custom_tooltip = GRA_saqalibah
 			set_country_flag = GRA_western_saqalibah
-
+			
 			custom_tooltip = " "
-
+			
 			add_yearly_manpower = 2
 		}
 	}
-
+	
 	GRA_adopt_gunpowder_muslim = {
 		icon = mission_gunpowder_warfare
 		required_missions = { GRA_saqalibas }
@@ -1289,7 +1289,7 @@ ADU_missions_1_muslim = {
 			hidden_trigger = {
 				NOT = { has_country_flag = GRA_military_preview }
 			}
-
+			
 			num_of_artillery = 15
 			if = {
 				limit = {
@@ -1313,7 +1313,7 @@ ADU_missions_1_muslim = {
 			}
 		}
 	}
-
+	
 	GRA_standing_army = {
 		icon = mission_marathi_fiefs
 		required_missions = { GRA_adopt_gunpowder_muslim GRA_recruit_berbers }
@@ -1324,7 +1324,7 @@ ADU_missions_1_muslim = {
 			hidden_trigger = {
 				NOT = { has_country_flag = GRA_military_preview }
 			}
-
+			
 			army_size = 150
 			has_mil_advisor_3 = yes
 			is_ahead_of_time_in_tech = { type = mil }
@@ -1336,7 +1336,7 @@ ADU_missions_1_muslim = {
 				name = GRA_standing_army_modifier
 				duration = -1
 			}
-
+			
 			create_general = { tradition = 80 add_siege = 2 }
 		}
 	}
@@ -1355,14 +1355,14 @@ ADU_missions_1_cont = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_outposts_in_the_gold_coast = {
 		icon = mission_trade_in_gold_coast
 		required_missions = { GRA_iberian_discoveries }
 		position = 13
 		provinces_to_highlight = {
 			region = guinea_region
-			is_empty = yes
+			is_empty = yes 
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -1373,9 +1373,9 @@ ADU_missions_1_cont = {
 		effect = {
 			custom_tooltip = GRA_cb_on_fetishists
 			set_country_flag = GRA_cb_on_fetishists_flag
-
+			
 			custom_tooltip = " "
-
+			
 			1466 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -1386,14 +1386,14 @@ ADU_missions_1_cont = {
 			}
 		}
 	}
-
+	
 	GRA_onto_the_cape = {
 		icon = mission_portuguese_malacca
 		required_missions = { GRA_outposts_in_the_gold_coast }
 		position = 15
 		provinces_to_highlight = {
 			region = south_africa_region
-			is_empty = yes
+			is_empty = yes 
 		}
 		trigger = {
 			1460 = {
@@ -1409,7 +1409,7 @@ ADU_missions_1_cont = {
 				name = GRA_trade_company_investment
 				duration = -1
 			}
-
+			
 			custom_tooltip = GRA_our_most_developed_province_in_the_cape
 			tooltip = {
 				add_province_modifier = {
@@ -1438,7 +1438,7 @@ ADU_missions_1_cont = {
 			}
 		}
 	}
-
+	
 	GRA_kilwa = {
 		icon = mission_son_own_develop_clothes_and_salt
 		required_missions = { GRA_onto_the_cape }
@@ -1537,13 +1537,13 @@ ADU_missions_1_cont = {
 		effect = {
 			custom_tooltip = GRA_above_requirements
 			set_country_flag = GRA_opinion_trade_power
-
+			
 			custom_tooltip = " "
-
-			add_mercantilism = 5
+			
+			add_mercantilism = 5 
 		}
 	}
-
+	
 	GRA_madinat_alazahara = {
 		icon = mission_el_badi_palace
 		required_missions = { GRA_restore_qurtubah }
@@ -1572,17 +1572,17 @@ ADU_missions_1_cont = {
 					duration = -1
 				}
 			}
-
+			
 			define_advisor = {
 				type = muscovy_architect
 				skill = 2
 				religion = ROOT
-				culture = ROOT
+				culture = ROOT 
 				cost_multiplier = 0.5
 			}
 		}
 	}
-
+	
 	GRA_tulaytulah = {
 		icon = mission_found_havana
 		required_missions = { GRA_cities_of_the_empire }
@@ -1614,7 +1614,7 @@ ADU_missions_1_cont = {
 			}
 		}
 	}
-
+	
 	GRA_gather_the_ulema = {
 		icon = mission_fatimid_caliphate
 		required_missions = { }
@@ -1628,7 +1628,7 @@ ADU_missions_1_cont = {
 				}
 				OR = {
 					estate_loyalty = {
-						estate = estate_church
+						estate = estate_church 
 						loyalty = 65
 					}
 					num_of_estate_agendas_completed = {
@@ -1637,23 +1637,23 @@ ADU_missions_1_cont = {
 					}
 				}
 			}
-
+			
 			OR = {
 				inquisitor = 1
 				theologian = 1
 				has_adm_advisor_2 = yes
 			}
 		}
-		effect = {
+		effect = {	
 			add_adm_power = 50
-
+		
 			add_country_modifier = {
 				name = GRA_piety_acceleration
 				duration = 10950
 			}
 		}
 	}
-
+	
 	GRA_scholars = {
 		icon = mission_conquer_algiers
 		required_missions = { GRA_gather_the_ulema }
@@ -1742,7 +1742,7 @@ ADU_missions_1_cont = {
 					}
 				}
 			}
-
+			
 			add_country_modifier = {
 				name = GRA_clergy_priv_slot
 				duration = -1
@@ -1764,7 +1764,7 @@ ADU_missions_2 = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_ummayad_frontier = {
 		icon = mission_intervene_in_castile
 		required_missions = { GRA_middle_march GRA_western_march }
@@ -1797,18 +1797,18 @@ ADU_missions_2 = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.8 }
-
+			
 			add_country_modifier = {
 				name = GRA_ummayad_frontier
 				duration = -1
 			}
-
+			
 			ME_give_claims = { area = asturias_area }
 			ME_give_claims = { area = basque_area }
 			ME_give_claims = { id = 208 }
 		}
 	}
-
+	
 	GRA_finish_off_crusader_kingdoms = {
 		icon = mission_tear_down_spanish_strongholds
 		required_missions = { GRA_ummayad_frontier GRA_catalonia }
@@ -1842,13 +1842,13 @@ ADU_missions_2 = {
 				remove_country_modifier = GRA_al_tagr_al_adna
 				remove_country_modifier = GRA_muwsat
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			set_defender_of_the_faith_effect = yes
-
+			
 			custom_tooltip = " "
-
+			
 			set_government_rank = 3
 		}
 	}
@@ -1868,7 +1868,7 @@ ADU_missions_2_branching = {
 		NOT = { has_country_flag = GRA_chose_military_path }
 	}
 	has_country_shield = yes
-
+	
 	GRA_mil_branch_2_1 = {
 		icon = mission_unknown_mission
 		required_missions = { GRA_dar_jihad }
@@ -1885,7 +1885,7 @@ ADU_missions_2_branching = {
 			custom_tooltip = GRA_rewards_will_be_decided_after_dar_jihad
 		}
 	}
-
+	
 	GRA_mil_branch_2_2 = {
 		icon = mission_unknown_mission
 		required_missions = { GRA_mil_branch_2_1 }
@@ -1918,7 +1918,7 @@ ADU_missions_2_muslim = {
 		has_country_flag = GRA_muslim_military_flag
 	}
 	has_country_shield = yes
-
+	
 	GRA_volunteers_of_the_faith_adu = {
 		icon = mission_integrate_the_purbias
 		required_missions = { GRA_dar_jihad }
@@ -1929,12 +1929,12 @@ ADU_missions_2_muslim = {
 			hidden_trigger = {
 				NOT = { has_country_flag = GRA_military_preview }
 			}
-
+			
 			OR = {
 				manpower_percentage = 0.6
 				manpower = 60
 			}
-
+			
 			if = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
@@ -1942,7 +1942,7 @@ ADU_missions_2_muslim = {
 				OR = {
 					num_of_regiments_at_full_drill = 3
 					army_professionalism = 0.1
-					army_tradition = 40
+					army_tradition = 40 
 				}
 			}
 			else = {
@@ -1956,12 +1956,12 @@ ADU_missions_2_muslim = {
 				name = GRA_heroes_of_the_faith
 				duration = -1
 			}
-
+			
 			custom_tooltip = GRA_cut_the_penalty_of_army_professionalism_from_sunni
 			set_country_flag = GRA_cut_penalty_in_half
 		}
 	}
-
+	
 	GRA_recruit_berbers = {
 		icon = mission_traverse_the_sahara
 		required_missions = { GRA_volunteers_of_the_faith_adu }
@@ -1980,16 +1980,16 @@ ADU_missions_2_muslim = {
 			}
 			OR = {
 				has_estate_privilege = estate_berbers_berber_settlements_gra_adu
-				estate_loyalty = {
+				estate_loyalty = { 
 					estate = estate_berbers
 					loyalty = 60
 				}
 			}
-
+			
 			OR = {
 				any_owned_province = {
 					culture = berber
-					has_forcelimit_building_trigger = yes
+					has_forcelimit_building_trigger = yes 
 				}
 				num_of_owned_provinces_with = {
 					has_province_modifier = estate_berbers_settlement
@@ -2001,7 +2001,7 @@ ADU_missions_2_muslim = {
 		effect = {
 			custom_tooltip = GRA_empower_the_berber_privilege
 			set_country_flag = GRA_empower_the_berber_privilege_flag
-
+			
 			add_country_modifier = {
 				name = GRA_berber_contingents
 				duration = -1
@@ -2024,7 +2024,7 @@ ADU_missions_2_western = {
 		has_country_flag = GRA_western_military_flag
 	}
 	has_country_shield = yes
-
+	
 	GRA_recruit_dhimmi = {
 		icon = confront_the_lombards
 		required_missions = { GRA_dar_jihad }
@@ -2038,13 +2038,13 @@ ADU_missions_2_western = {
 			hidden_trigger = {
 				NOT = { has_country_flag = GRA_military_preview }
 			}
-
+			
 			num_of_owned_provinces_with = {
 				NOT = { religion_group = ROOT }
 				has_forcelimit_building_trigger = yes
 				value = 10
 			}
-
+			
 			num_of_estate_privileges = {
 				estate = estate_dhimmi
 				value = 2
@@ -2053,9 +2053,9 @@ ADU_missions_2_western = {
 		effect = {
 			custom_tooltip = GRA_strengthen_the_dhimmi_privilege
 			set_country_flag = GRA_strengthen_the_dhimmi_privilege_flag
-
+		
 			custom_tooltip = " "
-
+			
 			custom_tooltip = CRDB_upgrade_best_forcelimit_buildings
 			tooltip = {
 				add_or_upgrade_forcelimit_building = yes
@@ -2070,7 +2070,7 @@ ADU_missions_2_western = {
 						has_forcelimit_building_trigger = yes
 					"
 				}
-
+				
 				event_target:Granada_Target_1 = {
 					add_or_upgrade_forcelimit_building = yes
 				}
@@ -2083,7 +2083,7 @@ ADU_missions_2_western = {
 			}
 		}
 	}
-
+	
 	GRA_integrate_westerners = {
 		icon = professional_army
 		required_missions = { GRA_recruit_dhimmi }
@@ -2094,7 +2094,7 @@ ADU_missions_2_western = {
 			hidden_trigger = {
 				NOT = { has_country_flag = GRA_military_preview }
 			}
-
+			
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = GRA_employed_a_christian_mil_advisor
@@ -2131,9 +2131,9 @@ ADU_missions_2_western = {
 				}
 				commandant = 1
 			}
-
+			
 			is_ahead_of_time_in_tech = { type = mil }
-
+			
 			has_global_modifier_value = {
 				which = land_morale
 				value = 0.15
@@ -2142,9 +2142,9 @@ ADU_missions_2_western = {
 		effect = {
 			custom_tooltip = GRA_gain_2_infantry_power_per_toh
 			set_country_flag = GRA_gain_2_infantry_power_per_toh_priv
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_professionalism
 				duration = 7300
@@ -2166,7 +2166,7 @@ ADU_missions_2_cont = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_iberian_discoveries = {
 		icon = mission_look_west
 		required_missions = { }
@@ -2188,13 +2188,13 @@ ADU_missions_2_cont = {
 				religion = catholic
 				cost_multiplier = 0.5
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			add_navy_tradition = 20
 		}
 	}
-
+	
 	GRA_islamize_local_peoples = {
 		icon = mission_mal_jihad_upon_own_population
 		required_missions = { GRA_outposts_in_the_gold_coast }
@@ -2258,19 +2258,19 @@ ADU_missions_2_cont = {
 					}
 				}
 			}
-
+			
 		}
 		effect = {
 			custom_tooltip = MSA_requirement_for_spreading
-			hidden_effect = {
+			hidden_effect = { 
 				#complete_mission = atj_porch_of_mecca
 				set_country_flag = ME_lower_trade_share_propagate
 			}
-
+			
 			add_dip_power = 50
 		}
 	}
-
+	
 	GRA_mexico = {
 		icon = mission_mayan_conquest
 		required_missions = { GRA_caribbean }
@@ -2309,11 +2309,11 @@ ADU_missions_2_cont = {
 				name = GRA_influx_of_gold_from_mexico
 				duration = -1
 			}
-
-			add_years_of_income = 1
+			
+			add_years_of_income = 1 
 		}
 	}
-
+	
 	GRA_malayan_muslims = {
 		icon = mission_sail_to_the_east_indies
 		required_missions = { GRA_onto_the_cape }
@@ -2375,11 +2375,11 @@ ADU_missions_2_cont = {
 		}
 		effect = {
 			add_positive_or_negative_piety = { amount = 0.1 }
-
+			
 			custom_tooltip = GRA_spread_of_islam_will_accelerate #should be an major event
 			set_global_flag = GRA_spread_of_islam_will_accelerate
 			country_event = { id = ME_Granada_Events.36 }
-
+			
 			event_target:ME_MSA_muslim_center_target = {
 				owner = {
 					country_event = { id = ME_Granada_Events.37 } #give theologian
@@ -2387,7 +2387,7 @@ ADU_missions_2_cont = {
 			}
 		}
 	}
-
+	
 	GRA_new_granada = {
 		icon = mission_new_kingdom_of_granada
 		required_missions = { GRA_colony_caribbean }
@@ -2403,23 +2403,23 @@ ADU_missions_2_cont = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				colonial_region = colonial_colombia
 				is_city = yes
-				value = 5
+				value = 5 
 			}
 		}
 		effect = {
-			add_mercantilism = 5
-
+			add_mercantilism = 5 
+			
 			custom_tooltip = " "
-
+			
 			ME_add_years_of_trade_income = { years = 2 }
-
+			
 			custom_tooltip = " "
-
+			
 			custom_tooltip = GRA_unlock_the_sufi_order_privilege
 			set_country_flag = GRA_sufi_order_privilege_flag
 		}
 	}
-
+	
 	GRA_restore_qurtubah = {
 		icon = mission_develop_cordoba
 		required_missions = { }
@@ -2442,7 +2442,7 @@ ADU_missions_2_cont = {
 		effect = {
 			225 = {
 				add_or_upgrade_tax_building = yes
-
+				
 				add_province_modifier = {
 					name = GRA_capital_of_andalusia
 					duration = -1
@@ -2450,7 +2450,7 @@ ADU_missions_2_cont = {
 			}
 		}
 	}
-
+	
 	GRA_capital = {
 		icon = mission_golden_century
 		required_missions = { GRA_restore_qurtubah }
@@ -2486,7 +2486,7 @@ ADU_missions_2_cont = {
 		}
 		trigger = {
 			225 = {
-				development = 50
+				development = 50 
 				owned_by = ROOT
 			}
 			development_in_provinces = {
@@ -2500,7 +2500,7 @@ ADU_missions_2_cont = {
 		effect = {
 			225 = {
 				custom_tooltip = GRA_append_with
-				hidden_effect = {
+				hidden_effect = { 
 					remove_province_modifier = GRA_capital_of_andalusia
 					add_province_modifier = {
 						name = GRA_capital_of_andalusia_2
@@ -2508,14 +2508,14 @@ ADU_missions_2_cont = {
 					}
 				}
 			}
-
+			
 			add_country_modifier = {
 				name = GRA_grand_capital
 				duration = -1
 			}
 		}
 	}
-
+	
 	GRA_cities_of_the_empire = {
 		icon = mission_al-wadi_al-kabir
 		required_missions = { }
@@ -2545,9 +2545,9 @@ ADU_missions_2_cont = {
 				loyalty = 15
 				duration = 9125
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			hidden_effect = {
 				if = {
 					limit = {
@@ -2587,9 +2587,9 @@ ADU_missions_2_cont = {
 				}
 			}
 			custom_tooltip = GRA_25_dip_power_per_privilege
-
+			
 			custom_tooltip = " "
-
+			
 			add_years_of_owned_provinces_production_income = {
 				years = 10
 				trigger = {
@@ -2604,7 +2604,7 @@ ADU_missions_2_cont = {
 			}
 		}
 	}
-
+	
 	GRA_sevilha = {
 		icon = mission_raid_on_genoa
 		required_missions = { GRA_cities_of_the_empire }
@@ -2625,7 +2625,7 @@ ADU_missions_2_cont = {
 				owned_by = ROOT
 				development = 18
 				has_trade_building_trigger = yes
-				has_shipyard_building_trigger = yes
+				has_shipyard_building_trigger = yes 
 			}
 			1293 = {
 				trade_share = {
@@ -2642,15 +2642,15 @@ ADU_missions_2_cont = {
 					which = global_trade
 					value = 75
 				}
-
+				
 				custom_tooltip = " "
-
+				
 				add_or_upgrade_trade_building = yes
-				add_or_upgrade_shipyard_building = yes
+				add_or_upgrade_shipyard_building = yes 
 			}
 		}
 	}
-
+	
 	GRA_restore_caliphate = {
 		icon = mission_restore_caliphate_of_cordoba
 		required_missions = { GRA_the_fake_caliph GRA_gather_the_ulema }
@@ -2662,16 +2662,16 @@ ADU_missions_2_cont = {
 				piety = 0.9
 				NOT = { piety = -0.9 }
 			}
-
+			
 			ME_can_become_caliphate_gov = yes
 			total_development = 800
 		}
 		effect = {
 			set_country_flag = ME_andalusian_caliphate
 			country_event = { id = ME_Granada_Events.38 }
-
+			
 			custom_tooltip = " "
-
+			
 			set_defender_of_the_faith_effect = yes
 		}
 	}
@@ -2690,7 +2690,7 @@ ADU_missions_3_catalonia = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_catalonia = {
 		icon = purely_for_commerce
 		required_missions = { GRA_northeast_march }
@@ -2707,9 +2707,9 @@ ADU_missions_3_catalonia = {
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.35 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_catalonia_modifier
 				duration = -1
@@ -2737,7 +2737,7 @@ ADU_missions_3_branch = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_branching_france_1 = {
 		icon = mission_unknown_mission
 		required_missions = { GRA_catalonia }
@@ -2773,7 +2773,7 @@ ADU_missions_3_branch = {
 					}
 				}
 			}
-
+			
 			custom_trigger_tooltip = {
 				tooltip = GRA_reqs_if_with_france
 			}
@@ -2791,7 +2791,7 @@ ADU_missions_3_branch = {
 			}
 			else = {
 				any_country = {
-					culture_group = french
+					culture_group = french 
 					has_opinion = {
 						who = ROOT
 						value = 100
@@ -2808,15 +2808,15 @@ ADU_missions_3_branch = {
 					amount = 10
 				}
 				custom_tooltip = MAM_permanent_PP
-
+				
 				custom_tooltip = " "
-
+				
 				add_country_modifier = {
 					name = GRA_france_defeat
 					duration = -1
 				}
 			}
-
+			
 			custom_tooltip = GRA_rew_if_with_france
 			tooltip = {
 				define_advisor = {
@@ -2826,9 +2826,9 @@ ADU_missions_3_branch = {
 					religion = ROOT
 					cost_multiplier = 0.33
 				}
-
+				
 				custom_tooltip = " "
-
+				
 				custom_tooltip = GRA_disable_the_event_incompetent_diplomacy #858
 				set_country_flag = GRA_incompetent_diplomacy
 			}
@@ -2850,7 +2850,7 @@ ADU_missions_3_against_france = {
 		has_country_flag = GRA_defeat_france_flag
 	}
 	has_country_shield = yes
-
+	
 	GRA_defeat_france = {
 		icon = mission_the_french_menace
 		required_missions = { GRA_catalonia }
@@ -2887,9 +2887,9 @@ ADU_missions_3_against_france = {
 				amount = 10
 			}
 			custom_tooltip = MAM_permanent_PP
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_france_defeat
 				duration = -1
@@ -2914,7 +2914,7 @@ ADU_missions_3_with_france= {
 	has_country_shield = yes
 
 	GRA_ally_france = {
-		icon = catholic_confraternity
+		icon = catholic_confraternity 
 		required_missions = { GRA_catalonia }
 		position = 10
 		provinces_to_highlight = {
@@ -2926,7 +2926,7 @@ ADU_missions_3_with_france= {
 			}
 			else = {
 				owner = {
-					culture_group = french
+					culture_group = french 
 				}
 			}
 		}
@@ -2945,7 +2945,7 @@ ADU_missions_3_with_france= {
 			}
 			else = {
 				any_country = {
-					culture_group = french
+					culture_group = french 
 					has_opinion = {
 						who = ROOT
 						value = 100
@@ -2962,9 +2962,9 @@ ADU_missions_3_with_france= {
 				religion = ROOT
 				cost_multiplier = 0.33
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			custom_tooltip = GRA_disable_the_event_incompetent_diplomacy #858
 			set_country_flag = GRA_incompetent_diplomacy
 		}
@@ -2984,7 +2984,7 @@ ADU_missions_3_continued = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_high_seas_navy = {
 		icon = mission_launch_a_flagship
 		required_missions = { GRA_iberian_discoveries }
@@ -3001,7 +3001,7 @@ ADU_missions_3_continued = {
 			}
 		}
 	}
-
+	
 	GRA_caribbean = {
 		icon = mission_colonize_the_caribbean
 		required_missions = { GRA_high_seas_navy }
@@ -3010,27 +3010,27 @@ ADU_missions_3_continued = {
 			colonial_region = colonial_the_carribean
 		}
 		trigger = {
-			colonial_the_carribean = {
+			colonial_the_carribean = {	
 				has_discovered = ROOT
 			}
 		}
 		effect = {
 			custom_tooltip = GRA_enable_send_religious_mission_diplomatic_action
 			set_country_flag = GRA_religious_mission_flag
-
+			
 			custom_tooltip = " "
-
+			
 			ME_give_claims = { region = colonial_mexico }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_mission_to_caribbean
 				duration = 7300
 			}
 		}
 	}
-
+	
 	GRA_colony_caribbean = {
 		icon = mission_caribbean_cn
 		required_missions = { GRA_caribbean }
@@ -3046,7 +3046,7 @@ ADU_missions_3_continued = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				colonial_region = colonial_the_carribean
 				is_city = yes
-				value = 8
+				value = 8 
 			}
 		}
 		effect = {
@@ -3054,7 +3054,7 @@ ADU_missions_3_continued = {
 				name = GRA_wealth_awaits
 				duration = 10950
 			}
-
+			
 			custom_tooltip = GRA_our_colonial_caribbean_subject
 			tooltip = {
 				add_country_modifier = {
@@ -3077,7 +3077,7 @@ ADU_missions_3_continued = {
 			}
 		}
 	}
-
+	
 	GRA_gather_translators = {
 		icon = mission_court_education
 		required_missions = { }
@@ -3098,13 +3098,13 @@ ADU_missions_3_continued = {
 				religion = ROOT
 				cost_multiplier = 0.75
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			country_event = { id = ME_Granada_Events.39 }
 		}
 	}
-
+	
 	GRA_library_of_cordoba = {
 		icon = bibliotheca_corviana
 		required_missions = { GRA_gather_translators GRA_restore_qurtubah }
@@ -3129,7 +3129,7 @@ ADU_missions_3_continued = {
 				monthly_dip = 14
 				monthly_mil = 14
 			}
-
+			
 			is_ahead_of_time_in_tech = { type = any }
 		}
 		effect = {
@@ -3138,11 +3138,11 @@ ADU_missions_3_continued = {
 					name = GRA_library_of_cordoba_modifier
 					duration = -1
 				}
-				add_or_upgrade_university_building = yes
+				add_or_upgrade_university_building = yes 
 			}
 		}
 	}
-
+	
 	GRA_print_some_books = {
 		icon = mission_vedic_education
 		required_missions = { GRA_library_of_cordoba }
@@ -3157,7 +3157,7 @@ ADU_missions_3_continued = {
 				name = GRA_proliferation_of_knowledge
 				duration = 7300
 			}
-
+			
 			custom_tooltip = GRA_most_developed_province_in_capital_area
 			tooltip = {
 				add_province_modifier = {
@@ -3189,7 +3189,7 @@ ADU_missions_3_continued = {
 			}
 		}
 	}
-
+	
 	GRA_balansiyah = {
 		icon = mission_raid_on_valencia
 		required_missions = { GRA_cities_of_the_empire }
@@ -3206,7 +3206,7 @@ ADU_missions_3_continued = {
 		trigger = {
 			220 = {
 				owned_by = ROOT
-				development = 20
+				development = 20 
 				has_trade_building_trigger = yes
 				has_production_building_trigger = yes
 			}
@@ -3215,9 +3215,9 @@ ADU_missions_3_continued = {
 			220 = {
 				add_or_upgrade_trade_building = yes
 				add_or_upgrade_production_building = yes
-
+				
 				custom_tooltip = " "
-
+				
 				add_province_modifier = {
 					name = GRA_silky_valencia
 					duration = -1
@@ -3225,29 +3225,29 @@ ADU_missions_3_continued = {
 			}
 		}
 	}
-
+	
 	GRA_the_fake_caliph = {
 		icon = me_mission_muslim_priest
 		required_missions = { }
 		position = 23
 		provinces_to_highlight = {
-			ME_abbasid_caliph_pth = yes
+			ME_abbasid_caliph_pth = yes 
 		}
 		trigger = {
 			ME_has_abbasid_caliph = yes
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.40 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_has_seized_the_caliph
 				duration = 7300
 			}
 		}
 	}
-
+	
 	GRA_the_mozarabic_culture = {
 		icon = me_mission_muslim_family
 		required_missions = { GRA_mosaic_of_faiths }
@@ -3273,14 +3273,14 @@ ADU_missions_3_continued = {
 					value = 10
 				}
 			}
-
-			num_accepted_cultures = 3
+			
+			num_accepted_cultures = 3 
 		}
 		effect = {
 			set_country_flag = GRA_mozarabic
 			custom_tooltip = GRA_mozarabic
-
-			add_stability_or_adm_power = yes
+			
+			add_stability_or_adm_power = yes 
 		}
 	}
 }
@@ -3298,7 +3298,7 @@ ADU_missions_4 = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_mediterranean = {
 		icon = mission_invade_island
 		required_missions = { GRA_majorca }
@@ -3321,7 +3321,7 @@ ADU_missions_4 = {
 		}
 		effect = {
 			# country_event = { id = ME_Granada_Events.45 }
-
+			
 			corsica_sardinia_area = {
 				limit = {
 					country_or_non_sovereign_subject_holds = ROOT
@@ -3334,18 +3334,18 @@ ADU_missions_4 = {
 				}
 				add_nationalism = -20
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_naval_morale
 				duration = 9125
 			}
-
+			
 			ME_add_years_of_trade_income = { value = 2 }
 		}
 	}
-
+	
 	GRA_south_morocco = {
 		icon = mission_into_persia_1
 		required_missions = { GRA_morocco }
@@ -3380,44 +3380,44 @@ ADU_missions_4 = {
 					}
 					southern_morocco_area = {
 						limit = { country_or_non_sovereign_subject_holds = ROOT }
-						add_nationalism = -10
+						add_nationalism = -10 
 					}
 					sus_area = {
 						limit = { country_or_non_sovereign_subject_holds = ROOT }
-						add_nationalism = -10
+						add_nationalism = -10 
 					}
 					tafilalt_area = {
 						limit = { country_or_non_sovereign_subject_holds = ROOT }
-						add_nationalism = -10
+						add_nationalism = -10 
 					}
 				}
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			add_mil_power = 50
 			add_army_tradition_or_mil_power = { amount = 15 }
 		}
 	}
-
+	
 	GRA_tunis = {
 		icon = mission_conquer_tunis
 		required_missions = { GRA_tlemcen }
 		position = 11
 		provinces_to_highlight = {
 			OR = {
-				area = kabylia_area
-				area = tunisia_area
-				area = djerba_area
+				area = kabylia_area 
+				area = tunisia_area 
+				area = djerba_area 
 				area = tripolitania_area
 			}
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
-					area = kabylia_area
-					area = tunisia_area
-					area = djerba_area
+					area = kabylia_area 
+					area = tunisia_area 
+					area = djerba_area 
 					area = tripolitania_area
 				}
 				value = 12
@@ -3426,20 +3426,20 @@ ADU_missions_4 = {
 		effect = {
 			ME_give_claims = { area = north_saharan_area }
 			ME_give_claims = { area = fezzan_area }
-
+			
 			custom_tooltip = " "
-
+			
 			create_admiral = { tradition = 50 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_the_capture_of_tunis
 				duration = 9125
 			}
 		}
 	}
-
+	
 	GRA_treasure_fleet_en_route = {
 		icon = mission_african_gold
 		required_missions = { GRA_colonialism }
@@ -3457,7 +3457,7 @@ ADU_missions_4 = {
 					continent = north_america
 					continent = south_america
 				}
-				trade_goods = gold
+				trade_goods = gold 
 				value = 2
 			}
 		}
@@ -3466,18 +3466,18 @@ ADU_missions_4 = {
 				name = GRA_to_protect_the_treasure_fleets
 				duration = 9125
 			}
-
+			
 			add_years_of_income = 0.5
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_treasure_fleets
 				duration = -1
 			}
 		}
 	}
-
+	
 	GRA_rival_navies = {
 		icon = mission_rb_empire
 		required_missions = { GRA_treasure_fleet_en_route GRA_high_seas_navy }
@@ -3503,13 +3503,13 @@ ADU_missions_4 = {
 				amount = 5
 			}
 			custom_tooltip = MAM_permanent_PP
-
+			
 			custom_tooltip = " "
-
+			
 			create_admiral = { tradition = 80 }
 		}
 	}
-
+	
 	GRA_sail_south = {
 		icon = mission_raid_christian_trade
 		required_missions = { GRA_caribbean }
@@ -3561,13 +3561,13 @@ ADU_missions_4 = {
 					value = 50
 				}
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			add_navy_tradition = 15
 		}
 	}
-
+	
 	GRA_brazil = {
 		icon = mission_colonise_brazil
 		required_missions = { GRA_sail_south }
@@ -3583,7 +3583,7 @@ ADU_missions_4 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				colonial_region = colonial_brazil
 				is_city = yes
-				value = 5
+				value = 5 
 			}
 		}
 		effect = {
@@ -3602,7 +3602,7 @@ ADU_missions_4 = {
 			}
 		}
 	}
-
+	
 	GRA_sugar = {
 		icon = mission_the_triangle_trade
 		required_missions = { GRA_colony_caribbean GRA_brazil }
@@ -3620,8 +3620,8 @@ ADU_missions_4 = {
 					is_colonial_nation_of = ROOT
 				}
 				trade_goods = sugar
-				has_manufactory_trigger = yes
-				value = 5
+				has_manufactory_trigger = yes 
+				value = 5 
 			}
 		}
 		effect = {
@@ -3631,7 +3631,7 @@ ADU_missions_4 = {
 			}
 		}
 	}
-
+	
 	GRA_philosophy = {
 		icon = geneva_conventions
 		required_missions = { GRA_literature }
@@ -3641,19 +3641,19 @@ ADU_missions_4 = {
 		trigger = {
 			monthly_adm = 10
 			monthly_dip = 10
-			monthly_mil = 10
+			monthly_mil = 10 
 			prestige = 60
 			stability = 1
 		}
 		effect = {
 			country_event = { id = ME_Granada_Events.33 }
-
+			
 			custom_tooltip = " "
-
+			
 			change_government_reform_progress = 100
 		}
 	}
-
+	
 	GRA_great_scholars = {
 		icon = mission_patronize_art_and_religion
 		required_missions = { GRA_philosophy GRA_library_of_cordoba }
@@ -3666,23 +3666,23 @@ ADU_missions_4 = {
 		effect = {
 			set_country_flag = GRA_foreign_experts_flag
 			custom_tooltip = GRA_foreign_experts
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_advisor_perma
 				duration = -1
 			}
 		}
 	}
-
+	
 	GRA_almeria = {
 		icon = mission_jawal_silver_mine
 		required_missions = { GRA_workshops }
 		position = 22
 		provinces_to_highlight = {
 			province_id = 2754
-			OR = {
+			OR = { 
 				NOT = { owned_by = ROOT }
 				NOT = { base_production = 5 }
 				NOT = { num_of_buildings_in_province = 3 }
@@ -3708,15 +3708,15 @@ ADU_missions_4 = {
 					duration = -1
 				}
 			}
-
+			
 			add_inflation = -0.5
-
+			
 			custom_tooltip = " "
-
+			
 			country_event = { id = ME_Granada_Events.22 }
 		}
 	}
-
+	
 	GRA_funduqs = {
 		icon = mission_dominate_persian_gulf
 		required_missions = { }
@@ -3813,7 +3813,7 @@ ADU_missions_4 = {
 			custom_tooltip = GRA_upgrade_highest_trade
 			tooltip = {
 				add_base_tax = 1
-				add_base_production = 1
+				add_base_production = 1 
 				add_province_modifier = {
 					name = GRA_trade_center
 					duration = -1
@@ -3849,16 +3849,16 @@ ADU_missions_4 = {
 						duration = -1
 					}
 					add_base_tax = 1
-					add_base_production = 1
+					add_base_production = 1 
 				}
 			}
-
+			
 			tooltip = {
 				ME_add_years_of_trade_income = { years = 2 }
 			}
 			#if we have trader or diplo advisor of level 2, gain 3 instead?
 			custom_tooltip = GRA_if_we_have_trader_advisor
-
+			
 			hidden_effect = {
 				if = {
 					limit = {
@@ -3872,7 +3872,7 @@ ADU_missions_4 = {
 			}
 		}
 	}
-
+	
 	GRA_mosaic_of_faiths = {
 		icon = mission_hands_praying
 		required_missions = { }
@@ -3889,7 +3889,7 @@ ADU_missions_4 = {
 			}
 		}
 	}
-
+	
 	GRA_a_haven = {
 		icon = mission_expel_the_moriscos
 		required_missions = { GRA_jewish_communities_of_andalusia GRA_the_mozarabic_culture }
@@ -3901,7 +3901,7 @@ ADU_missions_4 = {
 					NOT = { religion = ROOT }
 				}
 				AND = {
-					is_capital = yes
+					is_capital = yes 
 					owner = {
 						NOT = { religion = ROOT }
 						alliance_with = ROOT
@@ -3933,9 +3933,9 @@ ADU_missions_4 = {
 		effect = {
 			custom_tooltip = GRA_5_extra_advisor
 			set_country_flag = GRA_5_extra_advisor_flag
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_haven
 				duration = -1
@@ -3957,7 +3957,7 @@ ADU_missions_5 = {
 		NOT = { has_country_flag = GRA_incident_castile }
 	}
 	has_country_shield = yes
-
+	
 	GRA_morocco = {
 		icon = mission_new_world_power
 		required_missions = { GRA_ceuta }
@@ -3984,30 +3984,30 @@ ADU_missions_5 = {
 			ME_give_claims = { area = southern_morocco_area }
 			ME_give_claims = { area = sus_area }
 			ME_give_claims = { area = tafilalt_area }
-
+			
 			ME_give_claims = { area = northern_morocco_area }
 			ME_give_claims = { area = hautes_plaines_area }
 			ME_give_claims = { area = barbary_coast_area }
 			ME_give_claims = { id = 349 }
-
+			
 			custom_tooltip = " "
-
+			
 			add_accepted_culture_or_dip_power = { culture = moroccan }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_almoravid_almohad
 				duration = -1
 			}
-
+			
 			add_power_projection = {
 				type = mission_rewards_power_projection
 				amount = 10
 			}
 		}
 	}
-
+	
 	GRA_tlemcen = {
 		icon = mission_control_the_barbary_coast
 		required_missions = { GRA_morocco }
@@ -4031,25 +4031,25 @@ ADU_missions_5 = {
 				value = 7
 			}
 		}
-		effect = {
+		effect = { 
 			ME_give_claims = { area = kabylia_area }
 			ME_give_claims = { area = tunisia_area }
 			ME_give_claims = { area = djerba_area }
 			ME_give_claims = { area = tripolitania_area }
-
+			
 			ME_give_claims = { area = ouled_nail_area }
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_berber_loyalty
 				duration = -1
 			}
-
+			
 			country_event = { id = ME_Granada_Events.42 }
 		}
 	}
-
+	
 	GRA_colonialism = {
 		icon = mission_taula_de_canvi
 		required_missions = { }
@@ -4076,16 +4076,16 @@ ADU_missions_5 = {
 				name = GRA_andalusian_colonialism
 				duration = -1
 			}
-
+			
 			custom_tooltip = GRA_our_tolerated_minorities_will_appear_in_colonies
-
+			
 			custom_tooltip = " "
-
+			
 			custom_tooltip = GRA_tolerance_in_colonies
 			set_country_flag = GRA_tolerance_in_colonies
 		}
 	}
-
+	
 	GRA_spread_our_faith = {
 		icon = mission_mosque
 		required_missions = { GRA_colonialism }
@@ -4101,11 +4101,11 @@ ADU_missions_5 = {
 		trigger = {
 			calc_true_if = {
 				north_america = {
-					type = all
+					type = all 
 					religion_group = muslim
 				}
 				south_america = {
-					type = all
+					type = all 
 					religion_group = muslim
 				}
 				amount = 30
@@ -4119,16 +4119,16 @@ ADU_missions_5 = {
 				custom_tooltip = GRA_enable_propagate_religion_in_colonial_regions
 			}
 			set_country_flag = GRA_colonial_trade_nodes
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_spread_of_faith
 				duration = 9125
 			}
 		}
 	}
-
+	
 	GRA_cash_crops = {
 		icon = dominant_economy
 		required_missions = { GRA_treasure_fleet_en_route }
@@ -4148,33 +4148,33 @@ ADU_missions_5 = {
 			}
 		}
 		trigger = {
-			1293 = {
+			1293 = { 
 				trade_share = { country = ROOT share = 33 }
 			}
-			1466 = {
-				trade_share = { country = ROOT share = 33 }
+			1466 = { 
+				trade_share = { country = ROOT share = 33 } 
 			}
-			1531 = {
-				trade_share = { country = ROOT share = 33 }
+			1531 = { 
+				trade_share = { country = ROOT share = 33 } 
 			}
-			1516 = {
+			1516 = { 
 				trade_share = { country = ROOT share = 33 }
 			}
 		}
 		effect = {
 			add_adm_power = 100
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_cash_crop_imports
 				duration = 5475
 			}
-
+			
 			country_event = { id = ME_Granada_Events.44 }
 		}
 	}
-
+	
 	GRA_argentina = {
 		icon = mission_cope_with_refugees
 		required_missions = { GRA_sail_south }
@@ -4190,30 +4190,30 @@ ADU_missions_5 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				colonial_region = colonial_la_plata
 				is_city = yes
-				value = 5
+				value = 5 
 			}
 		}
 		effect = {
 			add_dip_power = 50
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_settlers_flocking_south
 				duration = 9125
 			}
-
+			
 			ME_give_claims = { region = colonial_peru }
 			#ME_give_claims = { region = upper_peru_region }
 		}
 	}
-
+	
 	GRA_andeans = {
 		icon = mission_potosi_silver
 		required_missions = { GRA_argentina }
 		position = 17
 		provinces_to_highlight = {
-			region = peru_region
+			region = peru_region 
 			is_city = yes
 			NOT = {
 				owner = {
@@ -4237,11 +4237,11 @@ ADU_missions_5 = {
 				name = GRA_influx_of_gold_from_peru
 				duration = -1
 			}
-
+			
 			add_years_of_income = 1
 		}
 	}
-
+	
 	GRA_literature = {
 		icon = mission_friends_or_enemies
 		required_missions = { }
@@ -4257,9 +4257,9 @@ ADU_missions_5 = {
 			add_adm_power = 20
 			add_dip_power = 20
 			add_mil_power = 20
-
+			
 			custom_tooltip = " "
-
+			
 			custom_tooltip = GRA_advisor_temporary_bonuses
 			hidden_effect = {
 				if = {
@@ -4310,7 +4310,7 @@ ADU_missions_5 = {
 			}
 		}
 	}
-
+	
 	GRA_mathematics = {
 		icon = academy_of_the_bran
 		required_missions = { GRA_philosophy }
@@ -4331,16 +4331,16 @@ ADU_missions_5 = {
 		effect = {
 			custom_tooltip = GRA_polymath_tt
 			set_country_flag = GRA_polymath
-
+			
 			custom_tooltip = " "
-
+			
 			add_country_modifier = {
 				name = GRA_advanced_scientific_fields
 				duration = 9125
 			}
 		}
 	}
-
+	
 	GRA_workshops = {
 		icon = chater_the_voc
 		required_missions = { }
@@ -4360,9 +4360,9 @@ ADU_missions_5 = {
 			tooltip = {
 				add_or_upgrade_production_building = yes
 			}
-
+			
 			custom_tooltip = " "
-
+			
 			add_adm_power = 50
 			hidden_effect = {
 				pick_best_provinces = {
@@ -4386,7 +4386,7 @@ ADU_missions_5 = {
 			}
 		}
 	}
-
+	
 	GRA_new_silk = {
 		icon = mission_valencian_silk
 		required_missions = { GRA_workshops }
@@ -4406,14 +4406,14 @@ ADU_missions_5 = {
 		effect = {
 			custom_tooltip = GRA_3_most_developed_provinces_excluding_cordoba_in_iberia
 			country_event = { id = ME_Granada_Events.21 }
-
+			
 			custom_tooltip = " "
-
+			
 			custom_tooltip = GRA_silk_decision
 			set_country_flag = GRA_silk_decision_flag
 		}
 	}
-
+	
 	GRA_manus = {
 		icon = mission_industria_sedera
 		required_missions = { GRA_new_silk GRA_funduqs }
@@ -4430,9 +4430,9 @@ ADU_missions_5 = {
 		}
 		effect = {
 			add_years_of_income = 1
-
+			
 			custom_tooltip = " "
-
+			
 			custom_tooltip = GRA_distribute_10_production
 			hidden_effect = {
 				for = {
@@ -4442,14 +4442,14 @@ ADU_missions_5 = {
 							limit = {
 								has_manufactory_trigger = yes
 							}
-							add_base_production = 1
+							add_base_production = 1 
 						}
 					"
 				}
 			}
 		}
 	}
-
+	
 	GRA_jewish_communities_of_andalusia = {
 		icon = adjust_the_general_means
 		required_missions = { GRA_mosaic_of_faiths }
@@ -4468,9 +4468,9 @@ ADU_missions_5 = {
 		effect = {
 			set_country_flag = GRA_jewish
 			custom_tooltip = GRA_jewish
-
+			
 			custom_tooltip = " "
-
+			
 			add_adm_power = 100
 		}
 	}
@@ -4492,7 +4492,7 @@ GRA_ADU_missions_castile_incident_1 = {
 		has_country_flag = GRA_incident_castile
 	}
 	has_country_shield = yes
-
+	
 	GRA_mil_advisor = {
 		icon = mission_deccanis
 		required_missions = { }
@@ -4504,7 +4504,7 @@ GRA_ADU_missions_castile_incident_1 = {
 		}
 		effect = {
 			GRA_add_war_modifier = { name = GRA_military_advice }
-
+			
 			custom_tooltip = GRA_if_we_have_mil_national_focus
 			tooltip = {
 				define_advisor = {
@@ -4531,7 +4531,7 @@ GRA_ADU_missions_castile_incident_1 = {
 			}
 		}
 	}
-
+	
 	GRA_volunteers_of_the_faith = {
 		icon = mission_accomodate_the_rajputs
 		required_missions = { GRA_mil_advisor }
@@ -4566,7 +4566,7 @@ GRA_ADU_missions_castile_incident_2 = {
 		has_country_flag = GRA_incident_castile
 	}
 	has_country_shield = yes
-
+	
 	GRA_hero_amongst_many = {
 		icon = mission_protect_albania
 		required_missions = { }
@@ -4574,7 +4574,7 @@ GRA_ADU_missions_castile_incident_2 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-
+			
 			estate_loyalty = {
 				estate = all
 				loyalty = 50
@@ -4588,7 +4588,7 @@ GRA_ADU_missions_castile_incident_2 = {
 			}
 		}
 	}
-
+	
 	GRA_bolster_our_defences = {
 		icon = mission_city_of_the_world's_desire
 		required_missions = { GRA_worlds_on_fire GRA_hero_amongst_many GRA_mil_advisor }
@@ -4597,7 +4597,7 @@ GRA_ADU_missions_castile_incident_2 = {
 			province_id = 4546
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { base_manpower = 5 }
+				NOT = { base_manpower = 5 } 
 			}
 		}
 		trigger = {
@@ -4614,11 +4614,11 @@ GRA_ADU_missions_castile_incident_2 = {
 					desc = GRA_until_the_end_of_the_incident
 				}
 			}
-
+			
 			add_war_exhaustion = -0.25
 		}
 	}
-
+	
 	GRA_win_battles = {
 		icon = mission_protect_granada
 		required_missions = { }
@@ -4655,7 +4655,7 @@ GRA_ADU_missions_castile_incident_3 = {
 		has_country_flag = GRA_incident_castile
 	}
 	has_country_shield = yes
-
+	
 	GRA_worlds_on_fire = {
 		icon = mission_castillian_aggression
 		required_missions = { }
@@ -4670,7 +4670,7 @@ GRA_ADU_missions_castile_incident_3 = {
 			add_yearly_manpower = 1
 		}
 	}
-
+	
 	GRA_holding_out_for_a_hero = {
 		icon = mission_friends_or_enemies
 		required_missions = { GRA_worlds_on_fire }
@@ -4697,17 +4697,17 @@ GRA_ADU_missions_castile_incident_3 = {
 				value = 50
 			}
 			GRA_add_war_modifier = { name = GRA_turning_the_war_around }
-
+			
 		}
 	}
-
+	
 	GRA_turning_the_tide = {
 		icon = mission_reclaim_andalucia
 		required_missions = { GRA_win_battles GRA_holding_out_for_a_hero }
 		position = 5
 		provinces_to_highlight = {
 			owned_by = CAS
-			fort_level = 1
+			fort_level = 1 
 			NOT = { controlled_by = ROOT }
 		}
 		trigger = {
@@ -4740,7 +4740,7 @@ GRA_ADU_missions_castile_incident_4 = {
 		has_country_flag = GRA_incident_castile
 	}
 	has_country_shield = yes
-
+	
 	GRA_ceuta_incident = {
 		icon = mission_retake_ceuta
 		required_missions = { GRA_our_navy GRA_worlds_on_fire }
@@ -4749,7 +4749,7 @@ GRA_ADU_missions_castile_incident_4 = {
 		}
 		trigger = {
 			1751 = {
-				GRA_is_not_occupied_by_war_enemy_trigger = yes
+				GRA_is_not_occupied_by_war_enemy_trigger = yes 
 			}
 		}
 		effect = {
@@ -4759,7 +4759,7 @@ GRA_ADU_missions_castile_incident_4 = {
 			add_war_exhaustion = -2
 		}
 	}
-
+	
 	GRA_managing_the_war_economy = {
 		icon = mission_war_chest
 		required_missions = { GRA_bargain_for_genoese_loans }
@@ -4773,10 +4773,10 @@ GRA_ADU_missions_castile_incident_4 = {
 		}
 		effect = {
 			add_treasury = 150
-
+			
 			custom_tooltip = " "
-
-			GRA_add_war_modifier = {
+	
+			GRA_add_war_modifier = { 
 				name = GRA_war_economy
 			}
 		}
@@ -4799,20 +4799,20 @@ GRA_ADU_missions_castile_incident_5 = {
 		has_country_flag = GRA_incident_castile
 	}
 	has_country_shield = yes
-
+	
 	GRA_our_navy = {
 		icon = mission_disrupt_portuguese_trade
 		required_missions = { }
 		position = 1
 		provinces_to_highlight = {
 			owned_by = ROOT
-			has_port = yes
+			has_port = yes 
 		}
 		trigger = {
 			employed_advisor = { type = DIP }
 			naval_maintenance = 1
 			num_of_admirals = 1
-			any_owned_province = {
+			any_owned_province = { 
 				has_port = yes
 			}
 		}
@@ -4848,7 +4848,7 @@ GRA_ADU_missions_castile_incident_5 = {
 			add_navy_tradition = 20
 		}
 	}
-
+	
 	GRA_bargain_for_genoese_loans = {
 		icon = mission_dominate_genoa
 		required_missions = { }

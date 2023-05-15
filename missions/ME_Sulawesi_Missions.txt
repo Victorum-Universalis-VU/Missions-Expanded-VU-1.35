@@ -78,7 +78,7 @@ MKS_missions_1 = {
 			MSA_claims_borneo = yes
 		}
 	}
-
+	
 	MKS_borneo = {
 		icon = mission_mnd_maj_rein_in_brunei
 		required_missions = { MKS_kalimantan }
@@ -98,7 +98,7 @@ MKS_missions_1 = {
 			MSA_claims_malaya = yes
 		}
 	}
-
+	
 	MKS_sail_south = {
 		icon = mission_arabian_sea_trade
 		required_missions = { }
@@ -117,7 +117,7 @@ MKS_missions_1 = {
 			MSA_discover_tiwi = yes
 		}
 	}
-
+	
 	MKS_trade_with_tiwi = {
 		icon = mission_polynesian_navy_build
 		required_missions = { MKS_sail_south }
@@ -125,7 +125,7 @@ MKS_missions_1 = {
 		provinces_to_highlight = {
 			area = top_end_area
 		}
-		trigger = {
+		trigger = {	
 			OR = {
 				owns = 2728
 				top_end_area = {
@@ -206,7 +206,7 @@ MKS_missions_2 = {
 			create_general = { tradition = 40 }
 		}
 	}
-
+	
 	MKS_unite_island = {
 		icon = mission_order_in_the_domain
 		required_missions = { MKS_leading_kingdom }
@@ -246,7 +246,7 @@ MKS_missions_2 = {
 			}
 		}
 	}
-
+	
 	MKS_defeat_majapahit = {
 		icon = mission_mnd_maj_end_disaster
 		required_missions = { MKS_unite_island }
@@ -270,7 +270,7 @@ MKS_missions_2 = {
 			MSA_claims_sumatra = yes
 		}
 	}
-
+	
 	MKS_malay = {
 		icon = mission_reduce_champaner
 		required_missions = { MKS_borneo MKS_sumatra }
@@ -279,7 +279,7 @@ MKS_missions_2 = {
 			MSA_is_in_malaya = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		trigger = {
+		trigger = {	
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				MSA_is_in_malaya = yes
 				value = 8
@@ -347,7 +347,7 @@ MKS_missions_3 = {
 			add_years_of_income = 0.5
 		}
 	}
-
+	
 	MKS_sumatra = {
 		icon = mission_riches_of_golconda
 		required_missions = { MKS_defeat_majapahit }
@@ -368,7 +368,7 @@ MKS_missions_3 = {
 			#If ?
 		}
 	}
-
+	
 	MKS_alam_melayu = {
 		icon = mission_defeat_jaunpur
 		required_missions = { MKS_malay }
@@ -407,7 +407,7 @@ MKS_missions_4 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	MKS_spice_control = {
 		icon = mission_rb_colonise_spice_islands
 		required_missions = { MKS_pillar_island }
@@ -415,19 +415,18 @@ MKS_missions_4 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-				OR = {
-					home_trade_node = {
-						trade_share = {
-							country = ROOT
-							share = 15
-						}
-					}
-					trading_part = {
-						trade_goods = cloves
-						value = 0.15
+			OR = {
+				home_trade_node = {
+					trade_share = {
+						country = ROOT
+						share = 15
 					}
 				}
-
+				trading_part = {
+					trade_goods = cloves
+					value = 0.15
+				}
+			}
 		}
 		effect = {
 			add_mercantilism = 3
@@ -437,7 +436,7 @@ MKS_missions_4 = {
 			}
 		}
 	}
-
+	
 	MKS_tolls = {
 		icon = mission_dominate_trade_in_bengal
 		required_missions = { MKS_spice_control MKS_melayu_islands }
@@ -466,7 +465,7 @@ MKS_missions_4 = {
 			add_years_of_income = 0.5
 		}
 	}
-
+	
 	MKS_seas = {
 		icon = mission_malayan_viceroyalty
 		required_missions = { MKS_maritime_empire }
@@ -484,7 +483,7 @@ MKS_missions_4 = {
 			capital_scope = {
 				add_or_upgrade_shipyard_building = yes
 			}
-
+			
 			add_country_modifier = {
 				name = MKS_mastery_of_the_seas
 				duration = 9125
@@ -522,7 +521,7 @@ MKS_missions_5 = {
 		position = 1
 		provinces_to_highlight = {
 		}
-		trigger = {
+		trigger = {	
 			navy_size_percentage = 0.8
 		}
 		effect = {
@@ -533,7 +532,7 @@ MKS_missions_5 = {
 			add_yearly_sailors = 1
 		}
 	}
-
+	
 	MKS_island_of_iron = {
 		icon = mission_portuguese_malacca
 		required_missions = { MKS_pillar_island }
@@ -546,7 +545,7 @@ MKS_missions_5 = {
 						NOT = { has_production_building_trigger = yes }
 						NOT = { owned_by = ROOT }
 					}
-				}
+				} 
 				AND = {
 					province_id = 2715
 					OR = {
@@ -556,7 +555,7 @@ MKS_missions_5 = {
 				}
 			}
 		}
-		trigger = {
+		trigger = {	
 			642 = { #Kolaka
 				owned_by = ROOT
 				has_production_building_trigger = yes
@@ -576,7 +575,7 @@ MKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	MKS_makassar_foundry = {
 		icon = mission_gunpowder_warfare
 		required_missions = { MKS_island_of_iron }
@@ -589,7 +588,7 @@ MKS_missions_5 = {
 				NOT = { has_production_building_trigger = yes }
 			}
 		}
-		trigger = {
+		trigger = {	
 			num_of_artillery = 10
 			641 = {
 				owned_by = ROOT
@@ -606,7 +605,7 @@ MKS_missions_5 = {
 			}
 		}
 	}
-
+	
 	MKS_maritime_empire = {
 		icon = mission_defeat_mewar
 		required_missions = { }
@@ -622,7 +621,7 @@ MKS_missions_5 = {
 			add_yearly_manpower = 1
 		}
 	}
-
+	
 	MKS_overseas_subjects = {
 		icon = mission_dominate_trade_in_aden
 		required_missions = { MKS_maritime_empire }
@@ -631,7 +630,7 @@ MKS_missions_5 = {
 			island = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		trigger = {
+		trigger = {	
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				island = yes
 				value = 15
@@ -654,12 +653,12 @@ MKS_missions_5 = {
 				}
 				random_owned_province = {
 					limit = { has_port = yes }
-					create_flagship = {
+					create_flagship = {	
 						type = light_ship
 					}
 				}
 			}
-
+			
 			add_country_modifier = {
 				name = MKS_naval_empire
 				duration = -1

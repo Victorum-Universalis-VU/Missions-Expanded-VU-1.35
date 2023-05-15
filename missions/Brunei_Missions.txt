@@ -7,7 +7,7 @@ mnd_bei_1 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mnd_bei_conquer_sambas = {
 		icon = mission_impaled_soldies
 		required_missions = { }
@@ -47,7 +47,7 @@ mnd_bei_1 = {
 			factor = 75	#Default
 		}
 	}
-
+	
 	mnd_bei_unite_borneo = {
 		icon = mission_unite_home_region
 		required_missions = { mnd_bei_conquer_sambas mnd_bei_conquer_berau }
@@ -85,7 +85,7 @@ mnd_bei_1 = {
 			factor = 75	#Default
 		}
 	}
-
+	
 	mnd_bei_impress_sulu = {
 		icon = mission_sw_torquoise_mining
 		required_missions = { }
@@ -119,7 +119,7 @@ mnd_bei_1 = {
 					owns = 651
 					SUL = {
 						is_subject_of = ROOT
-					}
+					}					
 				}
 			}
 		}
@@ -140,6 +140,13 @@ mnd_bei_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sulu_archipelago_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 		ai_weight = {
 			factor = 75	#Default
@@ -149,7 +156,10 @@ mnd_bei_1 = {
 		icon = mission_ne_palisades
 		required_missions = { mnd_bei_impress_sulu }
 		provinces_to_highlight = {
-			area = mindanao_area
+			OR = {
+				area = mindanao_area
+				area = sulu_archipelago_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -157,18 +167,21 @@ mnd_bei_1 = {
 				amount = 3
 				all_province = {
 					country_or_non_sovereign_subject_holds = ROOT
-					area = mindanao_area
+					OR = {
+						area = mindanao_area
+						area = sulu_archipelago_area
+					}
 				}
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					NOT = {
+					NOT = { 
 						visayas_area = {
 							type = all
 							OR = {
-								is_core = ROOT
+								is_core = ROOT 
 								is_permanent_claim = ROOT
 							}
 						}
@@ -191,7 +204,10 @@ mnd_bei_1 = {
 							is_colony = yes
 						}
 					}
-					area = mindanao_area
+					OR = {
+						area = mindanao_area
+						area = sulu_archipelago_area
+					}
 				}
 				add_permanent_province_modifier = {
 					name = bei_easy_colony
@@ -209,6 +225,7 @@ mnd_bei_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = mindanao_area
+				area = sulu_archipelago_area
 				area = luzon_area
 				area = southern_luzon_area
 				area = visayas_area
@@ -224,6 +241,7 @@ mnd_bei_1 = {
 					country_or_non_sovereign_subject_holds = ROOT
 					OR = {
 						area = mindanao_area
+						area = sulu_archipelago_area
 						area = luzon_area
 						area = southern_luzon_area
 						area = visayas_area
@@ -269,7 +287,7 @@ mnd_bei_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	mnd_bei_conquer_berau = {
 		icon = mission_oceania_build_army_mission
 		required_missions = { }
@@ -294,13 +312,6 @@ mnd_bei_2 = {
 		}
 		effect = {
 			kutai_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = {  is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			kalimantan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
@@ -344,10 +355,18 @@ mnd_bei_2 = {
 						NOT = { has_country_flag = had_civil_war }
 					}
 				}
-			}
+			}				
 		}
 		effect = {
-			add_revolutionary_zeal_or_absolutism = { amount = 20 }
+			if = {
+				limit = {
+					is_revolutionary = no
+				}
+				add_absolutism = 20
+			}
+			else = {
+				add_revolutionary_zeal = 20
+			}
 			add_stability = 1
 			add_prestige = 10
 		}
@@ -355,7 +374,7 @@ mnd_bei_2 = {
 			factor = 75	#Default
 		}
 	}
-
+	
 	mnd_bei_impress_maynila = {
 		icon = mission_se_birdmen
 		required_missions = { mnd_bei_impress_sulu }
@@ -389,7 +408,7 @@ mnd_bei_2 = {
 					owns = 656
 					MNA = {
 						is_subject_of = ROOT
-					}
+					}					
 				}
 			}
 		}
@@ -447,7 +466,7 @@ mnd_bei_2 = {
 		effect = {
 			if = {
 				limit = {
-					NOT = {
+					NOT = { 
 						visayas_area = {
 							type = all
 							is_permanent_claim = ROOT

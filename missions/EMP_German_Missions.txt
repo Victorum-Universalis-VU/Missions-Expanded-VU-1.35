@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 emp_germany_hlr_1 = {
 	slot = 1
 	generic = no
@@ -35,7 +36,7 @@ emp_germany_hlr_1 = {
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 22 #Up from 10 in Vanilla. 
 				region = low_countries_region
 				NOT = { local_autonomy = 30 }
 			}
@@ -74,7 +75,7 @@ emp_germany_hlr_1 = {
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 16 #Up to 16/18 from 10/11.
 				OR = {
 					area = north_rhine_area
 					area = lower_rhineland_area
@@ -128,7 +129,7 @@ emp_germany_hlr_1_ger = {
 		position = 6
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 12 #Up from 10 in Vanilla
 				has_building = university
 			}
 		}
@@ -169,7 +170,7 @@ emp_germany_hlr_2 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 40
+				value = 115 #Up from Vanilla's 40
 				region = france_region
 			}
 		}
@@ -205,12 +206,12 @@ emp_germany_hlr_2 = {
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 12 #Up from Vanilla's 10
 				OR = {
 					region = north_german_region
 					region = south_german_region
 				}
-				development = 30
+				development = 50 #Up from vanilla's 30
 			}
 		}
 		effect = {
@@ -525,7 +526,7 @@ emp_germany_hlr_3 = {
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 50
+				value = 64 #Up from Vanilla's 50.
 				OR = {
 					region = north_german_region
 					region = south_german_region
@@ -561,6 +562,13 @@ emp_germany_hlr_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			red_ruthenia_area = { ##To closer match borders of vanilla Poland region
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_ger_hlr_italy = {
@@ -573,7 +581,7 @@ emp_germany_hlr_3 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 40
+				value = 115 #Up from Vanilla's 40
 				region = italy_region
 			}
 		}
@@ -587,7 +595,7 @@ emp_germany_hlr_3 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					province_id = 4744
+					province_id = 59
 					NOT = {
 						trade_share = {
 							country = ROOT
@@ -625,25 +633,25 @@ emp_germany_hlr_3 = {
 			}
 		}
 		trigger = {
-			4744 = {
+			59 = { ##Saxony, has been moved from 4744 (??) to 59
 				trade_share = {
 					country = ROOT
 					share = 75
 				}
 			}
-			45 = {
+			45 = { ##Lubeck
 				trade_share = {
 					country = ROOT
 					share = 75
 				}
 			}
-			134 = {
+			134 = { ##Wien
 				trade_share = {
 					country = ROOT
 					share = 75
 				}
 			}
-			1876 = {
+			1876 = { ##Rhineland
 				trade_share = {
 					country = ROOT
 					share = 75
@@ -699,13 +707,6 @@ emp_germany_hlr_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_east_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 }
@@ -733,7 +734,7 @@ emp_germany_hlr_3_ger = {
 				total_development = 2500
 			}
 			any_ally = {
-				total_own_and_non_tributary_subject_development = 500
+				total_own_and_non_tributary_subject_development = 1000 #Up from Vanilla's 500
 			}
 			if = {
 				limit = {
@@ -742,7 +743,7 @@ emp_germany_hlr_3_ger = {
 					}
 				}
 				any_rival_country = {
-					total_own_and_non_tributary_subject_development = 500
+					total_own_and_non_tributary_subject_development = 1000 #Up from Vanilla's 500
 				}
 			}
 			else = {
@@ -832,25 +833,31 @@ emp_germany_hlr_4 = {
 		required_missions = { emp_ger_hlr_blood_and_iron }
 		position = 2
 		provinces_to_highlight = {
-			region = poland_region
+			OR = {
+				region = poland_region
+				area = red_ruthenia_area
+			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				AND = {
-					has_terrain = farmlands
-					NOT = { owned_by = ROOT }
-				}
+				#AND = {
+				#	has_terrain = farmlands
+				#	NOT = { owned_by = ROOT }
+				#}
 			}
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 25
-				region = poland_region
+				value = 55 #Up from Vanilla's 25
+				OR = {
+					region = poland_region
+					area = red_ruthenia_area
+				}
 			}
-			num_of_owned_provinces_with = {
-				value = 5
-				region = poland_region
-				has_terrain = farmlands
-			}
+			#num_of_owned_provinces_with = {
+			#	value = 5
+			#	region = poland_region
+			#	has_terrain = farmlands
+			#} ##Dropped as VU has only THREE farmlands in all of Poland + Galicia
 		}
 		effect = {
 			baltic_region = {
@@ -884,19 +891,19 @@ emp_germany_hlr_4 = {
 			OR = {
 				region = baltic_region
 				region = scandinavia_region
-				province_id = 1926
+				##province_id = 1926 ##Baltic Sea node is now in Stockholm
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 30
+				value = 69 #Up from Vanilla's 30
 				OR = {
 					region = baltic_region
 					region = scandinavia_region
 				}
 			}
-			1926 = {
+			1 = {
 				is_strongest_trade_power = ROOT
 			}
 		}
@@ -923,12 +930,25 @@ emp_germany_hlr_4 = {
 		provinces_to_highlight = {
 			superregion = southern_africa_superregion
 			is_node_in_trade_company_region = yes
+			OR = { #Better highlighting, Vanilla just highlights ALL of Africa.
+				region = east_africa_region
+				region = kongo_region
+				region = south_africa_region
+				region = central_africa_region
+			}
 			NOT = { owned_by = ROOT }
 			is_sea = no
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
-				superregion = southern_africa_superregion
+			num_of_owned_provinces_with = { #VU Doesn't have southern_africa_superregion, replacing 4 with separate regions vanilla considers 'southern africa'
+				#superregion = southern_africa_superregion
+				OR =
+				{
+					region = east_africa_region
+					region = kongo_region
+					region = south_africa_region
+					region = central_africa_region
+				}
 				is_node_in_trade_company_region = yes
 				value = 10
 			}
@@ -944,7 +964,8 @@ emp_germany_hlr_4 = {
 			OR = {
 				superregion = india_superregion
 				superregion = east_indies_superregion
-			}
+				superregion = china_superregion
+		    }
 			is_node_in_trade_company_region = yes
 			NOT = { owned_by = ROOT }
 			is_sea = no
@@ -1012,7 +1033,7 @@ emp_germany_hlr_5 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = carpathia_region
-				value = 20
+				value = 69 # Up from Vanilla's 20. Nice.
 			}
 		}
 		effect = {

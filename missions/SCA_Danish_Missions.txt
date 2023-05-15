@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe - Thank you Felipe for me to do :P
 dan_secure_baltic_mission_slot = {
 	slot = 1
 	generic = no
@@ -98,7 +99,7 @@ dan_secure_baltic_mission_slot = {
 					}
 				}
 				custom_trigger_tooltip = {
-					tooltip = dan_eliminate_the_hanse_bt
+					tooltip = dan_eliminate_the_hanse_vu
 					45 = {
 						trade_share = {
 							country = ROOT
@@ -210,7 +211,7 @@ dan_secure_baltic_mission_slot = {
 	dan_the_sound_toll = {	#Dominate Northsea, Baltic and Lübeck trade
 		icon = mission_the_sound_toll
 		position = 4
-		required_missions = {
+		required_missions = { 
 			dan_livonian_order
 			dan_the_german_trade_cities
 		}
@@ -326,7 +327,7 @@ dan_secure_baltic_mission_slot = {
 					is_random_new_world = yes
 				}
 				custom_trigger_tooltip = {
-					tooltip = dan_push_westwards_bt
+					tooltip = dan_push_westwards_vu
 					new_world = {
 						has_discovered = ROOT
 						has_port = yes
@@ -1067,7 +1068,7 @@ dan_norway_holstein_mission_slot = {
 	dan_ratify_kalmar_succession = {
 		icon = mission_the_kalmar_union
 		position = 3
-		required_missions = {
+		required_missions = { 
 			dan_integrate_holstein
 			dan_handle_sweden
 		}
@@ -1201,7 +1202,7 @@ dan_norway_holstein_mission_slot = {
 	dan_unite_scandinavia = {
 		icon = mission_unite_scandinavia
 		position = 5
-		required_missions = {
+		required_missions = { 
 			dan_integrate_norway
 			dan_integrate_sweden
 		}
@@ -1335,7 +1336,7 @@ dan_norway_holstein_mission_slot = {
 							share = 20
 						}
 					}
-				}
+				}		
 			}
 		}
 		trigger = {
@@ -1409,7 +1410,7 @@ dan_norway_holstein_mission_slot = {
 		required_missions = { dan_trade_post_in_india }
 		provinces_to_highlight = {
 			region = coromandel_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1473,7 +1474,7 @@ dan_norway_holstein_mission_slot = {
 				area = kanara_area
 				area = konkan_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1518,14 +1519,14 @@ dan_norway_holstein_mission_slot = {
 				limit = { tag = SCA }
 				deccan_region = {
 					limit = {
-						NOT = { is_core = ROOT }
+						NOT = { is_core = ROOT } 
 						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
 				west_india_region = {
 					limit = {
-						NOT = { is_core = ROOT }
+						NOT = { is_core = ROOT } 
 						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
@@ -1637,7 +1638,7 @@ dan_sweden_and_great_power_mission_slot = {
 	dan_integrate_sweden = {
 		icon = mission_conquer_sweden
 		position = 4
-		required_missions = {
+		required_missions = { 
 			dan_ratify_kalmar_succession
 			dan_handle_sweden
 		}
@@ -1883,7 +1884,7 @@ dan_sweden_and_great_power_mission_slot = {
 			}
 			else = {
 				custom_trigger_tooltip = {
-					tooltip = dan_a_danish_great_power_bt
+					tooltip = dan_a_danish_great_power_vu
 					NOT = {
 						any_known_country = {
 							total_own_and_non_tributary_subject_development = ROOT
@@ -1942,25 +1943,25 @@ dan_sweden_and_great_power_mission_slot = {
 			hidden_effect = {
 				1361 = {
 					every_trade_node_member_country = {
-						limit = { 1361 = { trade_share = { country = PREV share = 5 } } NOT = { tag = ROOT } capital_scope = { OR = { region = malaya_region region = indonesia_region region = moluccas_region } } }
+						limit = { 1361 = { trade_share = { country = PREV share = 5 } } NOT = { tag = ROOT } capital_scope = { OR = { region = malaya_region region = indonesia_region region = moluccas_region region = riau_islands_region region = nusa_tenggara_region region = borneo_region region = celebes_region } } }
 						country_event = { id = flavor_dan.108 }
 					}
 				}
 				1365 = {
 					every_trade_node_member_country = {
-						limit = { 1365 = { trade_share = { country = PREV share = 5 } } NOT = { tag = ROOT } capital_scope = { OR = { region = malaya_region region = indonesia_region region = moluccas_region } } }
+						limit = { 1365 = { trade_share = { country = PREV share = 5 } } NOT = { tag = ROOT } capital_scope = { OR = { region = malaya_region region = indonesia_region region = moluccas_region region = riau_islands_region region = nusa_tenggara_region region = borneo_region region = celebes_region } } }
 						country_event = { id = flavor_dan.108 }
 					}
 				}
 				1357 = {
 					every_trade_node_member_country = {
-						limit = { 1357 = { trade_share = { country = PREV share = 5 } } NOT = { tag = ROOT } capital_scope = { OR = { region = malaya_region region = indonesia_region region = moluccas_region } } }
+						limit = { 1357 = { trade_share = { country = PREV share = 5 } } NOT = { tag = ROOT } capital_scope = { OR = { region = malaya_region region = indonesia_region region = moluccas_region region = riau_islands_region region = nusa_tenggara_region region = borneo_region region = celebes_region } } }
 						country_event = { id = flavor_dan.108 }
 					}
 				}
 				1397 = {
 					every_trade_node_member_country = {
-						limit = { 1397 = { trade_share = { country = PREV share = 5 } } NOT = { tag = ROOT } capital_scope = { OR = { region = malaya_region region = indonesia_region region = moluccas_region } } }
+						limit = { 1397 = { trade_share = { country = PREV share = 5 } } NOT = { tag = ROOT } capital_scope = { OR = { region = malaya_region region = indonesia_region region = moluccas_region region = riau_islands_region region = nusa_tenggara_region region = borneo_region region = celebes_region } } }
 						country_event = { id = flavor_dan.108 }
 					}
 				}
@@ -1978,7 +1979,7 @@ dan_sweden_and_great_power_mission_slot = {
 				area = east_bengal_area
 				area = west_bengal_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -2023,14 +2024,14 @@ dan_sweden_and_great_power_mission_slot = {
 				limit = { tag = SCA }
 				bengal_region = {
 					limit = {
-						NOT = { is_core = ROOT }
+						NOT = { is_core = ROOT } 
 						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
 				hindusthan_region = {
 					limit = {
-						NOT = { is_core = ROOT }
+						NOT = { is_core = ROOT } 
 						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
@@ -2136,7 +2137,7 @@ dan_england_mission_slot = {
 		provinces_to_highlight = {}
 		trigger = {
 			if = {
-				limit = { has_dlc = "Rule Britannia" }
+				limit = { has_dlc = "Golden Century" }
 				has_flagship = yes
 			}
 			if = {
@@ -2247,13 +2248,6 @@ dan_england_mission_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_east_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			east_anglia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -2261,7 +2255,7 @@ dan_england_mission_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			greater_london_area = {
+			south_east_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -2283,9 +2277,8 @@ dan_england_mission_slot = {
 				area = west_midlands_area
 				area = wales_area
 				area = cornwall_area
-				area = south_east_area
 				area = east_anglia_area
-				area = greater_london_area
+				area = south_east_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2298,9 +2291,8 @@ dan_england_mission_slot = {
 					area = west_midlands_area
 					area = wales_area
 					area = cornwall_area
- 				  area = south_east_area
 					area = east_anglia_area
-					area = greater_london_area
+					area = south_east_area
 				}
 				value = 20
 			}
@@ -2372,7 +2364,7 @@ dan_religion_start_mission_slot = {
 		}
 		trigger = {
 			if = {
-				limit = {
+				limit = { 
 					religion = norse_pagan_reformed
 				}
 				OR = {
@@ -2465,7 +2457,7 @@ dan_religion_mission_slot = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	dan_first_religion_mission = {
 		icon = mission_unknown_mission
 		position = 7
@@ -2541,7 +2533,7 @@ dan_religion_mission_slot = {
 			}
 		}
 	}
-
+	
 	dan_second_religion_mission = {
 		icon = mission_unknown_mission
 		position = 8
@@ -2645,7 +2637,7 @@ dan_religion_mission_slot = {
 			add_years_of_income = 0.5
 		}
 	}
-
+	
 	dan_third_religion_mission = {
 		icon = mission_unknown_mission
 		position = 9
@@ -3423,7 +3415,7 @@ dan_norse_mission_slot = {
 				has_manpower_building_trigger = yes
 				value = 10
 			}
-			1 = {
+			1 = { 
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
@@ -3687,7 +3679,7 @@ dan_sca_india_mission_slot_3 = {
 				region = west_india_region
 				region = deccan_region
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -3739,7 +3731,7 @@ dan_sca_india_mission_slot_3 = {
 		}
 		provinces_to_highlight = {
 			superregion = india_superregion
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -3782,7 +3774,7 @@ dan_sca_india_mission_slot_4 = {
 				region = bengal_region
 				region = hindusthan_region
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -3990,7 +3982,7 @@ dan_sca_colonize_north_america_mission_slot_2 = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	dan_sca_colonize_mexico = {
 		icon = mission_war_chest
 		position = 12
@@ -4265,6 +4257,7 @@ dan_sca_conquest_slot_3 = {
 				region = baltic_region
 				area = karelia_area
 				area = finland_area
+				area = svealand_area
 				area = norrland_area
 				area = bothnia_area
 				area = gotaland_area
@@ -4285,6 +4278,7 @@ dan_sca_conquest_slot_3 = {
 				baltic_region = { OR = { country_or_non_sovereign_subject_holds = ROOT has_port = no } type = all }
 				karelia_area = { OR = { country_or_non_sovereign_subject_holds = ROOT has_port = no } type = all }
 				finland_area = { OR = { country_or_non_sovereign_subject_holds = ROOT has_port = no } type = all }
+				svealand_area = { OR = { country_or_non_sovereign_subject_holds = ROOT has_port = no } type = all }
 				norrland_area = { OR = { country_or_non_sovereign_subject_holds = ROOT has_port = no } type = all }
 				bothnia_area = { OR = { country_or_non_sovereign_subject_holds = ROOT has_port = no } type = all }
 				gotaland_area = { OR = { country_or_non_sovereign_subject_holds = ROOT has_port = no } type = all }
@@ -4430,7 +4424,7 @@ dan_sca_internal_development = {
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
-
+	
 	dan_sca_handle_the_sami = {
 		icon = mission_the_sami
 		position = 14
@@ -4448,19 +4442,19 @@ dan_sca_internal_development = {
 			}
 		}
 		trigger = {
-			laponia_area = {
+			laponia_area = { 
 				owned_by = ROOT
 				religion = ROOT
 				has_owner_accepted_culture = yes
 				type = all
 			}
-			norrland_area = {
+			norrland_area = { 
 				owned_by = ROOT
 				religion = ROOT
 				has_owner_accepted_culture = yes
 				type = all
 			}
-			bothnia_area = {
+			bothnia_area = { 
 				owned_by = ROOT
 				religion = ROOT
 				has_owner_accepted_culture = yes
@@ -4485,7 +4479,7 @@ dan_sca_internal_development = {
 			}
 		}
 	}
-
+	
 	dan_sca_forest_expansion = {
 		icon = mission_expand_into_the_forest
 		position = 15

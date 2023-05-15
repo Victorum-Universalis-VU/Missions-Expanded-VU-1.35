@@ -1,4 +1,4 @@
-
+#VU updated for 1.35 by San Felipe #Amended by Altan for EE-VU
 emp_gen_missions_general = {
 	slot = 3
 	generic = no
@@ -10,7 +10,7 @@ emp_gen_missions_general = {
 		has_dlc = "Emperor"
 		tag = GEN
 		has_country_flag = use_paradox_missions
-		#NOT = { map_setup = map_setup_random }
+	#	NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
@@ -331,17 +331,35 @@ emp_gen_missions_western_med = {
 						province_id = 102
 						province_id = 2980
 						province_id = 117
+						province_id = 115
+						province_id = 3042
+						province_id = 3040
+						province_id = 7044
+						province_id = 7041
+						province_id = 7056
 					}
 					ROOT = {
 						NOT = { owns_or_non_sovereign_subject_of = 102 }
 						NOT = { owns_or_non_sovereign_subject_of = 2980 }
 						NOT = { owns_or_non_sovereign_subject_of = 117 }
+						NOT = { owns_or_non_sovereign_subject_of = 115 }
+						NOT = { owns_or_non_sovereign_subject_of = 3042 }
+						NOT = { owns_or_non_sovereign_subject_of = 3040 }
+						NOT = { owns_or_non_sovereign_subject_of = 7044 }
+						NOT = { owns_or_non_sovereign_subject_of = 7041 }
+						NOT = { owns_or_non_sovereign_subject_of = 7056 }
 					}
 				}
 			}
 		}
 		trigger = {
 			115 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			7056 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2980 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			OR = {
@@ -352,6 +370,18 @@ emp_gen_missions_western_med = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 				117 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				3042 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				7044 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				7041 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				7056 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
@@ -394,6 +424,13 @@ emp_gen_missions_western_med = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sardinia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -401,11 +438,18 @@ emp_gen_missions_western_med = {
 		icon = seize_sardinia
 		required_missions = { emp_gen_grand_fleet }
 		provinces_to_highlight = {
-			area = corsica_sardinia_area
+			OR = {
+				area = corsica_sardinia_area
+				area = sardinia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sardinia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -419,6 +463,7 @@ emp_gen_missions_western_med = {
 					key = gen_dominance_of_tyrrhennian
 				}
 			}
+
 			sicily_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }

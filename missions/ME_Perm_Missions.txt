@@ -1,5 +1,5 @@
 perm_missions_1 = {
-	slot = 1
+	slot = 1	
 	generic = no
 	ai = yes
 	potential = {
@@ -38,7 +38,7 @@ perm_missions_1 = {
 			}
 		}
 	}
-
+	
 	perm_independence = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { perm_army }
@@ -99,7 +99,7 @@ perm_missions_1 = {
 			}
 		}
 	}
-
+	
 	perm_galich_vologda = {
 		icon = mission_cannons_firing
 		required_missions = { perm_independence }
@@ -139,7 +139,7 @@ perm_missions_1 = {
 			}
 		}
 	}
-
+	
 	perm_yaroslavl_suzdal = {
 		icon = mission_conquer_50_development
 		required_missions = { perm_galich_vologda }
@@ -200,7 +200,7 @@ perm_missions_1 = {
 			}
 		}
 	}
-
+	
 	perm_vassalize_muscovy = {
 		icon = mission_have_two_subjects
 		required_missions = { perm_yaroslavl_suzdal }
@@ -267,7 +267,7 @@ perm_missions_1 = {
 }
 
 perm_missions_2 = {
-	slot = 2
+	slot = 2	
 	generic = no
 	ai = yes
 	potential = {
@@ -278,7 +278,7 @@ perm_missions_2 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	perm_build_army_buildings = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { perm_army }
@@ -302,7 +302,7 @@ perm_missions_2 = {
 			add_mil_power = 100
 		}
 	}
-
+	
 	perm_kama_kazan = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { perm_independence }
@@ -325,6 +325,13 @@ perm_missions_2 = {
 			}
 		}
 		effect = {
+			kama_area = {
+				limit = {
+					NOT = {	owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			samara_area = {
 				limit = {
 					NOT = {	owned_by = ROOT }
@@ -334,7 +341,7 @@ perm_missions_2 = {
 			}
 		}
 	}
-
+	
 	perm_volga_samara = {
 		icon = me_mission_army
 		required_missions = { perm_kama_kazan }
@@ -373,7 +380,7 @@ perm_missions_2 = {
 			}
 		}
 	}
-
+	
 	perm_saratov_bashkiria = {
 		icon = mission_assemble_an_army
 		required_missions = { perm_volga_samara }
@@ -412,7 +419,7 @@ perm_missions_2 = {
 			}
 		}
 	}
-
+	
 	perm_conquer_russia = {
 		icon = mission_unite_home_region
 		required_missions = { perm_vassalize_muscovy perm_saratov_bashkiria perm_south_karelia_novgorod }
@@ -460,7 +467,7 @@ perm_missions_2 = {
 }
 
 perm_missions_3 = {
-	slot = 3
+	slot = 3	
 	generic = no
 	ai = yes
 	potential = {
@@ -471,7 +478,7 @@ perm_missions_3 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	perm_arkhangelsk_pomor = {
 		icon = mission_conquer_5_states
 		required_missions = { perm_independence }
@@ -510,7 +517,7 @@ perm_missions_3 = {
 			}
 		}
 	}
-
+	
 	perm_north_karelia_beloozero = {
 		icon = mission_cannons_firing
 		required_missions = { perm_arkhangelsk_pomor }
@@ -549,7 +556,7 @@ perm_missions_3 = {
 			}
 		}
 	}
-
+	
 	perm_south_karelia_novgorod = {
 		icon = mission_conquer_50_development
 		required_missions = { perm_north_karelia_beloozero }
@@ -584,7 +591,7 @@ perm_missions_3 = {
 }
 
 perm_missions_4 = {
-	slot = 4
+	slot = 4	
 	generic = no
 	ai = yes
 	potential = {
@@ -595,7 +602,7 @@ perm_missions_4 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	perm_start_ural = {
 		icon = mission_conquer_50_development
 		required_missions = { perm_independence perm_have_colonists }
@@ -616,7 +623,7 @@ perm_missions_4 = {
 			}
 		}
 	}
-
+	
 	perm_finish_ural = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { perm_start_ural }
@@ -638,7 +645,7 @@ perm_missions_4 = {
 			}
 		}
 	}
-
+	
 	perm_eastern_colonies = {
 		icon = mission_colonial
 		required_missions = { perm_finish_ural }
@@ -670,7 +677,7 @@ perm_missions_4 = {
 }
 
 perm_missions_5 = {
-	slot = 5
+	slot = 5	
 	generic = no
 	ai = yes
 	potential = {
@@ -681,7 +688,7 @@ perm_missions_5 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	perm_build_tax_buildings = {
 		icon = mission_european_church
 		required_missions = { }
@@ -703,7 +710,7 @@ perm_missions_5 = {
 			add_adm_power = 50
 		}
 	}
-
+	
 	perm_build_trade_buildings = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { perm_build_tax_buildings }
@@ -726,7 +733,7 @@ perm_missions_5 = {
 			add_dip_power = 50
 		}
 	}
-
+	
 	perm_build_production_buildings = {
 		icon = mission_high_income
 		required_missions = { perm_build_trade_buildings }
@@ -748,7 +755,7 @@ perm_missions_5 = {
 			add_dip_power = 50
 		}
 	}
-
+	
 	perm_build_government_buildings = {
 		icon = mission_early_game_buildings
 		required_missions = { perm_build_production_buildings }
@@ -771,7 +778,7 @@ perm_missions_5 = {
 			add_adm_power = 50
 		}
 	}
-
+	
 	perm_have_colonists = {
 		icon = mission_colonial
 		required_missions = { perm_build_government_buildings }

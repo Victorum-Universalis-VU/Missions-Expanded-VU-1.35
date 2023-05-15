@@ -3054,6 +3054,7 @@ ENG_missions_4_2 = {
 	}
 }
 
+
 GBR_missions_4_2 = {
 	slot = 4
 	generic = no

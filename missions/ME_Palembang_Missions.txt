@@ -60,7 +60,7 @@ PLB_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			central_java_area = {
+			kalimantan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -135,10 +135,6 @@ PLB_missions_1 = {
 					owned_by = ROOT
 				}
 				malaya_area = {
-					type = all
-					owned_by = ROOT
-				}
-				tenasserim_area = {
 					type = all
 					owned_by = ROOT
 				}

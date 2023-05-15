@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe # Amended by Altan for EE-VU
 mas_1 = {
 	slot = 1
 	generic = no
@@ -8,17 +9,17 @@ mas_1 = {
 	}
 	has_country_shield = yes
 
-	mas_all_the_ships_of_aklan = {
+	mas_all_the_ships_of_aklan = { 
 		icon = mission_galleys_in_port
 		required_missions = {	}
 		provinces_to_highlight = {	}
-
+		
 		trigger = {
 			navy_size_percentage = 0.9
 			num_of_admirals = 1
 			num_of_galley = 8
 		}
-
+		
 		effect = {
 			add_country_modifier = {
 				name = mas_all_the_ships_of_aklan
@@ -40,18 +41,18 @@ mas_1 = {
 			}
 		}
 	}
-
-	mas_the_sound_of_bells = {
+	
+	mas_the_sound_of_bells = { 
 		icon = mission_conquer_arakan
 		position = 2
 		required_missions = { mas_all_the_ships_of_aklan }
-		provinces_to_highlight = {
+		provinces_to_highlight = {	
 			OR = {
 				province_id = 4352
 				province_id = 2702
 			}
 		}
-
+		
 		trigger = {
 			navy_size_percentage = 0.9
 			4352 = {
@@ -61,7 +62,7 @@ mas_1 = {
 				owned_by = ROOT
 			}
 		}
-
+		
 		effect = {
 			add_country_modifier = {
 				name = mas_the_sound_of_bells
@@ -83,8 +84,8 @@ mas_1 = {
 			}
 		}
 	}
-
-	mas_going_back_home = {
+	
+	mas_going_back_home = { 
 		icon = mission_ne_great_lakes_conquest
 		position = 3
 		required_missions = { mas_the_sound_of_bells }
@@ -96,7 +97,7 @@ mas_1 = {
 				area = mindanao_area
 			}
 		}
-
+		
 		trigger = {
 			1397 = {
 				trade_share = {
@@ -118,9 +119,9 @@ mas_1 = {
 				amount = 10
 			}
 		}
-
+		
 		effect = {
-			1397 = {
+			1397 = { 
 				add_trade_modifier = {
 					who = ROOT
 					duration = 5475
@@ -136,16 +137,16 @@ mas_1 = {
 					key = mas_going_back_home
 				}
 			}
-			brunei_area = {
+			brunei_area = { 
 				add_permanent_claim = ROOT
 			}
-			655 = {
+			655 = { 
 				add_permanent_claim = ROOT
 			}
-			4356 = {
+			4356 = { 
 				add_permanent_claim = ROOT
 			}
-			651 = {
+			651 = { 
 				add_permanent_claim = ROOT
 			}
 			2711 = {
@@ -165,12 +166,12 @@ mas_1 = {
 			}
 		}
 	}
-
-	mas_the_book_of_maragtas = {
+	
+	mas_the_book_of_maragtas = { 
 		icon = mission_unite_coromandel
 		position = 4
 		required_missions = { mas_going_back_home }
-		provinces_to_highlight = {
+		provinces_to_highlight = { 
 			OR = {
 				area = brunei_area
 				area = sabah_area
@@ -179,16 +180,16 @@ mas_1 = {
 				province_id = 2711
 			}
 		}
-
+		
 		trigger = {
 			brunei_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			4804 = {
+			4804 = { 
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			sabah_area = {
+			sabah_area = { 
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -199,7 +200,7 @@ mas_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-
+		
 		effect = {
 			add_dip_power = 100
 			add_adm_power = 100

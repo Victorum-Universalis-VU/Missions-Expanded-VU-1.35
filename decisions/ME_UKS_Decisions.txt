@@ -47,20 +47,37 @@ country_decisions = {
 			is_emperor = no
 			legitimacy_equivalent = 100
 			prestige = 25
-			FRA = {
-				is_subject_of = ROOT
-				NOT = { num_of_cities = 60 }
+			OR = {
+				FRA = {
+					is_subject_of = ROOT
+					NOT = { num_of_cities = 60 }
+				}
+				BFR = {
+					is_subject_of = ROOT
+					NOT = { num_of_cities = 60 }
+				}
 			}
 		}
 		effect = {
-			change_tag = AVE
+			change_tag = UKS
 			set_government_rank = 3
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
 			add_prestige_or_monarch_power = { amount = 25 }
-			inherit = FRA
+			if = {
+				limit = {
+					overlord_of = FRA
+				}
+				inherit = FRA
+			}
+			else_if = {
+				limit = {
+					overlord_of = BFR
+				}
+				inherit = BFR
+			}
 			set_country_flag = formed_uks
 			if = {
 				limit = {
@@ -74,5 +91,6 @@ country_decisions = {
 			factor = 1
 		}
 		do_not_integrate = FRA
+		do_not_integrate = BFR
 	}
 }

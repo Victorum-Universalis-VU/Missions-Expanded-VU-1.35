@@ -1,3 +1,4 @@
+#VU updated for 1.35 by San Felipe # Amended by Altan for EE-VU
 peasants_1 = {
 	slot = 1
 	generic = no
@@ -46,12 +47,64 @@ peasants_1 = {
 				name = "likedeelers_modifier"
 				duration  =  7300
 			}
+			schleswig_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			holstein_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			7775 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			7776 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			7777 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			7778 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			1775 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 		ai_weight = {
@@ -62,14 +115,31 @@ peasants_1 = {
 		icon = mission_teutonic_knights
 		required_missions = { peasants_likedealers }
 		provinces_to_highlight = {
-			area = holstein_area
+			OR = {
+				area = schleswig_area
+				area = holstein_area
+				province_id = 7775
+				province_id = 7776
+				province_id = 7777
+				province_id = 7778
+				province_id = 1775
+			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
+			schleswig_area = {
+				type = all
+				owned_by = ROOT
+			} 
 			holstein_area = {
 				type = all
 				owned_by = ROOT
 			}
+			7775 = { owned_by = ROOT }
+			7776 = { owned_by = ROOT }
+			7777 = { owned_by = ROOT }
+			7778 = { owned_by = ROOT }
+			1775 = { owned_by = ROOT }
 		}
 		effect = {
 			add_country_modifier =  {
@@ -133,22 +203,36 @@ peasants_1 = {
 			trade_goods = grain
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { development = 20 }
+				NOT = { development = 30 }
 			}
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
 				trade_goods = grain
-				development = 20
-				value = 10
+				development = 30
+				value = 20
 			}
 		}
 		effect = {
 			# permanent goods produced bonus for grain
 				# get a programmer to make this a thing
-			add_country_modifier = {
-				name = "conquest_of_bread_modifier"
-				duration = -1
+			# add_country_modifier = {
+				# name = "conquest_of_bread_modifier"
+				# duration = -1
+			# }
+			custom_tooltip = dtt_bread_bonus_prod_tt
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							trade_goods = grain
+						}
+						add_province_modifier = { 
+							name = dtt_bread_bonus_prod
+							duration = -1
+						}
+					}
+				}
 			}
 		}
 		ai_weight = {
@@ -175,6 +259,7 @@ peasants_1 = {
 				trade_goods = wine
 				trade_goods = paper
 				trade_goods = gems
+				trade_goods = diamonds
 				trade_goods = tropical_wood
 				trade_goods = glass
 				trade_goods = chinaware
@@ -273,6 +358,76 @@ peasants_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				44 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = {
+								owner = {
+									alliance_with = ROOT
+								}
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				1857 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = {
+								owner = {
+									alliance_with = ROOT
+								}
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				7810 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = {
+								owner = {
+									alliance_with = ROOT
+								}
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				53 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = {
+								owner = {
+									alliance_with = ROOT
+								}
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				4772 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = {
+								owner = {
+									alliance_with = ROOT
+								}
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
 			}
 		}
 		ai_weight = {
@@ -286,6 +441,11 @@ peasants_2 = {
 			OR = {
 				area = weser_area
 				area = lower_saxony_area
+				province_id = 44
+				province_id = 1857
+				province_id = 7810
+				province_id = 53
+				province_id = 4772
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -293,9 +453,14 @@ peasants_2 = {
 			num_of_owned_provinces_with = {
 				OR = {
 					area = weser_area
-					area = lower_saxony_area
+					#area = lower_saxony_area
+					province_id = 44
+					province_id = 1857
+					province_id = 7810
+					province_id = 53
+					province_id = 4772
 				}
-				value = 4
+				value = 5 #Up from 4
 			}
 		}
 		effect = {
@@ -311,7 +476,54 @@ peasants_2 = {
 				}
 				add_unrest = -10
 			}
+			44 = {
+				if = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_unrest = -10
+				}
+			}
+			1857 = {
+				if = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_unrest = -10
+				}
+			}
+			7810 = {
+				if = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_unrest = -10
+				}
+			}
+			53 = {
+				if = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_unrest = -10
+				}
+			}
+			4772 = {
+				if = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_unrest = -10
+				}
+			}
 			frisia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_brabant_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -327,10 +539,11 @@ peasants_2 = {
 		icon = mission_settlers_north_america
 		required_missions = { peasants_north_germany }
 		provinces_to_highlight = {
-			area = frisia_area
+				area = frisia_area
+				area = north_brabant_area
 			NOT = {
 				owner = {
-					has_government_attribute = is_peasants_republic
+					has_reform = peasants_republic
 					alliance_with = ROOT
 				}
 			}
@@ -340,16 +553,19 @@ peasants_2 = {
 			calc_true_if = {
 				desc = protect_frisia_tt
 				all_province = {
-					area = frisia_area
+					OR = { 
+						area = frisia_area
+						area = north_brabant_area
+					}
 					OR = {
 						owned_by = ROOT
 						owner = {
-							has_government_attribute = is_peasants_republic
+							has_reform = peasants_republic
 							alliance_with = ROOT
 						}
 					}
 				}
-				amount = 3
+				amount = 6
 			}
 		}
 		effect = {
@@ -366,10 +582,11 @@ peasants_2 = {
 			OR = {
 				region = north_german_region
 				region = south_german_region
+				area = schleswig_area
 			}
 			NOT = {
 				owner = {
-					has_government_attribute = is_peasants_republic
+					has_reform = peasants_republic
 				}
 			}
 		}
@@ -392,12 +609,13 @@ peasants_2 = {
 							OR = {
 								region = north_german_region
 								region = south_german_region
+								area = schleswig_area
 							}
 							owner = {
-								has_government_attribute = is_peasants_republic
+								has_reform = peasants_republic
 							}
 						}
-						amount = 30
+						amount = 45
 					}
 				}
 			}
@@ -408,12 +626,13 @@ peasants_2 = {
 						OR = {
 							region = north_german_region
 							region = south_german_region
+							area = schleswig_area
 						}
 						owner = {
 							has_government_attribute = is_peasants_republic
 						}
 					}
-					amount = 30
+					amount = 45
 				}
 			}
 		}
@@ -438,7 +657,7 @@ peasants_2 = {
 				is_revolution_target = yes
 				# new revolution stuff
 				AND = {
-					num_of_cities = 50
+					num_of_cities = 75
 					has_government_attribute = is_peasants_republic
 				}
 			}
@@ -469,7 +688,7 @@ peasants_2 = {
 				capital_scope = {
 					region = russia_region
 				}
-				total_development = 100
+				total_development = 200
 				OR = {
 					culture_group = east_slavic
 					culture_group = slavic
@@ -478,7 +697,7 @@ peasants_2 = {
 			}
 		}
 		trigger = {
-			total_development = 600
+			total_development = 1200
 			custom_trigger_tooltip = {
 				tooltip = break_the_rus_mission_tooltip
 				NOT = {
@@ -486,7 +705,7 @@ peasants_2 = {
 						capital_scope = {
 							region = russia_region
 						}
-						total_development = 100
+						total_development = 200
 						OR = {
 							culture_group = east_slavic
 							culture_group = slavic

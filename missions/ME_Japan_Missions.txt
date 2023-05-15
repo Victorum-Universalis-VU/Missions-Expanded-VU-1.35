@@ -114,9 +114,20 @@ Japan_missions_1 = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = jap_development_program
-				duration = 18250
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = ages_and_splendor }
+				}
+				add_country_modifier = {
+					name = jap_development_program_ase
+					duration = 18250
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = jap_development_program
+					duration = 18250
+				}
 			}
 			custom_tooltip = JAP_URBANIZATION_TT
 			tooltip = {
@@ -379,6 +390,13 @@ Japan_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_china_sea_islands_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -561,10 +579,12 @@ Japan_missions_2 = {
 			OR = {
 				trade_goods = grain
 				trade_goods = livestock
+				trade_goods = rice
 				has_terrain = farmlands
 				has_terrain = grasslands
 			}
 			NOT = { trade_goods = gold }
+			NOT = { trade_goods = silver }
 			OR = {
 				NOT = { owned_by = ROOT }
 				AND = {
@@ -583,8 +603,10 @@ Japan_missions_2 = {
 					type = all
 					OR = {
 						trade_goods = gold
+						trade_goods = silver
 						AND = {
 							NOT = { trade_goods = grain }
+							NOT = { trade_goods = rice }
 							NOT = { trade_goods = livestock }
 							NOT = { has_terrain = farmlands }
 							NOT = { has_terrain = grasslands }
@@ -614,6 +636,7 @@ Japan_missions_2 = {
 					OR = {
 						trade_goods = grain
 						trade_goods = livestock
+						trade_goods = rice
 						has_terrain = farmlands
 						has_terrain = grasslands
 					}
@@ -1007,7 +1030,10 @@ Japan_missions_2 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
-				region = indo_china_region
+				OR = {
+				    region = indo_china_region
+					region = south_china_sea_islands_region
+				}
 			}
 		}
 		effect = {
@@ -1257,6 +1283,13 @@ Japan_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sulu_archipelago_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			mindanao_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -1283,6 +1316,7 @@ Japan_missions_3 = {
 				value = 10
 				OR = {
 					area = palawan_area
+					area = sulu_archipelago_area
 					area = mindanao_area
 					area = visayas_area
 					area = southern_luzon_area
@@ -1298,6 +1332,13 @@ Japan_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			nusa_tenggara_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -1307,8 +1348,11 @@ Japan_missions_3 = {
 		position = 9
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+				    region = moluccas_region
+					region = nusa_tenggara_region
+				}
 				value = 5
-				region = moluccas_region
 			}
 		}
 		effect = {
@@ -1324,6 +1368,42 @@ Japan_missions_3 = {
 					add_permanent_claim = ROOT
 				}
 				indonesia_region = {
+					limit = {
+						has_port = yes
+						province_has_center_of_trade_of_level = 1
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				riau_islands_region = {
+					limit = {
+						has_port = yes
+						province_has_center_of_trade_of_level = 1
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				nusa_tenggara_region = {
+					limit = {
+						has_port = yes
+						province_has_center_of_trade_of_level = 1
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				borneo_region = {
+					limit = {
+						has_port = yes
+						province_has_center_of_trade_of_level = 1
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				celebes_region = {
 					limit = {
 						has_port = yes
 						province_has_center_of_trade_of_level = 1
@@ -1417,6 +1497,7 @@ Japan_missions_3 = {
 						region = korea_region
 						region = south_china_region
 						region = indo_china_region
+						region = south_china_sea_islands_region
 						region = burma_region
 						area = shanxi_area
 						area = north_henan_area
@@ -1437,6 +1518,7 @@ Japan_missions_3 = {
 					OR = {
 						region = bengal_region
 						area = palawan_area
+						area = sulu_archipelago_area
 						area = mindanao_area
 						area = visayas_area
 						area = southern_luzon_area
@@ -1493,6 +1575,10 @@ Japan_missions_3 = {
 					owned_by = ROOT
 				}
 				indo_china_region = {
+					type = all
+					owned_by = ROOT
+				}
+				south_china_sea_islands_region = {
 					type = all
 					owned_by = ROOT
 				}
@@ -1559,6 +1645,10 @@ Japan_missions_3 = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
+				sulu_archipelago_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				mindanao_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
@@ -1611,7 +1701,6 @@ Japan_missions_3 = {
 			}
 		}
 	}
-
 }
 
 Japan_missions_4 = {
@@ -2448,9 +2537,8 @@ Japan_missions_5 = {
 				value = 15
 				NOT = { region = japan_region }
 				OR = {
-				  has_building = naval_base
-			 	  has_building = naval_arsenal
-				  has_building = coastal_artillery
+					has_building = naval_base
+					has_building = naval_arsenal
 					has_shipyard_building_trigger = yes
 					has_dock_building_trigger = yes
 				}
