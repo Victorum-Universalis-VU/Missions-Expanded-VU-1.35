@@ -1045,20 +1045,19 @@ japanse_missions_economic = {
 			}
 		}
 	}
-	JAP_permit_ryogaesho = {
-		icon = mission_high_income
-		required_missions = { JAP_issue_new_erizeni_rei }
-		
-		trigger = {
-			treasury = 2000
-		}
-		effect = {
-			add_country_modifier = {
-				name = "growing_economy"
-				duration = 9125 #25 years
-			}
-		}
-	}
+	#JAP_permit_ryogaesho = {
+	#	icon = mission_high_income
+	#	required_missions = { JAP_issue_new_erizeni_rei }
+	#	trigger = {
+	#		treasury = 2000
+	#	}
+	#	effect = {
+	#		add_country_modifier = {
+	#			name = "growing_economy"
+	#			duration = 9125 #25 years
+	#		}
+	#	}
+	#}
 	JAP_survey_the_secret_fields = {
 		icon = mission_rice_field
 		required_missions = { JAP_construct_the_gokaido JAP_permit_ryogaesho }

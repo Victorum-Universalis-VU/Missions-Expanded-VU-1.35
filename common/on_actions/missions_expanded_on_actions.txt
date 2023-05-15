@@ -847,11 +847,11 @@ on_battle_won_country = {
 			variable_arithmetic_trigger = {
 				export_to_variable = {
 					which = RUM_our_discipline
-					value = trigger_value:discipline
+					value = modifier:discipline
 				}
 				export_to_variable = {
 					which = RUM_their_discipline
-					value = trigger_value:discipline
+					value = modifier:discipline
 					who = FROM
 				}
 				check_variable = {

@@ -4,6 +4,7 @@ gazikumukh_missions_1 = {
 	ai = yes
 	potential = {
 		tag = GAZ
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		NOT = { has_country_flag = formed_dagestan }
 	}
 	has_country_shield = yes
@@ -52,6 +53,7 @@ gazikumukh_missions_2 = {
 	ai = yes
 	potential = {
 		tag = GAZ
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		NOT = { has_country_flag = formed_dagestan }
 	}
 	has_country_shield = yes
@@ -157,6 +159,7 @@ gazikumukh_missions_3 = {
 	ai = yes
 	potential = {
 		tag = GAZ
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		NOT = { has_country_flag = formed_dagestan }
 	}
 	has_country_shield = yes

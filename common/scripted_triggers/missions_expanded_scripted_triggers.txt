@@ -337,6 +337,14 @@ country_has_both_paradox_and_me_missions = {
 		tag = UTS
 		tag = KAM
 		tag = PHA
+		#VU tags added by Altan
+		#Caucasus
+		tag = CIR
+		tag = GAZ
+		#Iceland
+		tag = ICE
+
+
 		##############################################################################################################################
 		## Add other possible countries here.																						##
 		## Remember to add "has_country_flag = use_paradox_missions" to the default missions.										##

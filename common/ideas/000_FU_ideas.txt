@@ -1,104 +1,104 @@
 LOB_ideas = {
 	start = {
 		development_cost = -0.1
-		infantry_power = 0.1 	
+		infantry_power = 0.1
 	}
-	
+
 	bonus = {
 		administrative_efficiency = 0.05
-	}	
+	}
 
 	trigger = {
 		has_country_flag = mlo_formed_lom
-		tag = MLO 
+		tag = MLO
 	}
 	free = yes
-	
+
 	LOB_restore_edict_of_milan = {
-		no_religion_penalty = yes 
-		tolerance_own = 1 
+		no_religion_penalty = yes
+		tolerance_own = 1
 	}
 	LOB_milanese_steel = {
-		discipline = 0.05 
+		discipline = 0.05
 	}
 	LOB_imperial_diplomacy = {
-		ae_impact = -0.2 
+		ae_impact = -0.2
 	}
 	LOB_defy_feudalism = {
-		max_absolutism = 5 
-		free_leader_pool = 1 
+		max_absolutism = 5
+		free_leader_pool = 1
 	}
 	LOB_italian_industrialisation = {
-		global_trade_goods_size_modifier = 0.15 
+		global_trade_goods_size_modifier = 0.15
 	}
 	LOB_italian_scholars = {
-		technology_cost = -0.1 
+		technology_cost = -0.1
 	}
 	LOB_rule_mediterranean = {
 		number_of_cannons_flagship_modifier = 0.50
-		galley_power = 0.2 
+		galley_power = 0.2
 	}
 }
 
-FU1_ideas = {
-	start = {
-		tolerance_own = 3 
-		land_morale = 0.15
-	}
-	
-	bonus = {
-		papal_influence = 2 
-	}
-	
-	trigger = {
-		tag = FU1
-	}
-	free = yes 
-	
-	FU1_roman_claims = {
-		fabricate_claims_cost = -0.5
-		legitimacy = 0.5
-		devotion = 0.5
-		republican_tradition = 0.2
-	}
-	FU1_shield_of_christendom = {
-		global_missionary_strength = 0.02
-		discipline = 0.025
-	}
-	FU1_reclaim_jerusalem = {
-		manpower_recovery_speed = 0.2 
-	}
-	FU1_modernize_administration = {
-		reform_progress_growth = 0.15
-	}
-	FU1_reunite_the_pieces = {
-		province_warscore_cost = -0.1 
-		core_creation = -0.15 
-	}
-	FU1_regulate_marmara = {
-		global_own_trade_power = 0.2
-	}
-	FU1_seek_western_help = {
-		diplomatic_upkeep = 1 
-	}
-}
+#FU1_ideas = {
+#	start = {
+#		tolerance_own = 3 
+#		land_morale = 0.15
+#	}
+#	
+#	bonus = {
+#		papal_influence = 2 
+#	}
+#	
+#	trigger = {
+#		tag = FU1
+#	}
+#	free = yes 
+#	
+#	FU1_roman_claims = {
+#		fabricate_claims_cost = -0.5
+#		legitimacy = 0.5
+#		devotion = 0.5
+#		republican_tradition = 0.2
+#	}
+#	FU1_shield_of_christendom = {
+#		global_missionary_strength = 0.02
+#		discipline = 0.025
+#	}
+#	FU1_reclaim_jerusalem = {
+#		manpower_recovery_speed = 0.2 
+#	}
+#	FU1_modernize_administration = {
+#		reform_progress_growth = 0.15
+#	}
+#	FU1_reunite_the_pieces = {
+#		province_warscore_cost = -0.1 
+#		core_creation = -0.15 
+#	}
+#	FU1_regulate_marmara = {
+#		global_own_trade_power = 0.2
+#	}
+#	FU1_seek_western_help = {
+#		diplomatic_upkeep = 1 
+#	}
+#}
 
 FU2 = {
 	start = {
 		trade_efficiency = 0.2
-		merchants = 1 
+		merchants = 1
 	}
-	
+
 	bonus = {
-		trade_steering = 0.2 
+		trade_steering = 0.2
 	}
-	
+
 	trigger = {
 		tag = HSA
 		has_country_flag = hsa_proclaimed_queen_of_the_hansa_flag
 	}
-	free = yes 
-	
+	free = yes
+
 	FU2_foreign_kontors = {
 		global_trade_power = 0.15
 	}
@@ -124,68 +124,68 @@ FU2 = {
 	}
 }
 
-BYZ_BASE_ideas = { 
+BYZ_BASE_ideas = {
 	start = {
-		tolerance_own = 3 
-		advisor_pool = 1 
+		tolerance_own = 3
+		advisor_pool = 1
 	}
-	
+
 	bonus = {
-		defensiveness = 0.20 
+		defensiveness = 0.20
 	}
-	
+
 	trigger = {
-		tag = BYZ 
-		has_country_flag = byz_may_change_ideas 
+		tag = BYZ
+		has_country_flag = byz_may_change_ideas
 	}
-	free = yes 
-	
+	free = yes
+
 	BYZ_BASE_restored_roman_rule = {
 		same_culture_advisor_cost = -0.2
-		num_accepted_cultures = 1 
+		num_accepted_cultures = 1
 	}
 	BYZ_BASE_centers_of_scholarly_studies = {
-		idea_cost = -0.1 
-		global_missionary_strength = 0.02 
+		idea_cost = -0.1
+		global_missionary_strength = 0.02
 	}
 	BYZ_defenders_of_the_city_of_god = {
-		legitimacy = 1 
-		republican_tradition = 0.35 
-		devotion = 1 
-		horde_unity = 1 
-		papal_influence = 2 
+		legitimacy = 1
+		republican_tradition = 0.35
+		devotion = 1
+		horde_unity = 1
+		papal_influence = 2
 	}
 	BYZ_BASE_velveteen_reform = {
-		discipline = 0.05 
+		discipline = 0.05
 	}
 	BYZ_BASE_imperial_territories = {
 		administrative_efficiency = 0.05
 	}
 	BYZ_BASE_organize_offices = {
-		possible_adm_policy = 1 
-		free_leader_pool = 1 
+		possible_adm_policy = 1
+		free_leader_pool = 1
 	}
 	BYZ_BASE_byzantine_fire_techniques = {
-		leader_land_fire = 1  
+		leader_land_fire = 1
 	}
 }
 
 FU3_ideas = {
 	start = {
 		cavalry_power = 0.2
-		core_creation = -0.25 
+		core_creation = -0.25
 	}
-	
+
 	bonus = {
 		technology_cost = -0.05
-	}	
+	}
 
 	trigger = {
 		has_country_flag = per_blend_with_mug_ideas_flag
-		tag = MUG 
+		tag = MUG
 	}
 	free = yes
-	
+
 	persian_rug_production = {
 		global_trade_goods_size_modifier = 0.1
 	}
@@ -217,17 +217,17 @@ FU4_ideas = {
 		trade_efficiency = 0.15
 		fire_damage = 0.15
 	}
-	
+
 	trigger = {
 		has_country_flag = ned_united_crowns_flag
-		tag = NED 
+		tag = NED
 	}
 	free = yes
-	
+
 	bonus = {
-		tolerance_heretic = 3 
-	}		
-	
+		tolerance_heretic = 3
+	}
+
 	FU4_ned_rules_the_waves = {
 		heavy_ship_power = 0.10
 		naval_morale = 0.1
@@ -253,103 +253,103 @@ FU4_ideas = {
 		global_colonial_growth = 20
 	}
 }
-	
-VOC_ideas = {
-	start = {
-		global_prov_trade_power_modifier = 0.2
-		global_colonial_growth = 25
-	}
-	
-	trigger = {
-		tag = VOC
-	}
-	free = yes
-	
-	bonus = {
-		global_trade_power = 0.15
-	}		
-	
-	VOC_organize_expeditions = {
-		colonists = 1 
-	}
-	VOC_exploit_natives = {
-		global_trade_goods_size_modifier = 0.15
-	}
-	VOC_charter_inland_parties = {
-		movement_speed = 0.1
-		land_attrition = -0.15
-	}
-	dutch_trading_spirit = {
-		merchants = 1
-		trade_range_modifier = 0.10
-	}
-	VOC_company_with_an_army = {
-		global_manpower_modifier = 0.25
-	}
-	VOC_overseas_outposts = {
-		development_cost = -0.05
-	}
-	VOC_crown_funds = {
-		trade_company_investment_cost = -0.1
-	}
-}	
-	
-FU5_ideas = {
-	start = {
-		defensiveness = 0.25
-		land_forcelimit_modifier = 0.2
-	}
-	
-	trigger = {
-		tag = FU5
-	}
-	free = yes
-	
-	bonus = {
-		army_tradition = 1 
-	}		
-	
-	FU5_1 = {
-		all_estate_loyalty_equilibrium = 0.1
-	}
-	FU5_2 = {
-		production_efficiency = 0.15
-		build_cost = -0.05
-	}
-	FU5_3 = {
-		merchants = 1 
-	}
-	FU5_4 = {
-		tolerance_of_heretics_capacity = 1
-		tolerance_heretic = 1
-	}
-	FU5_5 = {
-		mercenary_discipline = 0.05
-	}
-	FU5_6 = {
-		global_manpower_modifier = 0.2
-	}
-	FU5_7 = {
-		ae_impact = -0.15 
-	}
-}		
+
+#VOC_ideas = {
+#	start = {
+#		global_prov_trade_power_modifier = 0.2
+#		global_colonial_growth = 25
+#	}
+#
+#	trigger = {
+#		tag = VOC
+#	}
+#	free = yes
+#
+#	bonus = {
+#		global_trade_power = 0.15
+#	}
+#
+#	VOC_organize_expeditions = {
+#		colonists = 1
+#	}
+#	VOC_exploit_natives = {
+#		global_trade_goods_size_modifier = 0.15
+#	}
+#	VOC_charter_inland_parties = {
+#		movement_speed = 0.1
+#		land_attrition = -0.15
+#	}
+#	dutch_trading_spirit = {
+#		merchants = 1
+#		trade_range_modifier = 0.10
+#	}
+#	VOC_company_with_an_army = {
+#		global_manpower_modifier = 0.25
+#	}
+#	VOC_overseas_outposts = {
+#		development_cost = -0.05
+#	}
+#	VOC_crown_funds = {
+#		trade_company_investment_cost = -0.1
+#	}
+#}
+
+#FU5_ideas = {
+#	start = {
+#		defensiveness = 0.25
+#		land_forcelimit_modifier = 0.2
+#	}
+#
+#	trigger = {
+#		tag = FU5
+#	}
+#	free = yes
+#
+#	bonus = {
+#		army_tradition = 1
+#	}
+#
+#	FU5_1 = {
+#		all_estate_loyalty_equilibrium = 0.1
+#	}
+#	FU5_2 = {
+#		production_efficiency = 0.15
+#		build_cost = -0.05
+#	}
+#	FU5_3 = {
+#		merchants = 1
+#	}
+#	FU5_4 = {
+#		tolerance_of_heretics_capacity = 1
+#		tolerance_heretic = 1
+#	}
+#	FU5_5 = {
+#		mercenary_discipline = 0.05
+#	}
+#	FU5_6 = {
+#		global_manpower_modifier = 0.2
+#	}
+#	FU5_7 = {
+#		ae_impact = -0.15
+#	}
+#}
 
 RM1_ideas = {
 	start = {
 		core_creation = -0.20
 		manpower_recovery_speed = 0.2
 	}
-	
+
 	trigger = {
 		tag = RMM
 		has_country_flag = rum_vassalized_mam
 	}
 	free = yes
-	
+
 	bonus = {
-		land_forcelimit_modifier = 0.25 
-	}		
-	
+		land_forcelimit_modifier = 0.25
+	}
+
 	rum_sultan_of_rum = {
 		tolerance_heathen = 3
 	}
@@ -383,7 +383,7 @@ GBR1_ideas = {
 	bonus = {
 		navy_tradition_decay = -0.01
 	}
-	
+
 	trigger = {
 		tag = GBR
 		has_country_flag = nss_gbr_flag
@@ -392,7 +392,7 @@ GBR1_ideas = {
 
 	pirates_religious_apathy = {
 		no_religion_penalty = yes
-	}	
+	}
 	city_upon_a_hill = {
 		global_colonial_growth = 20
 	}
@@ -407,13 +407,13 @@ GBR1_ideas = {
 	}
 	fu_codify_piratical_code = {
 		republican_tradition = 0.3
-		global_unrest = -1 
+		global_unrest = -1
 	}
 	fu_black_flag_rules_the_waves = {
 		leader_naval_manuever = 1
 		allowed_marine_fraction = 0.1
 	}
-}	
+}
 
 NSS_ideas = { #New Provindence
 	start = {
@@ -424,26 +424,26 @@ NSS_ideas = { #New Provindence
 		privateer_efficiency = 0.25
 	}
 	trigger = {
-		OR = { 
-			tag = NSS 
-			AND = { 
-				was_tag = NSS 
+		OR = {
+			tag = NSS
+			AND = {
+				was_tag = NSS
 				has_reform = pirate_republic_reform
-				NOT = { tag = GBR } 
+				NOT = { tag = GBR }
 			}
 		}
 	}
 	free = yes
-	
+
 	pirates_religious_apathy = {
 		no_religion_penalty = yes
-	}	
+	}
 	fu_pirates_plunder = {
 		global_ship_cost = -0.05
 		war_taxes_cost_modifier = -1
 	}
-	fu_pirates_bucanneers_ideas = {	
-		allowed_marine_fraction = 0.1 
+	fu_pirates_bucanneers_ideas = {
+		allowed_marine_fraction = 0.1
 		development_cost = -0.1
 	}
 	pirates_sail_in_consort = {
@@ -457,11 +457,11 @@ NSS_ideas = { #New Provindence
 		own_coast_naval_combat_bonus = 1
 	}
 	fu_map_our_seas = {
-		movement_speed_in_fleet_modifier = 1 
-		leader_naval_manuever = 1 
+		movement_speed_in_fleet_modifier = 1
+		leader_naval_manuever = 1
 	}
-}	
-	
+}
+
 FUUU_ideas = { #Because Rex asked for them
 	start = {
 		naval_morale = 0.20
@@ -471,7 +471,7 @@ FUUU_ideas = { #Because Rex asked for them
 	bonus = {
 		navy_tradition = 1
 	}
-	
+
 	trigger = {
 		tag = GBR
 	}
@@ -501,18 +501,4 @@ FUUU_ideas = { #Because Rex asked for them
 		blockade_efficiency = 0.33
 		allowed_marine_fraction = 0.50
 	}
-}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+}

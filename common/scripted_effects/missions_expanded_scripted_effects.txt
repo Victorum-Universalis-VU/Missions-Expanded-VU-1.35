@@ -933,7 +933,7 @@ add_army_tradition_or_mil_power = {
 			}
 		}
 	]
-	
+
 	[[value]
 		tooltip = {
 			add_army_tradition = $value$
@@ -983,7 +983,7 @@ add_legitimacy_or_reform_progress = {
 			}
 		}
 	]
-	
+
 	[[value]
 		tooltip = {
 			add_legitimacy_equivalent = { amount = $value$ }
@@ -2220,7 +2220,7 @@ ME_technology_split_120_power = { #placeholder, I will put the implementation he
 				which = MSA_our_mil_tech
 			}
 		}
-		
+
 		subtract_variable = {
 			which = MSA_our_adm_tech
 			which = MSA_our_lowest_tech
@@ -2233,7 +2233,7 @@ ME_technology_split_120_power = { #placeholder, I will put the implementation he
 			which = MSA_our_mil_tech
 			which = MSA_our_lowest_tech
 		}
-		
+
 		if = {
 			limit = {
 				is_variable_equal = {
@@ -2306,7 +2306,7 @@ ME_technology_split_120_power = { #placeholder, I will put the implementation he
 				add_mil_power = 120
 			}
 		}
-		
+
 		#flush the vars
 		set_variable = {
 			which = MSA_our_adm_tech
@@ -2380,7 +2380,7 @@ ME_distribute_development = {
 				[[limit]
 					limit = {
 						$limit$
-					} 
+					}
 				]
 				add_base_$type$ = 1
 			}
@@ -2487,7 +2487,7 @@ ME_add_power_projection = {
 			type = mission_rewards_power_projection
 			amount = $value$
 		}
-	
+
 	]
 }
 
@@ -2496,15 +2496,15 @@ ME_add_or_reset_golden_age = { # extremely powerful, use sparingly!
 		limit = {
 			has_dlc = "Mandate of Heaven"
 		}
-		
+
 		custom_tooltip = ME_golden_age_renewal_tt
 		hidden_effect = {
 			if = {
-				limit = { has_had_golden_age = yes } 
-				reset_golden_age = yes 
+				limit = { has_had_golden_age = yes }
+				reset_golden_age = yes
 			}
 			else_if = {
-				limit = { in_golden_age = yes } 
+				limit = { in_golden_age = yes }
 				extend_golden_age = 600
 			}
 		}
@@ -2552,7 +2552,7 @@ ME_create_flagship = {
 		owner = {
 			set_country_flag = ME_flagship_effect
 			set_country_flag = ME_flagship_$mod_1$_flag
-			set_country_flag = ME_flagship_$mod_2$_flag 
+			set_country_flag = ME_flagship_$mod_2$_flag
 			set_country_flag = ME_flagship_$mod_3$_flag
 		}
 	}
