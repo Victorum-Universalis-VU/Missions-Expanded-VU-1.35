@@ -290,6 +290,7 @@ tr_russian_minors_2 = {
 					tag = ZAZ
 					tag = OKA
 				}
+			}
 			#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
 			tag = BLO
 			AND = {
