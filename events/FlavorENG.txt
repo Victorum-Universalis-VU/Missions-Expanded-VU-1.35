@@ -1210,7 +1210,7 @@ country_event = {
 		months = 1200
 		modifier = {
 			factor = 0.5
-			mission_completed = conquer_ireland
+#			mission_completed = conquer_ireland
 		}
 	}
 
@@ -2558,7 +2558,7 @@ country_event = {
 			owned_by = ROOT
 		}
 		OR = {
-			mission_completed = eng_rb_universities
+		#	mission_completed = eng_rb_universities
 			mission_completed = gbr_ave_renovate_universities
 		}
 	}
