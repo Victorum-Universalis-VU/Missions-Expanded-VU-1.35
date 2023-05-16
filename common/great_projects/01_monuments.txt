@@ -2832,7 +2832,7 @@ stpeters_cathedral = {
 			#			name = tur_celebration_of_christian_traditions_modifier
 			#			duration = -1
 			#		}
-				}
+			#	}
 			}
 		}
 	}
