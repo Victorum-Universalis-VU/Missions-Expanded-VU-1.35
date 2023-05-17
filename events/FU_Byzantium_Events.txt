@@ -1147,7 +1147,7 @@ country_event = { #Royal Workshops of Constantinople
 		}
 		
 		151 = {
-			remove_country_modifier = diamond_district 
+			remove_province_modifier = diamond_district #EE guys used wrond scope here
 			add_province_modifier = {
 				name = byz_diamond_district_modifier 
 				duration = -1 
@@ -1412,7 +1412,7 @@ country_event = { #The Papal Delegate Arrives!"
 					manpower_percentage = 0.25
 					is_at_war = no  
 					NOT = { truce_with = TUR } 
-					is_rival = no  
+					NOT = { is_rival = BYZ }
 					is_subject = no 
 					is_bankrupt = no
 					religion = catholic
@@ -1429,7 +1429,7 @@ country_event = { #The Papal Delegate Arrives!"
 					NOT = { num_of_loans = 3 }
 					manpower_percentage = 0.25
 					is_at_war = no 
-					is_rival = no  
+					NOT = { is_rival = BYZ }  
 					is_subject = no 
 					is_bankrupt = no
 					religion = catholic
@@ -1454,7 +1454,7 @@ country_event = { #The Papal Delegate Arrives!"
 					NOT = { num_of_loans = 3 }
 					manpower_percentage = 0.25
 					is_at_war = no   
-					is_rival = no  
+					NOT = { is_rival = BYZ }
 					is_subject = no 
 					is_bankrupt = no
 					religion = catholic
@@ -1479,7 +1479,7 @@ country_event = { #The Papal Delegate Arrives!"
 					NOT = { num_of_loans = 3 }
 					manpower_percentage = 0.25
 					is_at_war = no  
-					is_rival = no  
+					NOT = { is_rival = BYZ } #is_rival = no ? The hell did they smoke ?
 					is_subject = no 
 					is_bankrupt = no
 					religion = catholic
@@ -1514,7 +1514,7 @@ country_event = { #The Papal Delegate Arrives!"
 					manpower_percentage = 0.25
 					is_at_war = no  
 					NOT = { truce_with = TUR } 
-					is_rival = no  
+					NOT = { is_rival = BYZ }
 					is_subject = no 
 					is_bankrupt = no
 					religion = catholic
@@ -2176,7 +2176,7 @@ country_event = { #Heirs of the Imperial Throne
 				}
 			}
 		}
-		NOT = { development = 100 }
+		NOT = { total_development = 100 } #Probably want to nerf that for VU eventually
 		NOT = { legitimacy = 75 }
 		NOT = { stability = 1 }
 		NOT = { war_with = TUR }
@@ -2572,7 +2572,7 @@ country_event = { #Blood is Thicker than Water
 		tag = TRE 
 		alliance_with = BYZ 
 		is_subject = no 
-		NOT = { development = BYZ } 
+	#	NOT = { development = BYZ } 
 		TRE = {
 			has_opinion = {
 				who = BYZ 

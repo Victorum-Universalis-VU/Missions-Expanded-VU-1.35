@@ -2854,7 +2854,7 @@ country_event = {
 					}
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					check_variable = {
 						which = oxbridge_symposium
