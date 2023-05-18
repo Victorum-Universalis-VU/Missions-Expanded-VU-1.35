@@ -1078,7 +1078,7 @@
  ability_conquest_frenzy: "Conquest Frenzy"
  conquest_frenzy_power: "Conquest Frenzy"
  conquest_frenzy_power_desc: "Conquest Frenzy repersents the willingness of our nation to go to war and conquer.\nIt is gained by:\n-§YRazing§! provinces §G+1§!\n-Winning §YBattles§! §G+1§!\n-Ruler with high £mil£ §YPower§! ascending to the throne §G+2§!\n\nIt is lost by:\n-Losing §YBattles§! §R-2§!\n\n"
- monthly_conquest_frenzy_power: "Monthly Conquest Frenzy"
+ #monthly_conquest_frenzy_power: "Monthly Conquest Frenzy"
  promote_peace: "Promote Peace"
  promote_peace_desc: " "
  middle_appeasement: "Appease the Factions"

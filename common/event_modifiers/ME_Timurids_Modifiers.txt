@@ -86,7 +86,7 @@ me_tim_north_yuan_control = {
 
 me_tim_march_west = {
 	cavalry_power = 0.1
-	enable_forced_march = yes
+	#enable_forced_march = yes
 }
 
 me_tim_integrate_great_horde_population = {
@@ -517,7 +517,7 @@ me_tim_raising_new_hosts = {
 
 me_tim_bringing_the_end = {
 	raze_power_gain = 0.5 #Counter one of the gov capacity maluses
-	monthly_conquest_frenzy_power = 0.5 #Counter the peace thing
+	#monthly_conquest_frenzy_power = 0.5 #Counter the peace thing
 	nomadic_tribes_influence_modifier = 0.15
 	harsh_treatment_cost = -0.5
 }
@@ -697,12 +697,12 @@ me_tim_razed_province = {
 }
 
 me_tim_peaceful_governance = {
-	monthly_conquest_frenzy_power = -0.5
+	#monthly_conquest_frenzy_power = -0.5
 	global_autonomy = -0.05
 }
 
 me_tim_promote_warbands = {
-	monthly_conquest_frenzy_power = 0.5
+	#monthly_conquest_frenzy_power = 0.5
 	prestige_from_land = 0.5
 }
 
