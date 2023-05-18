@@ -80,7 +80,7 @@ estate_berbers_development_cost = {
 		}
 		any_owned_province = {
 			OR = {
-				culture = berber
+				culture_group = berber_group
 				has_province_modifier = MOR_berber_dev_cost
 			}
 		}
@@ -112,7 +112,7 @@ estate_berbers_development_cost = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						culture = berber
+						culture_group = berber_group
 						has_province_modifier = estate_berbers_settlement
 					}
 				}
@@ -254,9 +254,9 @@ estate_berbers_seize_land = {
 			estate_berbers_privileges_allow = yes
 		}
 		any_owned_province = { 
-			culture = berber
+			culture_group = berber_group
 			any_neighbor_province = {
-				NOT = { culture = berber }
+				NOT = { culture_group = berber_group }
 				has_owner_accepted_culture = yes
 			}
 		}
@@ -278,15 +278,15 @@ estate_berbers_seize_land = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					culture = berber
+					culture_group = berber_group
 					any_neighbor_province = {
-						NOT = { culture = berber }
+						NOT = { culture_group = berber_group }
 						has_owner_accepted_culture = yes
 					}
 				}
 				random_neighbor_province = {
 					limit = {
-						NOT = { culture = berber }
+						NOT = { culture_group = berber_group }
 						has_owner_accepted_culture = yes
 					}
 					PREV = {
@@ -316,7 +316,7 @@ estate_berbers_recruit_berbers = {
 		}
 		any_owned_province = { 
 			OR = {
-				culture = berber
+				culture_group = berber_group
 				has_province_modifier = MOR_berber_dev_cost
 			}
 		}
@@ -351,7 +351,7 @@ estate_berbers_recruit_berbers = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							culture = berber
+							culture_group = berber_group
 							has_province_modifier = estate_berbers_settlement
 						}
 					}
@@ -367,7 +367,7 @@ estate_berbers_recruit_berbers = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							culture = berber
+							culture_group = berber_group
 							has_province_modifier = estate_berbers_settlement
 						}
 					}
@@ -439,7 +439,7 @@ estate_berbers_political_concessions = {
 	}
 	conditional_modifier = {
 		trigger = {
-			primary_culture = berber
+			culture_group = berber_group
 		}
 		modifier = {
 			legitimacy = -0.5
@@ -448,7 +448,7 @@ estate_berbers_political_concessions = {
 	
 	conditional_modifier = {
 		trigger = {
-			NOT = { primary_culture = berber }
+			NOT = { culture_group = berber_group }
 		}
 		modifier = {
 			legitimacy = -1

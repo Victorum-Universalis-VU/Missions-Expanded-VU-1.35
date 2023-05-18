@@ -2,7 +2,7 @@ estate_berbers_build_tax_building = {
 	can_select = {
 		any_owned_province = {
 			is_state_core = root
-			culture = berber
+			culture_group = berber_group
 			NOT = { has_building = cathedral }
 			OR = {
 				AND = {
@@ -27,7 +27,7 @@ estate_berbers_build_tax_building = {
 			NOT = {
 				any_owned_province = {
 					is_state_core = root
-					culture = berber
+					culture_group = berber_group
 					base_tax = 4
 					NOT = { has_building = cathedral }
 					OR = {
@@ -62,7 +62,7 @@ estate_berbers_build_tax_building = {
 		random_owned_province = {
 			limit = {
 				is_state_core = root
-				culture = berber
+				culture_group = berber_group
 				NOT = { has_building = cathedral }
 				OR = {
 					AND = {
@@ -83,7 +83,7 @@ estate_berbers_build_tax_building = {
 		random_owned_province = {
 			limit = {
 				is_state_core = root
-				culture = berber
+				culture_group = berber_group
 				base_tax = 4
 				NOT = { has_building = cathedral }
 				OR = {
@@ -171,10 +171,24 @@ estate_berbers_build_tax_building = {
 
 estate_berbers_accept_culture = {
 	can_select = {
-		NOT = { accepted_culture = berber }
+		NOT = { 
+			accepted_culture = tuareg
+            accepted_culture = shilha
+            accepted_culture = zayane
+			accepted_culture = riffian
+			accepted_culture = ait_atta
+			accepted_culture = guanche
+			accepted_culture = kabylian
+			accepted_culture = shawiya
+			accepted_culture = shenwa
+			accepted_culture = mozabite
+			accepted_culture = lamtuna
+			accepted_culture = libyan_berber_culture
+			accepted_culture = siwa_culture
+		}
 		development_in_provinces = {
 			is_state_core = root
-			culture = berber
+			culture_group = berber_group
 			value = 20
 		}
 		
@@ -193,7 +207,7 @@ estate_berbers_accept_culture = {
 			factor = 5
 			development_in_provinces = {
 				is_state_core = root
-				culture = berber
+				culture_group = berber_group
 				value = 50
 			}
 		}
@@ -203,19 +217,33 @@ estate_berbers_accept_culture = {
 	}
 	provinces_to_highlight = {
 		owned_by = ROOT
-		culture = berber
+		culture_group = berber_group
 	}
 	fail_if = {
 		NOT = {
 			development_in_provinces = {
 				is_state_core = root
-				culture = berber
+				culture_group = berber_group
 				value = 20
 			}
 		}
 	}
 	task_requirements = {
-		accepted_culture = berber
+		OR = {
+		    accepted_culture = tuareg
+            accepted_culture = shilha
+            accepted_culture = zayane
+			accepted_culture = riffian
+			accepted_culture = ait_atta
+			accepted_culture = guanche
+			accepted_culture = kabylian
+			accepted_culture = shawiya
+			accepted_culture = shenwa
+			accepted_culture = mozabite
+			accepted_culture = lamtuna
+			accepted_culture = libyan_berber_culture
+			accepted_culture = siwa_culture
+		}
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
@@ -238,7 +266,7 @@ estate_berbers_develop = {
 	can_select = {
 		any_owned_province = {
 			is_state_core = ROOT
-			culture = berber
+			culture_group = berber_group
 		}
 	}
 	selection_weight = {
@@ -249,14 +277,14 @@ estate_berbers_develop = {
 		random_owned_province = {
 			limit = {
 				is_state_core = ROOT
-				culture = berber
+				culture_group = berber_group
 			}
 			save_event_target_as = agenda_province
 		}
 		random_owned_province = {
 			limit = {
 				is_state_core = ROOT
-				culture = berber
+				culture_group = berber_group
 				NOT = { development = 20 }
 			}
 			save_event_target_as = agenda_province
@@ -264,7 +292,7 @@ estate_berbers_develop = {
 		random_owned_province = {
 			limit = {
 				is_state_core = ROOT
-				culture = berber
+				culture_group = berber_group
 				NOT = { development = 15 }
 			}
 			save_event_target_as = agenda_province
@@ -272,7 +300,7 @@ estate_berbers_develop = {
 		random_owned_province = {
 			limit = {
 				is_state_core = ROOT
-				culture = berber
+				culture_group = berber_group
 				NOT = { development = 10 }
 			}
 			save_event_target_as = agenda_province
@@ -280,7 +308,7 @@ estate_berbers_develop = {
 		random_owned_province = {
 			limit = {
 				is_state_core = ROOT
-				culture = berber
+				culture_group = berber_group
 				NOT = { development = 7 }
 			}
 			save_event_target_as = agenda_province
@@ -350,10 +378,10 @@ estate_berbers_expand_tribal_land = {
 			NOT = {
 				any_owned_province = {
 					is_state_core = ROOT
-					culture = berber
+					culture_group = berber_group
 					any_neighbor_province = {
 						owned_by = ROOT
-						NOT = { culture = berber }
+						NOT = { culture_group = berber_group }
 					}
 				}
 			}
@@ -364,16 +392,16 @@ estate_berbers_expand_tribal_land = {
 		random_owned_province = {
 			limit = {
 				is_state_core = ROOT
-				culture = berber
+				culture_group = berber_group
 				any_neighbor_province = {
 					owned_by = ROOT
-					NOT = { culture = berber }
+					NOT = { culture_group = berber_group }
 				}
 			}
 			random_neighbor_province = {
 				limit = {
 					owned_by = ROOT
-					NOT = { culture = berber }
+					NOT = { culture_group = berber_group }
 				}
 				save_event_target_as = agenda_province
 			}
@@ -381,16 +409,16 @@ estate_berbers_expand_tribal_land = {
 		random_owned_province = {
 			limit = {
 				is_state_core = ROOT
-				culture = berber
+				culture_group = berber_group
 				any_neighbor_province = {
 					owned_by = ROOT
-					NOT = { culture = berber }
+					NOT = { culture_group = berber_group }
 				}
 			}
 			random_neighbor_province = {
 				limit = {
 					owned_by = ROOT
-					NOT = { culture = berber }
+					NOT = { culture_group = berber_group }
 					NOT = { development = 20 }
 				}
 				save_event_target_as = agenda_province
@@ -399,16 +427,16 @@ estate_berbers_expand_tribal_land = {
 		random_owned_province = {
 			limit = {
 				is_state_core = ROOT
-				culture = berber
+				culture_group = berber_group
 				any_neighbor_province = {
 					owned_by = ROOT
-					NOT = { culture = berber }
+					NOT = { culture_group = berber_group }
 				}
 			}
 			random_neighbor_province = {
 				limit = {
 					owned_by = ROOT
-					NOT = { culture = berber }
+					NOT = { culture_group = berber_group }
 					NOT = { development = 15 }
 				}
 				save_event_target_as = agenda_province
@@ -417,16 +445,16 @@ estate_berbers_expand_tribal_land = {
 		random_owned_province = {
 			limit = {
 				is_state_core = ROOT
-				culture = berber
+				culture_group = berber_group
 				any_neighbor_province = {
 					owned_by = ROOT
-					NOT = { culture = berber }
+					NOT = { culture_group = berber_group }
 				}
 			}
 			random_neighbor_province = {
 				limit = {
 					owned_by = ROOT
-					NOT = { culture = berber }
+					NOT = { culture_group = berber_group }
 					NOT = { development = 10 }
 				}
 				save_event_target_as = agenda_province
@@ -435,16 +463,16 @@ estate_berbers_expand_tribal_land = {
 		random_owned_province = {
 			limit = {
 				is_state_core = ROOT
-				culture = berber
+				culture_group = berber_group
 				any_neighbor_province = {
 					owned_by = ROOT
-					NOT = { culture = berber }
+					NOT = { culture_group = berber_group }
 				}
 			}
 			random_neighbor_province = {
 				limit = {
 					owned_by = ROOT
-					NOT = { culture = berber }
+					NOT = { culture_group = berber_group }
 					NOT = { development = 7 }
 				}
 				save_event_target_as = agenda_province
@@ -492,7 +520,60 @@ estate_berbers_expand_tribal_land = {
 			loyalty = 15
 		}
 		event_target:agenda_province = {
-			change_culture = berber
+			random_list = {
+			    1 = {
+				    trigger = { owner = { accepted_culture = tuareg } }
+					change_culture = tuareg
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = shilha } }
+					change_culture = shilha
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = zayane } }
+					change_culture = zayane
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = riffian } }
+					change_culture = riffian
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = ait_atta } }
+					change_culture = ait_atta
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = guanche } }
+					change_culture = guanche
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = kabylian } }
+					change_culture = kabylian
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = shawiya } }
+					change_culture = shawiya
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = shenwa } }
+					change_culture = shenwa
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = mozabite } }
+					change_culture = mozabite
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = lamtuna } }
+					change_culture = lamtuna
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = libyan_berber_culture } }
+					change_culture = libyan_berber_culture
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = siwa_culture } }
+					change_culture = siwa_culture
+				}
+			}
 		}
 	}
 	failing_effect = {
@@ -509,7 +590,7 @@ estate_berbers_build_manpower_building = {
 	can_select = {
 		any_owned_province = {
 			is_state_core = root
-			culture = berber
+			culture_group = berber_group
 			NOT = { has_building = training_fields  }
 			OR = {
 				AND = {
@@ -534,7 +615,7 @@ estate_berbers_build_manpower_building = {
 			NOT = {
 				any_owned_province = {
 					is_state_core = root
-					culture = berber
+					culture_group = berber_group
 					base_manpower = 4
 					NOT = { has_building = training_fields  }
 					OR = {
@@ -569,7 +650,7 @@ estate_berbers_build_manpower_building = {
 		random_owned_province = {
 			limit = {
 				is_state_core = root
-				culture = berber
+				culture_group = berber_group
 				NOT = { has_building = training_fields  }
 				OR = {
 					AND = {
@@ -590,7 +671,7 @@ estate_berbers_build_manpower_building = {
 		random_owned_province = {
 			limit = {
 				is_state_core = root
-				culture = berber
+				culture_group = berber_group
 				base_manpower = 4
 				NOT = { has_building = training_fields  }
 				OR = {
@@ -681,7 +762,7 @@ estate_berbers_increase_autonomy = {
 		any_owned_province = {
 			is_state_core = root
 			NOT = { local_autonomy = 75 }
-			culture = berber
+			culture_group = berber_group
 			is_capital = no
 			NOT = { has_province_modifier = autonomy_increased }
 			NOT = { has_province_modifier = autonomy_decreased }
@@ -700,7 +781,7 @@ estate_berbers_increase_autonomy = {
 			limit = {
 				is_state_core = root
 				NOT = { local_autonomy = 75 }
-				culture = berber
+				culture_group = berber_group
 				is_capital = no
 				NOT = { has_province_modifier = autonomy_increased }
 				NOT = { has_province_modifier = autonomy_decreased }

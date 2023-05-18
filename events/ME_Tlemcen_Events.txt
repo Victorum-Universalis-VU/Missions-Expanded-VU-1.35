@@ -140,7 +140,7 @@ country_event = {
 			if = {
 				limit = {
 					num_of_owned_provinces_with = {
-						culture = berber
+						culture_group = berber_group
 						value = 3
 					}
 				}
@@ -148,7 +148,7 @@ country_event = {
 				pick_best_provinces = {
 					3 = yes
 					scope = every_owned_province
-					global_trigger = " culture = berber "
+					global_trigger = "culture_group = berber_group"
 					scale = higher_development_than
 					event_target_name = "Tlemcen_Berber_Province"
 				}
@@ -156,7 +156,7 @@ country_event = {
 			else_if = {
 				limit = {
 					num_of_owned_provinces_with = {
-						culture = berber
+						culture_group = berber_group
 						value = 2
 					}
 				}
@@ -164,7 +164,7 @@ country_event = {
 				pick_best_provinces = {
 					2 = yes
 					scope = every_owned_province
-					global_trigger = " culture = berber "
+					global_trigger = "culture_group = berber_group"
 					scale = higher_development_than
 					event_target_name = "Tlemcen_Berber_Province"
 				}
@@ -172,13 +172,13 @@ country_event = {
 			else_if = {
 				limit = {
 					any_owned_province = {
-						culture = berber
+						culture_group = berber_group
 					}
 				}
 				set_country_flag = TLC_1_berber_provs
 				random_owned_province = {
 					limit = {
-						culture = berber
+						culture_group = berber_group
 					}
 					save_event_target_as = Tlemcen_Berber_Province_1
 				}
@@ -261,7 +261,7 @@ country_event = {
 				effect = "
 					random_owned_province = {
 						limit = {
-							culture = berber
+							culture_group = berber_group
 						}
 						add_base_tax = 1
 					}

@@ -10,7 +10,7 @@ estate_berbers = {
 			AND = {
 				culture_group = maghrebi
 				any_owned_province = { 
-					culture = berber
+					culture_group = berber_group
 				}
 			}
 			num_of_estate_privileges = {
@@ -48,7 +48,7 @@ estate_berbers = {
 	influence_modifier = {
 		desc = MOR_berber_is_primary
 		trigger = {
-			primary_culture = berber
+			culture_group = berber_group
 		}	
 		influence = 5
 	}
@@ -57,8 +57,20 @@ estate_berbers = {
 		desc = MOR_berber_is_accepted
 		trigger = {
 			OR = {
-				primary_culture = berber
-				accepted_culture = berber
+				culture_group = berber_group
+				accepted_culture = tuareg
+				accepted_culture = shilha
+				accepted_culture = zayane
+				accepted_culture = riffian
+				accepted_culture = ait_atta
+				accepted_culture = guanche
+				accepted_culture = kabylian
+				accepted_culture = shawiya
+				accepted_culture = shenwa
+				accepted_culture = mozabite
+				accepted_culture = lamtuna
+				accepted_culture = libyan_berber_culture
+				accepted_culture = siwa_culture
 			}
 		}	
 		loyalty = 5
@@ -75,8 +87,46 @@ estate_berbers = {
 	loyalty_modifier = {
 		desc = MOR_employs_berber_adviosr
 		trigger = {
-			employed_advisor = {
-				culture = berber
+		    OR = {
+			    employed_advisor = {
+				    culture = tuareg
+				}
+				employed_advisor = {
+				    culture = shilha
+				}
+				employed_advisor = {
+				    culture = zayane
+				}
+				employed_advisor = {
+				    culture = riffian
+				}
+				employed_advisor = {
+				    culture = ait_atta
+				}
+				employed_advisor = {
+				    culture = guanche
+				}
+				employed_advisor = {
+				    culture = kabylian
+				}
+				employed_advisor = {
+				    culture = shawiya
+				}
+				employed_advisor = {
+				    culture = shenwa
+				}
+				employed_advisor = {
+				    culture = mozabite
+				}
+				employed_advisor = {
+				    culture = lamtuna
+				}
+				employed_advisor = {
+				    culture = libyan_berber_culture
+				}
+				employed_advisor = {
+				    culture = siwa_culture
+				}
 			}
 		}	
 		loyalty = 5
