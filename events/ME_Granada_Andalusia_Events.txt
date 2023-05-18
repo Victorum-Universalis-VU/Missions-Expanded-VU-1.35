@@ -595,7 +595,60 @@ country_event = {
 		ai_chance = { factor = 1 }
 		
 		event_target:Granada_berber_province = {
-			change_culture = berber
+			random_list = {
+			    1 = {
+				    trigger = { owner = { accepted_culture = tuareg } }
+					change_culture = tuareg
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = shilha } }
+					change_culture = shilha
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = zayane } }
+					change_culture = zayane
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = riffian } }
+					change_culture = riffian
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = ait_atta } }
+					change_culture = ait_atta
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = guanche } }
+					change_culture = guanche
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = kabylian } }
+					change_culture = kabylian
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = shawiya } }
+					change_culture = shawiya
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = shenwa } }
+					change_culture = shenwa
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = mozabite } }
+					change_culture = mozabite
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = lamtuna } }
+					change_culture = lamtuna
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = libyan_berber_culture } }
+					change_culture = libyan_berber_culture
+				}
+				1 = {
+				    trigger = { owner = { accepted_culture = siwa_culture } }
+					change_culture = siwa_culture
+				}
+			}
 			add_base_tax = 2
 			add_base_production = 1
 			add_base_manpower = 2
@@ -2287,7 +2340,60 @@ country_event = {
 				}
 			}
 			event_target:Granada_Target_1 = {
-				change_culture = berber
+				random_list = {
+			        1 = {
+				        trigger = { owner = { accepted_culture = tuareg } }
+				    	change_culture = tuareg
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = shilha } }
+				    	change_culture = shilha
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = zayane } }
+				    	change_culture = zayane
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = riffian } }
+				    	change_culture = riffian
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = ait_atta } }
+				    	change_culture = ait_atta
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = guanche } }
+				    	change_culture = guanche
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = kabylian } }
+				    	change_culture = kabylian
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = shawiya } }
+				    	change_culture = shawiya
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = shenwa } }
+				    	change_culture = shenwa
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = mozabite } }
+				    	change_culture = mozabite
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = lamtuna } }
+				    	change_culture = lamtuna
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = libyan_berber_culture } }
+				    	change_culture = libyan_berber_culture
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = siwa_culture } }
+				    	change_culture = siwa_culture
+				    }
+				}
 				add_base_tax = 1
 				add_base_manpower = 2
 			}
@@ -2300,7 +2406,60 @@ country_event = {
 				}
 			}
 			event_target:Granada_Target_2 = {
-				change_culture = berber
+				random_list = {
+			        1 = {
+				        trigger = { owner = { accepted_culture = tuareg } }
+				    	change_culture = tuareg
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = shilha } }
+				    	change_culture = shilha
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = zayane } }
+				    	change_culture = zayane
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = riffian } }
+				    	change_culture = riffian
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = ait_atta } }
+				    	change_culture = ait_atta
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = guanche } }
+				    	change_culture = guanche
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = kabylian } }
+				    	change_culture = kabylian
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = shawiya } }
+				    	change_culture = shawiya
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = shenwa } }
+				    	change_culture = shenwa
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = mozabite } }
+				    	change_culture = mozabite
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = lamtuna } }
+				    	change_culture = lamtuna
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = libyan_berber_culture } }
+				    	change_culture = libyan_berber_culture
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = siwa_culture } }
+				    	change_culture = siwa_culture
+				    }
+				}
 				add_base_tax = 1
 				add_base_manpower = 2
 			}
@@ -2310,7 +2469,60 @@ country_event = {
 				has_country_flag = GRA_3_berber_provs
 			}
 			event_target:Granada_Target_3 = {
-				change_culture = berber
+				random_list = {
+			        1 = {
+				        trigger = { owner = { accepted_culture = tuareg } }
+				    	change_culture = tuareg
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = shilha } }
+				    	change_culture = shilha
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = zayane } }
+				    	change_culture = zayane
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = riffian } }
+				    	change_culture = riffian
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = ait_atta } }
+				    	change_culture = ait_atta
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = guanche } }
+				    	change_culture = guanche
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = kabylian } }
+				    	change_culture = kabylian
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = shawiya } }
+				    	change_culture = shawiya
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = shenwa } }
+				    	change_culture = shenwa
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = mozabite } }
+				    	change_culture = mozabite
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = lamtuna } }
+				    	change_culture = lamtuna
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = libyan_berber_culture } }
+				    	change_culture = libyan_berber_culture
+				    }
+				    1 = {
+				        trigger = { owner = { accepted_culture = siwa_culture } }
+				    	change_culture = siwa_culture
+				    }
+				}
 				add_base_tax = 1
 				add_base_manpower = 2
 			}

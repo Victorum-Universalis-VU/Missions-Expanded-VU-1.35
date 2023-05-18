@@ -392,7 +392,7 @@ country_event = {
 		define_advisor = {
 			type = sufi_scholar_advisor
 			skill = 2
-			culture = berber
+			culture = berber_group
 			religion = ROOT
 			cost_multiplier = 0.25
 		}
@@ -932,7 +932,7 @@ province_event = {
 	is_mtth_scaled_to_size = 1
 	
 	trigger = {
-		NOT = { culture = berber }
+		NOT = { culture_group = berber_group }
 		NOT = { has_province_modifier = estate_berbers_settlement }
 		owner = {
 			has_estate_privilege = estate_berbers_berber_settlements_gra_adu

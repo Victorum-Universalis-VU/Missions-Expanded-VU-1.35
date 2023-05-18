@@ -1412,7 +1412,7 @@ country_event = { #The Papal Delegate Arrives!"
 					manpower_percentage = 0.25
 					is_at_war = no  
 					NOT = { truce_with = TUR } 
-					NOT = { is_rival = BYZ }
+					NOT = { is_rival = BYZ } #is_rival = no? The hell did they smoke?
 					is_subject = no 
 					is_bankrupt = no
 					religion = catholic
@@ -1429,7 +1429,7 @@ country_event = { #The Papal Delegate Arrives!"
 					NOT = { num_of_loans = 3 }
 					manpower_percentage = 0.25
 					is_at_war = no 
-					NOT = { is_rival = BYZ }  
+					NOT = { is_rival = BYZ } #is_rival = no? The hell did they smoke?
 					is_subject = no 
 					is_bankrupt = no
 					religion = catholic
@@ -1454,7 +1454,7 @@ country_event = { #The Papal Delegate Arrives!"
 					NOT = { num_of_loans = 3 }
 					manpower_percentage = 0.25
 					is_at_war = no   
-					NOT = { is_rival = BYZ }
+					NOT = { is_rival = BYZ } #is_rival = no? The hell did they smoke?
 					is_subject = no 
 					is_bankrupt = no
 					religion = catholic
@@ -1479,7 +1479,7 @@ country_event = { #The Papal Delegate Arrives!"
 					NOT = { num_of_loans = 3 }
 					manpower_percentage = 0.25
 					is_at_war = no  
-					NOT = { is_rival = BYZ } #is_rival = no ? The hell did they smoke ?
+					NOT = { is_rival = BYZ } #is_rival = no? The hell did they smoke?
 					is_subject = no 
 					is_bankrupt = no
 					religion = catholic
@@ -1514,7 +1514,7 @@ country_event = { #The Papal Delegate Arrives!"
 					manpower_percentage = 0.25
 					is_at_war = no  
 					NOT = { truce_with = TUR } 
-					NOT = { is_rival = BYZ }
+					NOT = { is_rival = BYZ } #is_rival = no? The hell did they smoke?
 					is_subject = no 
 					is_bankrupt = no
 					religion = catholic
@@ -2572,7 +2572,7 @@ country_event = { #Blood is Thicker than Water
 		tag = TRE 
 		alliance_with = BYZ 
 		is_subject = no 
-	#	NOT = { development = BYZ } 
+	#	NOT = { total_development = BYZ }
 		TRE = {
 			has_opinion = {
 				who = BYZ 
