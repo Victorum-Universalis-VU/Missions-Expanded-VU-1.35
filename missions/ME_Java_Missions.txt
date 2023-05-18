@@ -12,11 +12,11 @@ Javan_missions_1 = {
 					AND = {
 						tag = MSA
 						OR = {
-							was_tag = SUN
-							was_tag = CRB
+						#	was_tag = SUN
+						#	was_tag = CRB
 							was_tag = BLI
 							was_tag = MTR 
-							was_tag = BAN
+						#	was_tag = BAN
 							was_tag = BLM
 						}
 					}
@@ -190,11 +190,11 @@ Javan_missions_2 = {
 					AND = {
 						tag = MSA
 						OR = {
-							was_tag = SUN
-							was_tag = CRB
+						#	was_tag = SUN
+						#	was_tag = CRB
 							was_tag = BLI
 							was_tag = MTR 
-							was_tag = BAN
+						#	was_tag = BAN
 							was_tag = BLM
 						}
 					}
@@ -341,11 +341,11 @@ Javan_missions_3 = {
 					AND = {
 						tag = MSA
 						OR = {
-							was_tag = SUN
-							was_tag = CRB
+						#	was_tag = SUN
+						#	was_tag = CRB
 							was_tag = BLI
 							was_tag = MTR 
-							was_tag = BAN
+						#	was_tag = BAN
 							was_tag = BLM
 						}
 					}
@@ -557,11 +557,11 @@ Javan_missions_4 = {
 					AND = {
 						tag = MSA
 						OR = {
-							was_tag = SUN
-							was_tag = CRB
+						#	was_tag = SUN
+						#	was_tag = CRB
 							was_tag = BLI
 							was_tag = MTR 
-							was_tag = BAN
+						#	was_tag = BAN
 							was_tag = BLM
 						}
 					}
@@ -721,11 +721,11 @@ Javan_missions_5 = {
 					AND = {
 						tag = MSA
 						OR = {
-							was_tag = SUN
-							was_tag = CRB
+						#	was_tag = SUN
+						#	was_tag = CRB
 							was_tag = BLI
 							was_tag = MTR 
-							was_tag = BAN
+						#	was_tag = BAN
 							was_tag = BLM
 						}
 					}
