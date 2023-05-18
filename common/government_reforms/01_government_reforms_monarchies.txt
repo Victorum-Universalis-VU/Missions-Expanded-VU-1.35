@@ -1,3 +1,10 @@
+#Victorum Universalis Note -
+#There is no way to modify the new gov system without overriding it; disappointed in PDX's choice here.
+#File has been documented well and organised to the best of our abilities. Any submods or addons desiring to add their own entries will need to manually update this entirely
+#after every VU update. This is out of our hands and there are no suggestions for this.
+#Furthermore, this file contains new entries throughout various sections. The majority of reforms though are at the bottom.
+#Many thanks to you all - San Felipe.
+
 
 monarchy_mechanic = {
 	monarchy = yes
@@ -70,7 +77,6 @@ elective_monarchy_reform = {
 		factor = 0.5
 	}
 }
-
 plutocratic_reform = {
 	icon = "asian_scripture"
 	allow_normal_conversion = yes
@@ -260,8 +266,9 @@ shogunate = {
 	allow_vassal_war = yes
 	allow_vassal_alliance = yes
 	lock_level_when_selected = yes
-	can_change_primary_culture = no
-
+	#Start of VU addition by San Felipe
+#	can_change_primary_culture = no #Turned off in VU but Turned on in EU4 vanilla; not on in GE by San Felipe
+    #End of VU addition by San Felipe
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
 		government_abilities = {
@@ -315,10 +322,9 @@ feudal_france_reform = {
 	icon = "feudal_france_reform"
 	allow_normal_conversion = no
 	potential = {
-		has_dlc = "Domination"
+		has_dlc = "Domination" 
 		OR = {
 			tag = FRA
-			tag = BFR
 			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = feudal_france_reform
@@ -337,7 +343,7 @@ feudal_france_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 		has_appanages = yes
-		need_crownland_to_annex = yes
+		#need_crownland_to_annex = yes
 		nobility_loyalty_hit_on_integration = yes
 	}
 }
@@ -367,13 +373,10 @@ absolutist_france_reform = {
 	icon = "absolutist_france_reform"
 	allow_normal_conversion = no
 	potential = {
-		has_dlc = "Domination"
+		has_dlc = "Domination" 
 		OR = {
-			AND = {
-			  OR = {
-				  tag = FRA
-					tag = BFR
-				}
+			AND = { 
+				tag = FRA 
 				OR = {
 					has_reform = absolutist_france_reform
 					have_had_reform = absolutist_france_reform
@@ -389,11 +392,8 @@ absolutist_france_reform = {
 	}
 	trigger = {
 		OR = {
-			AND = {
-			  OR = {
-			  	tag = FRA
-			  	tag = BFR
-			  }
+			AND = { 
+				tag = FRA 
 				OR = {
 					has_reform = absolutist_france_reform
 					have_had_reform = absolutist_france_reform
@@ -417,14 +417,13 @@ absolutist_france_reform = {
 	modifiers = {
 		all_estate_influence_modifier = -0.1
 		max_absolutism = 10
-
+		
 	}
 
 	custom_attributes = {
-		centralize_state_development = yes
+		centralize_state_development = yes 
 	}
 }
-
 indep_daimyo = {
 	icon = "samurai"
 	allow_normal_conversion = no
@@ -518,9 +517,11 @@ celestial_empire = {
 		church_influence_modifier = -0.1
 		nobles_influence_modifier = -0.1
 		burghers_influence_modifier = -0.1
-		governing_capacity = 500
+		#Start of VU additions by San Felipe
+		governing_capacity = 600 #Increased to 600 from 500 (EU vanilla) & Increased to 600 from 470 (GE) by San Felipe
+		#End of VU additions by San Felipe
 	}
-
+	
 	ai = {
 		factor = 1000 # should always be picked if available
 	}
@@ -645,11 +646,11 @@ chinese_warlord = {
 	fixed_rank = 2
 
 	modifiers = {
-		manpower_recovery_speed = 0.25
+		manpower_recovery_speed = 0.15 #VU
 		governing_capacity = 500
 		liberty_desire = 50
 	}
-
+	
 	ai = {
 		factor = 1000
 	}
@@ -689,7 +690,7 @@ kalmar_union = {
 			}
 		}
 	}
-
+	
 	custom_attributes = {
 		locked_government_type = yes
 		kalmar_union_succession = yes
@@ -803,7 +804,11 @@ english_monarchy = {
 	icon = "british_queen"
 	allow_normal_conversion = no
 	potential = {
-		have_had_reform = english_monarchy
+		OR = {
+			have_had_reform = english_monarchy
+			tag = ENG
+			was_tag = ENG
+		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -817,7 +822,9 @@ english_monarchy = {
 	legacy_equivalent = english_monarchy_legacy
 	start_territory_to_estates = 0.3
 	modifiers = {
-		governing_capacity = 50
+		#Start of VU additions by San Felipe
+		governing_capacity = 150 #Increased to 150 from 100 (old VU value) & Increased to 150 from 50 (EU4 vanilla) due to more provinces in England by San Felipe
+		#End of VU additions by San Felipe
 		legitimacy = 0.5
 		global_unrest = -1
 		max_absolutism = -30
@@ -857,6 +864,7 @@ british_monarchy = {
 	nation_designer_trigger = {
 		has_dlc = "Domination"
 	}
+
 	start_territory_to_estates = 0.3
 	modifiers = {
 		max_absolutism = -15
@@ -1036,7 +1044,7 @@ ottoman_government = {
 		}
 	}
 	conditional = {
-		allow = {
+		allow = { 
 			has_dlc = "Cradle of Civilization"
 			NOT = { has_dlc = "Domination" }
 		}
@@ -1045,7 +1053,7 @@ ottoman_government = {
 	}
 	conditional = {
 		allow = {
-			has_dlc = "Rights of Man"
+			has_dlc = "Rights of Man" 
 			NOT = { has_dlc = "Domination" }
 		}
 		has_harem = yes
@@ -1067,10 +1075,18 @@ byzantine_autocracy_reform = {
 		}
 	}
 	modifiers = {
-		max_absolutism = -25
+		max_absolutism = -20
 		prestige = 0.5
+		advisor_pool = 1
+		governing_capacity = 50
+		diplomatic_reputation = 1
+		yearly_corruption = 0.1
+		min_autonomy = 10
+		global_institution_spread = 0.1
+		merc_maintenance_modifier = -0.15
+		land_maintenance_modifier = 0.10
 	}
-
+	
 	#custom_attributes = {
 	#	civil_war_on_every_new_ruler = yes
 	#}
@@ -1094,9 +1110,9 @@ reformed_byzantine_monarchy_reform = {
 		years_of_nationalism = -5
 		max_possible_parliament_seats = 8
 	}
-
+	
 	conditional = {
-		allow = {
+		allow = { 
 			OR = {
 				has_dlc = "Common Sense"
 				has_dlc = "Domination"
@@ -1192,8 +1208,8 @@ bulgarian_tsardom_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 30
 	modifiers = {
-		governing_capacity = 150
-		can_claim_states = yes
+		governing_capacity = 150 
+		can_claim_states = yes 
 		harsh_treatment_cost = -0.25
 	}
 	fixed_rank = 3
@@ -1297,12 +1313,12 @@ irish_highkingdom_reform = {
 #	nation_designer_cost = 10
 #	modifiers = {
 #		nobles_influence_modifier = -0.1
-#		diplomatic_reputation = 1
+#		diplomatic_reputation = 1 
 #		defensiveness = 0.1
 #	}
-#
+#	
 #	conditional = {
-#		allow = {
+#		allow = { 
 #			OR = {
 #				has_dlc = "Common Sense"
 #				has_dlc = "Domination"
@@ -1314,42 +1330,6 @@ irish_highkingdom_reform = {
 #		factor = 1
 #	}
 #}
-
-#VU addition by San Felipe
-scottish_monarchy = {
-	icon = "scottish_monarchy"
-	allow_normal_conversion = no
-	potential = {
-	    OR = {
-		    primary_culture = scottish
-			have_had_reform = scottish_monarchy
-		}
-	}
-	lock_level_when_selected = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 10
-	nation_designer_trigger = {
-		has_dlc = "Common Sense"
-	}
-	legacy_equivalent = scottish_monarchy_legacy
-	start_territory_to_estates = 0.2
-	modifiers = {
-		governing_capacity = 100 #Increased to 150 from 100 (old VU value) & Increased to 150 from 50 (EU4 vanilla) due to more provinces in England by San Felipe
-		legitimacy = 0.35
-		global_unrest = -0.75
-		max_absolutism = -25
-		nobles_influence_modifier = -0.075
-	}
-
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-		}
-		custom_attributes = {
-			enables_privy_council = yes #pseudoparliament and a development of the King's Council
-		}#fixdis every option is the same
-	}
-}
 
 sharifate_reform = {
 	icon = "caliphate"
@@ -1468,7 +1448,7 @@ barbary_sultanate_reform = {
 	modifiers = {
 		land_attrition = -0.1
 		may_perform_slave_raid = yes
-		coast_raid_range = 1
+		coast_raid_range = 1 
 		navy_tradition_decay = -0.005
 	}
 	conditional = {
@@ -1814,7 +1794,7 @@ admiralty_regime_reform = {
 		leader_naval_fire = 1
 		naval_tradition_from_battle = 0.5
 		allowed_marine_fraction = 0.1
-		max_admiral_fire = 1
+		max_admiral_fire = 1 
 	}
 	custom_attributes = {
 		cheaper_coastal_province_core = yes
@@ -1873,7 +1853,7 @@ modernized_ottoman_government = {
 	}
 	maintain_dynasty = yes
 	modifiers = {
-		monarch_admin_power = 1
+		monarch_admin_power = 1 
 		legitimacy = 1
 		all_estate_influence_modifier = -0.1
 		max_absolutism = 10
@@ -1895,7 +1875,7 @@ modernized_ottoman_government = {
 		}
 	}
 	conditional = {
-		allow = {
+		allow = { 
 			has_dlc = "Cradle of Civilization"
 			NOT = { has_dlc = "Domination" }
 		}
@@ -1904,7 +1884,7 @@ modernized_ottoman_government = {
 	}
 	conditional = {
 		allow = {
-			has_dlc = "Rights of Man"
+			has_dlc = "Rights of Man" 
 			NOT = { has_dlc = "Domination" }
 		}
 		has_harem = yes
@@ -1950,13 +1930,14 @@ reorganized_ottoman_government = {
 	}
 
 	conditional = {
-		allow = {
+		allow = { 
 			has_dlc = "Cradle of Civilization"
 			NOT = { has_dlc = "Domination" }
 		}
 		has_pashas = yes
 		has_janissaries = yes
 	}
+
 	conditional = {
 		allow = { has_dlc = "Domination" }
 		has_pashas = yes
@@ -2012,7 +1993,7 @@ sultanate_of_rum_reform = {
 		}
 	}
 	conditional = {
-		allow = {
+		allow = { 
 			has_dlc = "Cradle of Civilization"
 			NOT = { has_dlc = "Domination" }
 		}
@@ -2021,7 +2002,7 @@ sultanate_of_rum_reform = {
 	}
 	conditional = {
 		allow = {
-			has_dlc = "Rights of Man"
+			has_dlc = "Rights of Man" 
 			NOT = { has_dlc = "Domination" }
 		}
 		has_harem = yes
@@ -2055,6 +2036,19 @@ eyalet_government = {
 		global_unrest = -1
 		no_religion_penalty = yes
 		governing_capacity = 100
+	}
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { is_subject_of_type = eyalet }
+					NOT = { is_subject_of_type = core_eyalet }
+				}
+				country_event = {
+					id = flavor_tur.1000
+				}
+			}
+		}
 	}
 
 	custom_attributes = {
@@ -2094,6 +2088,19 @@ barbary_eyalet_government = {
 		capture_ship_chance = 0.25
 		naval_forcelimit_modifier = 0.1
 		governing_capacity = 100
+	}
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { is_subject_of_type = eyalet }
+					NOT = { is_subject_of_type = core_eyalet }
+				}
+				country_event = {
+					id = flavor_tur.1000
+				}
+			}
+		}
 	}
 
 	custom_attributes = {
@@ -2351,6 +2358,7 @@ principality = {
 	allow_normal_conversion = yes
 	potential = {
 		NOT = { has_reform = tsardom }
+
 		religion = orthodox
 		OR = {
 			culture_group = east_slavic
@@ -2379,10 +2387,11 @@ principality = {
 		has_streltsy = yes
 		allowed_streltsy_fraction = 0.1
 	}
+
 	conditional = {
-		allow = {
+		allow = { 
 			OR = {
-				has_dlc = "Third Rome"
+				has_dlc = "Third Rome" 
 				has_dlc = "Domination"
 			}
 		}
@@ -2411,6 +2420,12 @@ tsardom = {
 				tag = RUS
 				NOT = { map_setup = map_setup_random }
 			}
+			#Start of VU addition by San Felipe
+			AND = {
+				tag = TZR
+				NOT = { map_setup = map_setup_random }
+			}
+			#End of VU addition by San Felipe
 			AND = {
 				tag = UKR
 				NOT = { map_setup = map_setup_random }
@@ -2440,7 +2455,7 @@ tsardom = {
 		global_manpower_modifier = 0.20
 		yearly_absolutism = 0.5
 		global_autonomy = -0.05
-		governing_capacity = 350
+		governing_capacity = 500 #VU
 		has_streltsy = yes
 		allowed_streltsy_fraction = 0.2
 	}
@@ -2450,8 +2465,8 @@ tsardom = {
 		claim_states = yes
 	}
 	conditional = {
-		allow = {
-			has_dlc = "Third Rome"
+		allow = { 
+			has_dlc = "Third Rome" 
 			NOT = { has_dlc = "Domination" }
 		}
 		government_abilities = {
@@ -2549,7 +2564,7 @@ russian_empire_reform = {
 
 	modifiers = {
 		max_absolutism = 10
-		yearly_absolutism = 0.05
+		yearly_absolutism = 0.5
 		global_autonomy = -0.05
 		global_manpower_modifier = 0.20
 		embracement_cost = -0.5
@@ -2567,7 +2582,6 @@ russian_empire_reform = {
 		}
 	}
 }
-
 mamluk_government = {
 	icon = "mamluk_government"
 	allow_normal_conversion = yes
@@ -2597,7 +2611,9 @@ mamluk_government = {
 		monarch_admin_power = 2
 		same_culture_advisor_cost = -0.25
 		promote_culture_cost = -0.5
-		governing_capacity = 50
+		#Start of VU addition by San Felipe
+		governing_capacity = 75 #Decreased from 100 (old VU value) but Increased to 75 from 50 (EU4 vanilla) by San Felipe
+		#End of VU addition by San Felipe
 		nobles_influence_modifier = 0.1
 	}
 
@@ -2645,7 +2661,9 @@ feudal_theocracy = {
 		missionaries = 1
 		global_missionary_strength = 0.01
 		tolerance_own = 2
-		governing_capacity = 50
+		#Start of VU addition by San Felipe
+		governing_capacity = 75 #Decreased from 100 (old VU value) but Increased to 75 from 50 (EU4 vanilla) by San Felipe
+		#End of VU addition by San Felipe
 		brahmins_hindu_loyalty_modifier = 0.05
 		church_loyalty_modifier = 0.05
 	}
@@ -2677,7 +2695,7 @@ mughal_government = {
 
 	modifiers = {
 		tolerance_own = 1
-		governing_capacity = 150
+		governing_capacity = 300 #No change in VU but was 150 GE
 	}
 
 	assimilation_cultures = {
@@ -2822,6 +2840,38 @@ mughal_government = {
 		slavic = {
 			province_warscore_cost = -0.15
 		}
+		#VU culture groups
+		#Khoisan removed, as it is in a colonial region.
+		turkish_g = {
+			siege_ability = 0.1			#Current modifier courtesy of Imperatrix Helena
+		}
+		brythonic = {
+			defensiveness = 0.10			#Current modifier courtesy of Imperatrix Helena
+		}
+		illyrian = {
+			recover_army_morale_speed = 0.05			#Current modifier courtesy of Imperatrix Helena
+		}
+		aquitanian = {
+			hostile_attrition = 0.5			#Current modifier courtesy of Imperatrix Helena
+		}
+		dacian = {
+			harsh_treatment_cost = -0.10			#Current modifier courtesy of Imperatrix Helena
+		}
+		egyptian_group = {
+			tolerance_heathen = 0.5			#Current modifier courtesy of Imperatrix Helena
+		}
+		saharan_group = {
+			stability_cost_modifier = -0.05			#Current modifier courtesy of Imperatrix Helena
+		}
+		berber_group = {
+			privateer_efficiency = 0.25
+		}
+		miao_g = {
+			global_trade_goods_size_modifier = 0.05
+		}
+		unified_celtic_group = {
+			defensiveness = 0.25
+		}
 	}
 }
 
@@ -2841,7 +2891,7 @@ revolutionary_empire_reform = {
 		global_manpower_modifier = 0.25
 		land_morale = 0.10
 		global_autonomy = -0.2
-		governing_capacity = 150
+		governing_capacity = 300 #No change in VU but was 150 GE
 		max_revolutionary_zeal = 50
 		papal_influence = -100
 	}
@@ -3132,7 +3182,6 @@ korean_monarchy = {
 		factor = 100
 	}
 }
-
 sakdina_system_reform = {
 	icon = "sakdina_system_reform"
 	allow_normal_conversion = yes
@@ -3393,9 +3442,9 @@ polish_great_sejm = {
 	modifiers = {
 		nobles_influence_modifier = 0.05
 		max_absolutism = -20
-		global_unrest = -1
+		global_unrest = -1 
 		reform_progress_growth = -0.2
-
+		
 	}
 
 	conditional = {
@@ -3411,7 +3460,7 @@ polish_great_sejm = {
 
 polish_elective_monarchy = {
 	icon = "elective_monarchy"
-	allow_normal_conversion = no
+	allow_normal_conversion = no 
 	lock_level_when_selected = yes
 	potential = {
 		OR = {
@@ -3463,7 +3512,7 @@ polish_elective_monarchy = {
 
 polish_autocratic_monarchy = {
 	icon = "king"
-	allow_normal_conversion = no
+	allow_normal_conversion = no 
 	lock_level_when_selected = yes
 	potential = {
 		OR = {
@@ -3482,8 +3531,8 @@ polish_autocratic_monarchy = {
 	}
 	modifiers = {
 		administrative_efficiency = 0.05
-		max_absolutism = 10
-		global_manpower_modifier = 0.2
+		max_absolutism = 10 
+		global_manpower_modifier = 0.2 
 		reform_progress_growth = 0.1
 	}
 }
@@ -3506,8 +3555,8 @@ lithuanian_grand_kingdom = {
 	nation_designer_cost = 30
 	modifiers = {
 		no_religion_penalty = yes
-		global_autonomy = -0.05
-		governing_capacity = 250
+		global_autonomy = -0.05 
+		governing_capacity = 250 
 	}
 }
 
@@ -3523,7 +3572,7 @@ lithuanian_grand_empire = {
 			has_reform = lithuanian_grand_empire
 			AND = {
 				mission_completed = sca_mission_lit_polish_union
-				total_development = 1000
+				total_development = 1000 
 			}
 		}
 	}
@@ -3534,7 +3583,7 @@ lithuanian_grand_empire = {
 	modifiers = {
 		no_religion_penalty = yes
 		monarch_admin_power = 2
-		governing_capacity = 300
+		governing_capacity = 300 
 	}
 }
 
@@ -3625,7 +3674,7 @@ livonian_naval_monarchy = {
 		monarch_diplomatic_power = 2
 		burghers_loyalty_modifier = 0.1
 	}
-
+	
 	removed_effect = {
 		country_event = { id = dutch_republic.33 }
 	}
@@ -3993,6 +4042,7 @@ livonian_constitutional_monarchy = {
 				government_reform = livonian_constitutional_monarchy
 			}
 		}
+		is_not_blocked_by_estate_privilege = { estate = estate_nobles }
 	}
 	valid_for_nation_designer = yes
 	nation_designer_trigger = {
@@ -4302,7 +4352,7 @@ norwegian_parliamentary_monarchy = {
 	conditional = {
 		allow = {
 			OR = {
-				has_dlc = "Common Sense"
+				has_dlc = "Common Sense" 
 				has_dlc = "Domination"
 			}
 		}
@@ -4506,9 +4556,9 @@ blackmail_nobility_reform = {
 		full_idea_group = spy_ideas
 	}
 	modifiers = {
-		nobles_influence_modifier = -0.1
-		maratha_exclusive_influence_modifier = -0.1
-		rajput_exclusive_influence_modifier = -0.1
+		nobles_influence_modifier = -0.15
+		maratha_exclusive_influence_modifier = -0.15
+		rajput_exclusive_influence_modifier = -0.15
 		allow_free_estate_privilege_revocation = yes
 	}
 	custom_attributes = {
@@ -4849,7 +4899,6 @@ ministerialis_promotion_reform = {
 		factor = 1
 	}
 }
-
 #Bureaucracy:
 
 centralize_reform = {
@@ -5268,7 +5317,7 @@ ottoman_provincial_government_system_reform = {
 		promote_culture_cost = -0.25
 	}
 	conditional = {
-		allow = {
+		allow = { 
 			OR = {
 				has_dlc = "Cradle of Civilization"
 				has_dlc = "Domination"
@@ -5306,7 +5355,6 @@ ottoman_provincial_government_system_reform = {
 		factor = 1
 	}
 }
-
 #State and Religion
 #in Common
 restoration_of_clergy_reform = {
@@ -5349,7 +5397,7 @@ clergy_in_administration_reform = {
 	}
 	modifiers = {
 		free_adm_policy = 1
-
+		
 		brahmins_hindu_influence_modifier = 0.1
 		brahmins_hindu_loyalty_modifier = 0.05
 		church_influence_modifier = 0.1
@@ -5405,7 +5453,7 @@ of_noble_bearing_reform = {
 		nobles_influence_modifier = 0.1
 		maratha_exclusive_influence_modifier = 0.1
 		rajput_exclusive_influence_modifier = 0.1
-		nobles_loyalty_modifier = 0.05
+#		nobles_loyalty_modifier = 0.05
 		maratha_exclusive_loyalty_modifier = 0.05
 		rajput_exclusive_loyalty_modifier = 0.05
 	}
@@ -5636,7 +5684,6 @@ administration_of_the_parliament_reform = {
 		factor = 2
 	}
 }
-
 #deliberative_assembly
 
 # parliamentary_reform defined in common file
@@ -5800,11 +5847,10 @@ ottoman_siyasah_tax_reform = {
 		no_crownland_money_loss_to_age = yes
 	}
 }
-
 legislative_sejm = {
 	icon = "legislative_sejm_reform"
 	allow_normal_conversion = yes
-
+	
 	potential = {
 		OR = {
 			has_reform = polish_elective_monarchy
@@ -5812,20 +5858,20 @@ legislative_sejm = {
 		}
 		has_dlc = "Res Publica"
 	}
-
+	
 	trigger = {
 		OR = {
 			has_reform = polish_elective_monarchy
 			has_reform = elective_monarchy
 		}
 	}
-
+	
 	modifiers = {
 		local_heir_adm = 1
 		local_heir_dip = 1
 		local_heir_mil = 1
 	}
-
+	
 	ai = {
 		factor = 1
 	}
@@ -5834,7 +5880,7 @@ legislative_sejm = {
 integrated_sejmiks = {
 	icon = "integrated_sejmiks_reform"
 	allow_normal_conversion = yes
-
+	
 	potential = {
 		OR = {
 			has_reform = polish_elective_monarchy
@@ -5842,18 +5888,18 @@ integrated_sejmiks = {
 		}
 		has_dlc = "Res Publica"
 	}
-
+	
 	trigger = {
 		OR = {
 			has_reform = polish_elective_monarchy
 			has_reform = elective_monarchy
 		}
 	}
-
+	
 	modifiers = {
 		years_of_nationalism = -5
 	}
-
+	
 	ai = {
 		factor = 1
 	}
@@ -5885,7 +5931,7 @@ justicia_de_aragon_reform = {
 	}
 	modifiers = {
 		adm_advisor_cost = -0.33
-		country_admin_power = 1
+		country_admin_power = 1 
 	}
 }
 
@@ -5948,7 +5994,7 @@ parliament_vs_monarchy_reform = {
 		has_dlc = "Domination"
 		has_reform = parliament_vs_monarchy_reform
 	}
-
+	
 	trigger = {
 		has_parliament = yes
 	}
@@ -5971,7 +6017,6 @@ parliament_vs_monarchy_reform = {
 		factor = 1
 	}
 }
-
 #Legitimation of Power
 machiavellianistic_rule_reform = {
 	icon = "machiavellianism"
@@ -6082,17 +6127,19 @@ letat_cest_moi_reform = {
 	icon = "letat_cest_moi"
 	allow_normal_conversion = yes
 	modifiers = {
-		governing_capacity = 250
+		governing_capacity = 500  #No change in VU
 	}
 	ai = {
 		factor = 1.5
 		modifier = {
 			factor = 2
-			tag = FRA
-		}
-		modifier = {
-			factor = 2
-			tag = BFR
+			OR = {
+			    tag = FRA
+			    tag = BFR
+			    tag = FSE
+			    tag = NPF
+			    tag = OFR
+			}
 		}
 	}
 }
@@ -6155,16 +6202,20 @@ political_absolutism_reform = {
 	modifiers = {
 		administrative_efficiency = 0.025
 		max_absolutism_effect = 0.15
+		#max_efficient_absolutism = 10	#For 1.35
+		free_policy = 1
 	}
 	ai = {
 		factor = 1.5
 		modifier = {
 			factor = 2
-			tag = FRA
-		}
-		modifier = {
-			factor = 2
-			tag = BFR
+			OR = {
+			    tag = FRA
+			    tag = BFR
+			    tag = FSE
+			    tag = NPF
+			    tag = OFR
+			}
 		}
 	}
 }
@@ -6295,10 +6346,10 @@ become_rev_republic_reform = {
 	icon = "become_rev_republic_reform"
 	allow_normal_conversion = yes
 
-	potential = {
+	potential = { 
 		is_revolutionary = yes
 	}
-
+	
 	trigger = {
 		has_reform = revolutionary_empire_reform
 		if = {
@@ -6314,7 +6365,6 @@ become_rev_republic_reform = {
 			NOT = { stability = 2 }
 		}
 	}
-
 	modifiers = {
 	}
 	effect = {
@@ -6374,21 +6424,21 @@ mng_seal_of_the_emperor_reform = {
 	icon = "mng_seal_of_the_emperor_reform"
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
+		OR = { 
 			has_reform = mng_seal_of_the_emperor_reform
 			mission_completed = mng_crisis_ming_dynasty
 		}
 	}
 	trigger = {
-		OR = {
+		OR = { 
 			has_reform = mng_seal_of_the_emperor_reform
 			mission_completed = mng_crisis_ming_dynasty
 		}
 	}
 	modifiers = {
-		allow_free_estate_privilege_revocation = yes
-		governing_capacity = 200
-		max_absolutism = 10
+		allow_free_estate_privilege_revocation = yes 
+		governing_capacity = 200 
+		max_absolutism = 10 
 	}
 	ai = {
 		factor = 10
@@ -6399,16 +6449,16 @@ qng_grand_council_reform = {
 	icon = "royal_court"
 	allow_normal_conversion = no
 	potential = {
-		OR = {
+		OR = { 
 			mission_completed = qng_junji_chu
 			has_reform = qng_grand_council_reform
 		}
 	}
-
+	
 	modifiers = {
 		all_estate_loyalty_equilibrium = 0.1
 		governing_capacity_modifier = 0.1
-		meritocracy = 0.25
+		meritocracy = 0.25	
 	}
 }
 
@@ -6428,7 +6478,7 @@ absolute_shogunate_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 100
 	nation_designer_trigger = {
-		capital_scope = { region = japan_region }
+		capital_scope = { region = japan_region } 
 	}
 	fixed_rank = 3
 	maintain_dynasty = yes
@@ -6444,7 +6494,7 @@ japanese_divine_empire = {
 	icon = "japanese_divine_empire"
 	allow_normal_conversion = no
 	potential = {
-		OR = {
+		OR = { 
 			AND = {
 				is_playing_custom_nation = yes
 				has_reform = japanese_divine_empire
@@ -6456,31 +6506,40 @@ japanese_divine_empire = {
 		NOT = { has_reform = absolute_shogunate_reform }
 	}
 	trigger = {
-		num_of_estate_privileges = {
-			estate = estate_nobles
-			value = 6
+		if = { 
+			limit = { has_estate = estate_nobles }
+			num_of_estate_privileges = {
+				estate = estate_nobles 
+				value = 6 
+			}
 		}
-		num_of_estate_privileges = {
-			estate = estate_burghers
-			value = 6
+		if = { 
+			limit = { has_estate = estate_burghers }
+			num_of_estate_privileges = {
+				estate = estate_burghers 
+				value = 6 
+			}
 		}
-		num_of_estate_privileges = {
-			estate = estate_church
-			value = 6
+		if = { 
+			limit = { has_estate = estate_church }
+			num_of_estate_privileges = {
+				estate = estate_church 
+				value = 6 
+			}
 		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 100
 	nation_designer_trigger = {
-		capital_scope = { region = japan_region }
+		capital_scope = { region = japan_region } 
 	}
 	fixed_rank = 3
 	maintain_dynasty = yes
 	modifiers = {
 		all_estate_possible_privileges = 1
-		no_stability_loss_on_monarch_death = yes
+		no_stability_loss_on_monarch_death = yes 
 		all_estate_loyalty_equilibrium = 0.1
-		tolerance_own = 3
+		tolerance_own = 3 
 		allowed_samurai_fraction = 0.1
 	}
 }
@@ -6489,7 +6548,7 @@ land_christian_sun_reform = {
 	icon = "land_christian_sun_reform"
 	allow_normal_conversion = no
 	potential = {
-		OR = {
+		OR = { 
 			AND = {
 				has_reform = land_christian_sun_reform
 				is_playing_custom_nation = yes
@@ -6512,21 +6571,21 @@ land_christian_sun_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 150
 	nation_designer_trigger = {
-		capital_scope = { region = japan_region }
+		capital_scope = { region = japan_region } 
 	}
 	fixed_rank = 3
 	maintain_dynasty = yes
 	modifiers = {
 		manpower_recovery_speed = 0.15
-		cb_on_religious_enemies = yes
-		army_tradition = 1
+		cb_on_religious_enemies = yes 
+		army_tradition = 1 
 		allowed_samurai_fraction = 0.1
 	}
-
+	
 	custom_attributes = {
-		generals_become_rulers = yes
+		generals_become_rulers = yes 
 	}
-
+	
 	government_abilities = {
 		land_of_the_christian_sun_mechanic
 	}
@@ -6557,17 +6616,17 @@ system_of_councils_reform = {
 	icon = "hispanic_monarchy"
 	allow_normal_conversion = no
 	potential = {
-		OR = {
+		OR = { 
 			has_reform = system_of_councils_reform
 			mission_completed = spa_system_councils
-			AND = {
-				religion_group = christian
-				culture_group = iberian
+			AND = { 
+				religion_group = christian 
+				culture_group = iberian 
 			}
 		}
 	}
 	trigger = {
-		OR = {
+		OR = { 
 			has_reform = system_of_councils_reform
 			mission_completed = spa_system_councils
 		}
@@ -6576,9 +6635,9 @@ system_of_councils_reform = {
 		system_of_councils_mechanic
 	}
 	modifiers = {
-		allow_free_estate_privilege_revocation = yes
+		allow_free_estate_privilege_revocation = yes 
 		diplomatic_upkeep = 2
-		monarch_admin_power = 1
+		monarch_admin_power = 1 
 	}
 }
 
@@ -6586,9 +6645,9 @@ courts_of_navarra = {
 	icon = "parliament_hall"
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-			primary_culture = basque
-			tag = NAV
+		OR = { 
+			primary_culture = basque 
+			tag = NAV 
 		}
 	}
 	modifiers = {
@@ -6950,7 +7009,7 @@ belgian_kingdom_reform = {
 }
 
 ##################################################################
-# VU - San Felipe Additions - START OF UNIQUE FRENCH GOV REFORMS #
+# VU - San Felipe Additions - START OF UNIQUE FRENCH GOV REFORMS # 
 ##################################################################
 # These steps are connected with 02_government_reforms_republic #
 #################################################################
@@ -6963,7 +7022,7 @@ french_kingdom_reform = {
 		culture_group = french
 		have_had_reform = french_kingdom_reform
 	}
-
+	
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 15
@@ -6998,17 +7057,17 @@ french_kingdom_reform = {
 french_consulate_reform = { #consulate_reform
 	icon = "consulate"
 	allow_normal_conversion = yes
-
+	
 	potential = {
 		culture_group = french
 		is_revolutionary = no
 	}
-
+	
 	trigger = {
 		culture_group = french
 		has_reform = directory_republic_reform
 	}
-
+	
 	modifiers = {
 		global_autonomy = -0.05
 		governing_capacity = 300  #No change in VU
@@ -7023,15 +7082,15 @@ first_french_empire_reform = { #revolutionary_empire_reform
 	lock_level_when_selected = yes
 	icon = "napoleonic_dynasty"
 	allow_normal_conversion = no
-
-	potential = {
+	
+	potential = { 
 		OR = {
 		    tag = NPF
 			culture_group = french
 		}
 		is_revolutionary = no
 	}
-
+	
 	trigger = {
 		OR = {
 		    tag = NPF
@@ -7039,7 +7098,7 @@ first_french_empire_reform = { #revolutionary_empire_reform
 		}
 		has_reform = french_consulate_reform
 	}
-
+	
 	legacy_equivalent = first_french_empire_legacy #revolutionary_empire
 	valid_for_new_country = no
 	uses_revolutionary_zeal = no
@@ -7061,15 +7120,15 @@ first_french_empire_reform = { #revolutionary_empire_reform
 french_monarchic_restoration_reform = { #revolutionary_empire_reform
 	icon = "bourbon_dynasty"
 	allow_normal_conversion = no
-
-	potential = {
+	
+	potential = { 
 		OR = {
 		    tag = BFR
 			culture_group = french
 		}
 		is_revolutionary = no
 	}
-
+	
 	trigger = {
 		OR = {
 		    tag = BFR
@@ -7077,7 +7136,7 @@ french_monarchic_restoration_reform = { #revolutionary_empire_reform
 		}
 		has_reform = french_kingdom_reform
 	}
-
+	
 	maintain_dynasty = yes
 	royal_marriage = no
 	valid_for_nation_designer = no
@@ -7103,15 +7162,15 @@ french_monarchic_restoration_reform = { #revolutionary_empire_reform
 french_orleanist_restoration_reform = { #revolutionary_empire_reform
 	icon = "orleanist_dynasty"
 	allow_normal_conversion = no
-
-	potential = {
+	
+	potential = { 
 		OR = {
 		    tag = OFR
 			culture_group = french
 		}
 		is_revolutionary = no
 	}
-
+	
 	trigger = {
 		OR = {
 		    tag = OFR
@@ -7119,7 +7178,7 @@ french_orleanist_restoration_reform = { #revolutionary_empire_reform
 		}
 		has_reform = french_monarchic_restoration_reform
 	}
-
+	
 	maintain_dynasty = yes
 	royal_marriage = no
 	valid_for_nation_designer = no
@@ -7146,15 +7205,15 @@ french_first_empire_restoration_reform = { #revolutionary_empire_reform
     # French unique gov 1814 – 1815, France is ruled by Napoleon III
 	icon = "napoleonic_dynasty"
 	allow_normal_conversion = no
-
-	potential = {
+	
+	potential = { 
 		OR = {
 		    tag = NPF
 			culture_group = french
 		}
 		is_revolutionary = no
 	}
-
+	
 	trigger = {
 		OR = {
 		    tag = NPF
@@ -7162,7 +7221,7 @@ french_first_empire_restoration_reform = { #revolutionary_empire_reform
 		}
 		has_reform = french_monarchic_restoration_reform
 	}
-
+	
 	maintain_dynasty = yes
 	royal_marriage = no
 	valid_for_nation_designer = no
@@ -7188,15 +7247,15 @@ second_french_empire_reform = { #revolutionary_empire_reform
 	lock_level_when_selected = yes
 	icon = "napoleonic_dynasty"
 	allow_normal_conversion = no
-
-	potential = {
+	
+	potential = { 
 		OR = {
 		    tag = FSE
 			culture_group = french
 		}
 		is_revolutionary = no
 	}
-
+	
 	trigger = {
 		OR = {
 		    tag = FSE
@@ -7204,7 +7263,7 @@ second_french_empire_reform = { #revolutionary_empire_reform
 		}
 		has_reform = french_second_republic_reform
 	}
-
+	
 	legacy_equivalent = second_french_empire_legacy #revolutionary_empire
 	valid_for_new_country = no
 	uses_revolutionary_zeal = no
@@ -7232,14 +7291,14 @@ become_french_second_republic_reform = { #become_rev_republic_reform
 	icon = "second_republic"
 	allow_normal_conversion = yes
 
-	potential = {
+	potential = { 
 		OR = {
 		    tag = FSR
 			culture_group = french
 		}
 		is_revolutionary = no
 	}
-
+	
 	trigger = {
 		OR = {
 		    tag = FSR
@@ -7276,14 +7335,14 @@ become_french_third_republic_reform = { #become_rev_republic_reform
 	icon = "third_republic"
 	allow_normal_conversion = yes
 
-	potential = {
+	potential = { 
 		OR = {
 		    tag = TFR
 			culture_group = french
 		}
 		is_revolutionary = no
 	}
-
+	
 	trigger = {
 		OR = {
 		    tag = TFR
@@ -7342,7 +7401,7 @@ crusader_state_vu_reform = {
 						region = mesopotamia_region
 					}
 				}
-
+			 
 			}
 			have_had_reform = crusader_state_vu_reform
 		}
@@ -7441,7 +7500,7 @@ scottish_monarchy = {
 		max_absolutism = -25
 		nobles_influence_modifier = -0.075
 	}
-
+	
 	conditional = {
 		allow = {
 			has_dlc = "Common Sense"
