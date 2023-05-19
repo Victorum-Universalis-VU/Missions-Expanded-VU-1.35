@@ -101,7 +101,7 @@ ME_the_end_of_times = {
 	}
 	
 	on_start = ME_Mushasha_Events.11 #The End of Times for Mushasha - you failed.
-	on_end = 0
+	#on_end = 0
 	
 	on_monthly = {
 		events = {

@@ -17331,3 +17331,6 @@ septrional_creoles = {
 		}
 	}
 }
+
+#VU - Unused Cultures
+unused = { berber = {} }
