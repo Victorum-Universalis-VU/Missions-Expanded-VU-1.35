@@ -56,7 +56,7 @@ generic_rhenish_missions_4_2 = {
 		}
 		trigger = {
 			any_owned_province = {
-				development = 20
+				development = 30
 				num_of_times_improved = 5
 			}
 		}
@@ -84,6 +84,35 @@ generic_rhenish_missions_4_2 = {
 				random_owned_province = {
 					limit = {
 						development = 20
+						num_of_times_improved = 5
+					}
+					add_province_modifier = {
+						name = RHN_pearl_of_the_rhineland
+						duration = -1
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_capital = yes
+					}
+					add_province_modifier = {
+						name = RHN_pearl_of_the_rhineland
+						duration = -1
+					}
+				}
+				random_owned_province = {
+					limit = {
+						development = 30
+						num_of_times_improved = 5
+					}
+					add_province_modifier = {
+						name = RHN_pearl_of_the_rhineland
+						duration = -1
+					}
+				}
+				random_owned_province = {
+					limit = {
+						development = 30
 						num_of_times_improved = 5
 					}
 					add_province_modifier = {
@@ -213,9 +242,22 @@ RHN_missions_1 = {
 		position = 11
 		provinces_to_highlight = {
 			OR = {
-				province_id = 69
 				province_id = 2975
 				province_id = 84
+				province_id = 7527
+				province_id = 7317
+				province_id = 3199
+				province_id = 7533
+				province_id = 7529	
+				province_id = 7530
+				province_id = 3292
+				province_id = 3200
+				province_id = 7532
+				province_id = 7526
+				province_id = 7527
+				province_id = 86
+				province_id = 8514
+				province_id = 7526
 			}
 		}
 		trigger = {
@@ -223,23 +265,36 @@ RHN_missions_1 = {
 				tooltip = RHN_dev_at_least_100
 				development_in_provinces = {
 					OR = {
-						province_id = 69
-						province_id = 2975
-						province_id = 84
+				province_id = 2975
+				province_id = 84
+				province_id = 7527
+				province_id = 7317
+				province_id = 3199
+				province_id = 7533
+				province_id = 7529	
+				province_id = 7530
+				province_id = 3292
+				province_id = 3200
+				province_id = 7532
+				province_id = 8514
+				province_id = 7526
+				province_id = 7527
+				province_id = 86
+				province_id = 7526
 					}
-					value = 100
+					value = 300
 				}
 			}
 		}
 		effect = {
-			69 = {
+			2975 = {
 				create_or_add_center_of_trade_level = { level = 2 }
 			}
 			2975 = {
 				change_province_name = "Duisburg"
 			}
 			84 = {
-				change_province_name = "D�sseldorf"
+				change_province_name = "Dusseldorf"
 			}
 			custom_tooltip = RHN_highlighted_area_gets
 			tooltip = {
@@ -249,19 +304,97 @@ RHN_missions_1 = {
 				}
 			}
 			hidden_effect = {
-				69 = {
-					add_province_modifier = {
-						name = RHN_ruhrgebiet
-						duration = -1
-					}
-				}
 				2975 = {
 					add_province_modifier = {
 						name = RHN_ruhrgebiet
 						duration = -1
 					}
 				}
+				8514 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
 				84 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				7527 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				7317 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				3199 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				7533 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				7529 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				7530 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				3292 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				3200 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				7532 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				7526 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				7527 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				86 = {
+					add_province_modifier = {
+						name = RHN_ruhrgebiet
+						duration = -1
+					}
+				}
+				7526 = {
 					add_province_modifier = {
 						name = RHN_ruhrgebiet
 						duration = -1
@@ -277,7 +410,7 @@ RHN_missions_1 = {
 		position = 12
 		trigger = {
 				army_size_percentage = 0.75
-				has_mil_advisor = yes
+				employed_advisor = { category = MIL }
 				any_owned_province = {
 					development = 25
 					OR = {
@@ -1406,6 +1539,7 @@ RHN_missions_5 = {
 		}
 		effect = {
 			1757 = {
+				change_trade_goods = tin
 				add_province_modifier = {
 					name = RHN_sole_source_of_tin
 					duration = -1
