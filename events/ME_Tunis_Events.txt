@@ -885,26 +885,26 @@ country_event = {
 
 	option = {
 		name = ME_Tunis_Events.15.a
-
+	
 		ai_chance = { factor = 100 }
-
+	
 		TUN_leo_africanus_spawn = { type = muslim }
 	}
-
+	
 	option = {
 		name = ME_Tunis_Events.15.b
-
+	
 		ai_chance = { factor = 0 }
-
+	
 		add_legitimacy = -10
 		TUN_leo_africanus_spawn = { type = muslim discount = 0.75 }
 	}
-
+	
 	option = {
 		name = ME_Tunis_Events.15.c
-
+	
 		ai_chance = { factor = 0 }
-
+	
 		add_legitimacy = -25
 		add_years_of_income = -0.25
 		TUN_leo_africanus_spawn = { type = muslim discount = 0.5 }
@@ -1136,9 +1136,9 @@ country_event = {
 
 	option = {
 		name = ME_Tunis_Events.20.a
-
+	
 		ai_chance = { factor = 100 }
-
+	
 		add_legitimacy = -25
 		add_adm_power = -50
 		TUN_leo_africanus_spawn = { type = christian }
@@ -1171,9 +1171,9 @@ country_event = {
 
 	option = {
 		name = ME_Tunis_Events.21.a
-
+	
 		ai_chance = { factor = 100 }
-
+	
 		TUN_leo_africanus_spawn = { type = christian }
 	}
 }

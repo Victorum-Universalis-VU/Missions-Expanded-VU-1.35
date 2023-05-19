@@ -41,6 +41,9 @@ blast_furnace = {
 	modifier = {
 		trade_value = 4
 		allowed_num_of_buildings = 1
+		local_production_efficiency = 0.2
+		local_development_cost = -0.1
+		local_development_cost_modifier = -0.20
 	}
 
 	ai_will_do = {
