@@ -6,19 +6,18 @@ economic_hegemon = {
 				NOT = { has_country_flag = halve_hegemony_requirements }
 			}
 			monthly_income = 1000
+		}
+		else_if = {
+			limit = {
+				tag = MUG
+			}
 			custom_trigger_tooltip = {
 				tooltip = me_mug_completed_industrial_mission
 				has_country_flag = me_mug_economic_hegemon
 			}
 		}
 		else = {
-			OR = {
-				monthly_income = 500 
-				custom_trigger_tooltip = {
-					tooltip = me_mug_completed_industrial_mission
-					has_country_flag = me_mug_economic_hegemon
-				}
-			}
+			monthly_income = 500
 		} 
 		NOT = { any_other_great_power = { monthly_income = root } }
 		NOT = { has_country_modifier = lost_hegemony }
