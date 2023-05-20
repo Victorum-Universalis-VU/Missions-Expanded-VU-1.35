@@ -78,14 +78,14 @@ can_improve_manpower = {
 	}
 }
 
-can_colonize_province = {
-	condition = {
-		tooltip = me_was_razed_by_timurids
-		potential = {
-			has_province_flag = me_tim_wasteland
-		}
-		allow = {
-			NOT = { has_province_flag = me_tim_wasteland }
-		}
-	}
-}
+#can_colonize_province = { #Moved to vu_scripted_functions because we can only have one can_colonize_province. Leaving it here for reference - Altan
+#	condition = {
+#		tooltip = me_was_razed_by_timurids
+#		potential = {
+#			has_province_flag = me_tim_wasteland
+#		}
+#		allow = {
+#			NOT = { has_province_flag = me_tim_wasteland }
+#		}
+#	}
+#}
