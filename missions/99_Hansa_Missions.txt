@@ -1,4 +1,5 @@
-lubeck_missions_1 = { #Made by Big Boss
+#MEVU 1.35 updated by San Felipe
+lubeck_missions_1 = {
 	slot = 1 
 	generic = no 
 	ai = yes 

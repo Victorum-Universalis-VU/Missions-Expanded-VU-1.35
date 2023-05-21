@@ -529,6 +529,7 @@ bohemian_missions_2 = {
 			ME_give_claims = { area = anhalt_area }
 			ME_give_claims = { area = hinter_pommern_area }
 			ME_give_claims = { area = vorpommern_area }
+			ME_give_claims = { area = thuringia_area }
 
 			custom_tooltip = " "
 
@@ -579,6 +580,7 @@ bohemian_missions_2 = {
 				area = saxony_area
 				area = altmark_area
                 area = anhalt_area
+				area = thuringia_area 
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -594,6 +596,10 @@ bohemian_missions_2 = {
 			anhalt_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
+			}
+			thuringia_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
 			}
 		}
 		effect = {
@@ -1723,6 +1729,7 @@ bohemian_missions_4 = {
 						has_global_flag = trade_goods_expanded_mod_active
 					}
 					2968 = {
+						change_trade_goods = silver
 						add_province_modifier = {
 							name = boh_smelting_facility_modifier
 							duration = 7300
@@ -1838,7 +1845,11 @@ bohemian_missions_4 = {
 							trade_goods = gold
 							trade_goods = coal
 							trade_goods = iron
-							trade_goods = copper
+							trade_goods = copper 
+							trade_goods = zinc 
+							trade_goods = silver 
+							trade_goods = brass 
+							trade_goods = steam_engine
 						}
 					}
 					add_province_modifier = {
