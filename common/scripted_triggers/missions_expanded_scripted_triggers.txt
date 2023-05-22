@@ -58,7 +58,6 @@ country_has_both_paradox_and_me_missions = {
 				tag = TUS
 				#Crusader
 				tag = CYP
-				tag = EPI
 				tag = KNI
 				tag = NAX
 				#Germany
