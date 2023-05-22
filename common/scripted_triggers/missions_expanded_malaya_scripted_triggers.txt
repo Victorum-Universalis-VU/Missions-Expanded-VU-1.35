@@ -58,6 +58,7 @@ MSA_is_in_philippines = {
 		area = luzon_area
 		area = southern_luzon_area
 		area = mindanao_area
+		area = sulu_archipelago_area
 	}
 }
 
@@ -76,6 +77,10 @@ MSA_malaya_trigger = {
 		OR = {
 			region = malaya_region
 			region = indonesia_region
+			region = riau_islands_region
+			region = nusa_tenggara_region
+			region = borneo_region
+			region = celebes_region
 		}
 		value = 60
 	}
@@ -85,6 +90,10 @@ MSA_malaya_pth = {
 	OR = {
 		region = malaya_region
 		region = indonesia_region
+		region = riau_islands_region
+		region = nusa_tenggara_region
+		region = borneo_region
+		region = celebes_region
 	}
 	NOT = { country_or_non_sovereign_subject_holds = ROOT }
 }
@@ -94,6 +103,10 @@ MSA_affected_by_spread_of_islam = {
 		region = malaya_region
 		region = indonesia_region
 		region = moluccas_region
+		region = riau_islands_region
+		region = nusa_tenggara_region
+		region = borneo_region
+		region = celebes_region
 	}
 	owner = {
 		culture_group = malay
@@ -231,6 +244,8 @@ MSA_has_available_request_trigger = {
 					OR = {
 						trade_goods = spices
 						trade_goods = cloves
+						trade_goods = nutmeg
+						trade_goods = vanilla
 					}
 					NOT = { has_province_modifier = MSA_enhanced_spice_production }
 				}

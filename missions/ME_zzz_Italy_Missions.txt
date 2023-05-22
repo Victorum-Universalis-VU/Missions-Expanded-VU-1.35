@@ -2403,6 +2403,10 @@ italy_missions_3_tall = {
 						trade_goods = grain
 						trade_goods = livestock
 						trade_goods = fish
+						trade_goods = rice
+						trade_goods = olive_oil
+						trade_goods = cheese
+						trade_goods = potato
 					}
 					NOT = { development = 20 }
 					NOT = { has_production_building_trigger = yes }
@@ -2426,6 +2430,10 @@ italy_missions_3_tall = {
 							trade_goods = grain
 							trade_goods = livestock
 							trade_goods = fish
+							trade_goods = rice
+							trade_goods = olive_oil
+							trade_goods = cheese
+							trade_goods = potato
 						}
 						development = 20
 						has_production_building_trigger = yes
@@ -2453,6 +2461,10 @@ italy_missions_3_tall = {
 							trade_goods = livestock
 							trade_goods = fish
 							trade_goods = livestock
+							trade_goods = rice
+							trade_goods = olive_oil
+							trade_goods = cheese
+							trade_goods = potato
 						}
 						OR = {
 							development = 20

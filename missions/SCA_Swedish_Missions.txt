@@ -544,6 +544,14 @@ swe_scandinavian_colonialism_mission_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_iroquoisia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { owner = { is_subject_of = ROOT } }
+					}
+					add_permanent_claim = ROOT
+				}
 				west_africa_coast_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -913,6 +921,13 @@ swe_diplomacy_mission_slot = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
+					}
+					add_claim = ROOT
+				}
+				holstein_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
 					}
 					add_claim = ROOT
 				}
@@ -4565,7 +4580,35 @@ swe_sca_hre_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
+				altmark_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				anhalt_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				hesse_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				saxony_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				holstein_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -4828,8 +4871,12 @@ swe_sca_caroliner_slot = {
 			OR = {
 				area = neumark_area
 				area = mittelmark_area
+				area = altmark_area
+				area = anhalt_area
+				area = hesse_area
 				area = saxony_area
 				area = lower_saxony_area
+				area = holstein_area
 				area = weser_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -4843,10 +4890,14 @@ swe_sca_caroliner_slot = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						OR = {
 							area = neumark_area
-							area = mittelmark_area
-							area = saxony_area
-							area = lower_saxony_area
-							area = weser_area
+				            area = mittelmark_area
+				            area = altmark_area
+				            area = anhalt_area
+				            area = hesse_area
+				            area = saxony_area
+				            area = lower_saxony_area
+				            area = holstein_area
+				            area = weser_area
 						}
 						value = 15
 					}
@@ -4870,10 +4921,14 @@ swe_sca_caroliner_slot = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						OR = {
 							area = neumark_area
-							area = mittelmark_area
-							area = saxony_area
-							area = lower_saxony_area
-							area = weser_area
+				            area = mittelmark_area
+				            area = altmark_area
+				            area = anhalt_area
+				            area = hesse_area
+				            area = saxony_area
+				            area = lower_saxony_area
+				            area = holstein_area
+				            area = weser_area
 						}
 						value = 15
 					}
