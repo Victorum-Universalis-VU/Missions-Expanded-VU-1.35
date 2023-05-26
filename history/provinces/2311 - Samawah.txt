@@ -1,16 +1,15 @@
 #2311 - Samawah
 
-owner = BAG
-controller = BAG
-add_core = BAG
+owner = QAR # Was BAG, we don't want that
+controller = QAR
 culture = al_iraqiya_arabic
 religion = shiite
 capital = "Najaf"
-trade_goods = spices #Dates
+trade_goods = camel
 hre = no
-base_tax = 3 
-base_production = 3
-base_manpower = 2
+base_tax = 6 
+base_production = 6
+base_manpower = 4
 is_city = yes
 add_core = BSR
 add_core = QAR
@@ -20,13 +19,23 @@ discovered_by = ottoman
 discovered_by = indian
 discovered_by = nomad_group
 discovered_by = east_african
-discovered_by = BYZ
+discovered_by = BYZ #Added by ME, needed for a mission perhaps ?
 
 add_province_triggered_modifier = religious_center
 
+1440.1.1 = {
+	revolt = {
+		type = noble_rebels
+		size = 0
+	}
+	unrest = 5
+	controller = REB
+}
 1447.1.1 = {
 	owner = MSY
 	controller = MSY
+	revolt = {}
+	unrest = 0
 }
 1508.1.1 = {
 	owner = PER

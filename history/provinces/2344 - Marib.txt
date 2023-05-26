@@ -1,19 +1,20 @@
-#2344 - Marib
+#2344 - Al Jawf
 
 owner = RAS
 controller = RAS
 culture = yemeni_culture
 religion = shiite
-capital = "Marib"
-trade_goods = livestock
+capital = "Ma'rib"
+trade_goods = coffee
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 1  
+base_production = 1 
+base_manpower = 1 
 is_city = yes
 add_core = RSL
 add_core = RAS
 add_core = ADE
+
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian
@@ -27,24 +28,18 @@ discovered_by = east_african
 	controller = MAM
 	add_core = MAM
 }
-#De facto controlled by Ottoman Officers.
-1521.1.1 = { #After the fall of Egypt these lands are held by autonomous Ottoman Officers
-	#owner = ADE #Ottoman Officers
-	#controller = ADE #Ottoman Officers
-	#add_core = ADE #Ottoman Officers
-} # 
-1538.1.1 = { #Formally annexed by the Ottomans.
+1552.1.1 = {
+	add_core = TUR
+} # Ozdemir Pasha effectively put Yemen under Ottoman rule between 1552 and 1560. He garrisoned the main cities, built new fortresses, and rendered secure the main routes.
+
+1583.1.1 = {
 	owner = TUR
 	controller = TUR
 	add_core = TUR
-} # Part of the Ottoman empire
-1567.1.1 = { unrest = 4 } # Revolt against the Ottomans
-1570.1.1 = { unrest = 0 }
-1597.9.1 = { unrest = 5 } # Qasimi state, revolt against the Ottomans
-1602.1.1 = { unrest = 0 }
-1636.1.1 = {
+} #Ottomans capatilise on Yemeni chaos and reconquer Sana'a, Sa'dah, and Najran in 1583
+
+1597.9.1 = {
 	owner = RAS
 	controller = RAS
 	add_core = RAS
-	remove_core = TUR
-}
+} #After the Ottomans promote Hanafi Islam, al-Mansur al-Qasim, incensed, declares an independent immamate
