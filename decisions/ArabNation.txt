@@ -1,6 +1,6 @@
-country_decisions = {
-	#Moved the important bits to VU_Replace_Vanilla_Country_Formation. By Altan
-	#TODO: allow nations with mecca vassal to form it
+#country_decisions = {
+#	#Moved the important bits to VU_Replace_Vanilla_Country_Formation. By Altan
+#	#TODO: allow nations with mecca vassal to form it
 #	arab_nation = {
 #		major = yes
 #		potential = {
