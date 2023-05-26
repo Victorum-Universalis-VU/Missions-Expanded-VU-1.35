@@ -90,7 +90,7 @@ philosopher = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -101,7 +101,7 @@ philosopher = {
 			idea_cost = -0.02
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -191,7 +191,7 @@ natural_scientist = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -202,7 +202,7 @@ natural_scientist = {
 			state_maintenance_modifier = -0.05
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -292,7 +292,7 @@ artist = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -303,7 +303,7 @@ artist = {
 			monthly_splendor = 0.5
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -401,7 +401,7 @@ treasurer = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = {
 			owner = {
@@ -423,7 +423,7 @@ treasurer = {
 			development_cost = 0.02
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 	
 	chance = {
@@ -513,7 +513,7 @@ theologian = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -524,7 +524,7 @@ theologian = {
 			yearly_corruption = -0.05
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 	
 	chance = {
@@ -623,7 +623,7 @@ master_of_mint = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -634,7 +634,7 @@ master_of_mint = {
 			gold_depletion_chance_modifier = -0.05
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 	
 	chance = {
@@ -740,7 +740,7 @@ inquisitor = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -751,7 +751,7 @@ inquisitor = {
 			missionary_maintenance_cost = -0.1
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 	
 	chance = {
@@ -838,7 +838,7 @@ statesman = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -849,7 +849,7 @@ statesman = {
 			ae_impact = -0.02
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -919,7 +919,7 @@ naval_reformer = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -930,7 +930,7 @@ naval_reformer = {
 			navy_tradition = 0.1
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 	
 	chance = {
@@ -1018,7 +1018,7 @@ trader = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = {
 			owner = { 
@@ -1051,7 +1051,7 @@ trader = {
 			center_of_trade_upgrade_cost = -0.05
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 	
 	chance = {
@@ -1125,7 +1125,7 @@ spymaster = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1136,7 +1136,7 @@ spymaster = {
 			min_autonomy_in_territories = -0.02
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 	
 	chance = {
@@ -1206,7 +1206,7 @@ colonial_governor = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1217,7 +1217,7 @@ colonial_governor = {
 			liberty_desire = -5
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 	
 	chance = {
@@ -1295,7 +1295,7 @@ diplomat = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1306,7 +1306,7 @@ diplomat = {
 			fabricate_claims_cost = -0.05
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 	
 	chance = {
@@ -1376,7 +1376,7 @@ navigator = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1387,7 +1387,7 @@ navigator = {
 			disengagement_chance = 0.02
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -1447,7 +1447,7 @@ army_reformer = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1458,7 +1458,7 @@ army_reformer = {
 			mil_tech_cost_modifier = -0.01
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -1509,7 +1509,7 @@ army_organiser = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1520,7 +1520,7 @@ army_organiser = {
 			drill_gain_modifier = 0.05
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -1571,7 +1571,7 @@ commandant = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1582,7 +1582,7 @@ commandant = {
 			army_tradition_from_battle = 0.2
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -1633,7 +1633,7 @@ quartermaster = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1644,7 +1644,7 @@ quartermaster = {
 			reinforce_cost_modifier = -0.05
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -1699,7 +1699,7 @@ recruitmaster = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1710,7 +1710,7 @@ recruitmaster = {
 			manpower_recovery_speed = 0.05
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -1765,7 +1765,7 @@ fortification_expert = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1776,7 +1776,7 @@ fortification_expert = {
 			garrison_size = 0.05
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
@@ -1828,7 +1828,7 @@ grand_captain = {
 	}
 
 	############################
-	##EE Skill Scaled Modifiers:
+	##ME Skill Scaled Modifiers:
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 
@@ -1839,7 +1839,7 @@ grand_captain = {
 			reserves_organisation = 0.05
 		}
 	}
-	##End of EE Skill Scaled Modifiers
+	##End of ME Skill Scaled Modifiers
 	############################
 
 	chance = {
