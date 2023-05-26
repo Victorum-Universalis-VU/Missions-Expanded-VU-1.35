@@ -1105,9 +1105,9 @@ on_battle_won_unit = {
     }
 }
 # THIS = Province, FROM = Country, ROOT = Merc Unit
-on_mercenary_recruited = {
-	on_mercenary_recruited_effect = yes
-}
+#on_mercenary_recruited = { #Already in 00_on_actions
+#	on_mercenary_recruited_effect = yes
+#}
 
 on_culture_promoted = {
 	if = {
