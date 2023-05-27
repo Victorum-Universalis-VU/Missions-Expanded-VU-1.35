@@ -810,6 +810,7 @@ ENG_missions_2_1 = {
 			OR = {
 				area = highlands_area
 				area = kingdom_of_the_isles_area
+				area = grampians_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -819,6 +820,10 @@ ENG_missions_2_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			kingdom_of_the_isles_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			grampians_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1695,6 +1700,13 @@ ENG_missions_3_1 = {
 				add_permanent_claim = ROOT
 			}
 			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			grampians_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
