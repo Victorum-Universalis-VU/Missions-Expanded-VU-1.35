@@ -196,10 +196,7 @@ GBR_missions_1_1 = {
 		required_missions = { ENG_seize_the_isles }
 		position = 10
 		provinces_to_highlight = {
-			OR = {
-				province_id = 370
-				province_id = 371
-			}
+			area = iceland_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -781,7 +778,7 @@ ENG_missions_2_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			brittany_area = {
+			brittany_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -888,16 +885,7 @@ ENG_missions_2_1 = {
 					duration = -1
 				}
 			}
-			370 = {
-				if = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			371 = {
+			iceland_area = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT }
