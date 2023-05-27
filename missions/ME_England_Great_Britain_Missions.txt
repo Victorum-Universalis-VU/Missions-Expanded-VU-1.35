@@ -855,6 +855,15 @@ ENG_missions_2_1 = {
 					add_permanent_claim = ROOT
 				}
 			}
+			369 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 
@@ -866,6 +875,7 @@ ENG_missions_2_1 = {
 			OR = {
 				province_id = 1978
 				province_id = 1979
+				province_id = 369
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -874,6 +884,9 @@ ENG_missions_2_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			1979 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			369 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -885,6 +898,12 @@ ENG_missions_2_1 = {
 				}
 			}
 			1978 = {
+				add_province_modifier = {
+					name = ENG_cod_secured
+					duration = -1
+				}
+			}
+			369 = {
 				add_province_modifier = {
 					name = ENG_cod_secured
 					duration = -1
