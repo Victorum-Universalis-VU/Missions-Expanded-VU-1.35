@@ -961,6 +961,9 @@ GBR_missions_2_1 = {
 			OR = {
 				area = northern_norway
 				area = western_norway
+				area = trondelag_area
+				area = southern_norway_area
+				area = eastern_norway
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -973,6 +976,18 @@ GBR_missions_2_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			trondelag_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_norway_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_norway = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			jutland_area = {
@@ -982,7 +997,7 @@ GBR_missions_2_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			eastern_norway = {
+			denmark_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1832,6 +1847,27 @@ GBR_missions_3_1 = {
 				add_permanent_claim = ROOT
 			}
 			western_norway = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			trondelag_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_norway_area  = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_norway = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
