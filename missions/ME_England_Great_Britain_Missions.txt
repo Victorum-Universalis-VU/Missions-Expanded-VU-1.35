@@ -169,6 +169,12 @@ ENG_missions_1_1 = {
 			add_mil_power = 50
 			89 = {
 				add_local_autonomy = -10
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 25
+					key = ENG_british_influence
+				}
 			}
 		}
 	}
@@ -508,6 +514,10 @@ ENG_missions_1_3 = {
 			add_country_modifier = {
 				name = ENG_royal_navy
 				duration = 9125
+			}
+			add_country_modifier = {
+				name = eng_the_man_of_war
+				duration = -1
 			}
 		}
 	}
