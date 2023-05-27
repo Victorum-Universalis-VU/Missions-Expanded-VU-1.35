@@ -774,7 +774,7 @@ ENG_missions_2_1 = {
 		required_missions = { ENG_Enforce_the_Union ENG_rival_the_nobles }
 		position = 7
 		provinces_to_highlight = {
-			area = brittany_area
+			region = brittany_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
