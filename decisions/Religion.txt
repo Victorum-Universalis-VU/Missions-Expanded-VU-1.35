@@ -391,7 +391,7 @@ country_decisions = {
 		}
 		effect = {	
 			add_ruler_modifier = {
-				name = "ME_khalifah"
+				name = ME_khalifah
 				duration = -1
 			}
 			add_piety = 0.2
