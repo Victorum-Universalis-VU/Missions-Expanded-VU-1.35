@@ -175,6 +175,42 @@ austrian_archduchy_reform = {
 	}
 }
 
+
+romanian_principality = {
+	icon = "romanian_principality"
+	allow_normal_conversion = no
+	valid_for_nation_designer = yes
+	potential = {
+		primary_culture = romanian
+		NOT = { tag = RMN }
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		nobles_influence_modifier = 0.05
+		improve_relation_modifier = 0.2
+		manpower_in_culture_group_provinces = 0.1
+		governing_cost = 0.50
+	}
+}
+
+romanian_united_principality = {
+	icon = "romanian_united_principality"
+	allow_normal_conversion = no
+	valid_for_nation_designer = yes
+	potential = {
+		tag = RMN
+	}
+	nation_designer_cost = 25
+	modifiers = {
+		development_cost = -0.2
+		centralize_state_cost = -0.1
+		expand_infrastructure_cost_modifier = -0.25
+		liberty_desire_from_subject_development = -0.50
+		manpower_in_culture_group_provinces = 0.20
+		governing_cost = 0.75
+	}
+}
+
 grand_duchy_reform = {
 	icon = "peasants"
 	allow_normal_conversion = yes
@@ -6988,6 +7024,7 @@ western_principality = {
 			culture_group = gaelic
 			culture_group = latin
 			culture_group = scandinavian
+			culture_group = illyrian
 			AND = {
 				have_had_reform = western_principality
 			}
@@ -7010,6 +7047,7 @@ western_principality = {
 		    culture_group = iberian
 		    culture_group = latin
 		    culture_group = scandinavian
+			culture_group = illyrian
 		}
 	}
 	modifiers = {
@@ -7553,6 +7591,36 @@ scottish_monarchy = {
 		custom_attributes = {
 			enables_privy_council = yes #pseudoparliament and a development of the King's Council
 		}#fixdis every option is the same
+	}
+}
+
+greek_marquisiat_reform = {
+	icon = "soldiers_2"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+		    culture_group = byzantine
+		    culture_group = south_slavic
+			AND = { 
+			    has_reform = greek_marquisiat_reform
+			    have_had_reform = greek_marquisiat_reform
+			}
+		}
+	}
+	trigger = {
+		is_part_of_hre = no
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	nation_designer_trigger = {
+		is_part_of_hre = no
+	}
+	modifiers = {
+		fort_maintenance_modifier = -0.2
+		defensiveness = 0.1
+	}
+	ai = {
+		factor = 1
 	}
 }
 

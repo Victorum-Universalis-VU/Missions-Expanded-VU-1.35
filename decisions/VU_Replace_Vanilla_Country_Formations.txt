@@ -9,8 +9,7 @@ country_decisions = {
 #I'm also making allow requirements more consistant and stable. General 2 to 3 specific provinces for the main capitals of the tag and 2/3rds of the kingdom's traditional territory, plus 150 dev (50% discount from default 300 to achieve rank 2), and 25 prestige (also 50% discount).
 #For empires, I'm typically going for 3 to 5 specific provinces and 3/4ths of the empire's traditional territory, as well as 500 dev (50% discount from default 1000 to achieve rank 3) and 40 prestige (default 75). Note I am making a few exceptions to all these rules on a case by case basis.
 
-#Note this is the file specifically for vanilla decisions which are replaced in VU. New tags and vanilla tags which lack a vanilla decision are instead moved to vuPLNewCountryFormations.txt and a couple really odd or unique new ones are going in vuPLNewCountryFormationsSpecial.txt.
-
+#Note this is the file specifically for vanilla decisions which are replaced in VU. New tags and vanilla tags which lack a vanilla decision are instead moved to VU_New_Country_Formations.txt and a couple really odd or unique new ones are going in VU_New_Country_Formations_Special.txt.
 ###################################################################################################
 ################################			Algeria			 ######################################
 ###################################################################################################
@@ -883,143 +882,144 @@ country_decisions = {
 		ai_importance = 400
 	}
 
-###################################################################################################
-################################		Britain (diplomatic)		 ##############################
-###################################################################################################
-	british_nation_diplomatically = { #BritishNation.txt
-		major = yes
-		potential = {
-			vu_generic_can_form_potential_check = yes
-			NOT = { has_country_flag = formed_great_britain_flag }
-			NOT = { tag = GBR }
-			NOT = { tag = UNK }
-			OR = {
-				tag = ENG
-				tag = SCO
-				AND = {
-					culture_group = british
-					num_of_cities = 42			#At least 1/2 of Britain's 84 provinces to see, if not ENG or SCO
-				}
-			}
-		}
-		provinces_to_highlight = {
-			region = british_isles_region
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			NOT = { exists = GBR }
-			NOT = { exists = UNK }
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			if = {
-				limit = { government = monarchy }
-				legitimacy = 100
-			}
-			adm_tech = 10			#Diplo tech requirement
-			owns_or_vassal_of = 236		# London
-			owns_or_vassal_of = 242		# Gwynedd
-			owns_or_vassal_of = 250		# Fife
-			owns_or_vassal_of = 4365	# Island of Mann
-			owns_or_vassal_of = 4368	# Durham
-			owns_or_vassal_of = 5865	# Disputed Lands
-			owns_or_vassal_of = 237		# Oxford
-			owns_or_vassal_of = 248		# Edinburgh
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = british_isles_region
-				is_core = owner
-				value = 90			#in 1444 this value is 85
-			}
-			total_development = 1000	#Had to raise it from 250 as England starts with 851 in 1444
-			prestige = 50			#was 25, normal requirement for rank 2 is 50 prestige
-		}
-		effect = {
-			every_subject_country = {
-				limit = {
-					ai = yes
-					capital_scope = {
-						region = british_isles_region
-						NOT = { province_id = 4365 } #Excluding Mann
-					}
-					OR = {
-						NOT = { num_of_cities = 12 }
-						AND = {
-							tag = SCO
-							NOT = { num_of_cities = 36 } #Has flippin' 27 now.
-						}
-					}
-				}
-				ROOT = { inherit = PREV }
-			}
-			hidden_effect = {
-				complete_mission = ENG_war_of_the_roses
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						tag = SCO
-					}
-				#	complete_mission = eng_mighty_army
-					complete_mission = ENG_conquer_scotland
-					complete_mission = ENG_war_of_the_roses
-				}
-			}
-			change_tag = GBR
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			british_isles_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = GBR
-			}
-			add_prestige = 25
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			swap_ideas = yes
-			set_country_flag = formed_great_britain_flag
-			#Adding mission claims here as well, even though they're mysteriously missing from vanilla.
-			if = {
-				limit = {
-					mission_completed = ENG_conquer_scotland
-					has_dlc = "Rule Britannia"
-				}
-				give_permaclaims_for_mission = { mission=eng_take_shetland_and_faro_isles }
-				iceland_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_claim = ROOT }
-					}
-					add_claim = ROOT
-				}
-			}
-			if = {
-				limit = {
-					mission_completed = ENG_chart_india
-					has_dlc = "Rule Britannia"
-				}
-				give_permaclaims_for_mission = { mission=eng_rb_british_india }
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 200
-		do_not_integrate = ENG
-		do_not_integrate = SCO
-		do_not_integrate = WLS
-	}
-	
+#######################################################################################################
+################################		Britain (diplomatic)		 ##################################
+#######################################################################################################
+#	VU - I removed this because I found that the parliament route is a lot better and more diplomatic. 
+#	british_nation_diplomatically = { #BritishNation.txt
+#		major = yes
+#		potential = {
+#			vu_generic_can_form_potential_check = yes
+#			NOT = { has_country_flag = formed_great_britain_flag }
+#			NOT = { tag = GBR }
+#			NOT = { tag = UNK }
+#			OR = {
+#				tag = ENG
+#				tag = SCO
+#				AND = {
+#					culture_group = british
+#					num_of_cities = 42			#At least 1/2 of Britain's 84 provinces to see, if not ENG or SCO
+#				}
+#			}
+#		}
+#		provinces_to_highlight = {
+#			region = british_isles_region
+#			OR = {
+#				NOT = { owned_by = ROOT }
+#				NOT = { is_core = ROOT }
+#			}
+#		}
+#		allow = {
+#			NOT = { exists = GBR }
+#			NOT = { exists = UNK }
+#			is_at_war = no
+#			is_free_or_tributary_trigger = yes
+#			is_nomad = no
+#			if = {
+#				limit = { government = monarchy }
+#				legitimacy = 100
+#			}
+#			adm_tech = 10			#Diplo tech requirement
+#			owns_or_vassal_of = 236		# London
+#			owns_or_vassal_of = 242		# Gwynedd
+#			owns_or_vassal_of = 250		# Fife
+#			owns_or_vassal_of = 4365	# Island of Mann
+#			owns_or_vassal_of = 4368	# Durham
+#			owns_or_vassal_of = 5865	# Disputed Lands
+#			owns_or_vassal_of = 237		# Oxford
+#			owns_or_vassal_of = 248		# Edinburgh
+#			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+#				region = british_isles_region
+#				is_core = owner
+#				value = 90			#in 1444 this value is 85
+#			}
+#			total_development = 1000	#Had to raise it from 250 as England starts with 851 in 1444
+#			prestige = 50			#was 25, normal requirement for rank 2 is 50 prestige
+#		}
+#		effect = {
+#			every_subject_country = {
+#				limit = {
+#					ai = yes
+#					capital_scope = {
+#						region = british_isles_region
+#						NOT = { province_id = 4365 } #Excluding Mann
+#					}
+#					OR = {
+#						NOT = { num_of_cities = 12 }
+#						AND = {
+#							tag = SCO
+#							NOT = { num_of_cities = 36 } #Has flippin' 27 now.
+#						}
+#					}
+#				}
+#				ROOT = { inherit = PREV }
+#			}
+#			hidden_effect = {
+#				complete_mission = eng_war_of_the_roses
+#			}
+#			hidden_effect = {
+#				if = {
+#					limit = {
+#						tag = SCO
+#					}
+#					complete_mission = eng_recruit_the_mercenaries
+#					complete_mission = eng_conquer_scotland
+#					complete_mission = eng_war_of_the_roses
+#				}
+#			}
+#			change_tag = GBR
+#			swap_non_generic_missions = yes
+#			remove_non_electors_emperors_from_empire_effect = yes
+#			if = {
+#				limit = { NOT = { government_rank = 2 } }
+#				set_government_rank = 2
+#			}
+#			british_isles_region = {
+#				limit = {
+#					NOT = { is_permanent_claim = ROOT }
+#					NOT = { is_core = ROOT }
+#				}
+#				add_permanent_claim = GBR
+#			}
+#			add_prestige = 25
+#			add_country_modifier = {
+#				name = "centralization_modifier"
+#				duration = 7300
+#			}
+#			swap_ideas = yes
+#			set_country_flag = formed_great_britain_flag
+#			#Adding mission claims here as well, even though they're mysteriously missing from vanilla.
+#			if = {
+#				limit = {
+#					mission_completed = eng_conquer_scotland
+#					has_dlc = "Rule Britannia"
+#				}
+#				give_permaclaims_for_mission = { mission=eng_take_shetland_and_faro_isles }
+#				iceland_area = {
+#					limit = {
+#						NOT = { is_core = ROOT }
+#						NOT = { is_claim = ROOT }
+#					}
+#					add_claim = ROOT
+#				}
+#			}
+#			if = {
+#				limit = {
+#					mission_completed = gbr_discover_india
+#					has_dlc = "Rule Britannia"
+#				}
+#				give_permaclaims_for_mission = { mission=eng_rb_british_india }
+#			}
+#		}
+#		ai_will_do = {
+#			factor = 1
+#		}
+#		ai_importance = 200
+#		do_not_integrate = ENG
+#		do_not_integrate = SCO
+#		do_not_integrate = WLS
+#	}
+#	
 #############################################################################################################
 #############################	Britain (Acts of Union Debate - Scotland)   #################################
 #############################################################################################################
@@ -1074,7 +1074,7 @@ country_decisions = {
 						SCO = {	junior_union_with = ROOT }
 						SCO = {	is_subject_of = ROOT }
 					}
-					SCO = { NOT = { num_of_cities = 15 } }
+					SCO = { NOT = { num_of_cities = 39 } }
 				}
 			}
 		}
@@ -1088,7 +1088,7 @@ country_decisions = {
 							exists = yes
 							ai = yes
 							is_subject_of = ROOT
-							NOT = { num_of_cities = 15 }
+							NOT = { num_of_cities = 39 }
 						}
 					}
 					inherit = SCO
@@ -1343,7 +1343,7 @@ country_decisions = {
 			num_of_owned_provinces_with = {
 				is_core = ROOT
 				region = british_isles_region
-				value = 38			#2/3 of England-Wales' 56 provinces
+				value = 38
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted Note base dev in 1444 for southern Britain is around 420.
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
@@ -3061,10 +3061,73 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-
+	
+###################################################################################################
+######################  		Prussian Nation			 ######################
+###################################################################################################
+	
+#country_decisions = {
+#
+#	institute_prussian_republic = {
+#		major = yes
+#		potential = {
+#			always = no
+#			NOT = {
+#				OR = {
+#					has_dlc = "Dharma" 
+#					has_dlc = "Emperor"
+#				}
+#			}
+#			normal_or_historical_nations = yes
+#			tag = PRU
+#			government = republic
+#			NOT = { has_reform = prussian_republic }
+#		}
+#
+#		allow = {
+#			OR = {
+#				religion = protestant
+#				religion = reformed
+#			}
+#		}
+#
+#		effect = {
+#			add_government_reform = prussian_republic
+#		}
+#	}
+#	
+#	institute_prussian_monarchy = {
+#		major = yes
+#		potential = {
+#			always = no
+#			NOT = {
+#				OR = {
+#					has_dlc = "Dharma" 
+#					has_dlc = "Emperor"
+#				}
+#			}
+#			normal_or_historical_nations = yes
+#			tag = PRU
+#			government = monarchy
+#			NOT = { has_reform = prussian_monarchy_legacy }
+#		}
+#
+#		allow = {
+#			OR = {
+#				religion = protestant
+#				religion = reformed
+#			}
+#		}
+#
+#		effect = {
+#			add_government_reform = prussian_monarchy
+#		}
+#	}
+#	
+#}
 
 ###################################################################################################
-################################			Prussia (Kingdom, id est, BRA)			 ##############################################			#So.... about 3 more lines of code could merge these 3 decisions, whats up with that?
+######################  			Prussia (Kingdom, id est, BRA)			 ######################
 ###################################################################################################
 	form_kingdom_of_prussia = {
 		major = yes
@@ -3103,7 +3166,7 @@ country_decisions = {
 		allow = {
 			NOT = { exists = PRU }
 			adm_tech = 10
-			 OR = {
+		    OR = {
 			    religion = protestant
 				religion = reformed
 				religion = hussite
@@ -3250,7 +3313,7 @@ country_decisions = {
 	}
 
 ###################################################################################################
-################################			Prussia (id est, TEU)			 ##############################################			#So.... about 3 more lines of code could merge these 3 decisions, whats up with that?
+###########################			  Prussia (id est, TEU)			 ##############################
 ###################################################################################################
 	prussian_nation = {
 		major = yes
@@ -3374,9 +3437,9 @@ country_decisions = {
 		ai_importance = 400 #
 	}
 
-###################################################################################################
-################################			Prussia (general, id est, Non BRA, non monastic TEU)			 ##############################################			#So.... about 3 more lines of code could merge these 3 decisions, whats up with that?
-###################################################################################################
+###############################################################################################
+############		Prussia (general, id est, Non BRA, non monastic TEU)	     ##############
+###############################################################################################
 	prussian_nation_general = {
 		major = yes
 		potential = {
@@ -3635,6 +3698,31 @@ country_decisions = {
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
+			set_country_flag = estate_peasants_enabled
+			hidden_effect = { 
+			add_country_modifier = { 
+    				name = "rom_great_mod"
+   				duration = -1  
+			}
+			remove_country_modifier = vu_wal_high_productivity
+			remove_country_modifier = vu_mol_piety 
+			remove_country_modifier = vu_mol_diplo_legit 
+			remove_country_modifier = vu_mol_discipline 
+			remove_country_modifier = vu_mol_calv_army 
+			remove_country_modifier = vu_mol_force_limit 
+			remove_country_modifier = vu_mol_tax 
+			remove_country_modifier = vu_mol_mercccsss 
+			remove_country_modifier = vu_mol_prestige 
+			remove_country_modifier = vu_WAL_merc_cost 
+			remove_country_modifier = vu_bulgarian_discipline 
+			remove_country_modifier = vu_wal_forcelimit  
+			remove_country_modifier = vu_wal_force_limit 
+			remove_country_modifier = tsarigrad 
+			remove_country_modifier = vu_wal_merc 
+			remove_country_modifier = vu_wal_annex 
+			remove_country_modifier = vu_da_cup 
+			remove_country_modifier = vu_greek_trade 
+			}
 			change_tag = RMN
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
@@ -3648,6 +3736,8 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
+			set_country_flag = voronet_monastry
+			add_government_reform = romanian_united_principality
 			wallachia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -3704,6 +3794,7 @@ country_decisions = {
 				}
 				add_permanent_claim = RMN
 			}
+			custom_tooltip = rom_remove
 			swap_ideas = yes
 			set_country_flag = formed_romania_flag
 		}
@@ -4833,7 +4924,7 @@ country_decisions = {
 ###################################################################################################
 ################################			Tuscany			 ##############################################			#Note needs work
 ###################################################################################################
-	#More or less Darth Modus' work with only a few adjustments from Altan
+	#More or less HR's work with only a few adjustments from Altan
 	tuscan_nation = {
 		major = yes
 		potential = {

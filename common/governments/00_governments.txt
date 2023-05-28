@@ -37,7 +37,6 @@ monarchy = {
 				prussian_monarchy_base
 				austrian_dual_monarchy
 				principality
-				greek_principality
 				tsardom
 				mamluk_government
 				feudal_theocracy
@@ -186,6 +185,10 @@ monarchy = {
 		        #parliamentary_monarchy
 				restoration_reform
 				crusader_state_vu_reform
+				greek_marquisiat_reform
+				greek_principality
+				romanian_principality 
+				romanian_united_principality 
 		        #End_of_VU_and_other_additions
 			    #####BeginMEReforms#####	Leaving those here for updating purpose, do not remove ! 
 				#crusader_kingdom
@@ -895,7 +898,6 @@ monarchy = {
 		shogunate_legacy
 		indep_daimyo_legacy
 		principality_legacy
-		greek_principality_legacy
 		tsardom_legacy
 		holy_state_legacy
 		negusa_nagast_legacy
@@ -928,6 +930,7 @@ monarchy = {
 		french_kingdom_legacy
 		first_french_empire_legacy
 		second_french_empire_legacy
+		greek_principality_legacy
 		#parliamentary_monarchy
 	}
 
@@ -945,7 +948,6 @@ monarchy = {
 		ruthenian_tsardom
 		russian_empire_reform
 		principality
-		greek_principality
 		english_monarchy
 		stadthalter_monarchy_reform
 		states_general_reform
@@ -967,8 +969,8 @@ monarchy = {
 		belgian_kingdom_reform
 		french_kingdom_reform
 		#parliamentary_monarchy
-		#VU
 		scottish_monarchy
+		greek_principality
 	    #GE
 		granadan_iqta_reform
 		crown_of_saint_wenceslaus
@@ -2547,14 +2549,14 @@ pre_dharma_mapping = {
 		government = monarchy
 		legacy_government = western_principality_legacy
 	}
+	greek_principality = {
+		government = monarchy
+		legacy_government = greek_principality_legacy
+	}
 	#End of VU additions by San Felipe
 	principality = {
 		government = monarchy
 		legacy_government = principality_legacy
-	}
-	greek_principality = {
-		government = monarchy
-		legacy_government = greek_principality_legacy
 	}
 	tsardom = {
 		government = monarchy
@@ -2600,7 +2602,7 @@ pre_dharma_mapping = {
 	}
 	greek_provincial_kingdom = {
 		government = monarchy
-		legacy_government = greek_provincial_kingdom
+		legacy_government = greek_provincial_kingdom_legacy
 	}
 	norman_duchy = {
 		government = monarchy

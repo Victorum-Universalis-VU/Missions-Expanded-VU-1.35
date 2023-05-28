@@ -1425,6 +1425,17 @@ on_battle_won_province = {
 		}
 		owner = { add_mandate = -10 }
 	}
+	if = {
+		limit = {
+			from = { tag = TUR}
+			owner = { tag = WAL}
+			ROOT = {
+				has_province_flag = wal_idkwhattoputhere
+			}
+		}
+	owner = { set_country_flag = wal_night_attack }
+		
+	}
 	random_events = {
 		1000 = 0
 		100 = war_of_the_roses.6	# WotR - Rebel Leaders Captured
