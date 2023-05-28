@@ -37,6 +37,7 @@ monarchy = {
 				prussian_monarchy_base
 				austrian_dual_monarchy
 				principality
+				greek_principality
 				tsardom
 				mamluk_government
 				feudal_theocracy
@@ -97,6 +98,7 @@ monarchy = {
 				angevin_monarchy
 				absolute_british_monarchy
 				byzantine_autocracy_reform
+				byzantine_transitional_gov_reform
 				reformed_byzantine_monarchy_reform
 				margraviate_reform
 				serbian_despotate_reform
@@ -163,8 +165,11 @@ monarchy = {
 				#Start_of_VU_and_other_additions
 				irish_clann_reform
 				provincial_kingdom_reform
+				greek_provincial_kingdom_reform
 				norman_lordship_reform
+				greek_lordship_reform
 				norman_duchy_reform
+				greek_duchy_reform
 				anglo_irish_monarchy_reform
 				vu_ayyubid_sultanate_reform
 				scottish_monarchy
@@ -763,6 +768,7 @@ monarchy = {
 		}
 		economical_matters = {
 			reforms = {
+				#Vanilla
 				empower_the_burghers_reform
 				curtail_the_burghers_reform
 				reestablish_the_burgeoisie_reform
@@ -889,6 +895,7 @@ monarchy = {
 		shogunate_legacy
 		indep_daimyo_legacy
 		principality_legacy
+		greek_principality_legacy
 		tsardom_legacy
 		holy_state_legacy
 		negusa_nagast_legacy
@@ -906,8 +913,11 @@ monarchy = {
 		scottish_monarchy_legacy
 		irish_clann_legacy
 		norman_lordship_legacy
+		greek_lordship_legacy
 		provincial_kingdom_legacy
+		greek_provincial_kingdom_legacy
 		norman_duchy_legacy
+		greek_duchy_legacy
 		high_kingship_legacy
 		anglo_irish_monarchy_legacy
 		florence_republic_legacy
@@ -935,6 +945,7 @@ monarchy = {
 		ruthenian_tsardom
 		russian_empire_reform
 		principality
+		greek_principality
 		english_monarchy
 		stadthalter_monarchy_reform
 		states_general_reform
@@ -2541,6 +2552,10 @@ pre_dharma_mapping = {
 		government = monarchy
 		legacy_government = principality_legacy
 	}
+	greek_principality = {
+		government = monarchy
+		legacy_government = greek_principality_legacy
+	}
 	tsardom = {
 		government = monarchy
 		legacy_government = tsardom_legacy
@@ -2575,13 +2590,25 @@ pre_dharma_mapping = {
 		government = monarchy
 		legacy_government = norman_lordship_legacy
 	}
+	greek_lordship = {
+		government = monarchy
+		legacy_government = greek_lordship_legacy
+	}
 	provincial_kingdom = {
 		government = monarchy
 		legacy_government = provincial_kingdom_legacy
 	}
+	greek_provincial_kingdom = {
+		government = monarchy
+		legacy_government = greek_provincial_kingdom
+	}
 	norman_duchy = {
 		government = monarchy
 		legacy_government = norman_duchy_legacy
+	}
+	greek_duchy = {
+		government = monarchy
+		legacy_government = greek_duchy_legacy
 	}
 	high_kingship = {
 		government = monarchy

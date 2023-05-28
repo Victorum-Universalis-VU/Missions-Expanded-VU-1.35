@@ -267,7 +267,7 @@ shogunate = {
 	allow_vassal_alliance = yes
 	lock_level_when_selected = yes
 	#Start of VU addition by San Felipe
-#	can_change_primary_culture = no #Turned off in VU but Turned on in EU4 vanilla; not on in GE by San Felipe
+    #can_change_primary_culture = no #Turned off in VU but Turned on in EU4 vanilla; not on in GE by San Felipe
     #End of VU addition by San Felipe
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
@@ -646,7 +646,7 @@ chinese_warlord = {
 	fixed_rank = 2
 
 	modifiers = {
-		manpower_recovery_speed = 0.15 #VU
+		manpower_recovery_speed = 0.15
 		governing_capacity = 500
 		liberty_desire = 50
 	}
@@ -1092,14 +1092,57 @@ byzantine_autocracy_reform = {
 	#}
 }
 
+byzantine_transitional_gov_reform = {
+	icon = "purple_phoenix"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	potential = {
+		OR = {
+			has_reform = byzantine_transitional_gov_reform
+			have_had_reform = byzantine_transitional_gov_reform
+			has_reform = byzantine_autocracy_reform
+			tag = BYZ
+		}
+	}
+	trigger = {
+		NOT = {
+			has_reform = byzantine_autocracy_reform
+		}
+	}
+	modifiers = {
+		max_absolutism = -15
+		prestige = 0.5
+		advisor_pool = 1
+		governing_capacity = 100
+		diplomatic_reputation = 1
+		yearly_corruption = 0.05
+		min_autonomy = 10
+		global_institution_spread = 0.1
+		reinforce_cost_modifier = 0.10
+		infantry_power = 0.075
+		same_culture_advisor_cost = -0.1
+		heir_chance = -0.15
+		all_estate_influence_modifier = 0.05
+		stability_cost_modifier = 0.1
+		state_maintenance_modifier = -0.15
+		administrative_efficiency = 0.025
+	}
+	
+	#custom_attributes = {
+	#	civil_war_on_every_new_ruler = yes
+	#}
+}
+
 reformed_byzantine_monarchy_reform = {
 	icon = "byzantine_rule"
 	allow_normal_conversion = yes
-	lock_level_when_selected = yes
+	lock_level_when_selected = no
 	potential = {
 		OR = {
 			has_reform = reformed_byzantine_monarchy_reform
 			have_had_reform = reformed_byzantine_monarchy_reform
+			tag = BYZ
 		}
 	}
 	nation_designer_cost = 30
@@ -1108,6 +1151,8 @@ reformed_byzantine_monarchy_reform = {
 		global_autonomy = -0.05
 		culture_conversion_cost = -0.2
 		years_of_nationalism = -5
+		advisor_pool = 1
+		governing_capacity = 150
 		max_possible_parliament_seats = 8
 	}
 	
@@ -2455,7 +2500,7 @@ tsardom = {
 		global_manpower_modifier = 0.20
 		yearly_absolutism = 0.5
 		global_autonomy = -0.05
-		governing_capacity = 500 #VU
+		governing_capacity = 500
 		has_streltsy = yes
 		allowed_streltsy_fraction = 0.2
 	}
@@ -4368,7 +4413,7 @@ enforce_privileges_reform = {
 		is_revolutionary = no
 	}
 	modifiers = {
-		global_manpower_modifier = 0.1
+		global_manpower_modifier = 0.15
 		nobles_influence_modifier = 0.1
 		maratha_exclusive_influence_modifier = 0.1
 		rajput_exclusive_influence_modifier = 0.1
@@ -7508,5 +7553,134 @@ scottish_monarchy = {
 		custom_attributes = {
 			enables_privy_council = yes #pseudoparliament and a development of the King's Council
 		}#fixdis every option is the same
+	}
+}
+
+greek_lordship_reform = { #T1
+	icon = "castle"
+	allow_normal_conversion = no
+	potential = {
+	    OR = {
+		    culture_group = byzantine
+		    culture_group = south_slavic
+		}
+		#NOT = { culture_group = gaelic }
+		capital_scope = { region = balkan_region }
+		NOT = { has_reform = greek_duchy_reform }
+	}
+	lock_level_when_selected = yes
+	legacy_equivalent = greek_lordship_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	nation_designer_trigger = {
+	    OR = {
+		    culture_group = byzantine
+		    culture_group = south_slavic
+		}
+		#NOT = { culture_group = gaelic }
+		capital_scope = { region = balkan_region }
+	}
+	fixed_rank = 1
+	modifiers = {
+		production_efficiency = 0.15
+		global_tax_modifier = 0.15
+		diplomatic_reputation = -2
+		max_absolutism = 10
+	}
+}
+
+greek_duchy_reform = { #T2
+	icon = "castle"
+	allow_normal_conversion = no
+	legacy_equivalent = greek_provincial_kingdom_legacy
+	valid_for_nation_designer = no
+	fixed_rank = 1
+	potential = {
+		OR = {
+		    culture_group = byzantine
+		    culture_group = south_slavic
+		}
+		#NOT = { culture_group = gaelic }
+		capital_scope = { region = balkan_region }
+		#NOT = { has_reform = anglo_irish_monarchy_reform }
+	}
+	modifiers = {
+		production_efficiency = 0.15
+		global_tax_modifier = 0.15
+		diplomatic_reputation = -1
+		max_absolutism = 10
+	}
+}
+
+greek_principality = {
+	icon = "greek_principality"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { has_reform = tsardom }
+
+		religion = orthodox
+		OR = {
+			culture_group = byzantine
+		    culture_group = south_slavic
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = greek_principality
+			}
+		}
+	}
+	fixed_rank = 1
+	legacy_equivalent = greek_principality_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	nation_designer_trigger = {
+		OR = {
+			culture_group = byzantine
+		    culture_group = south_slavic
+		}
+		religion = orthodox
+	}
+	modifiers = {
+		global_unrest = -1
+		global_regiment_cost = -0.05
+		governing_capacity = 200
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.1
+	}
+
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Third Rome" 
+				has_dlc = "Domination"
+			}
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+		custom_attributes = {
+			weaker_russian_ability = yes
+		}
+	}
+}
+
+greek_provincial_kingdom_reform = { #T2
+	icon = "chieftain"
+	allow_normal_conversion = no
+	legacy_equivalent = greek_provincial_kingdom_legacy
+	valid_for_nation_designer = no
+	fixed_rank = 1
+	potential = {
+		OR = {
+		    culture_group = byzantine
+		    culture_group = south_slavic
+		}
+		capital_scope = { region = balkan_region }
+		#NOT = { has_reform = tanistry_reform }
+	}
+	modifiers = {
+		stability_cost_modifier = -0.1
+		global_manpower_modifier = 0.25
+		global_institution_spread = -0.05
+		max_absolutism = -10
 	}
 }

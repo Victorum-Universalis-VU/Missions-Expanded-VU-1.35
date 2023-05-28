@@ -4277,19 +4277,19 @@ on_five_year_pulse = {
 		#LOTF additions integrated by San Felipe
 		50 = lotf_random_events.5
 		# Aristocracy 		13  (8g 5b)
-		100 = ideagroups.100
-		100 = ideagroups.101
-		100 = ideagroups.102
-		100 = ideagroups.103
-		100 = ideagroups.104
-		100 = ideagroups.105
-		100 = ideagroups.106
-		100 = ideagroups.107
-		100 = ideagroups.108
-		100 = ideagroups.109
-		100 = ideagroups.110
-		100 = ideagroups.111
-		100 = ideagroups.112
+		#100 = ideagroups.100
+		#100 = ideagroups.101
+		#100 = ideagroups.102
+		#100 = ideagroups.103
+		#100 = ideagroups.104
+		#100 = ideagroups.105
+		#100 = ideagroups.106
+		#100 = ideagroups.107
+		#100 = ideagroups.108
+		#100 = ideagroups.109
+		#100 = ideagroups.110
+		#100 = ideagroups.111
+		#100 = ideagroups.112
 
 
 		# Plutocracy 		19 (12g 7b)
@@ -4560,29 +4560,29 @@ on_five_year_pulse = {
 		100 = ideagroups.1910
 
 		# Horde Ideas		10 (8g 2b)
-		100 = ideagroups.1922
-		100 = ideagroups.1923
-		100 = ideagroups.1924
-		100 = ideagroups.1925
-		100 = ideagroups.1926
-		100 = ideagroups.1927
-		100 = ideagroups.1928
-		100 = ideagroups.1929
-		100 = ideagroups.1930
-		100 = ideagroups.1931
+		#100 = ideagroups.1922
+		#100 = ideagroups.1923
+		#100 = ideagroups.1924
+		#100 = ideagroups.1925
+		#100 = ideagroups.1926
+		#100 = ideagroups.1927
+		#100 = ideagroups.1928
+		#100 = ideagroups.1929
+		#100 = ideagroups.1930
+		#100 = ideagroups.1931
 
 		#Theocracy Ideas		11 (9g 2b)
-		100 = ideagroups.1911
-		100 = ideagroups.1912
-		100 = ideagroups.1913
-		100 = ideagroups.1914
-		100 = ideagroups.1915
-		100 = ideagroups.1916
-		100 = ideagroups.1917
-		100 = ideagroups.1918
-		100 = ideagroups.1919
-		100 = ideagroups.1920
-		100 = ideagroups.1921
+		#100 = ideagroups.1911
+		#100 = ideagroups.1912
+		#100 = ideagroups.1913
+		#100 = ideagroups.1914
+		#100 = ideagroups.1915
+		#100 = ideagroups.1916
+		#100 = ideagroups.1917
+		#100 = ideagroups.1918
+		#100 = ideagroups.1919
+		#100 = ideagroups.1920
+		#100 = ideagroups.1921
 
 		# Indigenous		10 (6g 4b)
 		100 = ideagroups.1932
@@ -4597,37 +4597,37 @@ on_five_year_pulse = {
 		100 = ideagroups.1941
 
 		# Infrastructure		10 (5g 5b)
-		100 = ideagroups.2000
-		100 = ideagroups.2001
-		100 = ideagroups.2002
-		100 = ideagroups.2003
-		100 = ideagroups.2004
-		100 = ideagroups.2005
-		100 = ideagroups.2006
-		100 = ideagroups.2007
-		100 = ideagroups.2008
-		100 = ideagroups.2009
+		#100 = ideagroups.2000
+		#100 = ideagroups.2001
+		#100 = ideagroups.2002
+		#100 = ideagroups.2003
+		#100 = ideagroups.2004
+		#100 = ideagroups.2005
+		#100 = ideagroups.2006
+		#100 = ideagroups.2007
+		#100 = ideagroups.2008
+		#100 = ideagroups.2009
 
 		#Court Events			8 (6g 2b)
-		100 = ideagroups.2010
-		100 = ideagroups.2011
-		100 = ideagroups.2012
-		100 = ideagroups.2013
-		100 = ideagroups.2014
-		100 = ideagroups.2015
-		100 = ideagroups.2016
-		100 = ideagroups.2017
+		#100 = ideagroups.2010
+		#100 = ideagroups.2011
+		#100 = ideagroups.2012
+		#100 = ideagroups.2013
+		#100 = ideagroups.2014
+		#100 = ideagroups.2015
+		#100 = ideagroups.2016
+		#100 = ideagroups.2017
 
 		#Mercenary Ideas		9 (6g 3b)
-		100 = ideagroups.2020
-		100 = ideagroups.2021
+		#100 = ideagroups.2020
+		#100 = ideagroups.2021
 		100 = ideagroups.1603
 		100 = ideagroups.1604
 		100 = ideagroups.1610
-		100 = ideagroups.2025
-		100 = ideagroups.2026
-		100 = ideagroups.2027
-		100 = ideagroups.2028
+		#100 = ideagroups.2025
+		#100 = ideagroups.2026
+		#100 = ideagroups.2027
+		#100 = ideagroups.2028
 
 		1000 = 0
 	}
