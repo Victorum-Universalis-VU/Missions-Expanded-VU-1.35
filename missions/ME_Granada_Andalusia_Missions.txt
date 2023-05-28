@@ -1969,7 +1969,7 @@ ADU_missions_2_muslim = {
 		provinces_to_highlight = {
 			owned_by = ROOT
 			OR = {
-				culture = berber
+				culture_group = berber_group
 				has_province_modifier = estate_berbers_settlement
 			}
 			NOT = { has_forcelimit_building_trigger = yes }
@@ -1988,7 +1988,7 @@ ADU_missions_2_muslim = {
 			
 			OR = {
 				any_owned_province = {
-					culture = berber
+					culture_group = berber_group #berber
 					has_forcelimit_building_trigger = yes 
 				}
 				num_of_owned_provinces_with = {

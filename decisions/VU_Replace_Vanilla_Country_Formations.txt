@@ -2102,7 +2102,7 @@ country_decisions = {
 				}
 			}
 			#NOT = { has_reform = irish_clann_reform }			#Clans and Lordships need to create provincial kingdom
-			#NOT = { has_reform = norman_lordship_reform }			#Clans and Lordships need to create provincial kingdom
+			NOT = { has_reform = norman_lordship_reform }			#Clans and Lordships need to create provincial kingdom
 		}
 		provinces_to_highlight = {
 			region = ireland_region

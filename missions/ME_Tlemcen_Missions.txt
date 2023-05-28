@@ -89,7 +89,7 @@ TLC_missions_1 = {
 		trigger = {
 			accepted_culture = algerian
 			has_dip_advisor = yes
-			any_owned_province = { culture = berber }
+			any_owned_province = { culture = shenwa }
 		}
 		effect = {
 			country_event = { id = ME_Tlemcen_Events.3 } #become algerian or stay berber
@@ -108,22 +108,22 @@ TLC_missions_1 = {
 			if = {
 				limit = {
 					any_owned_province = {
-						culture = berber
+						culture = shenwa
 						NOT = { has_manpower_building_trigger = yes }
 					}
 				}
 				owned_by = ROOT
-				culture = berber
+				culture = shenwa
 				NOT = { has_manpower_building_trigger = yes }
 			}
 			else = {
-				culture = berber
+				culture = shenwa
 				NOT = { owned_by = ROOT }
 			}
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				culture = berber
+				culture = shenwa
 				has_manpower_building_trigger = yes
 				value = 3
 			}
@@ -149,7 +149,7 @@ TLC_missions_1 = {
 					scale = higher_development_than
 					scope = every_owned_province
 					global_trigger = "
-						culture = berber
+						culture = shenwa
 						has_manpower_building_trigger = yes
 					"
 					event_target_name = "Tlemcen_Target"

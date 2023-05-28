@@ -87,7 +87,7 @@ TUN_missions_1 = {
 			}
 		}
 		effect = {
-			add_accepted_culture_or_dip_power = { culture = berber }
+			add_accepted_culture_or_dip_power = { culture = tunisian }
 
 			custom_tooltip = " "
 

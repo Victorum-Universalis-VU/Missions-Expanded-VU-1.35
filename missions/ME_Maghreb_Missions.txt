@@ -18,7 +18,7 @@ GHD_missions_1 = {
 		required_missions = { GHD_kindle_the_flames_of_war }
 		position = 2
 		provinces_to_highlight = {
-			culture = berber
+			culture = ROOT #berber
 			NOT = {
 				ROOT = {
 					has_estate = estate_berbers
@@ -41,7 +41,7 @@ GHD_missions_1 = {
 			}
 			else = {
 				any_owned_province = {
-					culture = berber
+					culture = ROOT #berber
 					num_of_times_improved = 5
 				}
 			}
@@ -54,7 +54,7 @@ GHD_missions_1 = {
 			define_advisor = {
 				type = army_reformer
 				skill = 1
-				culture = berber
+				culture = ROOT #berber
 				religion = ROOT
 				cost_multiplier = 0.75
 			}
