@@ -237,6 +237,7 @@ country_decisions = {
 				name = centralization_modifier
 				duration = 7300
 			}
+			set_capital = 225 # Cordoba
 			add_prestige = 25
 			if = {
 				limit = {
@@ -333,6 +334,16 @@ country_decisions = {
 				limit = { government = tribal }
 				change_government_to_monarchy = yes #Desert tribes settling down, theocracies become monarchies.
 				#set_legacy_government = despotic_monarchy
+			}
+			if = {
+				limit = { is_revolutionary = no }
+				add_government_reform = al_andalusia_government
+			}
+			if = {
+				limit = {
+					has_country_flag = SOS_forming_andalusia_will_rename_us_to_al_amogulus_flag
+				}
+				ME_override_country_name = { string = SOS_amogulus }
 			}
 			set_country_flag = formed_andalusia_flag
 			swap_ideas = yes
