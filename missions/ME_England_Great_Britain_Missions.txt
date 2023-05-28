@@ -169,6 +169,12 @@ ENG_missions_1_1 = {
 			add_mil_power = 50
 			89 = {
 				add_local_autonomy = -10
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 25
+					key = ENG_british_influence
+				}
 			}
 		}
 	}
@@ -190,17 +196,12 @@ GBR_missions_1_1 = {
 		required_missions = { ENG_seize_the_isles }
 		position = 10
 		provinces_to_highlight = {
-			OR = {
-				province_id = 370
-				province_id = 371
-			}
+			area = iceland_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			370 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			371 = {
+			iceland_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -509,6 +510,10 @@ ENG_missions_1_3 = {
 				name = ENG_royal_navy
 				duration = 9125
 			}
+			add_country_modifier = {
+				name = eng_the_man_of_war
+				duration = -1
+			}
 		}
 	}
 }
@@ -767,11 +772,11 @@ ENG_missions_2_1 = {
 		required_missions = { ENG_Enforce_the_Union ENG_rival_the_nobles }
 		position = 7
 		provinces_to_highlight = {
-			area = brittany_area
+			region = brittany_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			brittany_area = {
+			brittany_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -803,6 +808,7 @@ ENG_missions_2_1 = {
 			OR = {
 				area = highlands_area
 				area = kingdom_of_the_isles_area
+				area = grampians_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -812,6 +818,10 @@ ENG_missions_2_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			kingdom_of_the_isles_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			grampians_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -843,6 +853,15 @@ ENG_missions_2_1 = {
 					add_permanent_claim = ROOT
 				}
 			}
+			369 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 
@@ -854,6 +873,7 @@ ENG_missions_2_1 = {
 			OR = {
 				province_id = 1978
 				province_id = 1979
+				province_id = 369
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -862,6 +882,9 @@ ENG_missions_2_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			1979 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			369 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -878,16 +901,13 @@ ENG_missions_2_1 = {
 					duration = -1
 				}
 			}
-			370 = {
-				if = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
+			369 = {
+				add_province_modifier = {
+					name = ENG_cod_secured
+					duration = -1
 				}
 			}
-			371 = {
+			iceland_area = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT }
@@ -939,6 +959,9 @@ GBR_missions_2_1 = {
 			OR = {
 				area = northern_norway
 				area = western_norway
+				area = trondelag_area
+				area = southern_norway_area
+				area = eastern_norway
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -951,6 +974,18 @@ GBR_missions_2_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			trondelag_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_norway_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_norway = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			jutland_area = {
@@ -960,7 +995,7 @@ GBR_missions_2_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			eastern_norway = {
+			denmark_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1703,6 +1738,13 @@ ENG_missions_3_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			grampians_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			add_country_modifier = {
 				name = ENG_southern_scotland
 				duration = 9125
@@ -1803,6 +1845,27 @@ GBR_missions_3_1 = {
 				add_permanent_claim = ROOT
 			}
 			western_norway = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			trondelag_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_norway_area  = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_norway = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
