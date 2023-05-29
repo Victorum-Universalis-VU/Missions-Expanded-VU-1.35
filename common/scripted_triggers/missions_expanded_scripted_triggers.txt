@@ -124,10 +124,10 @@ country_has_both_paradox_and_me_missions = {
 				tag = TUN
 			}
 		}
-		AND = {
-			has_dlc = "American Dream"
-			tag = USA
-		}
+	#	AND = {
+	#		has_dlc = "American Dream"
+	#		tag = USA
+	#	}
 		# Default
 		tag = BYZ
 		tag = MUG
