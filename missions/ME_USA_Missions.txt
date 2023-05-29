@@ -5,10 +5,7 @@ USA_missions_1 = {
 	potential = {
 		OR = {
 			NOT = { has_dlc = "American Dream" }
-			AND = {
-				has_dlc = "American Dream"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
+			has_dlc = "American Dream"
 		}
 		tag = USA
 	}
@@ -196,10 +193,7 @@ USA_missions_2 = {
 	potential = {
 		OR = {
 			NOT = { has_dlc = "American Dream" }
-			AND = {
-				has_dlc = "American Dream"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
+			has_dlc = "American Dream"
 		}
 		tag = USA
 	}
@@ -414,10 +408,7 @@ USA_missions_3 = {
 	potential = {
 		OR = {
 			NOT = { has_dlc = "American Dream" }
-			AND = {
-				has_dlc = "American Dream"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
+			has_dlc = "American Dream"
 		}
 		tag = USA
 	}
@@ -1013,10 +1004,7 @@ USA_missions_4 = {
 	potential = {
 		OR = {
 			NOT = { has_dlc = "American Dream" }
-			AND = {
-				has_dlc = "American Dream"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
+			has_dlc = "American Dream"
 		}
 		tag = USA
 	}
@@ -1191,7 +1179,7 @@ USA_missions_4 = {
 				add_permanent_province_modifier = { name = port_erie duration = -1 }
 			}
 			custom_tooltip = blank_space
-		#	country_event = { id = lotf_events.18 }
+			country_event = { id = lotf_events.18 }
 		}
 	}
 	
@@ -1210,7 +1198,7 @@ USA_missions_4 = {
 			custom_tooltip = manifest_desinty_tt
 			hidden_effect = { set_country_flag = proper_nation_flag }
 			custom_tooltip = blank_space
-		#	country_event = { id = lotf_events.17 }
+			country_event = { id = lotf_events.17 }
 		}
 	}
 	
@@ -2023,10 +2011,7 @@ USA_missions_5 = {
 	potential = {
 		OR = {
 			NOT = { has_dlc = "American Dream" }
-			AND = {
-				has_dlc = "American Dream"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
+			has_dlc = "American Dream"
 		}
 		tag = USA
 	}
@@ -2331,7 +2316,7 @@ USA_missions_5 = {
 			}
 		}
 		effect = {
-		#	country_event = { id = lotf_events.15 }
+			country_event = { id = lotf_events.15 }
 			custom_tooltip = blank_space
 			custom_tooltip = missions_abolish_slavery_tt
 			hidden_effect = { 
@@ -2460,7 +2445,7 @@ USA_missions_5 = {
 		}
 		effect = {
 			custom_tooltip = missions_reconstruction_tt
-		#	country_event = { id = lotf_events.19 }
+			country_event = { id = lotf_events.19 }
 			custom_tooltip = blank_space
 			if = {
 				limit = { has_global_flag = advisors_expanded_mod_active } 
@@ -2649,10 +2634,7 @@ USA_missions_6 = {
 	potential = {
 		OR = {
 			NOT = { has_dlc = "American Dream" }
-			AND = {
-				has_dlc = "American Dream"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
+			has_dlc = "American Dream"
 		}
 		tag = USA
 	}
