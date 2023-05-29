@@ -11937,18 +11937,16 @@ dutch_polders = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			culture = dutch
-			culture = flemish
-			culture = frisian
+			culture_group = low_franconian
+			culture_group = germanic
 		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			culture = dutch
-			culture = flemish
-			culture = frisian
+			culture_group = low_franconian
+			culture_group = germanic
 		}
 		province_is_or_accepts_culture = yes
 	}

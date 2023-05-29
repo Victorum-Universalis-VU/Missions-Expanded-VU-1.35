@@ -3650,7 +3650,8 @@ fu_amsterdam_stock_exchange = {
 
 	can_upgrade_trigger = {
 		OR = { 
-			culture = dutch
+			culture_group = low_franconian
+			culture_group = germanic
 			owner = { accepted_culture = dutch } 
 		}
 		OR = { 
@@ -4287,24 +4288,24 @@ fu_brugge_dike = {
 
 	build_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 	
 	can_use_modifiers_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
@@ -4439,24 +4440,24 @@ fu_gent_dike = {
 
 	build_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 	
 	can_use_modifiers_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
@@ -4576,24 +4577,24 @@ fu_antwerp_dike = {
 
 	build_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 	
 	can_use_modifiers_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
@@ -4713,24 +4714,24 @@ fu_zeeland_dike = {
 
 	build_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 	
 	can_use_modifiers_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
@@ -4850,24 +4851,24 @@ fu_den_haag_dike = {
 
 	build_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 	
 	can_use_modifiers_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
@@ -4987,24 +4988,24 @@ fu_amsterdam_dike = {
 
 	build_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 	
 	can_use_modifiers_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 		}
 	}
@@ -5124,8 +5125,8 @@ fu_admiralty_amsterdam = {
 
 	build_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 			owner = { full_idea_group = naval_ideas }
 			owner = { full_idea_group = maritime_ideas } 
@@ -5134,8 +5135,8 @@ fu_admiralty_amsterdam = {
 	
 	can_use_modifiers_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 			owner = { full_idea_group = naval_ideas }
 			owner = { full_idea_group = maritime_ideas } 
@@ -5144,8 +5145,8 @@ fu_admiralty_amsterdam = {
 
 	can_upgrade_trigger = {
 		OR = {
-			primary_culture = dutch
-			primary_culture = flemish
+			culture_group = low_franconian
+			culture_group = germanic
 			has_owner_accepted_culture = yes
 			owner = { full_idea_group = naval_ideas }
 			owner = { full_idea_group = maritime_ideas } 

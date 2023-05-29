@@ -1290,6 +1290,122 @@ germanic = {
 	seelander = {
         graphical_culture = westerngfx
 	}
+	#Dutch
+	ger_dutch = { #renamed to Hollander
+        graphical_culture = westerngfx
+		primary = HOL
+	}
+	ger_brabantian = {
+        graphical_culture = westerngfx
+		primary = BRB
+	}
+	ger_dutch_saxon = {
+        graphical_culture = westerngfx
+		primary = GRN
+	}
+	ger_zeelandic = {
+        graphical_culture = westerngfx
+	}
+	ger_limburgish = {
+        graphical_culture = westerngfx
+		primary = LBG
+		male_names = {
+			Falco Jarek
+		}
+		dynasty_names = {
+			"van Limburg" "van Leuven" "van Brabant" "van Buren" "van Aarschot" "van Loon" "van Heinsberg" "van Breda" "van Hoorn" "van Bautersheim" "van Diest" "van Wassenberg" "van Valkenburg" "van zitterd" "van geleen"
+		}
+	}
+	ger_guelders = {
+        graphical_culture = westerngfx
+		primary = GEL
+		dynasty_names = {
+			"de Friesland" "van Egmond" "van Gelre" "van Brederode" "van Oranje" "van Bronckhorst" "von Zutphen" "van Heemskerk" "van Bergh" "van Rhenen" "van de Veluwe" "van Keppel" "Van Voorst tot Voorst" "van Montfoort" "van Wassenaer" "van Haspinga" "van Bosinchem" "van Renesse" "van Wisch" "De Graeff" "De Witte"
+		}
+	}
+	ger_flemish = {
+        graphical_culture = westerngfx
+		primary = FLA
+			dynasty_names = {
+			"van Oranje" Nassau "van Wassenberg" "van Henegouwen" "de Friesland"
+			"van Haspinga" "van Limburg" "van Lotharingen"  "von der Mark"
+			"van Leuven" "van Brabant" "van Egmont" "de Reginar" "van Jülich-Hengebach"
+			# CKII
+			"van Loon" "von Geldern" "van Sulzbach" "von Salm"
+			"van Bergh" "van Heinsberg" "van de Veluwe" "De Graeff"
+			"van Brederode" "van Breda" "van Heemskerk" "van Glymes" "van Grimberghe"
+			"van Renesse" "van Wassenaer" "van Bronckhorst"
+			"van Keppel" "Van Voorst tot Voorst" "van Wisch" "van Kamerijk" "Cirksena"
+			"van Diest" "van Montfoort"
+			# Frisian
+			"van Serooskerken"
+		}
+		male_names = {
+			Filips Jan Boudewijn Arnolf Lodewijk Robrecht Willem Diederik Gwijde Karel Antoon Abraham Alexander Alfons 
+			Andries Balthasar Bartholomeus Christoffel Constantijn Cornelis Daniël David Ernst Erwin Ewoud Floris 
+			Gabriel Godfried Hans Jacob Kasper Ludger Luuk Marinus Pieter Renate Rodolf Roeland Valentijn
+		}
+		female_names = {
+			Ada Adela Adelheid Adelaide Aechte Agaete Aleid Alijse Alice Aliken Anna Annelies
+			Badeloge Bava Beatrijs Beatrice Benedicta
+			Blanca Blanche Blanceflore Cecily Cecilia Cille Clara Clementia 
+			Ellijnore Eleanor Emma Ermingarde Ermengarde Fenne
+			Filippa Philippa Frida Gheertrude Gertrude Gerda Godila Haduwijn Helena Helen Herlinda 
+			Hilligonda Ide Ida Imagina Irene Isabelle Iudith
+			Jacoba Jaccobijn Jasminne Johanna Joan Jolanda Juliana Jutte Kathrijne 
+			Katrien Catherine Liedwin Lisebet Elisabeth Machtelt Margareta Margaret
+			Maria Mathilde Matilda Oda Odelt Olinde Onna Pieternelle Petronilla Reynilde Sanne 
+			Sigerda Sophie Sophia Swanhildis Thetburga Tiburge Waltrud
+			Wila Wendelmoet Wenna Willemine Yonefij Yvonne Zoete Margaretha Rosanne Tamara
+		}
+	}
+	ger_frisian = {
+        graphical_culture = westerngfx
+		primary = FRI
+		male_names = {
+			Anno Bernard Baltasar Campegius Dodo Eggerik Eilhard Eeltsje Enno Edzard Edo
+			Freark Franciscus Gysbert Gerlof Hendrik Jancko Jacobus Joast Jehan Joaris
+			Kristiaan Karel Keno Loadewyk Magnus Marten Michiel Nicolaas Okko Oluf
+			Pier Rudolf Theunis Tsalling Tsjibbe Tileman Tako Ulrik Ucko Uniko Ubbo
+			Worp Widzel Wigbolt Wijard Wybrand Ygo
+		}
+		female_names = {
+			Albertina Ats Anna Elisabet Fokel Goslinga Juliana Kristine Kynke Marije
+			Ruerdtsje Rintsje Stine Sesilia Sjarlotte Titia Theda Tijdt Wobbel
+		}
+		dynasty_names = {
+			Abdena Accama "fan Aldenboarch" Brandsma "fan Boalsert" "fan Blije" Beninga
+			Brongersma Binnerts Bonninga "tom Brok" Carree Douwama Durks Dirksen Donia
+			Edema Eisinga Emmius Eschels "fan Esens" Feddes Galama Hamkes Halbertsma Haringsma
+			Japiks "fan Jever" Jelckama Jelgersma Lenige Ripperda "fan Rossum" Steenbicker 
+			Sirksena Syrtsema "fan Thabor" Vitringa Walles Wiarda Zelle
+		}
+	}
+	ger_east_frisian = {
+        graphical_culture = westerngfx
+		primary = EFR
+	}
+	ger_north_frisian = {
+        graphical_culture = westerngfx
+		primary = EFR
+	}
+	luxembourgish = {
+        graphical_culture = westerngfx
+		primary = LUX
+		male_names = {
+			Abbes Abbi Ägidius Albär Alluis Aloyse Ambros Ambrous Ämes Änder Ändréi Baltes Battes Batty Bros Charel Chrëscht Dilles Ësti Ferd Fern Flëpp Fränk Haans Heng Jamper Jang 
+			Jeek Jemp Josy Klos Lois Loll Lui Lull Luss Méchel Néckel Nikla Nuckes Octavie Péiter Pitt Stinn Stoffel Tunn Tunnes Uedem Wëllem
+		}
+		female_names = {
+			Addéi Addell Agätt Agatt Agnis Allin Amméi Ammel Ammeli Amrei An Anegréit Anegritt Anekätt Aneleis Anelis Aneliss Änneli Änni Antenett Appolonia Bäärbel Babel Babett Bierbel 
+			Brosia Damienne Gättes Gätti Getti Gréidel Gréit Jätti Jelina Ketti Linn Loni Luss Maargréit Margréit Meeli Muedeléin Nannéi Nannette Nanni Néis Octavie Tréis Zëss Zëssil
+		}
+		dynasty_names = {
+		    "van Schmit" "van Muller" "van Weber" "van Hoffmann" "van Wagner" "van Thill" "van Schmitz" "van Schroeder" "van Reuter" "van Klein" "van Becker" "van Kieffer" "van Kremer" 
+			"van Faber" "van Meyer" "van Schneider" "van Weiss" "van Schiltz" "van Simon" "van Welter" "van Hansen" "van Majerus" "van Ries" "van Meyers" "van Kayser" "van Steffen" 
+			"van Krier" "van Braun" "van Wagener" "van Diederich"
+		}
+	}
 	#MEVU
 	czechBOH = {
 		primary = BOH
@@ -1507,23 +1623,6 @@ low_franconian = {
 	dutch_saxon = {
         graphical_culture = westerngfx
 		primary = GRN
-	}
-	luxembourgish = {
-        graphical_culture = westerngfx
-		primary = LUX
-		male_names = {
-			Abbes Abbi Ägidius Albär Alluis Aloyse Ambros Ambrous Ämes Änder Ändréi Baltes Battes Batty Bros Charel Chrëscht Dilles Ësti Ferd Fern Flëpp Fränk Haans Heng Jamper Jang 
-			Jeek Jemp Josy Klos Lois Loll Lui Lull Luss Méchel Néckel Nikla Nuckes Octavie Péiter Pitt Stinn Stoffel Tunn Tunnes Uedem Wëllem
-		}
-		female_names = {
-			Addéi Addell Agätt Agatt Agnis Allin Amméi Ammel Ammeli Amrei An Anegréit Anegritt Anekätt Aneleis Anelis Aneliss Änneli Änni Antenett Appolonia Bäärbel Babel Babett Bierbel 
-			Brosia Damienne Gättes Gätti Getti Gréidel Gréit Jätti Jelina Ketti Linn Loni Luss Maargréit Margréit Meeli Muedeléin Nannéi Nannette Nanni Néis Octavie Tréis Zëss Zëssil
-		}
-		dynasty_names = {
-		    "van Schmit" "van Muller" "van Weber" "van Hoffmann" "van Wagner" "van Thill" "van Schmitz" "van Schroeder" "van Reuter" "van Klein" "van Becker" "van Kieffer" "van Kremer" 
-			"van Faber" "van Meyer" "van Schneider" "van Weiss" "van Schiltz" "van Simon" "van Welter" "van Hansen" "van Majerus" "van Ries" "van Meyers" "van Kayser" "van Steffen" 
-			"van Krier" "van Braun" "van Wagener" "van Diederich"
-		}
 	}
 	zeelandic = {
         graphical_culture = westerngfx
