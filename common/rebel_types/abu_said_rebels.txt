@@ -74,6 +74,12 @@ abu_said_rebels = {
 	can_enforce_trigger = {
 		always = yes
 	}
+	siege_won_trigger = {
+		
+	}
+	siege_won_effect = {
+		
+	}
 
 	# Localisation for their demands
 	demands_description = me_tim_abu_said_throne

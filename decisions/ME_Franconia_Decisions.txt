@@ -1,6 +1,6 @@
 country_decisions = {
 	FKN_fabricate_cbs = {
-		major = no
+		#major = no
 		potential = {
 			has_country_flag = FKN_CB
 			NOT = { is_emperor = yes }

@@ -109,7 +109,7 @@ is_privateering_or_protecting_trade_10_percent = {
 		OR = {
 			has_privateer_share_in_trade_node = {
 				who = ROOT
-				share = 10
+				share = 0.1 #wrong value, it should a percentage. Was 10, set it to 0.1
 			}
 			trade_share = {
 				country = ROOT

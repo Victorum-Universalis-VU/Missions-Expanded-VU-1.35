@@ -87,7 +87,7 @@ country_decisions = {
 				limit = {
 					has_dlc = "Rule Britannia"
 				}
-				change_innovativeness = 2.5
+				change_innovativeness = 3
 			}
 			else = {
 				change_government_reform_progress = 10
