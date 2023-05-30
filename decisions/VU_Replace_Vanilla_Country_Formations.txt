@@ -157,7 +157,7 @@ country_decisions = {
 				#primary_culture = andalusi_culture
 				primary_culture = andalucian
 				AND = {
-					culture_group = maghrebi
+					culture_group = berber_group
 					any_owned_province = { region = iberia_region }
 				}
 				AND = {

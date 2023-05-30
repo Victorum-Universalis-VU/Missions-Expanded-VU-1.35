@@ -3,7 +3,14 @@ CAS_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = CAS
+		OR = { 
+			tag = CAS 
+			tag = SPA 
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
+		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -250,7 +257,14 @@ CAS_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = CAS
+		OR = { 
+			tag = CAS 
+			tag = SPA 
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
+		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -631,7 +645,14 @@ CAS_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = CAS
+		OR = { 
+			tag = CAS 
+			tag = SPA 
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
+		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -1114,7 +1135,14 @@ CAS_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = CAS
+		OR = { 
+			tag = CAS 
+			tag = SPA 
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
+		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -1602,7 +1630,14 @@ CAS_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = CAS
+		OR = { 
+			tag = CAS 
+			tag = SPA 
+			tag = BSP
+			tag = SPB
+			tag = BBS
+			tag = CSP
+		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
