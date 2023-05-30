@@ -250,7 +250,7 @@ estate_maya_develop_province = {
 		event_target:agenda_province = {
 			export_to_variable = {
 				which = province_dev_var
-				value = trigger_value:development
+				value = trigger_value:development #Not sure trigger_value:development works
 			}
 			change_variable = { which = province_dev_var value = 4 }
 		}

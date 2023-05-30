@@ -1,4 +1,4 @@
-estate_berbers_build_tax_building = {
+estate_berbers_build_tax_building = { #"errors culture_group =" are false positive
 	can_select = {
 		any_owned_province = {
 			is_state_core = root
