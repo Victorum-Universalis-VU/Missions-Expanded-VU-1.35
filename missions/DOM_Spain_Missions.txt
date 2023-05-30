@@ -2926,7 +2926,6 @@ dom_cas_missions_4 = {
 	}
 	potential = {
 		has_dlc = "Domination"
-		has_country_flag = use_paradox_missions
 		OR = { 
 			tag = CAS 
 			tag = SPA 
