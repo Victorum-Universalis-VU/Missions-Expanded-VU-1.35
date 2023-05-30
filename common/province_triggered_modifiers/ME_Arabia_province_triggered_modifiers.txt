@@ -8,7 +8,12 @@ ARB_legacy_of_andalusia = {
 	trigger = {
 		num_of_buildings_in_province = 5
 		development = 40
-		country_or_non_sovereign_subject_holds = ROOT
+		OR = {
+			owned_by = ROOT
+			owner = {
+				is_subject_of = ROOT
+			}
+		}
 		controlled_by = owner
 		
 		owner = {
@@ -43,7 +48,12 @@ ARB_house_of_wisdom_modifier = {
 	trigger = {
 		num_of_buildings_in_province = 5
 		development = 40
-		country_or_non_sovereign_subject_holds = ROOT
+		OR = {
+			owned_by = ROOT
+			owner = {
+				is_subject_of = ROOT
+			}
+		}
 		controlled_by = owner
 		
 		owner = {
