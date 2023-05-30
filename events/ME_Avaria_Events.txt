@@ -16,6 +16,11 @@ country_event = {
 		hidden_effect = {
 			#change_culture = avar # Really ?
 			every_owned_province = {
+				limit = {
+					NOT = {
+						culture = avar
+					}
+				}
 				change_culture = avar
 			}
 		}
