@@ -78,7 +78,7 @@ on_raze = { #ROOT - province owner = razing country
 	if = {
 		limit = {
 			owner = {
-				has_government_attribute = enables_spoils_of_war
+				has_government_attribute = enables_spoils_of_war #To set up because for some reason EE guys didn't difine that Mechanic/attribute
 				NOT = { has_country_flag = ME_tim_battle_tendency_mission_flag }
 			}
 		}
