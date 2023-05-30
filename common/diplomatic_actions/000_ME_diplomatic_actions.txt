@@ -360,16 +360,16 @@ annexationaction = {
 			}
 		}
 	}
-	condition = {
-		tooltip = NEEDS_50_CROWNLAND_TT
-		potential = {
-			has_government_attribute = need_crownland_to_annex
-			NOT = { crown_land_share = 50 }
-		}
-		allow = {
-			crown_land_share = 50
-		}
-	}
+#	condition = { # Vanilla, shouldn't be in ME_diplo action
+#		tooltip = NEEDS_50_CROWNLAND_TT
+#		potential = {
+#			has_government_attribute = need_crownland_to_annex
+#			NOT = { crown_land_share = 50 }
+#		}
+#		allow = {
+#			crown_land_share = 50
+#		}
+#	}
 
 	###EUROPA EXPANDED
 	condition = {
