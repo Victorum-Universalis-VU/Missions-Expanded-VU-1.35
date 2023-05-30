@@ -4,10 +4,15 @@ MKS_missions_1 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = MKS
-			tag = BNE
-			tag = LUW
-			tag = BTN
+			AND = {
+				OR = {
+					tag = MKS
+					tag = BNE
+					tag = LUW
+					tag = BTN
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
 			AND = {
 				tag = MSA
 				OR = {
@@ -172,10 +177,15 @@ MKS_missions_2 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = MKS
-			tag = BNE
-			tag = LUW
-			tag = BTN
+			AND = {
+				OR = {
+					tag = MKS
+					tag = BNE
+					tag = LUW
+					tag = BTN
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
 			AND = {
 				tag = MSA
 				OR = {
@@ -307,10 +317,15 @@ MKS_missions_3 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = MKS
-			tag = BNE
-			tag = LUW
-			tag = BTN
+			AND = {
+				OR = {
+					tag = MKS
+					tag = BNE
+					tag = LUW
+					tag = BTN
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
 			AND = {
 				tag = MSA
 				OR = {
@@ -391,10 +406,15 @@ MKS_missions_4 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = MKS
-			tag = BNE
-			tag = LUW
-			tag = BTN
+			AND = {
+				OR = {
+					tag = MKS
+					tag = BNE
+					tag = LUW
+					tag = BTN
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
 			AND = {
 				tag = MSA
 				OR = {
@@ -498,10 +518,15 @@ MKS_missions_5 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = MKS
-			tag = BNE
-			tag = LUW
-			tag = BTN
+			AND = {
+				OR = {
+					tag = MKS
+					tag = BNE
+					tag = LUW
+					tag = BTN
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
 			AND = {
 				tag = MSA
 				OR = {

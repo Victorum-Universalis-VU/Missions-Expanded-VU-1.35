@@ -4,10 +4,15 @@ BEI_generic_missions_1 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = BEU #Berau
-			tag = KUT #Kutai
-			tag = BNJ #Banjar
-			tag = SMB #Sambas
+			AND ={
+				OR = {
+					tag = BEU #Berau
+					tag = KUT #Kutai
+					tag = BNJ #Banjar
+					tag = SMB #Sambas
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
 			AND = {
 				tag = MSA
 				OR = {
@@ -102,10 +107,15 @@ BEI_generic_missions_2 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = BEU #Berau
-			tag = KUT #Kutai
-			tag = BNJ #Banjar
-			tag = SMB #Sambas
+			AND ={
+				OR = {
+					tag = BEU #Berau
+					tag = KUT #Kutai
+					tag = BNJ #Banjar
+					tag = SMB #Sambas
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
 			AND = {
 				tag = MSA
 				OR = {
@@ -221,10 +231,15 @@ BEI_generic_missions_3 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = BEU #Berau
-			tag = KUT #Kutai
-			tag = BNJ #Banjar
-			tag = SMB #Sambas
+			AND ={
+				OR = {
+					tag = BEU #Berau
+					tag = KUT #Kutai
+					tag = BNJ #Banjar
+					tag = SMB #Sambas
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
 			AND = {
 				tag = MSA
 				OR = {
@@ -280,10 +295,15 @@ BEI_generic_missions_4 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = BEU #Berau
-			tag = KUT #Kutai
-			tag = BNJ #Banjar
-			tag = SMB #Sambas
+			AND ={
+				OR = {
+					tag = BEU #Berau
+					tag = KUT #Kutai
+					tag = BNJ #Banjar
+					tag = SMB #Sambas
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
 			AND = {
 				tag = MSA
 				OR = {
@@ -489,10 +509,15 @@ BEI_generic_missions_5 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = BEU #Berau
-			tag = KUT #Kutai
-			tag = BNJ #Banjar
-			tag = SMB #Sambas
+			AND ={
+				OR = {
+					tag = BEU #Berau
+					tag = KUT #Kutai
+					tag = BNJ #Banjar
+					tag = SMB #Sambas
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
 			AND = {
 				tag = MSA
 				OR = {

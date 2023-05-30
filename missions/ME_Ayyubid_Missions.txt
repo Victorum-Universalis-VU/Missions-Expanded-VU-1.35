@@ -1706,31 +1706,31 @@ HSN_AYY_religious_missions_1 = {
 	}
 }
 
-HSN_AYY_religious_missions_2 = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = AYY
-			tag = HSN
-		}
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
-	}
-	has_country_shield  = yes
-	
-	# AYY_dervish = {
-		# icon = mission_claim_hispaniola
-		# required_missions = { AYY_four_maddhabs }
-		# position = 12
-		# provinces_to_highlight = {
-		# }
-		# trigger = {
-		# }
-		# effect = {
-		# }
-	# }
-}
+#HSN_AYY_religious_missions_2 = { #No actual mission except for one that's commented out there so disabling it because "overlap"
+#	slot = 2
+#	generic = no
+#	ai = yes
+#	potential = {
+#		OR = {
+#			tag = AYY
+#			tag = HSN
+#		}
+#		has_country_flag = use_missions_expanded_missions_instead_of_paradox
+#	}
+#	has_country_shield  = yes
+#	
+#	# AYY_dervish = {
+#		# icon = mission_claim_hispaniola
+#		# required_missions = { AYY_four_maddhabs }
+#		# position = 12
+#		# provinces_to_highlight = {
+#		# }
+#		# trigger = {
+#		# }
+#		# effect = {
+#		# }
+#	# }
+#}
 
 HSN_AYY_religious_missions_4 = {
 	slot = 4

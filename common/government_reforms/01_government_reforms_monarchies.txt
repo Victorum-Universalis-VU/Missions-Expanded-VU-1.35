@@ -1518,11 +1518,11 @@ barbary_sultanate_reform = {
 	icon = "barbary_eyalet_government"
 	allow_normal_conversion = yes
 	potential = {
-		culture_group = maghrebi
+		culture_group = berber_group
 	}
 	queen = no
 	nation_designer_trigger = {
-		culture_group = maghrebi
+		culture_group = berber_group
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -2867,7 +2867,7 @@ mughal_government = {
 		turko_semitic = {
 			cavalry_power = 0.1
 		}
-		maghrebi = {
+		berber_group = {
 			privateer_efficiency = 0.25
 		}
 		malay = {

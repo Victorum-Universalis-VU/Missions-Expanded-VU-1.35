@@ -1219,33 +1219,33 @@ on_main_war_won = {
 		native_americans.7
 		flavor_kor.15
 	}
-	#LoTF additions integrated by San Felipe
-	#if = {
-	#	limit = {
-	#		has_country_flag = usarebel
-	#		is_subject = no
-	#		FROM = {
-	#			tag = GBR
-	#		}
-	#		colonial_parent = {
-	#			tag = FROM
-	#		}
-	#	}
-	#	country_event = { id = lotf_events.2 }
-	#}
-	#if = {
-	#	limit = {
-	#		has_country_flag = usarebel
-	#		is_subject = no
-	#		FROM = {
-	#			tag = UNK
-	#		}
-	#		colonial_parent = {
-	#			tag = FROM
-	#		}
-	#	}
-	#	country_event = { id = lotf_events.2 }
-	#}
+	#LoTF additions integrated by San Felipe - Forgot to uncomment that
+	if = {
+		limit = {
+			has_country_flag = usarebel
+			is_subject = no
+			FROM = {
+				tag = GBR
+			}
+			colonial_parent = {
+				tag = FROM
+			}
+		}
+		country_event = { id = lotf_events.2 }
+	}
+	if = {
+		limit = {
+			has_country_flag = usarebel
+			is_subject = no
+			FROM = {
+				tag = UNK
+			}
+			colonial_parent = {
+				tag = FROM
+			}
+		}
+		country_event = { id = lotf_events.2 }
+	}
 	#New 1.34.* LoTN additions
 	if = {
 		limit = {
