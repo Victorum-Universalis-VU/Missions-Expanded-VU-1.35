@@ -3,9 +3,9 @@ glory_seeker_personality = {
 		is_admiral = no
 		OR = {
 			tag = MSY
-			owner = {
-				tag = MSY
-			}
+		#	owner = {
+		#		tag = MSY
+		#	}
 		}
 	}
 	land_morale = 0.1

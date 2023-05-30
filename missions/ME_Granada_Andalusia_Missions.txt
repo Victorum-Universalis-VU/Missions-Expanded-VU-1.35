@@ -4332,7 +4332,7 @@ ADU_missions_5 = {
 			custom_tooltip = GRA_polymath_tt
 			set_country_flag = GRA_polymath
 			
-			custom_tooltip = " "
+			#custom_tooltip = " "
 			
 			add_country_modifier = {
 				name = GRA_advanced_scientific_fields
