@@ -390,7 +390,10 @@ kiel_canal = {
 			owns_or_vassal_of = 4141
 			is_subject = no			
 			OR = { 
-				mission_completed = emp_brapru_kiel_canal
+				AND ={
+					mission_completed = emp_brapru_kiel_canal
+					adm_tech = 22
+				}
 				adm_tech = 27
 			}
 			treasury = 10000
