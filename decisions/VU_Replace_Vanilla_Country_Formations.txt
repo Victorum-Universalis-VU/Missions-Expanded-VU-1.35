@@ -147,12 +147,13 @@ country_decisions = {
 ###################################################################################################
 ################################			Andalusia			 ##############################################
 ###################################################################################################
-	andalusian_nation = { #AndalusianNation.txt
+	andalusian_nation = {
 		major = yes
 		potential = {
 			vu_generic_can_form_potential_check = yes
 			NOT = { has_country_flag = formed_andalusia_flag }
 			NOT = { tag = ADU }
+			is_colonial_nation = no
 			OR = {
 				#primary_culture = andalusi_culture
 				primary_culture = andalucian
@@ -186,8 +187,17 @@ country_decisions = {
 			owns_core_province = 220			# Valencia
 			if = {
 				limit = {
-					NOT = { #Any tags that end up with the Granadan mission tree.
-						has_mission = gra_restore_the_andalusian_caliphate
+					OR = {
+						NOT = { #Any tags that end up with the Granadan mission tree.
+							has_mission = gra_restore_the_andalusian_caliphate
+						}
+						AND = {
+							tag = GRA
+							OR = {
+								has_country_flag = use_missions_expanded_missions_instead_of_paradox
+								NOT = { has_dlc = "Golden Century" }
+							}
+						}
 					}
 				}
 				num_of_owned_provinces_with = {
@@ -207,10 +217,13 @@ country_decisions = {
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
+			225 = {	#Cordoba
+				move_capital_effect = yes
+			}
 			hidden_effect = {
 				if = {
-					limit = {
-						tag = MOR
+					limit = { 
+						tag = MOR 
 						has_dlc = "Golden Century"
 					}
 					complete_mission = gra_overcome_internal_strife
@@ -232,12 +245,13 @@ country_decisions = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
+			add_prestige = 25
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 7300
 			}
-			set_capital = 225 # Cordoba
 			add_prestige = 25
+			set_capital = 225 # Cordoba
 			if = {
 				limit = {
 					NOT = { #Any tags that end up with the Granadan mission tree.
@@ -322,9 +336,13 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					culture_group = turko_semitic
-					#NOT = { primary_culture = andalusi_culture }
-					NOT = { primary_culture = andalucian }
+					OR = {
+						culture_group = turko_semitic
+						AND = {
+							culture_group = berber_group
+							NOT = { primary_culture = andalucian }
+						}
+					}
 				}
 				#change_primary_culture = andalusi_culture
 				change_primary_culture = andalucian
@@ -334,18 +352,14 @@ country_decisions = {
 				change_government_to_monarchy = yes #Desert tribes settling down, theocracies become monarchies.
 				#set_legacy_government = despotic_monarchy
 			}
-			if = {
-				limit = { is_revolutionary = no }
-				add_government_reform = al_andalusia_government
-			}
+			set_country_flag = formed_andalusia_flag
+			swap_ideas = yes
 			if = {
 				limit = {
 					has_country_flag = SOS_forming_andalusia_will_rename_us_to_al_amogulus_flag
 				}
 				ME_override_country_name = { string = SOS_amogulus }
 			}
-			set_country_flag = formed_andalusia_flag
-			swap_ideas = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -361,7 +375,7 @@ country_decisions = {
 				NOT = { capital_scope = { region = iberia_region } }			#Capital not in Iberia
 			}
 		}
-		ai_importance = 400 #
+		ai_importance = 400 
 	}
 
 ###################################################################################################
@@ -373,8 +387,6 @@ country_decisions = {
 			vu_generic_can_form_potential_check = yes
 			NOT = { has_country_flag = formed_arabia_flag }
 			NOT = { exists = ARB }
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
 			culture_group = turko_semitic
 			any_owned_province = { region = arabia_region }
 		}

@@ -1,3 +1,4 @@
+#Missing gfx apparently
 #Hansa Trading Outpost
 HNS_kontor = {
 	potential = {

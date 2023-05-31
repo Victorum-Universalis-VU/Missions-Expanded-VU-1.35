@@ -4,7 +4,10 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			check_variable = { ME_slovak_loyalty = 0 }
+			check_variable = {
+				which = ME_slovak_loyalty
+				value = 0
+			}
 		}
 		localisation_key = string_SLI_progress_green
 	}
@@ -22,7 +25,10 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			check_variable = { ME_polish_loyalty = 0 }
+			check_variable = {
+				which = ME_polish_loyalty
+				value = 0
+			}
 		}
 		localisation_key = string_PLI_progress_green
 	}
@@ -40,7 +46,10 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			check_variable = { ME_czech_loyalty = 0 }
+			check_variable = {
+				which = ME_czech_loyalty
+				value = 0
+			}
 		}
 		localisation_key = string_CZI_progress_green
 	}
