@@ -1,6 +1,6 @@
 country_decisions = {
 	PRU_decision_bav = {
-		major = no
+		#major = no
 		potential = {
 			tag = PRU
 			has_country_modifier = PRU_vassal_play
@@ -164,7 +164,7 @@ country_decisions = {
 		}
 	}
 	PRU_decision_wur = {
-		major = no
+		#major = no
 		potential = {
 			tag = PRU
 			has_country_modifier = PRU_vassal_play
@@ -448,7 +448,7 @@ country_decisions = {
 					limit = {
 						NOT = { is_free_or_tributary_trigger = yes }
 						culture_group = germanic
-						NOT = { development = 500 }
+						NOT = { total_development = 500 }
 						ai = yes
 					}
 					ROOT = { inherit = PREV }
@@ -470,7 +470,7 @@ country_decisions = {
 		}
 	}
 	PRU_decision_bad = {
-		major = no
+		#major = no
 		potential = {
 			tag = PRU
 			has_country_modifier = PRU_vassal_play
@@ -574,7 +574,7 @@ country_decisions = {
 		}
 	}
 	PRU_decision_sax = {
-		major = no
+		#major = no
 		potential = {
 			tag = PRU
 			has_country_modifier = PRU_vassal_play
@@ -689,7 +689,7 @@ country_decisions = {
 		}
 	}
 	PRU_decision_mkl = {
-		major = no
+		#major = no
 		potential = {
 			tag = PRU
 			has_country_modifier = PRU_vassal_play
