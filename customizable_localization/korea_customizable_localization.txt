@@ -1,3 +1,4 @@
+#Fixed the synthax, need to check the intent
 #Korea Catholic Believers
 defined_text = {
 	name = GetKorCatholicBelievers
@@ -36,24 +37,39 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			check_variable = { sijeon_vs_sasang = 60 }
+			check_variable = {
+				which = sijeon_vs_sasang
+				value = 60
+			}
 		}
 		localisation_key = KOR_sasang_win_big.d
 	}
 	text = {
 		trigger = {
-			check_variable = { sijeon_vs_sasang = 20 }
+			check_variable = {
+				which = sijeon_vs_sasang
+				value = 20
+			}
 			NOT = {
-				check_variable = { sijeon_vs_sasang = 60 }
+				check_variable = { 
+					which = sijeon_vs_sasang
+					value = 60
+				}
 			}
 		}
 		localisation_key = KOR_sasang_win_small.d
 	}
 	text = {
 		trigger = {
-			check_variable = { sijeon_vs_sasang = -30 }
+			check_variable = {
+				which = sijeon_vs_sasang
+				value = -30
+			}
 			NOT = {
-				check_variable = { sijeon_vs_sasang = 20 }
+				check_variable = {
+					which = sijeon_vs_sasang
+					value = 20
+				}
 			}
 		}
 		localisation_key = KOR_sijeon_win_small
@@ -61,7 +77,10 @@ defined_text = {
 	text = {
 		trigger = {
 			NOT = {
-				check_variable = { sijeon_vs_sasang = -30 }
+				check_variable = {
+					which = sijeon_vs_sasang
+					value = -30
+				}
 			}
 		}
 		localisation_key = KOR_sijeon_win_big
@@ -75,7 +94,10 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			check_variable = { modernization_vs_isolation = 0 }
+			check_variable = {
+				which = modernization_vs_isolation
+				value = 0
+			}
 		}
 		localisation_key = string_MVI_progress_manganese
 	}
@@ -94,15 +116,18 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			check_variable = { sijeon_vs_sasang = 0 }
+			check_variable = {
+				which = sijeon_vs_sasang
+				value = 0
+			}
 		}
 		localisation_key = string_SVS_progress_yellow
 	}
-	text {
+	text = {
+		localisation_key = string_SVS_progress_Teal
 		trigger = {
 			always = yes
 		}
-		localisation_key = string_SVS_progress_Teal
 	}
 }
 

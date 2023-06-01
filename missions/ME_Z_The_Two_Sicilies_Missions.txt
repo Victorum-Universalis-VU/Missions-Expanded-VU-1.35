@@ -1041,12 +1041,12 @@ the_two_sicilies_missions_5 = {
 			if = {
 				limit = {
 					any_country = {
-						culture_group = maghrebi
+						culture_group = berber_group
 					}
 				}
 				NOT = {
 					any_country = {
-						culture_group = maghrebi
+						culture_group = berber_group
 						naval_strength = {
 							who = ROOT
 							value = 1

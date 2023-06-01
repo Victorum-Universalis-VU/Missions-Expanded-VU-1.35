@@ -7,6 +7,7 @@ indonesians_3 = {
 		technology_group = chinese
 		culture_group = malay
 		NOT = { tag = MAJ }
+		NOT = { tag = MSA }
 		has_country_flag = use_paradox_missions
 		NOT = { has_reform = pirate_republic_reform }
 	}
@@ -163,6 +164,7 @@ indonesians_4 = {
 		technology_group = chinese
 		culture_group = malay
 		NOT = { tag = MAJ }
+		NOT = { tag = MSA }
 		has_country_flag = use_paradox_missions
 		NOT = { has_reform = pirate_republic_reform }
 	}
@@ -732,6 +734,7 @@ indonesians_5 = {
 	potential = {
 		technology_group = chinese
 		culture_group = malay
+		NOT = { tag = MSA }
 		has_country_flag = use_paradox_missions
 		NOT = { has_reform = pirate_republic_reform }
 	}

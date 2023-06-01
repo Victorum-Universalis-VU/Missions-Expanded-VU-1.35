@@ -55,14 +55,15 @@ country_event = {
 		custom_tooltip = ARB_gain_100_opinion
 
 		hidden_effect = {
-			every_country = {
-				limit = {
-					religion_group = muslim
-					superregion = india_superregion
-				}
-				add_opinion = {
-					who = ROOT
-					modifier = ARB_india_opinion
+			india_superregion = {
+				every_country = {
+					limit = {
+						religion_group = muslim
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = ARB_india_opinion
+					}
 				}
 			}
 		}

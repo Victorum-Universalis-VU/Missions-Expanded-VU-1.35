@@ -94,7 +94,10 @@ on_adm_development = {
 				culture = slovak
 			}
 			owner = {
-				change_variable = { ME_slovak_loyalty = 0.5 }
+				change_variable = { 
+					which = ME_slovak_loyalty
+					value = 0.5 
+				}
 			}
 		}
 		else_if = {
@@ -102,7 +105,10 @@ on_adm_development = {
 				culture = polish
 			}
 			owner = {
-				change_variable = { ME_polish_loyalty = 0.5 }
+				change_variable = { 
+					which = ME_polish_loyalty
+					value = 0.5
+				 }
 			}
 		}
 		else_if = {
@@ -110,7 +116,10 @@ on_adm_development = {
 				culture = czech
 			}
 			owner = {
-				change_variable = { ME_czech_loyalty = 0.5 }
+				change_variable = {
+					which = ME_czech_loyalty
+					value = 0.5
+				}
 			}
 		}
 	}
@@ -267,7 +276,10 @@ on_dip_development = {
 				culture = slovak
 			}
 			owner = {
-				change_variable = { ME_slovak_loyalty = 0.5 }
+				change_variable = {
+					which = ME_slovak_loyalty
+					value = 0.5
+				}
 			}
 		}
 		else_if = {
@@ -275,7 +287,10 @@ on_dip_development = {
 				culture = polish
 			}
 			owner = {
-				change_variable = { ME_polish_loyalty = 0.5 }
+				change_variable = {
+					which = ME_polish_loyalty
+					value = 0.5
+				}
 			}
 		}
 		else_if = {
@@ -283,7 +298,10 @@ on_dip_development = {
 				culture = czech
 			}
 			owner = {
-				change_variable = { ME_czech_loyalty = 0.5 }
+				change_variable = {
+					which = ME_czech_loyalty
+					value = 0.5
+				}
 			}
 		}
 	}
@@ -432,7 +450,10 @@ on_mil_development = {
 				culture = slovak
 			}
 			owner = {
-				change_variable = { ME_slovak_loyalty = 0.5 }
+				change_variable = {
+					which = ME_slovak_loyalty
+					value = 0.5
+				}
 			}
 		}
 		else_if = {
@@ -443,7 +464,10 @@ on_mil_development = {
 				}
 			}
 			owner = {
-				change_variable = { ME_polish_loyalty = 0.5 }
+				change_variable = {
+					which = ME_polish_loyalty
+					value = 0.5
+				}
 			}
 		}
 		else_if = {
@@ -451,7 +475,10 @@ on_mil_development = {
 				culture = czech
 			}
 			owner = {
-				change_variable = { ME_czech_loyalty = 0.5 }
+				change_variable = {
+					which = ME_czech_loyalty
+					value = 0.5
+				}
 			}
 		}
 	}
@@ -586,7 +613,10 @@ on_province_culture_converted = {
 				culture = slovak
 			}
 			owner = {
-				change_variable = { ME_slovak_loyalty = 1 }
+				change_variable = {
+					which = ME_slovak_loyalty
+					value = 1
+				}
 			}
 		}
 		else_if = {
@@ -597,7 +627,10 @@ on_province_culture_converted = {
 				}
 			}
 			owner = {
-				change_variable = { ME_polish_loyalty = 1 }
+				change_variable = {
+					which = ME_polish_loyalty
+					value = 1
+				}
 			}
 		}
 		else_if = {
@@ -605,7 +638,10 @@ on_province_culture_converted = {
 				culture = czech
 			}
 			owner = {
-				change_variable = { ME_czech_loyalty = 1 }
+				change_variable = {
+					which = ME_czech_loyalty
+					value = 1
+				}
 			}
 		}
 	}

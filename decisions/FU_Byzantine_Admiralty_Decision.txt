@@ -1,6 +1,6 @@
 country_decisions = {
 	fu_byzantine_admiralty_decision = {
-		major = no 
+		#major = no 
 		potential = {
 			OR = {
 				tag = BYZ 

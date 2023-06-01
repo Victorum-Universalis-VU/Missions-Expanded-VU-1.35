@@ -27,4 +27,10 @@ po_hre_claim_electorate = {
 			}
 		}
 	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 10000
+		}
+	}
 }

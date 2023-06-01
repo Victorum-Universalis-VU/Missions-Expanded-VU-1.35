@@ -58,7 +58,7 @@ timurid_militarization = {
 					factor = 10
 					not = {
 						has_government_power = {
-							mechanic_type = timurid_stratocracy_power
+							mechanic_type = timurid_militarization
 							power_type = timurid_stratocracy_power
 							value = 90
 						}

@@ -313,7 +313,7 @@ naples_missions_1 = {
 						NOT = { exists = TUN }
 					}
 					any_country = {
-						culture_group = maghrebi
+						culture_group = berber_group
 						NOT = { num_of_light_ship = ROOT }
 						341 = {
 							trade_share = {
@@ -371,7 +371,7 @@ naples_missions_1 = {
 				}
 				random_country = {
 					limit = {
-						culture_group = maghrebi
+						culture_group = berber_group
 						NOT = { num_of_light_ship = ROOT }
 						341 = {
 							trade_share = {

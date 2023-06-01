@@ -6,7 +6,8 @@ superiority_mam_civil_war = {
 		prestige_factor = 1
 		peace_cost_factor = 1
 		
-		peace_options = {
+		peace_options = { #Good thing we have a trigger for that
+			vu_civilwar_full_annex
 		}
 	}
 	
@@ -16,6 +17,7 @@ superiority_mam_civil_war = {
 		peace_cost_factor = 1
 		
 		peace_options = {
+			vu_civilwar_full_annex
 		}
 	}	
 	

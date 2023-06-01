@@ -92,13 +92,15 @@ fu_vladislav_hall = {
 			legitimacy = 0.5
 		}
 		on_upgraded = {
-			if = {
-				limit = {
-					has_estate = estate_nobles
-				}
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 5 
+			owner = {
+				if = {
+					limit = {
+						has_estate = estate_nobles
+					}
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 5 
+					}
 				}
 			}
 		}
@@ -131,13 +133,15 @@ fu_vladislav_hall = {
 		}
 		
 		on_upgraded = {
-			if = {
-				limit = {
-					has_estate = estate_nobles
-				}
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 10 
+			owner = {
+				if = {
+					limit = {
+						has_estate = estate_nobles
+					}
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 10 
+					}
 				}
 			}
 		}
@@ -171,13 +175,15 @@ fu_vladislav_hall = {
 		}
 		
 		on_upgraded = {
-			if = {
-				limit = {
-					has_estate = estate_nobles
-				}
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 15 
+			owner = {
+				if = {
+					limit = {
+						has_estate = estate_nobles
+					}
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 15 
+					}
 				}
 			}
 		}
@@ -284,13 +290,15 @@ fu_la_scala = {
 			yearly_absolutism = 0.5
 		}
 		on_upgraded = {
-			if = {
-				limit = {
-					has_estate = estate_burghers
-				}
-				add_estate_loyalty = {
-					estate = estate_burghers
-					loyalty = 5 
+			owner = {
+				if = {
+					limit = {
+						has_estate = estate_burghers
+					}
+					add_estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 5
+					} 
 				}
 			}
 		}
@@ -324,13 +332,15 @@ fu_la_scala = {
 		}
 		
 		on_upgraded = {
-			if = {
-				limit = {
-					has_estate = estate_burghers
-				}
-				add_estate_loyalty = {
-					estate = estate_burghers
-					loyalty = 10 
+			owner = {
+				if = {
+					limit = {
+						has_estate = estate_burghers
+					}
+					add_estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 10 
+					}
 				}
 			}
 		}
@@ -365,13 +375,15 @@ fu_la_scala = {
 		}
 		
 		on_upgraded = {
-			if = {
-				limit = {
-					has_estate = estate_burghers
-				}
-				add_estate_loyalty = {
-					estate = estate_burghers
-					loyalty = 15 
+			owner = {
+				if = {
+					limit = {
+						has_estate = estate_burghers
+					}
+					add_estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 15 
+					}
 				}
 			}
 		}
@@ -1011,8 +1023,7 @@ fu_warsaw_palace = {
 		}
 
 		#what modifiers are added to the province when we have this project here on this tier
-		province_modifiers = {
-			nobles_exclusive_loyalty_modifier = 0.05
+		province_modifiers = {			
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -1023,6 +1034,7 @@ fu_warsaw_palace = {
 		country_modifiers = { 
 			adm_tech_cost_modifier = -0.05 
 			stability_cost_modifier = -0.1
+			nobles_exclusive_loyalty_modifier = 0.05
 			
 		}
 		
@@ -1045,10 +1057,8 @@ fu_warsaw_palace = {
 		}
 
 		#what modifiers are added to the province when we have this project here on this tier
-		province_modifiers = {
-			nobles_exclusive_loyalty_modifier = 0.05
+		province_modifiers = {			
 		}
-
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
 		}
@@ -1057,6 +1067,7 @@ fu_warsaw_palace = {
 		country_modifiers = {
 			adm_tech_cost_modifier = -0.1
 			stability_cost_modifier = -0.2
+			nobles_exclusive_loyalty_modifier = 0.05
 		}
 		
 		on_upgraded = {
@@ -1078,8 +1089,7 @@ fu_warsaw_palace = {
 		}
 
 		#what modifiers are added to the province when we have this project here on this tier
-		province_modifiers = {
-			nobles_exclusive_loyalty_modifier = 0.1 
+		province_modifiers = {			
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -1091,6 +1101,7 @@ fu_warsaw_palace = {
 			adm_tech_cost_modifier = -0.1
 			stability_cost_modifier = -0.25
 			administrative_efficiency = 0.05
+			nobles_exclusive_loyalty_modifier = 0.1 
 		}
 		
 		on_upgraded = {
@@ -1478,11 +1489,15 @@ fu_colossus = {
 	type = monument
 
 	build_trigger = {
-		has_institution = renaissance 
+		owner = {
+			has_institution = renaissance
+		}
 	}
 	
 	can_use_modifiers_trigger = {
-		
+		owner = {
+			has_institution = renaissance
+		}
 	}
 
 	can_upgrade_trigger = {
@@ -3121,7 +3136,7 @@ fu_foreign_quarters = {
 	type = monument
 
 	build_trigger = {
-		NOT = { technology_group = chinese }
+		NOT = { owner = { technology_group = chinese } }
 		NOT = { religion_group = eastern }  
 	}
 	
@@ -5200,11 +5215,16 @@ fu_admiralty_amsterdam = {
 					owner = { has_country_flag = enables_ned_hol_naval_professionalism_mechanic }
 				}
 				owner = { 
-					change_variable = { naval_professionalism_var = 5 }
+					change_variable = { 
+						which = naval_professionalism_var
+						value = 5
+					}
 				}
 			}
 			else = {
-				add_dip_power = 50
+				owner = {
+					add_dip_power = 50
+				}
 			}
 		}					
 	}
@@ -5235,11 +5255,16 @@ fu_admiralty_amsterdam = {
 					owner = { has_country_flag = enables_ned_hol_naval_professionalism_mechanic }
 				}
 				owner = { 
-					change_variable = { naval_professionalism_var = 5 }
+					change_variable = { 
+						which = naval_professionalism_var
+						value = 5
+					}
 				}
 			}
 			else = {
-				add_dip_power = 50
+				owner = {
+					add_dip_power = 50
+				}
 			}
 		}
 	}
@@ -5271,11 +5296,16 @@ fu_admiralty_amsterdam = {
 					owner = { has_country_flag = enables_ned_hol_naval_professionalism_mechanic }
 				}
 				owner = { 
-					change_variable = { naval_professionalism_var = 5 }
+					change_variable = {
+						which = naval_professionalism_var
+						value = 5
+					}
 				}
 			}
 			else = {
-				add_dip_power = 50
+				owner = {
+					add_dip_power = 50
+				}
 			}
 		}
 	}
@@ -5302,8 +5332,8 @@ fu_topkapi_palace = {
 
 	build_trigger = {
 		OR = {
-			tag = TUR 
-			tag = RMM 
+			owned_by = TUR 
+			owned_by = RMM 
 			religion_group = muslim 
 		}
 	}

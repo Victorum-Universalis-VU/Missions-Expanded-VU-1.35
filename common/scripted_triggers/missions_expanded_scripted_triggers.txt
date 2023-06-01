@@ -335,12 +335,41 @@ country_has_both_paradox_and_me_missions = {
 		tag = UTS
 		tag = KAM
 		tag = PHA
+		#Borneo
+		tag = BEU
+		tag = KUT
+		tag = BNJ
+		tag = SMB
+		#Sumatra
+		tag = SAK
+		tag = JMB
+		tag = IND
+		tag = DLI
+		tag = BRS
+		tag = PGR
+		#Malay Peninsula
+		tag = KED #Kedah
+		tag = PAT #Pattani
+		tag = PRK #Perak
+		tag = KEL #Kelantan
+		tag = PAH #Pahang
+		tag = JOH #Johor
+		#Sulawesi
+		tag = MKS
+		tag = BNE
+		tag = LUW
+		tag = BTN
 		#VU tags added by Altan
 		#Caucasus
 		tag = CIR
 		tag = GAZ
 		#Iceland
 		tag = ICE
+		#Iberia
+		tag = BSP
+		tag = SPB
+		tag = BBS
+		tag = CSP
 
 
 		##############################################################################################################################

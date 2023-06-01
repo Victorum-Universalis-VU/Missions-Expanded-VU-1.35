@@ -189,14 +189,14 @@ sardinia_missions_1 = {
 			if = {
 				limit = {
 					any_country = {
-						culture_group = maghrebi
+						culture_group = berber_group
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = LVN_MEDITERRANEAN_PIRACY_1298_MAGHREBI_TT #YES TODO MAKE THIS GENERAL
 					NOT = {
 						any_country = {
-							culture_group = maghrebi #NO COUNTRY THAT HAS MAGHREBI CULTURE HAS BOTH 5% TRADE SHARE AND NAVY BETTER THAN 50% OF OURS
+							culture_group = berber_group #NO COUNTRY THAT HAS MAGHREBI CULTURE HAS BOTH 5% TRADE SHARE AND NAVY BETTER THAN 50% OF OURS
 							1298 = {
 								trade_share = {
 									country = PREV

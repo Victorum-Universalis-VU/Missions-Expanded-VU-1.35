@@ -1133,7 +1133,7 @@ byzantine_transitional_gov_reform = {
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
 	potential = {
-		OR = {
+		OR = { #False positive
 			has_reform = byzantine_transitional_gov_reform
 			have_had_reform = byzantine_transitional_gov_reform
 			has_reform = byzantine_autocracy_reform
@@ -1517,17 +1517,11 @@ barbary_sultanate_reform = {
 	icon = "barbary_eyalet_government"
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-		    culture_group = maghrebi
-			culture_group = berber_group
-		}
+		culture_group = berber_group
 	}
 	queen = no
 	nation_designer_trigger = {
-		OR = {
-		    culture_group = maghrebi
-			culture_group = berber_group
-		}
+		culture_group = berber_group
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -2875,7 +2869,7 @@ mughal_government = {
 		turko_semitic = {
 			cavalry_power = 0.1
 		}
-		maghrebi = {
+		berber_group = {
 			privateer_efficiency = 0.25
 		}
 		malay = {

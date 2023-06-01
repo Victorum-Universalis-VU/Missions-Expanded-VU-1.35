@@ -521,7 +521,7 @@ me_hab_1_1 = {
 			province_id = 266
 			NOT = { 
 				country_or_non_sovereign_subject_holds = ROOT
-				development = 25
+				development = 50 # Was 25, nerfed for VU
 			}
 		}
 		trigger = {
@@ -536,7 +536,7 @@ me_hab_1_1 = {
 			}
 			266 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				development = 25
+				development = 50 # Was 25, nerfed for VU
 			}
 		}
 		effect = {
@@ -582,7 +582,7 @@ me_hab_1_1 = {
 			}
 			country_or_non_sovereign_subject_holds = ROOT
 			NOT = {
-				development = 17
+				development = 30 # Was 17, nerfed for VU
 			}
 		}
 		trigger = {
@@ -593,7 +593,7 @@ me_hab_1_1 = {
 					area = moravia_area
 					area = erzgebirge_area
 				}
-				development = 17
+				development = 30 # Was 17, nerfed for VU
 			}
 		}
 		effect = {
@@ -612,7 +612,7 @@ me_hab_1_1 = {
 							area = moravia_area
 							area = erzgebirge_area
 						}
-						development = 17
+						development = 30 # Was 17, nerfed for VU
 					}
 					add_province_modifier = {
 						name = me_hab_new_bohemian_cities
@@ -3784,9 +3784,9 @@ me_hab_3_2 = {
 			}
 		}
 		trigger = {
-			total_development = 1000
+			total_development = 2000
 			capital_scope = {
-				development = 30
+				development = 60
 			}
 			army_size = 150
 			OR = {
@@ -4061,7 +4061,7 @@ me_hab_3_2 = {
 			}
 			OR = {
 				NOT = { base_manpower = 6 }
-				NOT = { development = 20 }
+				NOT = { development = 35 }
 			}
 		}
 		trigger = {
@@ -4071,7 +4071,7 @@ me_hab_3_2 = {
 					area = croatia_area
 					area = slavonia_area
 				}
-				development = 20
+				development = 35
 				base_manpower = 6
 				is_state = yes
 				is_state_core = ROOT
@@ -4427,7 +4427,7 @@ me_hab_3_branching_modern_state = {
 		}
 		trigger = {
 			has_final_tier_reforms_trigger = yes
-			total_development = 2000
+			total_development = 3000
 			OR = {
 				in_golden_age = yes
 				is_hegemon = yes
@@ -4479,7 +4479,7 @@ me_hab_3_modern_state_mainland = {
 		}
 		trigger = {
 			has_final_tier_reforms_trigger = yes
-			total_development = 2000
+			total_development = 3000
 			OR = {
 				in_golden_age = yes
 				is_hegemon = yes
@@ -4521,7 +4521,7 @@ me_hab_3_modern_state_minorities = {
 		}
 		trigger = {
 			has_final_tier_reforms_trigger = yes
-			total_development = 2000
+			total_development = 3000
 			OR = {
 				in_golden_age = yes
 				is_hegemon = yes
@@ -4622,7 +4622,7 @@ me_hab_3_enlightenment = {
 					value = 2
 				}
 			}
-			total_development = 1000
+			total_development = 2000
 		}
 		effect = {
 			add_years_of_estate_land_income = 2.5
@@ -5122,7 +5122,7 @@ me_hab_4_navy = {
 			}
 			else = {
 				112 = {
-					development = 30
+					development = 50
 				}
 			}
 			custom_trigger_tooltip = {
@@ -5334,7 +5334,7 @@ me_hab_4_venetian_module = {
 			}
 			else = {
 				112 = {
-					development = 30
+					development = 50
 				}
 			}
 		}
@@ -5592,7 +5592,7 @@ me_hab_4_2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			total_development = 500
+			total_development = 1000
 			red_ruthenia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -5667,7 +5667,7 @@ me_hab_4_2 = {
 							which = BRA_CAS_Development
 						}
 					}
-					total_development = 700
+					total_development = 2000
 				}
 			}
 			else_if = {
@@ -5708,7 +5708,7 @@ me_hab_4_2 = {
 							which = BRA_SPA_Development
 						}
 					}
-					total_development = 700
+					total_development = 2000
 				}
 			}
 			else = {
@@ -5875,7 +5875,7 @@ me_hab_4_2 = {
 					area = carinthia_area
 					area = tirol_area
 				}
-				value = 180
+				value = 400
 			}
 			NOT = { average_autonomy_above_min = 5 }
 		}
@@ -5940,7 +5940,7 @@ me_hab_4_internal_development = {
 			}
 			134 = {
 				owned_by = ROOT
-				development = 30
+				development = 50
 			}
 			OR = {
 				NOT = { hre_size = 1 }
@@ -5969,7 +5969,7 @@ me_hab_4_internal_development = {
 				value = 20
 			}
 			development_in_provinces = {
-				value = 300
+				value = 600
 				NOT = { culture = ROOT }
 			}
 		}
@@ -6151,7 +6151,7 @@ me_hab_4_mainland_focus = {
 		trigger = {
 			134 = {
 				owned_by = ROOT
-				development = 30
+				development = 50
 			}
 			OR = {
 				NOT = { hre_size = 1 }
@@ -6261,7 +6261,7 @@ me_hab_4_minorities_focus = {
 				value = 15
 			}
 			development_in_provinces = {
-				value = 50
+				value = 100
 				NOT = { culture = ROOT }
 			}
 		}
@@ -7177,14 +7177,14 @@ me_hab_5_1 = {
 		position = 17
 		provinces_to_highlight = {
 			province_id = 73
-			NOT = { development = 14 }
-			NOT = { base_production = 6 }
+			NOT = { development = 20 }
+			NOT = { base_production = 10 }
 		}
 		trigger = {
 			 73 = {
 				owned_by = ROOT
-				development = 14
-				base_production = 6
+				development = 20
+				base_production = 10
 			}
 			gold_income = 3
 		}
@@ -7246,7 +7246,7 @@ me_hab_5_internal_development = {
 			}
 			num_of_owned_provinces_with = {
 				culture = ROOT
-				development = 25
+				development = 35
 				value = 10
 			}
 			custom_trigger_tooltip = {
@@ -7346,10 +7346,10 @@ me_hab_5_internal_development = {
 					area = erzgebirge_area
 					area = moravia_area
 				}
-				development = 17
+				development = 20
 			}
 			266 = {
-				development = 30
+				development = 50
 			}
 		}
 		effect = {
@@ -7361,7 +7361,7 @@ me_hab_5_internal_development = {
 			custom_tooltip = me_hab_minorities_branch
 			bohemia_area = {
 				limit = {
-					development = 15
+					development = 30
 				}
 				add_province_modifier = {
 					name = me_hab_foundation_of_new_cities
@@ -7370,7 +7370,7 @@ me_hab_5_internal_development = {
 			}
 			erzgebirge_area = {
 				limit = {
-					development = 15
+					development = 30
 				}
 				add_province_modifier = {
 					name = me_hab_foundation_of_new_cities
@@ -7379,7 +7379,7 @@ me_hab_5_internal_development = {
 			}
 			moravia_area = {
 				limit = {
-					development = 15
+					development = 30
 				}
 				add_province_modifier = {
 					name = me_hab_foundation_of_new_cities
@@ -7414,7 +7414,7 @@ me_hab_5_mainland_focus = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				culture = ROOT
-				development = 25
+				development = 35
 				value = 10
 			}
 		}
@@ -7550,16 +7550,16 @@ me_hab_5_minorities_branch = {
 					area = erzgebirge_area
 					area = moravia_area
 				}
-				development = 17
+				development = 25
 			}
 			266 = {
-				development = 30
+				development = 50
 			}
 		}
 		effect = {
 			bohemia_area = {
 				limit = {
-					development = 15
+					development = 25
 				}
 				add_province_modifier = {
 					name = me_hab_foundation_of_new_cities
@@ -7568,7 +7568,7 @@ me_hab_5_minorities_branch = {
 			}
 			erzgebirge_area = {
 				limit = {
-					development = 15
+					development = 25
 				}
 				add_province_modifier = {
 					name = me_hab_foundation_of_new_cities
@@ -7577,7 +7577,7 @@ me_hab_5_minorities_branch = {
 			}
 			moravia_area = {
 				limit = {
-					development = 15
+					development = 25
 				}
 				add_province_modifier = {
 					name = me_hab_foundation_of_new_cities

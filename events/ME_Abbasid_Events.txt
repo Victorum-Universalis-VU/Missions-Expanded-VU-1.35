@@ -648,10 +648,10 @@ country_event = {
 			modifier = {
 				factor = 0
 				if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "ANY MINUTE NOW" }
-				event_target:Caliph_province = { #caliph is in baghdad. Do not let him move!
-					province_id = 410
+					event_target:Caliph_province = { #caliph is in baghdad. Do not let him move!
+						province_id = 410
+					}
 				}
-			}
 		}
 
 		event_target:Abbasid_target = {
@@ -665,8 +665,8 @@ country_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 0
-				if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "WHY DO I EVEN BOTHER" }
+			factor = 0
+			if = { limit = { NOT = { has_saved_event_target = Caliph_province } } log = "WHY DO I EVEN BOTHER" }
 				event_target:Caliph_province = { #caliph is in baghdad. Do not let him move!
 					NOT = { province_id = 410 }
 				}
@@ -1140,7 +1140,7 @@ country_event = {
 		name = ME_Abbasid_Events.22.g
 
 		ai_chance = {
-			factor = 18000
+			factor = 10000
 		}
 
 		trigger = {
@@ -1235,7 +1235,7 @@ country_event = {
 			factor = 25
 			modifier = {
 				factor = 0.5
-				development = 300
+				total_development = 300
 			}
 
 			modifier = {
