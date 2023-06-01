@@ -1,7 +1,10 @@
 country_decisions = {
 	MZB_form_rustamids = {
 		potential = {
-			culture_group = maghrebi
+			OR = {
+			    culture_group = berber_group
+				culture_group = maghrebi
+			}
 			religion = ibadi
 			NOT = {
 				tag = RST

@@ -8,7 +8,7 @@ estate_berbers = {
 			tag = GRA
 			tag = ADU
 			AND = {
-				culture_group = maghrebi
+				culture_group = berber_group
 				any_owned_province = { 
 					culture_group = berber_group
 				}

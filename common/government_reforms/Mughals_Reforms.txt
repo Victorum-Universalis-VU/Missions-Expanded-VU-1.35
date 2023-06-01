@@ -102,6 +102,9 @@ mughal_government_me = {
 		turko_semitic = {
 			cavalry_power = 0.15
 		}
+		berber_group = {
+			privateer_efficiency = 0.25
+		}
 		maghrebi = {
 			privateer_efficiency = 0.25
 		}
@@ -262,6 +265,9 @@ mughal_government_me_modifier_buff = {
 		}
 		turko_semitic = {
 			cavalry_power = 0.1
+		}
+		berber_group = {
+			privateer_efficiency = 0.25
 		}
 		maghrebi = {
 			privateer_efficiency = 0.25
