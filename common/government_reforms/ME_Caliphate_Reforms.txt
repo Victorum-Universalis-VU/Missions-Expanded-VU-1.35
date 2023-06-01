@@ -32,6 +32,9 @@ ME_caliphate_reform_sunni = {
 		berber_group = {
 			land_attrition = -0.1
 		}
+		maghrebi = {
+			land_attrition = -0.1
+		}
 		sahelian = {
 			hostile_attrition = 1
 		}
@@ -94,6 +97,9 @@ ME_caliphate_reform_sunni_andalusia = {
 		berber_group = {
 			manpower_recovery_speed = 0.1
 		}
+		maghrebi = {
+			manpower_recovery_speed = 0.1
+		}
 		sahelian = {
 			hostile_attrition = 1
 		}
@@ -147,6 +153,9 @@ ME_caliphate_reform_sunni_arabian = {
 	
 	assimilation_cultures = {
 		berber_group = {
+			land_attrition = -0.1
+		}
+		maghrebi = {
 			land_attrition = -0.1
 		}
 		sahelian = {
@@ -209,6 +218,9 @@ ME_caliphate_reform_shia_ibadi = {
 
 	assimilation_cultures = {
 		berber_group = {
+			land_attrition = -0.1
+		}
+		maghrebi = {
 			land_attrition = -0.1
 		}
 		sahelian = {

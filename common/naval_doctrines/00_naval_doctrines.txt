@@ -325,7 +325,10 @@ maghrebi_corsairs = {
 	can_select = {
 		is_primitive = no
 		NOT = { has_country_flag = unlock_norwegian_naval_doctrine }
-		culture_group = berber_group
+		OR = {
+		    culture_group = berber_group
+			culture_group = maghrebi
+		}
 	}
 
 	country_modifier = {

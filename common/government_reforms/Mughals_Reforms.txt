@@ -105,6 +105,9 @@ mughal_government_me = {
 		berber_group = {
 			privateer_efficiency = 0.25
 		}
+		maghrebi = {
+			privateer_efficiency = 0.25
+		}
 		malay = {
 			merchants = 1
 		}
@@ -264,6 +267,9 @@ mughal_government_me_modifier_buff = {
 			cavalry_power = 0.1
 		}
 		berber_group = {
+			privateer_efficiency = 0.25
+		}
+		maghrebi = {
 			privateer_efficiency = 0.25
 		}
 		malay = {
