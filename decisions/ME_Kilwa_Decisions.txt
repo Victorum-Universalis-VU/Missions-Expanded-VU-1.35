@@ -164,7 +164,7 @@ country_decisions = {
 					exists = SPA
 				}
 				SPA = {
-					check_variable = {
+					change_variable = {
 						which = trade_influence_from_kilwa
 						value = 10
 					}

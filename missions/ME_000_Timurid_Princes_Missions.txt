@@ -30,7 +30,10 @@
 			army_size_percentage = 0.8
 		}
 		effect = {
-			change_variable = { timurid_legitimacy_value = 10 }
+			change_variable = {
+				which = timurid_legitimacy_value
+				value = 10
+			}
 			custom_tooltip = me_prince_gain_liberty_desire_per_battle_won
 
 			ME_give_claims = { region = persia_region }
@@ -72,7 +75,10 @@
 		}
 		position = 4
 		trigger = {
-			check_variable = { timurid_legitimacy_value = 100 }
+			check_variable = {
+				which = timurid_legitimacy_value
+				value = 100
+			}
 			OR = {
 				owns_core_province = 446
 				capital_scope = {
@@ -136,7 +142,10 @@ Timurid_princes_missions_2 = {
 			}
 		}
 		effect = {
-			change_variable = { timurid_legitimacy_value = 5 }
+			change_variable = {
+				which = timurid_legitimacy_value
+				value = 5
+			}
 			custom_tooltip = me_tim_gain_10_monarch_power_per_10_dev_province
 			hidden_effect = {
 				every_owned_province = {
@@ -170,7 +179,10 @@ Timurid_princes_missions_2 = {
 			}
 		}
 		effect = {
-			change_variable = { timurid_legitimacy_value = 5 }
+			change_variable = {
+				which = timurid_legitimacy_value
+				value = 5
+			}
 			add_positive_or_negative_piety = { amount = 0.15 }
 			custom_tooltip = me_prince_if_capital_is_25_dev
 			tooltip = {

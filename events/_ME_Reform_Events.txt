@@ -23,7 +23,10 @@ country_event = {
 				which = current_ruler_age
 				value = trigger_value:ruler_age
 			}
-			change_variable = { current_ruler_age = -1 }
+			change_variable = {
+				which = current_ruler_age
+				value = -1
+			}
 			export_to_variable = {
 				which = current_ruler_religion
 				value = ruler_religion
