@@ -2706,6 +2706,16 @@ country_decisions = {
 				primary_culture = luxembourgish
 				primary_culture = picard_culture
 				primary_culture = wallonian
+				primary_culture = ger_dutch
+				primary_culture = ger_flemish
+				primary_culture = ger_brabantian
+				primary_culture = ger_dutch_saxon
+				primary_culture = ger_zeelandic
+				primary_culture = ger_limburgish
+				primary_culture = ger_guelders
+				primary_culture = ger_frisian
+				primary_culture = ger_east_frisian
+				primary_culture = ger_north_frisian
 				tag = BUR
 			}
 		}
@@ -2764,6 +2774,10 @@ country_decisions = {
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
+			if = {
+			    limit = { NOT = { has_global_flag = dutchculture} }
+			    country_event = { id = dutch_culture.2 }
+			}
 	  		if = {
 	  			limit = { tag = BUR }
 	  			change_primary_culture = dutch
@@ -3683,6 +3697,7 @@ country_decisions = {
 			NOT = { has_country_flag = formed_romania_flag }
 			NOT = { tag = RMN }
 			NOT = { exists = ROM }
+			NOT = { tag = WAL }
 			primary_culture = romanian
 		}
 		provinces_to_highlight = {
@@ -3696,7 +3711,6 @@ country_decisions = {
 			NOT = { exists = RMN }
 			NOT = { exists = BYZ }
 			is_nomad = no
-			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			OR = {
 				AND = {
@@ -4739,8 +4753,6 @@ country_decisions = {
 			NOT = { tag = TLC }
 			NOT = { tag = ALG }
 			NOT = { tag = TRP }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
 			NOT = { tag = OTN }
 			OR = {
 				primary_culture = tunisian
@@ -4865,8 +4877,6 @@ country_decisions = {
 			NOT = { tag = ALG }
 			NOT = { tag = TRP }
 			NOT = { tag = OTN }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
 			AND = {
 				primary_culture = tunisian
 				any_owned_province = {

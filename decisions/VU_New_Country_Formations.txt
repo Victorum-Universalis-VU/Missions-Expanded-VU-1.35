@@ -136,7 +136,7 @@ country_decisions = {
 ###################################################################################################
 ################################		Belgium			 ##############################################			#Note needs work
 ###################################################################################################
-	#More or less HR's work with only a few adjustments from Draiocht
+	#More or less Darth Modus's work with only a few adjustments from Altan
 	belgian_nation = {
 		major = yes
 		potential = {
@@ -163,6 +163,9 @@ country_decisions = {
 			    primary_culture = brabantian
 				primary_culture = flemish
 				primary_culture = wallonian
+				primary_culture = ger_dutch
+				primary_culture = ger_flemish
+				primary_culture = ger_brabantian
 			}
 		}
 		provinces_to_highlight = {
@@ -272,7 +275,7 @@ country_decisions = {
 ###################################################################################################
 ################################			Emilia			 ##############################################			#Note needs work
 ###################################################################################################
-	#More or less HR's work with only a few adjustments from Draiocht
+	#More or less Darth Modus's work with only a few adjustments from Altan
 	emilian_nation = {
 		major = yes
 		potential = {
@@ -461,13 +464,9 @@ country_decisions = {
 	german_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			vu_generic_can_form_potential_check = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_germany_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
 			NOT = { exists = GER }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
@@ -917,7 +916,7 @@ country_decisions = {
 			add_prestige = 25
 			#No Illyrian ideas yet.
 			# swap_ideas = yes
-			set_country_flag = formed_illyria_flag_vup
+			set_country_flag = formed_illyria_flag_vu
 		}
 		ai_will_do = {
 			factor = 1
