@@ -1,5 +1,5 @@
 # Missions-Expanded-VU
-Current Europa Expanded VU files
+Current Mission Expanded VU files
 Guide for manual installation :
 
 If you're reading this you've already done the 1st step : download the .zip file
