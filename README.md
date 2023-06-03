@@ -13,4 +13,4 @@ If you're on Mac here's the path : ~/Documents/Paradox Interactive/Europa Univer
 4/Open the .mod with a text editor (Notepad will do) file and make sure the path="mod/..." has the same name than your mod folder (eg : if you've named your mod folder "ME-VU 1.35" you should have path="mod/ME-VU 1.35")
 5/Launch the game
 
-PS : Sometimes the launcher will not find your mod. In that case your path to path="C:\Users\<Username>\Documents\Paradox Interactive\Europa Universalis IV\mod\<mod folder name>"
+PS : Sometimes the launcher will not find your mod. In that case your path should be changed to path="C:\Users\<Username>\Documents\Paradox Interactive\Europa Universalis IV\mod\<mod folder name>"
