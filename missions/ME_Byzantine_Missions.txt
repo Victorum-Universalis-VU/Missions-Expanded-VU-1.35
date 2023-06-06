@@ -2187,11 +2187,11 @@ noppbyzantine_missions_3 = {
 					151 = {
 						OR = {
 							has_great_project = {
-								type = fu_theodosian_walls
+								type = walls_of_theodosius
 								tier = 2 
 							}
 							has_great_project = {
-								type = fu_theodosian_walls
+								type = walls_of_theodosius
 								tier = 3
 							}
 							base_manpower = 10
@@ -2213,7 +2213,7 @@ noppbyzantine_missions_3 = {
 		effect = {
 			if = { 
 				limit = { has_dlc = "Leviathan" }
-				151 = {
+				7137 = {
 					add_province_modifier = {
 						name = byz_expansion_theodosian_walls_lev_modifier
 						duration = -1 
@@ -2226,7 +2226,7 @@ noppbyzantine_missions_3 = {
 				}
 			}
 			else = {
-				151 = {
+				7137 = {
 					add_province_modifier = {
 						name = byz_expansion_theodosian_walls_modifier
 						duration = -1 
