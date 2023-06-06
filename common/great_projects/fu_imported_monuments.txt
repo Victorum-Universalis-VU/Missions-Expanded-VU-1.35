@@ -5188,7 +5188,7 @@ fu_admiralty_amsterdam = {
 fu_topkapi_palace = {
 	start = 151
 	
-	date = 1444.01.01 #1460ish
+	date = 1459.01.01
 	
 	time = {
 		months = 60
@@ -5213,10 +5213,19 @@ fu_topkapi_palace = {
 	}
 	
 	can_use_modifiers_trigger = {
-		
+		OR = {
+			owned_by = TUR 
+			owned_by = RMM 
+			religion_group = muslim 
+		}		
 	}
 
 	can_upgrade_trigger = {
+		OR = {
+			owned_by = TUR 
+			owned_by = RMM 
+			religion_group = muslim 
+		}
 	}
 
 	keep_trigger = {
