@@ -120,6 +120,7 @@ country_event = {
 				exists = RUS
 				RUS = {
 					NOT = { has_country_flag = steppe_traders_refused }
+					NOT = { at_war_with = GEN }
 				}
 			}
 			RUS = {
@@ -129,7 +130,15 @@ country_event = {
 				}
 			}
 		}
-		else = {
+		else_if = {
+			limit = {
+				exists = MOS
+				MOS = { 
+					NOT = {
+						at_war_with = GEN
+					}
+				}
+			}
 			MOS = {
 				country_event = {
 					id = ME_Genoa_Events.5
