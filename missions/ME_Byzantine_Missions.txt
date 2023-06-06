@@ -2185,16 +2185,12 @@ noppbyzantine_missions_3 = {
 				custom_trigger_tooltip = {
 					tooltip = byz_erect_the_wall_or_base_manpower_tt
 					151 = {
-						OR = {
-							has_great_project = {
-								type = walls_of_theodosius
-								tier = 2 
-							}
+						AND = {
 							has_great_project = {
 								type = walls_of_theodosius
 								tier = 3
 							}
-							base_manpower = 10
+							base_manpower = 15
 						}
 					}
 				}
