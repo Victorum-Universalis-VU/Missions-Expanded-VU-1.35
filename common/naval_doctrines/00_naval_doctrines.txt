@@ -327,7 +327,7 @@ maghrebi_corsairs = {
 		NOT = { has_country_flag = unlock_norwegian_naval_doctrine }
 		OR = {
 		    culture_group = berber_group
-			culture_group = maghrebi
+			#culture_group = maghrebi #maghrebi culture group was replace by berber_group. Leaving that here as reminder
 		}
 	}
 
