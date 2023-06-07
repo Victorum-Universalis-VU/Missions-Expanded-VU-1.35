@@ -573,7 +573,7 @@ suez_canal = {
 	#can we build it?
 	build_trigger = {
 		FROM = {
-			owns_or_vassal_of = 4316
+			owns_or_vassal_of = 6537
 			owns_or_vassal_of = 2315
 			is_subject = no
 			OR = {
