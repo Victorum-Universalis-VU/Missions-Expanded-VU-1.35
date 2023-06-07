@@ -11,6 +11,7 @@ country_decisions = {
 			}
 			NOT = { exists = UKS }
 			NOT = { exists = GBR }
+			NOT = { exists = UNK }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }

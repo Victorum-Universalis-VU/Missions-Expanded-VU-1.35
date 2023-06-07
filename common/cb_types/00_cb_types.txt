@@ -1522,6 +1522,7 @@ cb_hundred_years_union = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 	}
 

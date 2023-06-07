@@ -1,3 +1,4 @@
+#Do we really need those ?
 LOB_ideas = {
 	start = {
 		development_cost = -0.1
@@ -385,7 +386,10 @@ GBR1_ideas = {
 	}
 
 	trigger = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = UNK
+		}
 		has_country_flag = nss_gbr_flag
 	}
 	free = yes
@@ -430,6 +434,7 @@ NSS_ideas = { #New Provindence
 				was_tag = NSS
 				has_reform = pirate_republic_reform
 				NOT = { tag = GBR }
+				NOT = { tag = UNK }
 			}
 		}
 	}
@@ -474,6 +479,7 @@ FUUU_ideas = { #Because Rex asked for them
 
 	trigger = {
 		tag = GBR
+		tag = UNK
 	}
 	free = yes		#will be added at load.
 

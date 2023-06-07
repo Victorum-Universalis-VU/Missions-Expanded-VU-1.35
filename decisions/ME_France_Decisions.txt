@@ -1045,6 +1045,33 @@ country_decisions = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					exists = UNK
+				}
+				if = {
+					limit = {
+						UNK = { is_subject = no }
+					}
+					has_spy_network_in = {
+						who = UNK
+						value = 50
+					}
+				}
+				else = {
+					OR = {
+						overlord_of = UNK
+						ENG = {
+							overlord = {
+								has_spy_network_from = {
+									who = ROOT
+									value = 50
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		effect = {
 			set_country_flag = fra_brittain_start
@@ -1086,6 +1113,20 @@ country_decisions = {
 					}
 					declare_war_with_cb = {
 						who = ENG
+						casus_belli = cb_grand_british_campaign
+					}
+				}
+				else_if = {
+					limit = {
+						exists = UNK
+						NOT = { overlord_of = UNK }
+					}
+					add_casus_belli = {
+						target = UNK
+						type = cb_grand_british_campaign
+					}
+					declare_war_with_cb = {
+						who = UNK
 						casus_belli = cb_grand_british_campaign
 					}
 				}

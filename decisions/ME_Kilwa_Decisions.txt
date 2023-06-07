@@ -142,6 +142,18 @@ country_decisions = {
 						}
 					}
 				}
+				AND = {
+					NOT = { exists = SPA }
+					NOT = { exists = CAS }
+					NOT = { exists = GBR }
+					NOT = { exists = ENG}
+					exists = UNK
+					UNK = {
+						any_owned_province = {
+							has_discovered = ROOT
+						}
+					}
+				}
 			}
 		}
 		allow = {
@@ -306,6 +318,13 @@ country_decisions = {
 					NOT = { exists = SPA }
 					NOT = { exists = CAS }
 					NOT = { exists = GBR }
+				}
+				AND = {
+					tag = UNK
+					NOT = { exists = SPA }
+					NOT = { exists = CAS }
+					NOT = { exists = GBR }
+					NOT = { exists = ENG }
 				}
 			}
 			has_global_flag = zan_trade_influence_mechanic_unlocked
