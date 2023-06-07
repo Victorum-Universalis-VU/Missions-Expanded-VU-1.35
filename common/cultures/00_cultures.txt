@@ -15459,10 +15459,6 @@ brythonic = {
 	}
 }
 
-#VU - Unused Cultures
-unused = { berber = {} }
-#unused = { maghrebi = {} }
-
 berber_group = {
 	graphical_culture = persiangfx
 	tuareg = {

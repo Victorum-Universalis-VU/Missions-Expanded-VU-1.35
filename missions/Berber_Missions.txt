@@ -6,7 +6,7 @@ berber_3 = {
 	potential = {
 		OR = { #VU overhaul due to cultural additions restricting this to Algiers only.
 			culture_group = berber_group
-			culture_group = maghrebi
+			#culture_group = maghrebi #maghrebi culture group was replace by berber_group. Leaving that here as reminder
 			primary_culture = tunisian
 			primary_culture = moroccan
 		}
