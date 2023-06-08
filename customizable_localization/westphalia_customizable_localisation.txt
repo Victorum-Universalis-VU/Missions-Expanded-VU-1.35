@@ -313,6 +313,10 @@ defined_text = {
 					exists = ENG
 					ENG = { valid_for_personal_unions_trigger = yes }
 				}
+                AND = {
+                    exists = UNK
+                    UNK = { valid_for_personal_unions_trigger = yes }
+                }
 			}
         }
     }
