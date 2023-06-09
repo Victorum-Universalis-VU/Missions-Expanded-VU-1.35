@@ -2178,13 +2178,13 @@ noppbyzantine_missions_3 = {
 		icon = the_latin_empire 
 		required_missions = { } 
 		position = 19
-		provinces_to_highlight = { province_id = 151 }
+		provinces_to_highlight = { province_id = 7137 }
 		trigger = { 
 			if = { 
 				limit = { has_dlc = "Leviathan" }
 				custom_trigger_tooltip = {
 					tooltip = byz_erect_the_wall_or_base_manpower_tt
-					151 = {
+					7137 = {
 						AND = {
 							has_great_project = {
 								type = walls_of_theodosius
@@ -2196,7 +2196,7 @@ noppbyzantine_missions_3 = {
 				}
 			}
 			else = { 
-				151 = {
+				7137 = {
 					OR = {
 						has_building = fort_16th
 						has_building = fort_17th
